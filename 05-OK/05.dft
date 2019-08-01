@@ -1,0 +1,19 @@
+toplevel "AND_1";
+"AND_1" csp "Loss_of_line1" "Loss_of_All_backups";
+"Loss_of_line1" or "dummy_grid_1" "CB_up_1" "transfo1" "CB_dw_1";
+"dummy_grid_1" lambda=0 dorm=0;
+"CB_up_1"  lambda=0.0001 dorm=0;
+"transfo1"  lambda=0.0001 dorm=0;
+"CB_dw_1"  lambda=0.0001 dorm=0;
+"Loss_of_All_backups" csp "loss_of_line2" "loss_of_diesel_line";
+"loss_of_line2" or "dummy_grid_2" "CB_up_2" "transfo2" "CB_dw_2";
+"dummy_grid_2" lambda=0 dorm=0;
+"CB_up_2"  lambda=0.0001 dorm=0;
+"transfo2"  lambda=0.0001 dorm=0;
+"CB_dw_2"  lambda=0.0001 dorm=0;
+"loss_of_diesel_line" or "CB_dies" "dies_generator";
+"CB_dies"  lambda=0.0001 dorm=0;
+"dies_generator"  lambda=0.0001 dorm=0;
+"pdep_grid_dummy_1" pdep=1 "Grid" "dummy_grid_1" "dummy_grid_2" ;
+"Grid"  lambda=0.0001 dorm=1;
+

@@ -1,0 +1,25 @@
+digraph model {
+	0 [ label = "0: {init}" ];
+	1 [ label = "1: {Failure_of_A_fail}" ];
+	2 [ label = "2: {On_demand_failure_of_B_good}" ];
+	3 [ label = "3: {Fail, On_demand_failure_of_B_fail}" ];
+	4 [ label = "4: {Fail, Failure_of_B_fail}" ];
+	"0c0" [shape = "point"];
+	0 -> "0c0" [ label = "0.0001"]
+;
+	"0c0" -> 1 [ label= "1" ];
+	"1c0" [shape = "point"];
+	1 -> "1c0";
+	"1c0" -> 2 [ label= "0.9999" ];
+	"1c0" -> 3 [ label= "0.0001" ];
+	"2c0" [shape = "point"];
+	2 -> "2c0" [ label = "0.0001"]
+;
+	"2c0" -> 4 [ label= "1" ];
+	"3c0" [shape = "point"];
+	3 -> "3c0";
+	"3c0" -> 3 [ label= "1" ];
+	"4c0" [shape = "point"];
+	4 -> "4c0";
+	"4c0" -> 4 [ label= "1" ];
+}

@@ -1,0 +1,16 @@
+toplevel "Loss_of_engines";
+"Loss_of_engines" and "OR_1" "OR_2";
+"OR_1" or "Engine_1" "No_fuel_1";
+"Engine_1" lambda=0.0001 dorm=1.0;
+"No_fuel_1" and "Tank_1" "No_realim_by_way2";
+"Tank_1" lambda=0.0001 dorm=1.0;
+"No_realim_by_way2" or "Switch_1_2" "Tank_2";
+"Switch_1_2" lambda=0 dorm=0;
+"Tank_2" lambda=0.0001 dorm=1.0;
+"pdep_tank_1" pdep=0.0001 "Tank_1" "Switch_1_2";
+"OR_2" or "Engine_2" "No_fuel_2";
+"Engine_2" lambda=0.0001 dorm=1.0;
+"No_fuel_2" and "Tank_2" "No_realim_by_way1";
+"No_realim_by_way1" or "Switch_2_1" "Tank_1";
+"Switch_2_1" lambda=0 dorm=0;
+"pdep_tank_2" pdep=0.0001 "Tank_2" "Switch_2_1";

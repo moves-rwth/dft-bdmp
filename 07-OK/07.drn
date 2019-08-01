@@ -1,0 +1,26 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+5
+@model
+state 0 !0.0002 [1]init
+	action 0 [0]
+		1 : 0.5
+		2 : 0.5
+state 1 !0.0001 [1]CptA_fail
+	action 0 [0]
+		3 : 1
+state 2 !0.0001 [1]CptB_fail
+	action 0 [0]
+		4 : 1
+state 3 !0 [1]Fail CptC_fail
+	action 0 [0]
+		3 : 1
+state 4 !0 [1]Fail CptD_fail
+	action 0 [0]
+		4 : 1

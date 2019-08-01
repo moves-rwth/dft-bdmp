@@ -1,0 +1,40 @@
+toplevel "AND_1";
+"AND_1" csp "Loss_of_line_1" "Loss_of_all_backups";
+"Loss_of_line_1" or "CB_up_1" "CB_dw_1" "transfo1_dummy" "Loss_of_grid_dummy";
+"CB_up_1" lambda=0.0001 dorm=1.0;
+"CB_dw_1" lambda=0.0001 dorm=1.0;
+"transfo1_dummy" lambda=0 dorm=1.0;
+"Loss_of_grid_dummy" lambda=0 dorm=1.0;
+"pdep_transfo1" pdep=1 "transfo1" "transfo1_dummy";
+"pdep_grid" pdep=1 "Loss_of_grid" "Loss_of_grid_dummy";
+"Loss_of_all_backups" csp "Loss_of_line_2" "Loss_of_diesel_line";
+"Loss_of_line_2" or "RC_CB_up_2" "RC_CB_dw_2" "CB_up_2" "CB_dw_2" "Loss_of_grid" "transfo2_dummy";
+"RC_CB_up_2" lambda=0 dorm=0;
+"RC_CB_dw_2" lambda=0 dorm=0;
+"CB_up_2" lambda=0.0001 dorm=0;
+"CB_dw_2" lambda=0.0001 dorm=0;
+"transfo2_dummy" lambda=0 dorm=0;
+"pdep_line1_CBup2" pdep=0.0001 "Loss_of_line_1" "RC_CB_up_2";
+"pdep_line1_CBdw2" pdep=0.0001 "Loss_of_line_1" "RC_CB_dw_2";
+"pdep_transfo2" pdep=1 "transfo2" "transfo2_dummy";
+"Loss_of_grid" or "Propagation_short_cct_transfro1" "Grid" "Propagation_short_cct_transfro2";
+"Grid" lambda=0.0001 dorm=1;
+"Propagation_short_cct_transfro1" csp "transfo1" "RC_CB_up_1";
+"RC_CB_up_1" lambda=0 dorm=0;
+"pdep_transfo1_RCCB1" pdep=0.0001 "transfo1" "RC_CB_up_1";
+"transfo1" lambda=0.0001 dorm=1.0;
+"Propagation_short_cct_transfro2" csp "transfo2" "RO_CB_up_2";
+"RO_CB_up_2" lambda=0 dorm=0;
+"transfo2" lambda=0.0001 dorm=0;
+"pdep_transfo2_ROCB2" pdep=0.0001 "transfo2" "RO_CB_up_2";
+"Loss_of_diesel_line" or "RC_CB_dies" "RS_dies" "CB_dies" "dies_generator";
+"RC_CB_dies" lambda=0 dorm=0;
+"RS_dies" lambda=0 dorm=0;
+"CB_dies" lambda=0.0001 dorm=0;
+"dies_generator" lambda=0.0001 dorm=0;
+"pdep_line2_CBdies" pdep=0.0001 "Loss_of_line_2" "RC_CB_dies";
+"pdep_line2_RSdies" pdep=0.0001 "Loss_of_line_2" "RS_dies";
+
+
+
+

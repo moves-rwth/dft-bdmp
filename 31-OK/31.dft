@@ -1,0 +1,14 @@
+toplevel "AND_1";
+"AND_1" csp "f_1" "AND_2";
+"f_1" lambda=0.0001 dorm=1.0;
+"AND_2" and "Loss_cpt" "Loss_cptbis";
+"Loss_cpt" or "af_1" "f_2";
+"af_1" lambda=0.0001 dorm=0.1;
+"f_2" lambda=0.0001 dorm=0;
+"Loss_cptbis" or "cptbis_absent" "AND_3";
+"cptbis_absent" lambda=0.0001 dorm=0;
+"AND_3" and "cptbis_present" "OR_1_1";
+"cptbis_present" lambda=0.0001 dorm=1.0;
+"OR_1_1" or "af_1_1" "f_1_1";
+"af_1_1" lambda=0.0001 dorm=0.1;
+"f_1_1" lambda=0.0001 dorm=0;

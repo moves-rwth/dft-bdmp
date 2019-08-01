@@ -1,0 +1,10 @@
+toplevel "Logged_into_the_RAS";
+"Logged_into_the_RAS" csp "Wardialing" "RAS_access_granted";
+"Wardialing" lambda=1e-5 dorm=1.0;
+"RAS_access_granted" or "Authentication_with_password" "Vulnerability_found_and_exploited";
+"Authentication_with_password" or "Brute_force" "Social_engineering";
+"Brute_force" lambda=0.0001 dorm=0; 
+"Social_engineering" lambda=5e-6 dorm=0; 
+"Vulnerability_found_and_exploited" csp "Find_vulnerability" "Exploit_vulnerability";
+"Find_vulnerability" lambda=0.0001 dorm=0;
+"Exploit_vulnerability" lambda=0.0001 dorm=0;

@@ -1,0 +1,8 @@
+toplevel "AND-1";
+"AND-1" and "Failure_of_A" "OR-1";
+"Failure_of_A" lambda=0.0001 dorm=1.0;
+"OR-1" or "On_demand_failure_of_B" "Failure_of_B";
+"On_demand_failure_of_B" lambda=0 dorm=1.0;
+"Failure_of_B" lambda=0.0001 dorm=1.0;
+"pdep_A_to_ondemand_B" pdep=0.0001 "Failure_of_A" "On_demand_failure_of_B";
+"seq_A_to_failure_of_B" seq "Failure_of_A" "Failure_of_B";

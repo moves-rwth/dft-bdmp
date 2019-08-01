@@ -1,0 +1,14 @@
+toplevel "Way_2_loss";
+"Way_2_loss" and "Way_A_unavailable" "Way_B_unavailable";
+"Way_A_unavailable" or "A_fail" "DCC_func_demand_A";
+"seq_way_A_way_B" seq "Way_A_unavailable" "Way_B_unavailable";
+"A_fail" lambda=0.0001 dorm=1.0;
+"DCC_func_demand_A" lambda=1e-5 dorm=1.0;
+"Way_B_unavailable" or "DCC_func_demand_B" "B_fail_demand" "B_fail";
+"DCC_func_demand_B" lambda=0 dorm=0;
+"B_fail_demand" lambda=0 dorm=0;
+"B_fail" lambda=0.0001 dorm=0;
+"pdep_A_unavailable_B1" pdep=1 "DCC_func_demand_A" "DCC_func_demand_B";
+"pdep_A_unavailable_B2" pdep=0.0001 "Way_A_unavailable" "B_fail_demand";
+
+

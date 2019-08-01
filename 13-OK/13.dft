@@ -1,0 +1,12 @@
+toplevel "Function_of_A_lost";
+"Function_of_A_lost" or "Then-1" "AND-1";
+"Then-1" pand "Failure_of_B" "Failure_of_A";
+"Failure_of_B" lambda=0.0001 dorm=1.0;
+"Failure_of_A" lambda=0.0001 dorm=1.0;
+"AND-1" and "Failure_of_A" "S_unavailable";
+"S_unavailable" or "On_demand_failure_of_S" "Failure_of_S";
+"On_demand_failure_of_S" lambda=0 dorm=0;
+"Failure_of_S" lambda=0.0001 dorm=1.0;
+"pdep_B_or_A_to_ondemand_S" pdep=0.0001 "OR_3" "On_demand_failure_of_S";
+"OR_3" or "Failure_of_B" "Failure_of_A";
+"seq_B_or_A_to_failure_of_S" seq "OR_3" "Failure_of_S";

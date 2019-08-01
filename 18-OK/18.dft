@@ -1,0 +1,21 @@
+toplevel "collision";
+"collision" or "non_detection" "course_not_changed";
+"course_not_changed" lambda=0 dorm=1.0;
+"non_detection" and "A_ND_by_ship" "B_ND_by_platform";
+"A_ND_by_ship"  and "radar" "visual";
+"radar" lambda=0 dorm=1.0;
+"visual" lambda=0 dorm=1.0;
+B_ND_by_platform or "A_ND_by_ship_1" "warninig";
+"warninig" lambda=0 dorm=1.0;
+"A_ND_by_ship_1" and "raddar_1" "vissual_1"; 
+"raddar_1" lambda=0 dorm=1.0;
+"vissual_1" lambda=0 dorm=1.0;
+"pdep_radar" pdep=0.0001 "ship_on_collision_course" "radar";
+"pdep_visual" pdep=0.0001 "ship_on_collision_course" "visual";
+"pdep_course_not_changed" pdep=0.0001 "ship_on_collision_course" "course_not_changed";
+"pdep_warning" pdep=0.0001 "ship_on_collision_course" "warninig";
+"pdep_raddar_1" pdep=0.0001 "ship_on_collision_course" "raddar_1";
+"pdep_vissual_1" pdep=0.0001 "ship_on_collision_course" "vissual_1";
+"ship_on_collision_course" lambda=0.0001 dorm=1.0;
+
+

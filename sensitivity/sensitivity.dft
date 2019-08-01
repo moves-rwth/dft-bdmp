@@ -1,0 +1,10 @@
+toplevel "TOP";
+"TOP" or "CSP1" "CSP2";
+"CSP1" csp "P1" "S1" "S2";
+"P1"          	  lambda=1e-5 dorm=1.0;
+"S1"           	  lambda=1e-5 dorm=0;
+"CSP2" csp "P2" "S1" "S2";
+"P2"          	  lambda=1e-5 dorm=1.0;
+"S2"           	  lambda=1e-5 dorm=0;
+
+

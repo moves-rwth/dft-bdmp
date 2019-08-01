@@ -1,0 +1,15 @@
+toplevel "OR_1";
+"OR_1" or "AND_1" "AND_2";
+"AND_1" csp "cptA" "cptC";
+"cptA" lambda=0.0001 dorm=1.0;
+"cptC" lambda=0.0001 dorm=0;
+"AND_2" csp "cptB" "cptD";
+"cptB" lambda=0.0001 dorm=1.0;
+"cptD" lambda=0.0001 dorm=0;
+"SEQ_fail_safe_mutex_A_B" seq "FailSafe" "mutex_A_B";
+"FailSafe" lambda=0 dorm=0;
+"mutex_A_B" and "cptA_dummy" "cptB_dummy";
+"cptA_dummy" lambda=0 dorm=1.0;
+"cptB_dummy" lambda=0 dorm=1.0;
+"pdep_cptA_dummy" pdep=1 "cptA" "cptA_dummy";
+"pdep_cptB_dummy" pdep=1 "cptB" "cptB_dummy";

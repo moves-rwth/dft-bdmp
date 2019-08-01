@@ -1,0 +1,18 @@
+toplevel "AND_1";
+"AND_1" and "OR_1" "OR_2";
+"OR_1" or "E" "AND_2";
+"E" lambda=0.0001 dorm=1.0;
+"AND_2" csp "OR_5" "A_waiting";
+"OR_5" or "D" "C";
+"D" lambda=0.0001 dorm=1.0;
+"C" lambda=0.0001 dorm=1.0;
+"A_waiting" lambda=0.0001 dorm=0.1;
+"OR_2" or "C" "B_waiting_dummy";
+"pdep_B_waiting_dummy" pdep=1 "B_waiting" "B_waiting_dummy";
+"B_waiting_dummy" lambda=0 dorm=1;
+"B_waiting" lambda=0.0001 dorm=0.1;
+"B_waiting_spare" csp "OR_4_dummy" "B_waiting";
+"OR_4" or "E" "D";
+"pdep_OR_4" pdep=1 "OR_4" "OR_4_dummy";
+"OR_4_dummy" lambda=0 dorm=1;
+

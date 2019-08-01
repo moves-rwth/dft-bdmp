@@ -1,0 +1,170 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+42
+@model
+state 0 !0.00071 [1]init
+	action 0 [0]
+		1 : 0.140845070422535
+		2 : 0.140845070422535
+		3 : 0.140845070422535
+		4 : 0.140845070422535
+		5 : 0.140845070422535
+		6 : 0.0140845070422535
+		7 : 0.140845070422535
+		8 : 0.140845070422535
+state 1 !0 [1]Fail Windows_fail
+	action 0 [0]
+		1 : 1
+state 2 !0 [1]Fail Memory_fail
+	action 0 [0]
+		2 : 1
+state 3 !0 [1]Fail Hardrive_fail
+	action 0 [0]
+		3 : 1
+state 4 !0 [1]Fail Display_unit_fail
+	action 0 [0]
+		4 : 1
+state 5 !0 [1]Fail Power_supply_fail
+	action 0 [0]
+		5 : 1
+state 6 !0 [1]Fail CPU_fail_standby
+	action 0 [0]
+		6 : 1
+state 7 !0.0007 [1]Fan_fail
+	action 0 [0]
+		9 : 0.142857142857
+		10 : 0.142857142857
+		11 : 0.142857142857
+		12 : 0.142857142857
+		13 : 0.142857142857
+		14 : 0.142857142857
+		15 : 0.142857142857
+state 8 !0 [1]Floppy_Drive_In_use_fail
+	action 0 [0]
+		16 : 0.9999
+		17 : 0.0001
+state 9 !0 [1]Fail Windows_fail
+	action 0 [0]
+		9 : 1
+state 10 !0 [1]Fail Memory_fail
+	action 0 [0]
+		10 : 1
+state 11 !0 [1]Fail Hardrive_fail
+	action 0 [0]
+		11 : 1
+state 12 !0 [1]Fail Display_unit_fail
+	action 0 [0]
+		12 : 1
+state 13 !0 [1]Fail Power_supply_fail
+	action 0 [0]
+		13 : 1
+state 14 !0 [1]Fail CPU_fail_active
+	action 0 [0]
+		14 : 1
+state 15 !0 [1]Floppy_Drive_In_use_fail
+	action 0 [0]
+		18 : 0.9999
+		19 : 0.0001
+state 16 !0.00071 [1]Manipulation_Error_good
+	action 0 [0]
+		20 : 0.140845070422535
+		21 : 0.140845070422535
+		22 : 0.140845070422535
+		23 : 0.140845070422535
+		24 : 0.140845070422535
+		25 : 0.0140845070422535
+		26 : 0.140845070422535
+		27 : 0.140845070422535
+state 17 !0 [1]Fail Manipulation_Error_fail
+	action 0 [0]
+		17 : 1
+state 18 !0.0007 [1]Manipulation_Error_good
+	action 0 [0]
+		28 : 0.142857142857
+		29 : 0.142857142857
+		30 : 0.142857142857
+		31 : 0.142857142857
+		32 : 0.142857142857
+		33 : 0.142857142857
+		34 : 0.142857142857
+state 19 !0 [1]Fail Manipulation_Error_fail
+	action 0 [0]
+		19 : 1
+state 20 !0 [1]Fail Windows_fail
+	action 0 [0]
+		20 : 1
+state 21 !0 [1]Fail Memory_fail
+	action 0 [0]
+		21 : 1
+state 22 !0 [1]Fail Hardrive_fail
+	action 0 [0]
+		22 : 1
+state 23 !0 [1]Fail Display_unit_fail
+	action 0 [0]
+		23 : 1
+state 24 !0 [1]Fail Power_supply_fail
+	action 0 [0]
+		24 : 1
+state 25 !0 [1]Fail CPU_fail_standby
+	action 0 [0]
+		25 : 1
+state 26 !0.0007 [1]Fan_fail
+	action 0 [0]
+		35 : 0.142857142857
+		36 : 0.142857142857
+		37 : 0.142857142857
+		38 : 0.142857142857
+		39 : 0.142857142857
+		40 : 0.142857142857
+		41 : 0.142857142857
+state 27 !0 [1]Fail Floppy_drive_fail
+	action 0 [0]
+		27 : 1
+state 28 !0 [1]Fail Windows_fail
+	action 0 [0]
+		28 : 1
+state 29 !0 [1]Fail Memory_fail
+	action 0 [0]
+		29 : 1
+state 30 !0 [1]Fail Hardrive_fail
+	action 0 [0]
+		30 : 1
+state 31 !0 [1]Fail Display_unit_fail
+	action 0 [0]
+		31 : 1
+state 32 !0 [1]Fail Power_supply_fail
+	action 0 [0]
+		32 : 1
+state 33 !0 [1]Fail CPU_fail_Active
+	action 0 [0]
+		33 : 1
+state 34 !0 [1]Fail Floppy_drive_fail
+	action 0 [0]
+		34 : 1
+state 35 !0 [1]Fail Windows_fail
+	action 0 [0]
+		35 : 1
+state 36 !0 [1]Fail Memory_fail
+	action 0 [0]
+		36 : 1
+state 37 !0 [1]Fail Hardrive_fail
+	action 0 [0]
+		37 : 1
+state 38 !0 [1]Fail Display_unit_fail
+	action 0 [0]
+		38 : 1
+state 39 !0 [1]Fail Power_supply_fail
+	action 0 [0]
+		39 : 1
+state 40 !0 [1]Fail CPU_fail_Active
+	action 0 [0]
+		40 : 1
+state 41 !0 [1]Fail Floppy_drive_fail
+	action 0 [0]
+		41 : 1

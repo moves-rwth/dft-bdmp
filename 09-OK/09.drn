@@ -1,0 +1,150 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+40
+@model
+state 0 !0.1002 [1]init Phase_1_start
+	action 0 [0]
+		1 : 0.998003992015968000
+		2 : 0.000998003992015968
+		3 : 0.000998003992015968
+state 1 !0 [1]Phase_1_end
+	action 0 [0]
+		4 : 1
+state 2 !0.1002 [1]CptA_fail
+	action 0 [0]
+		5 : 0.998003992015968000
+		6 : 0.000998003992015968
+		7 : 0.000998003992015968
+state 3 !0.1002 [1]CptB_fail
+	action 0 [0]
+		8 : 0.998003992015968000
+		9 : 0.000998003992015968
+		10 : 0.000998003992015968
+state 4 !0.1002 [1]Phase_2_start
+	action 0 [0]
+		11 : 0.998003992015968000
+		12 : 0.000998003992015968
+		13 : 0.000998003992015968
+state 5 !0 [1]Phase_1_end
+	action 0 [0]
+		14 : 1
+state 6 !0.1001 [1]CptB_fail
+	action 0 [0]
+		15 : 0.999000999000999000
+		16 : 0.000999000999000999
+state 7 !0.1001 [1]CptC_fail
+	action 0 [0]
+		17 : 0.999000999000999000
+		18 : 0.000999000999000999
+state 8 !0 [1]Phase_1_end
+	action 0 [0]
+		19 : 1
+state 9 !0.1001 [1]CptA_fail
+	action 0 [0]
+		20 : 0.999000999000999000
+		21 : 0.000999000999000999
+state 10 !0.1001 [1]CptC_fail
+	action 0 [0]
+		22 : 0.999000999000999000
+		23 : 0.000999000999000999
+state 11 !0 [1]Phase_2_end
+	action 0 [0]
+		11 : 1
+state 12 !0.1002 [1]CptA_fail
+	action 0 [0]
+		24 : 0.998003992
+		25 : 0.000998004
+		26 : 0.000998004
+state 13 !0.1002 [1]CptB_fail
+	action 0 [0]
+		27 : 0.998003992
+		28 : 0.000998004
+		29 : 0.000998004
+state 14 !0.1002 [1]Phase_2_start
+	action 0 [0]
+		30 : 0.998003992
+		31 : 0.000998004
+		32 : 0.000998004
+state 15 !0 [1]Phase_1_end
+	action 0 [0]
+		33 : 1
+state 16 !0 [1]Fail CptC_fail
+	action 0 [0]
+		16 : 1
+state 17 !0 [1]Phase_1_end
+	action 0 [0]
+		34 : 1
+state 18 !0 [1]Fail CptB_fail
+	action 0 [0]
+		18 : 1
+state 19 !0.1002 [1]Phase_2_start
+	action 0 [0]
+		35 : 0.998003992015968000
+		36 : 0.000998003992015968
+		37 : 0.000998003992015968
+state 20 !0 [1]Phase_1_end
+	action 0 [0]
+		38 : 1
+state 21 !0 [1]Fail CptC_fail
+	action 0 [0]
+		21 : 1
+state 22 !0 [1]Phase_1_end
+	action 0 [0]
+		39 : 1
+state 23 !0 [1]Fail CptA_fail
+	action 0 [0]
+		23 : 1
+state 24 !0 [1]Phase_2_end
+	action 0 [0]
+		24 : 1
+state 25 !0 [1]Fail CptB_fail
+	action 0 [0]
+		25 : 1
+state 26 !0 [1]Fail CptC_fail
+	action 0 [0]
+		26 : 1
+state 27 !0 [1]Phase_2_end
+	action 0 [0]
+		27 : 1
+state 28 !0 [1]Fail CptA_fail
+	action 0 [0]
+		28 : 1
+state 29 !0 [1]Fail CptC_fail
+	action 0 [0]
+		29 : 1
+state 30 !0 [1]Phase_2_end
+	action 0 [0]
+		30 : 1
+state 31 !0 [1]Fail CptB_fail
+	action 0 [0]
+		31 : 1
+state 32 !0 [1]Fail CptC_fail
+	action 0 [0]
+		32 : 1
+state 33 !0 [1]Fail Phase_2_start
+	action 0 [0]
+		33 : 1
+state 34 !0 [1]Fail Phase_2_start
+	action 0 [0]
+		34 : 1
+state 35 !0 [1]Phase_2_end
+	action 0 [0]
+		35 : 1
+state 36 !0 [1]Fail CptA_fail
+	action 0 [0]
+		36 : 1
+state 37 !0 [1]Fail CptC_fail
+	action 0 [0]
+		37 : 1
+state 38 !0 [1]Fail Phase_2_start
+	action 0 [0]
+		38 : 1
+state 39 !0 [1]Fail Phase_2_start
+	action 0 [0]
+		39 : 1

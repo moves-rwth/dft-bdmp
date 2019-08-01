@@ -1,0 +1,18 @@
+toplevel "Loss_of_both_boards";
+"Loss_of_both_boards" csp "TSTA_KoutofN" "Loss_LHA_LHB";
+"TSTA_KoutofN" 2of2 "TSTA_1of2" "TSTA_1of1";
+"TSTA_1of2" lambda=2e-5 dorm=1.0;
+"TSTA_1of1" lambda=1e-5 dorm=1.0;
+"seq_TSTA_2_TSTA_1" seq "TSTA_1of2" "TSTA_1of1";
+"Loss_LHA_LHB" and "Loss_of_Diesel_A" "Loss_of_Diesel_B";
+"Loss_of_Diesel_A" or "Diesel_A" "RD_Diesel_A"  "DCC_demand" "DCC_fail";
+"Diesel_A" lambda=0.001 dorm=0;
+"RD_Diesel_A" lambda=0 dorm=0;
+"DCC_demand" lambda=0 dorm=0;
+"DCC_fail" lambda=5e-5 dorm=0;
+"pdep_TSTA_Diesel_A" pdep=0.01 "TSTA_KoutofN" "RD_Diesel_A";
+"pdep_TSTA_DCC_demand" pdep=0.0005 "TSTA_KoutofN" "DCC_demand";
+"Loss_of_Diesel_B" or "DCC_demand" "DCC_fail" "RD_Diesel_B" "Diesel_B";
+"RD_Diesel_B" lambda=0 dorm=0;
+"Diesel_B" lambda=0.001 dorm=0;
+"pdep_TSTA_Diesel_B" pdep=0.01 "TSTA_KoutofN" "RD_Diesel_B";

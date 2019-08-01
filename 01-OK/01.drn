@@ -1,0 +1,68 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+17
+@model
+state 0 !0.0002 [1]init
+	action 0 [0]
+		1 : 0.5
+		2 : 0.5
+state 1 !0 [1]CB1_IO_fail
+	action 0 [0]
+		3 : 0.9999
+		4 : 0.0001
+state 2 !0 [1]Grid_fail
+	action 0 [0]
+		5 : 0.9999
+		6 : 0.0001
+state 3 !0 [1]CB2_RC_good
+	action 0 [0]
+		7 : 0.9999
+		8 : 0.0001
+state 4 !0 [0.666667]Fail CB2_RC_fail
+	action 0 [0]
+		4 : 1
+state 5 !0 [0.666667]CB1_RO_good
+	action 0 [0]
+		9 : 0.9999
+		10 : 0.0001
+state 6 !0 [0.666667]Fail CB1_RO_fail
+	action 0 [0]
+		6 : 1
+state 7 !0.0001 [0.666667]Dies_Gen_Rs_good
+	action 0 [0]
+		11 : 1
+state 8 !0 [0.666667]Fail Dies_Gen_Rs_fail
+	action 0 [0]
+		8 : 1
+state 9 !0 [0.666667]CB2_RC_good
+	action 0 [0]
+		12 : 0.9999
+		13 : 0.0001
+state 10 !0 [0.333333]Fail CB_2RC_fail
+	action 0 [0]
+		10 : 1
+state 11 !0 [0.333333]Fail Dies_Gen_fail
+	action 0 [0]
+		11 : 1
+state 12 !0.0002 [0.333333]Dies_Gen_RS_good
+	action 0 [0]
+		14 : 0.5
+		15 : 0.5
+state 13 !0 [0.333333]Fail Dies_Gen_RS_fail
+	action 0 [0]
+		13 : 1
+state 14 !0.0001 [0.333333]CB_IO_fail
+	action 0 [0]
+		16 : 1
+state 15 !0 [0.333333]Fail Dies_Gen_fail
+	action 0 [0]
+		15 : 1
+state 16 !0 [0]Fail Dies_Gen_fail
+	action 0 [0]
+		16 : 1

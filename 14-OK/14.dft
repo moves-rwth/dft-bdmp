@@ -1,0 +1,7 @@
+toplevel "OR-1";
+"OR-1" or "Then-1" "AND-1";
+"Then-1" pand "Switch" "Primary";
+"Switch" lambda=0.0001 dorm=1.0;
+"Primary" lambda=0.0001 dorm=1.0;
+"AND-1" and "Primary" "Secondary";
+"Secondary" lambda=0.0001 dorm=1.0;

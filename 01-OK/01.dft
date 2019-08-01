@@ -1,0 +1,18 @@
+toplevel "AND_1";
+"AND_1" and "Loss_of_line_1" "Loss_of_Diesel_Line";
+"Loss_of_line_1" or "Grid" "CB1_IO";
+"first_seq" seq "Loss_of_line_1" "Loss_of_Diesel_Line";
+"Grid" lambda=0.0001 dorm=1.0;
+"CB1_IO" lambda=0.0001 dorm=1.0;
+"Loss_of_Diesel_Line" or "CB1_RO" "CB2_RC" "Dies_gen_RS" "Dies_gen";
+"pdep_CB1_RO" pdep=0.0001 "POR_line_1_CB1_RO" "CB1_RO";
+"pdep_CB2_RC" pdep=0.0001 "Loss_of_line_1" "CB2_RC";
+"pdep_Dies_gen_RS" pdep=0.0001 "Loss_of_line_1" "Dies_gen_RS";
+"CB1_RO" lambda=0 dorm=0;
+"CB2_RC" lambda=0 dorm=0;
+"Dies_gen_RS" lambda=0 dorm=0;
+"Dies_gen" lambda=0.0001 dorm=0;
+"POR_line_1_CB1_RO" por "Grid" "CB1_IO";
+"or_dummy" or  "CB1_IO";
+"pdep_dummy" pdep=1 "or_dummy" "be_dummy";
+"be_dummy" lambda=0 dorm=0;

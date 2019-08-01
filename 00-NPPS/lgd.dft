@@ -1,0 +1,118 @@
+toplevel "loss_of_supply_by_LGD";
+"loss_of_supply_by_LGD" or "LGD" "LGD_not_fed" "SH_CB_LGD1";
+"LGD"          	     	lambda=2e-7 dorm=0;
+"SH_CB_LGD1"         	lambda=5e-7 dorm=0;
+"LGD_not_fed" hsp "loss_of_supply_by_TS" "loss_of_supply_by_TA";
+"loss_of_supply_by_TS" or "LGA" "SH_CB_LGA" "BE_dummy_TS_lost_TS";
+"LGA"                	lambda=2e-7 dorm=0;
+"SH_CB_LGA"          	lambda=5e-7 dorm=0;
+"loss_of_supply_by_TA" or "RC_CB_LGD2_" "SH_CB_LGD2" "BE_dummy_TA_lost_TA";
+"SH_CB_LGD2"         	lambda=5e-7 dorm=0;
+"RC_CB_LGD2_" or "CB_LGD2_unable" "RC_CB_LGD2";
+"RC_CB_LGD2"         	lambda=0 dorm=0;
+"CB_LGD2_unable" pand "LBA_lost_dummy1" "loss_of_supply_by_TS_dummy";
+"pdep_loss_of_supply_by_TS_dummy" pdep=1 "loss_of_supply_by_TS" "loss_of_supply_by_TS_dummy";
+"loss_of_supply_by_TS_dummy" lambda=0 dorm=0;
+"pdep_switching_from_TS_to_TA" pdep=2e-4 "loss_of_supply_by_TS" "RC_CB_LGD2";
+
+
+
+
+"BE_dummy_TA_lost_TA1" 	lambda=0 dorm=0;
+"BE_dummy_TA_lost_TA" 	lambda=0 dorm=0;
+"pdep_dummy_TA_lost" pdep=1.0 "TA_lost" "BE_dummy_TA_lost_TA" "BE_dummy_TA_lost_TA1";
+"BE_dummy_TS_lost_TS"          lambda=0  dorm=0;
+"BE_dummy_TS_lost_TS1"          lambda=0  dorm=0;
+"pdep_dummy_TS_lost" pdep=1.0 "TS_lost" "BE_dummy_TS_lost_TS" "BE_dummy_TS_lost_TS1";
+
+
+
+"TS_lost" or "TS" "SH_CB_GEV" "SH_CB_line_GEV" "TS_not_fed";
+"TS"         	  		 lambda=5e-6 dorm=1.0;
+"SH_CB_GEV"  	   		 lambda=1e-7 dorm=1.0;
+"SH_CB_line_GEV"  		 lambda=1e-7 dorm=1.0;
+"TS_not_fed"  and "loss_of_supply_by_UNIT" "loss_of_supply_by_GEV"; 
+"loss_of_supply_by_UNIT" or "TP" "UNIT" "loss_of_houseload_operation";
+"TP"              	lambda=5e-6 dorm=1.0;
+"UNIT"              	lambda=1e-4 dorm=1.0;
+"loss_of_houseload_operation" or "on_demand_house" "in_function_house";
+"on_demand_house"       lambda=0 dorm=0;
+"in_function_house"     lambda=0.1 dorm=0;
+"pdep_in_house_fail_on_demand" pdep=0.2 "loss_of_supply_by_GEV" "on_demand_house";
+"seq_GEVloss_householdloss" seq "loss_of_supply_by_GEV" "loss_of_houseload_operation";
+"loss_of_supply_by_GEV" or "SH_GEV_or_LGR" "OR_14" "CCF_GEV_LGR";
+"SH_GEV_or_LGR" or "GEV" "LGR"";
+"GEV"              		lambda=2e-5 dorm=1.0;
+"LGR"              		lambda=2e-5 dorm=1.0;
+"CCF_GEV_LGR"      		lambda=1e-6 dorm=1.0;
+"OR_14" or "GRID" "SUBSTATION";
+"GRID"             		lambda=1e-5 dorm=1.0;
+"SUBSTATION"       		lambda=1e-6 dorm=1.0;
+"TA_lost" or "TA" "SH_CB_line_LGR" "loss_of_supply_by_LGR";
+"TA"                 	lambda=5e-6 dorm=1.0;
+"SH_CB_line_LGR"     	lambda=1e-7 dorm=1.0;
+"loss_of_supply_by_LGR" or "SH_GEV_or_LGR" "CCF_GEV_LGR" "OR_14";
+
+
+
+
+
+
+
+
+
+"LBA_lost_dummy1" lambda=0 dorm=0;
+"LBA_lost_dummy2" lambda=0 dorm=0;
+"LBA_lost_dummy3" lambda=0 dorm=0;
+
+"pdep_dummy_LBA_lost" pdep=1.0 "LBA_lost" "LBA_lost_dummy1" "LBA_lost_dummy2" "LBA_lost_dummy3";
+
+"LBA_lost" or "SH_CB_LBA1" "LBA" "LBA_not_fed";
+"SH_CB_LBA1"          	  lambda=1e-6 dorm=1.0;
+"LBA"            	  lambda=5e-7 dorm=1.0;
+"LBA_not_fed" csp "LBA_by_line1_lost" "LBA_by_line2_lost" "BATTERY_A_lost";
+"LBA_by_line1_lost" or "RDA1" "SH_CB_RDA1" "LKE" "TUA1" "SH_CB_TUA1" "LGE" "SH_CB_LGE1";
+"RDA1"                	lambda=1e-6 dorm=0;
+"SH_CB_RDA1"          	lambda=1e-6 dorm=0;
+"LKE"                 	lambda=5e-7 dorm=0;
+"TUA1"                	lambda=2e-7 dorm=0;
+"SH_CB_TUA1"          	lambda=5e-7 dorm=0;
+"LGE"                 	lambda=2e-7 dorm=0;
+"SH_CB_LGE1"          	lambda=5e-7 dorm=0;
+"LBA_by_line2_lost" or "SH_CB_LBA2" "RDA2" "SH_CB_RDA2" "LLA" "TUA2" "SH_CB_TUA2";
+"SH_CB_LBA2"          	lambda=1e-6 dorm=0;
+"RDA2"                	lambda=1e-6 dorm=0;
+"SH_CB_RDA2"          	lambda=1e-6 dorm=0;
+"LLA"                 	lambda=5e-7 dorm=0;
+"TUA2"                	lambda=2e-7 dorm=0;
+"SH_CB_TUA2"          	lambda=5e-7 dorm=0;
+"BATTERY_A_lost" csp "BATT_A1" "BATT_A2";
+"BATT_A1"             	lambda=0.5 dorm=0;
+"BATT_A2"             	lambda=0.5 dorm=0;
+
+
+"LBB_lost_dummy1" lambda=0 dorm=0;
+"LBB_lost_dummy2" lambda=0 dorm=0;
+"pdep_dummy_LBB_lost" pdep=1.0 "LBB_lost" "LBB_lost_dummy1" "LBB_lost_dummy2";
+
+
+"LBB_lost" or "SC_CB_LBB1" "LBB" "LBB_not_fed";
+"SC_CB_LBB1"   	       	lambda=1e-6 dorm=1.0;
+"LBB"           	lambda=5e-7 dorm=1.0;
+"LBB_not_fed" csp "LBB_by_line1_lost" "LBB_by_line2_lost" "BATTERY_B_lost";
+"LBB_by_line1_lost" or "RDB1" "SH_CB_RDB1" "LKI" "TUB1" "SH_CB_TUB1";
+"RDB1"                	lambda=1e-6 dorm=1.0;
+"SH_CB_RDB1"          	lambda=1e-6 dorm=1.0;
+"LKI"                 	lambda=5e-7 dorm=1.0;
+"TUB1"                	lambda=2e-7 dorm=1.0;
+"SH_CB_TUB1"          	lambda=5e-7 dorm=1.0;
+"LBB_by_line2_lost" or "SH_CB_LBB2" "RDB2" "SH_CB_RDB2" "LLD" "TUB2" "SH_CB_TUB2";
+"SH_CB_LBB2"          	lambda=1e-6 dorm=0;
+"RDB2"                	lambda=1e-6 dorm=0;
+"SH_CB_RDB2"          	lambda=1e-6 dorm=0;
+"LLD"                 	lambda=5e-7 dorm=0;
+"TUB2"                	lambda=2e-7 dorm=0;
+"SH_CB_TUB2"          	lambda=5e-7 dorm=0;
+"BATTERY_B_lost" hsp "BATT_B1" "BATT_B2";
+"BATT_B1"           	lambda=2.0 dorm=0;
+"BATT_B2"             	lambda=2.0 dorm=0;

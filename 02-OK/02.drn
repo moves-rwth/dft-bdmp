@@ -1,0 +1,121 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+33
+@model
+state 0 !0.002916669 [1]init
+	action 0 [0]
+		1 : 0.047619048
+		2 : 0.952380952
+state 1 !0 [1]C_fail
+	action 0 [0]
+		3 : 0.7
+		4 : 0.3
+state 2 !0 [1]P_op_fail
+	action 0 [0]
+		5 : 0.6993
+		6 : 0.0007
+		7 : 0.2997
+		8 : 0.0003
+state 3 !0.00387778 [1]A_start_good
+	action 0 [0]
+		9 : 0.025787951
+		10 : 0.257879508
+		11 : 0.716332541
+state 4 !0.00377778 [0.666667]A_start_fail
+	action 0 [0]
+		12 : 0.264705727
+		13 : 0.735294273
+state 5 !0.0011 [0.666667]A_start_good C_start_good
+	action 0 [0]
+		14 : 0.090909091
+		15 : 0.909090909
+state 6 !0 [0.666667]Fail A_start_good C_start_fail
+	action 0 [0]
+		6 : 1
+state 7 !0.001 [0.666667]A_start_fail C_start_good
+	action 0 [0]
+		16 : 1
+state 8 !0 [0.666667]Fail A_start_fail C_start_fail
+	action 0 [0]
+		8 : 1
+state 9 !0.00377778 [0.666667]A_op_Fail
+	action 0 [0]
+		17 : 0.264705727
+		18 : 0.735294273
+state 10 !0.00287778 [0.666667]B_op_Fail
+	action 0 [0]
+		19 : 0.034749008
+		20 : 0.965250992
+state 11 !0.0011 [0.666667]P_op_Fail
+	action 0 [0]
+		21 : 0.090909091
+		22 : 0.909090909
+state 12 !0.00277778 [0.333333]B_op_Fail
+	action 0 [0]
+		23 : 1
+state 13 !0.001 [0.333333]P_op_Fail
+	action 0 [0]
+		24 : 1
+state 14 !0.001 [0.333333]A_op_Fail
+	action 0 [0]
+		25 : 1
+state 15 !0.0001 [0.333333]B_op_Fail
+	action 0 [0]
+		26 : 1
+state 16 !0 [0]Fail B_op_Fail
+	action 0 [0]
+		16 : 1
+state 17 !0.00277778 [0]B_op_Fail
+	action 0 [0]
+		27 : 1
+state 18 !0.001 [0.333333]P_op_Fail
+	action 0 [0]
+		28 : 1
+state 19 !0.00277778 [0.333333]A_op_Fail
+	action 0 [0]
+		29 : 1
+state 20 !0.0001 [0]P_op_Fail
+	action 0 [0]
+		30 : 1
+state 21 !0.001 [0]A_op_Fail
+	action 0 [0]
+		31 : 1
+state 22 !0.0001 [0.666667]B_op_Fail
+	action 0 [0]
+		32 : 1
+state 23 !0 [0.333333]Fail P_op_Fail
+	action 0 [0]
+		23 : 1
+state 24 !0 [0.333333]Fail B_op_Fail
+	action 0 [0]
+		24 : 1
+state 25 !0 [0.333333]Fail B_op_Fail
+	action 0 [0]
+		25 : 1
+state 26 !0 [0.333333]Fail A_op_Fail
+	action 0 [0]
+		26 : 1
+state 27 !0 [0.333333]Fail P_op_Fail
+	action 0 [0]
+		27 : 1
+state 28 !0 [0.333333]Fail B_op_Fail
+	action 0 [0]
+		28 : 1
+state 29 !0 [0]Fail P_op_Fail
+	action 0 [0]
+		29 : 1
+state 30 !0 [0]Fail A_op_Fail
+	action 0 [0]
+		30 : 1
+state 31 !0 [0.333333]Fail B_op_Fail
+	action 0 [0]
+		31 : 1
+state 32 !0 [0.333333]Fail A_op_Fail
+	action 0 [0]
+		32 : 1

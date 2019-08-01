@@ -1,0 +1,17 @@
+toplevel "OR_1";
+"OR_1" or "Fail_AB" "OR_2" "Fail_CD";
+"Fail_AB" and "Loss_A" "B";
+"Loss_A" and "A1" "A2";
+"A1" lambda=0.0001 dorm=1.0;
+"A2" lambda=0.0001 dorm=1.0;
+"B" lambda=0.0001 dorm=1.0;
+"OR_2" or "Diagonal_1" "Diagonal_2";
+"Diagonal_1" and "Loss_A" "Loss_D" "E";
+"E" lambda=0.0001 dorm=1.0;
+"Diagonal_2" and "B" "C" "E";
+"Fail_CD" and "C" "Loss_D";
+"C" lambda=0.0001 dorm=1.0;
+"Loss_D" and "D1" "D2";
+"D1" lambda=0.0001 dorm=1.0;
+"D2" lambda=0.0001 dorm=1.0;
+

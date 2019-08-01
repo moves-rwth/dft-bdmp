@@ -1,0 +1,29 @@
+toplevel "TA_or_TS_lost";
+"TA_or_TS_lost" or "TS_lost" "TA_lost";
+
+"TS_lost" or "TS" "SH_CB_GEV" "SH_CB_line_GEV" "TS_not_fed";
+"TS"         	  		 lambda=5e-6 dorm=1.0;
+"SH_CB_GEV"  	   		 lambda=1e-7 dorm=1.0;
+"SH_CB_line_GEV"  		 lambda=1e-7 dorm=1.0;
+"TS_not_fed"  and "loss_of_supply_by_UNIT" "loss_of_supply_by_GEV"; 
+"loss_of_supply_by_UNIT" or "TP" "UNIT" "loss_of_houseload_operation";
+"TP"              	lambda=5e-6 dorm=1.0;
+"UNIT"              	lambda=1e-4 dorm=1.0;
+"loss_of_houseload_operation" or "on_demand_house" "in_function_house";
+"on_demand_house"       lambda=0 dorm=0;
+"in_function_house"     lambda=0.1 dorm=0;
+"pdep_in_house_fail_on_demand" pdep=0.2 "loss_of_supply_by_GEV" "on_demand_house";
+"seq_GEVloss_householdloss" seq "loss_of_supply_by_GEV" "loss_of_houseload_operation";
+"loss_of_supply_by_GEV" or "SH_GEV_or_LGR" "OR_14" "CCF_GEV_LGR";
+"SH_GEV_or_LGR" or "GEV" "LGR"";
+"GEV"              		lambda=2e-5 dorm=1.0;
+"LGR"              		lambda=2e-5 dorm=1.0;
+"CCF_GEV_LGR"      		lambda=1e-6 dorm=1.0;
+"OR_14" or "GRID" "SUBSTATION";
+"GRID"             		lambda=1e-5 dorm=1.0;
+"SUBSTATION"       		lambda=1e-6 dorm=1.0;
+"TA_lost" or "TA" "SH_CB_line_LGR" "loss_of_supply_by_LGR";
+"TA"                 	lambda=5e-6 dorm=1.0;
+"SH_CB_line_LGR"     	lambda=1e-7 dorm=1.0;
+"loss_of_supply_by_LGR" or "SH_GEV_or_LGR" "CCF_GEV_LGR" "OR_14";
+

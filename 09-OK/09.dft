@@ -1,0 +1,21 @@
+toplevel "OR_2";
+"OR_2" or "POR_phase1" "POR_phase2";
+"POR_phase1" por "AND_1" "phase_1_end";
+"phase_1_end" lambda=0.1 dorm=0;
+"AND_1" and "cptA" "cptB" "cptC";
+"cptA"lambda=0.0001 dorm=0; 
+"cptB"lambda=0.0001 dorm=0;
+"cptC"lambda=0.0001 dorm=0;  
+"POR_phase2" por "AND_phase2" "phase_2_end";
+"AND_phase2" and "phase_2_start" "koutofn";
+"phase_2_start" lambda=0 dorm=0;  
+"phase_2_end" lambda=0.1 dorm=0;
+"koutofn" 2of3 "cptA" "cptB" "cptC";
+"seq_phase_1" seq "phase_1_start" "phase_1_end";
+"pdep_phase_1_to_2" pdep=1 "phase_1_end" "phase_2_start";
+"seq_phase_2" seq "phase_2_start" "phase_2_end";
+"seq_AB_to_C" seq "or_AB" "cptC";
+"or_AB" or "cptA" "cptB";
+"seq_phase_1_start_end" seq "phase_1_start" "phase_1_end";
+"phase_1_start" lambda=999999 dorm=0;
+

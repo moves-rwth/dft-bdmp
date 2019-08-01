@@ -1,0 +1,211 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+avg_waiting_time 
+@nr_states
+55
+@model
+state 0 !0.0003001 [1]init
+	action 0 [0]
+		1 : 0.333222259246918
+		2 : 0.333222259246918
+		3 : 0.333222259246918
+		4 : 0.000333222259246918
+state 1 !0.0002001 [1]Indep_fail_A
+	action 0 [0]
+		5 : 0.499750124937531
+		6 : 0.499750124937531
+		7 : 0.000499750124937531
+state 2 !0.0002001 [1]Indep_fail_B
+	action 0 [0]
+		8 : 0.499750124937531
+		9 : 0.499750124937531
+		10 : 0.000499750124937531
+state 3 !0.0002001 [1]Indep_fail_C
+	action 0 [0]
+		11 : 0.499750124937531
+		12 : 0.499750124937531
+		13 : 0.000499750124937531
+state 4 !0 [0.666667]Shock
+	action 0 [0]
+		14 : 0.729
+		15 : 0.081
+		16 : 0.081
+		17 : 0.009
+		18 : 0.081
+		19 : 0.009
+		20 : 0.009
+		21 : 0.001
+state 5 !0 [0.666667]Fail Indep_fail_B
+	action 0 [0]
+		5 : 1
+state 6 !0 [0.666667]Fail Indep_fail_C
+	action 0 [0]
+		6 : 1
+state 7 !0 [0.666667]Shock
+	action 0 [0]
+		22 : 0.81
+		23 : 0.09
+		24 : 0.09
+		25 : 0.01
+state 8 !0 [0.666667]Fail Indep_fail_A
+	action 0 [0]
+		8 : 1
+state 9 !0 [0.666667]Fail Indep_fail_C
+	action 0 [0]
+		9 : 1
+state 10 !0 [0.666667]Shock
+	action 0 [0]
+		26 : 0.81
+		27 : 0.09
+		28 : 0.09
+		29 : 0.01
+state 11 !0 [0.666667]Fail Indep_fail_A
+	action 0 [0]
+		11 : 1
+state 12 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		12 : 1
+state 13 !0 [0.333333]Shock
+	action 0 [0]
+		30 : 0.81
+		31 : 0.09
+		32 : 0.09
+		33 : 0.01
+state 14 !0.0003 [0.333333]CCF_A_good CCF_B_good CCF_C_good
+	action 0 [0]
+		34 : 0.33333333333333
+		35 : 0.33333333333333
+		36 : 0.33333333333333
+state 15 !0.0002 [0.333333]CCF_A_good CCF_B_good CCF_C_fail
+	action 0 [0]
+		37 : 0.5
+		38 : 0.5
+state 16 !0.0002 [0]CCF_A_good CCF_B_fail CCF_C_good
+	action 0 [0]
+		39 : 0.5
+		40 : 0.5
+state 17 !0 [0]Fail CCF_A_good CCF_B_fail CCF_C_fail
+	action 0 [0]
+		17 : 1
+state 18 !0.0002 [0.333333]CCF_A_fail CCF_B_good CCF_C_good
+	action 0 [0]
+		41 : 0.5
+		42 : 0.5
+state 19 !0 [0.333333]Fail CCF_A_fail CCF_B_good CCF_C_fail
+	action 0 [0]
+		29 : 1
+state 20 !0 [0]Fail CCF_A_fail CCF_B_fail CCF_C_good
+	action 0 [0]
+		20 : 1
+state 21 !0 [0]Fail CCF_A_fail CCF_B_fail CCF_C_fail
+	action 0 [0]
+		21 : 1
+state 22 !0.0002 [0.666667]CCF_B_good CCF_C_good
+	action 0 [0]
+		43 : 0.5
+		44 : 0.5
+state 23 !0 [0.333333]Fail CCF_B_good CCF_C_fail
+	action 0 [0]
+		23 : 1
+state 24 !0 [0.333333]Fail CCF_B_fail CCF_C_good
+	action 0 [0]
+		24 : 1
+state 25 !0 [0.333333]Fail CCF_B_fail CCF_C_fail
+	action 0 [0]
+		25 : 1
+state 26 !0.0002 [0.333333]CCF_A_good CCF_C_good
+	action 0 [0]
+		45 : 0.5
+		46 : 0.5
+state 27 !0 [0.333333]Fail CCF_A_good CCF_C_fail
+	action 0 [0]
+		27 : 1
+state 28 !0 [0.333333]Fail CCF_A_fail CCF_C_good
+	action 0 [0]
+		28 : 1
+state 29 !0 [0]Fail CCF_A_fail CCF_C_fail
+	action 0 [0]
+		29 : 1
+state 30 !0.0002 [0]CCF_A_good CCF_B_good
+	action 0 [0]
+		47 : 0.5
+		48 : 0.5
+state 31 !0 [0.333333]Fail CCF_A_good CCF_B_fail
+	action 0 [0]
+		31 : 1
+state 32 !0 [0.333333]Fail CCF_A_fail CCF_B_good
+	action 0 [0]
+		32 : 1
+state 33 !0 [0.333333]Fail CCF_A_fail CCF_B_fail
+	action 0 [0]
+		33 : 1
+state 34 !0.0002 [0.333333]Indep_fail_A
+	action 0 [0]
+		49 : 0.5
+		50 : 0.5
+state 35 !0.0002 [0.333333]Indep_fail_B
+	action 0 [0]
+		51 : 0.5
+		52 : 0.5
+state 36 !0.0002 [0.333333]Indep_fail_C
+	action 0 [0]
+		53 : 0.5
+		54 : 0.5
+state 37 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		37 : 1
+state 38 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		38 : 1
+state 39 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		39 : 1
+state 40 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		40 : 1
+state 41 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		41 : 1
+state 42 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		42 : 1
+state 43 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		43 : 1
+state 44 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		44 : 1
+state 45 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		45 : 1
+state 46 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		46 : 1
+state 47 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		47 : 1
+state 48 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		48 : 1
+state 49 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		49 : 1
+state 50 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		50 : 1
+state 51 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		51 : 1
+state 52 !0 [0.333333]Fail Indep_fail_C
+	action 0 [0]
+		52 : 1
+state 53 !0 [0.333333]Fail Indep_fail_A
+	action 0 [0]
+		53 : 1
+state 54 !0 [0.333333]Fail Indep_fail_B
+	action 0 [0]
+		54 : 1

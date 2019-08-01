@@ -1,0 +1,15 @@
+toplevel "System_lost";
+"System_lost" 2of3 "Loss_of_A" "Loss_of_B" "Loss_of_C";
+"Loss_of_A" or "A" "CCF_A";
+"A" lambda=0.0001 dorm=1.0;
+"CCF_A" lambda=0 dorm=1.0;
+"Loss_of_B" or "B" "CCF_B";
+"B" lambda=0.0001 dorm=1.0;
+"CCF_B" lambda=0 dorm=1.0;
+"Loss_of_C" or "C" "CCF_C";
+"C" lambda=0.0001 dorm=1.0;
+"CCF_C" lambda=0 dorm=1.0;
+"pdep_CCF_A" pdep=0.1 "Shock" "CCF_A";
+"pdep_CCF_B" pdep=0.1 "Shock" "CCF_B";
+"pdep_CCF_C" pdep=0.1 "Shock" "CCF_C";
+"Shock" lambda=0.0000001 dorm=1.0;

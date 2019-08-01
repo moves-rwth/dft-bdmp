@@ -1,0 +1,18 @@
+toplevel "AND_1";
+"AND_1" and "OR_1" "OR_2";
+"OR_1" or "E" "AND_2";
+"E" lambda=0.0001 dorm=1.0;
+"AND_2" and "OR_3" "dummy_SF_A";
+"OR_3" or "D" "C";
+"D" lambda=0.0001 dorm=1.0;
+"C" lambda=0.0001 dorm=1.0;
+"dummy_SF_A" lambda=0 dorm=1.0;
+"pdep_SF_A" pdep=1 "SF_A" "dummy_SF_A";
+"SF_A" lambda=0.0001 dorm=0.1;
+"spare_SF_A" csp "OR_3" "SF_A";
+"OR_2" or "C" "dummy_SF_B";
+"dummy_SF_B" lambda=0 dorm=1.0;
+"pdep_SF_B" pdep=1 "SF_B" "dummy_SF_B";
+"SF_B" lambda=0.0001 dorm=0.1;
+"spare_SF_B" csp "OR_4" "SF_B";
+"OR_4" or "E" "D";

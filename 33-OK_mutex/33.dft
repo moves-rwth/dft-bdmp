@@ -1,0 +1,28 @@
+toplevel "Both_paths_fail";
+"Both_paths_fail" csp "Path_A_unavailable" "Path_B_unavailable";
+"Path_A_unavailable" or "Maint_prev_A" "Fail_path_A";
+"Maint_prev_A" lambda=0.0001 dorm=1.0;
+"Fail_path_A" or "Fail_A1" "Fail_A2";
+"Fail_A1" lambda=0.0001 dorm=1.0;
+"Fail_A2" lambda=0.0001 dorm=1.0;
+"Path_B_unavailable" or "Maint_prev_B" "def_sol_B1" "def_func_B1" "def_sol_B2" "def_func_B2";
+"Maint_prev_B" lambda=0.0001 dorm=1;
+"def_sol_B1"  lambda=0 dorm=1.0;
+"def_func_B1"  lambda=0.0001 dorm=0; 
+"def_sol_B2"  lambda=0 dorm=0;
+"def_func_B2"  lambda=0.0001 dorm=0;
+"Maint_prev_A_dummy" lambda=0 dorm=0;
+"pdep_Maint_prev_A_dummy" pdep=1  "Maint_prev_A" "Maint_prev_A_dummy";
+"Maint_prev_B_dummy" lambda=0 dorm=0;
+"pdep_Maint_prev_B_dummy" pdep=1  "Maint_prev_B" "Maint_prev_B_dummy";
+"Path_A_dummy" lambda=0 dorm=0;
+"pdep_path_A_dummy" pdep=1  "Path_A_unavailable" "Path_A_dummy";
+"pdep_def_soll_B1" pdep=0.0001 "POR_def_sol_B12" "def_sol_B1";
+"pdep_def_soll_B2" pdep=0.0001 "POR_def_sol_B12" "def_sol_B2";
+"POR_def_sol_B12" por "Path_A_dummy" "Path_B_unavailable";
+"Failsafe" lambda=0 dorm=0;
+"seq_PathA_maintB" seq "Failsafe" "PAND_PathA_maintB";
+"PAND_PathA_maintB" pand "Path_A_dummy" "Maint_prev_B_dummy";
+"seq_mutex_AB" seq "Failsafe" "AND_mutex_AB";
+"AND_mutex_AB" and "Maint_prev_B_dummy" "Maint_prev_A_dummy";
+

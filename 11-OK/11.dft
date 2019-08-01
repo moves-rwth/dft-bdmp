@@ -1,0 +1,6 @@
+toplevel "AND-1";
+"AND-1" csp "F_1" "OR-1";
+"F_1" lambda=0.0001 dorm=1.0;
+"OR-1" or "F_2" "SF_1";
+"F_2" lambda=0.0001 dorm=0;
+"SF_1" lambda=0.0001 dorm=0.1;
