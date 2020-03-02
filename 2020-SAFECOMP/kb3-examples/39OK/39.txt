@@ -1,0 +1,456 @@
+{'C1': {'Calculate': 'fn_fathers_and_trig',
+        'Fathers': ['FailC_Main', 'FailC_S2', 'Fail_C_S1'],
+        'Name': 'C1',
+        'Previous': 'Null',
+        'Sons': 'Null',
+        'Triggered_by': 'Null',
+        'Type': 'f_leaf',
+        'lambda': '0.1',
+        'module': '8',
+        'mu': '0.1'},
+ 'C2': {'Calculate': 'fn_fathers_and_trig',
+        'Fathers': ['FailC_Main', 'Fail_C_S1', 'Fail_C_S3'],
+        'Name': 'C2',
+        'Previous': 'Null',
+        'Sons': 'Null',
+        'Triggered_by': 'Null',
+        'Type': 'f_leaf',
+        'lambda': '0.1',
+        'module': '6',
+        'mu': '0.1'},
+ 'C3': {'Calculate': 'fn_fathers_and_trig',
+        'Fathers': ['FailC_S2', 'Fail_C_S3'],
+        'Name': 'C3',
+        'Previous': 'Null',
+        'Sons': 'Null',
+        'Triggered_by': 'FailC_Main',
+        'Type': 'sf_leaf',
+        'lambda': '0.1',
+        'module': '7',
+        'mu': '0.1',
+        'standby_lambda': '0.01'},
+ 'D1': {'Calculate': 'fn_fathers_and_trig',
+        'Fathers': ['FailD'],
+        'Name': 'D1',
+        'Previous': 'Null',
+        'Sons': 'Null',
+        'Triggered_by': 'Null',
+        'Type': 'f_leaf',
+        'lambda': '0.1',
+        'module': '0',
+        'mu': '0.1'},
+ 'D2': {'Calculate': 'fn_fathers_and_trig',
+        'Fathers': ['FailD'],
+        'Name': 'D2',
+        'Previous': 'Null',
+        'Sons': 'Null',
+        'Triggered_by': 'D1',
+        'Type': 'sf_leaf',
+        'lambda': '0.1',
+        'module': '2',
+        'mu': '0.1',
+        'standby_lambda': '0.01'},
+ 'DBA1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Fail_DBA1'],
+          'Name': 'DBA1',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.1',
+          'module': '0',
+          'mu': '0.1'},
+ 'DBA2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Fail_DBA2'],
+          'Name': 'DBA2',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.1',
+          'module': '3',
+          'mu': '0.1'},
+ 'DBB1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Fail_DBB1'],
+          'Name': 'DBB1',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.1',
+          'module': '0',
+          'mu': '0.1'},
+ 'DBB2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Fail_DBB2'],
+          'Name': 'DBB2',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.1',
+          'module': '3',
+          'mu': '0.1'},
+ 'Diesel1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['Fail_supply_DBA1'],
+             'Name': 'Diesel1',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Fail_DBB1',
+             'Type': 'sf_leaf',
+             'lambda': '0.1',
+             'module': '4',
+             'mu': '0.1',
+             'standby_lambda': '0.01'},
+ 'Diesel2': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['Fail_supply_DBA2'],
+             'Name': 'Diesel2',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Fail_DBB2',
+             'Type': 'sf_leaf',
+             'lambda': '0.1',
+             'module': '9',
+             'mu': '0.1',
+             'standby_lambda': '0.01'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['Fail_cooling'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'FailC': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Fail_cooling'],
+           'Name': 'FailC',
+           'Previous': 'Null',
+           'Sons': ['Fail_C_K2', 'Fail_Power_supply'],
+           'Triggered_by': 'Null',
+           'Type': 'or_gate',
+           'module': '0'},
+ 'FailC_Main': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': 'Null',
+                'Name': 'FailC_Main',
+                'Previous': 'Null',
+                'Sons': ['C1', 'C2'],
+                'Triggered_by': 'Null',
+                'Type': 'or_gate',
+                'module': '1'},
+ 'FailC_S2': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['Fail_C_K1'],
+              'Name': 'FailC_S2',
+              'Previous': 'Null',
+              'Sons': ['C1', 'C3'],
+              'Triggered_by': 'Null',
+              'Type': 'and_gate',
+              'module': '0'},
+ 'FailD': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Fail_cooling'],
+           'Name': 'FailD',
+           'Previous': 'Null',
+           'Sons': ['D1', 'D2'],
+           'Triggered_by': 'Null',
+           'Type': 'and_gate',
+           'module': '0'},
+ 'Fail_C_K1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_C_K2'],
+               'Name': 'Fail_C_K1',
+               'Previous': 'Null',
+               'Sons': ['FailC_S2', 'Fail_C_S1'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '0'},
+ 'Fail_C_K2': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['FailC'],
+               'Name': 'Fail_C_K2',
+               'Previous': 'Null',
+               'Sons': ['Fail_C_K1', 'Fail_C_S3'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '0'},
+ 'Fail_C_S1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_C_K1'],
+               'Name': 'Fail_C_S1',
+               'Previous': 'Null',
+               'Sons': ['C1', 'C2'],
+               'Triggered_by': 'Null',
+               'Type': 'and_gate',
+               'module': '0'},
+ 'Fail_C_S3': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_C_K2'],
+               'Name': 'Fail_C_S3',
+               'Previous': 'Null',
+               'Sons': ['C2', 'C3'],
+               'Triggered_by': 'Null',
+               'Type': 'and_gate',
+               'module': '0'},
+ 'Fail_DBA1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_Power_supply'],
+               'Name': 'Fail_DBA1',
+               'Previous': 'Null',
+               'Sons': ['DBA1', 'Fail_supply_DBA1'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '0'},
+ 'Fail_DBA2': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_Power_supply'],
+               'Name': 'Fail_DBA2',
+               'Previous': 'Null',
+               'Sons': ['DBA2', 'Fail_supply_DBA2'],
+               'Triggered_by': 'Fail_DBA1',
+               'Type': 'or_gate',
+               'module': '3'},
+ 'Fail_DBB1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_supply_DBA1'],
+               'Name': 'Fail_DBB1',
+               'Previous': 'Null',
+               'Sons': ['DBB1', 'Fail_grid_supply'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '0'},
+ 'Fail_DBB2': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Fail_supply_DBA2'],
+               'Name': 'Fail_DBB2',
+               'Previous': 'Null',
+               'Sons': ['DBB2', 'Fail_grid_supply'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '3'},
+ 'Fail_Power_supply': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['FailC'],
+                       'Name': 'Fail_Power_supply',
+                       'Previous': 'Null',
+                       'Sons': ['Fail_DBA1', 'Fail_DBA2'],
+                       'Triggered_by': 'Null',
+                       'Type': 'and_gate',
+                       'module': '0'},
+ 'Fail_TR': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['Fail_grid_supply'],
+             'Name': 'Fail_TR',
+             'Previous': 'Null',
+             'Sons': ['Tr1', 'Tr2'],
+             'Triggered_by': 'Null',
+             'Type': 'and_gate',
+             'module': '5'},
+ 'Fail_cooling': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['EI_1'],
+                  'Name': 'Fail_cooling',
+                  'Previous': 'Null',
+                  'Sons': ['FailC', 'FailD'],
+                  'Triggered_by': 'Null',
+                  'Type': 'or_gate',
+                  'module': '0'},
+ 'Fail_grid_supply': {'Calculate': 'fn_fathers_and_trig',
+                      'Fathers': ['Fail_DBB1', 'Fail_DBB2'],
+                      'Name': 'Fail_grid_supply',
+                      'Previous': 'Null',
+                      'Sons': ['Fail_TR', 'Grid'],
+                      'Triggered_by': 'Null',
+                      'Type': 'or_gate',
+                      'module': '5'},
+ 'Fail_supply_DBA1': {'Calculate': 'fn_fathers_and_trig',
+                      'Fathers': ['Fail_DBA1'],
+                      'Name': 'Fail_supply_DBA1',
+                      'Previous': 'Null',
+                      'Sons': ['Diesel1', 'Fail_DBB1'],
+                      'Triggered_by': 'Null',
+                      'Type': 'and_gate',
+                      'module': '0'},
+ 'Fail_supply_DBA2': {'Calculate': 'fn_fathers_and_trig',
+                      'Fathers': ['Fail_DBA2'],
+                      'Name': 'Fail_supply_DBA2',
+                      'Previous': 'Null',
+                      'Sons': ['Diesel2', 'Fail_DBB2'],
+                      'Triggered_by': 'Null',
+                      'Type': 'and_gate',
+                      'module': '3'},
+ 'Grid': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Fail_grid_supply'],
+          'Name': 'Grid',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.1',
+          'module': '5',
+          'mu': '0.1'},
+ 'Tr1': {'Calculate': 'fn_fathers_and_trig',
+         'Fathers': ['Fail_TR'],
+         'Name': 'Tr1',
+         'Previous': 'Null',
+         'Sons': 'Null',
+         'Triggered_by': 'Null',
+         'Type': 'f_leaf',
+         'lambda': '0.1',
+         'module': '5',
+         'mu': '0.1'},
+ 'Tr2': {'Calculate': 'fn_fathers_and_trig',
+         'Fathers': ['Fail_TR'],
+         'Name': 'Tr2',
+         'Previous': 'Null',
+         'Sons': 'Null',
+         'Triggered_by': 'Tr1',
+         'Type': 'f_leaf',
+         'lambda': '0.1',
+         'module': '10',
+         'mu': '0.1'}}
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 22:32:52 2019
+Command line arguments: --jani 39.jani --prop '	Pmax=? [F<=1  Fail]; Pmin=? [F<=1  Fail];
+				Pmax=? [F<=2  Fail]; Pmin=? [F<=2  Fail];
+				Pmax=? [F<=3  Fail]; Pmin=? [F<=3 Fail];
+				Pmax=? [F<=4  Fail]; Pmin=? [F<=4  Fail];
+				Pmax=? [F<=5 Fail]; Pmin=? [F<=5 Fail];
+				Pmax=? [F<=6 Fail]; Pmin=? [F<=6 Fail];
+				Pmax=? [F<=7 Fail]; Pmin=? [F<=7 Fail];
+				Pmax=? [F<=8 Fail]; Pmin=? [F<=8 Fail];
+				Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+				Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/39
+
+Time for model input parsing: 0.050s.
+
+Time for model construction: 80.821s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4114694
+Transitions: 	7288233
+Choices: 	6249705
+Markovian St.: 	82944
+Max. Rate.: 	1.4
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 3513568 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 1.688s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4114694
+Transitions: 	7288233
+Choices: 	6249705
+Markovian St.: 	82944
+Max. Rate.: 	1.4
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 3513568 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.02801269022
+Time for model checking: 12.097s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.02801269022
+Time for model checking: 12.018s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.09834174871
+Time for model checking: 16.042s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.09834174871
+Time for model checking: 15.930s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.1923872839
+Time for model checking: 21.760s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.1923872839
+Time for model checking: 21.551s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.2956429494
+Time for model checking: 26.474s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.2956429494
+Time for model checking: 26.498s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.3981211135
+Time for model checking: 30.866s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.3981211135
+Time for model checking: 31.138s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.4937415073
+Time for model checking: 37.322s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.4937415073
+Time for model checking: 36.014s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.5793617271
+Time for model checking: 42.952s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.5793617271
+Time for model checking: 42.842s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.6538375581
+Time for model checking: 48.766s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.6538375581
+Time for model checking: 48.749s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.7172676081
+Time for model checking: 55.215s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.7172676081
+Time for model checking: 55.378s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.770447721
+Time for model checking: 62.657s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.770447721
+Time for model checking: 64.140s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 22:46:05 2019
+Command line arguments: --jani 39.jani --prop '	Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/39
+
+Time for model input parsing: 0.217s.
+
+Time for model construction: 183.294s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4114694
+Transitions: 	7288233
+Choices: 	6249705
+Markovian St.: 	82944
+Max. Rate.: 	7/5
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 3513568 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+^C^C^C^C^C^C^C
+shahid@shahid-HP-ProBook-6470b:~/modest/repairable/kb3-examples/39$ 
+

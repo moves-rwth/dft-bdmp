@@ -1,0 +1,237 @@
+{'A_defaillant': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['perte_3_ss_systemes'],
+                  'Name': 'A_defaillant',
+                  'Previous': 'Null',
+                  'Sons': 'Null',
+                  'Triggered_by': 'Null',
+                  'Type': 'f_leaf',
+                  'lambda': '0.1',
+                  'module': '0',
+                  'mu': '0.1'},
+ 'B_defaillant': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['perte_secours'],
+                  'Name': 'B_defaillant',
+                  'Previous': 'Null',
+                  'Sons': 'Null',
+                  'Triggered_by': 'Null',
+                  'Type': 'f_leaf',
+                  'lambda': '0.1',
+                  'module': '1',
+                  'mu': '0.1'},
+ 'C_defaillant': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['perte_secours'],
+                  'Name': 'C_defaillant',
+                  'Previous': 'Null',
+                  'Sons': 'Null',
+                  'Triggered_by': 'Null',
+                  'Type': 'f_leaf',
+                  'lambda': '0.1',
+                  'module': '1',
+                  'mu': '0.1'},
+ 'S_en_panne': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': 'Null',
+                'Name': 'S_en_panne',
+                'Previous': 'Null',
+                'Sons': ['perte_3_ss_systemes'],
+                'Triggered_by': 'Null',
+                'Type': 'undes_event',
+                'module': '0'},
+ 'perte_3_ss_systemes': {'Calculate': 'fn_fathers_and_trig',
+                         'Fathers': ['S_en_panne'],
+                         'Name': 'perte_3_ss_systemes',
+                         'Previous': 'Null',
+                         'Sons': ['A_defaillant', 'perte_secours'],
+                         'Triggered_by': 'Null',
+                         'Type': 'and_gate',
+                         'module': '0'},
+ 'perte_secours': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['perte_3_ss_systemes'],
+                   'Name': 'perte_secours',
+                   'Previous': 'Null',
+                   'Sons': ['B_defaillant', 'C_defaillant'],
+                   'Triggered_by': 'A_defaillant',
+                   'Type': 'and_gate',
+                   'module': '1'}}
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 19:40:43 2019
+Command line arguments: --jani 35.jani --prop '	Pmax=? [F<=10  Fail];  Pmin=? [F<=10  Fail];
+								Pmax=? [F<=20  Fail];  Pmin=? [F<=20  Fail];
+								Pmax=? [F<=30  Fail];  Pmin=? [F<=30  Fail];
+								Pmax=? [F<=40  Fail];  Pmin=? [F<=40  Fail];
+								Pmax=? [F<=50 Fail];  Pmin=? [F<=50 Fail];
+								Pmax=? [F<=60 Fail];  Pmin=? [F<=60 Fail];
+								Pmax=? [F<=70 Fail];  Pmin=? [F<=70 Fail];
+								Pmax=? [F<=80 Fail];  Pmin=? [F<=80 Fail];
+								Pmax=? [F<=90  Fail]; Pmin=? [F<=90 Fail];
+								Pmax=? [F<=100  Fail]; Pmin=? [F<=100  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/35
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.010s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	48
+Transitions: 	62
+Choices: 	50
+Markovian St.: 	8
+Max. Rate.: 	0.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	48
+Transitions: 	62
+Choices: 	50
+Markovian St.: 	8
+Max. Rate.: 	0.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.07932782599
+Time for model checking: 0.000s.
+
+Model checking property "2": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.07932782599
+Time for model checking: 0.000s.
+
+Model checking property "3": Pmax=? [true U<=20 Fail] ...
+Result (for initial states): 0.234668281
+Time for model checking: 0.000s.
+
+Model checking property "4": Pmin=? [true U<=20 Fail] ...
+Result (for initial states): 0.234668281
+Time for model checking: 0.000s.
+
+Model checking property "5": Pmax=? [true U<=30 Fail] ...
+Result (for initial states): 0.3763591715
+Time for model checking: 0.000s.
+
+Model checking property "6": Pmin=? [true U<=30 Fail] ...
+Result (for initial states): 0.3763591715
+Time for model checking: 0.000s.
+
+Model checking property "7": Pmax=? [true U<=40 Fail] ...
+Result (for initial states): 0.4934998678
+Time for model checking: 0.000s.
+
+Model checking property "8": Pmin=? [true U<=40 Fail] ...
+Result (for initial states): 0.4934998678
+Time for model checking: 0.000s.
+
+Model checking property "9": Pmax=? [true U<=50 Fail] ...
+Result (for initial states): 0.5888645176
+Time for model checking: 0.000s.
+
+Model checking property "10": Pmin=? [true U<=50 Fail] ...
+Result (for initial states): 0.5888645176
+Time for model checking: 0.000s.
+
+Model checking property "11": Pmax=? [true U<=60 Fail] ...
+Result (for initial states): 0.6663044498
+Time for model checking: 0.000s.
+
+Model checking property "12": Pmin=? [true U<=60 Fail] ...
+Result (for initial states): 0.6663044498
+Time for model checking: 0.000s.
+
+Model checking property "13": Pmax=? [true U<=70 Fail] ...
+Result (for initial states): 0.7291622408
+Time for model checking: 0.001s.
+
+Model checking property "14": Pmin=? [true U<=70 Fail] ...
+Result (for initial states): 0.7291622408
+Time for model checking: 0.001s.
+
+Model checking property "15": Pmax=? [true U<=80 Fail] ...
+Result (for initial states): 0.7801801547
+Time for model checking: 0.001s.
+
+Model checking property "16": Pmin=? [true U<=80 Fail] ...
+Result (for initial states): 0.7801801547
+Time for model checking: 0.001s.
+
+Model checking property "17": Pmax=? [true U<=90 Fail] ...
+Result (for initial states): 0.8215878615
+Time for model checking: 0.001s.
+
+Model checking property "18": Pmin=? [true U<=90 Fail] ...
+Result (for initial states): 0.8215878615
+Time for model checking: 0.001s.
+
+Model checking property "19": Pmax=? [true U<=100 Fail] ...
+Result (for initial states): 0.8551955632
+Time for model checking: 0.001s.
+
+Model checking property "20": Pmin=? [true U<=100 Fail] ...
+Result (for initial states): 0.8551955632
+Time for model checking: 0.001s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 19:40:43 2019
+Command line arguments: --jani 35.jani --prop 'Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/35
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.009s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	48
+Transitions: 	62
+Choices: 	50
+Markovian St.: 	8
+Max. Rate.: 	3/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	48
+Transitions: 	62
+Choices: 	50
+Markovian St.: 	8
+Max. Rate.: 	3/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": T[exp]max=? [F Fail] ...
+Result (for initial states): 55 (approx. 55)
+Time for model checking: 0.001s.
+
+Model checking property "2": T[exp]min=? [F Fail] ...
+Result (for initial states): 55 (approx. 55)
+Time for model checking: 0.000s.
+shahid@shahid-HP-ProBook-6470b:~/modest/repairable/kb3-examples/35$ 

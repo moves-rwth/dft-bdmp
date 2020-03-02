@@ -1,0 +1,84 @@
+//##########Automatically generated Modest file from: "06.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0;
+action  dact_0;
+action  act_F_1,dact_F_1, fail_F_1, repaired_F_1;
+bool  F_1 = false;
+action  act_F_2,dact_F_2, fail_F_2, repaired_F_2;
+bool  F_2 = false;
+action  act_F_3,dact_F_3, fail_F_3, repaired_F_3;
+bool  F_3 = false;
+action  act_Failure_of_component,dact_Failure_of_component, fail_Failure_of_component, repaired_Failure_of_component;
+bool  Failure_of_component = false;
+action  act_OR_1,dact_OR_1, fail_OR_1, repaired_OR_1;
+bool  OR_1 = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+//##########Failure Behavior of "f_leaf" named "F_1"
+process F_1(){
+process P1() {alt{::dact_0;F_1()::rate(0.0001) tau{=F_1=true=}; fail_F_1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=F_1=false=}; repaired_F_1; F_1()}::rate(0.1) tau{=F_1=false=}; repaired_F_1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "F_1"
+process F_1_Act(){
+act_0; dact_0; F_1_Act()}
+//##########Failure Behavior of "f_leaf" named "F_2"
+process F_2(){
+process P1() {alt{::dact_0;F_2()::rate(0.0001) tau{=F_2=true=}; fail_F_2; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=F_2=false=}; repaired_F_2; F_2()}::rate(0.1) tau{=F_2=false=}; repaired_F_2; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "F_2"
+process F_2_Act(){
+act_0; dact_0; F_2_Act()}
+//##########Failure Behavior of "f_leaf" named "F_3"
+process F_3(){
+process P1() {alt{::dact_0;F_3()::rate(0.0001) tau{=F_3=true=}; fail_F_3; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=F_3=false=}; repaired_F_3; F_3()}::rate(0.1) tau{=F_3=false=}; repaired_F_3; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "F_3"
+process F_3_Act(){
+act_0; dact_0; F_3_Act()}
+//##########Failure Behavior of "or_gate" named "Failure_of_component"
+process Failure_of_component(){
+alt { :: fail_OR_1; S1() :: fail_F_3; S2()}
+process S1() {alt { :: repaired_OR_1; Failure_of_component():: fail_F_3; S3():: fail_Failure_of_component{=Failure_of_component=true=} ; S5()}}
+process S2() {alt { :: repaired_F_3; Failure_of_component() :: fail_OR_1; S3()::fail_Failure_of_component{=Failure_of_component=true=} ; S6()}}
+process S3() {alt { :: fail_Failure_of_component{=Failure_of_component=true=}; S4() :: repaired_F_3; S1()::repaired_OR_1; S2()}}
+process S4() {alt { :: repaired_F_3; S5():: repaired_OR_1 ;S6()}}
+process S5() {alt { :: repaired_OR_1; S7():: fail_F_3 ; S4()}}
+process S6() {alt { :: repaired_F_3; S7():: fail_OR_1 ; S4() }}
+process S7() {alt { :: fail_OR_1; S5() :: fail_F_3; S6():: repaired_Failure_of_component {=Failure_of_component=false=};Failure_of_component()}}}
+//##########Activation Behavior of "or_gate" named "Failure_of_component"
+process Failure_of_component_Act(){
+act_0; dact_0; Failure_of_component_Act()}
+//##########Failure Behavior of "or_gate" named "OR_1"
+process OR_1(){
+alt { :: fail_F_2; S1() :: fail_F_1; S2()}
+process S1() {alt { :: repaired_F_2; OR_1():: fail_F_1; S3():: fail_OR_1{=OR_1=true=} ; S5()}}
+process S2() {alt { :: repaired_F_1; OR_1() :: fail_F_2; S3()::fail_OR_1{=OR_1=true=} ; S6()}}
+process S3() {alt { :: fail_OR_1{=OR_1=true=}; S4() :: repaired_F_1; S1()::repaired_F_2; S2()}}
+process S4() {alt { :: repaired_F_1; S5():: repaired_F_2 ;S6()}}
+process S5() {alt { :: repaired_F_2; S7():: fail_F_1 ; S4()}}
+process S6() {alt { :: repaired_F_1; S7():: fail_F_2 ; S4() }}
+process S7() {alt { :: fail_F_2; S5() :: fail_F_1; S6():: repaired_OR_1 {=OR_1=false=};OR_1()}}}
+//##########Activation Behavior of "or_gate" named "OR_1"
+process OR_1_Act(){
+act_0; dact_0; OR_1_Act()}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_Failure_of_component {=  UE_1=true, Fail = true=} ; repaired_Failure_of_component {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Composition of all files
+par
+{
+::F_1()  :: F_1_Act()
+::F_2()  :: F_2_Act()
+::F_3()  :: F_3_Act()
+::Failure_of_component()  :: Failure_of_component_Act()
+::OR_1()  :: OR_1_Act()
+:: UE_1()  :: UE_1_Act()
+}

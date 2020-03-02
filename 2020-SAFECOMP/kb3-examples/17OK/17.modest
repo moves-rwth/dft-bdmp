@@ -1,0 +1,353 @@
+//##########Automatically generated Modest file from: "17.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_7  , act_5  , act_2  , act_4  , act_1  , act_6  , act_8  , act_9  , act_0  , act_3;
+action  dact_7  , dact_5  , dact_2  , dact_4  , dact_1  , dact_6  , dact_8  , dact_9  , dact_0  , dact_3;
+action  act_AND_1,dact_AND_1, fail_AND_1, repaired_AND_1;
+bool  AND_1 = false;
+action  act_CB_dies,dact_CB_dies, fail_CB_dies, repaired_CB_dies;
+bool  CB_dies = false;
+action  act_CB_dw_1,dact_CB_dw_1, fail_CB_dw_1, repaired_CB_dw_1;
+bool  CB_dw_1 = false;
+action  act_CB_dw_2,dact_CB_dw_2, fail_CB_dw_2, repaired_CB_dw_2;
+bool  CB_dw_2 = false;
+action  act_CB_up_1,dact_CB_up_1, fail_CB_up_1, repaired_CB_up_1;
+bool  CB_up_1 = false;
+action  act_CB_up_2,dact_CB_up_2, fail_CB_up_2, repaired_CB_up_2;
+bool  CB_up_2 = false;
+action  act_GRID,dact_GRID, fail_GRID, repaired_GRID;
+bool  GRID = false;
+action  act_LossOfAllBackups,dact_LossOfAllBackups, fail_LossOfAllBackups, repaired_LossOfAllBackups;
+bool  LossOfAllBackups = false;
+action  act_LossOfDieselLine,dact_LossOfDieselLine, fail_LossOfDieselLine, repaired_LossOfDieselLine;
+bool  LossOfDieselLine = false;
+action  act_LossOfLine2,dact_LossOfLine2, fail_LossOfLine2, repaired_LossOfLine2;
+bool  LossOfLine2 = false;
+action  act_LossOfLine_1,dact_LossOfLine_1, fail_LossOfLine_1, repaired_LossOfLine_1;
+bool  LossOfLine_1 = false;
+action  act_Loss_of_GRID,dact_Loss_of_GRID, fail_Loss_of_GRID, repaired_Loss_of_GRID;
+bool  Loss_of_GRID = false;
+action  act_PropagationShortCircuitTransfo1,dact_PropagationShortCircuitTransfo1, fail_PropagationShortCircuitTransfo1, repaired_PropagationShortCircuitTransfo1;
+bool  PropagationShortCircuitTransfo1 = false;
+action  act_PropagationShortCircuitTransfo2,dact_PropagationShortCircuitTransfo2, fail_PropagationShortCircuitTransfo2, repaired_PropagationShortCircuitTransfo2;
+bool  PropagationShortCircuitTransfo2 = false;
+action  act_RC_CB_dies,dact_RC_CB_dies, fail_RC_CB_dies, good_RC_CB_dies, repaired_RC_CB_dies;
+bool  RC_CB_dies = false;
+action  act_RC_CB_dw_2,dact_RC_CB_dw_2, fail_RC_CB_dw_2, good_RC_CB_dw_2, repaired_RC_CB_dw_2;
+bool  RC_CB_dw_2 = false;
+action  act_RC_CB_up_2,dact_RC_CB_up_2, fail_RC_CB_up_2, good_RC_CB_up_2, repaired_RC_CB_up_2;
+bool  RC_CB_up_2 = false;
+action  act_RO_CB_up_1,dact_RO_CB_up_1, fail_RO_CB_up_1, good_RO_CB_up_1, repaired_RO_CB_up_1;
+bool  RO_CB_up_1 = false;
+action  act_RO_CB_up_2,dact_RO_CB_up_2, fail_RO_CB_up_2, good_RO_CB_up_2, repaired_RO_CB_up_2;
+bool  RO_CB_up_2 = false;
+action  act_RS_dies,dact_RS_dies, fail_RS_dies, good_RS_dies, repaired_RS_dies;
+bool  RS_dies = false;
+action  act_Transfo1,dact_Transfo1, fail_Transfo1, repaired_Transfo1;
+bool  Transfo1 = false;
+action  act_Transfo2,dact_Transfo2, fail_Transfo2, repaired_Transfo2;
+bool  Transfo2 = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_dies_generator,dact_dies_generator, fail_dies_generator, repaired_dies_generator;
+bool  dies_generator = false;
+//##########Failure Behavior of "and_gate" named "AND_1"
+process AND_1(){
+process P0(){alt{::repaired_LossOfAllBackups;AND_1()::fail_LossOfAllBackups; P1()::repaired_LossOfLine_1;AND_1()::fail_LossOfLine_1; P1()}}
+process P1(){alt{::repaired_LossOfAllBackups;P0()::repaired_LossOfLine_1;P0()::fail_AND_1; P2()}}
+process P2(){alt{::repaired_LossOfAllBackups;P3()::repaired_LossOfLine_1;P3()}}
+process P3(){repaired_AND_1;P0()}
+alt{::fail_LossOfAllBackups; P0()::fail_LossOfLine_1; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_1"
+process AND_1_Act(){
+act_0; dact_0; AND_1_Act()}
+//##########Failure Behavior of "f_leaf" named "CB_dies"
+process CB_dies(){
+process P1() {alt{::dact_8;CB_dies()::rate(0.1) tau{=CB_dies=true=}; fail_CB_dies; P2()}}
+process P2() {alt{::dact_8; alt{::act_8; P2()::rate(0.1) tau{=CB_dies=false=}; repaired_CB_dies; CB_dies()}::rate(0.1) tau{=CB_dies=false=}; repaired_CB_dies; P1()}}
+act_8; P1()}
+//##########Activation Behavior of "f_leaf" named "CB_dies"
+process CB_dies_Act(){
+act_8; dact_8; CB_dies_Act()}
+//##########Failure Behavior of "f_leaf" named "CB_dw_1"
+process CB_dw_1(){
+process P1() {alt{::dact_0;CB_dw_1()::rate(0.1) tau{=CB_dw_1=true=}; fail_CB_dw_1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=CB_dw_1=false=}; repaired_CB_dw_1; CB_dw_1()}::rate(0.1) tau{=CB_dw_1=false=}; repaired_CB_dw_1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "CB_dw_1"
+process CB_dw_1_Act(){
+act_0; dact_0; CB_dw_1_Act()}
+//##########Failure Behavior of "f_leaf" named "CB_dw_2"
+process CB_dw_2(){
+process P1() {alt{::dact_2;CB_dw_2()::rate(0.1) tau{=CB_dw_2=true=}; fail_CB_dw_2; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=CB_dw_2=false=}; repaired_CB_dw_2; CB_dw_2()}::rate(0.1) tau{=CB_dw_2=false=}; repaired_CB_dw_2; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "CB_dw_2"
+process CB_dw_2_Act(){
+act_2; dact_2; CB_dw_2_Act()}
+//##########Failure Behavior of "f_leaf" named "CB_up_1"
+process CB_up_1(){
+process P1() {alt{::dact_0;CB_up_1()::rate(0.1) tau{=CB_up_1=true=}; fail_CB_up_1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=CB_up_1=false=}; repaired_CB_up_1; CB_up_1()}::rate(0.1) tau{=CB_up_1=false=}; repaired_CB_up_1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "CB_up_1"
+process CB_up_1_Act(){
+act_0; dact_0; CB_up_1_Act()}
+//##########Failure Behavior of "f_leaf" named "CB_up_2"
+process CB_up_2(){
+process P1() {alt{::dact_2;CB_up_2()::rate(0.1) tau{=CB_up_2=true=}; fail_CB_up_2; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=CB_up_2=false=}; repaired_CB_up_2; CB_up_2()}::rate(0.1) tau{=CB_up_2=false=}; repaired_CB_up_2; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "CB_up_2"
+process CB_up_2_Act(){
+act_2; dact_2; CB_up_2_Act()}
+//##########Failure Behavior of "f_leaf" named "GRID"
+process GRID(){
+process P1() {alt{::dact_4;GRID()::rate(0.0001) tau{=GRID=true=}; fail_GRID; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=GRID=false=}; repaired_GRID; GRID()}::rate(0.1) tau{=GRID=false=}; repaired_GRID; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "GRID"
+process GRID_Act(){
+alt{:: act_0; S1() :: act_2; S1() :: act_3; S1()} 
+process S1() {alt {:: act_4; S2() :: dact_0; GRID_Act() :: dact_2; GRID_Act():: dact_3; GRID_Act() :: act_0; S4() :: act_2; S4():: act_3; S4()}}
+process S2()  {alt {:: dact_0; S3() :: dact_2; S3() :: dact_3; S3() :: act_0; S5():: act_2; S5():: act_3; S5()}}
+process S3()  {alt {:: dact_4; GRID_Act() :: act_0; S2() :: act_2; S2() :: act_3; S2()}}
+process S4()  {alt {:: act_4; S5() :: dact_0; S1() :: dact_2; S1() :: dact_3; S1()  :: act_0; S6():: act_2; S6() :: act_3; S6()}}
+process S5()  {alt {:: act_0; S7() :: act_2; S7() :: act_3; S7() :: dact_0; S2() :: dact_2; S2() :: dact_3; S2()}}
+process S6()  {alt {:: act_4; S7():: dact_0; S4() :: dact_2; S4() :: dact_3; S4()}}
+process S7()  {alt {:: dact_0; S5() :: dact_2; S5() :: dact_3; S5() }}}
+//##########Failure Behavior of "and_gate" named "LossOfAllBackups"
+process LossOfAllBackups(){
+process P0(){alt{::repaired_LossOfDieselLine;LossOfAllBackups()::fail_LossOfDieselLine; P1()::repaired_LossOfLine2;LossOfAllBackups()::fail_LossOfLine2; P1()}}
+process P1(){alt{::repaired_LossOfDieselLine;P0()::repaired_LossOfLine2;P0()::fail_LossOfAllBackups; P2()}}
+process P2(){alt{::repaired_LossOfDieselLine;P3()::repaired_LossOfLine2;P3()}}
+process P3(){repaired_LossOfAllBackups;P0()}
+alt{::fail_LossOfDieselLine; P0()::fail_LossOfLine2; P0()}}
+//##########Activation Behavior of "and_gate" named "LossOfAllBackups"
+process LossOfAllBackups_Act(){
+alt{:: act_0; S1() :: fail_LossOfLine_1; S1()} 
+process S1()  {alt {:: dact_0; LossOfAllBackups_Act():: repaired_LossOfLine_1; LossOfAllBackups_Act() :: act_0; S2() :: fail_LossOfLine_1; S2()}}
+process S2()  {alt {:: act_2; S3() :: dact_0; S1() :: repaired_LossOfLine_1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: repaired_LossOfLine_1; S4()}}
+process S4()  {alt {::dact_2; S1() :: dact_0; S5() :: repaired_LossOfLine_1; S5():: act_0; S3() :: fail_LossOfLine_1; S3()}}
+process S5()  {alt {::dact_2; LossOfAllBackups_Act() ::  act_0; S4() :: fail_LossOfLine_1; S4()}}}
+//##########Failure Behavior of "or_gate" named "LossOfDieselLine"
+process LossOfDieselLine(){
+process P0(){fail_LossOfDieselLine;P2()}
+process P1(){repaired_LossOfDieselLine;LossOfDieselLine()}
+process P2(){alt{::repaired_CB_dies;P1()::fail_CB_dies; P3()::repaired_RS_dies;P1()::fail_RS_dies; P3()::repaired_RC_CB_dies;P1()::fail_RC_CB_dies; P3()::repaired_dies_generator;P1()::fail_dies_generator; P3()}}
+process P3(){alt{::repaired_CB_dies;P2()::fail_CB_dies; P4()::repaired_RS_dies;P2()::fail_RS_dies; P4()::repaired_RC_CB_dies;P2()::fail_RC_CB_dies; P4()::repaired_dies_generator;P2()::fail_dies_generator; P4()}}
+process P4(){alt{::repaired_CB_dies;P3()::fail_CB_dies; P5()::repaired_RS_dies;P3()::fail_RS_dies; P5()::repaired_RC_CB_dies;P3()::fail_RC_CB_dies; P5()::repaired_dies_generator;P3()::fail_dies_generator; P5()}}
+process P5(){alt{::repaired_CB_dies;P4()::repaired_RS_dies;P4()::repaired_RC_CB_dies;P4()::repaired_dies_generator;P4()}} 
+ alt{::fail_CB_dies; P0()::fail_RS_dies; P0()::fail_RC_CB_dies; P0()::fail_dies_generator; P0()}}
+//##########Activation Behavior of "or_gate" named "LossOfDieselLine"
+process LossOfDieselLine_Act(){
+alt{:: act_2; S1() :: fail_LossOfLine2; S1()} 
+process S1()  {alt {:: dact_2; LossOfDieselLine_Act():: repaired_LossOfLine2; LossOfDieselLine_Act() :: act_2; S2() :: fail_LossOfLine2; S2()}}
+process S2()  {alt {:: act_8; S3() :: dact_2; S1() :: repaired_LossOfLine2; S1() }}
+process S3()  {alt {::  dact_2; S4() :: repaired_LossOfLine2; S4()}}
+process S4()  {alt {::dact_8; S1() :: dact_2; S5() :: repaired_LossOfLine2; S5():: act_2; S3() :: fail_LossOfLine2; S3()}}
+process S5()  {alt {::dact_8; LossOfDieselLine_Act() ::  act_2; S4() :: fail_LossOfLine2; S4()}}}
+//##########Failure Behavior of "or_gate" named "LossOfLine2"
+process LossOfLine2(){
+process P0(){fail_LossOfLine2;P2()}
+process P1(){repaired_LossOfLine2;LossOfLine2()}
+process P2(){alt{::repaired_Loss_of_GRID;P1()::fail_Loss_of_GRID; P3()::repaired_Transfo2;P1()::fail_Transfo2; P3()::repaired_CB_up_2;P1()::fail_CB_up_2; P3()::repaired_RC_CB_dw_2;P1()::fail_RC_CB_dw_2; P3()::repaired_CB_dw_2;P1()::fail_CB_dw_2; P3()::repaired_GRID;P1()::fail_GRID; P3()::repaired_RC_CB_up_2;P1()::fail_RC_CB_up_2; P3()}}
+process P3(){alt{::repaired_Loss_of_GRID;P2()::fail_Loss_of_GRID; P4()::repaired_Transfo2;P2()::fail_Transfo2; P4()::repaired_CB_up_2;P2()::fail_CB_up_2; P4()::repaired_RC_CB_dw_2;P2()::fail_RC_CB_dw_2; P4()::repaired_CB_dw_2;P2()::fail_CB_dw_2; P4()::repaired_GRID;P2()::fail_GRID; P4()::repaired_RC_CB_up_2;P2()::fail_RC_CB_up_2; P4()}}
+process P4(){alt{::repaired_Loss_of_GRID;P3()::fail_Loss_of_GRID; P5()::repaired_Transfo2;P3()::fail_Transfo2; P5()::repaired_CB_up_2;P3()::fail_CB_up_2; P5()::repaired_RC_CB_dw_2;P3()::fail_RC_CB_dw_2; P5()::repaired_CB_dw_2;P3()::fail_CB_dw_2; P5()::repaired_GRID;P3()::fail_GRID; P5()::repaired_RC_CB_up_2;P3()::fail_RC_CB_up_2; P5()}}
+process P5(){alt{::repaired_Loss_of_GRID;P4()::fail_Loss_of_GRID; P6()::repaired_Transfo2;P4()::fail_Transfo2; P6()::repaired_CB_up_2;P4()::fail_CB_up_2; P6()::repaired_RC_CB_dw_2;P4()::fail_RC_CB_dw_2; P6()::repaired_CB_dw_2;P4()::fail_CB_dw_2; P6()::repaired_GRID;P4()::fail_GRID; P6()::repaired_RC_CB_up_2;P4()::fail_RC_CB_up_2; P6()}}
+process P6(){alt{::repaired_Loss_of_GRID;P5()::fail_Loss_of_GRID; P7()::repaired_Transfo2;P5()::fail_Transfo2; P7()::repaired_CB_up_2;P5()::fail_CB_up_2; P7()::repaired_RC_CB_dw_2;P5()::fail_RC_CB_dw_2; P7()::repaired_CB_dw_2;P5()::fail_CB_dw_2; P7()::repaired_GRID;P5()::fail_GRID; P7()::repaired_RC_CB_up_2;P5()::fail_RC_CB_up_2; P7()}}
+process P7(){alt{::repaired_Loss_of_GRID;P6()::fail_Loss_of_GRID; P8()::repaired_Transfo2;P6()::fail_Transfo2; P8()::repaired_CB_up_2;P6()::fail_CB_up_2; P8()::repaired_RC_CB_dw_2;P6()::fail_RC_CB_dw_2; P8()::repaired_CB_dw_2;P6()::fail_CB_dw_2; P8()::repaired_GRID;P6()::fail_GRID; P8()::repaired_RC_CB_up_2;P6()::fail_RC_CB_up_2; P8()}}
+process P8(){alt{::repaired_Loss_of_GRID;P7()::repaired_Transfo2;P7()::repaired_CB_up_2;P7()::repaired_RC_CB_dw_2;P7()::repaired_CB_dw_2;P7()::repaired_GRID;P7()::repaired_RC_CB_up_2;P7()}} 
+ alt{::fail_Loss_of_GRID; P0()::fail_Transfo2; P0()::fail_CB_up_2; P0()::fail_RC_CB_dw_2; P0()::fail_CB_dw_2; P0()::fail_GRID; P0()::fail_RC_CB_up_2; P0()}}
+//##########Activation Behavior of "or_gate" named "LossOfLine2"
+process LossOfLine2_Act(){
+act_2; dact_2; LossOfLine2_Act()}
+//##########Failure Behavior of "or_gate" named "LossOfLine_1"
+process LossOfLine_1(){
+process P0(){fail_LossOfLine_1;P2()}
+process P1(){repaired_LossOfLine_1;LossOfLine_1()}
+process P2(){alt{::repaired_Loss_of_GRID;P1()::fail_Loss_of_GRID; P3()::repaired_CB_up_1;P1()::fail_CB_up_1; P3()::repaired_GRID;P1()::fail_GRID; P3()::repaired_Transfo1;P1()::fail_Transfo1; P3()::repaired_CB_dw_1;P1()::fail_CB_dw_1; P3()}}
+process P3(){alt{::repaired_Loss_of_GRID;P2()::fail_Loss_of_GRID; P4()::repaired_CB_up_1;P2()::fail_CB_up_1; P4()::repaired_GRID;P2()::fail_GRID; P4()::repaired_Transfo1;P2()::fail_Transfo1; P4()::repaired_CB_dw_1;P2()::fail_CB_dw_1; P4()}}
+process P4(){alt{::repaired_Loss_of_GRID;P3()::fail_Loss_of_GRID; P5()::repaired_CB_up_1;P3()::fail_CB_up_1; P5()::repaired_GRID;P3()::fail_GRID; P5()::repaired_Transfo1;P3()::fail_Transfo1; P5()::repaired_CB_dw_1;P3()::fail_CB_dw_1; P5()}}
+process P5(){alt{::repaired_Loss_of_GRID;P4()::fail_Loss_of_GRID; P6()::repaired_CB_up_1;P4()::fail_CB_up_1; P6()::repaired_GRID;P4()::fail_GRID; P6()::repaired_Transfo1;P4()::fail_Transfo1; P6()::repaired_CB_dw_1;P4()::fail_CB_dw_1; P6()}}
+process P6(){alt{::repaired_Loss_of_GRID;P5()::repaired_CB_up_1;P5()::repaired_GRID;P5()::repaired_Transfo1;P5()::repaired_CB_dw_1;P5()}} 
+ alt{::fail_Loss_of_GRID; P0()::fail_CB_up_1; P0()::fail_GRID; P0()::fail_Transfo1; P0()::fail_CB_dw_1; P0()}}
+//##########Activation Behavior of "or_gate" named "LossOfLine_1"
+process LossOfLine_1_Act(){
+act_0; dact_0; LossOfLine_1_Act()}
+//##########Failure Behavior of "or_gate" named "Loss_of_GRID"
+process Loss_of_GRID(){
+process P0(){fail_Loss_of_GRID;P2()}
+process P1(){repaired_Loss_of_GRID;Loss_of_GRID()}
+process P2(){alt{::repaired_GRID;P1()::fail_GRID; P3()::repaired_PropagationShortCircuitTransfo1;P1()::fail_PropagationShortCircuitTransfo1; P3()::repaired_PropagationShortCircuitTransfo2;P1()::fail_PropagationShortCircuitTransfo2; P3()}}
+process P3(){alt{::repaired_GRID;P2()::fail_GRID; P4()::repaired_PropagationShortCircuitTransfo1;P2()::fail_PropagationShortCircuitTransfo1; P4()::repaired_PropagationShortCircuitTransfo2;P2()::fail_PropagationShortCircuitTransfo2; P4()}}
+process P4(){alt{::repaired_GRID;P3()::repaired_PropagationShortCircuitTransfo1;P3()::repaired_PropagationShortCircuitTransfo2;P3()}} 
+ alt{::fail_GRID; P0()::fail_PropagationShortCircuitTransfo1; P0()::fail_PropagationShortCircuitTransfo2; P0()}}
+//##########Activation Behavior of "or_gate" named "Loss_of_GRID"
+process Loss_of_GRID_Act(){
+alt{:: act_0; S1() :: act_2; S1()} 
+process S1()  {alt {::act_3; S4():: dact_0; Loss_of_GRID_Act():: dact_2; Loss_of_GRID_Act() :: act_0; S2() :: act_2; S2()}}
+process S2()  {alt {:: act_3; S3() :: dact_0; S1() :: dact_2; S1() }}
+process S3()  {alt {::  dact_0; S4() :: dact_2; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_2; S5():: act_0; S3() :: act_2; S3()}}
+process S5()  {alt {::dact_3; Loss_of_GRID_Act() ::  act_0; S4() :: act_2; S4()}}}
+//##########Failure Behavior of "and_gate" named "PropagationShortCircuitTransfo1"
+process PropagationShortCircuitTransfo1(){
+process P0(){alt{::repaired_RO_CB_up_1;PropagationShortCircuitTransfo1()::fail_RO_CB_up_1; P1()::repaired_Transfo1;PropagationShortCircuitTransfo1()::fail_Transfo1; P1()}}
+process P1(){alt{::repaired_RO_CB_up_1;P0()::repaired_Transfo1;P0()::fail_PropagationShortCircuitTransfo1; P2()}}
+process P2(){alt{::repaired_RO_CB_up_1;P3()::repaired_Transfo1;P3()}}
+process P3(){repaired_PropagationShortCircuitTransfo1;P0()}
+alt{::fail_RO_CB_up_1; P0()::fail_Transfo1; P0()}}
+//##########Activation Behavior of "and_gate" named "PropagationShortCircuitTransfo1"
+process PropagationShortCircuitTransfo1_Act(){
+act_3; dact_3; PropagationShortCircuitTransfo1_Act()}
+//##########Failure Behavior of "and_gate" named "PropagationShortCircuitTransfo2"
+process PropagationShortCircuitTransfo2(){
+process P0(){alt{::repaired_RO_CB_up_2;PropagationShortCircuitTransfo2()::fail_RO_CB_up_2; P1()::repaired_Transfo2;PropagationShortCircuitTransfo2()::fail_Transfo2; P1()}}
+process P1(){alt{::repaired_RO_CB_up_2;P0()::repaired_Transfo2;P0()::fail_PropagationShortCircuitTransfo2; P2()}}
+process P2(){alt{::repaired_RO_CB_up_2;P3()::repaired_Transfo2;P3()}}
+process P3(){repaired_PropagationShortCircuitTransfo2;P0()}
+alt{::fail_RO_CB_up_2; P0()::fail_Transfo2; P0()}}
+//##########Activation Behavior of "and_gate" named "PropagationShortCircuitTransfo2"
+process PropagationShortCircuitTransfo2_Act(){
+when(false) act_1; dact_1; PropagationShortCircuitTransfo2_Act()}
+//##########Failure Behavior of "i_leaf" named "RC_CB_dies"
+process RC_CB_dies(){
+act_8;alt{::rate(100000) tau; P0()::dact_8;RC_CB_dies()} 
+process P0() {alt{:: dact_8; RC_CB_dies() :: palt{:0.5: {=RC_CB_dies = true =}; fail_RC_CB_dies; P2(): 1 - 0.5:good_RC_CB_dies;P1()}}}
+process P1() {dact_8; RC_CB_dies()}
+process P2() {alt {::dact_8; P3()::rate(0.1) {=RC_CB_dies = false =}; repaired_RC_CB_dies; P1()}}
+process P3() {alt {::act_8; alt {::dact_8;P3()::rate(0.1)tau{= RC_CB_dies = false =};repaired_RC_CB_dies;P0()}::rate(0.1)tau{= RC_CB_dies = false =}; repaired_RC_CB_dies; RC_CB_dies()}}}
+//##########Activation Behavior of "i_leaf" named "RC_CB_dies"
+process RC_CB_dies_Act(){
+act_8; dact_8; RC_CB_dies_Act()}
+//##########Failure Behavior of "i_leaf" named "RC_CB_dw_2"
+process RC_CB_dw_2(){
+act_2;alt{::rate(100000) tau; P0()::dact_2;RC_CB_dw_2()} 
+process P0() {alt{:: dact_2; RC_CB_dw_2() :: palt{:0.5: {=RC_CB_dw_2 = true =}; fail_RC_CB_dw_2; P2(): 1 - 0.5:good_RC_CB_dw_2;P1()}}}
+process P1() {dact_2; RC_CB_dw_2()}
+process P2() {alt {::dact_2; P3()::rate(0.1) {=RC_CB_dw_2 = false =}; repaired_RC_CB_dw_2; P1()}}
+process P3() {alt {::act_2; alt {::dact_2;P3()::rate(0.1)tau{= RC_CB_dw_2 = false =};repaired_RC_CB_dw_2;P0()}::rate(0.1)tau{= RC_CB_dw_2 = false =}; repaired_RC_CB_dw_2; RC_CB_dw_2()}}}
+//##########Activation Behavior of "i_leaf" named "RC_CB_dw_2"
+process RC_CB_dw_2_Act(){
+act_2; dact_2; RC_CB_dw_2_Act()}
+//##########Failure Behavior of "i_leaf" named "RC_CB_up_2"
+process RC_CB_up_2(){
+act_2;alt{::rate(100000) tau; P0()::dact_2;RC_CB_up_2()} 
+process P0() {alt{:: dact_2; RC_CB_up_2() :: palt{:0.5: {=RC_CB_up_2 = true =}; fail_RC_CB_up_2; P2(): 1 - 0.5:good_RC_CB_up_2;P1()}}}
+process P1() {dact_2; RC_CB_up_2()}
+process P2() {alt {::dact_2; P3()::rate(0.1) {=RC_CB_up_2 = false =}; repaired_RC_CB_up_2; P1()}}
+process P3() {alt {::act_2; alt {::dact_2;P3()::rate(0.1)tau{= RC_CB_up_2 = false =};repaired_RC_CB_up_2;P0()}::rate(0.1)tau{= RC_CB_up_2 = false =}; repaired_RC_CB_up_2; RC_CB_up_2()}}}
+//##########Activation Behavior of "i_leaf" named "RC_CB_up_2"
+process RC_CB_up_2_Act(){
+act_2; dact_2; RC_CB_up_2_Act()}
+//##########Failure Behavior of "i_leaf" named "RO_CB_up_1"
+process RO_CB_up_1(){
+act_9;alt{::rate(100000) tau; P0()::dact_9;RO_CB_up_1()} 
+process P0() {alt{:: dact_9; RO_CB_up_1() :: palt{:0.5: {=RO_CB_up_1 = true =}; fail_RO_CB_up_1; P2(): 1 - 0.5:good_RO_CB_up_1;P1()}}}
+process P1() {dact_9; RO_CB_up_1()}
+process P2() {alt {::dact_9; P3()::rate(0.1) {=RO_CB_up_1 = false =}; repaired_RO_CB_up_1; P1()}}
+process P3() {alt {::act_9; alt {::dact_9;P3()::rate(0.1)tau{= RO_CB_up_1 = false =};repaired_RO_CB_up_1;P0()}::rate(0.1)tau{= RO_CB_up_1 = false =}; repaired_RO_CB_up_1; RO_CB_up_1()}}}
+//##########Activation Behavior of "i_leaf" named "RO_CB_up_1"
+process RO_CB_up_1_Act(){
+alt{:: act_3; S1() :: fail_Transfo1; S1()} 
+process S1()  {alt {:: dact_3; RO_CB_up_1_Act():: repaired_Transfo1; RO_CB_up_1_Act() :: act_3; S2() :: fail_Transfo1; S2()}}
+process S2()  {alt {:: act_9; S3() :: dact_3; S1() :: repaired_Transfo1; S1() }}
+process S3()  {alt {::  dact_3; S4() :: repaired_Transfo1; S4()}}
+process S4()  {alt {::dact_9; S1() :: dact_3; S5() :: repaired_Transfo1; S5():: act_3; S3() :: fail_Transfo1; S3()}}
+process S5()  {alt {::dact_9; RO_CB_up_1_Act() ::  act_3; S4() :: fail_Transfo1; S4()}}}
+//##########Failure Behavior of "i_leaf" named "RO_CB_up_2"
+process RO_CB_up_2(){
+act_6;alt{::rate(100000) tau; P0()::dact_6;RO_CB_up_2()} 
+process P0() {alt{:: dact_6; RO_CB_up_2() :: palt{:0.5: {=RO_CB_up_2 = true =}; fail_RO_CB_up_2; P2(): 1 - 0.5:good_RO_CB_up_2;P1()}}}
+process P1() {dact_6; RO_CB_up_2()}
+process P2() {alt {::dact_6; P3()::rate(0.1) {=RO_CB_up_2 = false =}; repaired_RO_CB_up_2; P1()}}
+process P3() {alt {::act_6; alt {::dact_6;P3()::rate(0.1)tau{= RO_CB_up_2 = false =};repaired_RO_CB_up_2;P0()}::rate(0.1)tau{= RO_CB_up_2 = false =}; repaired_RO_CB_up_2; RO_CB_up_2()}}}
+//##########Activation Behavior of "i_leaf" named "RO_CB_up_2"
+process RO_CB_up_2_Act(){
+alt{:: act_1; S1() :: fail_Transfo2; S1()} 
+process S1()  {alt {:: dact_1; RO_CB_up_2_Act():: repaired_Transfo2; RO_CB_up_2_Act() :: act_1; S2() :: fail_Transfo2; S2()}}
+process S2()  {alt {:: act_6; S3() :: dact_1; S1() :: repaired_Transfo2; S1() }}
+process S3()  {alt {::  dact_1; S4() :: repaired_Transfo2; S4()}}
+process S4()  {alt {::dact_6; S1() :: dact_1; S5() :: repaired_Transfo2; S5():: act_1; S3() :: fail_Transfo2; S3()}}
+process S5()  {alt {::dact_6; RO_CB_up_2_Act() ::  act_1; S4() :: fail_Transfo2; S4()}}}
+//##########Failure Behavior of "i_leaf" named "RS_dies"
+process RS_dies(){
+act_8;alt{::rate(100000) tau; P0()::dact_8;RS_dies()} 
+process P0() {alt{:: dact_8; RS_dies() :: palt{:0.5: {=RS_dies = true =}; fail_RS_dies; P2(): 1 - 0.5:good_RS_dies;P1()}}}
+process P1() {dact_8; RS_dies()}
+process P2() {alt {::dact_8; P3()::rate(0.1) {=RS_dies = false =}; repaired_RS_dies; P1()}}
+process P3() {alt {::act_8; alt {::dact_8;P3()::rate(0.1)tau{= RS_dies = false =};repaired_RS_dies;P0()}::rate(0.1)tau{= RS_dies = false =}; repaired_RS_dies; RS_dies()}}}
+//##########Activation Behavior of "i_leaf" named "RS_dies"
+process RS_dies_Act(){
+act_8; dact_8; RS_dies_Act()}
+//##########Failure Behavior of "f_leaf" named "Transfo1"
+process Transfo1(){
+process P1() {alt{::dact_5;Transfo1()::rate(0.1) tau{=Transfo1=true=}; fail_Transfo1; P2()}}
+process P2() {alt{::dact_5; alt{::act_5; P2()::rate(0.1) tau{=Transfo1=false=}; repaired_Transfo1; Transfo1()}::rate(0.1) tau{=Transfo1=false=}; repaired_Transfo1; P1()}}
+act_5; P1()}
+//##########Activation Behavior of "f_leaf" named "Transfo1"
+process Transfo1_Act(){
+alt{:: act_0; S1() :: act_3; S1()} 
+process S1()  {alt {::act_5; S4():: dact_0; Transfo1_Act():: dact_3; Transfo1_Act() :: act_0; S2() :: act_3; S2()}}
+process S2()  {alt {:: act_5; S3() :: dact_0; S1() :: dact_3; S1() }}
+process S3()  {alt {::  dact_0; S4() :: dact_3; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_3; S5():: act_0; S3() :: act_3; S3()}}
+process S5()  {alt {::dact_5; Transfo1_Act() ::  act_0; S4() :: act_3; S4()}}}
+//##########Failure Behavior of "f_leaf" named "Transfo2"
+process Transfo2(){
+process P1() {alt{::dact_7;Transfo2()::rate(0.1) tau{=Transfo2=true=}; fail_Transfo2; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=Transfo2=false=}; repaired_Transfo2; Transfo2()}::rate(0.1) tau{=Transfo2=false=}; repaired_Transfo2; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "Transfo2"
+process Transfo2_Act(){
+alt{:: act_1; S1() :: act_2; S1()} 
+process S1()  {alt {::act_7; S4():: dact_1; Transfo2_Act():: dact_2; Transfo2_Act() :: act_1; S2() :: act_2; S2()}}
+process S2()  {alt {:: act_7; S3() :: dact_1; S1() :: dact_2; S1() }}
+process S3()  {alt {::  dact_1; S4() :: dact_2; S4()}}
+process S4()  {alt { :: dact_1; S5() :: dact_2; S5():: act_1; S3() :: act_2; S3()}}
+process S5()  {alt {::dact_7; Transfo2_Act() ::  act_1; S4() :: act_2; S4()}}}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_AND_1 {=  UE_1=true, Fail = true=} ; repaired_AND_1 {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "f_leaf" named "dies_generator"
+process dies_generator(){
+process P1() {alt{::dact_8;dies_generator()::rate(0.1) tau{=dies_generator=true=}; fail_dies_generator; P2()}}
+process P2() {alt{::dact_8; alt{::act_8; P2()::rate(0.1) tau{=dies_generator=false=}; repaired_dies_generator; dies_generator()}::rate(0.1) tau{=dies_generator=false=}; repaired_dies_generator; P1()}}
+act_8; P1()}
+//##########Activation Behavior of "f_leaf" named "dies_generator"
+process dies_generator_Act(){
+act_8; dact_8; dies_generator_Act()}
+//##########Composition of all files
+par
+{
+::AND_1()  :: AND_1_Act()
+::CB_dies()  :: CB_dies_Act()
+::CB_dw_1()  :: CB_dw_1_Act()
+::CB_dw_2()  :: CB_dw_2_Act()
+::CB_up_1()  :: CB_up_1_Act()
+::CB_up_2()  :: CB_up_2_Act()
+::GRID()  :: GRID_Act()
+::LossOfAllBackups()  :: LossOfAllBackups_Act()
+::LossOfDieselLine()  :: LossOfDieselLine_Act()
+::LossOfLine2()  :: LossOfLine2_Act()
+::LossOfLine_1()  :: LossOfLine_1_Act()
+::Loss_of_GRID()  :: Loss_of_GRID_Act()
+::PropagationShortCircuitTransfo1()  :: PropagationShortCircuitTransfo1_Act()
+::PropagationShortCircuitTransfo2()  :: PropagationShortCircuitTransfo2_Act()
+::RC_CB_dies()  :: RC_CB_dies_Act()
+::RC_CB_dw_2()  :: RC_CB_dw_2_Act()
+::RC_CB_up_2()  :: RC_CB_up_2_Act()
+::RO_CB_up_1()  :: RO_CB_up_1_Act()
+::RO_CB_up_2()  :: RO_CB_up_2_Act()
+::RS_dies()  :: RS_dies_Act()
+::Transfo1()  :: Transfo1_Act()
+::Transfo2()  :: Transfo2_Act()
+:: UE_1()  :: UE_1_Act()
+::dies_generator()  :: dies_generator_Act()
+}

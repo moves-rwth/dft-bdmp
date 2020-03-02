@@ -1,0 +1,126 @@
+//##########Automatically generated Modest file from: "28.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0  , act_1  , act_2;
+action  dact_0  , dact_1  , dact_2;
+action  act_DCC_fonc_demA,dact_DCC_fonc_demA, fail_DCC_fonc_demA, repaired_DCC_fonc_demA;
+bool  DCC_fonc_demA = false;
+action  act_DCC_fonc_demB,dact_DCC_fonc_demB, fail_DCC_fonc_demB, good_DCC_fonc_demB, repaired_DCC_fonc_demB;
+bool  DCC_fonc_demB = false;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_Voie_A_indisp,dact_Voie_A_indisp, fail_Voie_A_indisp, repaired_Voie_A_indisp;
+bool  Voie_A_indisp = false;
+action  act_Voie_B_indisp,dact_Voie_B_indisp, fail_Voie_B_indisp, repaired_Voie_B_indisp;
+bool  Voie_B_indisp = false;
+action  act_def_A,dact_def_A, fail_def_A, repaired_def_A;
+bool  def_A = false;
+action  act_def_fonc_B,dact_def_fonc_B, fail_def_fonc_B, repaired_def_fonc_B;
+bool  def_fonc_B = false;
+action  act_def_soll_B,dact_def_soll_B, fail_def_soll_B, good_def_soll_B, repaired_def_soll_B;
+bool  def_soll_B = false;
+action  act_perte_2_voies,dact_perte_2_voies, fail_perte_2_voies, repaired_perte_2_voies;
+bool  perte_2_voies = false;
+//##########Failure Behavior of "f_leaf" named "DCC_fonc_demA"
+process DCC_fonc_demA(){
+process P1() {alt{::dact_0;DCC_fonc_demA()::rate(0.5) tau{=DCC_fonc_demA=true=}; fail_DCC_fonc_demA; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=DCC_fonc_demA=false=}; repaired_DCC_fonc_demA; DCC_fonc_demA()}::rate(0.1) tau{=DCC_fonc_demA=false=}; repaired_DCC_fonc_demA; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "DCC_fonc_demA"
+process DCC_fonc_demA_Act(){
+act_0; dact_0; DCC_fonc_demA_Act()}
+//##########Failure Behavior of "i_leaf" named "DCC_fonc_demB"
+process DCC_fonc_demB(){
+act_2;P0() 
+process P0() {alt{:: dact_2; DCC_fonc_demB() :: palt{:0.5: {=DCC_fonc_demB = true =}; fail_DCC_fonc_demB; P2(): 1 - 0.5:good_DCC_fonc_demB;P1()}}}
+process P1() {dact_2; DCC_fonc_demB()}
+process P2() {alt {::dact_2; P3()::rate(0.1) {=DCC_fonc_demB = false =}; repaired_DCC_fonc_demB; P1()}}
+process P3() {alt {::act_2; alt {::dact_2;P3()::rate(0.1)tau{= DCC_fonc_demB = false =};repaired_DCC_fonc_demB;P0()}::rate(0.1)tau{= DCC_fonc_demB = false =}; repaired_DCC_fonc_demB; DCC_fonc_demB()}}}
+//##########Activation Behavior of "i_leaf" named "DCC_fonc_demB"
+process DCC_fonc_demB_Act(){
+alt{:: act_1; S1() :: fail_DCC_fonc_demA; S1()} 
+process S1()  {alt {:: dact_1; DCC_fonc_demB_Act():: repaired_DCC_fonc_demA; DCC_fonc_demB_Act() :: act_1; S2() :: fail_DCC_fonc_demA; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_DCC_fonc_demA; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_perte_2_voies {=  EI_1=true, Fail = true=} ; repaired_perte_2_voies {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "or_gate" named "Voie_A_indisp"
+process Voie_A_indisp(){
+process P0(){fail_Voie_A_indisp;P2()}
+process P1(){repaired_Voie_A_indisp;Voie_A_indisp()}
+process P2(){alt{::repaired_DCC_fonc_demA;P1()::fail_DCC_fonc_demA; P3()::repaired_def_A;P1()::fail_def_A; P3()}}
+process P3(){alt{::repaired_DCC_fonc_demA;P2()::repaired_def_A;P2()}} 
+ alt{::fail_DCC_fonc_demA; P0()::fail_def_A; P0()}}
+//##########Activation Behavior of "or_gate" named "Voie_A_indisp"
+process Voie_A_indisp_Act(){
+act_0; dact_0; Voie_A_indisp_Act()}
+//##########Failure Behavior of "or_gate" named "Voie_B_indisp"
+process Voie_B_indisp(){
+process P0(){fail_Voie_B_indisp;P2()}
+process P1(){repaired_Voie_B_indisp;Voie_B_indisp()}
+process P2(){alt{::repaired_DCC_fonc_demB;P1()::fail_DCC_fonc_demB; P3()::repaired_def_fonc_B;P1()::fail_def_fonc_B; P3()::repaired_def_soll_B;P1()::fail_def_soll_B; P3()}}
+process P3(){alt{::repaired_DCC_fonc_demB;P2()::fail_DCC_fonc_demB; P4()::repaired_def_fonc_B;P2()::fail_def_fonc_B; P4()::repaired_def_soll_B;P2()::fail_def_soll_B; P4()}}
+process P4(){alt{::repaired_DCC_fonc_demB;P3()::repaired_def_fonc_B;P3()::repaired_def_soll_B;P3()}} 
+ alt{::fail_DCC_fonc_demB; P0()::fail_def_fonc_B; P0()::fail_def_soll_B; P0()}}
+//##########Activation Behavior of "or_gate" named "Voie_B_indisp"
+process Voie_B_indisp_Act(){
+alt{:: act_0; S1() :: fail_Voie_A_indisp; S1()} 
+process S1()  {alt {:: dact_0; Voie_B_indisp_Act():: repaired_Voie_A_indisp; Voie_B_indisp_Act() :: act_0; S2() :: fail_Voie_A_indisp; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Voie_A_indisp; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "f_leaf" named "def_A"
+process def_A(){
+process P1() {alt{::dact_0;def_A()::rate(0.1) tau{=def_A=true=}; fail_def_A; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=def_A=false=}; repaired_def_A; def_A()}::rate(0.1) tau{=def_A=false=}; repaired_def_A; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "def_A"
+process def_A_Act(){
+act_0; dact_0; def_A_Act()}
+//##########Failure Behavior of "f_leaf" named "def_fonc_B"
+process def_fonc_B(){
+process P1() {alt{::dact_1;def_fonc_B()::rate(0.1) tau{=def_fonc_B=true=}; fail_def_fonc_B; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=def_fonc_B=false=}; repaired_def_fonc_B; def_fonc_B()}::rate(0.1) tau{=def_fonc_B=false=}; repaired_def_fonc_B; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "def_fonc_B"
+process def_fonc_B_Act(){
+act_1; dact_1; def_fonc_B_Act()}
+//##########Failure Behavior of "i_leaf" named "def_soll_B"
+process def_soll_B(){
+act_1;P0() 
+process P0() {alt{:: dact_1; def_soll_B() :: palt{:0.5: {=def_soll_B = true =}; fail_def_soll_B; P2(): 1 - 0.5:good_def_soll_B;P1()}}}
+process P1() {dact_1; def_soll_B()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=def_soll_B = false =}; repaired_def_soll_B; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= def_soll_B = false =};repaired_def_soll_B;P0()}::rate(0.1)tau{= def_soll_B = false =}; repaired_def_soll_B; def_soll_B()}}}
+//##########Activation Behavior of "i_leaf" named "def_soll_B"
+process def_soll_B_Act(){
+act_1; dact_1; def_soll_B_Act()}
+//##########Failure Behavior of "and_gate" named "perte_2_voies"
+process perte_2_voies(){
+process P0(){alt{::repaired_Voie_A_indisp;perte_2_voies()::fail_Voie_A_indisp; P1()::repaired_Voie_B_indisp;perte_2_voies()::fail_Voie_B_indisp; P1()}}
+process P1() { fail_perte_2_voies; P2() }
+process P2(){alt{::repaired_Voie_A_indisp;P3()::repaired_Voie_B_indisp;P3()}}
+process P3(){repaired_perte_2_voies;P0()}
+alt{::fail_Voie_A_indisp; P0()::fail_Voie_B_indisp; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_2_voies"
+process perte_2_voies_Act(){
+act_0; dact_0; perte_2_voies_Act()}
+//##########Composition of all files
+par
+{
+::DCC_fonc_demA()  :: DCC_fonc_demA_Act()
+::DCC_fonc_demB()  :: DCC_fonc_demB_Act()
+:: EI_1()  :: EI_1_Act()
+::Voie_A_indisp()  :: Voie_A_indisp_Act()
+::Voie_B_indisp()  :: Voie_B_indisp_Act()
+::def_A()  :: def_A_Act()
+::def_fonc_B()  :: def_fonc_B_Act()
+::def_soll_B()  :: def_soll_B_Act()
+::perte_2_voies()  :: perte_2_voies_Act()
+}

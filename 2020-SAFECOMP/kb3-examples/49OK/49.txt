@@ -1,0 +1,310 @@
+{'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['perte_2_voies'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'Voie_A_indisp': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['perte_2_voies'],
+                   'Name': 'Voie_A_indisp',
+                   'Previous': 'Null',
+                   'Sons': ['def_voie_A', 'maint_prev_A'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '0'},
+ 'Voie_B_indisp': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['perte_2_voies'],
+                   'Name': 'Voie_B_indisp',
+                   'Previous': 'Null',
+                   'Sons': ['def_fonc_B1',
+                            'def_fonc_B2',
+                            'def_soll_B1',
+                            'def_soll_B2',
+                            'maint_prev_B'],
+                   'Triggered_by': 'Voie_A_indisp',
+                   'Type': 'or_gate',
+                   'module': '1'},
+ 'def_A1': {'Calculate': 'fn_fathers_and_trig',
+            'Fathers': ['def_voie_A'],
+            'Name': 'def_A1',
+            'Previous': 'Null',
+            'Sons': 'Null',
+            'Triggered_by': 'Null',
+            'Type': 'f_leaf',
+            'lambda': '0.1',
+            'module': '0',
+            'mu': '0.1'},
+ 'def_A2': {'Calculate': 'fn_fathers_and_trig',
+            'Fathers': ['def_voie_A'],
+            'Name': 'def_A2',
+            'Previous': 'Null',
+            'Sons': 'Null',
+            'Triggered_by': 'Null',
+            'Type': 'f_leaf',
+            'lambda': '0.1',
+            'module': '0',
+            'mu': '0.1'},
+ 'def_fonc_B1': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Voie_B_indisp'],
+                 'Name': 'def_fonc_B1',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'f_leaf',
+                 'lambda': '0.1',
+                 'module': '1',
+                 'mu': '0.1'},
+ 'def_fonc_B2': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Voie_B_indisp'],
+                 'Name': 'def_fonc_B2',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'f_leaf',
+                 'lambda': '0.1',
+                 'module': '1',
+                 'mu': '0.1'},
+ 'def_soll_B1': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Voie_B_indisp'],
+                 'Name': 'def_soll_B1',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'i_leaf',
+                 'gamma': '0.5',
+                 'module': '1',
+                 'mu': '0.1'},
+ 'def_soll_B2': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Voie_B_indisp'],
+                 'Name': 'def_soll_B2',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'i_leaf',
+                 'gamma': '0.5',
+                 'module': '1',
+                 'mu': '0.1'},
+ 'def_voie_A': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Voie_A_indisp'],
+                'Name': 'def_voie_A',
+                'Previous': 'Null',
+                'Sons': ['def_A1', 'def_A2'],
+                'Triggered_by': 'Null',
+                'Type': 'or_gate',
+                'module': '0'},
+ 'maint_prev_A': {'Calculate': 'opposite_to_S_trig',
+                  'Fathers': ['Voie_A_indisp'],
+                  'Name': 'maint_prev_A',
+                  'Previous': 'Null',
+                  'Sons': 'Null',
+                  'Triggered_by': 'Voie_B_indisp',
+                  'Type': 'f_leaf',
+                  'lambda': '0.1',
+                  'module': '2',
+                  'mu': '0.1'},
+ 'maint_prev_B': {'Calculate': 'opposite_to_S_trig',
+                  'Fathers': ['Voie_B_indisp'],
+                  'Name': 'maint_prev_B',
+                  'Previous': 'Null',
+                  'Sons': 'Null',
+                  'Triggered_by': 'Voie_A_indisp',
+                  'Type': 'f_leaf',
+                  'lambda': '0.1',
+                  'module': '3',
+                  'mu': '0.1'},
+ 'perte_2_voies': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['EI_1'],
+                   'Name': 'perte_2_voies',
+                   'Previous': 'Null',
+                   'Sons': ['Voie_A_indisp', 'Voie_B_indisp'],
+                   'Triggered_by': 'Null',
+                   'Type': 'and_gate',
+                   'module': '0'}}
+Opposite S trig present in the system
+Opposite S trig present in the system
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 14:10:12 2019
+Command line arguments: --jani 49.jani --prop '	Pmax=? [F<=1  Fail];  Pmin=? [F<=1  Fail];
+								Pmax=? [F<=2  Fail];  Pmin=? [F<=2  Fail];
+								Pmax=? [F<=3  Fail];  Pmin=? [F<=3  Fail];
+								Pmax=? [F<=4  Fail];  Pmin=? [F<=4  Fail];
+								Pmax=? [F<=5 Fail];  Pmin=? [F<=5 Fail];
+								Pmax=? [F<=6 Fail];  Pmin=? [F<=6 Fail];
+								Pmax=? [F<=7 Fail];  Pmin=? [F<=7 Fail];
+								Pmax=? [F<=8 Fail];  Pmin=? [F<=8 Fail];
+								Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+								Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/49
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 0.098s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6858
+Transitions: 	14040
+Choices: 	11486
+Markovian St.: 	312
+Max. Rate.: 	0.7
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 4331 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.002s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6858
+Transitions: 	14040
+Choices: 	11486
+Markovian St.: 	312
+Max. Rate.: 	0.7
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 4331 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.1998723007
+Time for model checking: 0.022s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.1998723007
+Time for model checking: 0.021s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.3575988763
+Time for model checking: 0.027s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.3575988763
+Time for model checking: 0.026s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.4828542647
+Time for model checking: 0.031s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.4828542647
+Time for model checking: 0.031s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.5828185098
+Time for model checking: 0.036s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.5828185098
+Time for model checking: 0.035s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.6629101435
+Time for model checking: 0.040s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.6629101435
+Time for model checking: 0.039s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.7272765413
+Time for model checking: 0.045s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.7272765413
+Time for model checking: 0.044s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.7791296615
+Time for model checking: 0.050s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.7791296615
+Time for model checking: 0.048s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.8209811296
+Time for model checking: 0.056s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.8209811296
+Time for model checking: 0.054s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.8548103682
+Time for model checking: 0.061s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.8548103682
+Time for model checking: 0.059s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.8821872224
+Time for model checking: 0.066s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.8821872224
+Time for model checking: 0.064s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 14:10:13 2019
+Command line arguments: --jani 49.jani --prop 'Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/49
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 0.203s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6858
+Transitions: 	14040
+Choices: 	11486
+Markovian St.: 	312
+Max. Rate.: 	7/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 4331 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.010s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6858
+Transitions: 	14040
+Choices: 	11486
+Markovian St.: 	312
+Max. Rate.: 	7/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 4331 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": T[exp]max=? [F Fail] ...
+Result (for initial states): 970/209 (approx. 4.641148325)
+Time for model checking: 0.023s.
+
+Model checking property "2": T[exp]min=? [F Fail] ...
+Result (for initial states): 970/209 (approx. 4.641148325)
+Time for model checking: 0.025s.
+shahid@shahid-HP-ProBook-6470b:~/modest/repairable/kb3-examples/49$ D
+

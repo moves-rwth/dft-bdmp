@@ -1,0 +1,4543 @@
+﻿{
+	"jani-version": 1,
+	"name": "22",
+	"type": "ma",
+	"features": [ "derived-operators" ],
+	"actions": [
+		{
+			"name": "fail_B4"
+		},
+		{
+			"name": "fail_B2"
+		},
+		{
+			"name": "fail_B3"
+		},
+		{
+			"name": "fail_B1"
+		},
+		{
+			"name": "repaired_B4"
+		},
+		{
+			"name": "repaired_B2"
+		},
+		{
+			"name": "repaired_B3"
+		},
+		{
+			"name": "repaired_B1"
+		},
+		{
+			"name": "fail_AND_1"
+		},
+		{
+			"name": "repaired_AND_1"
+		},
+		{
+			"name": "act_0"
+		},
+		{
+			"name": "dact_0"
+		},
+		{
+			"name": "fail_C3"
+		},
+		{
+			"name": "fail_C2"
+		},
+		{
+			"name": "fail_C1"
+		},
+		{
+			"name": "fail_C4"
+		},
+		{
+			"name": "repaired_C3"
+		},
+		{
+			"name": "repaired_C2"
+		},
+		{
+			"name": "repaired_C1"
+		},
+		{
+			"name": "repaired_C4"
+		},
+		{
+			"name": "fail_AND_2"
+		},
+		{
+			"name": "repaired_AND_2"
+		},
+		{
+			"name": "act_5"
+		},
+		{
+			"name": "dact_5"
+		},
+		{
+			"name": "act_6"
+		},
+		{
+			"name": "dact_6"
+		},
+		{
+			"name": "act_4"
+		},
+		{
+			"name": "dact_4"
+		},
+		{
+			"name": "act_2"
+		},
+		{
+			"name": "dact_2"
+		},
+		{
+			"name": "act_1"
+		},
+		{
+			"name": "dact_1"
+		},
+		{
+			"name": "act_3"
+		},
+		{
+			"name": "dact_3"
+		},
+		{
+			"name": "fail_G_A"
+		},
+		{
+			"name": "repaired_G_A"
+		},
+		{
+			"name": "fail_OR_1"
+		},
+		{
+			"name": "repaired_OR_1"
+		}
+	],
+	"variables": [
+		{
+			"name": "AND_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "AND_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "B1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "B2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "B3",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "B4",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "C1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "C2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "C3",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "C4",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "G_A",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "OR_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "UE_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Fail",
+			"type": "bool",
+			"initial-value": false
+		}
+	],
+	"properties": [ {
+		"name": "ComputeProbability",
+		"expression": {
+			"op": "filter",
+			"fun": "max",
+			"values": {
+				"op": "Pmax",
+				"exp": {
+					"op": "F",
+					"exp": "Fail",
+					"time-bounds": {
+						"upper": 10
+					}
+				}
+			},
+			"states": {
+				"op": "initial"
+			}
+		}
+	} ],
+	"automata": [
+		{
+			"name": "AND_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_29"
+				},
+				{
+					"name": "loc_39"
+				},
+				{
+					"name": "loc_48"
+				},
+				{
+					"name": "loc_51"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_B4",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B4",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_B4",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_B4",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_48"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_51",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "AND_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "AND_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_29"
+				},
+				{
+					"name": "loc_39"
+				},
+				{
+					"name": "loc_48"
+				},
+				{
+					"name": "loc_51"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C4",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C4",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_C4",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_C4",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "fail_AND_2",
+					"destinations": [ {
+						"location": "loc_48"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_48",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_51",
+					"action": "repaired_AND_2",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "AND_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "B1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "B1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "B1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "B2",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "B2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "B2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_B1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B3",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "B3",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "B3",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "B3",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B3_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_B2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B4",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "B4",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_B4",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "B4",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "B4",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_B4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B4_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_B3",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "C1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "C1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "C1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "C2",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "C2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "C2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_C1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C3",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "C3",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "C3",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "C3",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C3_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_C2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C4",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "C4",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_C4",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "C4",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "C4",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_C4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "C4_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_C3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_C3",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "G_A",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_19"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_37"
+				},
+				{
+					"name": "loc_33"
+				},
+				{
+					"name": "loc_46"
+				},
+				{
+					"name": "loc_44"
+				},
+				{
+					"name": "loc_42"
+				},
+				{
+					"name": "loc_55"
+				},
+				{
+					"name": "loc_51"
+				},
+				{
+					"name": "loc_65"
+				},
+				{
+					"name": "loc_63"
+				},
+				{
+					"name": "loc_71"
+				},
+				{
+					"name": "loc_69"
+				},
+				{
+					"name": "loc_78"
+				},
+				{
+					"name": "loc_76"
+				},
+				{
+					"name": "loc_85"
+				},
+				{
+					"name": "loc_83"
+				},
+				{
+					"name": "loc_92"
+				},
+				{
+					"name": "loc_90"
+				},
+				{
+					"name": "loc_97"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 1
+					},
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 9,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 4,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_27"
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "fail_G_A",
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "G_A",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 3,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_37"
+					} ]
+				},
+				{
+					"location": "loc_37",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 7,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_42"
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 3,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_44"
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_46"
+					} ]
+				},
+				{
+					"location": "loc_46",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_33"
+					} ]
+				},
+				{
+					"location": "loc_44",
+					"action": "repaired_G_A",
+					"destinations": [ {
+						"location": "loc_17",
+						"assignments": [ {
+							"ref": "G_A",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_42",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 3,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_42",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 2,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33"
+					} ]
+				},
+				{
+					"location": "loc_42",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_55"
+					} ]
+				},
+				{
+					"location": "loc_55",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_42"
+					} ]
+				},
+				{
+					"location": "loc_51",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 2
+						}
+					},
+					"destinations": [ {
+						"location": "loc_42"
+					} ]
+				},
+				{
+					"location": "loc_51",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 2
+						}
+					},
+					"destinations": [ {
+						"location": "loc_63"
+					} ]
+				},
+				{
+					"location": "loc_51",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_65"
+					} ]
+				},
+				{
+					"location": "loc_65",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_63",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 3,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_51"
+					} ]
+				},
+				{
+					"location": "loc_63",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 2,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_69"
+					} ]
+				},
+				{
+					"location": "loc_63",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_71"
+					} ]
+				},
+				{
+					"location": "loc_71",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_63"
+					} ]
+				},
+				{
+					"location": "loc_69",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 7,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_63"
+					} ]
+				},
+				{
+					"location": "loc_69",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 3,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_76"
+					} ]
+				},
+				{
+					"location": "loc_69",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_78"
+					} ]
+				},
+				{
+					"location": "loc_78",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_69"
+					} ]
+				},
+				{
+					"location": "loc_76",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 4,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_69"
+					} ]
+				},
+				{
+					"location": "loc_76",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 5
+						}
+					},
+					"destinations": [ {
+						"location": "loc_83"
+					} ]
+				},
+				{
+					"location": "loc_76",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_85"
+					} ]
+				},
+				{
+					"location": "loc_85",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_76"
+					} ]
+				},
+				{
+					"location": "loc_83",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 9,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_76"
+					} ]
+				},
+				{
+					"location": "loc_83",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_90"
+					} ]
+				},
+				{
+					"location": "loc_83",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_92"
+					} ]
+				},
+				{
+					"location": "loc_92",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_83"
+					} ]
+				},
+				{
+					"location": "loc_90",
+					"rate": {
+						"exp": 1
+					},
+					"destinations": [ {
+						"location": "loc_83"
+					} ]
+				},
+				{
+					"location": "loc_90",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_97"
+					} ]
+				},
+				{
+					"location": "loc_97",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_90"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "G_A_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "OR_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_16"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_AND_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_G_A",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_OR_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_AND_2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_AND_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_G_A",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_G_A",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_AND_2",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_AND_2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_G_A",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_G_A",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_AND_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_G_A",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_OR_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "OR_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_OR_1",
+					"destinations": [ {
+						"location": "loc_5",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": true
+							},
+							{
+								"ref": "Fail",
+								"value": true
+							}
+						]
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_OR_1",
+					"destinations": [ {
+						"location": "loc_1",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": false
+							},
+							{
+								"ref": "Fail",
+								"value": false
+							}
+						]
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		}
+	],
+	"system": {
+		"elements": [
+			{
+				"automaton": "AND_1"
+			},
+			{
+				"automaton": "AND_1_Act"
+			},
+			{
+				"automaton": "AND_2"
+			},
+			{
+				"automaton": "AND_2_Act"
+			},
+			{
+				"automaton": "B1"
+			},
+			{
+				"automaton": "B1_Act"
+			},
+			{
+				"automaton": "B2"
+			},
+			{
+				"automaton": "B2_Act"
+			},
+			{
+				"automaton": "B3"
+			},
+			{
+				"automaton": "B3_Act"
+			},
+			{
+				"automaton": "B4"
+			},
+			{
+				"automaton": "B4_Act"
+			},
+			{
+				"automaton": "C1"
+			},
+			{
+				"automaton": "C1_Act"
+			},
+			{
+				"automaton": "C2"
+			},
+			{
+				"automaton": "C2_Act"
+			},
+			{
+				"automaton": "C3"
+			},
+			{
+				"automaton": "C3_Act"
+			},
+			{
+				"automaton": "C4"
+			},
+			{
+				"automaton": "C4_Act"
+			},
+			{
+				"automaton": "G_A"
+			},
+			{
+				"automaton": "G_A_Act"
+			},
+			{
+				"automaton": "OR_1"
+			},
+			{
+				"automaton": "OR_1_Act"
+			},
+			{
+				"automaton": "UE_1"
+			},
+			{
+				"automaton": "UE_1_Act"
+			}
+		],
+		"syncs": [
+			{
+				"synchronise": [
+					"repaired_B1",
+					null,
+					null,
+					null,
+					"repaired_B1",
+					null,
+					null,
+					"repaired_B1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_B1"
+			},
+			{
+				"synchronise": [
+					"fail_B1",
+					null,
+					null,
+					null,
+					"fail_B1",
+					null,
+					null,
+					"fail_B1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_B1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_5",
+					"act_5",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_5"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_5",
+					"dact_5",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_5"
+			},
+			{
+				"synchronise": [
+					"repaired_B2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_B2",
+					null,
+					null,
+					"repaired_B2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_B2"
+			},
+			{
+				"synchronise": [
+					"fail_B2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_B2",
+					null,
+					null,
+					"fail_B2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_B2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_6",
+					"act_6",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_6"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_6",
+					"dact_6",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_6"
+			},
+			{
+				"synchronise": [
+					"fail_B4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_B4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_B4"
+			},
+			{
+				"synchronise": [
+					"repaired_B4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_B4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_B4"
+			},
+			{
+				"synchronise": [
+					"repaired_B3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_B3",
+					null,
+					null,
+					"repaired_B3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_B3"
+			},
+			{
+				"synchronise": [
+					"fail_B3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_B3",
+					null,
+					null,
+					"fail_B3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_B3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_4",
+					"act_4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_4"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_4",
+					"dact_4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_4"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_C1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_C1",
+					null,
+					null,
+					"repaired_C1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_C1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_C1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_C1",
+					null,
+					null,
+					"fail_C1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_C1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_2",
+					"act_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_2",
+					"dact_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_C2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_C2",
+					null,
+					null,
+					"repaired_C2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_C2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_C2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_C2",
+					null,
+					null,
+					"fail_C2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_C2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_1",
+					"act_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_1",
+					"dact_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_C4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_C4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_C4"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_C4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_C4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_C4"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_C3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_C3",
+					null,
+					null,
+					"fail_C3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_C3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_C3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_C3",
+					null,
+					null,
+					"repaired_C3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_C3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_3",
+					"act_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_3",
+					"dact_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_3"
+			},
+			{
+				"synchronise": [
+					"fail_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_AND_1",
+					null,
+					null,
+					null
+				],
+				"result": "fail_AND_1"
+			},
+			{
+				"synchronise": [
+					"repaired_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_AND_1",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_AND_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_AND_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_AND_2",
+					null,
+					null,
+					null
+				],
+				"result": "fail_AND_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_AND_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_AND_2",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_AND_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_G_A",
+					null,
+					"fail_G_A",
+					null,
+					null,
+					null
+				],
+				"result": "fail_G_A"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_G_A",
+					null,
+					"repaired_G_A",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_G_A"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_OR_1",
+					null,
+					"fail_OR_1",
+					null
+				],
+				"result": "fail_OR_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_OR_1",
+					null,
+					"repaired_OR_1",
+					null
+				],
+				"result": "repaired_OR_1"
+			},
+			{
+				"synchronise": [
+					null,
+					"act_0",
+					null,
+					"act_0",
+					"act_0",
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0",
+					"act_0",
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0",
+					"act_0",
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0"
+				],
+				"result": "act_0"
+			},
+			{
+				"synchronise": [
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0"
+				],
+				"result": "dact_0"
+			}
+		]
+	}
+}

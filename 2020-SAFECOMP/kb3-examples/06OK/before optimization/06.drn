@@ -1,0 +1,31 @@
+// Exported by storm
+// Original model type: Markov Automaton
+@type: Markov Automaton
+@parameters
+
+@reward_models
+
+@nr_states
+6
+@nr_choices
+6
+@model
+state 0 !0 init
+	action 0
+		1 : 1
+state 1 !0.0003
+	action 0
+		2 : 0.3333333333
+		5 : 0.6666666667
+state 2 !0
+	action 0
+		3 : 1
+state 3 !0
+	action 0
+		4 : 1
+state 4 !1 Fail
+	action 0
+		4 : 1
+state 5 !0
+	action 0
+		2 : 1

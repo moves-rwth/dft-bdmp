@@ -1,0 +1,1443 @@
+﻿{
+	"jani-version": 1,
+	"name": "14",
+	"type": "ma",
+	"features": [ "derived-operators" ],
+	"actions": [
+		{
+			"name": "fail_Primary"
+		},
+		{
+			"name": "fail_Secundary"
+		},
+		{
+			"name": "repaired_Primary"
+		},
+		{
+			"name": "repaired_Secundary"
+		},
+		{
+			"name": "fail_AND_1"
+		},
+		{
+			"name": "repaired_AND_1"
+		},
+		{
+			"name": "act_0"
+		},
+		{
+			"name": "dact_0"
+		},
+		{
+			"name": "fail_THEN_1"
+		},
+		{
+			"name": "fail_OR_1"
+		},
+		{
+			"name": "repaired_THEN_1"
+		},
+		{
+			"name": "repaired_OR_1"
+		},
+		{
+			"name": "fail_Switch"
+		},
+		{
+			"name": "repaired_Switch"
+		}
+	],
+	"variables": [
+		{
+			"name": "AND_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "OR_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Primary",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Secundary",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Switch",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "THEN_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "UE_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Fail",
+			"type": "bool",
+			"initial-value": false
+		}
+	],
+	"properties": [ {
+		"name": "ComputeProbability",
+		"expression": {
+			"op": "filter",
+			"fun": "max",
+			"values": {
+				"op": "Pmax",
+				"exp": {
+					"op": "F",
+					"exp": "Fail",
+					"time-bounds": {
+						"upper": 10
+					}
+				}
+			},
+			"states": {
+				"op": "initial"
+			}
+		}
+	} ],
+	"automata": [
+		{
+			"name": "AND_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Secundary",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Secundary",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Secundary",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_Secundary",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "AND_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "OR_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_14"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_THEN_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_OR_1",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_THEN_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_THEN_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_THEN_1",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_OR_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "OR_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Primary",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "Primary",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "Primary",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "Primary",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Primary_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Secundary",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "Secundary",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_Secundary",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "Secundary",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Secundary",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "Secundary",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Secundary",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Secundary_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Switch",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "Switch",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_Switch",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "Switch",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "Switch",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Switch_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "THEN_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_23"
+				},
+				{
+					"name": "loc_31"
+				},
+				{
+					"name": "loc_34"
+				},
+				{
+					"name": "loc_29"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_Switch",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "fail_Switch",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_THEN_1",
+					"destinations": [ {
+						"location": "loc_23",
+						"assignments": [ {
+							"ref": "THEN_1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_23",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_23",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_31"
+					} ]
+				},
+				{
+					"location": "loc_31",
+					"action": "repaired_Primary",
+					"destinations": [ {
+						"location": "loc_34"
+					} ]
+				},
+				{
+					"location": "loc_31",
+					"action": "fail_Switch",
+					"destinations": [ {
+						"location": "loc_23"
+					} ]
+				},
+				{
+					"location": "loc_31",
+					"action": "repaired_THEN_1",
+					"destinations": [ {
+						"location": "loc_8",
+						"assignments": [ {
+							"ref": "THEN_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_34",
+					"action": "fail_Switch",
+					"destinations": [ {
+						"location": "loc_29"
+					} ]
+				},
+				{
+					"location": "loc_34",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_31"
+					} ]
+				},
+				{
+					"location": "loc_34",
+					"action": "repaired_THEN_1",
+					"destinations": [ {
+						"location": "loc_1",
+						"assignments": [ {
+							"ref": "THEN_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_Switch",
+					"destinations": [ {
+						"location": "loc_34"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "fail_Primary",
+					"destinations": [ {
+						"location": "loc_23"
+					} ]
+				},
+				{
+					"location": "loc_29",
+					"action": "repaired_THEN_1",
+					"destinations": [ {
+						"location": "loc_5",
+						"assignments": [ {
+							"ref": "THEN_1",
+							"value": false
+						} ]
+					} ]
+				}
+			]
+		},
+		{
+			"name": "THEN_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_OR_1",
+					"destinations": [ {
+						"location": "loc_5",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": true
+							},
+							{
+								"ref": "Fail",
+								"value": true
+							}
+						]
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_OR_1",
+					"destinations": [ {
+						"location": "loc_1",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": false
+							},
+							{
+								"ref": "Fail",
+								"value": false
+							}
+						]
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		}
+	],
+	"system": {
+		"elements": [
+			{
+				"automaton": "AND_1"
+			},
+			{
+				"automaton": "AND_1_Act"
+			},
+			{
+				"automaton": "OR_1"
+			},
+			{
+				"automaton": "OR_1_Act"
+			},
+			{
+				"automaton": "Primary"
+			},
+			{
+				"automaton": "Primary_Act"
+			},
+			{
+				"automaton": "Secundary"
+			},
+			{
+				"automaton": "Secundary_Act"
+			},
+			{
+				"automaton": "Switch"
+			},
+			{
+				"automaton": "Switch_Act"
+			},
+			{
+				"automaton": "THEN_1"
+			},
+			{
+				"automaton": "THEN_1_Act"
+			},
+			{
+				"automaton": "UE_1"
+			},
+			{
+				"automaton": "UE_1_Act"
+			}
+		],
+		"syncs": [
+			{
+				"synchronise": [
+					"fail_AND_1",
+					null,
+					"fail_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_AND_1"
+			},
+			{
+				"synchronise": [
+					"repaired_AND_1",
+					null,
+					"repaired_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_AND_1"
+			},
+			{
+				"synchronise": [
+					"repaired_Secundary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Secundary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Secundary"
+			},
+			{
+				"synchronise": [
+					"fail_Secundary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Secundary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_Secundary"
+			},
+			{
+				"synchronise": [
+					"fail_Primary",
+					null,
+					null,
+					null,
+					"fail_Primary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Primary",
+					null,
+					null,
+					null
+				],
+				"result": "fail_Primary"
+			},
+			{
+				"synchronise": [
+					"repaired_Primary",
+					null,
+					null,
+					null,
+					"repaired_Primary",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Primary",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Primary"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_THEN_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_THEN_1",
+					null,
+					null,
+					null
+				],
+				"result": "fail_THEN_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_THEN_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_THEN_1",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_THEN_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Switch",
+					null,
+					"fail_Switch",
+					null,
+					null,
+					null
+				],
+				"result": "fail_Switch"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Switch",
+					null,
+					"repaired_Switch",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Switch"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_OR_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_OR_1",
+					null
+				],
+				"result": "fail_OR_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_OR_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_OR_1",
+					null
+				],
+				"result": "repaired_OR_1"
+			},
+			{
+				"synchronise": [
+					null,
+					"act_0",
+					null,
+					"act_0",
+					"act_0",
+					"act_0",
+					"act_0",
+					"act_0",
+					"act_0",
+					"act_0",
+					null,
+					"act_0",
+					null,
+					"act_0"
+				],
+				"result": "act_0"
+			},
+			{
+				"synchronise": [
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					"dact_0"
+				],
+				"result": "dact_0"
+			}
+		]
+	}
+}

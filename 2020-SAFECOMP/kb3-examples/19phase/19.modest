@@ -1,0 +1,204 @@
+//##########Automatically generated Modest file from: "19.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_7  , act_1  , act_8  , act_0  , act_4  , act_2  , act_6  , act_3  , act_5;
+action  dact_7  , dact_1  , dact_8  , dact_0  , dact_4  , dact_2  , dact_6  , dact_3  , dact_5;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_collision_avoided,dact_collision_avoided, fail_collision_avoided, repaired_collision_avoided;
+bool  collision_avoided = false;
+action  act_course_changed,dact_course_changed, fail_course_changed, repaired_course_changed;
+bool  course_changed = false;
+action  act_detection,dact_detection, fail_detection, repaired_detection;
+bool  detection = false;
+action  act_detection_by_platform,dact_detection_by_platform, fail_detection_by_platform, repaired_detection_by_platform;
+bool  detection_by_platform = false;
+action  act_detection_by_platform_1,dact_detection_by_platform_1, fail_detection_by_platform_1, repaired_detection_by_platform_1;
+bool  detection_by_platform_1 = false;
+action  act_detection_by_ship,dact_detection_by_ship, fail_detection_by_ship, repaired_detection_by_ship;
+bool  detection_by_ship = false;
+action  act_radar,dact_radar, fail_radar, repaired_radar;
+bool  radar = false;
+action  act_radar_1,dact_radar_1, fail_radar_1, repaired_radar_1;
+bool  radar_1 = false;
+action  act_radar_and_visual, dact_radar_and_visual, fail_radar_and_visual, repaired_radar_and_visual, start_radar_and_visual, end_radar_and_visual;
+bool  radar_and_visual = false;
+action  act_radar_only, dact_radar_only, fail_radar_only, repaired_radar_only, start_radar_only, end_radar_only;
+bool  radar_only = false;
+action  act_too_late, dact_too_late, fail_too_late, repaired_too_late, start_too_late, end_too_late;
+bool  too_late = false;
+action  act_visual,dact_visual, fail_visual, repaired_visual;
+bool  visual = false;
+action  act_visual_1,dact_visual_1, fail_visual_1, repaired_visual_1;
+bool  visual_1 = false;
+action  act_warning,dact_warning, fail_warning, repaired_warning;
+bool  warning = false;
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_collision_avoided {=  UE_1=true, Fail = true=} ; repaired_collision_avoided {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "and_gate" named "collision_avoided"
+process collision_avoided(){
+process P0(){alt{::repaired_course_changed;collision_avoided()::fail_course_changed; P1()::repaired_detection;collision_avoided()::fail_detection; P1()}}
+process P1() { fail_collision_avoided; P2() }
+process P2(){alt{::repaired_course_changed;P3()::repaired_detection;P3()}}
+process P3(){repaired_collision_avoided;P0()}
+alt{::fail_course_changed; P0()::fail_detection; P0()}}
+//##########Activation Behavior of "and_gate" named "collision_avoided"
+process collision_avoided_Act(){
+act_0; dact_0; collision_avoided_Act()}
+//##########Failure Behavior of "f_leaf" named "course_changed"
+process course_changed(){
+process P1() {alt{::dact_3;course_changed()::rate(0.1) tau{=course_changed=true=}; fail_course_changed; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=course_changed=false=}; repaired_course_changed; course_changed()}::rate(0.1) tau{=course_changed=false=}; repaired_course_changed; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "course_changed"
+process course_changed_Act(){
+alt{:: act_0; S1() :: fail_detection; S1()} 
+process S1()  {alt {:: dact_0; course_changed_Act():: repaired_detection; course_changed_Act() :: act_0; S2() :: fail_detection; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_detection; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "or_gate" named "detection"
+process detection(){
+process P0(){fail_detection;P2()}
+process P1(){repaired_detection;detection()}
+process P2(){alt{::repaired_detection_by_platform;P1()::fail_detection_by_platform; P3()::repaired_detection_by_ship;P1()::fail_detection_by_ship; P3()}}
+process P3(){alt{::repaired_detection_by_platform;P2()::repaired_detection_by_ship;P2()}} 
+ alt{::fail_detection_by_platform; P0()::fail_detection_by_ship; P0()}}
+//##########Activation Behavior of "or_gate" named "detection"
+process detection_Act(){
+act_0; dact_0; detection_Act()}
+//##########Failure Behavior of "and_gate" named "detection_by_platform"
+process detection_by_platform(){
+process P0(){alt{::repaired_detection_by_platform_1;detection_by_platform()::fail_detection_by_platform_1; P1()::repaired_warning;detection_by_platform()::fail_warning; P1()}}
+process P1() { fail_detection_by_platform; P2() }
+process P2(){alt{::repaired_detection_by_platform_1;P3()::repaired_warning;P3()}}
+process P3(){repaired_detection_by_platform;P0()}
+alt{::fail_detection_by_platform_1; P0()::fail_warning; P0()}}
+//##########Activation Behavior of "and_gate" named "detection_by_platform"
+process detection_by_platform_Act(){
+act_0; dact_0; detection_by_platform_Act()}
+//##########Failure Behavior of "or_gate" named "detection_by_platform_1"
+process detection_by_platform_1(){
+process P0(){fail_detection_by_platform_1;P2()}
+process P1(){repaired_detection_by_platform_1;detection_by_platform_1()}
+process P2(){alt{::repaired_radar_1;P1()::fail_radar_1; P3()::repaired_visual_1;P1()::fail_visual_1; P3()}}
+process P3(){alt{::repaired_radar_1;P2()::repaired_visual_1;P2()}} 
+ alt{::fail_radar_1; P0()::fail_visual_1; P0()}}
+//##########Activation Behavior of "or_gate" named "detection_by_platform_1"
+process detection_by_platform_1_Act(){
+act_0; dact_0; detection_by_platform_1_Act()}
+//##########Failure Behavior of "or_gate" named "detection_by_ship"
+process detection_by_ship(){
+process P0(){fail_detection_by_ship;P2()}
+process P1(){repaired_detection_by_ship;detection_by_ship()}
+process P2(){alt{::repaired_radar;P1()::fail_radar; P3()::repaired_visual;P1()::fail_visual; P3()}}
+process P3(){alt{::repaired_radar;P2()::repaired_visual;P2()}} 
+ alt{::fail_radar; P0()::fail_visual; P0()}}
+//##########Activation Behavior of "or_gate" named "detection_by_ship"
+process detection_by_ship_Act(){
+act_0; dact_0; detection_by_ship_Act()}
+//##########Failure Behavior of "f_leaf" named "radar"
+process radar(){
+process P1() {alt{::dact_4;radar()::rate(0.1) tau{=radar=true=}; fail_radar; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=radar=false=}; repaired_radar; radar()}::rate(0.1) tau{=radar=false=}; repaired_radar; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "radar"
+process radar_Act(){
+alt{:: act_0; S1() :: fail_radar_only; S1()} 
+process S1()  {alt {:: dact_0; radar_Act():: repaired_radar_only; radar_Act() :: act_0; S2() :: fail_radar_only; S2()}}
+process S2()  {act_4; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_radar_only; S4()}}
+process S4()  {dact_4; S1() }}
+//##########Failure Behavior of "f_leaf" named "radar_1"
+process radar_1(){
+process P1() {alt{::dact_7;radar_1()::rate(0.1) tau{=radar_1=true=}; fail_radar_1; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=radar_1=false=}; repaired_radar_1; radar_1()}::rate(0.1) tau{=radar_1=false=}; repaired_radar_1; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "radar_1"
+process radar_1_Act(){
+alt{:: act_0; S1() :: fail_radar_only; S1()} 
+process S1()  {alt {:: dact_0; radar_1_Act():: repaired_radar_only; radar_1_Act() :: act_0; S2() :: fail_radar_only; S2()}}
+process S2()  {act_7; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_radar_only; S4()}}
+process S4()  {dact_7; S1() }}
+//##########Failure Behavior of "phase_leaf" named "radar_and_visual"
+process radar_and_visual(){
+process P1() {alt{:: act_1; P1() :: rate(0.1) tau; repaired_radar_and_visual {=radar_and_visual = false =};radar_and_visual()}}
+act_1; fail_radar_and_visual {=radar_and_visual = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "radar_and_visual"
+process radar_and_visual_Act(){
+repaired_radar_only; act_1;radar_and_visual_Act()}
+//##########Failure Behavior of "phase_leaf" named "radar_only"
+process radar_only(){
+process P1() {alt{:: act_0; P1() :: rate(0.1) tau; repaired_radar_only {=radar_only = false =};radar_only()}}
+act_0; fail_radar_only {=radar_only = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "radar_only"
+process radar_only_Act(){
+ act_0; when(false) act_0; radar_only_Act()}
+//##########Failure Behavior of "phase_leaf" named "too_late"
+process too_late(){
+process P1() {alt{:: act_2; P1() :: rate(0.1) tau; repaired_too_late {=too_late = false =};too_late()}}
+act_2; fail_too_late {=too_late = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "too_late"
+process too_late_Act(){
+repaired_radar_and_visual; act_2;too_late_Act()}
+//##########Failure Behavior of "f_leaf" named "visual"
+process visual(){
+process P1() {alt{::dact_5;visual()::rate(0.1) tau{=visual=true=}; fail_visual; P2()}}
+process P2() {alt{::dact_5; alt{::act_5; P2()::rate(0.1) tau{=visual=false=}; repaired_visual; visual()}::rate(0.1) tau{=visual=false=}; repaired_visual; P1()}}
+act_5; P1()}
+//##########Activation Behavior of "f_leaf" named "visual"
+process visual_Act(){
+alt{:: act_0; S1() :: fail_radar_and_visual; S1()} 
+process S1()  {alt {:: dact_0; visual_Act():: repaired_radar_and_visual; visual_Act() :: act_0; S2() :: fail_radar_and_visual; S2()}}
+process S2()  {act_5; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_radar_and_visual; S4()}}
+process S4()  {dact_5; S1() }}
+//##########Failure Behavior of "f_leaf" named "visual_1"
+process visual_1(){
+process P1() {alt{::dact_8;visual_1()::rate(0.1) tau{=visual_1=true=}; fail_visual_1; P2()}}
+process P2() {alt{::dact_8; alt{::act_8; P2()::rate(0.1) tau{=visual_1=false=}; repaired_visual_1; visual_1()}::rate(0.1) tau{=visual_1=false=}; repaired_visual_1; P1()}}
+act_8; P1()}
+//##########Activation Behavior of "f_leaf" named "visual_1"
+process visual_1_Act(){
+alt{:: act_0; S1() :: fail_radar_and_visual; S1()} 
+process S1()  {alt {:: dact_0; visual_1_Act():: repaired_radar_and_visual; visual_1_Act() :: act_0; S2() :: fail_radar_and_visual; S2()}}
+process S2()  {act_8; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_radar_and_visual; S4()}}
+process S4()  {dact_8; S1() }}
+//##########Failure Behavior of "f_leaf" named "warning"
+process warning(){
+process P1() {alt{::dact_6;warning()::rate(0.1) tau{=warning=true=}; fail_warning; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=warning=false=}; repaired_warning; warning()}::rate(0.1) tau{=warning=false=}; repaired_warning; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "warning"
+process warning_Act(){
+alt{:: act_0; S1() :: fail_detection_by_platform_1; S1()} 
+process S1()  {alt {:: dact_0; warning_Act():: repaired_detection_by_platform_1; warning_Act() :: act_0; S2() :: fail_detection_by_platform_1; S2()}}
+process S2()  {act_6; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_detection_by_platform_1; S4()}}
+process S4()  {dact_6; S1() }}
+//##########Composition of all files
+par
+{
+:: UE_1()  :: UE_1_Act()
+::collision_avoided()  :: collision_avoided_Act()
+::course_changed()  :: course_changed_Act()
+::detection()  :: detection_Act()
+::detection_by_platform()  :: detection_by_platform_Act()
+::detection_by_platform_1()  :: detection_by_platform_1_Act()
+::detection_by_ship()  :: detection_by_ship_Act()
+::radar()  :: radar_Act()
+::radar_1()  :: radar_1_Act()
+::radar_and_visual()  :: radar_and_visual_Act() 
+::radar_only()  :: radar_only_Act() 
+::too_late()  :: too_late_Act() 
+::visual()  :: visual_Act()
+::visual_1()  :: visual_1_Act()
+::warning()  :: warning_Act()
+}

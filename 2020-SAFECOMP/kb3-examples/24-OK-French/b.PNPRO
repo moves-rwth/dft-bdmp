@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the Python Script for composition with algebra tool, v.100 --><project name="New project" version="121">
+<gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+<nodes>
+alt{:: act_0; S1() :: act_1; S1() :: fail_a; S2()} 
+process S1()  {alt {:: dact_0; b_Act():: dact_1; b_Act():: fail_a; S4() :: act_0; S3() :: act_1; S3():: act_3; S9()}}
+process S2()  {alt {:: repaired_a; b_Act() :: act_0; S4():: act_1; S4()}}
+process S3()  {alt {:: dact_0; S1():: dact_1; S1():: fail_a; S7() :: act_3; S8()}}
+process S4()  {alt {:: dact_0; S2() :: dact_1; S2() :: repaired_a; S1():: act_0; S7() :: act_1; S7() }}
+process S7()  {alt {:: dact_0; S4() :: dact_1; S4() :: repaired_a; S3() }}
+process S8()  {alt {:: fail_a; dact_3; S7() :: dact_0; S9():: dact_1; S9() }}
+process S9()  {alt {::  fail_a; S11() :: act_0; S8() :: act_1; S8() :: dact_0; S10() :: dact_1; S10() }}
+process S10()  {alt {:: dact_3;b_Act()::  fail_a; dact_3; S2() :: act_0; S9() :: act_1; S9() }}
+process S11()  {alt {::  repaired_a ; S9():: dact_3; S4():: act_0; dact_3; S7() :: act_1;dact_3 ; S7() :: dact_0; dact_3; S2() :: dact_1; dact_3; S2()}}}
+</edges>
+</gspn>
+</project>

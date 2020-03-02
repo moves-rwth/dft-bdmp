@@ -1,0 +1,108 @@
+//##########Automatically generated Modest file from: "43.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_1  , act_0;
+action  dact_1  , dact_0;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_OU_2,dact_OU_2, fail_OU_2, repaired_OU_2;
+bool  OU_2 = false;
+action  act_def_A,dact_def_A, fail_def_A, repaired_def_A;
+bool  def_A = false;
+action  act_def_fonc_B,dact_def_fonc_B, fail_def_fonc_B, repaired_def_fonc_B;
+bool  def_fonc_B = false;
+action  act_def_soll_B,dact_def_soll_B, fail_def_soll_B, good_def_soll_B, repaired_def_soll_B;
+bool  def_soll_B = false;
+action  act_maint_prev,dact_maint_prev, fail_maint_prev, repaired_maint_prev;
+bool  maint_prev = false;
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_ET_1 {=  EI_1=true, Fail = true=} ; repaired_ET_1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_OU_1;ET_1()::fail_OU_1; P1()::repaired_OU_2;ET_1()::fail_OU_2; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_OU_1;P3()::repaired_OU_2;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_OU_1; P0()::fail_OU_2; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+process P0(){fail_OU_1;P2()}
+process P1(){repaired_OU_1;OU_1()}
+process P2(){alt{::repaired_def_fonc_B;P1()::fail_def_fonc_B; P3()::repaired_def_soll_B;P1()::fail_def_soll_B; P3()}}
+process P3(){alt{::repaired_def_fonc_B;P2()::repaired_def_soll_B;P2()}} 
+ alt{::fail_def_fonc_B; P0()::fail_def_soll_B; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+alt{:: act_0; S1() :: fail_OU_2; S1()} 
+process S1()  {alt {:: dact_0; OU_1_Act():: repaired_OU_2; OU_1_Act() :: act_0; S2() :: fail_OU_2; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_OU_2; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "or_gate" named "OU_2"
+process OU_2(){
+process P0(){fail_OU_2;P2()}
+process P1(){repaired_OU_2;OU_2()}
+process P2(){alt{::repaired_def_A;P1()::fail_def_A; P3()::repaired_maint_prev;P1()::fail_maint_prev; P3()}}
+process P3(){alt{::repaired_def_A;P2()::repaired_maint_prev;P2()}} 
+ alt{::fail_def_A; P0()::fail_maint_prev; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_2"
+process OU_2_Act(){
+act_0; dact_0; OU_2_Act()}
+//##########Failure Behavior of "f_leaf" named "def_A"
+process def_A(){
+process P1() {alt{::dact_0;def_A()::rate(0.1) tau{=def_A=true=}; fail_def_A; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=def_A=false=}; repaired_def_A; def_A()}::rate(0.1) tau{=def_A=false=}; repaired_def_A; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "def_A"
+process def_A_Act(){
+act_0; dact_0; def_A_Act()}
+//##########Failure Behavior of "f_leaf" named "def_fonc_B"
+process def_fonc_B(){
+process P1() {alt{::dact_1;def_fonc_B()::rate(0.1) tau{=def_fonc_B=true=}; fail_def_fonc_B; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=def_fonc_B=false=}; repaired_def_fonc_B; def_fonc_B()}::rate(0.1) tau{=def_fonc_B=false=}; repaired_def_fonc_B; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "def_fonc_B"
+process def_fonc_B_Act(){
+act_1; dact_1; def_fonc_B_Act()}
+//##########Failure Behavior of "i_leaf" named "def_soll_B"
+process def_soll_B(){
+act_1;P0() 
+process P0() {alt{:: dact_1; def_soll_B() :: palt{:0.5: {=def_soll_B = true =}; fail_def_soll_B; P2(): 1 - 0.5:good_def_soll_B;P1()}}}
+process P1() {dact_1; def_soll_B()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=def_soll_B = false =}; repaired_def_soll_B; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= def_soll_B = false =};repaired_def_soll_B;P0()}::rate(0.1)tau{= def_soll_B = false =}; repaired_def_soll_B; def_soll_B()}}}
+//##########Activation Behavior of "i_leaf" named "def_soll_B"
+process def_soll_B_Act(){
+act_1; dact_1; def_soll_B_Act()}
+//##########Failure Behavior of "f_leaf" named "maint_prev"
+process maint_prev(){
+process P1() {alt{::dact_0;maint_prev()::rate(0.1) tau{=maint_prev=true=}; fail_maint_prev; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=maint_prev=false=}; repaired_maint_prev; maint_prev()}::rate(0.1) tau{=maint_prev=false=}; repaired_maint_prev; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "maint_prev"
+process maint_prev_Act(){
+act_0; dact_0; maint_prev_Act()}
+//##########Composition of all files
+par
+{
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::OU_1()  :: OU_1_Act()
+::OU_2()  :: OU_2_Act()
+::def_A()  :: def_A_Act()
+::def_fonc_B()  :: def_fonc_B_Act()
+::def_soll_B()  :: def_soll_B_Act()
+::maint_prev()  :: maint_prev_Act()
+}

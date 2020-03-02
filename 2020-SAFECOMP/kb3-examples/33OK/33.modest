@@ -1,0 +1,88 @@
+//##########Automatically generated Modest file from: "33.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0  , act_1  , act_2;
+action  dact_0  , dact_1  , dact_2;
+action  act_A_defaillant,dact_A_defaillant, fail_A_defaillant, repaired_A_defaillant;
+bool  A_defaillant = false;
+action  act_S_en_panne,dact_S_en_panne, fail_S_en_panne, repaired_S_en_panne;
+bool  S_en_panne = false, Fail=false;
+action  act_f_2,dact_f_2, fail_f_2, repaired_f_2;
+bool  f_2 = false;
+action  act_i_1,dact_i_1, fail_i_1, good_i_1, repaired_i_1;
+bool  i_1 = false;
+action  act_perte_3_ss_systemes,dact_perte_3_ss_systemes, fail_perte_3_ss_systemes, repaired_perte_3_ss_systemes;
+bool  perte_3_ss_systemes = false;
+action  act_perte_secours,dact_perte_secours, fail_perte_secours, repaired_perte_secours;
+bool  perte_secours = false;
+//##########Failure Behavior of "f_leaf" named "A_defaillant"
+process A_defaillant(){
+process P1() {alt{::dact_0;A_defaillant()::rate(0.1) tau{=A_defaillant=true=}; fail_A_defaillant; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=A_defaillant=false=}; repaired_A_defaillant; A_defaillant()}::rate(0.1) tau{=A_defaillant=false=}; repaired_A_defaillant; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "A_defaillant"
+process A_defaillant_Act(){
+act_0; dact_0; A_defaillant_Act()}
+//##########Failure Behavior of "undes_event" named "S_en_panne"
+process S_en_panne() {
+fail_perte_3_ss_systemes {=  S_en_panne=true, Fail = true=} ; repaired_perte_3_ss_systemes {=  S_en_panne=false, Fail = false=}; S_en_panne()
+ }
+//##########Activation Behavior of "undes_event" named "S_en_panne"
+process S_en_panne_Act(){
+act_0; when(false) dact_0; S_en_panne_Act()}
+//##########Failure Behavior of "f_leaf" named "f_2"
+process f_2(){
+process P1() {alt{::dact_2;f_2()::rate(0.1) tau{=f_2=true=}; fail_f_2; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=f_2=false=}; repaired_f_2; f_2()}::rate(0.1) tau{=f_2=false=}; repaired_f_2; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "f_2"
+process f_2_Act(){
+alt{:: act_1; S1() :: fail_i_1; S1()} 
+process S1()  {alt {:: dact_1; f_2_Act():: repaired_i_1; f_2_Act() :: act_1; S2() :: fail_i_1; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_i_1; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "i_leaf" named "i_1"
+process i_1(){
+act_1;P0() 
+process P0() {alt{:: dact_1; i_1() :: palt{:0.5: {=i_1 = true =}; fail_i_1; P2(): 1 - 0.5:good_i_1;P1()}}}
+process P1() {dact_1; i_1()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=i_1 = false =}; repaired_i_1; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= i_1 = false =};repaired_i_1;P0()}::rate(0.1)tau{= i_1 = false =}; repaired_i_1; i_1()}}}
+//##########Activation Behavior of "i_leaf" named "i_1"
+process i_1_Act(){
+act_1; dact_1; i_1_Act()}
+//##########Failure Behavior of "and_gate" named "perte_3_ss_systemes"
+process perte_3_ss_systemes(){
+process P0(){alt{::repaired_A_defaillant;perte_3_ss_systemes()::fail_A_defaillant; P1()::repaired_perte_secours;perte_3_ss_systemes()::fail_perte_secours; P1()}}
+process P1() { fail_perte_3_ss_systemes; P2() }
+process P2(){alt{::repaired_A_defaillant;P3()::repaired_perte_secours;P3()}}
+process P3(){repaired_perte_3_ss_systemes;P0()}
+alt{::fail_A_defaillant; P0()::fail_perte_secours; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_3_ss_systemes"
+process perte_3_ss_systemes_Act(){
+act_0; dact_0; perte_3_ss_systemes_Act()}
+//##########Failure Behavior of "and_gate" named "perte_secours"
+process perte_secours(){
+process P0(){alt{::repaired_f_2;perte_secours()::fail_f_2; P1()::repaired_i_1;perte_secours()::fail_i_1; P1()}}
+process P1() { fail_perte_secours; P2() }
+process P2(){alt{::repaired_f_2;P3()::repaired_i_1;P3()}}
+process P3(){repaired_perte_secours;P0()}
+alt{::fail_f_2; P0()::fail_i_1; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_secours"
+process perte_secours_Act(){
+alt{:: act_0; S1() :: fail_A_defaillant; S1()} 
+process S1()  {alt {:: dact_0; perte_secours_Act():: repaired_A_defaillant; perte_secours_Act() :: act_0; S2() :: fail_A_defaillant; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_A_defaillant; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Composition of all files
+par
+{
+::A_defaillant()  :: A_defaillant_Act()
+:: S_en_panne()  :: S_en_panne_Act()
+::f_2()  :: f_2_Act()
+::i_1()  :: i_1_Act()
+::perte_3_ss_systemes()  :: perte_3_ss_systemes_Act()
+::perte_secours()  :: perte_secours_Act()
+}

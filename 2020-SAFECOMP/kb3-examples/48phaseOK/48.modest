@@ -1,0 +1,188 @@
+//##########Automatically generated Modest file from: "48.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_3  , act_0  , act_7  , act_2  , act_4  , act_5  , act_1  , act_6;
+action  dact_3  , dact_0  , dact_7  , dact_2  , dact_4  , dact_5  , dact_1  , dact_6;
+action  act_Def_voie1,dact_Def_voie1, fail_Def_voie1, repaired_Def_voie1;
+bool  Def_voie1 = false;
+action  act_Def_voie2,dact_Def_voie2, fail_Def_voie2, repaired_Def_voie2;
+bool  Def_voie2 = false;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_Maint_prev_voie1, dact_Maint_prev_voie1, fail_Maint_prev_voie1, repaired_Maint_prev_voie1, start_Maint_prev_voie1, end_Maint_prev_voie1;
+bool  Maint_prev_voie1 = false;
+action  act_Maint_prev_voie2, dact_Maint_prev_voie2, fail_Maint_prev_voie2, repaired_Maint_prev_voie2, start_Maint_prev_voie2, end_Maint_prev_voie2;
+bool  Maint_prev_voie2 = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_OU_2,dact_OU_2, fail_OU_2, repaired_OU_2;
+bool  OU_2 = false;
+action  act_Voie1_indispo,dact_Voie1_indispo, fail_Voie1_indispo, repaired_Voie1_indispo;
+bool  Voie1_indispo = false;
+action  act_Voie2_indispo,dact_Voie2_indispo, fail_Voie2_indispo, repaired_Voie2_indispo;
+bool  Voie2_indispo = false;
+action  act_f_1_A,dact_f_1_A, fail_f_1_A, repaired_f_1_A;
+bool  f_1_A = false;
+action  act_f_1_B,dact_f_1_B, fail_f_1_B, repaired_f_1_B;
+bool  f_1_B = false;
+action  act_f_2_A,dact_f_2_A, fail_f_2_A, repaired_f_2_A;
+bool  f_2_A = false;
+action  act_f_2_B,dact_f_2_B, fail_f_2_B, repaired_f_2_B;
+bool  f_2_B = false;
+action  act_quinzaine2, dact_quinzaine2, fail_quinzaine2, repaired_quinzaine2, start_quinzaine2, end_quinzaine2;
+bool  quinzaine2 = false;
+//##########Failure Behavior of "or_gate" named "Def_voie1"
+process Def_voie1(){
+process P0(){fail_Def_voie1;P2()}
+process P1(){repaired_Def_voie1;Def_voie1()}
+process P2(){alt{::repaired_f_1_A;P1()::fail_f_1_A; P3()::repaired_f_1_B;P1()::fail_f_1_B; P3()}}
+process P3(){alt{::repaired_f_1_A;P2()::repaired_f_1_B;P2()}} 
+ alt{::fail_f_1_A; P0()::fail_f_1_B; P0()}}
+//##########Activation Behavior of "or_gate" named "Def_voie1"
+process Def_voie1_Act(){
+alt{:: act_0; S1() :: act_4; S1()} 
+process S1()  { act_7; S4() }
+process S3()  {alt {::  dact_0; S4() :: dact_4; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_4; S5():: act_0; S3() :: act_4; S3()}}
+process S5()  {dact_7; Def_voie1_Act() }}
+//##########Failure Behavior of "or_gate" named "Def_voie2"
+process Def_voie2(){
+process P0(){fail_Def_voie2;P2()}
+process P1(){repaired_Def_voie2;Def_voie2()}
+process P2(){alt{::repaired_f_2_A;P1()::fail_f_2_A; P3()::repaired_f_2_B;P1()::fail_f_2_B; P3()}}
+process P3(){alt{::repaired_f_2_A;P2()::repaired_f_2_B;P2()}} 
+ alt{::fail_f_2_A; P0()::fail_f_2_B; P0()}}
+//##########Activation Behavior of "or_gate" named "Def_voie2"
+process Def_voie2_Act(){
+alt{:: act_0; S1() :: act_3; S1()} 
+process S1()  { act_6; S4() }
+process S3()  {alt {::  dact_0; S4() :: dact_3; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_3; S5():: act_0; S3() :: act_3; S3()}}
+process S5()  {dact_6; Def_voie2_Act() }}
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_ET_1 {=  EI_1=true, Fail = true=} ; repaired_ET_1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_Voie1_indispo;ET_1()::fail_Voie1_indispo; P1()::repaired_Voie2_indispo;ET_1()::fail_Voie2_indispo; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_Voie1_indispo;P3()::repaired_Voie2_indispo;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_Voie1_indispo; P0()::fail_Voie2_indispo; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "phase_leaf" named "Maint_prev_voie1"
+process Maint_prev_voie1(){
+process P1() {alt{:: act_1; P1() :: rate(1.0) tau; repaired_Maint_prev_voie1 {=Maint_prev_voie1 = false =};Maint_prev_voie1()}}
+act_1; fail_Maint_prev_voie1 {=Maint_prev_voie1 = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "Maint_prev_voie1"
+process Maint_prev_voie1_Act(){
+repaired_OU_1; act_1;Maint_prev_voie1_Act()}
+//##########Failure Behavior of "phase_leaf" named "Maint_prev_voie2"
+process Maint_prev_voie2(){
+process P1() {alt{:: act_2; P1() :: rate(1.0) tau; repaired_Maint_prev_voie2 {=Maint_prev_voie2 = false =};Maint_prev_voie2()}}
+act_2; fail_Maint_prev_voie2 {=Maint_prev_voie2 = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "Maint_prev_voie2"
+process Maint_prev_voie2_Act(){
+repaired_OU_2; act_2;Maint_prev_voie2_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+ fail_Def_voie2{=OU_1=true=}; fail_OU_1;repaired_Def_voie2{=OU_1=false=}; repaired_OU_1;OU_1()}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+when(false) act_3; dact_3; OU_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_2"
+process OU_2(){
+process P0(){fail_OU_2;P2()}
+process P1(){repaired_OU_2;OU_2()}
+process P2(){alt{::repaired_Def_voie1;P1()::fail_Def_voie1; P3()::repaired_quinzaine2;P1()::fail_quinzaine2; P3()}}
+process P3(){alt{::repaired_Def_voie1;P2()::repaired_quinzaine2;P2()}} 
+ alt{::fail_Def_voie1; P0()::fail_quinzaine2; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_2"
+process OU_2_Act(){
+when(false) act_4; dact_4; OU_2_Act()}
+//##########Failure Behavior of "or_gate" named "Voie1_indispo"
+process Voie1_indispo(){
+process P0(){fail_Voie1_indispo;P2()}
+process P1(){repaired_Voie1_indispo;Voie1_indispo()}
+process P2(){alt{::repaired_Def_voie1;P1()::fail_Def_voie1; P3()::repaired_Maint_prev_voie1;P1()::fail_Maint_prev_voie1; P3()}}
+process P3(){alt{::repaired_Def_voie1;P2()::repaired_Maint_prev_voie1;P2()}} 
+ alt{::fail_Def_voie1; P0()::fail_Maint_prev_voie1; P0()}}
+//##########Activation Behavior of "or_gate" named "Voie1_indispo"
+process Voie1_indispo_Act(){
+act_0; dact_0; Voie1_indispo_Act()}
+//##########Failure Behavior of "or_gate" named "Voie2_indispo"
+process Voie2_indispo(){
+process P0(){fail_Voie2_indispo;P2()}
+process P1(){repaired_Voie2_indispo;Voie2_indispo()}
+process P2(){alt{::repaired_Def_voie2;P1()::fail_Def_voie2; P3()::repaired_Maint_prev_voie2;P1()::fail_Maint_prev_voie2; P3()}}
+process P3(){alt{::repaired_Def_voie2;P2()::repaired_Maint_prev_voie2;P2()}} 
+ alt{::fail_Def_voie2; P0()::fail_Maint_prev_voie2; P0()}}
+//##########Activation Behavior of "or_gate" named "Voie2_indispo"
+process Voie2_indispo_Act(){
+act_0; dact_0; Voie2_indispo_Act()}
+//##########Failure Behavior of "f_leaf" named "f_1_A"
+process f_1_A(){
+process P1() {alt{::dact_7;f_1_A()::rate(0.1) tau{=f_1_A=true=}; fail_f_1_A; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=f_1_A=false=}; repaired_f_1_A; f_1_A()}::rate(0.1) tau{=f_1_A=false=}; repaired_f_1_A; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "f_1_A"
+process f_1_A_Act(){
+act_7; dact_7; f_1_A_Act()}
+//##########Failure Behavior of "f_leaf" named "f_1_B"
+process f_1_B(){
+process P1() {alt{::dact_7;f_1_B()::rate(0.1) tau{=f_1_B=true=}; fail_f_1_B; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=f_1_B=false=}; repaired_f_1_B; f_1_B()}::rate(0.1) tau{=f_1_B=false=}; repaired_f_1_B; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "f_1_B"
+process f_1_B_Act(){
+act_7; dact_7; f_1_B_Act()}
+//##########Failure Behavior of "f_leaf" named "f_2_A"
+process f_2_A(){
+process P1() {alt{::dact_6;f_2_A()::rate(0.1) tau{=f_2_A=true=}; fail_f_2_A; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=f_2_A=false=}; repaired_f_2_A; f_2_A()}::rate(0.1) tau{=f_2_A=false=}; repaired_f_2_A; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "f_2_A"
+process f_2_A_Act(){
+act_6; dact_6; f_2_A_Act()}
+//##########Failure Behavior of "f_leaf" named "f_2_B"
+process f_2_B(){
+process P1() {alt{::dact_6;f_2_B()::rate(0.1) tau{=f_2_B=true=}; fail_f_2_B; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=f_2_B=false=}; repaired_f_2_B; f_2_B()}::rate(0.1) tau{=f_2_B=false=}; repaired_f_2_B; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "f_2_B"
+process f_2_B_Act(){
+act_6; dact_6; f_2_B_Act()}
+//##########Failure Behavior of "phase_leaf" named "quinzaine2"
+process quinzaine2(){
+process P1() {alt{:: act_5; P1() :: rate(0.002785515320334262) tau; repaired_quinzaine2 {=quinzaine2 = false =};quinzaine2()}}
+act_5; fail_quinzaine2 {=quinzaine2 = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "quinzaine2"
+process quinzaine2_Act(){
+repaired_Maint_prev_voie1; act_5;quinzaine2_Act()}
+//##########Composition of all files
+par
+{
+::Def_voie1()  :: Def_voie1_Act()
+::Def_voie2()  :: Def_voie2_Act()
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::Maint_prev_voie1()  :: Maint_prev_voie1_Act() 
+::Maint_prev_voie2()  :: Maint_prev_voie2_Act() 
+::OU_1()  :: OU_1_Act()
+::OU_2()  :: OU_2_Act()
+::Voie1_indispo()  :: Voie1_indispo_Act()
+::Voie2_indispo()  :: Voie2_indispo_Act()
+::f_1_A()  :: f_1_A_Act()
+::f_1_B()  :: f_1_B_Act()
+::f_2_A()  :: f_2_A_Act()
+::f_2_B()  :: f_2_B_Act()
+::quinzaine2()  :: quinzaine2_Act() 
+}

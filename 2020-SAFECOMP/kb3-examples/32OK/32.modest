@@ -1,0 +1,95 @@
+//##########Automatically generated Modest file from: "32.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0;
+action  dact_0;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_Interrupteur_HS,dact_Interrupteur_HS, fail_Interrupteur_HS, repaired_Interrupteur_HS;
+bool  Interrupteur_HS = false;
+action  act_Normal_HS,dact_Normal_HS, fail_Normal_HS, repaired_Normal_HS;
+bool  Normal_HS = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_PUIS_1,dact_PUIS_1, fail_PUIS_1, repaired_PUIS_1;
+bool  PUIS_1 = false;
+action  act_Perte_commande,dact_Perte_commande, fail_Perte_commande, repaired_Perte_commande;
+bool  Perte_commande = false, Fail=false;
+action  act_Secours_HS,dact_Secours_HS, fail_Secours_HS, repaired_Secours_HS;
+bool  Secours_HS = false;
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_Normal_HS;ET_1()::fail_Normal_HS; P1()::repaired_Secours_HS;ET_1()::fail_Secours_HS; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_Normal_HS;P3()::repaired_Secours_HS;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_Normal_HS; P0()::fail_Secours_HS; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "f_leaf" named "Interrupteur_HS"
+process Interrupteur_HS(){
+process P1() {alt{::dact_0;Interrupteur_HS()::rate(0.1) tau{=Interrupteur_HS=true=}; fail_Interrupteur_HS; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Interrupteur_HS=false=}; repaired_Interrupteur_HS; Interrupteur_HS()}::rate(0.1) tau{=Interrupteur_HS=false=}; repaired_Interrupteur_HS; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Interrupteur_HS"
+process Interrupteur_HS_Act(){
+act_0; dact_0; Interrupteur_HS_Act()}
+//##########Failure Behavior of "f_leaf" named "Normal_HS"
+process Normal_HS(){
+process P1() {alt{::dact_0;Normal_HS()::rate(0.1) tau{=Normal_HS=true=}; fail_Normal_HS; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Normal_HS=false=}; repaired_Normal_HS; Normal_HS()}::rate(0.1) tau{=Normal_HS=false=}; repaired_Normal_HS; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Normal_HS"
+process Normal_HS_Act(){
+act_0; dact_0; Normal_HS_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+process P0(){fail_OU_1;P2()}
+process P1(){repaired_OU_1;OU_1()}
+process P2(){alt{::repaired_ET_1;P1()::fail_ET_1; P3()::repaired_PUIS_1;P1()::fail_PUIS_1; P3()}}
+process P3(){alt{::repaired_ET_1;P2()::repaired_PUIS_1;P2()}} 
+ alt{::fail_ET_1; P0()::fail_PUIS_1; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+act_0; dact_0; OU_1_Act()}
+//##########Failure Behavior of "then_gate" named "PUIS_1"
+process PUIS_1(){
+alt { :: fail_Interrupteur_HS; S1():: fail_Normal_HS; S2()}
+process S1() {alt { :: repaired_Interrupteur_HS;PUIS_1() :: fail_Normal_HS; S3()}}
+process S2() {alt { :: repaired_Normal_HS;PUIS_1() :: fail_Interrupteur_HS; S4()}}
+process S3() {alt { :: fail_PUIS_1{=PUIS_1=true=}; S5() :: repaired_Normal_HS; S1()::repaired_Interrupteur_HS; S2()}}
+process S4()  {alt {:: repaired_Normal_HS; S1():: repaired_Interrupteur_HS;S2()}}
+process S5() {alt { :: repaired_Normal_HS; S6():: repaired_Interrupteur_HS;S7()}}
+process S6() {alt { :: repaired_Interrupteur_HS; S8():: fail_Normal_HS; S5() :: repaired_PUIS_1{=PUIS_1=false=}; S1()}}
+process S7() {alt { :: repaired_Normal_HS; S8():: fail_Interrupteur_HS; S5() :: repaired_PUIS_1{=PUIS_1=false=}; S2()}}
+process S8() {alt { :: fail_Interrupteur_HS; S6() :: fail_Normal_HS; S7():: repaired_PUIS_1{=PUIS_1=false=};PUIS_1()}}}
+//##########Activation Behavior of "then_gate" named "PUIS_1"
+process PUIS_1_Act(){
+act_0; dact_0; PUIS_1_Act()}
+//##########Failure Behavior of "undes_event" named "Perte_commande"
+process Perte_commande() {
+fail_OU_1 {=  Perte_commande=true, Fail = true=} ; repaired_OU_1 {=  Perte_commande=false, Fail = false=}; Perte_commande()
+ }
+//##########Activation Behavior of "undes_event" named "Perte_commande"
+process Perte_commande_Act(){
+act_0; when(false) dact_0; Perte_commande_Act()}
+//##########Failure Behavior of "f_leaf" named "Secours_HS"
+process Secours_HS(){
+process P1() {alt{::dact_0;Secours_HS()::rate(0.1) tau{=Secours_HS=true=}; fail_Secours_HS; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Secours_HS=false=}; repaired_Secours_HS; Secours_HS()}::rate(0.1) tau{=Secours_HS=false=}; repaired_Secours_HS; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Secours_HS"
+process Secours_HS_Act(){
+act_0; dact_0; Secours_HS_Act()}
+//##########Composition of all files
+par
+{
+::ET_1()  :: ET_1_Act()
+::Interrupteur_HS()  :: Interrupteur_HS_Act()
+::Normal_HS()  :: Normal_HS_Act()
+::OU_1()  :: OU_1_Act()
+::PUIS_1()  :: PUIS_1_Act()
+:: Perte_commande()  :: Perte_commande_Act()
+::Secours_HS()  :: Secours_HS_Act()
+}

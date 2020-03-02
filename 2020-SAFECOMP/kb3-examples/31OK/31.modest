@@ -1,0 +1,148 @@
+//##########Automatically generated Modest file from: "31.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_3  , act_1  , act_2  , act_4  , act_0;
+action  dact_3  , dact_1  , dact_2  , dact_4  , dact_0;
+action  act_CC_djA,dact_CC_djA, fail_CC_djA, repaired_CC_djA;
+bool  CC_djA = false;
+action  act_CC_djB,dact_CC_djB, fail_CC_djB, repaired_CC_djB;
+bool  CC_djB = false;
+action  act_OI_djA,dact_OI_djA, fail_OI_djA, repaired_OI_djA;
+bool  OI_djA = false;
+action  act_OI_djB,dact_OI_djB, fail_OI_djB, repaired_OI_djB;
+bool  OI_djB = false;
+action  act_Perte_alim_par_voie_A,dact_Perte_alim_par_voie_A, fail_Perte_alim_par_voie_A, repaired_Perte_alim_par_voie_A;
+bool  Perte_alim_par_voie_A = false;
+action  act_Perte_alim_par_voie_B,dact_Perte_alim_par_voie_B, fail_Perte_alim_par_voie_B, repaired_Perte_alim_par_voie_B;
+bool  Perte_alim_par_voie_B = false;
+action  act_Perte_jeu_barres,dact_Perte_jeu_barres, fail_Perte_jeu_barres, repaired_Perte_jeu_barres;
+bool  Perte_jeu_barres = false, Fail=false;
+action  act_RF_djB,dact_RF_djB, fail_RF_djB, good_RF_djB, repaired_RF_djB;
+bool  RF_djB = false;
+action  act_RO_djA,dact_RO_djA, fail_RO_djA, good_RO_djA, repaired_RO_djA;
+bool  RO_djA = false;
+action  act_perte_alim_par_2_voies,dact_perte_alim_par_2_voies, fail_perte_alim_par_2_voies, repaired_perte_alim_par_2_voies;
+bool  perte_alim_par_2_voies = false;
+//##########Failure Behavior of "f_leaf" named "CC_djA"
+process CC_djA(){
+process P1() {alt{::dact_2;CC_djA()::rate(0.0001) tau{=CC_djA=true=}; fail_CC_djA; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=CC_djA=false=}; repaired_CC_djA; CC_djA()}::rate(0.1) tau{=CC_djA=false=}; repaired_CC_djA; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "CC_djA"
+process CC_djA_Act(){
+alt{:: act_1; S1() :: act_0; S1()} 
+process S1()  { act_2; S4() }
+process S3()  {alt {::  dact_1; S4() :: dact_0; S4()}}
+process S4()  {alt { :: dact_1; S5() :: dact_0; S5():: act_1; S3() :: act_0; S3()}}
+process S5()  {dact_2; CC_djA_Act() }}
+//##########Failure Behavior of "f_leaf" named "CC_djB"
+process CC_djB(){
+process P1() {alt{::dact_3;CC_djB()::rate(0.0001) tau{=CC_djB=true=}; fail_CC_djB; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=CC_djB=false=}; repaired_CC_djB; CC_djB()}::rate(0.1) tau{=CC_djB=false=}; repaired_CC_djB; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "CC_djB"
+process CC_djB_Act(){
+alt{:: act_1; S1() :: act_0; S1()} 
+process S1()  { act_3; S4() }
+process S3()  {alt {::  dact_1; S4() :: dact_0; S4()}}
+process S4()  {alt { :: dact_1; S5() :: dact_0; S5():: act_1; S3() :: act_0; S3()}}
+process S5()  {dact_3; CC_djB_Act() }}
+//##########Failure Behavior of "f_leaf" named "OI_djA"
+process OI_djA(){
+process P1() {alt{::dact_0;OI_djA()::rate(0.0001) tau{=OI_djA=true=}; fail_OI_djA; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=OI_djA=false=}; repaired_OI_djA; OI_djA()}::rate(0.1) tau{=OI_djA=false=}; repaired_OI_djA; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "OI_djA"
+process OI_djA_Act(){
+act_0; dact_0; OI_djA_Act()}
+//##########Failure Behavior of "f_leaf" named "OI_djB"
+process OI_djB(){
+process P1() {alt{::dact_1;OI_djB()::rate(0.0001) tau{=OI_djB=true=}; fail_OI_djB; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=OI_djB=false=}; repaired_OI_djB; OI_djB()}::rate(0.1) tau{=OI_djB=false=}; repaired_OI_djB; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "OI_djB"
+process OI_djB_Act(){
+act_1; dact_1; OI_djB_Act()}
+//##########Failure Behavior of "or_gate" named "Perte_alim_par_voie_A"
+process Perte_alim_par_voie_A(){
+process P0(){fail_Perte_alim_par_voie_A;P2()}
+process P1(){repaired_Perte_alim_par_voie_A;Perte_alim_par_voie_A()}
+process P2(){alt{::repaired_CC_djA;P1()::fail_CC_djA; P3()::repaired_CC_djB;P1()::fail_CC_djB; P3()::repaired_OI_djA;P1()::fail_OI_djA; P3()}}
+process P3(){alt{::repaired_CC_djA;P2()::fail_CC_djA; P4()::repaired_CC_djB;P2()::fail_CC_djB; P4()::repaired_OI_djA;P2()::fail_OI_djA; P4()}}
+process P4(){alt{::repaired_CC_djA;P3()::repaired_CC_djB;P3()::repaired_OI_djA;P3()}} 
+ alt{::fail_CC_djA; P0()::fail_CC_djB; P0()::fail_OI_djA; P0()}}
+//##########Activation Behavior of "or_gate" named "Perte_alim_par_voie_A"
+process Perte_alim_par_voie_A_Act(){
+act_0; dact_0; Perte_alim_par_voie_A_Act()}
+//##########Failure Behavior of "or_gate" named "Perte_alim_par_voie_B"
+process Perte_alim_par_voie_B(){
+process P0(){fail_Perte_alim_par_voie_B;P2()}
+process P1(){repaired_Perte_alim_par_voie_B;Perte_alim_par_voie_B()}
+process P2(){alt{::repaired_CC_djA;P1()::fail_CC_djA; P3()::repaired_CC_djB;P1()::fail_CC_djB; P3()::repaired_OI_djB;P1()::fail_OI_djB; P3()::repaired_RF_djB;P1()::fail_RF_djB; P3()::repaired_RO_djA;P1()::fail_RO_djA; P3()}}
+process P3(){alt{::repaired_CC_djA;P2()::fail_CC_djA; P4()::repaired_CC_djB;P2()::fail_CC_djB; P4()::repaired_OI_djB;P2()::fail_OI_djB; P4()::repaired_RF_djB;P2()::fail_RF_djB; P4()::repaired_RO_djA;P2()::fail_RO_djA; P4()}}
+process P4(){alt{::repaired_CC_djA;P3()::fail_CC_djA; P5()::repaired_CC_djB;P3()::fail_CC_djB; P5()::repaired_OI_djB;P3()::fail_OI_djB; P5()::repaired_RF_djB;P3()::fail_RF_djB; P5()::repaired_RO_djA;P3()::fail_RO_djA; P5()}}
+process P5(){alt{::repaired_CC_djA;P4()::fail_CC_djA; P6()::repaired_CC_djB;P4()::fail_CC_djB; P6()::repaired_OI_djB;P4()::fail_OI_djB; P6()::repaired_RF_djB;P4()::fail_RF_djB; P6()::repaired_RO_djA;P4()::fail_RO_djA; P6()}}
+process P6(){alt{::repaired_CC_djA;P5()::repaired_CC_djB;P5()::repaired_OI_djB;P5()::repaired_RF_djB;P5()::repaired_RO_djA;P5()}} 
+ alt{::fail_CC_djA; P0()::fail_CC_djB; P0()::fail_OI_djB; P0()::fail_RF_djB; P0()::fail_RO_djA; P0()}}
+//##########Activation Behavior of "or_gate" named "Perte_alim_par_voie_B"
+process Perte_alim_par_voie_B_Act(){
+alt{:: act_0; S1() :: fail_Perte_alim_par_voie_A; S1()} 
+process S1()  {alt {:: dact_0; Perte_alim_par_voie_B_Act():: repaired_Perte_alim_par_voie_A; Perte_alim_par_voie_B_Act() :: act_0; S2() :: fail_Perte_alim_par_voie_A; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Perte_alim_par_voie_A; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "undes_event" named "Perte_jeu_barres"
+process Perte_jeu_barres() {
+fail_perte_alim_par_2_voies {=  Perte_jeu_barres=true, Fail = true=} ; repaired_perte_alim_par_2_voies {=  Perte_jeu_barres=false, Fail = false=}; Perte_jeu_barres()
+ }
+//##########Activation Behavior of "undes_event" named "Perte_jeu_barres"
+process Perte_jeu_barres_Act(){
+act_0; when(false) dact_0; Perte_jeu_barres_Act()}
+//##########Failure Behavior of "i_leaf" named "RF_djB"
+process RF_djB(){
+act_1;alt{::rate(100000) tau; P0()::dact_1;RF_djB()} 
+process P0() {alt{:: dact_1; RF_djB() :: palt{:0.0001: {=RF_djB = true =}; fail_RF_djB; P2(): 1 - 0.0001:good_RF_djB;P1()}}}
+process P1() {dact_1; RF_djB()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=RF_djB = false =}; repaired_RF_djB; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= RF_djB = false =};repaired_RF_djB;P0()}::rate(0.1)tau{= RF_djB = false =}; repaired_RF_djB; RF_djB()}}}
+//##########Activation Behavior of "i_leaf" named "RF_djB"
+process RF_djB_Act(){
+act_1; dact_1; RF_djB_Act()}
+//##########Failure Behavior of "i_leaf" named "RO_djA"
+process RO_djA(){
+act_4;alt{::rate(100000) tau; P0()::dact_4;RO_djA()} 
+process P0() {alt{:: dact_4; RO_djA() :: palt{:0.0001: {=RO_djA = true =}; fail_RO_djA; P2(): 1 - 0.0001:good_RO_djA;P1()}}}
+process P1() {dact_4; RO_djA()}
+process P2() {alt {::dact_4; P3()::rate(0.1) {=RO_djA = false =}; repaired_RO_djA; P1()}}
+process P3() {alt {::act_4; alt {::dact_4;P3()::rate(0.1)tau{= RO_djA = false =};repaired_RO_djA;P0()}::rate(0.1)tau{= RO_djA = false =}; repaired_RO_djA; RO_djA()}}}
+//##########Activation Behavior of "i_leaf" named "RO_djA"
+process RO_djA_Act(){
+alt{::fail_OI_djA; S3():: act_1; S2()}
+process S0(){alt{:: dact_1; S3()::repaired_OI_djA; alt{:: act_4;S1():: dact_1;RO_djA_Act() }}}
+process S1(){alt{::dact_1;dact_4;RO_djA_Act()::fail_OI_djA; dact_4;S0()}}
+process S2(){alt{::dact_1;RO_djA_Act()::  act_4; S1()}}
+process S3(){alt{::repaired_OI_djA;RO_djA_Act():: act_1; S0()}}}
+//##########Failure Behavior of "and_gate" named "perte_alim_par_2_voies"
+process perte_alim_par_2_voies(){
+process P0(){alt{::repaired_Perte_alim_par_voie_A;perte_alim_par_2_voies()::fail_Perte_alim_par_voie_A; P1()::repaired_Perte_alim_par_voie_B;perte_alim_par_2_voies()::fail_Perte_alim_par_voie_B; P1()}}
+process P1() { fail_perte_alim_par_2_voies; P2() }
+process P2(){alt{::repaired_Perte_alim_par_voie_A;P3()::repaired_Perte_alim_par_voie_B;P3()}}
+process P3(){repaired_perte_alim_par_2_voies;P0()}
+alt{::fail_Perte_alim_par_voie_A; P0()::fail_Perte_alim_par_voie_B; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_alim_par_2_voies"
+process perte_alim_par_2_voies_Act(){
+act_0; dact_0; perte_alim_par_2_voies_Act()}
+//##########Composition of all files
+par
+{
+::CC_djA()  :: CC_djA_Act()
+::CC_djB()  :: CC_djB_Act()
+::OI_djA()  :: OI_djA_Act()
+::OI_djB()  :: OI_djB_Act()
+::Perte_alim_par_voie_A()  :: Perte_alim_par_voie_A_Act()
+::Perte_alim_par_voie_B()  :: Perte_alim_par_voie_B_Act()
+:: Perte_jeu_barres()  :: Perte_jeu_barres_Act()
+::RF_djB()  :: RF_djB_Act()
+::RO_djA()  :: RO_djA_Act()
+::perte_alim_par_2_voies()  :: perte_alim_par_2_voies_Act()
+}

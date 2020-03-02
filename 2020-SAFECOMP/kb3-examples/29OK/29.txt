@@ -1,0 +1,323 @@
+{'AND_Pte_2_sur_3_0': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['OR_Pte_2_sur_3'],
+                       'K': '2',
+                       'Name': 'AND_Pte_2_sur_3_0',
+                       'Previous': 'Null',
+                       'Sons': ['Def_A', 'Def_B'],
+                       'Triggered_by': 'Null',
+                       'Type': 'and_gate',
+                       'module': '0'},
+ 'AND_Pte_2_sur_3_1': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['OR_Pte_2_sur_3'],
+                       'K': '2',
+                       'Name': 'AND_Pte_2_sur_3_1',
+                       'Previous': 'Null',
+                       'Sons': ['Def_A', 'Def_C'],
+                       'Triggered_by': 'Null',
+                       'Type': 'and_gate',
+                       'module': '0'},
+ 'AND_Pte_2_sur_3_2': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['OR_Pte_2_sur_3'],
+                       'K': '2',
+                       'Name': 'AND_Pte_2_sur_3_2',
+                       'Previous': 'Null',
+                       'Sons': ['Def_B', 'Def_C'],
+                       'Triggered_by': 'Null',
+                       'Type': 'and_gate',
+                       'module': '0'},
+ 'Chocs': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': 'Null',
+           'Name': 'Chocs',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '1',
+           'mu': '10'},
+ 'Def_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_Pte_2_sur_3_0', 'AND_Pte_2_sur_3_1'],
+           'Name': 'Def_A',
+           'Previous': 'Null',
+           'Sons': ['Def_indep_A', 'Def_prov_A'],
+           'Triggered_by': 'Null',
+           'Type': 'or_gate',
+           'module': '0'},
+ 'Def_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_Pte_2_sur_3_0', 'AND_Pte_2_sur_3_2'],
+           'Name': 'Def_B',
+           'Previous': 'Null',
+           'Sons': ['Def_indep_B', 'Def_prov_B'],
+           'Triggered_by': 'Null',
+           'Type': 'or_gate',
+           'module': '0'},
+ 'Def_C': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_Pte_2_sur_3_1', 'AND_Pte_2_sur_3_2'],
+           'Name': 'Def_C',
+           'Previous': 'Null',
+           'Sons': ['Def_indep_C', 'Def_prov_C'],
+           'Triggered_by': 'Null',
+           'Type': 'or_gate',
+           'module': '0'},
+ 'Def_indep_A': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Def_A'],
+                 'Name': 'Def_indep_A',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'f_leaf',
+                 'lambda': '0.1',
+                 'module': '0',
+                 'mu': '0.1'},
+ 'Def_indep_B': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Def_B'],
+                 'Name': 'Def_indep_B',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'f_leaf',
+                 'lambda': '0.1',
+                 'module': '0',
+                 'mu': '0.1'},
+ 'Def_indep_C': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['Def_C'],
+                 'Name': 'Def_indep_C',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'f_leaf',
+                 'lambda': '0.1',
+                 'module': '0',
+                 'mu': '0.1'},
+ 'Def_prov_A': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Def_A'],
+                'Name': 'Def_prov_A',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Chocs',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '4',
+                'mu': '0.1'},
+ 'Def_prov_B': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Def_B'],
+                'Name': 'Def_prov_B',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Chocs',
+                'Type': 'i_leaf',
+                'gamma': '0.1',
+                'module': '3',
+                'mu': '0.1'},
+ 'Def_prov_C': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Def_C'],
+                'Name': 'Def_prov_C',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Chocs',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '2',
+                'mu': '0.1'},
+ 'OR_Pte_2_sur_3': {'Calculate': 'fn_fathers_and_trig',
+                    'Fathers': ['Perte_systeme'],
+                    'K': '2',
+                    'Name': 'OR_Pte_2_sur_3',
+                    'Previous': 'Null',
+                    'Sons': ['AND_Pte_2_sur_3_0',
+                             'AND_Pte_2_sur_3_1',
+                             'AND_Pte_2_sur_3_2'],
+                    'Triggered_by': 'Null',
+                    'Type': 'or_gate',
+                    'module': '0'},
+ 'Perte_systeme': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': 'Null',
+                   'Name': 'Perte_systeme',
+                   'Previous': 'Null',
+                   'Sons': ['OR_Pte_2_sur_3'],
+                   'Triggered_by': 'Null',
+                   'Type': 'undes_event',
+                   'module': '0'}}
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 20:34:58 2019
+Command line arguments: --jani 29.jani --prop '	Pmax=? [F<=1   Fail]; Pmin=? [F<=1   Fail];
+				Pmax=? [F<=2   Fail]; Pmin=? [F<=2   Fail];
+				Pmax=? [F<=3   Fail]; Pmin=? [F<=3  Fail];
+				Pmax=? [F<=4   Fail]; Pmin=? [F<=4   Fail];
+				Pmax=? [F<=5  Fail]; Pmin=? [F<=5  Fail];
+				Pmax=? [F<=6  Fail]; Pmin=? [F<=6  Fail];
+				Pmax=? [F<=7  Fail]; Pmin=? [F<=7  Fail];
+				Pmax=? [F<=8  Fail]; Pmin=? [F<=8  Fail];
+				Pmax=? [F<=9   Fail]; Pmin=? [F<=9  Fail];
+				Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/29
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 0.178s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	13409
+Transitions: 	30127
+Choices: 	26014
+Markovian St.: 	280
+Max. Rate.: 	10.6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 10169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.005s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	13409
+Transitions: 	30127
+Choices: 	26014
+Markovian St.: 	280
+Max. Rate.: 	10.6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 10169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.060539611
+Time for model checking: 0.152s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.060539611
+Time for model checking: 0.150s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.1562676372
+Time for model checking: 0.331s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.1562676372
+Time for model checking: 0.335s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.2621047883
+Time for model checking: 0.615s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.2621047883
+Time for model checking: 0.569s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.3653177976
+Time for model checking: 0.870s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.3653177976
+Time for model checking: 0.975s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.4599821644
+Time for model checking: 1.258s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.4599821644
+Time for model checking: 1.274s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.5438501685
+Time for model checking: 1.675s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.5438501685
+Time for model checking: 1.679s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.616596976
+Time for model checking: 2.156s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.616596976
+Time for model checking: 2.186s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.6788459932
+Time for model checking: 2.746s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.6788459932
+Time for model checking: 2.779s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.7316345302
+Time for model checking: 3.361s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.7316345302
+Time for model checking: 3.451s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.7761276257
+Time for model checking: 4.181s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.7761276257
+Time for model checking: 4.008s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 20:35:33 2019
+Command line arguments: --jani 29.jani --prop '	Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/29
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 0.384s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	13409
+Transitions: 	30127
+Choices: 	26014
+Markovian St.: 	280
+Max. Rate.: 	53/5
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 10169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.022s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	13409
+Transitions: 	30127
+Choices: 	26014
+Markovian St.: 	280
+Max. Rate.: 	53/5
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 10169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": T[exp]max=? [F Fail] ...
+Result (for initial states): 254970303238530135805346627/36675539512056597243064018 (approx. 6.952053239)
+Time for model checking: 0.033s.
+
+Model checking property "2": T[exp]min=? [F Fail] ...
+Result (for initial states): 254970303238530135805346627/36675539512056597243064018 (approx. 6.952053239)
+Time for model checking: 0.036s.
+

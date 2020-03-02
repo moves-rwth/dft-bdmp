@@ -1,0 +1,138 @@
+//##########Automatically generated Modest file from: "45.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0  , act_3;
+action  dact_0  , dact_3;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_OU_2,dact_OU_2, fail_OU_2, repaired_OU_2;
+bool  OU_2 = false;
+action  act_OU_3,dact_OU_3, fail_OU_3, repaired_OU_3;
+bool  OU_3 = false;
+action  act_Perte_fonction_V1,dact_Perte_fonction_V1, fail_Perte_fonction_V1, repaired_Perte_fonction_V1;
+bool  Perte_fonction_V1 = false;
+action  act_V1,dact_V1, fail_V1, repaired_V1;
+bool  V1 = false;
+action  act_V1_et_VS_perdus,dact_V1_et_VS_perdus, fail_V1_et_VS_perdus, repaired_V1_et_VS_perdus;
+bool  V1_et_VS_perdus = false;
+action  act_V1_perdu_pendant_perte_V2,dact_V1_perdu_pendant_perte_V2, fail_V1_perdu_pendant_perte_V2, repaired_V1_perdu_pendant_perte_V2;
+bool  V1_perdu_pendant_perte_V2 = false;
+action  act_V2,dact_V2, fail_V2, repaired_V2;
+bool  V2 = false;
+action  act_VS_dem,dact_VS_dem, fail_VS_dem, good_VS_dem, repaired_VS_dem;
+bool  VS_dem = false;
+action  act_VS_fonc,dact_VS_fonc, fail_VS_fonc, repaired_VS_fonc;
+bool  VS_fonc = false;
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_Perte_fonction_V1 {=  EI_1=true, Fail = true=} ; repaired_Perte_fonction_V1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_2"
+process OU_2(){
+process P0(){fail_OU_2;P2()}
+process P1(){repaired_OU_2;OU_2()}
+process P2(){alt{::repaired_VS_dem;P1()::fail_VS_dem; P3()::repaired_VS_fonc;P1()::fail_VS_fonc; P3()}}
+process P3(){alt{::repaired_VS_dem;P2()::repaired_VS_fonc;P2()}} 
+ alt{::fail_VS_dem; P0()::fail_VS_fonc; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_2"
+process OU_2_Act(){
+alt{:: act_0; S1() :: fail_OU_3; S1()} 
+process S1()  {alt {:: dact_0; OU_2_Act():: repaired_OU_3; OU_2_Act() :: act_0; S2() :: fail_OU_3; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_OU_3; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "or_gate" named "OU_3"
+process OU_3(){
+process P0(){fail_OU_3;P2()}
+process P1(){repaired_OU_3;OU_3()}
+process P2(){alt{::repaired_V1;P1()::fail_V1; P3()::repaired_V2;P1()::fail_V2; P3()}}
+process P3(){alt{::repaired_V1;P2()::repaired_V2;P2()}} 
+ alt{::fail_V1; P0()::fail_V2; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_3"
+process OU_3_Act(){
+act_0; when(false) dact_0; OU_3_Act()}
+//##########Failure Behavior of "or_gate" named "Perte_fonction_V1"
+process Perte_fonction_V1(){
+process P0(){fail_Perte_fonction_V1;P2()}
+process P1(){repaired_Perte_fonction_V1;Perte_fonction_V1()}
+process P2(){alt{::repaired_V1_et_VS_perdus;P1()::fail_V1_et_VS_perdus; P3()::repaired_V1_perdu_pendant_perte_V2;P1()::fail_V1_perdu_pendant_perte_V2; P3()}}
+process P3(){alt{::repaired_V1_et_VS_perdus;P2()::repaired_V1_perdu_pendant_perte_V2;P2()}} 
+ alt{::fail_V1_et_VS_perdus; P0()::fail_V1_perdu_pendant_perte_V2; P0()}}
+//##########Activation Behavior of "or_gate" named "Perte_fonction_V1"
+process Perte_fonction_V1_Act(){
+act_0; dact_0; Perte_fonction_V1_Act()}
+//##########Failure Behavior of "f_leaf" named "V1"
+process V1(){
+process P1() {alt{::dact_0;V1()::rate(0.1) tau{=V1=true=}; fail_V1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=V1=false=}; repaired_V1; V1()}::rate(0.1) tau{=V1=false=}; repaired_V1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "V1"
+process V1_Act(){
+act_0; dact_0; V1_Act()}
+//##########Failure Behavior of "and_gate" named "V1_et_VS_perdus"
+process V1_et_VS_perdus(){
+process P0(){alt{::repaired_OU_2;V1_et_VS_perdus()::fail_OU_2; P1()::repaired_V1;V1_et_VS_perdus()::fail_V1; P1()}}
+process P1() { fail_V1_et_VS_perdus; P2() }
+process P2(){alt{::repaired_OU_2;P3()::repaired_V1;P3()}}
+process P3(){repaired_V1_et_VS_perdus;P0()}
+alt{::fail_OU_2; P0()::fail_V1; P0()}}
+//##########Activation Behavior of "and_gate" named "V1_et_VS_perdus"
+process V1_et_VS_perdus_Act(){
+act_0; dact_0; V1_et_VS_perdus_Act()}
+//##########Failure Behavior of "then_gate" named "V1_perdu_pendant_perte_V2"
+process V1_perdu_pendant_perte_V2(){
+alt { :: fail_V2; S1():: fail_V1; S2()}
+process S1() {alt { :: repaired_V2;V1_perdu_pendant_perte_V2() :: fail_V1; S3()}}
+process S2() {alt { :: repaired_V1;V1_perdu_pendant_perte_V2() :: fail_V2; S4()}}
+process S3() {alt { :: fail_V1_perdu_pendant_perte_V2{=V1_perdu_pendant_perte_V2=true=}; S5() :: repaired_V1; S1()::repaired_V2; S2()}}
+process S4()  {alt {:: repaired_V1; S1():: repaired_V2;S2()}}
+process S5() {alt { :: repaired_V1; S6():: repaired_V2;S7()}}
+process S6() {alt { :: repaired_V2; S8():: fail_V1; S5() :: repaired_V1_perdu_pendant_perte_V2{=V1_perdu_pendant_perte_V2=false=}; S1()}}
+process S7() {alt { :: repaired_V1; S8():: fail_V2; S5() :: repaired_V1_perdu_pendant_perte_V2{=V1_perdu_pendant_perte_V2=false=}; S2()}}
+process S8() {alt { :: fail_V2; S6() :: fail_V1; S7():: repaired_V1_perdu_pendant_perte_V2{=V1_perdu_pendant_perte_V2=false=};V1_perdu_pendant_perte_V2()}}}
+//##########Activation Behavior of "then_gate" named "V1_perdu_pendant_perte_V2"
+process V1_perdu_pendant_perte_V2_Act(){
+act_0; dact_0; V1_perdu_pendant_perte_V2_Act()}
+//##########Failure Behavior of "f_leaf" named "V2"
+process V2(){
+process P1() {alt{::dact_0;V2()::rate(0.1) tau{=V2=true=}; fail_V2; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=V2=false=}; repaired_V2; V2()}::rate(0.1) tau{=V2=false=}; repaired_V2; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "V2"
+process V2_Act(){
+act_0; dact_0; V2_Act()}
+//##########Failure Behavior of "i_leaf" named "VS_dem"
+process VS_dem(){
+act_3;P0() 
+process P0() {alt{:: dact_3; VS_dem() :: palt{:0.5: {=VS_dem = true =}; fail_VS_dem; P2(): 1 - 0.5:good_VS_dem;P1()}}}
+process P1() {dact_3; VS_dem()}
+process P2() {alt {::dact_3; P3()::rate(0.1) {=VS_dem = false =}; repaired_VS_dem; P1()}}
+process P3() {alt {::act_3; alt {::dact_3;P3()::rate(0.1)tau{= VS_dem = false =};repaired_VS_dem;P0()}::rate(0.1)tau{= VS_dem = false =}; repaired_VS_dem; VS_dem()}}}
+//##########Activation Behavior of "i_leaf" named "VS_dem"
+process VS_dem_Act(){
+act_3; dact_3; VS_dem_Act()}
+//##########Failure Behavior of "f_leaf" named "VS_fonc"
+process VS_fonc(){
+process P1() {alt{::dact_3;VS_fonc()::rate(0.1) tau{=VS_fonc=true=}; fail_VS_fonc; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=VS_fonc=false=}; repaired_VS_fonc; VS_fonc()}::rate(0.1) tau{=VS_fonc=false=}; repaired_VS_fonc; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "VS_fonc"
+process VS_fonc_Act(){
+act_3; dact_3; VS_fonc_Act()}
+//##########Composition of all files
+par
+{
+:: EI_1()  :: EI_1_Act()
+::OU_2()  :: OU_2_Act()
+::OU_3()  :: OU_3_Act()
+::Perte_fonction_V1()  :: Perte_fonction_V1_Act()
+::V1()  :: V1_Act()
+::V1_et_VS_perdus()  :: V1_et_VS_perdus_Act()
+::V1_perdu_pendant_perte_V2()  :: V1_perdu_pendant_perte_V2_Act()
+::V2()  :: V2_Act()
+::VS_dem()  :: VS_dem_Act()
+::VS_fonc()  :: VS_fonc_Act()
+}

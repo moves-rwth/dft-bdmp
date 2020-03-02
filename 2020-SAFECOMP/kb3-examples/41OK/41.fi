@@ -1,0 +1,890 @@
+ORDRE_DES_ETAPES
+	__ARBRE__;
+	etape_par_defaut;
+	initialisation;
+	propagation_effet_real;
+	propagation_effet_soll;
+	propagation_feuilles;
+	tops;
+NOMS_DES_GROUPES
+	V3_groupe_simu;
+
+OBJET OPTIONS EST_UN GLOBAL_TYPE;
+	CONSTANTE
+	  filtrer_evts_pertinents
+		DOMAINE BOOLEEN
+		= FAUX;
+	  type_filtrage
+		DOMAINE 'selon_article' 'maximal'
+		= 'maximal';
+	  systeme_reparable
+		DOMAINE BOOLEEN
+		= VRAI;
+
+OBJET A EST_UN feuille_f;
+	INTERFACE
+	  amont
+		= A_ou_B_perdu Perte_2_cpts Tous_cpts_perdus;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  mu
+		DOMAINE REEL
+		= 0.1;
+	  lambda
+		DOMAINE REEL
+		= 0.1;
+	  deff_FIGE
+		DOMAINE BOOLEEN
+		= FAUX;
+	(*PANNE*)
+	ATTRIBUT
+	  deff
+		LIBELLE "défaillance en fonctionnement %OBJET"
+		DOMAINE BOOLEEN
+		= FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI ((NON soll DE A_ou_B_perdu) ET (NON soll DE Perte_2_cpts))
+		  ET (NON soll DE Tous_cpts_perdus)
+		ALORS soll DE A <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI ((evt_pertinent DE A_ou_B_perdu ET (NON real DE A_ou_B_perdu)
+		  ) OU (evt_pertinent DE Perte_2_cpts ET (NON real DE
+		  Perte_2_cpts))) OU (evt_pertinent DE Tous_cpts_perdus ET (
+		  NON real DE Tous_cpts_perdus))
+		ALORS evt_pertinent DE A <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE A <-- real DE A;
+	  xx6
+		GROUPE V3_groupe_simu
+		ETAPE initialisation
+		SI deff DE A = VRAI
+		ALORS real DE A <-- VRAI;
+	OCCURRENCE
+	  xx10
+		GROUPE V3_groupe_simu
+		SI (deff DE A = FAUX) ET soll DE A
+		IL_PEUT_SE_PRODUIRE
+		  DEFAILLANCE deff
+		  LIBELLE "défaillance en fonctionnement %OBJET"
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE A <-- VRAI;
+	  xx11
+		GROUPE V3_groupe_simu
+		SI deff DE A = VRAI
+		IL_PEUT_SE_PRODUIRE
+		  REPARATION rep
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE A <-- FAUX;
+
+OBJET A_ou_B_perdu EST_UN porte_ou;
+	INTERFACE
+	  aval
+		= A B1;
+	  declenche
+		= C;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE C ET (NON real DE C)
+		ALORS evt_pertinent DE A_ou_B_perdu <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE A_ou_B_perdu <-- real DE A_ou_B_perdu;
+	  xx29
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI real DE A OU real DE B1
+		ALORS real DE A_ou_B_perdu <-- VRAI;
+
+OBJET B1 EST_UN feuille_f;
+	INTERFACE
+	  amont
+		= A_ou_B_perdu Perte_2_cpts Tous_cpts_perdus;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  mu
+		DOMAINE REEL
+		= 0.1;
+	  lambda
+		DOMAINE REEL
+		= 0.1;
+	  deff_FIGE
+		DOMAINE BOOLEEN
+		= FAUX;
+	(*PANNE*)
+	ATTRIBUT
+	  deff
+		LIBELLE "défaillance en fonctionnement %OBJET"
+		DOMAINE BOOLEEN
+		= FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI ((NON soll DE A_ou_B_perdu) ET (NON soll DE Perte_2_cpts))
+		  ET (NON soll DE Tous_cpts_perdus)
+		ALORS soll DE B1 <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI ((evt_pertinent DE A_ou_B_perdu ET (NON real DE A_ou_B_perdu)
+		  ) OU (evt_pertinent DE Perte_2_cpts ET (NON real DE
+		  Perte_2_cpts))) OU (evt_pertinent DE Tous_cpts_perdus ET (
+		  NON real DE Tous_cpts_perdus))
+		ALORS evt_pertinent DE B1 <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE B1 <-- real DE B1;
+	  xx6
+		GROUPE V3_groupe_simu
+		ETAPE initialisation
+		SI deff DE B1 = VRAI
+		ALORS real DE B1 <-- VRAI;
+	OCCURRENCE
+	  xx10
+		GROUPE V3_groupe_simu
+		SI (deff DE B1 = FAUX) ET soll DE B1
+		IL_PEUT_SE_PRODUIRE
+		  DEFAILLANCE deff
+		  LIBELLE "défaillance en fonctionnement %OBJET"
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE B1 <-- VRAI;
+	  xx11
+		GROUPE V3_groupe_simu
+		SI deff DE B1 = VRAI
+		IL_PEUT_SE_PRODUIRE
+		  REPARATION rep
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE B1 <-- FAUX;
+
+OBJET C EST_UN feuille_f;
+	INTERFACE
+	  amont
+		= Perte_2_cpts Tous_cpts_perdus;
+	  declenchant
+		= A_ou_B_perdu;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  mu
+		DOMAINE REEL
+		= 0.1;
+	  lambda
+		DOMAINE REEL
+		= 0.1;
+	  deff_FIGE
+		DOMAINE BOOLEEN
+		= FAUX;
+	(*PANNE*)
+	ATTRIBUT
+	  deff
+		LIBELLE "défaillance en fonctionnement %OBJET"
+		DOMAINE BOOLEEN
+		= FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI ((NON soll DE Perte_2_cpts) ET (NON soll DE Tous_cpts_perdus)
+		  ) OU (NON real DE A_ou_B_perdu)
+		ALORS soll DE C <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (evt_pertinent DE Perte_2_cpts ET (NON real DE Perte_2_cpts))
+		   OU (evt_pertinent DE Tous_cpts_perdus ET (NON real DE
+		  Tous_cpts_perdus))
+		ALORS evt_pertinent DE C <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE C <-- real DE C;
+	  xx6
+		GROUPE V3_groupe_simu
+		ETAPE initialisation
+		SI deff DE C = VRAI
+		ALORS real DE C <-- VRAI;
+	OCCURRENCE
+	  xx10
+		GROUPE V3_groupe_simu
+		SI (deff DE C = FAUX) ET soll DE C
+		IL_PEUT_SE_PRODUIRE
+		  DEFAILLANCE deff
+		  LIBELLE "défaillance en fonctionnement %OBJET"
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE C <-- VRAI;
+	  xx11
+		GROUPE V3_groupe_simu
+		SI deff DE C = VRAI
+		IL_PEUT_SE_PRODUIRE
+		  REPARATION rep
+		  LOI EXP (0.1)
+		  PROVOQUE deff DE C <-- FAUX;
+
+OBJET Def_phase_1 EST_UN porte_et;
+	INTERFACE
+	  aval
+		= Tous_cpts_perdus phase_1_en_cours;
+	  amont
+		= Echec_de_la_mission;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI NON soll DE Echec_de_la_mission
+		ALORS soll DE Def_phase_1 <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE Echec_de_la_mission ET (NON real DE
+		  Echec_de_la_mission)
+		ALORS evt_pertinent DE Def_phase_1 <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE Def_phase_1 <-- real DE Def_phase_1;
+	  xx28
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI real DE Tous_cpts_perdus ET real DE phase_1_en_cours
+		ALORS real DE Def_phase_1 <-- VRAI;
+
+OBJET Def_phase_2 EST_UN porte_et;
+	INTERFACE
+	  aval
+		= Perte_2_cpts phase_2_en_cours;
+	  amont
+		= Echec_de_la_mission;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI NON soll DE Echec_de_la_mission
+		ALORS soll DE Def_phase_2 <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE Echec_de_la_mission ET (NON real DE
+		  Echec_de_la_mission)
+		ALORS evt_pertinent DE Def_phase_2 <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE Def_phase_2 <-- real DE Def_phase_2;
+	  xx28
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI real DE Perte_2_cpts ET real DE phase_2_en_cours
+		ALORS real DE Def_phase_2 <-- VRAI;
+
+OBJET EI_1 EST_UN evt_indes;
+	INTERFACE
+	  aval
+		= Echec_de_la_mission;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= VRAI;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		ALORS evt_pertinent DE EI_1 <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE EI_1 <-- real DE EI_1;
+	  xx34
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI real DE Echec_de_la_mission
+		ALORS real DE EI_1 <-- VRAI;
+
+OBJET Echec_de_la_mission EST_UN porte_ou;
+	INTERFACE
+	  aval
+		= Def_phase_1 Def_phase_2;
+	  amont
+		= EI_1;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI NON soll DE EI_1
+		ALORS soll DE Echec_de_la_mission <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE EI_1 ET (NON real DE EI_1)
+		ALORS evt_pertinent DE Echec_de_la_mission <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE Echec_de_la_mission <-- real DE
+		  Echec_de_la_mission;
+	  xx29
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI real DE Def_phase_1 OU real DE Def_phase_2
+		ALORS real DE Echec_de_la_mission <-- VRAI;
+
+OBJET Perte_2_cpts EST_UN porte_k_sur_n;
+	INTERFACE
+	  aval
+		= A B1 C;
+	  amont
+		= Def_phase_2;
+	  declenchant
+		= phase_2_en_cours;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  K
+		DOMAINE ENTIER
+		= 2;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (NON soll DE Def_phase_2) OU (NON real DE phase_2_en_cours)
+		ALORS soll DE Perte_2_cpts <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE Def_phase_2 ET (NON real DE Def_phase_2)
+		ALORS evt_pertinent DE Perte_2_cpts <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE Perte_2_cpts <-- real DE Perte_2_cpts;
+	  xx27
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI (AU_MOINS 2 PARMI (real DE A, real DE B1, real DE C))
+		ALORS real DE Perte_2_cpts <-- VRAI;
+
+OBJET Tous_cpts_perdus EST_UN porte_et;
+	INTERFACE
+	  aval
+		= A B1 C;
+	  amont
+		= Def_phase_1;
+	  declenchant
+		= phase_1_en_cours;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (NON soll DE Def_phase_1) OU (NON real DE phase_1_en_cours)
+		ALORS soll DE Tous_cpts_perdus <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI evt_pertinent DE Def_phase_1 ET (NON real DE Def_phase_1)
+		ALORS evt_pertinent DE Tous_cpts_perdus <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE Tous_cpts_perdus <-- real DE
+		  Tous_cpts_perdus;
+	  xx28
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_real
+		SI (real DE A ET real DE B1) ET real DE C
+		ALORS real DE Tous_cpts_perdus <-- VRAI;
+
+OBJET d_1 EST_UN lien_declenche;
+	INTERFACE
+	  arrivee
+		= C;
+	CONSTANTE
+	  type_gachette
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+
+OBJET d_2 EST_UN lien_declenche;
+	INTERFACE
+	  arrivee
+		= phase_2_en_cours;
+	CONSTANTE
+	  type_gachette
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+
+OBJET d_3 EST_UN lien_declenche;
+	INTERFACE
+	  arrivee
+		= Tous_cpts_perdus;
+	CONSTANTE
+	  type_gachette
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+
+OBJET d_4 EST_UN lien_declenche;
+	INTERFACE
+	  arrivee
+		= Perte_2_cpts;
+	CONSTANTE
+	  type_gachette
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+
+OBJET logique_1 EST_UN lien_logique;
+
+OBJET logique_10 EST_UN lien_logique;
+
+OBJET logique_11 EST_UN lien_logique;
+
+OBJET logique_12 EST_UN lien_logique;
+
+OBJET logique_13 EST_UN lien_logique;
+
+OBJET logique_14 EST_UN lien_logique;
+
+OBJET logique_15 EST_UN lien_logique;
+
+OBJET logique_2 EST_UN lien_logique;
+
+OBJET logique_3 EST_UN lien_logique;
+
+OBJET logique_4 EST_UN lien_logique;
+
+OBJET logique_5 EST_UN lien_logique;
+
+OBJET logique_6 EST_UN lien_logique;
+
+OBJET logique_7 EST_UN lien_logique;
+
+OBJET logique_8 EST_UN lien_logique;
+
+OBJET logique_9 EST_UN lien_logique;
+
+OBJET phase_1_en_cours EST_UN feuille_phase;
+	INTERFACE
+	  amont
+		= Def_phase_1;
+	  declenche
+		= Tous_cpts_perdus phase_2_en_cours;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  Type_de_loi
+		DOMAINE 'exponentiel' 'temps_constant'
+		= 'exponentiel';
+	  duree
+		DOMAINE REEL
+		= 2000;
+	(*PANNE*)
+	ATTRIBUT
+	  en_cours
+		LIBELLE "Phase %OBJET en cours"
+		DOMAINE BOOLEEN
+		= VRAI;
+	ATTRIBUT
+	  soll_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	  debut_phase
+		DOMAINE BOOLEEN
+		= FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI NON soll DE Def_phase_1
+		ALORS soll DE phase_1_en_cours <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (evt_pertinent DE Def_phase_1 ET (NON real DE Def_phase_1))
+		  OU ((evt_pertinent DE Tous_cpts_perdus ET (NON real DE
+		  Tous_cpts_perdus)) OU (evt_pertinent DE phase_2_en_cours ET (
+		  NON real DE phase_2_en_cours)))
+		ALORS evt_pertinent DE phase_1_en_cours <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE phase_1_en_cours <-- real DE
+		  phase_1_en_cours;
+	  xx44
+		GROUPE V3_groupe_simu
+		ETAPE initialisation
+		ALORS real DE phase_1_en_cours <-- en_cours DE phase_1_en_cours;
+	  xx45
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		SI ((NON en_cours DE phase_1_en_cours) ET (NON soll DE
+		  phase_1_en_cours)) ET soll_avant DE phase_1_en_cours
+		ALORS debut_phase DE phase_1_en_cours <-- VRAI;
+	  xx46
+		GROUPE V3_groupe_simu
+		ETAPE tops
+		ALORS soll_avant DE phase_1_en_cours <-- soll DE
+		  phase_1_en_cours;
+	OCCURRENCE
+	  xx43_a
+		GROUPE V3_groupe_simu
+		SI en_cours DE phase_1_en_cours
+		IL_PEUT_SE_PRODUIRE
+		  TRANSITION fin
+		  LIBELLE "fin de la phase %OBJET"
+		  LOI EXP (0.0005)
+		  PROVOQUE en_cours DE phase_1_en_cours <-- FAUX;
+	  xx47
+		GROUPE V3_groupe_simu
+		SI debut_phase DE phase_1_en_cours
+		IL_PEUT_SE_PRODUIRE
+		  TRANSITION debut
+		  LIBELLE "debut de la phase %OBJET"
+		  LOI INS (1)
+		  PROVOQUE en_cours DE phase_1_en_cours <-- VRAI,
+			debut_phase DE phase_1_en_cours <-- FAUX;
+
+OBJET phase_2_en_cours EST_UN feuille_phase;
+	INTERFACE
+	  amont
+		= Def_phase_2;
+	  declenchant
+		= phase_1_en_cours;
+	  declenche
+		= Perte_2_cpts;
+	ATTRIBUT
+	  soll
+		DOMAINE BOOLEEN
+		REINITIALISATION VRAI;
+	  real_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	CONSTANTE
+	  calcul_soll
+		DOMAINE 'fn_amont_et_decl' 'fn_amont_inv_decl' 'toujours_vrai' 'toujours_faux' 'egal_a_real_decl' 'contraire_real_decl'
+		= 'fn_amont_et_decl';
+	  forcer_evt_pertinent
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  real
+		LIBELLE "%OBJET"
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	  evt_pertinent
+		DOMAINE BOOLEEN
+		REINITIALISATION FAUX;
+	CONSTANTE
+	  Type_de_loi
+		DOMAINE 'exponentiel' 'temps_constant'
+		= 'exponentiel';
+	  duree
+		DOMAINE REEL
+		= 1000;
+	(*PANNE*)
+	ATTRIBUT
+	  en_cours
+		LIBELLE "Phase %OBJET en cours"
+		DOMAINE BOOLEEN
+		= FAUX;
+	ATTRIBUT
+	  soll_avant
+		DOMAINE BOOLEEN
+		= FAUX;
+	  debut_phase
+		DOMAINE BOOLEEN
+		= FAUX;
+	INTERACTION
+	  xx3
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (NON soll DE Def_phase_2) OU (NON real DE phase_1_en_cours)
+		ALORS soll DE phase_2_en_cours <-- FAUX;
+	  xx4
+		GROUPE V3_groupe_simu
+		ETAPE propagation_effet_soll
+		SI (evt_pertinent DE Def_phase_2 ET (NON real DE Def_phase_2))
+		  OU (evt_pertinent DE Perte_2_cpts ET (NON real DE
+		  Perte_2_cpts))
+		ALORS evt_pertinent DE phase_2_en_cours <-- VRAI;
+	  xx5
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		ALORS real_avant DE phase_2_en_cours <-- real DE
+		  phase_2_en_cours;
+	  xx44
+		GROUPE V3_groupe_simu
+		ETAPE initialisation
+		ALORS real DE phase_2_en_cours <-- en_cours DE phase_2_en_cours;
+	  xx45
+		GROUPE V3_groupe_simu
+		ETAPE propagation_feuilles
+		SI ((NON en_cours DE phase_2_en_cours) ET (NON soll DE
+		  phase_2_en_cours)) ET soll_avant DE phase_2_en_cours
+		ALORS debut_phase DE phase_2_en_cours <-- VRAI;
+	  xx46
+		GROUPE V3_groupe_simu
+		ETAPE tops
+		ALORS soll_avant DE phase_2_en_cours <-- soll DE
+		  phase_2_en_cours;
+	OCCURRENCE
+	  xx43_a
+		GROUPE V3_groupe_simu
+		SI en_cours DE phase_2_en_cours
+		IL_PEUT_SE_PRODUIRE
+		  TRANSITION fin
+		  LIBELLE "fin de la phase %OBJET"
+		  LOI EXP (0.001)
+		  PROVOQUE en_cours DE phase_2_en_cours <-- FAUX;
+	  xx47
+		GROUPE V3_groupe_simu
+		SI debut_phase DE phase_2_en_cours
+		IL_PEUT_SE_PRODUIRE
+		  TRANSITION debut
+		  LIBELLE "debut de la phase %OBJET"
+		  LOI INS (1)
+		  PROVOQUE en_cours DE phase_2_en_cours <-- VRAI,
+			debut_phase DE phase_2_en_cours <-- FAUX;
+
+OBJET __ARBRE__EIRM EST_UN FIGARO;
+	CONSTANTE
+	  Profil1
+		DOMAINE BOOLEEN
+		= VRAI;
+

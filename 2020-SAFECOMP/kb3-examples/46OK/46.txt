@@ -1,0 +1,247 @@
+{'Bascule': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['PUIS_1'],
+             'Name': 'Bascule',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.1',
+             'module': '0',
+             'mu': '0.1'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['OU_1'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'ET_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['OU_1'],
+          'Name': 'ET_1',
+          'Previous': 'Null',
+          'Sons': ['Primaire', 'Secondaire'],
+          'Triggered_by': 'Null',
+          'Type': 'and_gate',
+          'module': '0'},
+ 'OU_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['EI_1'],
+          'Name': 'OU_1',
+          'Previous': 'Null',
+          'Sons': ['ET_1', 'PUIS_1'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '0'},
+ 'PUIS_1': {'Calculate': 'fn_fathers_and_trig',
+            'Fathers': ['OU_1'],
+            'First': 'Bascule',
+            'Name': 'PUIS_1',
+            'Previous': 'Null',
+            'Second': 'Primaire',
+            'Sons': ['Bascule', 'Primaire'],
+            'Triggered_by': 'Null',
+            'Type': 'then_gate',
+            'module': '0'},
+ 'Primaire': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['ET_1', 'PUIS_1'],
+              'Name': 'Primaire',
+              'Previous': 'Null',
+              'Sons': 'Null',
+              'Triggered_by': 'Null',
+              'Type': 'f_leaf',
+              'lambda': '0.1',
+              'module': '1',
+              'mu': '0.1'},
+ 'Secondaire': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['ET_1'],
+                'Name': 'Secondaire',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'f_leaf',
+                'lambda': '0.1',
+                'module': '0',
+                'mu': '0.1'}}
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 15:12:58 2019
+Command line arguments: --jani 46.jani --prop '	Pmax=? [F<=1  Fail];  Pmin=? [F<=1  Fail];
+								Pmax=? [F<=2  Fail];  Pmin=? [F<=2  Fail];
+								Pmax=? [F<=3  Fail];  Pmin=? [F<=3  Fail];
+								Pmax=? [F<=4  Fail];  Pmin=? [F<=4  Fail];
+								Pmax=? [F<=5 Fail];  Pmin=? [F<=5 Fail];
+								Pmax=? [F<=6 Fail];  Pmin=? [F<=6 Fail];
+								Pmax=? [F<=7 Fail];  Pmin=? [F<=7 Fail];
+								Pmax=? [F<=8 Fail];  Pmin=? [F<=8 Fail];
+								Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+								Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/46
+
+Time for model input parsing: 0.194s.
+
+Time for model construction: 0.537s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	69
+Transitions: 	93
+Choices: 	73
+Markovian St.: 	10
+Max. Rate.: 	0.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.047s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	69
+Transitions: 	93
+Choices: 	73
+Markovian St.: 	10
+Max. Rate.: 	0.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.01276232856
+Time for model checking: 0.047s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.01276232856
+Time for model checking: 0.000s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.04385249978
+Time for model checking: 0.000s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.04385249978
+Time for model checking: 0.000s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.08549748706
+Time for model checking: 0.000s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.08549748706
+Time for model checking: 0.000s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.1327447289
+Time for model checking: 0.000s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.1327447289
+Time for model checking: 0.000s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.1824339942
+Time for model checking: 0.000s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.1824339942
+Time for model checking: 0.000s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.232554528
+Time for model checking: 0.000s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.232554528
+Time for model checking: 0.000s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.2818393617
+Time for model checking: 0.000s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.2818393617
+Time for model checking: 0.000s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.3295067188
+Time for model checking: 0.000s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.3295067188
+Time for model checking: 0.000s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.3750934392
+Time for model checking: 0.000s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.3750934392
+Time for model checking: 0.000s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.4183465175
+Time for model checking: 0.000s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.4183465175
+Time for model checking: 0.000s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 15:12:59 2019
+Command line arguments: --jani 46.jani --prop 'Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/46
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.045s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	69
+Transitions: 	93
+Choices: 	73
+Markovian St.: 	10
+Max. Rate.: 	3/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.001s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	69
+Transitions: 	93
+Choices: 	73
+Markovian St.: 	10
+Max. Rate.: 	3/10
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": T[exp]max=? [F Fail] ...
+Result (for initial states): 95/6 (approx. 15.83333333)
+Time for model checking: 0.032s.
+
+Model checking property "2": T[exp]min=? [F Fail] ...
+Result (for initial states): 95/6 (approx. 15.83333333)
+Time for model checking: 0.002s.
+

@@ -1,0 +1,528 @@
+shahid@shahid-HP-ProBook-6470b:~/modest/repairable/kb3-examples/48phase$ ./run48.sh
+rm: cannot remove '48.dot': No such file or directory
+rm: cannot remove '48.pdf': No such file or directory
+rm: cannot remove '48.jani': No such file or directory
+rm: cannot remove '48.drn': No such file or directory
+rm: cannot remove '48-jani.dot': No such file or directory
+rm: cannot remove '48-jani.pdf': No such file or directory
+rm: cannot remove '48-drn.pdf': No such file or directory
+rm: cannot remove '48-drn.dot': No such file or directory
+rm: cannot remove '48.jani': No such file or directory
+rm: cannot remove '48.modest': No such file or directory
+['ET_1']
+{'Name': 'ET_1', 'Type': 'and_gate', 'Sons': ['Voie1_indispo', 'Voie2_indispo'], 'Fathers': ['EI_1'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+['Voie1_indispo', 'Voie2_indispo']
+{'Name': 'Voie1_indispo', 'Type': 'or_gate', 'Sons': ['Def_voie1', 'Maint_prev_voie1'], 'Fathers': ['ET_1'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'Voie2_indispo', 'Type': 'or_gate', 'Sons': ['Def_voie2', 'Maint_prev_voie2'], 'Fathers': ['ET_1'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+['Def_voie2', 'Maint_prev_voie2']
+{'Name': 'Def_voie2', 'Type': 'or_gate', 'Sons': ['f_2_A', 'f_2_B'], 'Fathers': ['OU_1', 'Voie2_indispo'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'Maint_prev_voie2', 'Type': 'phase_leaf', 'Fathers': ['Voie2_indispo'], 'Triggered_by': 'OU_2', 'Calculate': 'equal_to_S_trig', 'lambda': '1.0', 'In_progress': 'FALSE', 'Sons': 'Null', 'Previous': 'Null'}
+['Def_voie1', 'Maint_prev_voie1']
+{'Name': 'Def_voie1', 'Type': 'or_gate', 'Sons': ['f_1_A', 'f_1_B'], 'Fathers': ['OU_2', 'Voie1_indispo'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'Maint_prev_voie1', 'Type': 'phase_leaf', 'Fathers': ['Voie1_indispo'], 'Triggered_by': 'OU_1', 'Calculate': 'equal_to_S_trig', 'lambda': '1.0', 'In_progress': 'FALSE', 'Sons': 'Null', 'Previous': 'Null'}
+['Def_voie2']
+{'Name': 'Def_voie2', 'Type': 'or_gate', 'Sons': ['f_2_A', 'f_2_B'], 'Fathers': ['OU_1', 'Voie2_indispo'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+['Def_voie1', 'quinzaine2']
+{'Name': 'Def_voie1', 'Type': 'or_gate', 'Sons': ['f_1_A', 'f_1_B'], 'Fathers': ['OU_2', 'Voie1_indispo'], 'Calculate': 'fn_fathers_and_trig', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'quinzaine2', 'Type': 'phase_leaf', 'Fathers': ['OU_2'], 'Triggered_by': 'Maint_prev_voie1', 'Calculate': 'equal_to_S_trig', 'lambda': '0.002785515320334262', 'In_progress': 'FALSE', 'Sons': 'Null', 'Previous': 'Null'}
+['f_2_A', 'f_2_B']
+{'Name': 'f_2_A', 'Type': 'f_leaf', 'Fathers': ['Def_voie2'], 'Calculate': 'fn_fathers_and_trig', 'mu': '0.1', 'lambda': '0.1', 'Sons': 'Null', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'f_2_B', 'Type': 'f_leaf', 'Fathers': ['Def_voie2'], 'Calculate': 'fn_fathers_and_trig', 'mu': '0.1', 'lambda': '0.1', 'Sons': 'Null', 'Triggered_by': 'Null', 'Previous': 'Null'}
+['f_1_A', 'f_1_B']
+{'Name': 'f_1_A', 'Type': 'f_leaf', 'Fathers': ['Def_voie1'], 'Calculate': 'fn_fathers_and_trig', 'mu': '0.1', 'lambda': '0.1', 'Sons': 'Null', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Name': 'f_1_B', 'Type': 'f_leaf', 'Fathers': ['Def_voie1'], 'Calculate': 'fn_fathers_and_trig', 'mu': '0.1', 'lambda': '0.1', 'Sons': 'Null', 'Triggered_by': 'Null', 'Previous': 'Null'}
+{'Def_voie1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['OU_2', 'Voie1_indispo'],
+               'Name': 'Def_voie1',
+               'Previous': 'Null',
+               'Sons': ['f_1_A', 'f_1_B'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '7'},
+ 'Def_voie2': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['OU_1', 'Voie2_indispo'],
+               'Name': 'Def_voie2',
+               'Previous': 'Null',
+               'Sons': ['f_2_A', 'f_2_B'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '6'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['ET_1'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'ET_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['EI_1'],
+          'Name': 'ET_1',
+          'Previous': 'Null',
+          'Sons': ['Voie1_indispo', 'Voie2_indispo'],
+          'Triggered_by': 'Null',
+          'Type': 'and_gate',
+          'module': '0'},
+ 'Maint_prev_voie1': {'Calculate': 'equal_to_S_trig',
+                      'Fathers': ['Voie1_indispo'],
+                      'In_progress': 'FALSE',
+                      'Name': 'Maint_prev_voie1',
+                      'Previous': 'Null',
+                      'Sons': 'Null',
+                      'Triggered_by': 'OU_1',
+                      'Type': 'phase_leaf',
+                      'lambda': '1.0',
+                      'module': '1'},
+ 'Maint_prev_voie2': {'Calculate': 'equal_to_S_trig',
+                      'Fathers': ['Voie2_indispo'],
+                      'In_progress': 'FALSE',
+                      'Name': 'Maint_prev_voie2',
+                      'Previous': 'Null',
+                      'Sons': 'Null',
+                      'Triggered_by': 'OU_2',
+                      'Type': 'phase_leaf',
+                      'lambda': '1.0',
+                      'module': '2'},
+ 'OU_1': {'Calculate': 'always_false',
+          'Fathers': 'Null',
+          'Name': 'OU_1',
+          'Previous': 'Null',
+          'Sons': ['Def_voie2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '3'},
+ 'OU_2': {'Calculate': 'always_false',
+          'Fathers': 'Null',
+          'Name': 'OU_2',
+          'Previous': 'Null',
+          'Sons': ['Def_voie1', 'quinzaine2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '4'},
+ 'Voie1_indispo': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['ET_1'],
+                   'Name': 'Voie1_indispo',
+                   'Previous': 'Null',
+                   'Sons': ['Def_voie1', 'Maint_prev_voie1'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '0'},
+ 'Voie2_indispo': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['ET_1'],
+                   'Name': 'Voie2_indispo',
+                   'Previous': 'Null',
+                   'Sons': ['Def_voie2', 'Maint_prev_voie2'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '0'},
+ 'f_1_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie1'],
+           'Name': 'f_1_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'f_1_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie1'],
+           'Name': 'f_1_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'f_2_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie2'],
+           'Name': 'f_2_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'f_2_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie2'],
+           'Name': 'f_2_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'quinzaine2': {'Calculate': 'equal_to_S_trig',
+                'Fathers': ['OU_2'],
+                'In_progress': 'FALSE',
+                'Name': 'quinzaine2',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Maint_prev_voie1',
+                'Type': 'phase_leaf',
+                'lambda': '0.002785515320334262',
+                'module': '5'}}
+{'Def_voie1': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['OU_2', 'Voie1_indispo'],
+               'Name': 'Def_voie1',
+               'Previous': 'Null',
+               'Sons': ['f_1_A', 'f_1_B'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '7'},
+ 'Def_voie2': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['OU_1', 'Voie2_indispo'],
+               'Name': 'Def_voie2',
+               'Previous': 'Null',
+               'Sons': ['f_2_A', 'f_2_B'],
+               'Triggered_by': 'Null',
+               'Type': 'or_gate',
+               'module': '6'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['ET_1'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'ET_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['EI_1'],
+          'Name': 'ET_1',
+          'Previous': 'Null',
+          'Sons': ['Voie1_indispo', 'Voie2_indispo'],
+          'Triggered_by': 'Null',
+          'Type': 'and_gate',
+          'module': '0'},
+ 'Maint_prev_voie1': {'Calculate': 'equal_to_S_trig',
+                      'Fathers': ['Voie1_indispo'],
+                      'In_progress': 'FALSE',
+                      'Name': 'Maint_prev_voie1',
+                      'Previous': 'Null',
+                      'Sons': 'Null',
+                      'Triggered_by': 'OU_1',
+                      'Type': 'phase_leaf',
+                      'lambda': '1.0',
+                      'module': '1'},
+ 'Maint_prev_voie2': {'Calculate': 'equal_to_S_trig',
+                      'Fathers': ['Voie2_indispo'],
+                      'In_progress': 'FALSE',
+                      'Name': 'Maint_prev_voie2',
+                      'Previous': 'Null',
+                      'Sons': 'Null',
+                      'Triggered_by': 'OU_2',
+                      'Type': 'phase_leaf',
+                      'lambda': '1.0',
+                      'module': '2'},
+ 'OU_1': {'Calculate': 'always_false',
+          'Fathers': 'Null',
+          'Name': 'OU_1',
+          'Previous': 'Null',
+          'Sons': ['Def_voie2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '3'},
+ 'OU_2': {'Calculate': 'always_false',
+          'Fathers': 'Null',
+          'Name': 'OU_2',
+          'Previous': 'Null',
+          'Sons': ['Def_voie1', 'quinzaine2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '4'},
+ 'Voie1_indispo': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['ET_1'],
+                   'Name': 'Voie1_indispo',
+                   'Previous': 'Null',
+                   'Sons': ['Def_voie1', 'Maint_prev_voie1'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '0'},
+ 'Voie2_indispo': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['ET_1'],
+                   'Name': 'Voie2_indispo',
+                   'Previous': 'Null',
+                   'Sons': ['Def_voie2', 'Maint_prev_voie2'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '0'},
+ 'f_1_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie1'],
+           'Name': 'f_1_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'f_1_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie1'],
+           'Name': 'f_1_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'f_2_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie2'],
+           'Name': 'f_2_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'f_2_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Def_voie2'],
+           'Name': 'f_2_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'quinzaine2': {'Calculate': 'equal_to_S_trig',
+                'Fathers': ['OU_2'],
+                'In_progress': 'FALSE',
+                'Name': 'quinzaine2',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Maint_prev_voie1',
+                'Type': 'phase_leaf',
+                'lambda': '0.002785515320334262',
+                'module': '5'}}
+Warning:: the dfinition contain one or gate with one inputs: please recheck the model
+Always False trig present in the system
+Always False trig present in the system
+
+(00:00) 0···········10···········20···········30···········40···········50···········60···········70···········80···········90···········100 
+Done.                                                                                                                                        
+Storm 1.3.1 (dev)
+
+Date: Thu Jan  2 15:53:49 2020
+Command line arguments: --jani 48.jani --prop '	Pmax=? [F<=1  Fail ]; Pmin=? [F<=1  Fail];
+				Pmax=? [F<=2  Fail]; Pmin=? [F<=2  Fail];
+				Pmax=? [F<=3  Fail]; Pmin=? [F<=3 Fail];
+				Pmax=? [F<=4  Fail]; Pmin=? [F<=4  Fail];
+				Pmax=? [F<=5 Fail]; Pmin=? [F<=5 Fail];
+				Pmax=? [F<=6 Fail]; Pmin=? [F<=6 Fail];
+				Pmax=? [F<=7 Fail]; Pmin=? [F<=7 Fail];
+				Pmax=? [F<=8 Fail]; Pmin=? [F<=8 Fail];
+				Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+				Pmax=? [F<=10  Fail ]; Pmin=? [F<=10  Fail];
+				Pmax=? [F<=11  Fail ]; Pmin=? [F<=11  Fail];
+				Pmax=? [F<=12  Fail]; Pmin=? [F<=12  Fail];
+				Pmax=? [F<=13  Fail]; Pmin=? [F<=13 Fail];
+				Pmax=? [F<=14  Fail]; Pmin=? [F<=14  Fail];
+				Pmax=? [F<=15 Fail]; Pmin=? [F<=15 Fail];
+				Pmax=? [F<=16 Fail]; Pmin=? [F<=16 Fail];
+				Pmax=? [F<=17 Fail]; Pmin=? [F<=17 Fail];
+				Pmax=? [F<=18 Fail]; Pmin=? [F<=18 Fail];
+				Pmax=? [F<=19  Fail]; Pmin=? [F<=19 Fail];
+				Pmax=? [F<=20 Fail]; Pmin=? [F<=20 Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/48phase
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 0.033s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1788
+Transitions: 	2632
+Choices: 	2056
+Markovian St.: 	128
+Max. Rate.: 	2.402785515
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 1169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1788
+Transitions: 	2632
+Choices: 	2056
+Markovian St.: 	128
+Max. Rate.: 	2.402785515
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 1169 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.04722852148
+Time for model checking: 0.006s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.03268110612
+Time for model checking: 0.006s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.1502092152
+Time for model checking: 0.009s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.1069682429
+Time for model checking: 0.010s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.2713986584
+Time for model checking: 0.013s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.1981726791
+Time for model checking: 0.012s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.3912145662
+Time for model checking: 0.017s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.2924506943
+Time for model checking: 0.019s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.5003330728
+Time for model checking: 0.020s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.3826194427
+Time for model checking: 0.021s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.5951441209
+Time for model checking: 0.026s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.4653209116
+Time for model checking: 0.028s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.6750938578
+Time for model checking: 0.032s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.5393128428
+Time for model checking: 0.031s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.7411515821
+Time for model checking: 0.037s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.6044837563
+Time for model checking: 0.036s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.7949437744
+Time for model checking: 0.043s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.6612962268
+Time for model checking: 0.042s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.8382809199
+Time for model checking: 0.049s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.7104759662
+Time for model checking: 0.048s.
+
+Model checking property "21": Pmax=? [true U<=11 Fail] ...
+Result (for initial states): 0.8729129759
+Time for model checking: 0.055s.
+
+Model checking property "22": Pmin=? [true U<=11 Fail] ...
+Result (for initial states): 0.7528406446
+Time for model checking: 0.056s.
+
+Model checking property "23": Pmax=? [true U<=12 Fail] ...
+Result (for initial states): 0.9004156165
+Time for model checking: 0.063s.
+
+Model checking property "24": Pmin=? [true U<=12 Fail] ...
+Result (for initial states): 0.7892080059
+Time for model checking: 0.063s.
+
+Model checking property "25": Pmax=? [true U<=13 Fail] ...
+Result (for initial states): 0.9221492538
+Time for model checking: 0.070s.
+
+Model checking property "26": Pmin=? [true U<=13 Fail] ...
+Result (for initial states): 0.8203489487
+Time for model checking: 0.069s.
+
+Model checking property "27": Pmax=? [true U<=14 Fail] ...
+Result (for initial states): 0.9392567967
+Time for model checking: 0.078s.
+
+Model checking property "28": Pmin=? [true U<=14 Fail] ...
+Result (for initial states): 0.8469660138
+Time for model checking: 0.075s.
+
+Model checking property "29": Pmax=? [true U<=15 Fail] ...
+Result (for initial states): 0.9526804579
+Time for model checking: 0.087s.
+
+Model checking property "30": Pmin=? [true U<=15 Fail] ...
+Result (for initial states): 0.8696860666
+Time for model checking: 0.153s.
+
+Model checking property "31": Pmax=? [true U<=16 Fail] ...
+Result (for initial states): 0.963186476
+Time for model checking: 0.093s.
+
+Model checking property "32": Pmin=? [true U<=16 Fail] ...
+Result (for initial states): 0.8890607172
+Time for model checking: 0.093s.
+
+Model checking property "33": Pmax=? [true U<=17 Fail] ...
+Result (for initial states): 0.971391682
+Time for model checking: 0.103s.
+
+Model checking property "34": Pmin=? [true U<=17 Fail] ...
+Result (for initial states): 0.9055707484
+Time for model checking: 0.101s.
+
+Model checking property "35": Pmax=? [true U<=18 Fail] ...
+Result (for initial states): 0.9777887937
+Time for model checking: 0.110s.
+
+Model checking property "36": Pmin=? [true U<=18 Fail] ...
+Result (for initial states): 0.9196324039
+Time for model checking: 0.110s.
+
+Model checking property "37": Pmax=? [true U<=19 Fail] ...
+Result (for initial states): 0.9827690175
+Time for model checking: 0.121s.
+
+Model checking property "38": Pmin=? [true U<=19 Fail] ...
+Result (for initial states): 0.931604316
+Time for model checking: 0.127s.
+
+Model checking property "39": Pmax=? [true U<=20 Fail] ...
+Result (for initial states): 0.9866414812
+Time for model checking: 0.163s.
+
+Model checking property "40": Pmin=? [true U<=20 Fail] ...
+Result (for initial states): 0.9417943923
+Time for model checking: 0.144s.
+

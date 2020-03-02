@@ -1,0 +1,144 @@
+//##########Automatically generated Modest file from: "25.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_3  , act_0  , act_4  , act_1  , act_2;
+action  dact_3  , dact_0  , dact_4  , dact_1  , dact_2;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_atteinte_100degres,dact_atteinte_100degres, fail_atteinte_100degres, repaired_atteinte_100degres;
+bool  atteinte_100degres = false;
+action  act_decouvrement,dact_decouvrement, fail_decouvrement, repaired_decouvrement;
+bool  decouvrement = false;
+action  act_echec_MES_JPD,dact_echec_MES_JPD, fail_echec_MES_JPD, good_echec_MES_JPD, repaired_echec_MES_JPD;
+bool  echec_MES_JPD = false;
+action  act_echec_parades,dact_echec_parades, fail_echec_parades, repaired_echec_parades;
+bool  echec_parades = false;
+action  act_epuisement_SED,dact_epuisement_SED, fail_epuisement_SED, repaired_epuisement_SED;
+bool  epuisement_SED = false;
+action  act_perte_PTR,dact_perte_PTR, fail_perte_PTR, repaired_perte_PTR;
+bool  perte_PTR = false;
+action  act_perte_SED,dact_perte_SED, fail_perte_SED, repaired_perte_SED;
+bool  perte_SED = false;
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_ET_1 {=  EI_1=true, Fail = true=} ; repaired_ET_1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_echec_parades;ET_1()::fail_echec_parades; P1()::repaired_perte_PTR;ET_1()::fail_perte_PTR; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_echec_parades;P3()::repaired_perte_PTR;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_echec_parades; P0()::fail_perte_PTR; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+process P0(){fail_OU_1;P2()}
+process P1(){repaired_OU_1;OU_1()}
+process P2(){alt{::repaired_epuisement_SED;P1()::fail_epuisement_SED; P3()::repaired_perte_SED;P1()::fail_perte_SED; P3()}}
+process P3(){alt{::repaired_epuisement_SED;P2()::repaired_perte_SED;P2()}} 
+ alt{::fail_epuisement_SED; P0()::fail_perte_SED; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+alt{:: act_1; S1() :: fail_atteinte_100degres; S1()} 
+process S1()  {alt {:: dact_1; OU_1_Act():: repaired_atteinte_100degres; OU_1_Act() :: act_1; S2() :: fail_atteinte_100degres; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_atteinte_100degres; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "f_leaf" named "atteinte_100degres"
+process atteinte_100degres(){
+process P1() {alt{::dact_1;atteinte_100degres()::rate(0.1) tau{=atteinte_100degres=true=}; fail_atteinte_100degres; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=atteinte_100degres=false=}; repaired_atteinte_100degres; atteinte_100degres()}::rate(0.1) tau{=atteinte_100degres=false=}; repaired_atteinte_100degres; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "atteinte_100degres"
+process atteinte_100degres_Act(){
+act_1; dact_1; atteinte_100degres_Act()}
+//##########Failure Behavior of "f_leaf" named "decouvrement"
+process decouvrement(){
+process P1() {alt{::dact_3;decouvrement()::rate(0.1) tau{=decouvrement=true=}; fail_decouvrement; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=decouvrement=false=}; repaired_decouvrement; decouvrement()}::rate(0.1) tau{=decouvrement=false=}; repaired_decouvrement; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "decouvrement"
+process decouvrement_Act(){
+alt{:: act_1; S1() :: fail_OU_1; S1()} 
+process S1()  {alt {:: dact_1; decouvrement_Act():: repaired_OU_1; decouvrement_Act() :: act_1; S2() :: fail_OU_1; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_OU_1; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "i_leaf" named "echec_MES_JPD"
+process echec_MES_JPD(){
+act_4;P0() 
+process P0() {alt{:: dact_4; echec_MES_JPD() :: palt{:0.5: {=echec_MES_JPD = true =}; fail_echec_MES_JPD; P2(): 1 - 0.5:good_echec_MES_JPD;P1()}}}
+process P1() {dact_4; echec_MES_JPD()}
+process P2() {alt {::dact_4; P3()::rate(0.1) {=echec_MES_JPD = false =}; repaired_echec_MES_JPD; P1()}}
+process P3() {alt {::act_4; alt {::dact_4;P3()::rate(0.1)tau{= echec_MES_JPD = false =};repaired_echec_MES_JPD;P0()}::rate(0.1)tau{= echec_MES_JPD = false =}; repaired_echec_MES_JPD; echec_MES_JPD()}}}
+//##########Activation Behavior of "i_leaf" named "echec_MES_JPD"
+process echec_MES_JPD_Act(){
+alt{:: act_1; S1() :: fail_decouvrement; S1()} 
+process S1()  {alt {:: dact_1; echec_MES_JPD_Act():: repaired_decouvrement; echec_MES_JPD_Act() :: act_1; S2() :: fail_decouvrement; S2()}}
+process S2()  {act_4; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_decouvrement; S4()}}
+process S4()  {dact_4; S1() }}
+//##########Failure Behavior of "and_gate" named "echec_parades"
+process echec_parades(){
+process P0(){alt{::repaired_OU_1;echec_parades()::fail_OU_1; P1()::repaired_atteinte_100degres;echec_parades()::fail_atteinte_100degres; P1()::repaired_decouvrement;echec_parades()::fail_decouvrement; P1()::repaired_echec_MES_JPD;echec_parades()::fail_echec_MES_JPD; P1()}}
+process P1(){alt{::repaired_OU_1;P0()::fail_OU_1; P2()::repaired_atteinte_100degres;P0()::fail_atteinte_100degres; P2()::repaired_decouvrement;P0()::fail_decouvrement; P2()::repaired_echec_MES_JPD;P0()::fail_echec_MES_JPD; P2()}}
+process P2(){alt{::repaired_OU_1;P1()::fail_OU_1; P3()::repaired_atteinte_100degres;P1()::fail_atteinte_100degres; P3()::repaired_decouvrement;P1()::fail_decouvrement; P3()::repaired_echec_MES_JPD;P1()::fail_echec_MES_JPD; P3()}}
+process P3() { fail_echec_parades; P4() }
+process P4(){alt{::repaired_OU_1;P5()::repaired_atteinte_100degres;P5()::repaired_decouvrement;P5()::repaired_echec_MES_JPD;P5()}}
+process P5(){repaired_echec_parades;P2()}
+alt{::fail_OU_1; P0()::fail_atteinte_100degres; P0()::fail_decouvrement; P0()::fail_echec_MES_JPD; P0()}}
+//##########Activation Behavior of "and_gate" named "echec_parades"
+process echec_parades_Act(){
+alt{:: act_0; S1() :: fail_perte_PTR; S1()} 
+process S1()  {alt {:: dact_0; echec_parades_Act():: repaired_perte_PTR; echec_parades_Act() :: act_0; S2() :: fail_perte_PTR; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_perte_PTR; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "f_leaf" named "epuisement_SED"
+process epuisement_SED(){
+process P1() {alt{::dact_2;epuisement_SED()::rate(0.1) tau{=epuisement_SED=true=}; fail_epuisement_SED; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=epuisement_SED=false=}; repaired_epuisement_SED; epuisement_SED()}::rate(0.1) tau{=epuisement_SED=false=}; repaired_epuisement_SED; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "epuisement_SED"
+process epuisement_SED_Act(){
+act_2; dact_2; epuisement_SED_Act()}
+//##########Failure Behavior of "f_leaf" named "perte_PTR"
+process perte_PTR(){
+process P1() {alt{::dact_0;perte_PTR()::rate(0.1) tau{=perte_PTR=true=}; fail_perte_PTR; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=perte_PTR=false=}; repaired_perte_PTR; perte_PTR()}::rate(0.1) tau{=perte_PTR=false=}; repaired_perte_PTR; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "perte_PTR"
+process perte_PTR_Act(){
+act_0; dact_0; perte_PTR_Act()}
+//##########Failure Behavior of "f_leaf" named "perte_SED"
+process perte_SED(){
+process P1() {alt{::dact_2;perte_SED()::rate(0.1) tau{=perte_SED=true=}; fail_perte_SED; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=perte_SED=false=}; repaired_perte_SED; perte_SED()}::rate(0.1) tau{=perte_SED=false=}; repaired_perte_SED; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "perte_SED"
+process perte_SED_Act(){
+act_2; dact_2; perte_SED_Act()}
+//##########Composition of all files
+par
+{
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::OU_1()  :: OU_1_Act()
+::atteinte_100degres()  :: atteinte_100degres_Act()
+::decouvrement()  :: decouvrement_Act()
+::echec_MES_JPD()  :: echec_MES_JPD_Act()
+::echec_parades()  :: echec_parades_Act()
+::epuisement_SED()  :: epuisement_SED_Act()
+::perte_PTR()  :: perte_PTR_Act()
+::perte_SED()  :: perte_SED_Act()
+}

@@ -1,0 +1,3587 @@
+﻿{
+	"jani-version": 1,
+	"name": "18",
+	"type": "ma",
+	"features": [ "derived-operators" ],
+	"actions": [
+		{
+			"name": "fail_radar"
+		},
+		{
+			"name": "fail_visual"
+		},
+		{
+			"name": "repaired_radar"
+		},
+		{
+			"name": "repaired_visual"
+		},
+		{
+			"name": "fail_A_ND_by_ship"
+		},
+		{
+			"name": "repaired_A_ND_by_ship"
+		},
+		{
+			"name": "act_1"
+		},
+		{
+			"name": "dact_1"
+		},
+		{
+			"name": "fail_radar_1"
+		},
+		{
+			"name": "fail_visual_1"
+		},
+		{
+			"name": "repaired_radar_1"
+		},
+		{
+			"name": "repaired_visual_1"
+		},
+		{
+			"name": "fail_A_ND_by_ship_1"
+		},
+		{
+			"name": "repaired_A_ND_by_ship_1"
+		},
+		{
+			"name": "fail_warning"
+		},
+		{
+			"name": "fail_B_ND_by_platform"
+		},
+		{
+			"name": "repaired_warning"
+		},
+		{
+			"name": "repaired_B_ND_by_platform"
+		},
+		{
+			"name": "fail_collision"
+		},
+		{
+			"name": "repaired_collision"
+		},
+		{
+			"name": "act_0"
+		},
+		{
+			"name": "dact_0"
+		},
+		{
+			"name": "fail_course_not_changed"
+		},
+		{
+			"name": "fail_non_detection"
+		},
+		{
+			"name": "repaired_course_not_changed"
+		},
+		{
+			"name": "repaired_non_detection"
+		},
+		{
+			"name": "fail_ship_on_collision_course"
+		},
+		{
+			"name": "repaired_ship_on_collision_course"
+		},
+		{
+			"name": "good_course_not_changed"
+		},
+		{
+			"name": "good_radar"
+		},
+		{
+			"name": "good_radar_1"
+		},
+		{
+			"name": "good_visual"
+		},
+		{
+			"name": "good_visual_1"
+		},
+		{
+			"name": "good_warning"
+		}
+	],
+	"variables": [
+		{
+			"name": "A_ND_by_ship",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "A_ND_by_ship_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "B_ND_by_platform",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "UE_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Fail",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "collision",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "course_not_changed",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "non_detection",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "radar",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "radar_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "ship_on_collision_course",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "visual",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "visual_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "warning",
+			"type": "bool",
+			"initial-value": false
+		}
+	],
+	"properties": [ {
+		"name": "ComputeProbability",
+		"expression": {
+			"op": "filter",
+			"fun": "max",
+			"values": {
+				"op": "Pmax",
+				"exp": {
+					"op": "F",
+					"exp": "Fail",
+					"time-bounds": {
+						"upper": 10
+					}
+				}
+			},
+			"states": {
+				"op": "initial"
+			}
+		}
+	} ],
+	"automata": [
+		{
+			"name": "A_ND_by_ship",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_radar",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_visual",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_radar",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_radar",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_visual",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_visual",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_radar",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_visual",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "A_ND_by_ship_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "A_ND_by_ship_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_radar_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_visual_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_radar_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_radar_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_visual_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_visual_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_radar_1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_visual_1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "A_ND_by_ship_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B_ND_by_platform",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_14"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_warning",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_warning",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_warning",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_A_ND_by_ship_1",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_warning",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "B_ND_by_platform_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_collision",
+					"destinations": [ {
+						"location": "loc_5",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": true
+							},
+							{
+								"ref": "Fail",
+								"value": true
+							}
+						]
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_collision",
+					"destinations": [ {
+						"location": "loc_1",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": false
+							},
+							{
+								"ref": "Fail",
+								"value": false
+							}
+						]
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "collision",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_14"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_course_not_changed",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_non_detection",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_collision",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_course_not_changed",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_course_not_changed",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "repaired_non_detection",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_non_detection",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_course_not_changed",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_non_detection",
+					"destinations": [ {
+						"location": "loc_10"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_collision",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "collision_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "course_not_changed",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "course_not_changed",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_course_not_changed",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_course_not_changed",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "course_not_changed",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_course_not_changed",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "course_not_changed",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_course_not_changed",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "course_not_changed",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_course_not_changed",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "course_not_changed_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "non_detection",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_non_detection",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_A_ND_by_ship",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_B_ND_by_platform",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_non_detection",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "non_detection_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "radar",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "radar",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_radar",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_radar",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "radar",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_radar",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "radar",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_radar",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "radar",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_radar",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "radar_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "radar_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "radar_1",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_radar_1",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_radar_1",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "radar_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_radar_1",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "radar_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_radar_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "radar_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_radar_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "radar_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "ship_on_collision_course",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "ship_on_collision_course",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "ship_on_collision_course",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "ship_on_collision_course",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_ship_on_collision_course",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "ship_on_collision_course_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "visual",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "visual",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_visual",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_visual",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "visual",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_visual",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "visual",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_visual",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "visual",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_visual",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "visual_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "visual_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "visual_1",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_visual_1",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_visual_1",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "visual_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_visual_1",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "visual_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_visual_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "visual_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_visual_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "visual_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "warning",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_15"
+				},
+				{
+					"name": "loc_10"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_27"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"destinations": [
+						{
+							"location": "loc_10",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "warning",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_11",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_11",
+					"action": "good_warning",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_15",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_10",
+					"action": "fail_warning",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_22",
+						"assignments": [ {
+							"ref": "warning",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_warning",
+					"destinations": [ {
+						"location": "loc_15"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_25"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_27",
+						"assignments": [ {
+							"ref": "warning",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_27",
+					"action": "repaired_warning",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "warning",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_warning",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "warning_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		}
+	],
+	"system": {
+		"elements": [
+			{
+				"automaton": "A_ND_by_ship"
+			},
+			{
+				"automaton": "A_ND_by_ship_Act"
+			},
+			{
+				"automaton": "A_ND_by_ship_1"
+			},
+			{
+				"automaton": "A_ND_by_ship_1_Act"
+			},
+			{
+				"automaton": "B_ND_by_platform"
+			},
+			{
+				"automaton": "B_ND_by_platform_Act"
+			},
+			{
+				"automaton": "UE_1"
+			},
+			{
+				"automaton": "UE_1_Act"
+			},
+			{
+				"automaton": "collision"
+			},
+			{
+				"automaton": "collision_Act"
+			},
+			{
+				"automaton": "course_not_changed"
+			},
+			{
+				"automaton": "course_not_changed_Act"
+			},
+			{
+				"automaton": "non_detection"
+			},
+			{
+				"automaton": "non_detection_Act"
+			},
+			{
+				"automaton": "radar"
+			},
+			{
+				"automaton": "radar_Act"
+			},
+			{
+				"automaton": "radar_1"
+			},
+			{
+				"automaton": "radar_1_Act"
+			},
+			{
+				"automaton": "ship_on_collision_course"
+			},
+			{
+				"automaton": "ship_on_collision_course_Act"
+			},
+			{
+				"automaton": "visual"
+			},
+			{
+				"automaton": "visual_Act"
+			},
+			{
+				"automaton": "visual_1"
+			},
+			{
+				"automaton": "visual_1_Act"
+			},
+			{
+				"automaton": "warning"
+			},
+			{
+				"automaton": "warning_Act"
+			}
+		],
+		"syncs": [
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_A_ND_by_ship_1",
+					null,
+					"fail_A_ND_by_ship_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_A_ND_by_ship_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_A_ND_by_ship_1",
+					null,
+					"repaired_A_ND_by_ship_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_A_ND_by_ship_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_collision",
+					null,
+					"fail_collision",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_collision"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_collision",
+					null,
+					"repaired_collision",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_collision"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_course_not_changed",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_course_not_changed"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_course_not_changed",
+					null,
+					"fail_course_not_changed",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_course_not_changed"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_course_not_changed",
+					null,
+					"repaired_course_not_changed",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_course_not_changed"
+			},
+			{
+				"synchronise": [
+					"fail_A_ND_by_ship",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_A_ND_by_ship",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_A_ND_by_ship"
+			},
+			{
+				"synchronise": [
+					"repaired_A_ND_by_ship",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_A_ND_by_ship",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_A_ND_by_ship"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"fail_B_ND_by_platform",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_B_ND_by_platform",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_B_ND_by_platform"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"repaired_B_ND_by_platform",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_B_ND_by_platform",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_B_ND_by_platform"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_non_detection",
+					null,
+					null,
+					null,
+					"repaired_non_detection",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_non_detection"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_non_detection",
+					null,
+					null,
+					null,
+					"fail_non_detection",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_non_detection"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_radar",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_radar"
+			},
+			{
+				"synchronise": [
+					"fail_radar",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_radar",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_radar"
+			},
+			{
+				"synchronise": [
+					"repaired_radar",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_radar",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_radar"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_radar_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_radar_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_radar_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_radar_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_radar_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_radar_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_radar_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_radar_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_ship_on_collision_course",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_ship_on_collision_course",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_ship_on_collision_course"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_ship_on_collision_course",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_ship_on_collision_course",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_ship_on_collision_course"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_0",
+					null,
+					"act_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_0",
+					"act_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_0"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_0",
+					"dact_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_0"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_visual",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_visual"
+			},
+			{
+				"synchronise": [
+					"repaired_visual",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_visual",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_visual"
+			},
+			{
+				"synchronise": [
+					"fail_visual",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_visual",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_visual"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_visual_1",
+					null,
+					null,
+					null
+				],
+				"result": "good_visual_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_visual_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_visual_1",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_visual_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_visual_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_visual_1",
+					null,
+					null,
+					null
+				],
+				"result": "fail_visual_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_warning",
+					null
+				],
+				"result": "good_warning"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"repaired_warning",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_warning",
+					null
+				],
+				"result": "repaired_warning"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"fail_warning",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_warning",
+					null
+				],
+				"result": "fail_warning"
+			},
+			{
+				"synchronise": [
+					null,
+					"act_1",
+					null,
+					"act_1",
+					null,
+					"act_1",
+					null,
+					null,
+					null,
+					"act_1",
+					"act_1",
+					"act_1",
+					null,
+					"act_1",
+					"act_1",
+					"act_1",
+					"act_1",
+					"act_1",
+					null,
+					null,
+					"act_1",
+					"act_1",
+					"act_1",
+					"act_1",
+					"act_1",
+					"act_1"
+				],
+				"result": "act_1"
+			},
+			{
+				"synchronise": [
+					null,
+					"dact_1",
+					null,
+					"dact_1",
+					null,
+					"dact_1",
+					null,
+					null,
+					null,
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					null,
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					null,
+					null,
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					"dact_1",
+					"dact_1"
+				],
+				"result": "dact_1"
+			}
+		]
+	}
+}

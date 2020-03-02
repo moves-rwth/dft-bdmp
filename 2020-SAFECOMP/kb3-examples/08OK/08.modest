@@ -1,0 +1,197 @@
+//##########Automatically generated Modest file from: "08.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_2  , act_0  , act_3;
+action  dact_2  , dact_0  , dact_3;
+action  act_AND_1,dact_AND_1, fail_AND_1, repaired_AND_1;
+bool  AND_1 = false;
+action  act_Cpu,dact_Cpu, fail_Cpu, repaired_Cpu;
+bool  Cpu = false;
+action  act_DisplayUnit,dact_DisplayUnit, fail_DisplayUnit, repaired_DisplayUnit;
+bool  DisplayUnit = false;
+action  act_Fan,dact_Fan, fail_Fan, repaired_Fan;
+bool  Fan = false;
+action  act_FloppyDrive,dact_FloppyDrive, fail_FloppyDrive, repaired_FloppyDrive;
+bool  FloppyDrive = false;
+action  act_FloppyDriveInUse,dact_FloppyDriveInUse, fail_FloppyDriveInUse, repaired_FloppyDriveInUse;
+bool  FloppyDriveInUse = false;
+action  act_HardDrive,dact_HardDrive, fail_HardDrive, repaired_HardDrive;
+bool  HardDrive = false;
+action  act_LossOfCooling,dact_LossOfCooling, fail_LossOfCooling, repaired_LossOfCooling;
+bool  LossOfCooling = false;
+action  act_ManipulationError,dact_ManipulationError, fail_ManipulationError, good_ManipulationError, repaired_ManipulationError;
+bool  ManipulationError = false;
+action  act_Memory,dact_Memory, fail_Memory, repaired_Memory;
+bool  Memory = false;
+action  act_OR_1,dact_OR_1, fail_OR_1, repaired_OR_1;
+bool  OR_1 = false;
+action  act_PC_down,dact_PC_down, fail_PC_down, repaired_PC_down;
+bool  PC_down = false;
+action  act_PowerSupply,dact_PowerSupply, fail_PowerSupply, repaired_PowerSupply;
+bool  PowerSupply = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_Windows,dact_Windows, fail_Windows, repaired_Windows;
+bool  Windows = false;
+//##########Failure Behavior of "and_gate" named "AND_1"
+process AND_1(){
+process P0(){alt{::repaired_OR_1;AND_1()::fail_OR_1; P1()::repaired_FloppyDriveInUse;AND_1()::fail_FloppyDriveInUse; P1()}}
+process P1() { fail_AND_1; P2() }
+process P2(){alt{::repaired_OR_1;P3()::repaired_FloppyDriveInUse;P3()}}
+process P3(){repaired_AND_1;P0()}
+alt{::fail_OR_1; P0()::fail_FloppyDriveInUse; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_1"
+process AND_1_Act(){
+act_0; dact_0; AND_1_Act()}
+//##########Failure Behavior of "sf_leaf" named "Cpu"
+process Cpu(){
+process P1() {alt{::dact_2;Cpu()::rate(0.1) tau{=Cpu=true=}; fail_Cpu; P2()}}
+process P2() {alt{::dact_2; P3()::rate(0.1) tau{=Cpu=false=}; repaired_Cpu; P1()}}
+process P3() {alt{:: rate(0.1) tau{= Cpu = false=}; repaired_Cpu; Cpu() :: act_2; P2()}}
+alt{::act_2; P1() :: rate(0.01) tau; fail_Cpu; P3()}}
+//##########Activation Behavior of "sf_leaf" named "Cpu"
+process Cpu_Act(){
+alt{:: act_0; S1() :: fail_LossOfCooling; S1()} 
+process S1()  {alt {:: dact_0; Cpu_Act():: repaired_LossOfCooling; Cpu_Act() :: act_0; S2() :: fail_LossOfCooling; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_LossOfCooling; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "f_leaf" named "DisplayUnit"
+process DisplayUnit(){
+process P1() {alt{::dact_0;DisplayUnit()::rate(0.1) tau{=DisplayUnit=true=}; fail_DisplayUnit; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=DisplayUnit=false=}; repaired_DisplayUnit; DisplayUnit()}::rate(0.1) tau{=DisplayUnit=false=}; repaired_DisplayUnit; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "DisplayUnit"
+process DisplayUnit_Act(){
+act_0; dact_0; DisplayUnit_Act()}
+//##########Failure Behavior of "f_leaf" named "Fan"
+process Fan(){
+process P1() {alt{::dact_0;Fan()::rate(0.1) tau{=Fan=true=}; fail_Fan; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Fan=false=}; repaired_Fan; Fan()}::rate(0.1) tau{=Fan=false=}; repaired_Fan; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Fan"
+process Fan_Act(){
+act_0; dact_0; Fan_Act()}
+//##########Failure Behavior of "f_leaf" named "FloppyDrive"
+process FloppyDrive(){
+process P1() {alt{::dact_3;FloppyDrive()::rate(0.1) tau{=FloppyDrive=true=}; fail_FloppyDrive; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=FloppyDrive=false=}; repaired_FloppyDrive; FloppyDrive()}::rate(0.1) tau{=FloppyDrive=false=}; repaired_FloppyDrive; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "FloppyDrive"
+process FloppyDrive_Act(){
+act_3; dact_3; FloppyDrive_Act()}
+//##########Failure Behavior of "f_leaf" named "FloppyDriveInUse"
+process FloppyDriveInUse(){
+process P1() {alt{::dact_0;FloppyDriveInUse()::rate(0.1) tau{=FloppyDriveInUse=true=}; fail_FloppyDriveInUse; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=FloppyDriveInUse=false=}; repaired_FloppyDriveInUse; FloppyDriveInUse()}::rate(0.1) tau{=FloppyDriveInUse=false=}; repaired_FloppyDriveInUse; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "FloppyDriveInUse"
+process FloppyDriveInUse_Act(){
+act_0; dact_0; FloppyDriveInUse_Act()}
+//##########Failure Behavior of "f_leaf" named "HardDrive"
+process HardDrive(){
+process P1() {alt{::dact_0;HardDrive()::rate(0.1) tau{=HardDrive=true=}; fail_HardDrive; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=HardDrive=false=}; repaired_HardDrive; HardDrive()}::rate(0.1) tau{=HardDrive=false=}; repaired_HardDrive; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "HardDrive"
+process HardDrive_Act(){
+act_0; dact_0; HardDrive_Act()}
+//##########Failure Behavior of "or_gate" named "LossOfCooling"
+process LossOfCooling(){
+process P0(){fail_LossOfCooling;P2()}
+process P1(){repaired_LossOfCooling;LossOfCooling()}
+process P2(){alt{::repaired_Fan;P1()::fail_Fan; P3()::repaired_PowerSupply;P1()::fail_PowerSupply; P3()}}
+process P3(){alt{::repaired_Fan;P2()::repaired_PowerSupply;P2()}} 
+ alt{::fail_Fan; P0()::fail_PowerSupply; P0()}}
+//##########Activation Behavior of "or_gate" named "LossOfCooling"
+process LossOfCooling_Act(){
+act_0; when(false) dact_0; LossOfCooling_Act()}
+//##########Failure Behavior of "i_leaf" named "ManipulationError"
+process ManipulationError(){
+act_3;P0() 
+process P0() {alt{:: dact_3; ManipulationError() :: palt{:0.5: {=ManipulationError = true =}; fail_ManipulationError; P2(): 1 - 0.5:good_ManipulationError;P1()}}}
+process P1() {dact_3; ManipulationError()}
+process P2() {alt {::dact_3; P3()::rate(0.1) {=ManipulationError = false =}; repaired_ManipulationError; P1()}}
+process P3() {alt {::act_3; alt {::dact_3;P3()::rate(0.1)tau{= ManipulationError = false =};repaired_ManipulationError;P0()}::rate(0.1)tau{= ManipulationError = false =}; repaired_ManipulationError; ManipulationError()}}}
+//##########Activation Behavior of "i_leaf" named "ManipulationError"
+process ManipulationError_Act(){
+act_3; dact_3; ManipulationError_Act()}
+//##########Failure Behavior of "f_leaf" named "Memory"
+process Memory(){
+process P1() {alt{::dact_0;Memory()::rate(0.1) tau{=Memory=true=}; fail_Memory; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Memory=false=}; repaired_Memory; Memory()}::rate(0.1) tau{=Memory=false=}; repaired_Memory; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Memory"
+process Memory_Act(){
+act_0; dact_0; Memory_Act()}
+//##########Failure Behavior of "or_gate" named "OR_1"
+process OR_1(){
+process P0(){fail_OR_1;P2()}
+process P1(){repaired_OR_1;OR_1()}
+process P2(){alt{::repaired_ManipulationError;P1()::fail_ManipulationError; P3()::repaired_FloppyDrive;P1()::fail_FloppyDrive; P3()}}
+process P3(){alt{::repaired_ManipulationError;P2()::repaired_FloppyDrive;P2()}} 
+ alt{::fail_ManipulationError; P0()::fail_FloppyDrive; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_1"
+process OR_1_Act(){
+alt{:: act_0; S1() :: fail_FloppyDriveInUse; S1()} 
+process S1()  {alt {:: dact_0; OR_1_Act():: repaired_FloppyDriveInUse; OR_1_Act() :: act_0; S2() :: fail_FloppyDriveInUse; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_FloppyDriveInUse; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "or_gate" named "PC_down"
+process PC_down(){
+process P0(){fail_PC_down;P2()}
+process P1(){repaired_PC_down;PC_down()}
+process P2(){alt{::repaired_PowerSupply;P1()::fail_PowerSupply; P3()::repaired_AND_1;P1()::fail_AND_1; P3()::repaired_Memory;P1()::fail_Memory; P3()::repaired_HardDrive;P1()::fail_HardDrive; P3()::repaired_DisplayUnit;P1()::fail_DisplayUnit; P3()::repaired_Windows;P1()::fail_Windows; P3()::repaired_Cpu;P1()::fail_Cpu; P3()}}
+process P3(){alt{::repaired_PowerSupply;P2()::fail_PowerSupply; P4()::repaired_AND_1;P2()::fail_AND_1; P4()::repaired_Memory;P2()::fail_Memory; P4()::repaired_HardDrive;P2()::fail_HardDrive; P4()::repaired_DisplayUnit;P2()::fail_DisplayUnit; P4()::repaired_Windows;P2()::fail_Windows; P4()::repaired_Cpu;P2()::fail_Cpu; P4()}}
+process P4(){alt{::repaired_PowerSupply;P3()::fail_PowerSupply; P5()::repaired_AND_1;P3()::fail_AND_1; P5()::repaired_Memory;P3()::fail_Memory; P5()::repaired_HardDrive;P3()::fail_HardDrive; P5()::repaired_DisplayUnit;P3()::fail_DisplayUnit; P5()::repaired_Windows;P3()::fail_Windows; P5()::repaired_Cpu;P3()::fail_Cpu; P5()}}
+process P5(){alt{::repaired_PowerSupply;P4()::fail_PowerSupply; P6()::repaired_AND_1;P4()::fail_AND_1; P6()::repaired_Memory;P4()::fail_Memory; P6()::repaired_HardDrive;P4()::fail_HardDrive; P6()::repaired_DisplayUnit;P4()::fail_DisplayUnit; P6()::repaired_Windows;P4()::fail_Windows; P6()::repaired_Cpu;P4()::fail_Cpu; P6()}}
+process P6(){alt{::repaired_PowerSupply;P5()::fail_PowerSupply; P7()::repaired_AND_1;P5()::fail_AND_1; P7()::repaired_Memory;P5()::fail_Memory; P7()::repaired_HardDrive;P5()::fail_HardDrive; P7()::repaired_DisplayUnit;P5()::fail_DisplayUnit; P7()::repaired_Windows;P5()::fail_Windows; P7()::repaired_Cpu;P5()::fail_Cpu; P7()}}
+process P7(){alt{::repaired_PowerSupply;P6()::fail_PowerSupply; P8()::repaired_AND_1;P6()::fail_AND_1; P8()::repaired_Memory;P6()::fail_Memory; P8()::repaired_HardDrive;P6()::fail_HardDrive; P8()::repaired_DisplayUnit;P6()::fail_DisplayUnit; P8()::repaired_Windows;P6()::fail_Windows; P8()::repaired_Cpu;P6()::fail_Cpu; P8()}}
+process P8(){alt{::repaired_PowerSupply;P7()::repaired_AND_1;P7()::repaired_Memory;P7()::repaired_HardDrive;P7()::repaired_DisplayUnit;P7()::repaired_Windows;P7()::repaired_Cpu;P7()}} 
+ alt{::fail_PowerSupply; P0()::fail_AND_1; P0()::fail_Memory; P0()::fail_HardDrive; P0()::fail_DisplayUnit; P0()::fail_Windows; P0()::fail_Cpu; P0()}}
+//##########Activation Behavior of "or_gate" named "PC_down"
+process PC_down_Act(){
+act_0; dact_0; PC_down_Act()}
+//##########Failure Behavior of "f_leaf" named "PowerSupply"
+process PowerSupply(){
+process P1() {alt{::dact_0;PowerSupply()::rate(0.1) tau{=PowerSupply=true=}; fail_PowerSupply; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=PowerSupply=false=}; repaired_PowerSupply; PowerSupply()}::rate(0.1) tau{=PowerSupply=false=}; repaired_PowerSupply; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "PowerSupply"
+process PowerSupply_Act(){
+act_0; dact_0; PowerSupply_Act()}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_PC_down {=  UE_1=true, Fail = true=} ; repaired_PC_down {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "f_leaf" named "Windows"
+process Windows(){
+process P1() {alt{::dact_0;Windows()::rate(0.1) tau{=Windows=true=}; fail_Windows; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Windows=false=}; repaired_Windows; Windows()}::rate(0.1) tau{=Windows=false=}; repaired_Windows; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Windows"
+process Windows_Act(){
+act_0; dact_0; Windows_Act()}
+//##########Composition of all files
+par
+{
+::AND_1()  :: AND_1_Act()
+::Cpu()  :: Cpu_Act()
+::DisplayUnit()  :: DisplayUnit_Act()
+::Fan()  :: Fan_Act()
+::FloppyDrive()  :: FloppyDrive_Act()
+::FloppyDriveInUse()  :: FloppyDriveInUse_Act()
+::HardDrive()  :: HardDrive_Act()
+::LossOfCooling()  :: LossOfCooling_Act()
+::ManipulationError()  :: ManipulationError_Act()
+::Memory()  :: Memory_Act()
+::OR_1()  :: OR_1_Act()
+::PC_down()  :: PC_down_Act()
+::PowerSupply()  :: PowerSupply_Act()
+:: UE_1()  :: UE_1_Act()
+::Windows()  :: Windows_Act()
+}

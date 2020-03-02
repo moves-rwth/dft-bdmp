@@ -1,0 +1,206 @@
+//##########Automatically generated Modest file from: "03.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_2  , act_1  , act_3  , act_0;
+action  dact_2  , dact_1  , dact_3  , dact_0;
+action  act_CCF_fail_A,dact_CCF_fail_A, fail_CCF_fail_A, good_CCF_fail_A, repaired_CCF_fail_A;
+bool  CCF_fail_A = false;
+action  act_CCF_fail_B,dact_CCF_fail_B, fail_CCF_fail_B, good_CCF_fail_B, repaired_CCF_fail_B;
+bool  CCF_fail_B = false;
+action  act_CCF_fail_C,dact_CCF_fail_C, fail_CCF_fail_C, good_CCF_fail_C, repaired_CCF_fail_C;
+bool  CCF_fail_C = false;
+action  act_Indep_fail_A,dact_Indep_fail_A, fail_Indep_fail_A, repaired_Indep_fail_A;
+bool  Indep_fail_A = false;
+action  act_Indep_fail_B,dact_Indep_fail_B, fail_Indep_fail_B, repaired_Indep_fail_B;
+bool  Indep_fail_B = false;
+action  act_Indep_fail_C,dact_Indep_fail_C, fail_Indep_fail_C, repaired_Indep_fail_C;
+bool  Indep_fail_C = false;
+action  act_Shock,dact_Shock, fail_Shock, repaired_Shock;
+bool  Shock = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_loss_of_A,dact_loss_of_A, fail_loss_of_A, repaired_loss_of_A;
+bool  loss_of_A = false;
+action  act_loss_of_B,dact_loss_of_B, fail_loss_of_B, repaired_loss_of_B;
+bool  loss_of_B = false;
+action  act_loss_of_C,dact_loss_of_C, fail_loss_of_C, repaired_loss_of_C;
+bool  loss_of_C = false;
+action  act_OR_system_loss,dact_OR_system_loss, fail_OR_system_loss, repaired_OR_system_loss;
+bool  OR_system_loss = false;
+action  act_AND_system_loss_0,dact_AND_system_loss_0, fail_AND_system_loss_0, repaired_AND_system_loss_0;
+bool  AND_system_loss_0 = false;
+action  act_AND_system_loss_1,dact_AND_system_loss_1, fail_AND_system_loss_1, repaired_AND_system_loss_1;
+bool  AND_system_loss_1 = false;
+action  act_AND_system_loss_2,dact_AND_system_loss_2, fail_AND_system_loss_2, repaired_AND_system_loss_2;
+bool  AND_system_loss_2 = false;
+//##########Failure Behavior of "i_leaf" named "CCF_fail_A"
+process CCF_fail_A(){
+act_3;P0() 
+process P0() {alt{:: dact_3; CCF_fail_A() :: palt{:0.1: {=CCF_fail_A = true =}; fail_CCF_fail_A; P2(): 1 - 0.1:good_CCF_fail_A;P1()}}}
+process P1() {dact_3; CCF_fail_A()}
+process P2() {alt {::dact_3; P3()::rate(0.1) {=CCF_fail_A = false =}; repaired_CCF_fail_A; P1()}}
+process P3() {alt {::act_3; alt {::dact_3;P3()::rate(0.1)tau{= CCF_fail_A = false =};repaired_CCF_fail_A;P0()}::rate(0.1)tau{= CCF_fail_A = false =}; repaired_CCF_fail_A; CCF_fail_A()}}}
+//##########Activation Behavior of "i_leaf" named "CCF_fail_A"
+process CCF_fail_A_Act(){
+alt{:: act_0; S1() :: fail_Shock; S1()} 
+process S1()  {alt {:: dact_0; CCF_fail_A_Act():: repaired_Shock; CCF_fail_A_Act() :: act_0; S2() :: fail_Shock; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Shock; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "i_leaf" named "CCF_fail_B"
+process CCF_fail_B(){
+act_2;P0() 
+process P0() {alt{:: dact_2; CCF_fail_B() :: palt{:0.1: {=CCF_fail_B = true =}; fail_CCF_fail_B; P2(): 1 - 0.1:good_CCF_fail_B;P1()}}}
+process P1() {dact_2; CCF_fail_B()}
+process P2() {alt {::dact_2; P3()::rate(0.1) {=CCF_fail_B = false =}; repaired_CCF_fail_B; P1()}}
+process P3() {alt {::act_2; alt {::dact_2;P3()::rate(0.1)tau{= CCF_fail_B = false =};repaired_CCF_fail_B;P0()}::rate(0.1)tau{= CCF_fail_B = false =}; repaired_CCF_fail_B; CCF_fail_B()}}}
+//##########Activation Behavior of "i_leaf" named "CCF_fail_B"
+process CCF_fail_B_Act(){
+alt{:: act_0; S1() :: fail_Shock; S1()} 
+process S1()  {alt {:: dact_0; CCF_fail_B_Act():: repaired_Shock; CCF_fail_B_Act() :: act_0; S2() :: fail_Shock; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Shock; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "i_leaf" named "CCF_fail_C"
+process CCF_fail_C(){
+act_1;P0() 
+process P0() {alt{:: dact_1; CCF_fail_C() :: palt{:0.1: {=CCF_fail_C = true =}; fail_CCF_fail_C; P2(): 1 - 0.1:good_CCF_fail_C;P1()}}}
+process P1() {dact_1; CCF_fail_C()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=CCF_fail_C = false =}; repaired_CCF_fail_C; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= CCF_fail_C = false =};repaired_CCF_fail_C;P0()}::rate(0.1)tau{= CCF_fail_C = false =}; repaired_CCF_fail_C; CCF_fail_C()}}}
+//##########Activation Behavior of "i_leaf" named "CCF_fail_C"
+process CCF_fail_C_Act(){
+alt{:: act_0; S1() :: fail_Shock; S1()} 
+process S1()  {alt {:: dact_0; CCF_fail_C_Act():: repaired_Shock; CCF_fail_C_Act() :: act_0; S2() :: fail_Shock; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Shock; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "f_leaf" named "Indep_fail_A"
+process Indep_fail_A(){
+process P1() {alt{::dact_0;Indep_fail_A()::rate(0.1) tau{=Indep_fail_A=true=}; fail_Indep_fail_A; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Indep_fail_A=false=}; repaired_Indep_fail_A; Indep_fail_A()}::rate(0.1) tau{=Indep_fail_A=false=}; repaired_Indep_fail_A; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Indep_fail_A"
+process Indep_fail_A_Act(){
+act_0; dact_0; Indep_fail_A_Act()}
+//##########Failure Behavior of "f_leaf" named "Indep_fail_B"
+process Indep_fail_B(){
+process P1() {alt{::dact_0;Indep_fail_B()::rate(0.1) tau{=Indep_fail_B=true=}; fail_Indep_fail_B; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Indep_fail_B=false=}; repaired_Indep_fail_B; Indep_fail_B()}::rate(0.1) tau{=Indep_fail_B=false=}; repaired_Indep_fail_B; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Indep_fail_B"
+process Indep_fail_B_Act(){
+act_0; dact_0; Indep_fail_B_Act()}
+//##########Failure Behavior of "f_leaf" named "Indep_fail_C"
+process Indep_fail_C(){
+process P1() {alt{::dact_0;Indep_fail_C()::rate(0.1) tau{=Indep_fail_C=true=}; fail_Indep_fail_C; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Indep_fail_C=false=}; repaired_Indep_fail_C; Indep_fail_C()}::rate(0.1) tau{=Indep_fail_C=false=}; repaired_Indep_fail_C; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Indep_fail_C"
+process Indep_fail_C_Act(){
+act_0; dact_0; Indep_fail_C_Act()}
+//##########Failure Behavior of "f_leaf" named "Shock"
+process Shock(){
+process P1() {alt{::dact_0;Shock()::rate(0.01) tau{=Shock=true=}; fail_Shock; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(10) tau{=Shock=false=}; repaired_Shock; Shock()}::rate(10) tau{=Shock=false=}; repaired_Shock; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Shock"
+process Shock_Act(){
+act_0; when(false) dact_0; Shock_Act()}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_OR_system_loss {=  UE_1=true, Fail = true=} ; repaired_OR_system_loss {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "or_gate" named "loss_of_A"
+process loss_of_A(){
+process P0(){fail_loss_of_A;P2()}
+process P1(){repaired_loss_of_A;loss_of_A()}
+process P2(){alt{::repaired_Indep_fail_A;P1()::fail_Indep_fail_A; P3()::repaired_CCF_fail_A;P1()::fail_CCF_fail_A; P3()}}
+process P3(){alt{::repaired_Indep_fail_A;P2()::repaired_CCF_fail_A;P2()}} 
+ alt{::fail_Indep_fail_A; P0()::fail_CCF_fail_A; P0()}}
+//##########Activation Behavior of "or_gate" named "loss_of_A"
+process loss_of_A_Act(){
+act_0; dact_0; loss_of_A_Act()}
+//##########Failure Behavior of "or_gate" named "loss_of_B"
+process loss_of_B(){
+process P0(){fail_loss_of_B;P2()}
+process P1(){repaired_loss_of_B;loss_of_B()}
+process P2(){alt{::repaired_Indep_fail_B;P1()::fail_Indep_fail_B; P3()::repaired_CCF_fail_B;P1()::fail_CCF_fail_B; P3()}}
+process P3(){alt{::repaired_Indep_fail_B;P2()::repaired_CCF_fail_B;P2()}} 
+ alt{::fail_Indep_fail_B; P0()::fail_CCF_fail_B; P0()}}
+//##########Activation Behavior of "or_gate" named "loss_of_B"
+process loss_of_B_Act(){
+act_0; dact_0; loss_of_B_Act()}
+//##########Failure Behavior of "or_gate" named "loss_of_C"
+process loss_of_C(){
+process P0(){fail_loss_of_C;P2()}
+process P1(){repaired_loss_of_C;loss_of_C()}
+process P2(){alt{::repaired_Indep_fail_C;P1()::fail_Indep_fail_C; P3()::repaired_CCF_fail_C;P1()::fail_CCF_fail_C; P3()}}
+process P3(){alt{::repaired_Indep_fail_C;P2()::repaired_CCF_fail_C;P2()}} 
+ alt{::fail_Indep_fail_C; P0()::fail_CCF_fail_C; P0()}}
+//##########Activation Behavior of "or_gate" named "loss_of_C"
+process loss_of_C_Act(){
+act_0; dact_0; loss_of_C_Act()}
+//##########Failure Behavior of "or_gate" named "OR_system_loss"
+process OR_system_loss(){
+process P0(){fail_OR_system_loss;P2()}
+process P1(){repaired_OR_system_loss;OR_system_loss()}
+process P2(){alt{::repaired_AND_system_loss_0;P1()::fail_AND_system_loss_0; P3()::repaired_AND_system_loss_1;P1()::fail_AND_system_loss_1; P3()::repaired_AND_system_loss_2;P1()::fail_AND_system_loss_2; P3()}}
+process P3(){alt{::repaired_AND_system_loss_0;P2()::fail_AND_system_loss_0; P4()::repaired_AND_system_loss_1;P2()::fail_AND_system_loss_1; P4()::repaired_AND_system_loss_2;P2()::fail_AND_system_loss_2; P4()}}
+process P4(){alt{::repaired_AND_system_loss_0;P3()::repaired_AND_system_loss_1;P3()::repaired_AND_system_loss_2;P3()}} 
+ alt{::fail_AND_system_loss_0; P0()::fail_AND_system_loss_1; P0()::fail_AND_system_loss_2; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_system_loss"
+process OR_system_loss_Act(){
+act_0; dact_0; OR_system_loss_Act()}
+//##########Failure Behavior of "and_gate" named "AND_system_loss_0"
+process AND_system_loss_0(){
+process P0(){alt{::repaired_loss_of_B;AND_system_loss_0()::fail_loss_of_B; P1()::repaired_loss_of_C;AND_system_loss_0()::fail_loss_of_C; P1()}}
+process P1() { fail_AND_system_loss_0; P2() }
+process P2(){alt{::repaired_loss_of_B;P3()::repaired_loss_of_C;P3()}}
+process P3(){repaired_AND_system_loss_0;P0()}
+alt{::fail_loss_of_B; P0()::fail_loss_of_C; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_system_loss_0"
+process AND_system_loss_0_Act(){
+act_0; dact_0; AND_system_loss_0_Act()}
+//##########Failure Behavior of "and_gate" named "AND_system_loss_1"
+process AND_system_loss_1(){
+process P0(){alt{::repaired_loss_of_A;AND_system_loss_1()::fail_loss_of_A; P1()::repaired_loss_of_B;AND_system_loss_1()::fail_loss_of_B; P1()}}
+process P1() { fail_AND_system_loss_1; P2() }
+process P2(){alt{::repaired_loss_of_A;P3()::repaired_loss_of_B;P3()}}
+process P3(){repaired_AND_system_loss_1;P0()}
+alt{::fail_loss_of_A; P0()::fail_loss_of_B; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_system_loss_1"
+process AND_system_loss_1_Act(){
+act_0; dact_0; AND_system_loss_1_Act()}
+//##########Failure Behavior of "and_gate" named "AND_system_loss_2"
+process AND_system_loss_2(){
+process P0(){alt{::repaired_loss_of_A;AND_system_loss_2()::fail_loss_of_A; P1()::repaired_loss_of_C;AND_system_loss_2()::fail_loss_of_C; P1()}}
+process P1() { fail_AND_system_loss_2; P2() }
+process P2(){alt{::repaired_loss_of_A;P3()::repaired_loss_of_C;P3()}}
+process P3(){repaired_AND_system_loss_2;P0()}
+alt{::fail_loss_of_A; P0()::fail_loss_of_C; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_system_loss_2"
+process AND_system_loss_2_Act(){
+act_0; dact_0; AND_system_loss_2_Act()}
+//##########Composition of all files
+par
+{
+::CCF_fail_A()  :: CCF_fail_A_Act()
+::CCF_fail_B()  :: CCF_fail_B_Act()
+::CCF_fail_C()  :: CCF_fail_C_Act()
+::Indep_fail_A()  :: Indep_fail_A_Act()
+::Indep_fail_B()  :: Indep_fail_B_Act()
+::Indep_fail_C()  :: Indep_fail_C_Act()
+::Shock()  :: Shock_Act()
+:: UE_1()  :: UE_1_Act()
+::loss_of_A()  :: loss_of_A_Act()
+::loss_of_B()  :: loss_of_B_Act()
+::loss_of_C()  :: loss_of_C_Act()
+::OR_system_loss()  :: OR_system_loss_Act()
+::AND_system_loss_0()  :: AND_system_loss_0_Act()
+::AND_system_loss_1()  :: AND_system_loss_1_Act()
+::AND_system_loss_2()  :: AND_system_loss_2_Act()
+}

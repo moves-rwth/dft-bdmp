@@ -1,0 +1,327 @@
+shahid@shahid-HP-ProBook-6470b:~/modest/repairable/kb3-examples/53$ ./run53.sh
+./run53.sh: line 1: !/bin/bash: No such file or directory
+rm: cannot remove '53.dot': No such file or directory
+rm: cannot remove '53.pdf': No such file or directory
+rm: cannot remove '53.drn': No such file or directory
+rm: cannot remove '53-jani.dot': No such file or directory
+rm: cannot remove '53-jani.pdf': No such file or directory
+rm: cannot remove '53-drn.pdf': No such file or directory
+rm: cannot remove '53-drn.dot': No such file or directory
+{'DCC_dem': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': 'Null',
+             'Name': 'DCC_dem',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'TSTA',
+             'Type': 'i_leaf',
+             'gamma': '0.5',
+             'module': '1',
+             'mu': '1'},
+ 'Diesel_A': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['perte_Diesel_A'],
+              'Name': 'Diesel_A',
+              'Previous': 'Null',
+              'Sons': 'Null',
+              'Triggered_by': 'Null',
+              'Type': 'f_leaf',
+              'lambda': '0.1',
+              'module': '4',
+              'mu': '0.1'},
+ 'Diesel_B': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['perte_Diesel_B'],
+              'Name': 'Diesel_B',
+              'Previous': 'Null',
+              'Sons': 'Null',
+              'Triggered_by': 'Null',
+              'Type': 'f_leaf',
+              'lambda': '0.1',
+              'module': '3',
+              'mu': '0.1'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['Perte_deux_tableaux'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'Perte_deux_tableaux': {'Calculate': 'fn_fathers_and_trig',
+                         'Fathers': ['EI_1'],
+                         'Name': 'Perte_deux_tableaux',
+                         'Previous': 'Null',
+                         'Sons': ['perte_LHA', 'perte_LHB'],
+                         'Triggered_by': 'Null',
+                         'Type': 'and_gate',
+                         'module': '0'},
+ 'RD_Dies_A_par_DCC': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['perte_Diesel_A'],
+                       'Name': 'RD_Dies_A_par_DCC',
+                       'Previous': 'Null',
+                       'Sons': 'Null',
+                       'Triggered_by': 'DCC_dem',
+                       'Type': 'i_leaf',
+                       'gamma': '0.5',
+                       'module': '6',
+                       'mu': '0.1'},
+ 'RD_Dies_B_par_DCC': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['perte_Diesel_B'],
+                       'Name': 'RD_Dies_B_par_DCC',
+                       'Previous': 'Null',
+                       'Sons': 'Null',
+                       'Triggered_by': 'DCC_dem',
+                       'Type': 'i_leaf',
+                       'gamma': '0.5',
+                       'module': '5',
+                       'mu': '0.1'},
+ 'RD_Diesel_A': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['perte_Diesel_A'],
+                 'Name': 'RD_Diesel_A',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'i_leaf',
+                 'gamma': '0.5',
+                 'module': '4',
+                 'mu': '0.1'},
+ 'RD_Diesel_B': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['perte_Diesel_B'],
+                 'Name': 'RD_Diesel_B',
+                 'Previous': 'Null',
+                 'Sons': 'Null',
+                 'Triggered_by': 'Null',
+                 'Type': 'i_leaf',
+                 'gamma': '0.5',
+                 'module': '3',
+                 'mu': '0.1'},
+ 'TSTA': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['perte_LHA', 'perte_LHB'],
+          'K': '10',
+          'Min_acceptable': '8',
+          'Name': 'TSTA',
+          'Nr_being_repaired': '0',
+          'Nr_items': '10',
+          'Nr_ok': '10',
+          'Nr_repairmen': '10',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'multiple_leaf',
+          'lambda': '0.1',
+          'module': '2',
+          'mu': '0.1'},
+ 'perte_Diesel_A': {'Calculate': 'fn_fathers_and_trig',
+                    'Fathers': ['perte_LHA'],
+                    'Name': 'perte_Diesel_A',
+                    'Previous': 'Null',
+                    'Sons': ['Diesel_A', 'RD_Dies_A_par_DCC', 'RD_Diesel_A'],
+                    'Triggered_by': 'TSTA',
+                    'Type': 'or_gate',
+                    'module': '4'},
+ 'perte_Diesel_B': {'Calculate': 'fn_fathers_and_trig',
+                    'Fathers': ['perte_LHB'],
+                    'Name': 'perte_Diesel_B',
+                    'Previous': 'Null',
+                    'Sons': ['Diesel_B', 'RD_Dies_B_par_DCC', 'RD_Diesel_B'],
+                    'Triggered_by': 'TSTA',
+                    'Type': 'or_gate',
+                    'module': '3'},
+ 'perte_LHA': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Perte_deux_tableaux'],
+               'Name': 'perte_LHA',
+               'Previous': 'Null',
+               'Sons': ['TSTA', 'perte_Diesel_A'],
+               'Triggered_by': 'Null',
+               'Type': 'and_gate',
+               'module': '0'},
+ 'perte_LHB': {'Calculate': 'fn_fathers_and_trig',
+               'Fathers': ['Perte_deux_tableaux'],
+               'Name': 'perte_LHB',
+               'Previous': 'Null',
+               'Sons': ['TSTA', 'perte_Diesel_B'],
+               'Triggered_by': 'Null',
+               'Type': 'and_gate',
+               'module': '0'}}
+top level event is an i_leaf it is triggered by a trigger could be trigger
+
+(00:00) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 12:43:15 2019
+Command line arguments: --jani 53.jani --prop '	Pmax=? [F<=1  Fail];  Pmin=? [F<=1  Fail];
+								Pmax=? [F<=2  Fail];  Pmin=? [F<=2  Fail];
+								Pmax=? [F<=3  Fail];  Pmin=? [F<=3  Fail];
+								Pmax=? [F<=4  Fail];  Pmin=? [F<=4  Fail];
+								Pmax=? [F<=5 Fail];  Pmin=? [F<=5 Fail];
+								Pmax=? [F<=6 Fail];  Pmin=? [F<=6 Fail];
+								Pmax=? [F<=7 Fail];  Pmin=? [F<=7 Fail];
+								Pmax=? [F<=8 Fail];  Pmin=? [F<=8 Fail];
+								Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+								Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/53
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 5.894s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	376997
+Transitions: 	1181703
+Choices: 	1020218
+Markovian St.: 	6720
+Max. Rate.: 	2.6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 162473 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.194s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	376997
+Transitions: 	1181703
+Choices: 	1020218
+Markovian St.: 	6720
+Max. Rate.: 	2.6
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 162473 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.02470332737
+Time for model checking: 3.366s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.02470222823
+Time for model checking: 3.298s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.1084570808
+Time for model checking: 4.941s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.1084337512
+Time for model checking: 4.962s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.2153151909
+Time for model checking: 6.621s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.2152206351
+Time for model checking: 6.626s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.3186281605
+Time for model checking: 8.271s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.3184262199
+Time for model checking: 8.207s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.4087040025
+Time for model checking: 10.052s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.4083924251
+Time for model checking: 9.734s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.4841904852
+Time for model checking: 11.495s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.4837915477
+Time for model checking: 11.446s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.5467268087
+Time for model checking: 13.397s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.5462711941
+Time for model checking: 13.315s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.5986274388
+Time for model checking: 15.679s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.5981436163
+Time for model checking: 15.484s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.6420489258
+Time for model checking: 17.578s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.6415589142
+Time for model checking: 17.469s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.6787652964
+Time for model checking: 19.576s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.6782842628
+Time for model checking: 19.581s.
+Storm 1.3.1 (dev)
+
+Date: Wed Dec 18 12:47:02 2019
+Command line arguments: --jani 53.jani --prop 'Tmax=? [F  Fail]; Tmin=? [F  Fail]' --exact
+Current working directory: /home/shahid/modest/repairable/kb3-examples/53
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 13.889s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	376997
+Transitions: 	1181703
+Choices: 	1020218
+Markovian St.: 	6720
+Max. Rate.: 	13/5
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 162473 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.867s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	376997
+Transitions: 	1181703
+Choices: 	1020218
+Markovian St.: 	6720
+Max. Rate.: 	13/5
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 162473 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": T[exp]max=? [F Fail] ...
+Result (for initial states): 2516202198715687468658591961378926926364855546861787474235370920502630498090654123007023829965392133593121240250340845913212371821286814588960085409392543971588486927246275082976191323415121605343615353405458092356533976104195694571714899804583509623387832091101017188322276261702205991136855474659327854596650545879131612553539198799668498025133301376675808333258254928604645072785931/248514857097451616040887622050442924438612044401005284947419491390318871201525607855842436782646974487315664833861667669951114324312031313228362646429071129330941672735224130074141447622769838313959842385489466215998526248774453754431770142732552082509151979217560825042113278442031251821227656944368868493176175566536200824444883414704188355834178880757771237790886069177894450787132 (approx. 10.12495683)
+Time for model checking: 141.957s.
+
+Model checking property "2": T[exp]min=? [F Fail] ...
+Result (for initial states): 2671091883467531655430988655067457585538242489987719409315191268864778773060157672568163139023486544199464683442207734153706913268239123981406944320208365983317864769484715627709213677930519729359461714314986383066742397931779269447852126414281255604495001594368373144350926918718086964527993402062091363992393789432939204066445917323085919209701155236373766751566485012472718806547924672167774621199417/264067248489067053247590690880527192500599085081366858562212009925862853287516746444090696067034689207614871534371285032531286286325506393609887680408839352458246140502108701309540269861935742672521129828559594113826531562286432275302253080047570842579557501344117736515384606656660365454221857197480509801286136407687510961051521717087899255203637200974338325825393361801680682316631999464691494178420 (approx. 10.11519565)
+Time for model checking: 171.900s.
+

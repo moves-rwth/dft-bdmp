@@ -1,0 +1,170 @@
+//##########Automatically generated Modest file from: "37.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_2  , act_0  , act_1  , act_3;
+action  dact_2  , dact_0  , dact_1  , dact_3;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_K_N_1,dact_K_N_1, fail_K_N_1, repaired_K_N_1;
+bool  K_N_1 = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_OU_2,dact_OU_2, fail_OU_2, repaired_OU_2;
+bool  OU_2 = false;
+action  act_OU_3,dact_OU_3, fail_OU_3, repaired_OU_3;
+bool  OU_3 = false;
+action  act_af_1,dact_af_1, fail_af_1, repaired_af_1;
+bool  af_1 = false;
+action  act_af_2,dact_af_2, fail_af_2, repaired_af_2;
+bool  af_2 = false;
+action  act_af_3,dact_af_3, fail_af_3, repaired_af_3;
+bool  af_3 = false;
+action  act_af_4,dact_af_4, fail_af_4, repaired_af_4;
+bool  af_4 = false;
+action  act_af_5,dact_af_5, fail_af_5, repaired_af_5;
+bool  af_5 = false;
+action  act_af_6,dact_af_6, fail_af_6, repaired_af_6;
+bool  af_6 = false;
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_ET_1 {=  EI_1=true, Fail = true=} ; repaired_ET_1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_OU_1;ET_1()::fail_OU_1; P1()::repaired_OU_2;ET_1()::fail_OU_2; P1()::repaired_OU_3;ET_1()::fail_OU_3; P1()}}
+process P1(){alt{::repaired_OU_1;P0()::fail_OU_1; P2()::repaired_OU_2;P0()::fail_OU_2; P2()::repaired_OU_3;P0()::fail_OU_3; P2()}}
+process P2() { fail_ET_1; P3() }
+process P3(){alt{::repaired_OU_1;P4()::repaired_OU_2;P4()::repaired_OU_3;P4()}}
+process P4(){repaired_ET_1;P1()}
+alt{::fail_OU_1; P0()::fail_OU_2; P0()::fail_OU_3; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "or_gate" named "K_N_1"
+process K_N_1(){
+process P0(){fail_K_N_1;P2()}
+process P1(){repaired_K_N_1;K_N_1()}
+process P2(){alt{::repaired_OU_1;P1()::fail_OU_1; P3()::repaired_OU_2;P1()::fail_OU_2; P3()::repaired_OU_3;P1()::fail_OU_3; P3()}}
+process P3(){alt{::repaired_OU_1;P2()::fail_OU_1; P4()::repaired_OU_2;P2()::fail_OU_2; P4()::repaired_OU_3;P2()::fail_OU_3; P4()}}
+process P4(){alt{::repaired_OU_1;P3()::repaired_OU_2;P3()::repaired_OU_3;P3()}} 
+ alt{::fail_OU_1; P0()::fail_OU_2; P0()::fail_OU_3; P0()}}
+//##########Activation Behavior of "or_gate" named "K_N_1"
+process K_N_1_Act(){
+act_0; when(false) dact_0; K_N_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+process P0(){fail_OU_1;P2()}
+process P1(){repaired_OU_1;OU_1()}
+process P2(){alt{::repaired_af_1;P1()::fail_af_1; P3()::repaired_af_2;P1()::fail_af_2; P3()}}
+process P3(){alt{::repaired_af_1;P2()::repaired_af_2;P2()}} 
+ alt{::fail_af_1; P0()::fail_af_2; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+alt{:: act_0; S1() :: fail_K_N_1; S1()} 
+process S1()  {alt {:: dact_0; OU_1_Act():: repaired_K_N_1; OU_1_Act() :: act_0; S2() :: fail_K_N_1; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_K_N_1; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "or_gate" named "OU_2"
+process OU_2(){
+process P0(){fail_OU_2;P2()}
+process P1(){repaired_OU_2;OU_2()}
+process P2(){alt{::repaired_af_3;P1()::fail_af_3; P3()::repaired_af_4;P1()::fail_af_4; P3()}}
+process P3(){alt{::repaired_af_3;P2()::repaired_af_4;P2()}} 
+ alt{::fail_af_3; P0()::fail_af_4; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_2"
+process OU_2_Act(){
+alt{:: act_0; S1() :: fail_K_N_1; S1()} 
+process S1()  {alt {:: dact_0; OU_2_Act():: repaired_K_N_1; OU_2_Act() :: act_0; S2() :: fail_K_N_1; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_K_N_1; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "or_gate" named "OU_3"
+process OU_3(){
+process P0(){fail_OU_3;P2()}
+process P1(){repaired_OU_3;OU_3()}
+process P2(){alt{::repaired_af_5;P1()::fail_af_5; P3()::repaired_af_6;P1()::fail_af_6; P3()}}
+process P3(){alt{::repaired_af_5;P2()::repaired_af_6;P2()}} 
+ alt{::fail_af_5; P0()::fail_af_6; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_3"
+process OU_3_Act(){
+alt{:: act_0; S1() :: fail_K_N_1; S1()} 
+process S1()  {alt {:: dact_0; OU_3_Act():: repaired_K_N_1; OU_3_Act() :: act_0; S2() :: fail_K_N_1; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_K_N_1; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "sf_leaf" named "af_1"
+process af_1(){
+process P1() {alt{::dact_1;af_1()::rate(0.1) tau{=af_1=true=}; fail_af_1; P2()}}
+process P2() {alt{::dact_1; P3()::rate(0.1) tau{=af_1=false=}; repaired_af_1; P1()}}
+process P3() {alt{:: rate(0.1) tau{= af_1 = false=}; repaired_af_1; af_1() :: act_1; P2()}}
+alt{::act_1; P1() :: rate(0.01) tau; fail_af_1; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_1"
+process af_1_Act(){
+act_1; dact_1; af_1_Act()}
+//##########Failure Behavior of "sf_leaf" named "af_2"
+process af_2(){
+process P1() {alt{::dact_1;af_2()::rate(0.1) tau{=af_2=true=}; fail_af_2; P2()}}
+process P2() {alt{::dact_1; P3()::rate(0.1) tau{=af_2=false=}; repaired_af_2; P1()}}
+process P3() {alt{:: rate(0.1) tau{= af_2 = false=}; repaired_af_2; af_2() :: act_1; P2()}}
+alt{::act_1; P1() :: rate(0.01) tau; fail_af_2; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_2"
+process af_2_Act(){
+act_1; dact_1; af_2_Act()}
+//##########Failure Behavior of "sf_leaf" named "af_3"
+process af_3(){
+process P1() {alt{::dact_2;af_3()::rate(0.0001) tau{=af_3=true=}; fail_af_3; P2()}}
+process P2() {alt{::dact_2; P3()::rate(0.01) tau{=af_3=false=}; repaired_af_3; P1()}}
+process P3() {alt{:: rate(0.01) tau{= af_3 = false=}; repaired_af_3; af_3() :: act_2; P2()}}
+alt{::act_2; P1() :: rate(0.1) tau; fail_af_3; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_3"
+process af_3_Act(){
+act_2; dact_2; af_3_Act()}
+//##########Failure Behavior of "sf_leaf" named "af_4"
+process af_4(){
+process P1() {alt{::dact_2;af_4()::rate(0.1) tau{=af_4=true=}; fail_af_4; P2()}}
+process P2() {alt{::dact_2; P3()::rate(0.1) tau{=af_4=false=}; repaired_af_4; P1()}}
+process P3() {alt{:: rate(0.1) tau{= af_4 = false=}; repaired_af_4; af_4() :: act_2; P2()}}
+alt{::act_2; P1() :: rate(0.01) tau; fail_af_4; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_4"
+process af_4_Act(){
+act_2; dact_2; af_4_Act()}
+//##########Failure Behavior of "sf_leaf" named "af_5"
+process af_5(){
+process P1() {alt{::dact_3;af_5()::rate(0.1) tau{=af_5=true=}; fail_af_5; P2()}}
+process P2() {alt{::dact_3; P3()::rate(0.1) tau{=af_5=false=}; repaired_af_5; P1()}}
+process P3() {alt{:: rate(0.1) tau{= af_5 = false=}; repaired_af_5; af_5() :: act_3; P2()}}
+alt{::act_3; P1() :: rate(0.01) tau; fail_af_5; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_5"
+process af_5_Act(){
+act_3; dact_3; af_5_Act()}
+//##########Failure Behavior of "sf_leaf" named "af_6"
+process af_6(){
+process P1() {alt{::dact_3;af_6()::rate(0.1) tau{=af_6=true=}; fail_af_6; P2()}}
+process P2() {alt{::dact_3; P3()::rate(0.1) tau{=af_6=false=}; repaired_af_6; P1()}}
+process P3() {alt{:: rate(0.1) tau{= af_6 = false=}; repaired_af_6; af_6() :: act_3; P2()}}
+alt{::act_3; P1() :: rate(0.01) tau; fail_af_6; P3()}}
+//##########Activation Behavior of "sf_leaf" named "af_6"
+process af_6_Act(){
+act_3; dact_3; af_6_Act()}
+//##########Composition of all files
+par
+{
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::K_N_1()  :: K_N_1_Act()
+::OU_1()  :: OU_1_Act()
+::OU_2()  :: OU_2_Act()
+::OU_3()  :: OU_3_Act()
+::af_1()  :: af_1_Act()
+::af_2()  :: af_2_Act()
+::af_3()  :: af_3_Act()
+::af_4()  :: af_4_Act()
+::af_5()  :: af_5_Act()
+::af_6()  :: af_6_Act()
+}

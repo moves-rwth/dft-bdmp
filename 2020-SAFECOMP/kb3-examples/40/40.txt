@@ -1,0 +1,188 @@
+Done.                                                                                                                                                                               
+Storm 1.3.1 (dev) {'Calcul········                                                                                                                                                  
+(00:03)            'Fath10·                                                                                                                                                         
+Date: Thu Jan  2 14:42:18 2020                                                                                                                                                      
+Command line arguments: --jani 40.jani --prop ' Pmax=? [F<=1  Fail ]; Pmin=? [F<=1  Fail];                                                                                          
+(00:00)            'So··10      Pmax=? [F<=2  Fail]; Pmin=? [F<=2  Fail];                                                                                                           
+                   'Triggered_byPmax=? [F<=3  Fail]; Pmin=? [F<=3 Fail];
+Checking for absence of non-tailPmax=? [F<=4  Fail]; Pmin=? [F<=4  Fail];                                                                                                           
+                   'module': '4'Pmax=? [F<=5 Fail]; Pmin=? [F<=5 Fail];
+Parsing 40.modest...            Pmax=? [F<=6 Fail]; Pmin=? [F<=6 Fail];                                                                                                             
+				Pmax=? [F<=7 Fail]; Pmin=? [F<=7 Fail];
+Initialising...                 Pmax=? [F<=8 Fail]; Pmin=? [F<=8 Fail];                                                                                                             
+				Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+				Pmax=? [F<=10  Fail ]; Pmin=? [F<=10  Fail];
+				Pmax=? [F<=11  Fail ]; Pmin=? [F<=11  Fail];
+				Pmax=? [F<=12  Fail]; Pmin=? [F<=12  Fail];
+				Pmax=? [F<=13  Fail]; Pmin=? [F<=13 Fail];
+				Pmax=? [F<=14  Fail]; Pmin=? [F<=14  Fail];
+				Pmax=? [F<=15 Fail]; Pmin=? [F<=15 Fail];
+				Pmax=? [F<=16 Fail]; Pmin=? [F<=16 Fail];
+				Pmax=? [F<=17 Fail]; Pmin=? [F<=17 Fail];
+				Pmax=? [F<=18 Fail]; Pmin=? [F<=18 Fail];
+				Pmax=? [F<=19  Fail]; Pmin=? [F<=19 Fail];
+				Pmax=? [F<=20 Fail]; Pmin=? [F<=20 Fail];
+				Pmax=? [F<=21 Fail]; Pmin=? [F<=21 Fail];
+				Pmax=? [F<=22 Fail]; Pmin=? [F<=22 Fail];
+				Pmax=? [F<=23 Fail]; Pmin=? [F<=23 Fail];
+				Pmax=? [F<=24  Fail]; Pmin=? [F<=24 Fail];
+				Pmax=? [F<=25  Fail]; Pmin=? [F<=25  Fail]' --precision 1e-8
+Current working directory: /Users/shahidkhan/Dropbox/repairable/kb3-examples/40
+
+Time for model input parsing: 0.038s.
+
+Time for model construction: 343.263s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10649607
+Transitions: 	55899112
+Choices: 	53062529
+Markovian St.: 	12612
+Max. Rate.: 	1.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 1 item(s)
+   * init -> 1 item(s)
+   * Fail -> 6638056 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10649607
+Transitions: 	55899112
+Choices: 	53062529
+Markovian St.: 	12612
+Max. Rate.: 	1.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 1 item(s)
+   * init -> 1 item(s)
+   * Fail -> 6638056 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.1768306623
+Time for model checking: 43.497s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.1768306623
+Time for model checking: 44.057s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.3688601321
+Time for model checking: 54.701s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.3688601321
+Time for model checking: 55.031s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.5335679719
+Time for model checking: 67.017s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.5335679719
+Time for model checking: 68.192s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.6623733577
+Time for model checking: 81.391s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.6623733577
+Time for model checking: 81.359s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.7585174465
+Time for model checking: 93.659s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.7585174465
+Time for model checking: 94.266s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.8283915455
+Time for model checking: 109.069s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.8283915455
+Time for model checking: 109.679s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.8783383723
+Time for model checking: 121.885s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.8783383723
+Time for model checking: 123.460s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.9136539755
+Time for model checking: 138.591s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.9136539755
+Time for model checking: 139.882s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.9384385363
+Time for model checking: 155.312s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.9384385363
+Time for model checking: 156.757s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.9557406304
+Time for model checking: 170.229s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.9557406304
+Time for model checking: 172.563s.
+
+Model checking property "21": Pmax=? [true U<=11 Fail] ...
+Result (for initial states): 0.9677728923
+Time for model checking: 187.747s.
+
+Model checking property "22": Pmin=? [true U<=11 Fail] ...
+Result (for initial states): 0.9677728923
+Time for model checking: 189.430s.
+
+Model checking property "23": Pmax=? [true U<=12 Fail] ...
+Result (for initial states): 0.9761165882
+Time for model checking: 204.079s.
+
+Model checking property "24": Pmin=? [true U<=12 Fail] ...
+Result (for initial states): 0.9761165882
+Time for model checking: 205.831s.
+
+Model checking property "25": Pmax=? [true U<=13 Fail] ...
+Result (for initial states): 0.9818900588
+Time for model checking: 222.810s.
+
+Model checking property "26": Pmin=? [true U<=13 Fail] ...
+Result (for initial states): 0.9818900588
+Time for model checking: 225.083s.
+
+Model checking property "27": Pmax=? [true U<=14 Fail] ...
+Result (for initial states): 0.9858784986
+Time for model checking: 241.922s.
+
+Model checking property "28": Pmin=? [true U<=14 Fail] ...
+Result (for initial states): 0.9858784986
+Time for model checking: 244.586s.
+
+Model checking property "29": Pmax=? [true U<=15 Fail] ...
+Result (for initial states): 0.9886303125
+Time for model checking: 259.714s.
+
+Model checking property "30": Pmin=? [true U<=15 Fail] ...
+Result (for initial states): 0.9886303125
+Time for model checking: 262.792s.
+
+Model checking property "31": Pmax=? [true U<=16 Fail] ...

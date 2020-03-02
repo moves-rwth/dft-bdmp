@@ -1,0 +1,262 @@
+//##########Automatically generated Modest file from: "15.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_3  , act_7  , act_2  , act_1  , act_6  , act_4  , act_0  , act_5  , act_9  , act_8;
+action  dact_3  , dact_7  , dact_2  , dact_1  , dact_6  , dact_4  , dact_0  , dact_5  , dact_9  , dact_8;
+action  act_A1,dact_A1, fail_A1, repaired_A1;
+bool  A1 = false;
+action  act_A1_lost,dact_A1_lost, fail_A1_lost, repaired_A1_lost;
+bool  A1_lost = false;
+action  act_A2,dact_A2, fail_A2, repaired_A2;
+bool  A2 = false;
+action  act_A2_lost,dact_A2_lost, fail_A2_lost, repaired_A2_lost;
+bool  A2_lost = false;
+action  act_AND_1,dact_AND_1, fail_AND_1, repaired_AND_1;
+bool  AND_1 = false;
+action  act_A_lost,dact_A_lost, fail_A_lost, repaired_A_lost;
+bool  A_lost = false;
+action  act_B1,dact_B1, fail_B1, repaired_B1;
+bool  B1 = false;
+action  act_B1_lost,dact_B1_lost, fail_B1_lost, repaired_B1_lost;
+bool  B1_lost = false;
+action  act_B2,dact_B2, fail_B2, repaired_B2;
+bool  B2 = false;
+action  act_B2_lost,dact_B2_lost, fail_B2_lost, repaired_B2_lost;
+bool  B2_lost = false;
+action  act_B_lost,dact_B_lost, fail_B_lost, repaired_B_lost;
+bool  B_lost = false;
+action  act_OR_1,dact_OR_1, fail_OR_1, repaired_OR_1;
+bool  OR_1 = false;
+action  act_OR_2,dact_OR_2, fail_OR_2, repaired_OR_2;
+bool  OR_2 = false;
+action  act_K1,dact_K1, fail_K1, repaired_K1;
+bool  K1 = false;
+action  act_K2,dact_K2, fail_K2, repaired_K2;
+bool  K2 = false;
+action  act_K3,dact_K3, fail_K3, repaired_K3;
+bool  K3 = false;
+action  act_SF_1,dact_SF_1, fail_SF_1, repaired_SF_1;
+bool  SF_1 = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+//##########Failure Behavior of "f_leaf" named "A1"
+process A1(){
+process P1() {alt{::dact_0;A1()::rate(0.1) tau{=A1=true=}; fail_A1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=A1=false=}; repaired_A1; A1()}::rate(0.1) tau{=A1=false=}; repaired_A1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "A1"
+process A1_Act(){
+act_0; dact_0; A1_Act()}
+//##########Failure Behavior of "or_gate" named "A1_lost"
+process A1_lost(){
+process P0(){fail_A1_lost;P2()}
+process P1(){repaired_A1_lost;A1_lost()}
+process P2(){alt{::repaired_A1;P1()::fail_A1; P3()::repaired_K1;P1()::fail_K1; P3()}}
+process P3(){alt{::repaired_A1;P2()::repaired_K1;P2()}} 
+ alt{::fail_A1; P0()::fail_K1; P0()}}
+//##########Activation Behavior of "or_gate" named "A1_lost"
+process A1_lost_Act(){
+act_0; dact_0; A1_lost_Act()}
+//##########Failure Behavior of "f_leaf" named "A2"
+process A2(){
+process P1() {alt{::dact_9;A2()::rate(0.1) tau{=A2=true=}; fail_A2; P2()}}
+process P2() {alt{::dact_9; alt{::act_9; P2()::rate(0.1) tau{=A2=false=}; repaired_A2; A2()}::rate(0.1) tau{=A2=false=}; repaired_A2; P1()}}
+act_9; P1()}
+//##########Activation Behavior of "f_leaf" named "A2"
+process A2_Act(){
+alt{:: act_5; S1() :: fail_A1; S1()} 
+process S1()  {alt {:: dact_5; A2_Act():: repaired_A1; A2_Act() :: act_5; S2() :: fail_A1; S2()}}
+process S2()  {alt {:: act_9; S3() :: dact_5; S1() :: repaired_A1; S1() }}
+process S3()  {alt {::  dact_5; S4() :: repaired_A1; S4()}}
+process S4()  {alt {::dact_9; S1() :: dact_5; S5() :: repaired_A1; S5():: act_5; S3() :: fail_A1; S3()}}
+process S5()  {alt {::dact_9; A2_Act() ::  act_5; S4() :: fail_A1; S4()}}}
+//##########Failure Behavior of "or_gate" named "A2_lost"
+process A2_lost(){
+process P0(){fail_A2_lost;P2()}
+process P1(){repaired_A2_lost;A2_lost()}
+process P2(){alt{::repaired_A2;P1()::fail_A2; P3()::repaired_K2;P1()::fail_K2; P3()}}
+process P3(){alt{::repaired_A2;P2()::repaired_K2;P2()}} 
+ alt{::fail_A2; P0()::fail_K2; P0()}}
+//##########Activation Behavior of "or_gate" named "A2_lost"
+process A2_lost_Act(){
+alt{:: act_0; S1() :: act_1; S1()} 
+process S1()  {alt {::act_5; S4():: dact_0; A2_lost_Act():: dact_1; A2_lost_Act() :: act_0; S2() :: act_1; S2()}}
+process S2()  {alt {:: act_5; S3() :: dact_0; S1() :: dact_1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: dact_1; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_1; S5():: act_0; S3() :: act_1; S3()}}
+process S5()  {alt {::dact_5; A2_lost_Act() ::  act_0; S4() :: act_1; S4()}}}
+//##########Failure Behavior of "and_gate" named "AND_1"
+process AND_1(){
+process P0(){alt{::repaired_A_lost;AND_1()::fail_A_lost; P1()::repaired_B_lost;AND_1()::fail_B_lost; P1()}}
+process P1(){alt{::repaired_A_lost;P0()::repaired_B_lost;P0()::fail_AND_1; P2()}}
+process P2(){alt{::repaired_A_lost;P3()::repaired_B_lost;P3()}}
+process P3(){repaired_AND_1;P0()}
+alt{::fail_A_lost; P0()::fail_B_lost; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_1"
+process AND_1_Act(){
+act_0; dact_0; AND_1_Act()}
+//##########Failure Behavior of "and_gate" named "A_lost"
+process A_lost(){
+process P0(){alt{::repaired_A1_lost;A_lost()::fail_A1_lost; P1()::repaired_A2_lost;A_lost()::fail_A2_lost; P1()::repaired_OR_1;A_lost()::fail_OR_1; P1()}}
+process P1(){alt{::repaired_A1_lost;P0()::fail_A1_lost; P2()::repaired_A2_lost;P0()::fail_A2_lost; P2()::repaired_OR_1;P0()::fail_OR_1; P2()}}
+process P2(){alt{::repaired_A1_lost;P1()::repaired_A2_lost;P1()::repaired_OR_1;P1()::fail_A_lost; P3()}}
+process P3(){alt{::repaired_A1_lost;P4()::repaired_A2_lost;P4()::repaired_OR_1;P4()}}
+process P4(){repaired_A_lost;P1()}
+alt{::fail_A1_lost; P0()::fail_A2_lost; P0()::fail_OR_1; P0()}}
+//##########Activation Behavior of "and_gate" named "A_lost"
+process A_lost_Act(){
+act_0; dact_0; A_lost_Act()}
+//##########Failure Behavior of "f_leaf" named "B1"
+process B1(){
+process P1() {alt{::dact_0;B1()::rate(0.1) tau{=B1=true=}; fail_B1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=B1=false=}; repaired_B1; B1()}::rate(0.1) tau{=B1=false=}; repaired_B1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "B1"
+process B1_Act(){
+act_0; dact_0; B1_Act()}
+//##########Failure Behavior of "or_gate" named "B1_lost"
+process B1_lost(){
+process P0(){fail_B1_lost;P2()}
+process P1(){repaired_B1_lost;B1_lost()}
+process P2(){alt{::repaired_B1;P1()::fail_B1; P3()::repaired_K2;P1()::fail_K2; P3()}}
+process P3(){alt{::repaired_B1;P2()::repaired_K2;P2()}} 
+ alt{::fail_B1; P0()::fail_K2; P0()}}
+//##########Activation Behavior of "or_gate" named "B1_lost"
+process B1_lost_Act(){
+act_0; dact_0; B1_lost_Act()}
+//##########Failure Behavior of "f_leaf" named "B2"
+process B2(){
+process P1() {alt{::dact_7;B2()::rate(0.1) tau{=B2=true=}; fail_B2; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=B2=false=}; repaired_B2; B2()}::rate(0.1) tau{=B2=false=}; repaired_B2; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "B2"
+process B2_Act(){
+alt{:: act_2; S1() :: fail_B1; S1()} 
+process S1()  {alt {:: dact_2; B2_Act():: repaired_B1; B2_Act() :: act_2; S2() :: fail_B1; S2()}}
+process S2()  {alt {:: act_7; S3() :: dact_2; S1() :: repaired_B1; S1() }}
+process S3()  {alt {::  dact_2; S4() :: repaired_B1; S4()}}
+process S4()  {alt {::dact_7; S1() :: dact_2; S5() :: repaired_B1; S5():: act_2; S3() :: fail_B1; S3()}}
+process S5()  {alt {::dact_7; B2_Act() ::  act_2; S4() :: fail_B1; S4()}}}
+//##########Failure Behavior of "or_gate" named "B2_lost"
+process B2_lost(){
+process P0(){fail_B2_lost;P2()}
+process P1(){repaired_B2_lost;B2_lost()}
+process P2(){alt{::repaired_B2;P1()::fail_B2; P3()::repaired_K1;P1()::fail_K1; P3()}}
+process P3(){alt{::repaired_B2;P2()::repaired_K1;P2()}} 
+ alt{::fail_B2; P0()::fail_K1; P0()}}
+//##########Activation Behavior of "or_gate" named "B2_lost"
+process B2_lost_Act(){
+alt{:: act_0; S1() :: act_1; S1()} 
+process S1()  {alt {::act_2; S4():: dact_0; B2_lost_Act():: dact_1; B2_lost_Act() :: act_0; S2() :: act_1; S2()}}
+process S2()  {alt {:: act_2; S3() :: dact_0; S1() :: dact_1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: dact_1; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_1; S5():: act_0; S3() :: act_1; S3()}}
+process S5()  {alt {::dact_2; B2_lost_Act() ::  act_0; S4() :: act_1; S4()}}}
+//##########Failure Behavior of "and_gate" named "B_lost"
+process B_lost(){
+process P0(){alt{::repaired_B1_lost;B_lost()::fail_B1_lost; P1()::repaired_B2_lost;B_lost()::fail_B2_lost; P1()::repaired_OR_1;B_lost()::fail_OR_1; P1()}}
+process P1(){alt{::repaired_B1_lost;P0()::fail_B1_lost; P2()::repaired_B2_lost;P0()::fail_B2_lost; P2()::repaired_OR_1;P0()::fail_OR_1; P2()}}
+process P2(){alt{::repaired_B1_lost;P1()::repaired_B2_lost;P1()::repaired_OR_1;P1()::fail_B_lost; P3()}}
+process P3(){alt{::repaired_B1_lost;P4()::repaired_B2_lost;P4()::repaired_OR_1;P4()}}
+process P4(){repaired_B_lost;P1()}
+alt{::fail_B1_lost; P0()::fail_B2_lost; P0()::fail_OR_1; P0()}}
+//##########Activation Behavior of "and_gate" named "B_lost"
+process B_lost_Act(){
+act_0; dact_0; B_lost_Act()}
+//##########Failure Behavior of "or_gate" named "OR_1"
+process OR_1(){
+process P0(){fail_OR_1;P2()}
+process P1(){repaired_OR_1;OR_1()}
+process P2(){alt{::repaired_K3;P1()::fail_K3; P3()::repaired_SF_1;P1()::fail_SF_1; P3()}}
+process P3(){alt{::repaired_K3;P2()::repaired_SF_1;P2()}} 
+ alt{::fail_K3; P0()::fail_SF_1; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_1"
+process OR_1_Act(){
+act_0; act_3; dact_0; dact_3; OR_1_Act()}
+//##########Failure Behavior of "or_gate" named "OR_2"
+process OR_2(){
+process P0(){fail_OR_2;P2()}
+process P1(){repaired_OR_2;OR_2()}
+process P2(){alt{::repaired_A2_lost;P1()::fail_A2_lost; P3()::repaired_B2_lost;P1()::fail_B2_lost; P3()}}
+process P3(){alt{::repaired_A2_lost;P2()::repaired_B2_lost;P2()}} 
+ alt{::fail_A2_lost; P0()::fail_B2_lost; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_2"
+process OR_2_Act(){
+act_1; when(false) dact_1; OR_2_Act()}
+//##########Failure Behavior of "f_leaf" named "K1"
+process K1(){
+process P1() {alt{::dact_6;K1()::rate(0.1) tau{=K1=true=}; fail_K1; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=K1=false=}; repaired_K1; K1()}::rate(0.1) tau{=K1=false=}; repaired_K1; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "K1"
+process K1_Act(){
+alt{:: act_2; S1() :: act_0; S1()} 
+process S1()  {alt {::act_6; S4():: dact_2; K1_Act():: dact_0; K1_Act() :: act_2; S2() :: act_0; S2()}}
+process S2()  {alt {:: act_6; S3() :: dact_2; S1() :: dact_0; S1() }}
+process S3()  {alt {::  dact_2; S4() :: dact_0; S4()}}
+process S4()  {alt { :: dact_2; S5() :: dact_0; S5():: act_2; S3() :: act_0; S3()}}
+process S5()  {alt {::dact_6; K1_Act() ::  act_2; S4() :: act_0; S4()}}}
+//##########Failure Behavior of "f_leaf" named "K2"
+process K2(){
+process P1() {alt{::dact_4;K2()::rate(0.1) tau{=K2=true=}; fail_K2; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=K2=false=}; repaired_K2; K2()}::rate(0.1) tau{=K2=false=}; repaired_K2; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "K2"
+process K2_Act(){
+alt{:: act_0; S1() :: act_5; S1()} 
+process S1()  {alt {::act_4; S4():: dact_0; K2_Act():: dact_5; K2_Act() :: act_0; S2() :: act_5; S2()}}
+process S2()  {alt {:: act_4; S3() :: dact_0; S1() :: dact_5; S1() }}
+process S3()  {alt {::  dact_0; S4() :: dact_5; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_5; S5():: act_0; S3() :: act_5; S3()}}
+process S5()  {alt {::dact_4; K2_Act() ::  act_0; S4() :: act_5; S4()}}}
+//##########Failure Behavior of "f_leaf" named "K3"
+process K3(){
+process P1() {alt{::dact_3;K3()::rate(0.1) tau{=K3=true=}; fail_K3; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=K3=false=}; repaired_K3; K3()}::rate(0.1) tau{=K3=false=}; repaired_K3; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "K3"
+process K3_Act(){
+act_3; dact_3; K3_Act()}
+//##########Failure Behavior of "sf_leaf" named "SF_1"
+process SF_1(){
+process P1() {alt{::dact_8;SF_1()::rate(0.1) tau{=SF_1=true=}; fail_SF_1; P2()}}
+process P2() {alt{::dact_8; P3()::rate(0.1) tau{=SF_1=false=}; repaired_SF_1; P1()}}
+process P3() {alt{:: rate(0.1) tau{= SF_1 = false=}; repaired_SF_1; SF_1() :: act_8; P2()}}
+alt{::act_8; P1() :: rate(0.01) tau; fail_SF_1; P3()}}
+//##########Activation Behavior of "sf_leaf" named "SF_1"
+process SF_1_Act(){
+alt{:: act_3; S1() :: fail_OR_2; S1()} 
+process S1()  {alt {:: dact_3; SF_1_Act():: repaired_OR_2; SF_1_Act() :: act_3; S2() :: fail_OR_2; S2()}}
+process S2()  {alt {:: act_8; S3() :: dact_3; S1() :: repaired_OR_2; S1() }}
+process S3()  {alt {::  dact_3; S4() :: repaired_OR_2; S4()}}
+process S4()  {alt {::dact_8; S1() :: dact_3; S5() :: repaired_OR_2; S5():: act_3; S3() :: fail_OR_2; S3()}}
+process S5()  {alt {::dact_8; SF_1_Act() ::  act_3; S4() :: fail_OR_2; S4()}}}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_AND_1 {=  UE_1=true, Fail = true=} ; repaired_AND_1 {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Composition of all files
+par
+{
+::A1()  :: A1_Act()
+::A1_lost()  :: A1_lost_Act()
+::A2()  :: A2_Act()
+::A2_lost()  :: A2_lost_Act()
+::AND_1()  :: AND_1_Act()
+::A_lost()  :: A_lost_Act()
+::B1()  :: B1_Act()
+::B1_lost()  :: B1_lost_Act()
+::B2()  :: B2_Act()
+::B2_lost()  :: B2_lost_Act()
+::B_lost()  :: B_lost_Act()
+::OR_1()  :: OR_1_Act()
+::OR_2()  :: OR_2_Act()
+::K1()  :: K1_Act()
+::K2()  :: K2_Act()
+::K3()  :: K3_Act()
+::SF_1()  :: SF_1_Act()
+:: UE_1()  :: UE_1_Act()
+}

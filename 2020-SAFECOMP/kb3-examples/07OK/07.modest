@@ -1,0 +1,118 @@
+//##########Automatically generated Modest file from: "07.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_2  , act_3  , act_4  , act_0  , act_1;
+action  dact_2  , dact_3  , dact_4  , dact_0  , dact_1;
+action  act_AND_1,dact_AND_1, fail_AND_1, repaired_AND_1;
+bool  AND_1 = false;
+action  act_AND_2,dact_AND_2, fail_AND_2, repaired_AND_2;
+bool  AND_2 = false;
+action  act_OR_1,dact_OR_1, fail_OR_1, repaired_OR_1;
+bool  OR_1 = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_cptA,dact_cptA, fail_cptA, repaired_cptA;
+bool  cptA = false;
+action  act_cptB,dact_cptB, fail_cptB, repaired_cptB;
+bool  cptB = false;
+action  act_cptC,dact_cptC, fail_cptC, repaired_cptC;
+bool  cptC = false;
+action  act_cptD,dact_cptD, fail_cptD, repaired_cptD;
+bool  cptD = false;
+//##########Failure Behavior of "and_gate" named "AND_1"
+process AND_1(){
+process P0(){alt{::repaired_cptA;AND_1()::fail_cptA; P1()::repaired_cptC;AND_1()::fail_cptC; P1()}}
+process P1() { fail_AND_1; P2() }
+process P2(){alt{::repaired_cptA;P3()::repaired_cptC;P3()}}
+process P3(){repaired_AND_1;P0()}
+alt{::fail_cptA; P0()::fail_cptC; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_1"
+process AND_1_Act(){
+act_0; dact_0; AND_1_Act()}
+//##########Failure Behavior of "and_gate" named "AND_2"
+process AND_2(){
+process P0(){alt{::repaired_cptB;AND_2()::fail_cptB; P1()::repaired_cptD;AND_2()::fail_cptD; P1()}}
+process P1() { fail_AND_2; P2() }
+process P2(){alt{::repaired_cptB;P3()::repaired_cptD;P3()}}
+process P3(){repaired_AND_2;P0()}
+alt{::fail_cptB; P0()::fail_cptD; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_2"
+process AND_2_Act(){
+act_0; dact_0; AND_2_Act()}
+//##########Failure Behavior of "or_gate" named "OR_1"
+process OR_1(){
+process P0(){fail_OR_1;P2()}
+process P1(){repaired_OR_1;OR_1()}
+process P2(){alt{::repaired_AND_1;P1()::fail_AND_1; P3()::repaired_AND_2;P1()::fail_AND_2; P3()}}
+process P3(){alt{::repaired_AND_1;P2()::repaired_AND_2;P2()}} 
+ alt{::fail_AND_1; P0()::fail_AND_2; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_1"
+process OR_1_Act(){
+act_0; dact_0; OR_1_Act()}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_OR_1 {=  UE_1=true, Fail = true=} ; repaired_OR_1 {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "f_leaf" named "cptA"
+process cptA(){
+process P1() {alt{::dact_3;cptA()::rate(0.1) tau{=cptA=true=}; fail_cptA; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=cptA=false=}; repaired_cptA; cptA()}::rate(0.1) tau{=cptA=false=}; repaired_cptA; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "cptA"
+process cptA_Act(){
+alt{::fail_cptB; S3():: act_0; S2()}
+process S0(){alt{:: dact_0; S3()::repaired_cptB; alt{:: act_3;S1():: dact_0;cptA_Act() }}}
+process S1(){alt{::dact_0;dact_3;cptA_Act()::fail_cptB; dact_3;S0()}}
+process S2(){alt{::dact_0;cptA_Act()::  act_3; S1()}}
+process S3(){alt{::repaired_cptB;cptA_Act():: act_0; S0()}}}
+//##########Failure Behavior of "f_leaf" named "cptB"
+process cptB(){
+process P1() {alt{::dact_1;cptB()::rate(0.1) tau{=cptB=true=}; fail_cptB; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=cptB=false=}; repaired_cptB; cptB()}::rate(0.1) tau{=cptB=false=}; repaired_cptB; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "cptB"
+process cptB_Act(){
+alt{::fail_cptA; S3():: act_0; S2()}
+process S0(){alt{:: dact_0; S3()::repaired_cptA; alt{:: act_1;S1():: dact_0;cptB_Act() }}}
+process S1(){alt{::dact_0;dact_1;cptB_Act()::fail_cptA; dact_1;S0()}}
+process S2(){alt{::dact_0;cptB_Act()::  act_1; S1()}}
+process S3(){alt{::repaired_cptA;cptB_Act():: act_0; S0()}}}
+//##########Failure Behavior of "f_leaf" named "cptC"
+process cptC(){
+process P1() {alt{::dact_4;cptC()::rate(0.1) tau{=cptC=true=}; fail_cptC; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=cptC=false=}; repaired_cptC; cptC()}::rate(0.1) tau{=cptC=false=}; repaired_cptC; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "cptC"
+process cptC_Act(){
+alt{:: act_0; S1() :: fail_cptA; S1()} 
+process S1()  {alt {:: dact_0; cptC_Act():: repaired_cptA; cptC_Act() :: act_0; S2() :: fail_cptA; S2()}}
+process S2()  {act_4; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_cptA; S4()}}
+process S4()  {dact_4; S1() }}
+//##########Failure Behavior of "f_leaf" named "cptD"
+process cptD(){
+process P1() {alt{::dact_2;cptD()::rate(0.1) tau{=cptD=true=}; fail_cptD; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=cptD=false=}; repaired_cptD; cptD()}::rate(0.1) tau{=cptD=false=}; repaired_cptD; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "cptD"
+process cptD_Act(){
+alt{:: act_0; S1() :: fail_cptB; S1()} 
+process S1()  {alt {:: dact_0; cptD_Act():: repaired_cptB; cptD_Act() :: act_0; S2() :: fail_cptB; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_cptB; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Composition of all files
+par
+{
+::AND_1()  :: AND_1_Act()
+::AND_2()  :: AND_2_Act()
+::OR_1()  :: OR_1_Act()
+:: UE_1()  :: UE_1_Act()
+::cptA()  :: cptA_Act()
+::cptB()  :: cptB_Act()
+::cptC()  :: cptC_Act()
+::cptD()  :: cptD_Act()
+}

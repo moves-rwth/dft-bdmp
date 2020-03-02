@@ -1,0 +1,211 @@
+//##########Automatically generated Modest file from: "51.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0  , act_2  , act_5  , act_1  , act_3  , act_4;
+action  dact_0  , dact_2  , dact_5  , dact_1  , dact_3  , dact_4;
+action  act_DCC_dem,dact_DCC_dem, fail_DCC_dem, good_DCC_dem, repaired_DCC_dem;
+bool  DCC_dem = false;
+action  act_DCC_fonc,dact_DCC_fonc, fail_DCC_fonc, repaired_DCC_fonc;
+bool  DCC_fonc = false;
+action  act_Diesel_A,dact_Diesel_A, fail_Diesel_A, repaired_Diesel_A;
+bool  Diesel_A = false;
+action  act_Diesel_B,dact_Diesel_B, fail_Diesel_B, repaired_Diesel_B;
+bool  Diesel_B = false;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_Perte_deux_tableaux,dact_Perte_deux_tableaux, fail_Perte_deux_tableaux, repaired_Perte_deux_tableaux;
+bool  Perte_deux_tableaux = false;
+action  act_RD_Diesel_A,dact_RD_Diesel_A, fail_RD_Diesel_A, good_RD_Diesel_A, repaired_RD_Diesel_A;
+bool  RD_Diesel_A = false;
+action  act_RD_Diesel_B,dact_RD_Diesel_B, fail_RD_Diesel_B, good_RD_Diesel_B, repaired_RD_Diesel_B;
+bool  RD_Diesel_B = false;
+action  act_TA,dact_TA, fail_TA, repaired_TA;
+bool  TA = false;
+action  act_TS,dact_TS, fail_TS, repaired_TS;
+bool  TS = false;
+action  act_perte_Diesel_A,dact_perte_Diesel_A, fail_perte_Diesel_A, repaired_perte_Diesel_A;
+bool  perte_Diesel_A = false;
+action  act_perte_Diesel_B,dact_perte_Diesel_B, fail_perte_Diesel_B, repaired_perte_Diesel_B;
+bool  perte_Diesel_B = false;
+action  act_perte_LHA,dact_perte_LHA, fail_perte_LHA, repaired_perte_LHA;
+bool  perte_LHA = false;
+action  act_perte_LHB,dact_perte_LHB, fail_perte_LHB, repaired_perte_LHB;
+bool  perte_LHB = false;
+//##########Failure Behavior of "i_leaf" named "DCC_dem"
+process DCC_dem(){
+act_4;P0() 
+process P0() {alt{:: dact_4; DCC_dem() :: palt{:0.5: {=DCC_dem = true =}; fail_DCC_dem; P2(): 1 - 0.5:good_DCC_dem;P1()}}}
+process P1() {dact_4; DCC_dem()}
+process P2() {alt {::dact_4; P3()::rate(0.1) {=DCC_dem = false =}; repaired_DCC_dem; P1()}}
+process P3() {alt {::act_4; alt {::dact_4;P3()::rate(0.1)tau{= DCC_dem = false =};repaired_DCC_dem;P0()}::rate(0.1)tau{= DCC_dem = false =}; repaired_DCC_dem; DCC_dem()}}}
+//##########Activation Behavior of "i_leaf" named "DCC_dem"
+process DCC_dem_Act(){
+alt{:: act_3; S1() :: act_2; S1()} 
+process S1()  { act_4; S4() }
+process S3()  {alt {::  dact_3; S4() :: dact_2; S4()}}
+process S4()  {alt { :: dact_3; S5() :: dact_2; S5():: act_3; S3() :: act_2; S3()}}
+process S5()  {dact_4; DCC_dem_Act() }}
+//##########Failure Behavior of "f_leaf" named "DCC_fonc"
+process DCC_fonc(){
+process P1() {alt{::dact_5;DCC_fonc()::rate(0.5) tau{=DCC_fonc=true=}; fail_DCC_fonc; P2()}}
+process P2() {alt{::dact_5; alt{::act_5; P2()::rate(0.1) tau{=DCC_fonc=false=}; repaired_DCC_fonc; DCC_fonc()}::rate(0.1) tau{=DCC_fonc=false=}; repaired_DCC_fonc; P1()}}
+act_5; P1()}
+//##########Activation Behavior of "f_leaf" named "DCC_fonc"
+process DCC_fonc_Act(){
+alt{:: act_3; S1() :: act_2; S1()} 
+process S1()  { act_5; S4() }
+process S3()  {alt {::  dact_3; S4() :: dact_2; S4()}}
+process S4()  {alt { :: dact_3; S5() :: dact_2; S5():: act_3; S3() :: act_2; S3()}}
+process S5()  {dact_5; DCC_fonc_Act() }}
+//##########Failure Behavior of "f_leaf" named "Diesel_A"
+process Diesel_A(){
+process P1() {alt{::dact_3;Diesel_A()::rate(0.1) tau{=Diesel_A=true=}; fail_Diesel_A; P2()}}
+process P2() {alt{::dact_3; alt{::act_3; P2()::rate(0.1) tau{=Diesel_A=false=}; repaired_Diesel_A; Diesel_A()}::rate(0.1) tau{=Diesel_A=false=}; repaired_Diesel_A; P1()}}
+act_3; P1()}
+//##########Activation Behavior of "f_leaf" named "Diesel_A"
+process Diesel_A_Act(){
+act_3; dact_3; Diesel_A_Act()}
+//##########Failure Behavior of "f_leaf" named "Diesel_B"
+process Diesel_B(){
+process P1() {alt{::dact_2;Diesel_B()::rate(0.1) tau{=Diesel_B=true=}; fail_Diesel_B; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=Diesel_B=false=}; repaired_Diesel_B; Diesel_B()}::rate(0.1) tau{=Diesel_B=false=}; repaired_Diesel_B; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "Diesel_B"
+process Diesel_B_Act(){
+act_2; dact_2; Diesel_B_Act()}
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_Perte_deux_tableaux {=  EI_1=true, Fail = true=} ; repaired_Perte_deux_tableaux {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_TA;ET_1()::fail_TA; P1()::repaired_TS;ET_1()::fail_TS; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_TA;P3()::repaired_TS;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_TA; P0()::fail_TS; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; act_1; dact_0; dact_1; ET_1_Act()}
+//##########Failure Behavior of "and_gate" named "Perte_deux_tableaux"
+process Perte_deux_tableaux(){
+process P0(){alt{::repaired_perte_LHA;Perte_deux_tableaux()::fail_perte_LHA; P1()::repaired_perte_LHB;Perte_deux_tableaux()::fail_perte_LHB; P1()}}
+process P1() { fail_Perte_deux_tableaux; P2() }
+process P2(){alt{::repaired_perte_LHA;P3()::repaired_perte_LHB;P3()}}
+process P3(){repaired_Perte_deux_tableaux;P0()}
+alt{::fail_perte_LHA; P0()::fail_perte_LHB; P0()}}
+//##########Activation Behavior of "and_gate" named "Perte_deux_tableaux"
+process Perte_deux_tableaux_Act(){
+act_0; dact_0; Perte_deux_tableaux_Act()}
+//##########Failure Behavior of "i_leaf" named "RD_Diesel_A"
+process RD_Diesel_A(){
+act_3;P0() 
+process P0() {alt{:: dact_3; RD_Diesel_A() :: palt{:0.5: {=RD_Diesel_A = true =}; fail_RD_Diesel_A; P2(): 1 - 0.5:good_RD_Diesel_A;P1()}}}
+process P1() {dact_3; RD_Diesel_A()}
+process P2() {alt {::dact_3; P3()::rate(0.1) {=RD_Diesel_A = false =}; repaired_RD_Diesel_A; P1()}}
+process P3() {alt {::act_3; alt {::dact_3;P3()::rate(0.1)tau{= RD_Diesel_A = false =};repaired_RD_Diesel_A;P0()}::rate(0.1)tau{= RD_Diesel_A = false =}; repaired_RD_Diesel_A; RD_Diesel_A()}}}
+//##########Activation Behavior of "i_leaf" named "RD_Diesel_A"
+process RD_Diesel_A_Act(){
+act_3; dact_3; RD_Diesel_A_Act()}
+//##########Failure Behavior of "i_leaf" named "RD_Diesel_B"
+process RD_Diesel_B(){
+act_2;P0() 
+process P0() {alt{:: dact_2; RD_Diesel_B() :: palt{:0.5: {=RD_Diesel_B = true =}; fail_RD_Diesel_B; P2(): 1 - 0.5:good_RD_Diesel_B;P1()}}}
+process P1() {dact_2; RD_Diesel_B()}
+process P2() {alt {::dact_2; P3()::rate(0.1) {=RD_Diesel_B = false =}; repaired_RD_Diesel_B; P1()}}
+process P3() {alt {::act_2; alt {::dact_2;P3()::rate(0.1)tau{= RD_Diesel_B = false =};repaired_RD_Diesel_B;P0()}::rate(0.1)tau{= RD_Diesel_B = false =}; repaired_RD_Diesel_B; RD_Diesel_B()}}}
+//##########Activation Behavior of "i_leaf" named "RD_Diesel_B"
+process RD_Diesel_B_Act(){
+act_2; dact_2; RD_Diesel_B_Act()}
+//##########Failure Behavior of "f_leaf" named "TA"
+process TA(){
+process P1() {alt{::dact_1;TA()::rate(0.5) tau{=TA=true=}; fail_TA; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=TA=false=}; repaired_TA; TA()}::rate(0.1) tau{=TA=false=}; repaired_TA; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "TA"
+process TA_Act(){
+act_1; dact_1; TA_Act()}
+//##########Failure Behavior of "f_leaf" named "TS"
+process TS(){
+process P1() {alt{::dact_1;TS()::rate(0.5) tau{=TS=true=}; fail_TS; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=TS=false=}; repaired_TS; TS()}::rate(0.1) tau{=TS=false=}; repaired_TS; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "TS"
+process TS_Act(){
+act_1; dact_1; TS_Act()}
+//##########Failure Behavior of "or_gate" named "perte_Diesel_A"
+process perte_Diesel_A(){
+process P0(){fail_perte_Diesel_A;P2()}
+process P1(){repaired_perte_Diesel_A;perte_Diesel_A()}
+process P2(){alt{::repaired_DCC_dem;P1()::fail_DCC_dem; P3()::repaired_DCC_fonc;P1()::fail_DCC_fonc; P3()::repaired_Diesel_A;P1()::fail_Diesel_A; P3()::repaired_RD_Diesel_A;P1()::fail_RD_Diesel_A; P3()}}
+process P3(){alt{::repaired_DCC_dem;P2()::fail_DCC_dem; P4()::repaired_DCC_fonc;P2()::fail_DCC_fonc; P4()::repaired_Diesel_A;P2()::fail_Diesel_A; P4()::repaired_RD_Diesel_A;P2()::fail_RD_Diesel_A; P4()}}
+process P4(){alt{::repaired_DCC_dem;P3()::fail_DCC_dem; P5()::repaired_DCC_fonc;P3()::fail_DCC_fonc; P5()::repaired_Diesel_A;P3()::fail_Diesel_A; P5()::repaired_RD_Diesel_A;P3()::fail_RD_Diesel_A; P5()}}
+process P5(){alt{::repaired_DCC_dem;P4()::repaired_DCC_fonc;P4()::repaired_Diesel_A;P4()::repaired_RD_Diesel_A;P4()}} 
+ alt{::fail_DCC_dem; P0()::fail_DCC_fonc; P0()::fail_Diesel_A; P0()::fail_RD_Diesel_A; P0()}}
+//##########Activation Behavior of "or_gate" named "perte_Diesel_A"
+process perte_Diesel_A_Act(){
+alt{:: act_0; S1() :: fail_ET_1; S1()} 
+process S1()  {alt {:: dact_0; perte_Diesel_A_Act():: repaired_ET_1; perte_Diesel_A_Act() :: act_0; S2() :: fail_ET_1; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_ET_1; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "or_gate" named "perte_Diesel_B"
+process perte_Diesel_B(){
+process P0(){fail_perte_Diesel_B;P2()}
+process P1(){repaired_perte_Diesel_B;perte_Diesel_B()}
+process P2(){alt{::repaired_DCC_dem;P1()::fail_DCC_dem; P3()::repaired_DCC_fonc;P1()::fail_DCC_fonc; P3()::repaired_Diesel_B;P1()::fail_Diesel_B; P3()::repaired_RD_Diesel_B;P1()::fail_RD_Diesel_B; P3()}}
+process P3(){alt{::repaired_DCC_dem;P2()::fail_DCC_dem; P4()::repaired_DCC_fonc;P2()::fail_DCC_fonc; P4()::repaired_Diesel_B;P2()::fail_Diesel_B; P4()::repaired_RD_Diesel_B;P2()::fail_RD_Diesel_B; P4()}}
+process P4(){alt{::repaired_DCC_dem;P3()::fail_DCC_dem; P5()::repaired_DCC_fonc;P3()::fail_DCC_fonc; P5()::repaired_Diesel_B;P3()::fail_Diesel_B; P5()::repaired_RD_Diesel_B;P3()::fail_RD_Diesel_B; P5()}}
+process P5(){alt{::repaired_DCC_dem;P4()::repaired_DCC_fonc;P4()::repaired_Diesel_B;P4()::repaired_RD_Diesel_B;P4()}} 
+ alt{::fail_DCC_dem; P0()::fail_DCC_fonc; P0()::fail_Diesel_B; P0()::fail_RD_Diesel_B; P0()}}
+//##########Activation Behavior of "or_gate" named "perte_Diesel_B"
+process perte_Diesel_B_Act(){
+alt{:: act_0; S1() :: fail_ET_1; S1()} 
+process S1()  {alt {:: dact_0; perte_Diesel_B_Act():: repaired_ET_1; perte_Diesel_B_Act() :: act_0; S2() :: fail_ET_1; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_ET_1; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "and_gate" named "perte_LHA"
+process perte_LHA(){
+process P0(){alt{::repaired_ET_1;perte_LHA()::fail_ET_1; P1()::repaired_perte_Diesel_A;perte_LHA()::fail_perte_Diesel_A; P1()}}
+process P1() { fail_perte_LHA; P2() }
+process P2(){alt{::repaired_ET_1;P3()::repaired_perte_Diesel_A;P3()}}
+process P3(){repaired_perte_LHA;P0()}
+alt{::fail_ET_1; P0()::fail_perte_Diesel_A; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_LHA"
+process perte_LHA_Act(){
+act_0; dact_0; perte_LHA_Act()}
+//##########Failure Behavior of "and_gate" named "perte_LHB"
+process perte_LHB(){
+process P0(){alt{::repaired_ET_1;perte_LHB()::fail_ET_1; P1()::repaired_perte_Diesel_B;perte_LHB()::fail_perte_Diesel_B; P1()}}
+process P1() { fail_perte_LHB; P2() }
+process P2(){alt{::repaired_ET_1;P3()::repaired_perte_Diesel_B;P3()}}
+process P3(){repaired_perte_LHB;P0()}
+alt{::fail_ET_1; P0()::fail_perte_Diesel_B; P0()}}
+//##########Activation Behavior of "and_gate" named "perte_LHB"
+process perte_LHB_Act(){
+act_0; dact_0; perte_LHB_Act()}
+//##########Composition of all files
+par
+{
+::DCC_dem()  :: DCC_dem_Act()
+::DCC_fonc()  :: DCC_fonc_Act()
+::Diesel_A()  :: Diesel_A_Act()
+::Diesel_B()  :: Diesel_B_Act()
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::Perte_deux_tableaux()  :: Perte_deux_tableaux_Act()
+::RD_Diesel_A()  :: RD_Diesel_A_Act()
+::RD_Diesel_B()  :: RD_Diesel_B_Act()
+::TA()  :: TA_Act()
+::TS()  :: TS_Act()
+::perte_Diesel_A()  :: perte_Diesel_A_Act()
+::perte_Diesel_B()  :: perte_Diesel_B_Act()
+::perte_LHA()  :: perte_LHA_Act()
+::perte_LHB()  :: perte_LHB_Act()
+}

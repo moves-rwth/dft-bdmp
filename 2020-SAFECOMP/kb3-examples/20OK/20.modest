@@ -1,0 +1,159 @@
+//##########Automatically generated Modest file from: "20.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_1  , act_0;
+action  dact_1  , dact_0;
+action  act_One_of_subsystems_is_lost,dact_One_of_subsystems_is_lost, fail_One_of_subsystems_is_lost, repaired_One_of_subsystems_is_lost;
+bool  One_of_subsystems_is_lost = false;
+action  act_Total_loss_of_production,dact_Total_loss_of_production, fail_Total_loss_of_production, repaired_Total_loss_of_production;
+bool  Total_loss_of_production = false, Fail=false;
+action  act_fail_A,dact_fail_A, fail_fail_A, repaired_fail_A;
+bool  fail_A = false;
+action  act_fail_C1,dact_fail_C1, fail_fail_C1, repaired_fail_C1;
+bool  fail_C1 = false;
+action  act_fail_C2,dact_fail_C2, fail_fail_C2, repaired_fail_C2;
+bool  fail_C2 = false;
+action  act_fail_D1,dact_fail_D1, fail_fail_D1, repaired_fail_D1;
+bool  fail_D1 = false;
+action  act_fail_D2,dact_fail_D2, fail_fail_D2, repaired_fail_D2;
+bool  fail_D2 = false;
+action  act_fail_SS2,dact_fail_SS2, fail_fail_SS2, repaired_fail_SS2;
+bool  fail_SS2 = false;
+action  act_fail_SS3,dact_fail_SS3, fail_fail_SS3, repaired_fail_SS3;
+bool  fail_SS3 = false;
+action  act_fail_subsys_C,dact_fail_subsys_C, fail_fail_subsys_C, repaired_fail_subsys_C;
+bool  fail_subsys_C = false;
+action  act_fail_subsys_D,dact_fail_subsys_D, fail_fail_subsys_D, repaired_fail_subsys_D;
+bool  fail_subsys_D = false;
+//##########Failure Behavior of "or_gate" named "One_of_subsystems_is_lost"
+process One_of_subsystems_is_lost(){
+process P0(){fail_One_of_subsystems_is_lost;P2()}
+process P1(){repaired_One_of_subsystems_is_lost;One_of_subsystems_is_lost()}
+process P2(){alt{::repaired_fail_A;P1()::fail_fail_A; P3()::repaired_fail_SS2;P1()::fail_fail_SS2; P3()::repaired_fail_SS3;P1()::fail_fail_SS3; P3()}}
+process P3(){alt{::repaired_fail_A;P2()::fail_fail_A; P4()::repaired_fail_SS2;P2()::fail_fail_SS2; P4()::repaired_fail_SS3;P2()::fail_fail_SS3; P4()}}
+process P4(){alt{::repaired_fail_A;P3()::repaired_fail_SS2;P3()::repaired_fail_SS3;P3()}} 
+ alt{::fail_fail_A; P0()::fail_fail_SS2; P0()::fail_fail_SS3; P0()}}
+//##########Activation Behavior of "or_gate" named "One_of_subsystems_is_lost"
+process One_of_subsystems_is_lost_Act(){
+act_0; dact_0; One_of_subsystems_is_lost_Act()}
+//##########Failure Behavior of "undes_event" named "Total_loss_of_production"
+process Total_loss_of_production() {
+fail_One_of_subsystems_is_lost {=  Total_loss_of_production=true, Fail = true=} ; repaired_One_of_subsystems_is_lost {=  Total_loss_of_production=false, Fail = false=}; Total_loss_of_production()
+ }
+//##########Activation Behavior of "undes_event" named "Total_loss_of_production"
+process Total_loss_of_production_Act(){
+act_0; when(false) dact_0; Total_loss_of_production_Act()}
+//##########Failure Behavior of "f_leaf" named "fail_A"
+process fail_A(){
+process P1() {alt{::dact_0;fail_A()::rate(0.1) tau{=fail_A=true=}; fail_fail_A; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=fail_A=false=}; repaired_fail_A; fail_A()}::rate(0.1) tau{=fail_A=false=}; repaired_fail_A; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "fail_A"
+process fail_A_Act(){
+act_0; dact_0; fail_A_Act()}
+//##########Failure Behavior of "f_leaf" named "fail_C1"
+process fail_C1(){
+process P1() {alt{::dact_0;fail_C1()::rate(0.1) tau{=fail_C1=true=}; fail_fail_C1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=fail_C1=false=}; repaired_fail_C1; fail_C1()}::rate(0.1) tau{=fail_C1=false=}; repaired_fail_C1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "fail_C1"
+process fail_C1_Act(){
+act_0; dact_0; fail_C1_Act()}
+//##########Failure Behavior of "f_leaf" named "fail_C2"
+process fail_C2(){
+process P1() {alt{::dact_1;fail_C2()::rate(0.1) tau{=fail_C2=true=}; fail_fail_C2; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=fail_C2=false=}; repaired_fail_C2; fail_C2()}::rate(0.1) tau{=fail_C2=false=}; repaired_fail_C2; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "fail_C2"
+process fail_C2_Act(){
+alt{:: act_0; S1() :: fail_fail_C1; S1()} 
+process S1()  {alt {:: dact_0; fail_C2_Act():: repaired_fail_C1; fail_C2_Act() :: act_0; S2() :: fail_fail_C1; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_fail_C1; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "f_leaf" named "fail_D1"
+process fail_D1(){
+process P1() {alt{::dact_0;fail_D1()::rate(0.1) tau{=fail_D1=true=}; fail_fail_D1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=fail_D1=false=}; repaired_fail_D1; fail_D1()}::rate(0.1) tau{=fail_D1=false=}; repaired_fail_D1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "fail_D1"
+process fail_D1_Act(){
+act_0; dact_0; fail_D1_Act()}
+//##########Failure Behavior of "f_leaf" named "fail_D2"
+process fail_D2(){
+process P1() {alt{::dact_0;fail_D2()::rate(0.1) tau{=fail_D2=true=}; fail_fail_D2; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=fail_D2=false=}; repaired_fail_D2; fail_D2()}::rate(0.1) tau{=fail_D2=false=}; repaired_fail_D2; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "fail_D2"
+process fail_D2_Act(){
+act_0; dact_0; fail_D2_Act()}
+//##########Failure Behavior of "and_gate" named "fail_SS2"
+process fail_SS2(){
+process P0(){alt{::repaired_fail_subsys_C;fail_SS2()::fail_fail_subsys_C; P1()::repaired_fail_subsys_D;fail_SS2()::fail_fail_subsys_D; P1()}}
+process P1() { fail_fail_SS2; P2() }
+process P2(){alt{::repaired_fail_subsys_C;P3()::repaired_fail_subsys_D;P3()}}
+process P3(){repaired_fail_SS2;P0()}
+alt{::fail_fail_subsys_C; P0()::fail_fail_subsys_D; P0()}}
+//##########Activation Behavior of "and_gate" named "fail_SS2"
+process fail_SS2_Act(){
+act_0; dact_0; fail_SS2_Act()}
+//##########Failure Behavior of "multiple_leaf" named "fail_SS3"
+process fail_SS3(){
+process P1() { alt{::rate(0.1) tau; P0() ::rate(0.7)tau; P2():: dact_0; P1_rest()}}
+process P1_rest() { act_0; P1()}
+process P2() { alt{::rate(0.2) tau; P1() ::rate(0.6)tau; P3():: dact_0; P2_rest()}}
+process P2_rest() { act_0; P2()}
+process P3() {alt{::fail_fail_SS3 {= fail_SS3 = false =}; P3A() :: rate(0.3) tau; P2():: dact_0; P3_rest()}}
+process P3_rest() { act_0; P3()}
+process P3A() { alt{:: rate(0.5) tau; P4() ::rate(0.3) tau;repaired_fail_SS3 {= fail_SS3 = false =}; P2():: dact_0; P3A_rest()}}
+process P3A_rest() { act_0; P3A()}
+process P4() {alt{::rate(0.4) tau; P5()::rate(0.4) tau; P3A():: dact_0; P4_rest()}}
+process P4_rest() { act_0; P4()}
+process P5() { alt{::rate(0.5) tau; P4() ::rate(0.3)tau; P6():: dact_0; P5_rest()}}
+process P5_rest() { act_0; P5()}
+process P6() { alt{::rate(0.6) tau; P5() ::rate(0.2)tau; P7():: dact_0; P6_rest()}}
+process P6_rest() { act_0; P6()}
+process P7() { alt{::rate(0.7) tau; P6() ::rate(0.1)tau; P8():: dact_0; P7_rest()}}
+process P7_rest() { act_0; P7()}
+process P8() {alt{:: rate(0.8) tau; P7():: dact_0; P8_rest()}} 
+process P8_rest() { act_0; P8()}
+process P0() {alt{::dact_0; fail_SS3() :: rate(0.8) tau; P1()}}
+act_0; P0()}
+//##########Activation Behavior of "multiple_leaf" named "fail_SS3"
+process fail_SS3_Act(){
+act_0; dact_0; fail_SS3_Act()}
+//##########Failure Behavior of "and_gate" named "fail_subsys_C"
+process fail_subsys_C(){
+process P0(){alt{::repaired_fail_C1;fail_subsys_C()::fail_fail_C1; P1()::repaired_fail_C2;fail_subsys_C()::fail_fail_C2; P1()}}
+process P1() { fail_fail_subsys_C; P2() }
+process P2(){alt{::repaired_fail_C1;P3()::repaired_fail_C2;P3()}}
+process P3(){repaired_fail_subsys_C;P0()}
+alt{::fail_fail_C1; P0()::fail_fail_C2; P0()}}
+//##########Activation Behavior of "and_gate" named "fail_subsys_C"
+process fail_subsys_C_Act(){
+act_0; dact_0; fail_subsys_C_Act()}
+//##########Failure Behavior of "and_gate" named "fail_subsys_D"
+process fail_subsys_D(){
+process P0(){alt{::repaired_fail_D1;fail_subsys_D()::fail_fail_D1; P1()::repaired_fail_D2;fail_subsys_D()::fail_fail_D2; P1()}}
+process P1() { fail_fail_subsys_D; P2() }
+process P2(){alt{::repaired_fail_D1;P3()::repaired_fail_D2;P3()}}
+process P3(){repaired_fail_subsys_D;P0()}
+alt{::fail_fail_D1; P0()::fail_fail_D2; P0()}}
+//##########Activation Behavior of "and_gate" named "fail_subsys_D"
+process fail_subsys_D_Act(){
+act_0; dact_0; fail_subsys_D_Act()}
+//##########Composition of all files
+par
+{
+::One_of_subsystems_is_lost()  :: One_of_subsystems_is_lost_Act()
+:: Total_loss_of_production()  :: Total_loss_of_production_Act()
+::fail_A()  :: fail_A_Act()
+::fail_C1()  :: fail_C1_Act()
+::fail_C2()  :: fail_C2_Act()
+::fail_D1()  :: fail_D1_Act()
+::fail_D2()  :: fail_D2_Act()
+::fail_SS2()  :: fail_SS2_Act()
+::fail_SS3()  :: fail_SS3_Act()
+::fail_subsys_C()  :: fail_subsys_C_Act()
+::fail_subsys_D()  :: fail_subsys_D_Act()
+}

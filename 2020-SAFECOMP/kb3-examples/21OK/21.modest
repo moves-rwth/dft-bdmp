@@ -1,0 +1,134 @@
+//##########Automatically generated Modest file from: "21.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_2  , act_0  , act_1;
+action  dact_2  , dact_0  , dact_1;
+action  act_Authentication_with_password,dact_Authentication_with_password, fail_Authentication_with_password, repaired_Authentication_with_password;
+bool  Authentication_with_password = false;
+action  act_Bruteforce,dact_Bruteforce, fail_Bruteforce, repaired_Bruteforce;
+bool  Bruteforce = false;
+action  act_Exploit_vulnerability,dact_Exploit_vulnerability, fail_Exploit_vulnerability, repaired_Exploit_vulnerability;
+bool  Exploit_vulnerability = false;
+action  act_Find_vulnerability,dact_Find_vulnerability, fail_Find_vulnerability, repaired_Find_vulnerability;
+bool  Find_vulnerability = false;
+action  act_Logged_into_the_RAS,dact_Logged_into_the_RAS, fail_Logged_into_the_RAS, repaired_Logged_into_the_RAS;
+bool  Logged_into_the_RAS = false;
+action  act_RAS_access_granted,dact_RAS_access_granted, fail_RAS_access_granted, repaired_RAS_access_granted;
+bool  RAS_access_granted = false;
+action  act_RAS_ownership,dact_RAS_ownership, fail_RAS_ownership, repaired_RAS_ownership;
+bool  RAS_ownership = false, Fail=false;
+action  act_Social_engineering,dact_Social_engineering, fail_Social_engineering, repaired_Social_engineering;
+bool  Social_engineering = false;
+action  act_Vulnerability_found_and_exploited,dact_Vulnerability_found_and_exploited, fail_Vulnerability_found_and_exploited, repaired_Vulnerability_found_and_exploited;
+bool  Vulnerability_found_and_exploited = false;
+action  act_Wardialing,dact_Wardialing, fail_Wardialing, repaired_Wardialing;
+bool  Wardialing = false;
+//##########Failure Behavior of "or_gate" named "Authentication_with_password"
+process Authentication_with_password(){
+process P0(){fail_Authentication_with_password;P2()}
+process P1(){repaired_Authentication_with_password;Authentication_with_password()}
+process P2(){alt{::repaired_Bruteforce;P1()::fail_Bruteforce; P3()::repaired_Social_engineering;P1()::fail_Social_engineering; P3()}}
+process P3(){alt{::repaired_Bruteforce;P2()::repaired_Social_engineering;P2()}} 
+ alt{::fail_Bruteforce; P0()::fail_Social_engineering; P0()}}
+//##########Activation Behavior of "or_gate" named "Authentication_with_password"
+process Authentication_with_password_Act(){
+act_1; dact_1; Authentication_with_password_Act()}
+//##########Failure Behavior of "f_leaf" named "Bruteforce"
+process Bruteforce(){
+process P1() {alt{::dact_1;Bruteforce()::rate(0.01) tau{=Bruteforce=true=}; fail_Bruteforce; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=Bruteforce=false=}; repaired_Bruteforce; Bruteforce()}::rate(0.1) tau{=Bruteforce=false=}; repaired_Bruteforce; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "Bruteforce"
+process Bruteforce_Act(){
+act_1; dact_1; Bruteforce_Act()}
+//##########Failure Behavior of "f_leaf" named "Exploit_vulnerability"
+process Exploit_vulnerability(){
+process P1() {alt{::dact_2;Exploit_vulnerability()::rate(0.1) tau{=Exploit_vulnerability=true=}; fail_Exploit_vulnerability; P2()}}
+process P2() {alt{::dact_2; alt{::act_2; P2()::rate(0.1) tau{=Exploit_vulnerability=false=}; repaired_Exploit_vulnerability; Exploit_vulnerability()}::rate(0.1) tau{=Exploit_vulnerability=false=}; repaired_Exploit_vulnerability; P1()}}
+act_2; P1()}
+//##########Activation Behavior of "f_leaf" named "Exploit_vulnerability"
+process Exploit_vulnerability_Act(){
+alt{:: act_1; S1() :: fail_Find_vulnerability; S1()} 
+process S1()  {alt {:: dact_1; Exploit_vulnerability_Act():: repaired_Find_vulnerability; Exploit_vulnerability_Act() :: act_1; S2() :: fail_Find_vulnerability; S2()}}
+process S2()  {act_2; S3()}
+process S3()  {alt {::  dact_1; S4() :: repaired_Find_vulnerability; S4()}}
+process S4()  {dact_2; S1() }}
+//##########Failure Behavior of "f_leaf" named "Find_vulnerability"
+process Find_vulnerability(){
+process P1() {alt{::dact_1;Find_vulnerability()::rate(0.1) tau{=Find_vulnerability=true=}; fail_Find_vulnerability; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=Find_vulnerability=false=}; repaired_Find_vulnerability; Find_vulnerability()}::rate(0.1) tau{=Find_vulnerability=false=}; repaired_Find_vulnerability; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "Find_vulnerability"
+process Find_vulnerability_Act(){
+act_1; dact_1; Find_vulnerability_Act()}
+//##########Failure Behavior of "and_gate" named "Logged_into_the_RAS"
+process Logged_into_the_RAS(){
+process P0(){alt{::repaired_RAS_access_granted;Logged_into_the_RAS()::fail_RAS_access_granted; P1()::repaired_Wardialing;Logged_into_the_RAS()::fail_Wardialing; P1()}}
+process P1() { fail_Logged_into_the_RAS; P2() }
+process P2(){alt{::repaired_RAS_access_granted;P3()::repaired_Wardialing;P3()}}
+process P3(){repaired_Logged_into_the_RAS;P0()}
+alt{::fail_RAS_access_granted; P0()::fail_Wardialing; P0()}}
+//##########Activation Behavior of "and_gate" named "Logged_into_the_RAS"
+process Logged_into_the_RAS_Act(){
+act_0; dact_0; Logged_into_the_RAS_Act()}
+//##########Failure Behavior of "or_gate" named "RAS_access_granted"
+process RAS_access_granted(){
+process P0(){fail_RAS_access_granted;P2()}
+process P1(){repaired_RAS_access_granted;RAS_access_granted()}
+process P2(){alt{::repaired_Authentication_with_password;P1()::fail_Authentication_with_password; P3()::repaired_Vulnerability_found_and_exploited;P1()::fail_Vulnerability_found_and_exploited; P3()}}
+process P3(){alt{::repaired_Authentication_with_password;P2()::repaired_Vulnerability_found_and_exploited;P2()}} 
+ alt{::fail_Authentication_with_password; P0()::fail_Vulnerability_found_and_exploited; P0()}}
+//##########Activation Behavior of "or_gate" named "RAS_access_granted"
+process RAS_access_granted_Act(){
+alt{:: act_0; S1() :: fail_Wardialing; S1()} 
+process S1()  {alt {:: dact_0; RAS_access_granted_Act():: repaired_Wardialing; RAS_access_granted_Act() :: act_0; S2() :: fail_Wardialing; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_Wardialing; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "undes_event" named "RAS_ownership"
+process RAS_ownership() {
+fail_Logged_into_the_RAS {=  RAS_ownership=true, Fail = true=} ; repaired_Logged_into_the_RAS {=  RAS_ownership=false, Fail = false=}; RAS_ownership()
+ }
+//##########Activation Behavior of "undes_event" named "RAS_ownership"
+process RAS_ownership_Act(){
+act_0; when(false) dact_0; RAS_ownership_Act()}
+//##########Failure Behavior of "f_leaf" named "Social_engineering"
+process Social_engineering(){
+process P1() {alt{::dact_1;Social_engineering()::rate(0.05) tau{=Social_engineering=true=}; fail_Social_engineering; P2()}}
+process P2() {alt{::dact_1; alt{::act_1; P2()::rate(0.1) tau{=Social_engineering=false=}; repaired_Social_engineering; Social_engineering()}::rate(0.1) tau{=Social_engineering=false=}; repaired_Social_engineering; P1()}}
+act_1; P1()}
+//##########Activation Behavior of "f_leaf" named "Social_engineering"
+process Social_engineering_Act(){
+act_1; dact_1; Social_engineering_Act()}
+//##########Failure Behavior of "and_gate" named "Vulnerability_found_and_exploited"
+process Vulnerability_found_and_exploited(){
+process P0(){alt{::repaired_Exploit_vulnerability;Vulnerability_found_and_exploited()::fail_Exploit_vulnerability; P1()::repaired_Find_vulnerability;Vulnerability_found_and_exploited()::fail_Find_vulnerability; P1()}}
+process P1() { fail_Vulnerability_found_and_exploited; P2() }
+process P2(){alt{::repaired_Exploit_vulnerability;P3()::repaired_Find_vulnerability;P3()}}
+process P3(){repaired_Vulnerability_found_and_exploited;P0()}
+alt{::fail_Exploit_vulnerability; P0()::fail_Find_vulnerability; P0()}}
+//##########Activation Behavior of "and_gate" named "Vulnerability_found_and_exploited"
+process Vulnerability_found_and_exploited_Act(){
+act_1; dact_1; Vulnerability_found_and_exploited_Act()}
+//##########Failure Behavior of "f_leaf" named "Wardialing"
+process Wardialing(){
+process P1() {alt{::dact_0;Wardialing()::rate(0.01) tau{=Wardialing=true=}; fail_Wardialing; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Wardialing=false=}; repaired_Wardialing; Wardialing()}::rate(0.1) tau{=Wardialing=false=}; repaired_Wardialing; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Wardialing"
+process Wardialing_Act(){
+act_0; dact_0; Wardialing_Act()}
+//##########Composition of all files
+par
+{
+::Authentication_with_password()  :: Authentication_with_password_Act()
+::Bruteforce()  :: Bruteforce_Act()
+::Exploit_vulnerability()  :: Exploit_vulnerability_Act()
+::Find_vulnerability()  :: Find_vulnerability_Act()
+::Logged_into_the_RAS()  :: Logged_into_the_RAS_Act()
+::RAS_access_granted()  :: RAS_access_granted_Act()
+:: RAS_ownership()  :: RAS_ownership_Act()
+::Social_engineering()  :: Social_engineering_Act()
+::Vulnerability_found_and_exploited()  :: Vulnerability_found_and_exploited_Act()
+::Wardialing()  :: Wardialing_Act()
+}

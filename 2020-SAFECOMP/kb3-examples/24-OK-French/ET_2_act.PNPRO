@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="P1" superposition-tags="act_2" x="14.0" y="7.0"/>
+      <place marking="1" name="P0" superposition-tags="dact_1" x="3.0" y="6.0"/>
+      <place name="P3" superposition-tags="fail_b" x="11.0" y="14.0"/>
+      <transition name="t10" type="IMM" x="8.85" y="10.0"/>
+      <transition name="t3" type="IMM" x="9.85" y="1.0"/>
+      <transition name="t11" type="IMM" x="8.85" y="6.0"/>
+      <place name="P2" superposition-tags="act_0" x="3.0" y="14.0"/>
+    </nodes>
+    <edges>
+      <arc head="t10" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="t10"/>
+      <arc head="t10" kind="INPUT" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" tail="t10"/>
+      <arc head="t11" kind="INPUT" tail="P1"/>
+      <arc head="P0" kind="OUTPUT" tail="t11"/>
+      <arc head="t3" kind="INPUT" tail="P1"/>
+      <arc head="P0" kind="OUTPUT" tail="t3"/>
+      <arc head="t10" kind="INPUT" tail="P2"/>
+      <arc head="P2" kind="OUTPUT" tail="t10"/>
+      <arc head="t11" kind="INHIBITOR" tail="P2"/>
+      <arc head="t3" kind="INHIBITOR" tail="P3"/>
+    </edges>
+  </gspn>
+</project>

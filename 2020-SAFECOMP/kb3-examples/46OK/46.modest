@@ -1,0 +1,95 @@
+//##########Automatically generated Modest file from: "46.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0;
+action  dact_0;
+action  act_Bascule,dact_Bascule, fail_Bascule, repaired_Bascule;
+bool  Bascule = false;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_ET_1,dact_ET_1, fail_ET_1, repaired_ET_1;
+bool  ET_1 = false;
+action  act_OU_1,dact_OU_1, fail_OU_1, repaired_OU_1;
+bool  OU_1 = false;
+action  act_PUIS_1,dact_PUIS_1, fail_PUIS_1, repaired_PUIS_1;
+bool  PUIS_1 = false;
+action  act_Primaire,dact_Primaire, fail_Primaire, repaired_Primaire;
+bool  Primaire = false;
+action  act_Secondaire,dact_Secondaire, fail_Secondaire, repaired_Secondaire;
+bool  Secondaire = false;
+//##########Failure Behavior of "f_leaf" named "Bascule"
+process Bascule(){
+process P1() {alt{::dact_0;Bascule()::rate(0.1) tau{=Bascule=true=}; fail_Bascule; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Bascule=false=}; repaired_Bascule; Bascule()}::rate(0.1) tau{=Bascule=false=}; repaired_Bascule; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Bascule"
+process Bascule_Act(){
+act_0; dact_0; Bascule_Act()}
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_OU_1 {=  EI_1=true, Fail = true=} ; repaired_OU_1 {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "and_gate" named "ET_1"
+process ET_1(){
+process P0(){alt{::repaired_Primaire;ET_1()::fail_Primaire; P1()::repaired_Secondaire;ET_1()::fail_Secondaire; P1()}}
+process P1() { fail_ET_1; P2() }
+process P2(){alt{::repaired_Primaire;P3()::repaired_Secondaire;P3()}}
+process P3(){repaired_ET_1;P0()}
+alt{::fail_Primaire; P0()::fail_Secondaire; P0()}}
+//##########Activation Behavior of "and_gate" named "ET_1"
+process ET_1_Act(){
+act_0; dact_0; ET_1_Act()}
+//##########Failure Behavior of "or_gate" named "OU_1"
+process OU_1(){
+process P0(){fail_OU_1;P2()}
+process P1(){repaired_OU_1;OU_1()}
+process P2(){alt{::repaired_ET_1;P1()::fail_ET_1; P3()::repaired_PUIS_1;P1()::fail_PUIS_1; P3()}}
+process P3(){alt{::repaired_ET_1;P2()::repaired_PUIS_1;P2()}} 
+ alt{::fail_ET_1; P0()::fail_PUIS_1; P0()}}
+//##########Activation Behavior of "or_gate" named "OU_1"
+process OU_1_Act(){
+act_0; dact_0; OU_1_Act()}
+//##########Failure Behavior of "then_gate" named "PUIS_1"
+process PUIS_1(){
+alt { :: fail_Bascule; S1():: fail_Primaire; S2()}
+process S1() {alt { :: repaired_Bascule;PUIS_1() :: fail_Primaire; S3()}}
+process S2() {alt { :: repaired_Primaire;PUIS_1() :: fail_Bascule; S4()}}
+process S3() {alt { :: fail_PUIS_1{=PUIS_1=true=}; S5() :: repaired_Primaire; S1()::repaired_Bascule; S2()}}
+process S4()  {alt {:: repaired_Primaire; S1():: repaired_Bascule;S2()}}
+process S5() {alt { :: repaired_Primaire; S6():: repaired_Bascule;S7()}}
+process S6() {alt { :: repaired_Bascule; S8():: fail_Primaire; S5() :: repaired_PUIS_1{=PUIS_1=false=}; S1()}}
+process S7() {alt { :: repaired_Primaire; S8():: fail_Bascule; S5() :: repaired_PUIS_1{=PUIS_1=false=}; S2()}}
+process S8() {alt { :: fail_Bascule; S6() :: fail_Primaire; S7():: repaired_PUIS_1{=PUIS_1=false=};PUIS_1()}}}
+//##########Activation Behavior of "then_gate" named "PUIS_1"
+process PUIS_1_Act(){
+act_0; dact_0; PUIS_1_Act()}
+//##########Failure Behavior of "f_leaf" named "Primaire"
+process Primaire(){
+process P1() {alt{::dact_0;Primaire()::rate(0.1) tau{=Primaire=true=}; fail_Primaire; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Primaire=false=}; repaired_Primaire; Primaire()}::rate(0.1) tau{=Primaire=false=}; repaired_Primaire; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Primaire"
+process Primaire_Act(){
+act_0; dact_0; Primaire_Act()}
+//##########Failure Behavior of "f_leaf" named "Secondaire"
+process Secondaire(){
+process P1() {alt{::dact_0;Secondaire()::rate(0.1) tau{=Secondaire=true=}; fail_Secondaire; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=Secondaire=false=}; repaired_Secondaire; Secondaire()}::rate(0.1) tau{=Secondaire=false=}; repaired_Secondaire; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "Secondaire"
+process Secondaire_Act(){
+act_0; dact_0; Secondaire_Act()}
+//##########Composition of all files
+par
+{
+::Bascule()  :: Bascule_Act()
+:: EI_1()  :: EI_1_Act()
+::ET_1()  :: ET_1_Act()
+::OU_1()  :: OU_1_Act()
+::PUIS_1()  :: PUIS_1_Act()
+::Primaire()  :: Primaire_Act()
+::Secondaire()  :: Secondaire_Act()
+}

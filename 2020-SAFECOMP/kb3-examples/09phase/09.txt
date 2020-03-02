@@ -1,0 +1,471 @@
+           'Name': 'Cpt_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'Cpt_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_3', 'OR_1', 'OR_3'],
+           'Name': 'Cpt_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'Cpt_C': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_3', 'OR_3'],
+           'Name': 'Cpt_C',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'OR_1',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '8',
+           'mu': '0.1'},
+ 'OR_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'OR_1',
+          'Previous': 'Null',
+          'Sons': ['Cpt_A', 'Cpt_B'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '1'},
+ 'OR_2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['UE_1'],
+          'Name': 'OR_2',
+          'Previous': 'Null',
+          'Sons': ['AND_1', 'AND_2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '0'},
+ 'OR_3': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['AND_2'],
+          'Name': 'OR_3',
+          'Previous': 'Null',
+          'Sons': ['Cpt_A', 'Cpt_B', 'Cpt_C'],
+          'Triggered_by': 'phase_2',
+          'Type': 'or_gate',
+          'module': '4'},
+ 'UE_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'UE_1',
+          'Previous': 'Null',
+          'Sons': ['OR_2'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'phase_1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_1'],
+             'In_progress': 'TRUE',
+             'Name': 'phase_1',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'phase_leaf',
+             'lambda': '0.1',
+             'module': '2'},
+ 'phase_2': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_2'],
+             'In_progress': 'FALSE',
+             'Name': 'phase_2',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'phase_1',
+             'Type': 'phase_leaf',
+             'lambda': '1.0',
+             'module': '3'}}
+{'AND_1': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['OR_2'],
+           'Name': 'AND_1',
+           'Previous': 'Null',
+           'Sons': ['AND_3_0', 'phase_1'],
+           'Triggered_by': 'Null',
+           'Type': 'and_gate',
+           'module': '0'},
+ 'AND_2': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['OR_2'],
+           'Name': 'AND_2',
+           'Previous': 'Null',
+           'Sons': ['OR_3_0', 'phase_2'],
+           'Triggered_by': 'Null',
+           'Type': 'and_gate',
+           'module': '0'},
+ 'AND_3_0': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_1'],
+             'Name': 'AND_3_0',
+             'Previous': 'Null',
+             'Sons': ['Cpt_A', 'AND_3_1'],
+             'Triggered_by': 'phase_1',
+             'Type': 'and_gate',
+             'module': '5'},
+ 'AND_3_1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_3_0'],
+             'Name': 'AND_3_1',
+             'Previous': 'Null',
+             'Sons': ['Cpt_B', 'Cpt_C'],
+             'Triggered_by': 'Null',
+             'Type': 'and_gate',
+             'module': '5'},
+ 'Cpt_A': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_3_0', 'OR_1', 'OR_3_0'],
+           'Name': 'Cpt_A',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '6',
+           'mu': '0.1'},
+ 'Cpt_B': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_3_1', 'OR_1', 'OR_3_1'],
+           'Name': 'Cpt_B',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '7',
+           'mu': '0.1'},
+ 'Cpt_C': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['AND_3_1', 'OR_3_1'],
+           'Name': 'Cpt_C',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'OR_1',
+           'Type': 'f_leaf',
+           'lambda': '0.1',
+           'module': '8',
+           'mu': '0.1'},
+ 'OR_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'OR_1',
+          'Previous': 'Null',
+          'Sons': ['Cpt_A', 'Cpt_B'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '1'},
+ 'OR_2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['UE_1'],
+          'Name': 'OR_2',
+          'Previous': 'Null',
+          'Sons': ['AND_1', 'AND_2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '0'},
+ 'OR_3_0': {'Calculate': 'fn_fathers_and_trig',
+            'Fathers': ['AND_2'],
+            'Name': 'OR_3_0',
+            'Previous': 'Null',
+            'Sons': ['Cpt_A', 'OR_3_1'],
+            'Triggered_by': 'phase_2',
+            'Type': 'or_gate',
+            'module': '4'},
+ 'OR_3_1': {'Calculate': 'fn_fathers_and_trig',
+            'Fathers': ['OR_3_0'],
+            'Name': 'OR_3_1',
+            'Previous': 'Null',
+            'Sons': ['Cpt_B', 'Cpt_C'],
+            'Triggered_by': 'Null',
+            'Type': 'or_gate',
+            'module': '4'},
+ 'UE_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'UE_1',
+          'Previous': 'Null',
+          'Sons': ['OR_2'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'phase_1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_1'],
+             'In_progress': 'TRUE',
+             'Name': 'phase_1',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'phase_leaf',
+             'lambda': '0.1',
+             'module': '2'},
+ 'phase_2': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['AND_2'],
+             'In_progress': 'FALSE',
+             'Name': 'phase_2',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'phase_1',
+             'Type': 'phase_leaf',
+             'lambda': '1.0',
+             'module': '3'}}
+
+(00:02) 0····10····20····30····40····50····60····70····80····90····100         
+Done.                                                                          
+Storm 1.3.1 (dev)
+
+Date: Thu Jan  2 13:55:24 2020
+Command line arguments: --jani 09.jani --prop '	Pmax=? [F<=1  Fail ]; Pmin=? [F<=1  Fail];
+				Pmax=? [F<=2  Fail]; Pmin=? [F<=2  Fail];
+				Pmax=? [F<=3  Fail]; Pmin=? [F<=3 Fail];
+				Pmax=? [F<=4  Fail]; Pmin=? [F<=4  Fail];
+				Pmax=? [F<=5 Fail]; Pmin=? [F<=5 Fail];
+				Pmax=? [F<=6 Fail]; Pmin=? [F<=6 Fail];
+				Pmax=? [F<=7 Fail]; Pmin=? [F<=7 Fail];
+				Pmax=? [F<=8 Fail]; Pmin=? [F<=8 Fail];
+				Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+				Pmax=? [F<=10  Fail ]; Pmin=? [F<=10  Fail];
+				Pmax=? [F<=11  Fail ]; Pmin=? [F<=11  Fail];
+				Pmax=? [F<=12  Fail]; Pmin=? [F<=12  Fail];
+				Pmax=? [F<=13  Fail]; Pmin=? [F<=13 Fail];
+				Pmax=? [F<=14  Fail]; Pmin=? [F<=14  Fail];
+				Pmax=? [F<=15 Fail]; Pmin=? [F<=15 Fail];
+				Pmax=? [F<=16 Fail]; Pmin=? [F<=16 Fail];
+				Pmax=? [F<=17 Fail]; Pmin=? [F<=17 Fail];
+				Pmax=? [F<=18 Fail]; Pmin=? [F<=18 Fail];
+				Pmax=? [F<=19  Fail]; Pmin=? [F<=19 Fail];
+				Pmax=? [F<=20 Fail]; Pmin=? [F<=20 Fail];
+				Pmax=? [F<=21 Fail]; Pmin=? [F<=21 Fail];
+				Pmax=? [F<=22 Fail]; Pmin=? [F<=22 Fail];
+				Pmax=? [F<=23 Fail]; Pmin=? [F<=23 Fail];
+				Pmax=? [F<=24  Fail]; Pmin=? [F<=24 Fail];
+				Pmax=? [F<=25  Fail]; Pmin=? [F<=25  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/09phase
+
+Time for model input parsing: 0.461s.
+
+Time for model construction: 2.091s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	498
+Transitions: 	819
+Choices: 	761
+Markovian St.: 	24
+Max. Rate.: 	1.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 180 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.156s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	498
+Transitions: 	819
+Choices: 	761
+Markovian St.: 	24
+Max. Rate.: 	1.3
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 180 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.01527248627
+Time for model checking: 0.216s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.01527248627
+Time for model checking: 0.001s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.048901247
+Time for model checking: 0.002s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.048901247
+Time for model checking: 0.002s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.09088746445
+Time for model checking: 0.003s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.09088746445
+Time for model checking: 0.003s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.1363201681
+Time for model checking: 0.003s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.1363201681
+Time for model checking: 0.003s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.1823664269
+Time for model checking: 0.004s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.1823664269
+Time for model checking: 0.004s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.2272701675
+Time for model checking: 0.005s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.2272701675
+Time for model checking: 0.004s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.2699466402
+Time for model checking: 0.005s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.2699466402
+Time for model checking: 0.005s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.309767602
+Time for model checking: 0.006s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.309767602
+Time for model checking: 0.006s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.3464214667
+Time for model checking: 0.006s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.3464214667
+Time for model checking: 0.007s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.3798134712
+Time for model checking: 0.008s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.3798134712
+Time for model checking: 0.008s.
+
+Model checking property "21": Pmax=? [true U<=11 Fail] ...
+Result (for initial states): 0.4099928762
+Time for model checking: 0.009s.
+
+Model checking property "22": Pmin=? [true U<=11 Fail] ...
+Result (for initial states): 0.4099928762
+Time for model checking: 0.009s.
+
+Model checking property "23": Pmax=? [true U<=12 Fail] ...
+Result (for initial states): 0.4371002769
+Time for model checking: 0.010s.
+
+Model checking property "24": Pmin=? [true U<=12 Fail] ...
+Result (for initial states): 0.4371002769
+Time for model checking: 0.009s.
+
+Model checking property "25": Pmax=? [true U<=13 Fail] ...
+Result (for initial states): 0.4613301244
+Time for model checking: 0.010s.
+
+Model checking property "26": Pmin=? [true U<=13 Fail] ...
+Result (for initial states): 0.4613301244
+Time for model checking: 0.010s.
+
+Model checking property "27": Pmax=? [true U<=14 Fail] ...
+Result (for initial states): 0.4829046259
+Time for model checking: 0.011s.
+
+Model checking property "28": Pmin=? [true U<=14 Fail] ...
+Result (for initial states): 0.4829046259
+Time for model checking: 0.012s.
+
+Model checking property "29": Pmax=? [true U<=15 Fail] ...
+Result (for initial states): 0.5020560168
+Time for model checking: 0.012s.
+
+Model checking property "30": Pmin=? [true U<=15 Fail] ...
+Result (for initial states): 0.5020560168
+Time for model checking: 0.011s.
+
+Model checking property "31": Pmax=? [true U<=16 Fail] ...
+Result (for initial states): 0.5190148824
+Time for model checking: 0.013s.
+
+Model checking property "32": Pmin=? [true U<=16 Fail] ...
+Result (for initial states): 0.5190148824
+Time for model checking: 0.013s.
+
+Model checking property "33": Pmax=? [true U<=17 Fail] ...
+Result (for initial states): 0.5340027838
+Time for model checking: 0.014s.
+
+Model checking property "34": Pmin=? [true U<=17 Fail] ...
+Result (for initial states): 0.5340027838
+Time for model checking: 0.014s.
+
+Model checking property "35": Pmax=? [true U<=18 Fail] ...
+Result (for initial states): 0.5472278929
+Time for model checking: 0.015s.
+
+Model checking property "36": Pmin=? [true U<=18 Fail] ...
+Result (for initial states): 0.5472278929
+Time for model checking: 0.015s.
+
+Model checking property "37": Pmax=? [true U<=19 Fail] ...
+Result (for initial states): 0.558882696
+Time for model checking: 0.016s.
+
+Model checking property "38": Pmin=? [true U<=19 Fail] ...
+Result (for initial states): 0.558882696
+Time for model checking: 0.016s.
+
+Model checking property "39": Pmax=? [true U<=20 Fail] ...
+Result (for initial states): 0.5691430907
+Time for model checking: 0.017s.
+
+Model checking property "40": Pmin=? [true U<=20 Fail] ...
+Result (for initial states): 0.5691430907
+Time for model checking: 0.016s.
+
+Model checking property "41": Pmax=? [true U<=21 Fail] ...
+Result (for initial states): 0.5781683946
+Time for model checking: 0.019s.
+
+Model checking property "42": Pmin=? [true U<=21 Fail] ...
+Result (for initial states): 0.5781683946
+Time for model checking: 0.018s.
+
+Model checking property "43": Pmax=? [true U<=22 Fail] ...
+Result (for initial states): 0.5861019305
+Time for model checking: 0.019s.
+
+Model checking property "44": Pmin=? [true U<=22 Fail] ...
+Result (for initial states): 0.5861019305
+Time for model checking: 0.020s.
+
+Model checking property "45": Pmax=? [true U<=23 Fail] ...
+Result (for initial states): 0.5930719533
+Time for model checking: 0.019s.
+
+Model checking property "46": Pmin=? [true U<=23 Fail] ...
+Result (for initial states): 0.5930719533
+Time for model checking: 0.019s.
+
+Model checking property "47": Pmax=? [true U<=24 Fail] ...
+Result (for initial states): 0.5991927607
+Time for model checking: 0.021s.
+
+Model checking property "48": Pmin=? [true U<=24 Fail] ...
+Result (for initial states): 0.5991927607
+Time for model checking: 0.021s.
+
+Model checking property "49": Pmax=? [true U<=25 Fail] ...
+Result (for initial states): 0.60456588
+Time for model checking: 0.022s.
+
+Model checking property "50": Pmin=? [true U<=25 Fail] ...
+Result (for initial states): 0.60456588
+Time for model checking: 0.022s.
+

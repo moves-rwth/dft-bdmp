@@ -1,0 +1,10704 @@
+﻿{
+	"jani-version": 1,
+	"name": "17",
+	"type": "ma",
+	"features": [ "derived-operators" ],
+	"actions": [
+		{
+			"name": "fail_LossOfAllBackups"
+		},
+		{
+			"name": "fail_LossOfLine_1"
+		},
+		{
+			"name": "repaired_LossOfAllBackups"
+		},
+		{
+			"name": "repaired_LossOfLine_1"
+		},
+		{
+			"name": "fail_AND_1"
+		},
+		{
+			"name": "repaired_AND_1"
+		},
+		{
+			"name": "act_0"
+		},
+		{
+			"name": "dact_0"
+		},
+		{
+			"name": "act_8"
+		},
+		{
+			"name": "dact_8"
+		},
+		{
+			"name": "fail_CB_dies"
+		},
+		{
+			"name": "repaired_CB_dies"
+		},
+		{
+			"name": "fail_CB_dw_1"
+		},
+		{
+			"name": "repaired_CB_dw_1"
+		},
+		{
+			"name": "act_2"
+		},
+		{
+			"name": "dact_2"
+		},
+		{
+			"name": "fail_CB_dw_2"
+		},
+		{
+			"name": "repaired_CB_dw_2"
+		},
+		{
+			"name": "fail_CB_up_1"
+		},
+		{
+			"name": "repaired_CB_up_1"
+		},
+		{
+			"name": "fail_CB_up_2"
+		},
+		{
+			"name": "repaired_CB_up_2"
+		},
+		{
+			"name": "act_4"
+		},
+		{
+			"name": "dact_4"
+		},
+		{
+			"name": "fail_GRID"
+		},
+		{
+			"name": "repaired_GRID"
+		},
+		{
+			"name": "act_3"
+		},
+		{
+			"name": "dact_3"
+		},
+		{
+			"name": "fail_LossOfDieselLine"
+		},
+		{
+			"name": "fail_LossOfLine2"
+		},
+		{
+			"name": "repaired_LossOfDieselLine"
+		},
+		{
+			"name": "repaired_LossOfLine2"
+		},
+		{
+			"name": "fail_RS_dies"
+		},
+		{
+			"name": "fail_RC_CB_dies"
+		},
+		{
+			"name": "fail_dies_generator"
+		},
+		{
+			"name": "repaired_RS_dies"
+		},
+		{
+			"name": "repaired_RC_CB_dies"
+		},
+		{
+			"name": "repaired_dies_generator"
+		},
+		{
+			"name": "fail_Loss_of_GRID"
+		},
+		{
+			"name": "fail_Transfo2"
+		},
+		{
+			"name": "fail_RC_CB_dw_2"
+		},
+		{
+			"name": "fail_RC_CB_up_2"
+		},
+		{
+			"name": "repaired_Loss_of_GRID"
+		},
+		{
+			"name": "repaired_Transfo2"
+		},
+		{
+			"name": "repaired_RC_CB_dw_2"
+		},
+		{
+			"name": "repaired_RC_CB_up_2"
+		},
+		{
+			"name": "fail_Transfo1"
+		},
+		{
+			"name": "repaired_Transfo1"
+		},
+		{
+			"name": "fail_PropagationShortCircuitTransfo1"
+		},
+		{
+			"name": "fail_PropagationShortCircuitTransfo2"
+		},
+		{
+			"name": "repaired_PropagationShortCircuitTransfo1"
+		},
+		{
+			"name": "repaired_PropagationShortCircuitTransfo2"
+		},
+		{
+			"name": "fail_RO_CB_up_1"
+		},
+		{
+			"name": "repaired_RO_CB_up_1"
+		},
+		{
+			"name": "fail_RO_CB_up_2"
+		},
+		{
+			"name": "repaired_RO_CB_up_2"
+		},
+		{
+			"name": "act_1"
+		},
+		{
+			"name": "dact_1"
+		},
+		{
+			"name": "good_RC_CB_dies"
+		},
+		{
+			"name": "good_RC_CB_dw_2"
+		},
+		{
+			"name": "good_RC_CB_up_2"
+		},
+		{
+			"name": "act_9"
+		},
+		{
+			"name": "dact_9"
+		},
+		{
+			"name": "good_RO_CB_up_1"
+		},
+		{
+			"name": "act_6"
+		},
+		{
+			"name": "dact_6"
+		},
+		{
+			"name": "good_RO_CB_up_2"
+		},
+		{
+			"name": "good_RS_dies"
+		},
+		{
+			"name": "act_5"
+		},
+		{
+			"name": "dact_5"
+		},
+		{
+			"name": "act_7"
+		},
+		{
+			"name": "dact_7"
+		}
+	],
+	"variables": [
+		{
+			"name": "AND_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "CB_dies",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "CB_dw_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "CB_dw_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "CB_up_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "CB_up_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "GRID",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "LossOfAllBackups",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "LossOfDieselLine",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "LossOfLine2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "LossOfLine_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Loss_of_GRID",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "PropagationShortCircuitTransfo1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "PropagationShortCircuitTransfo2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RC_CB_dies",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RC_CB_dw_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RC_CB_up_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RO_CB_up_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RO_CB_up_2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "RS_dies",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Transfo1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Transfo2",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "UE_1",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "Fail",
+			"type": "bool",
+			"initial-value": false
+		},
+		{
+			"name": "dies_generator",
+			"type": "bool",
+			"initial-value": false
+		}
+	],
+	"properties": [ {
+		"name": "ComputeProbability",
+		"expression": {
+			"op": "filter",
+			"fun": "max",
+			"values": {
+				"op": "Pmax",
+				"exp": {
+					"op": "F",
+					"exp": "Fail",
+					"time-bounds": {
+						"upper": 10
+					}
+				}
+			},
+			"states": {
+				"op": "initial"
+			}
+		}
+	} ],
+	"automata": [
+		{
+			"name": "AND_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "AND_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dies",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "CB_dies",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_CB_dies",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "CB_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "CB_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dies_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dw_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "CB_dw_1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "CB_dw_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "CB_dw_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dw_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dw_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "CB_dw_2",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "CB_dw_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "CB_dw_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_dw_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_up_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "CB_up_1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "CB_up_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "CB_up_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_up_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_up_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "CB_up_2",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "CB_up_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "GRID",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10000
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "GRID",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "GRID",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "GRID",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "GRID_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_39"
+				},
+				{
+					"name": "loc_50"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_26"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_39"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "act_4",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_39",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "dact_4",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_13"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfAllBackups",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_LossOfAllBackups",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfAllBackups_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_19"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfDieselLine",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_20"
+				},
+				{
+					"name": "loc_35"
+				},
+				{
+					"name": "loc_45"
+				},
+				{
+					"name": "loc_18"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_CB_dies",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_RS_dies",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_dies_generator",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "fail_CB_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "fail_RS_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "fail_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "fail_dies_generator",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_CB_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_RS_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_dies_generator",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "fail_CB_dies",
+					"destinations": [ {
+						"location": "loc_45"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "fail_RS_dies",
+					"destinations": [ {
+						"location": "loc_45"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "fail_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_45"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_35",
+					"action": "fail_dies_generator",
+					"destinations": [ {
+						"location": "loc_45"
+					} ]
+				},
+				{
+					"location": "loc_45",
+					"action": "repaired_CB_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_45",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_45",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_45",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_35"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_LossOfDieselLine",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfDieselLine_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_19"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfLine2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_20"
+				},
+				{
+					"name": "loc_26"
+				},
+				{
+					"name": "loc_50"
+				},
+				{
+					"name": "loc_66"
+				},
+				{
+					"name": "loc_82"
+				},
+				{
+					"name": "loc_98"
+				},
+				{
+					"name": "loc_114"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_26",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_26"
+					} ]
+				},
+				{
+					"location": "loc_50",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_50"
+					} ]
+				},
+				{
+					"location": "loc_66",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_66"
+					} ]
+				},
+				{
+					"location": "loc_82",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_CB_up_2",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_82"
+					} ]
+				},
+				{
+					"location": "loc_98",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_114"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_CB_up_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_114",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_98"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_LossOfLine2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfLine2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfLine_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_22"
+				},
+				{
+					"name": "loc_40"
+				},
+				{
+					"name": "loc_52"
+				},
+				{
+					"name": "loc_64"
+				},
+				{
+					"name": "loc_20"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_20"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_22",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_22"
+					} ]
+				},
+				{
+					"location": "loc_40",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_64"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "fail_CB_up_1",
+					"destinations": [ {
+						"location": "loc_64"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_64"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_64"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_40"
+					} ]
+				},
+				{
+					"location": "loc_52",
+					"action": "fail_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_64"
+					} ]
+				},
+				{
+					"location": "loc_64",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_64",
+					"action": "repaired_CB_up_1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_64",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_64",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_64",
+					"action": "repaired_CB_dw_1",
+					"destinations": [ {
+						"location": "loc_52"
+					} ]
+				},
+				{
+					"location": "loc_20",
+					"action": "repaired_LossOfLine_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "LossOfLine_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Loss_of_GRID",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_16"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_GRID",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "repaired_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "fail_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_GRID",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "repaired_Loss_of_GRID",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Loss_of_GRID_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "PropagationShortCircuitTransfo1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_PropagationShortCircuitTransfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "PropagationShortCircuitTransfo1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "PropagationShortCircuitTransfo2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_12"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_PropagationShortCircuitTransfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "PropagationShortCircuitTransfo2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_5",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_dies",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RC_CB_dies",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RC_CB_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RC_CB_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RC_CB_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RC_CB_dies",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_dies_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_dw_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RC_CB_dw_2",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RC_CB_dw_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RC_CB_dw_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RC_CB_dw_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RC_CB_dw_2",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_dw_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_up_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RC_CB_up_2",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RC_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RC_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RC_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RC_CB_up_2",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RC_CB_up_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RO_CB_up_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_9",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RO_CB_up_1",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RO_CB_up_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_9",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RO_CB_up_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RO_CB_up_1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RO_CB_up_1",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RO_CB_up_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_19"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_9",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_9",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RO_CB_up_2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RO_CB_up_2",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RO_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RO_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RO_CB_up_2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RO_CB_up_2",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RO_CB_up_2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_19"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_30"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "act_6",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_19",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_30"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_19"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "dact_6",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RS_dies",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_8"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_18"
+				},
+				{
+					"name": "loc_13"
+				},
+				{
+					"name": "loc_16"
+				},
+				{
+					"name": "loc_25"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_30"
+				},
+				{
+					"name": "loc_28"
+				},
+				{
+					"name": "loc_33"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": 100000
+					},
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_8",
+					"destinations": [
+						{
+							"location": "loc_13",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							},
+							"assignments": [ {
+								"ref": "RS_dies",
+								"value": true
+							} ]
+						},
+						{
+							"location": "loc_14",
+							"probability": {
+								"exp": {
+									"op": "/",
+									"left": 1,
+									"right": 2
+								}
+							}
+						}
+					]
+				},
+				{
+					"location": "loc_14",
+					"action": "good_RS_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_18",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_13",
+					"action": "fail_RS_dies",
+					"destinations": [ {
+						"location": "loc_16"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_16",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_25",
+						"assignments": [ {
+							"ref": "RS_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_25",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_18"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_28"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_30",
+						"assignments": [ {
+							"ref": "RS_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_30",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_28",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_33",
+						"assignments": [ {
+							"ref": "RS_dies",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_33",
+					"action": "repaired_RS_dies",
+					"destinations": [ {
+						"location": "loc_8"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "RS_dies_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Transfo1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "Transfo1",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_Transfo1",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "Transfo1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "Transfo1",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Transfo1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Transfo1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_5",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_0",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_3",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_5",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_3",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Transfo2",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_7",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_7",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "Transfo2",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_Transfo2",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_7",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "Transfo2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_7",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "Transfo2",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_Transfo2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "Transfo2_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				},
+				{
+					"name": "loc_11"
+				},
+				{
+					"name": "loc_21"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_1",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_7",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_7",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_5"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_1",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "dact_2",
+					"destinations": [ {
+						"location": "loc_21"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_11",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_24"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "dact_7",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_1",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "act_2",
+					"destinations": [ {
+						"location": "loc_11"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_5"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "fail_AND_1",
+					"destinations": [ {
+						"location": "loc_5",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": true
+							},
+							{
+								"ref": "Fail",
+								"value": true
+							}
+						]
+					} ]
+				},
+				{
+					"location": "loc_5",
+					"action": "repaired_AND_1",
+					"destinations": [ {
+						"location": "loc_1",
+						"assignments": [
+							{
+								"ref": "UE_1",
+								"value": false
+							},
+							{
+								"ref": "Fail",
+								"value": false
+							}
+						]
+					} ]
+				}
+			]
+		},
+		{
+			"name": "UE_1_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_0",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "dies_generator",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				},
+				{
+					"name": "loc_12"
+				},
+				{
+					"name": "loc_14"
+				},
+				{
+					"name": "loc_21"
+				},
+				{
+					"name": "loc_17"
+				},
+				{
+					"name": "loc_24"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_12",
+						"assignments": [ {
+							"ref": "dies_generator",
+							"value": true
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_12",
+					"action": "fail_dies_generator",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_17"
+					} ]
+				},
+				{
+					"location": "loc_14",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_21",
+						"assignments": [ {
+							"ref": "dies_generator",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_21",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_14"
+					} ]
+				},
+				{
+					"location": "loc_17",
+					"rate": {
+						"exp": {
+							"op": "/",
+							"left": 1,
+							"right": 10
+						}
+					},
+					"destinations": [ {
+						"location": "loc_24",
+						"assignments": [ {
+							"ref": "dies_generator",
+							"value": false
+						} ]
+					} ]
+				},
+				{
+					"location": "loc_24",
+					"action": "repaired_dies_generator",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		},
+		{
+			"name": "dies_generator_Act",
+			"locations": [
+				{
+					"name": "loc_1"
+				},
+				{
+					"name": "loc_4"
+				}
+			],
+			"initial-locations": [ "loc_1" ],
+			"edges": [
+				{
+					"location": "loc_1",
+					"action": "act_8",
+					"destinations": [ {
+						"location": "loc_4"
+					} ]
+				},
+				{
+					"location": "loc_4",
+					"action": "dact_8",
+					"destinations": [ {
+						"location": "loc_1"
+					} ]
+				}
+			]
+		}
+	],
+	"system": {
+		"elements": [
+			{
+				"automaton": "AND_1"
+			},
+			{
+				"automaton": "AND_1_Act"
+			},
+			{
+				"automaton": "CB_dies"
+			},
+			{
+				"automaton": "CB_dies_Act"
+			},
+			{
+				"automaton": "CB_dw_1"
+			},
+			{
+				"automaton": "CB_dw_1_Act"
+			},
+			{
+				"automaton": "CB_dw_2"
+			},
+			{
+				"automaton": "CB_dw_2_Act"
+			},
+			{
+				"automaton": "CB_up_1"
+			},
+			{
+				"automaton": "CB_up_1_Act"
+			},
+			{
+				"automaton": "CB_up_2"
+			},
+			{
+				"automaton": "CB_up_2_Act"
+			},
+			{
+				"automaton": "GRID"
+			},
+			{
+				"automaton": "GRID_Act"
+			},
+			{
+				"automaton": "LossOfAllBackups"
+			},
+			{
+				"automaton": "LossOfAllBackups_Act"
+			},
+			{
+				"automaton": "LossOfDieselLine"
+			},
+			{
+				"automaton": "LossOfDieselLine_Act"
+			},
+			{
+				"automaton": "LossOfLine2"
+			},
+			{
+				"automaton": "LossOfLine2_Act"
+			},
+			{
+				"automaton": "LossOfLine_1"
+			},
+			{
+				"automaton": "LossOfLine_1_Act"
+			},
+			{
+				"automaton": "Loss_of_GRID"
+			},
+			{
+				"automaton": "Loss_of_GRID_Act"
+			},
+			{
+				"automaton": "PropagationShortCircuitTransfo1"
+			},
+			{
+				"automaton": "PropagationShortCircuitTransfo1_Act"
+			},
+			{
+				"automaton": "PropagationShortCircuitTransfo2"
+			},
+			{
+				"automaton": "PropagationShortCircuitTransfo2_Act"
+			},
+			{
+				"automaton": "RC_CB_dies"
+			},
+			{
+				"automaton": "RC_CB_dies_Act"
+			},
+			{
+				"automaton": "RC_CB_dw_2"
+			},
+			{
+				"automaton": "RC_CB_dw_2_Act"
+			},
+			{
+				"automaton": "RC_CB_up_2"
+			},
+			{
+				"automaton": "RC_CB_up_2_Act"
+			},
+			{
+				"automaton": "RO_CB_up_1"
+			},
+			{
+				"automaton": "RO_CB_up_1_Act"
+			},
+			{
+				"automaton": "RO_CB_up_2"
+			},
+			{
+				"automaton": "RO_CB_up_2_Act"
+			},
+			{
+				"automaton": "RS_dies"
+			},
+			{
+				"automaton": "RS_dies_Act"
+			},
+			{
+				"automaton": "Transfo1"
+			},
+			{
+				"automaton": "Transfo1_Act"
+			},
+			{
+				"automaton": "Transfo2"
+			},
+			{
+				"automaton": "Transfo2_Act"
+			},
+			{
+				"automaton": "UE_1"
+			},
+			{
+				"automaton": "UE_1_Act"
+			},
+			{
+				"automaton": "dies_generator"
+			},
+			{
+				"automaton": "dies_generator_Act"
+			}
+		],
+		"syncs": [
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_4",
+					"act_4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_4"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_4",
+					"dact_4",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_4"
+			},
+			{
+				"synchronise": [
+					"fail_LossOfAllBackups",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_LossOfAllBackups",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_LossOfAllBackups"
+			},
+			{
+				"synchronise": [
+					"repaired_LossOfAllBackups",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_LossOfAllBackups",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_LossOfAllBackups"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"fail_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_CB_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"repaired_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_CB_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_LossOfDieselLine",
+					null,
+					"fail_LossOfDieselLine",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_LossOfDieselLine"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_LossOfDieselLine",
+					null,
+					"repaired_LossOfDieselLine",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_LossOfDieselLine"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_CB_dw_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_CB_dw_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_LossOfLine2",
+					null,
+					null,
+					"repaired_LossOfLine2",
+					"repaired_LossOfLine2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_LossOfLine2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_LossOfLine2",
+					null,
+					null,
+					"fail_LossOfLine2",
+					"fail_LossOfLine2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_LossOfLine2"
+			},
+			{
+				"synchronise": [
+					"repaired_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					"repaired_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_LossOfLine_1"
+			},
+			{
+				"synchronise": [
+					"fail_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					"fail_LossOfLine_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_LossOfLine_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_dw_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_dw_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_CB_dw_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_dw_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_dw_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_CB_dw_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_CB_up_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_CB_up_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_GRID",
+					null,
+					"fail_GRID",
+					null,
+					"fail_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_GRID"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_GRID",
+					null,
+					"repaired_GRID",
+					null,
+					"repaired_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_GRID"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Loss_of_GRID",
+					null,
+					"fail_Loss_of_GRID",
+					null,
+					"fail_Loss_of_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_Loss_of_GRID"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Loss_of_GRID",
+					null,
+					"repaired_Loss_of_GRID",
+					null,
+					"repaired_Loss_of_GRID",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Loss_of_GRID"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_PropagationShortCircuitTransfo1",
+					null,
+					"repaired_PropagationShortCircuitTransfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_PropagationShortCircuitTransfo1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_PropagationShortCircuitTransfo1",
+					null,
+					"fail_PropagationShortCircuitTransfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_PropagationShortCircuitTransfo1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_PropagationShortCircuitTransfo2",
+					null,
+					null,
+					null,
+					"repaired_PropagationShortCircuitTransfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_PropagationShortCircuitTransfo2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_PropagationShortCircuitTransfo2",
+					null,
+					null,
+					null,
+					"fail_PropagationShortCircuitTransfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_PropagationShortCircuitTransfo2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RC_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RC_CB_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RC_CB_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RC_CB_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RC_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RC_CB_dw_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RC_CB_dw_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_dw_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RC_CB_dw_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RC_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RC_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RC_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RC_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RC_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RC_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RO_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RO_CB_up_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RO_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RO_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RO_CB_up_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RO_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RO_CB_up_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RO_CB_up_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_9",
+					"act_9",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_9"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_9",
+					"dact_9",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_9"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RO_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RO_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RO_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RO_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RO_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RO_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RO_CB_up_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RO_CB_up_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_6",
+					"act_6",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_6"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_6",
+					"dact_6",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_6"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"good_RS_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "good_RS_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RS_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_RS_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_RS_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RS_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_RS_dies",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_RS_dies"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo1",
+					null,
+					null,
+					null,
+					"repaired_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Transfo1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo1",
+					null,
+					null,
+					null,
+					"fail_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_Transfo1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_3",
+					null,
+					"act_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_3",
+					null,
+					"dact_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_3",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_3"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_5",
+					"act_5",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_5"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_5",
+					"dact_5",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_5"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					"repaired_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "repaired_Transfo2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					"fail_Transfo2",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "fail_Transfo2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_2",
+					"act_2",
+					null,
+					null,
+					"act_2",
+					"act_2",
+					null,
+					"act_2",
+					null,
+					"act_2",
+					null,
+					"act_2",
+					null,
+					"act_2",
+					null,
+					null,
+					null,
+					"act_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_2",
+					"act_2",
+					"act_2",
+					"act_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_2",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_2",
+					"dact_2",
+					null,
+					null,
+					"dact_2",
+					"dact_2",
+					null,
+					"dact_2",
+					null,
+					"dact_2",
+					null,
+					"dact_2",
+					null,
+					"dact_2",
+					null,
+					null,
+					null,
+					"dact_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_2",
+					"dact_2",
+					"dact_2",
+					"dact_2",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_2",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_2"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_1",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_1",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_1"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_7",
+					"act_7",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "act_7"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_7",
+					"dact_7",
+					null,
+					null,
+					null,
+					null
+				],
+				"result": "dact_7"
+			},
+			{
+				"synchronise": [
+					"fail_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_AND_1",
+					null,
+					null,
+					null
+				],
+				"result": "fail_AND_1"
+			},
+			{
+				"synchronise": [
+					"repaired_AND_1",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_AND_1",
+					null,
+					null,
+					null
+				],
+				"result": "repaired_AND_1"
+			},
+			{
+				"synchronise": [
+					null,
+					"act_0",
+					null,
+					null,
+					"act_0",
+					"act_0",
+					null,
+					null,
+					"act_0",
+					"act_0",
+					null,
+					null,
+					null,
+					"act_0",
+					null,
+					"act_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_0",
+					null,
+					"act_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_0",
+					null,
+					null,
+					null,
+					"act_0",
+					null,
+					null
+				],
+				"result": "act_0"
+			},
+			{
+				"synchronise": [
+					null,
+					"dact_0",
+					null,
+					null,
+					"dact_0",
+					"dact_0",
+					null,
+					null,
+					"dact_0",
+					"dact_0",
+					null,
+					null,
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_0",
+					null,
+					"dact_0",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_0",
+					null,
+					null,
+					null,
+					"dact_0",
+					null,
+					null
+				],
+				"result": "dact_0"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_dies_generator",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"repaired_dies_generator",
+					null
+				],
+				"result": "repaired_dies_generator"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_dies_generator",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"fail_dies_generator",
+					null
+				],
+				"result": "fail_dies_generator"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"act_8",
+					"act_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_8",
+					"act_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_8",
+					"act_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"act_8",
+					"act_8"
+				],
+				"result": "act_8"
+			},
+			{
+				"synchronise": [
+					null,
+					null,
+					"dact_8",
+					"dact_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_8",
+					"dact_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_8",
+					"dact_8",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"dact_8",
+					"dact_8"
+				],
+				"result": "dact_8"
+			}
+		]
+	}
+}

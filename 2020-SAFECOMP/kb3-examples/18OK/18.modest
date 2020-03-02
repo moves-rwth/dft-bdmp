@@ -1,0 +1,177 @@
+//##########Automatically generated Modest file from: "18.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_1  , act_0;
+action  dact_1  , dact_0;
+action  act_A_ND_by_ship,dact_A_ND_by_ship, fail_A_ND_by_ship, repaired_A_ND_by_ship;
+bool  A_ND_by_ship = false;
+action  act_A_ND_by_ship_1,dact_A_ND_by_ship_1, fail_A_ND_by_ship_1, repaired_A_ND_by_ship_1;
+bool  A_ND_by_ship_1 = false;
+action  act_B_ND_by_platform,dact_B_ND_by_platform, fail_B_ND_by_platform, repaired_B_ND_by_platform;
+bool  B_ND_by_platform = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_collision,dact_collision, fail_collision, repaired_collision;
+bool  collision = false;
+action  act_course_not_changed,dact_course_not_changed, fail_course_not_changed, good_course_not_changed, repaired_course_not_changed;
+bool  course_not_changed = false;
+action  act_non_detection,dact_non_detection, fail_non_detection, repaired_non_detection;
+bool  non_detection = false;
+action  act_radar,dact_radar, fail_radar, good_radar, repaired_radar;
+bool  radar = false;
+action  act_radar_1,dact_radar_1, fail_radar_1, good_radar_1, repaired_radar_1;
+bool  radar_1 = false;
+action  act_ship_on_collision_course,dact_ship_on_collision_course, fail_ship_on_collision_course, repaired_ship_on_collision_course;
+bool  ship_on_collision_course = false;
+action  act_visual,dact_visual, fail_visual, good_visual, repaired_visual;
+bool  visual = false;
+action  act_visual_1,dact_visual_1, fail_visual_1, good_visual_1, repaired_visual_1;
+bool  visual_1 = false;
+action  act_warning,dact_warning, fail_warning, good_warning, repaired_warning;
+bool  warning = false;
+//##########Failure Behavior of "and_gate" named "A_ND_by_ship"
+process A_ND_by_ship(){
+process P0(){alt{::repaired_radar;A_ND_by_ship()::fail_radar; P1()::repaired_visual;A_ND_by_ship()::fail_visual; P1()}}
+process P1() { fail_A_ND_by_ship; P2() }
+process P2(){alt{::repaired_radar;P3()::repaired_visual;P3()}}
+process P3(){repaired_A_ND_by_ship;P0()}
+alt{::fail_radar; P0()::fail_visual; P0()}}
+//##########Activation Behavior of "and_gate" named "A_ND_by_ship"
+process A_ND_by_ship_Act(){
+act_1; dact_1; A_ND_by_ship_Act()}
+//##########Failure Behavior of "and_gate" named "A_ND_by_ship_1"
+process A_ND_by_ship_1(){
+process P0(){alt{::repaired_radar_1;A_ND_by_ship_1()::fail_radar_1; P1()::repaired_visual_1;A_ND_by_ship_1()::fail_visual_1; P1()}}
+process P1() { fail_A_ND_by_ship_1; P2() }
+process P2(){alt{::repaired_radar_1;P3()::repaired_visual_1;P3()}}
+process P3(){repaired_A_ND_by_ship_1;P0()}
+alt{::fail_radar_1; P0()::fail_visual_1; P0()}}
+//##########Activation Behavior of "and_gate" named "A_ND_by_ship_1"
+process A_ND_by_ship_1_Act(){
+act_1; dact_1; A_ND_by_ship_1_Act()}
+//##########Failure Behavior of "or_gate" named "B_ND_by_platform"
+process B_ND_by_platform(){
+process P0(){fail_B_ND_by_platform;P2()}
+process P1(){repaired_B_ND_by_platform;B_ND_by_platform()}
+process P2(){alt{::repaired_A_ND_by_ship_1;P1()::fail_A_ND_by_ship_1; P3()::repaired_warning;P1()::fail_warning; P3()}}
+process P3(){alt{::repaired_A_ND_by_ship_1;P2()::repaired_warning;P2()}} 
+ alt{::fail_A_ND_by_ship_1; P0()::fail_warning; P0()}}
+//##########Activation Behavior of "or_gate" named "B_ND_by_platform"
+process B_ND_by_platform_Act(){
+act_1; dact_1; B_ND_by_platform_Act()}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_collision {=  UE_1=true, Fail = true=} ; repaired_collision {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "or_gate" named "collision"
+process collision(){
+process P0(){fail_collision;P2()}
+process P1(){repaired_collision;collision()}
+process P2(){alt{::repaired_course_not_changed;P1()::fail_course_not_changed; P3()::repaired_non_detection;P1()::fail_non_detection; P3()}}
+process P3(){alt{::repaired_course_not_changed;P2()::repaired_non_detection;P2()}} 
+ alt{::fail_course_not_changed; P0()::fail_non_detection; P0()}}
+//##########Activation Behavior of "or_gate" named "collision"
+process collision_Act(){
+alt{:: act_0; S1() :: fail_ship_on_collision_course; S1()} 
+process S1()  {alt {:: dact_0; collision_Act():: repaired_ship_on_collision_course; collision_Act() :: act_0; S2() :: fail_ship_on_collision_course; S2()}}
+process S2()  {act_1; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_ship_on_collision_course; S4()}}
+process S4()  {dact_1; S1() }}
+//##########Failure Behavior of "i_leaf" named "course_not_changed"
+process course_not_changed(){
+act_1;P0() 
+process P0() {alt{:: dact_1; course_not_changed() :: palt{:0.5: {=course_not_changed = true =}; fail_course_not_changed; P2(): 1 - 0.5:good_course_not_changed;P1()}}}
+process P1() {dact_1; course_not_changed()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=course_not_changed = false =}; repaired_course_not_changed; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= course_not_changed = false =};repaired_course_not_changed;P0()}::rate(0.1)tau{= course_not_changed = false =}; repaired_course_not_changed; course_not_changed()}}}
+//##########Activation Behavior of "i_leaf" named "course_not_changed"
+process course_not_changed_Act(){
+act_1; dact_1; course_not_changed_Act()}
+//##########Failure Behavior of "and_gate" named "non_detection"
+process non_detection(){
+process P0(){alt{::repaired_A_ND_by_ship;non_detection()::fail_A_ND_by_ship; P1()::repaired_B_ND_by_platform;non_detection()::fail_B_ND_by_platform; P1()}}
+process P1() { fail_non_detection; P2() }
+process P2(){alt{::repaired_A_ND_by_ship;P3()::repaired_B_ND_by_platform;P3()}}
+process P3(){repaired_non_detection;P0()}
+alt{::fail_A_ND_by_ship; P0()::fail_B_ND_by_platform; P0()}}
+//##########Activation Behavior of "and_gate" named "non_detection"
+process non_detection_Act(){
+act_1; dact_1; non_detection_Act()}
+//##########Failure Behavior of "i_leaf" named "radar"
+process radar(){
+act_1;P0() 
+process P0() {alt{:: dact_1; radar() :: palt{:0.5: {=radar = true =}; fail_radar; P2(): 1 - 0.5:good_radar;P1()}}}
+process P1() {dact_1; radar()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=radar = false =}; repaired_radar; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= radar = false =};repaired_radar;P0()}::rate(0.1)tau{= radar = false =}; repaired_radar; radar()}}}
+//##########Activation Behavior of "i_leaf" named "radar"
+process radar_Act(){
+act_1; dact_1; radar_Act()}
+//##########Failure Behavior of "i_leaf" named "radar_1"
+process radar_1(){
+act_1;P0() 
+process P0() {alt{:: dact_1; radar_1() :: palt{:0.5: {=radar_1 = true =}; fail_radar_1; P2(): 1 - 0.5:good_radar_1;P1()}}}
+process P1() {dact_1; radar_1()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=radar_1 = false =}; repaired_radar_1; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= radar_1 = false =};repaired_radar_1;P0()}::rate(0.1)tau{= radar_1 = false =}; repaired_radar_1; radar_1()}}}
+//##########Activation Behavior of "i_leaf" named "radar_1"
+process radar_1_Act(){
+act_1; dact_1; radar_1_Act()}
+//##########Failure Behavior of "f_leaf" named "ship_on_collision_course"
+process ship_on_collision_course(){
+process P1() {alt{::dact_0;ship_on_collision_course()::rate(0.1) tau{=ship_on_collision_course=true=}; fail_ship_on_collision_course; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=ship_on_collision_course=false=}; repaired_ship_on_collision_course; ship_on_collision_course()}::rate(0.1) tau{=ship_on_collision_course=false=}; repaired_ship_on_collision_course; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "ship_on_collision_course"
+process ship_on_collision_course_Act(){
+act_0; when(false) dact_0; ship_on_collision_course_Act()}
+//##########Failure Behavior of "i_leaf" named "visual"
+process visual(){
+act_1;P0() 
+process P0() {alt{:: dact_1; visual() :: palt{:0.5: {=visual = true =}; fail_visual; P2(): 1 - 0.5:good_visual;P1()}}}
+process P1() {dact_1; visual()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=visual = false =}; repaired_visual; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= visual = false =};repaired_visual;P0()}::rate(0.1)tau{= visual = false =}; repaired_visual; visual()}}}
+//##########Activation Behavior of "i_leaf" named "visual"
+process visual_Act(){
+act_1; dact_1; visual_Act()}
+//##########Failure Behavior of "i_leaf" named "visual_1"
+process visual_1(){
+act_1;P0() 
+process P0() {alt{:: dact_1; visual_1() :: palt{:0.5: {=visual_1 = true =}; fail_visual_1; P2(): 1 - 0.5:good_visual_1;P1()}}}
+process P1() {dact_1; visual_1()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=visual_1 = false =}; repaired_visual_1; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= visual_1 = false =};repaired_visual_1;P0()}::rate(0.1)tau{= visual_1 = false =}; repaired_visual_1; visual_1()}}}
+//##########Activation Behavior of "i_leaf" named "visual_1"
+process visual_1_Act(){
+act_1; dact_1; visual_1_Act()}
+//##########Failure Behavior of "i_leaf" named "warning"
+process warning(){
+act_1;P0() 
+process P0() {alt{:: dact_1; warning() :: palt{:0.5: {=warning = true =}; fail_warning; P2(): 1 - 0.5:good_warning;P1()}}}
+process P1() {dact_1; warning()}
+process P2() {alt {::dact_1; P3()::rate(0.1) {=warning = false =}; repaired_warning; P1()}}
+process P3() {alt {::act_1; alt {::dact_1;P3()::rate(0.1)tau{= warning = false =};repaired_warning;P0()}::rate(0.1)tau{= warning = false =}; repaired_warning; warning()}}}
+//##########Activation Behavior of "i_leaf" named "warning"
+process warning_Act(){
+act_1; dact_1; warning_Act()}
+//##########Composition of all files
+par
+{
+::A_ND_by_ship()  :: A_ND_by_ship_Act()
+::A_ND_by_ship_1()  :: A_ND_by_ship_1_Act()
+::B_ND_by_platform()  :: B_ND_by_platform_Act()
+:: UE_1()  :: UE_1_Act()
+::collision()  :: collision_Act()
+::course_not_changed()  :: course_not_changed_Act()
+::non_detection()  :: non_detection_Act()
+::radar()  :: radar_Act()
+::radar_1()  :: radar_1_Act()
+::ship_on_collision_course()  :: ship_on_collision_course_Act()
+::visual()  :: visual_Act()
+::visual_1()  :: visual_1_Act()
+::warning()  :: warning_Act()
+}

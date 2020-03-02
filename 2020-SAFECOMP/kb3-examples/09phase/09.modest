@@ -1,0 +1,185 @@
+//##########Automatically generated Modest file from: "09.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_0  , act_7  , act_1  , act_6  , act_2  , act_4  , act_3  , act_5;
+action  dact_0  , dact_7  , dact_1  , dact_6  , dact_2  , dact_4  , dact_3  , dact_5;
+action  act_AND_1,dact_AND_1, fail_AND_1, repaired_AND_1;
+bool  AND_1 = false;
+action  act_AND_2,dact_AND_2, fail_AND_2, repaired_AND_2;
+bool  AND_2 = false;
+action  act_AND_3,dact_AND_3, fail_AND_3, repaired_AND_3;
+bool  AND_3 = false;
+action  act_Cpt_A,dact_Cpt_A, fail_Cpt_A, repaired_Cpt_A;
+bool  Cpt_A = false;
+action  act_Cpt_B,dact_Cpt_B, fail_Cpt_B, repaired_Cpt_B;
+bool  Cpt_B = false;
+action  act_Cpt_C,dact_Cpt_C, fail_Cpt_C, repaired_Cpt_C;
+bool  Cpt_C = false;
+action  act_OR_1,dact_OR_1, fail_OR_1, repaired_OR_1;
+bool  OR_1 = false;
+action  act_OR_2,dact_OR_2, fail_OR_2, repaired_OR_2;
+bool  OR_2 = false;
+action  act_OR_3,dact_OR_3, fail_OR_3, repaired_OR_3;
+bool  OR_3 = false;
+action  act_UE_1,dact_UE_1, fail_UE_1, repaired_UE_1;
+bool  UE_1 = false, Fail=false;
+action  act_phase_1, dact_phase_1, fail_phase_1, repaired_phase_1, start_phase_1, end_phase_1;
+bool  phase_1 = false;
+action  act_phase_2, dact_phase_2, fail_phase_2, repaired_phase_2, start_phase_2, end_phase_2;
+bool  phase_2 = false;
+//##########Failure Behavior of "and_gate" named "AND_1"
+process AND_1(){
+process P0(){alt{::repaired_AND_3;AND_1()::fail_AND_3; P1()::repaired_phase_1;AND_1()::fail_phase_1; P1()}}
+process P1() { fail_AND_1; P2() }
+process P2(){alt{::repaired_AND_3;P3()::repaired_phase_1;P3()}}
+process P3(){repaired_AND_1;P0()}
+alt{::fail_AND_3; P0()::fail_phase_1; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_1"
+process AND_1_Act(){
+act_0; dact_0; AND_1_Act()}
+//##########Failure Behavior of "and_gate" named "AND_2"
+process AND_2(){
+process P0(){alt{::repaired_OR_3;AND_2()::fail_OR_3; P1()::repaired_phase_2;AND_2()::fail_phase_2; P1()}}
+process P1() { fail_AND_2; P2() }
+process P2(){alt{::repaired_OR_3;P3()::repaired_phase_2;P3()}}
+process P3(){repaired_AND_2;P0()}
+alt{::fail_OR_3; P0()::fail_phase_2; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_2"
+process AND_2_Act(){
+act_0; dact_0; AND_2_Act()}
+//##########Failure Behavior of "and_gate" named "AND_3"
+process AND_3(){
+process P0(){alt{::repaired_Cpt_A;AND_3()::fail_Cpt_A; P1()::repaired_Cpt_B;AND_3()::fail_Cpt_B; P1()::repaired_Cpt_C;AND_3()::fail_Cpt_C; P1()}}
+process P1(){alt{::repaired_Cpt_A;P0()::fail_Cpt_A; P2()::repaired_Cpt_B;P0()::fail_Cpt_B; P2()::repaired_Cpt_C;P0()::fail_Cpt_C; P2()}}
+process P2() { fail_AND_3; P3() }
+process P3(){alt{::repaired_Cpt_A;P4()::repaired_Cpt_B;P4()::repaired_Cpt_C;P4()}}
+process P4(){repaired_AND_3;P1()}
+alt{::fail_Cpt_A; P0()::fail_Cpt_B; P0()::fail_Cpt_C; P0()}}
+//##########Activation Behavior of "and_gate" named "AND_3"
+process AND_3_Act(){
+alt{:: act_0; S1() :: fail_phase_1; S1()} 
+process S1()  {alt {:: dact_0; AND_3_Act():: repaired_phase_1; AND_3_Act() :: act_0; S2() :: fail_phase_1; S2()}}
+process S2()  {act_4; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_phase_1; S4()}}
+process S4()  {dact_4; S1() }}
+//##########Failure Behavior of "f_leaf" named "Cpt_A"
+process Cpt_A(){
+process P1() {alt{::dact_5;Cpt_A()::rate(0.1) tau{=Cpt_A=true=}; fail_Cpt_A; P2()}}
+process P2() {alt{::dact_5; alt{::act_5; P2()::rate(0.1) tau{=Cpt_A=false=}; repaired_Cpt_A; Cpt_A()}::rate(0.1) tau{=Cpt_A=false=}; repaired_Cpt_A; P1()}}
+act_5; P1()}
+//##########Activation Behavior of "f_leaf" named "Cpt_A"
+process Cpt_A_Act(){
+alt{:: act_3; S1() :: act_0; S1() :: act_4; S1()} 
+process S1() {alt {:: act_5; S2() :: dact_3; Cpt_A_Act() :: dact_0; Cpt_A_Act():: dact_4; Cpt_A_Act() :: act_3; S4() :: act_0; S4():: act_4; S4()}}
+process S2()  {alt {:: dact_3; S3() :: dact_0; S3() :: dact_4; S3() :: act_3; S5():: act_0; S5():: act_4; S5()}}
+process S3()  {alt {:: dact_5; Cpt_A_Act() :: act_3; S2() :: act_0; S2() :: act_4; S2()}}
+process S4()  {alt {:: act_5; S5() :: dact_3; S1() :: dact_0; S1() :: dact_4; S1()  :: act_3; S6():: act_0; S6() :: act_4; S6()}}
+process S5()  {alt {:: act_3; S7() :: act_0; S7() :: act_4; S7() :: dact_3; S2() :: dact_0; S2() :: dact_4; S2()}}
+process S6()  {alt {:: act_5; S7():: dact_3; S4() :: dact_0; S4() :: dact_4; S4()}}
+process S7()  {alt {:: dact_3; S5() :: dact_0; S5() :: dact_4; S5() }}}
+//##########Failure Behavior of "f_leaf" named "Cpt_B"
+process Cpt_B(){
+process P1() {alt{::dact_6;Cpt_B()::rate(0.1) tau{=Cpt_B=true=}; fail_Cpt_B; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=Cpt_B=false=}; repaired_Cpt_B; Cpt_B()}::rate(0.1) tau{=Cpt_B=false=}; repaired_Cpt_B; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "Cpt_B"
+process Cpt_B_Act(){
+alt{:: act_3; S1() :: act_0; S1() :: act_4; S1()} 
+process S1() {alt {:: act_6; S2() :: dact_3; Cpt_B_Act() :: dact_0; Cpt_B_Act():: dact_4; Cpt_B_Act() :: act_3; S4() :: act_0; S4():: act_4; S4()}}
+process S2()  {alt {:: dact_3; S3() :: dact_0; S3() :: dact_4; S3() :: act_3; S5():: act_0; S5():: act_4; S5()}}
+process S3()  {alt {:: dact_6; Cpt_B_Act() :: act_3; S2() :: act_0; S2() :: act_4; S2()}}
+process S4()  {alt {:: act_6; S5() :: dact_3; S1() :: dact_0; S1() :: dact_4; S1()  :: act_3; S6():: act_0; S6() :: act_4; S6()}}
+process S5()  {alt {:: act_3; S7() :: act_0; S7() :: act_4; S7() :: dact_3; S2() :: dact_0; S2() :: dact_4; S2()}}
+process S6()  {alt {:: act_6; S7():: dact_3; S4() :: dact_0; S4() :: dact_4; S4()}}
+process S7()  {alt {:: dact_3; S5() :: dact_0; S5() :: dact_4; S5() }}}
+//##########Failure Behavior of "f_leaf" named "Cpt_C"
+process Cpt_C(){
+process P1() {alt{::dact_7;Cpt_C()::rate(0.1) tau{=Cpt_C=true=}; fail_Cpt_C; P2()}}
+process P2() {alt{::dact_7; alt{::act_7; P2()::rate(0.1) tau{=Cpt_C=false=}; repaired_Cpt_C; Cpt_C()}::rate(0.1) tau{=Cpt_C=false=}; repaired_Cpt_C; P1()}}
+act_7; P1()}
+//##########Activation Behavior of "f_leaf" named "Cpt_C"
+process Cpt_C_Act(){
+alt{:: act_3; S1() :: act_4; S1() :: fail_OR_1; S2()} 
+process S1()  {alt {:: fail_OR_1; S4() :: act_3; S3() :: act_4; S3()}}
+process S2()  {alt {:: repaired_OR_1; Cpt_C_Act() :: act_3; S4():: act_4; S4()}}
+process S3()  {alt {:: dact_3; S1():: dact_4; S1():: fail_OR_1; S6() }}
+process S4()  {alt {:: act_7; S9() :: dact_3; S2() :: dact_4; S2() :: repaired_OR_1; S1():: act_3; S6() :: act_4; S6() }}
+process S6()  {alt {:: act_7; S7() :: dact_3; S4() :: dact_4; S4() :: repaired_OR_1; S3() }}
+process S7()  {alt {:: repaired_OR_1; S8() :: act_3; S9() :: act_4; S9() }}
+process S8()  {alt {:: dact_7; S3() :: fail_OR_1; S7() :: dact_3; S11():: dact_4; S11() }}
+process S9()  {alt {::  repaired_OR_1; S11() :: dact_3; S10() :: dact_4; S10() }}
+process S10()  {alt {:: dact_7; S2()::  repaired_OR_1; S12() :: act_3; S9() :: act_4; S9() }}
+process S11()  {alt {:: dact_7; S1()::  fail_OR_1; S9() :: dact_3; S12() :: dact_4; S12() :: act_3; S8() :: act_4; S8()}}
+process S12()  {alt {:: dact_7;Cpt_C_Act()::  fail_OR_1; S10() :: act_3; S11() :: act_4; S11()}}}
+//##########Failure Behavior of "or_gate" named "OR_1"
+process OR_1(){
+process P0(){fail_OR_1;P2()}
+process P1(){repaired_OR_1;OR_1()}
+process P2(){alt{::repaired_Cpt_A;P1()::fail_Cpt_A; P3()::repaired_Cpt_B;P1()::fail_Cpt_B; P3()}}
+process P3(){alt{::repaired_Cpt_A;P2()::repaired_Cpt_B;P2()}} 
+ alt{::fail_Cpt_A; P0()::fail_Cpt_B; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_1"
+process OR_1_Act(){
+act_0; when(false) dact_0; OR_1_Act()}
+//##########Failure Behavior of "or_gate" named "OR_2"
+process OR_2(){
+process P0(){fail_OR_2;P2()}
+process P1(){repaired_OR_2;OR_2()}
+process P2(){alt{::repaired_AND_1;P1()::fail_AND_1; P3()::repaired_AND_2;P1()::fail_AND_2; P3()}}
+process P3(){alt{::repaired_AND_1;P2()::repaired_AND_2;P2()}} 
+ alt{::fail_AND_1; P0()::fail_AND_2; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_2"
+process OR_2_Act(){
+act_0; dact_0; OR_2_Act()}
+//##########Failure Behavior of "or_gate" named "OR_3"
+process OR_3(){
+process P0(){fail_OR_3;P2()}
+process P1(){repaired_OR_3;OR_3()}
+process P2(){alt{::repaired_Cpt_A;P1()::fail_Cpt_A; P3()::repaired_Cpt_B;P1()::fail_Cpt_B; P3()::repaired_Cpt_C;P1()::fail_Cpt_C; P3()}}
+process P3(){alt{::repaired_Cpt_A;P2()::fail_Cpt_A; P4()::repaired_Cpt_B;P2()::fail_Cpt_B; P4()::repaired_Cpt_C;P2()::fail_Cpt_C; P4()}}
+process P4(){alt{::repaired_Cpt_A;P3()::repaired_Cpt_B;P3()::repaired_Cpt_C;P3()}} 
+ alt{::fail_Cpt_A; P0()::fail_Cpt_B; P0()::fail_Cpt_C; P0()}}
+//##########Activation Behavior of "or_gate" named "OR_3"
+process OR_3_Act(){
+alt{:: act_0; S1() :: fail_phase_2; S1()} 
+process S1()  {alt {:: dact_0; OR_3_Act():: repaired_phase_2; OR_3_Act() :: act_0; S2() :: fail_phase_2; S2()}}
+process S2()  {act_3; S3()}
+process S3()  {alt {::  dact_0; S4() :: repaired_phase_2; S4()}}
+process S4()  {dact_3; S1() }}
+//##########Failure Behavior of "undes_event" named "UE_1"
+process UE_1() {
+fail_OR_2 {=  UE_1=true, Fail = true=} ; repaired_OR_2 {=  UE_1=false, Fail = false=}; UE_1()
+ }
+//##########Activation Behavior of "undes_event" named "UE_1"
+process UE_1_Act(){
+act_0; when(false) dact_0; UE_1_Act()}
+//##########Failure Behavior of "phase_leaf" named "phase_1"
+process phase_1(){
+process P1() {alt{:: act_1; P1() :: rate(0.1) tau; repaired_phase_1 {=phase_1 = false =};phase_1()}}
+act_1; fail_phase_1 {=phase_1 = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "phase_1"
+process phase_1_Act(){
+ act_1; when(false) act_1; phase_1_Act()}
+//##########Failure Behavior of "phase_leaf" named "phase_2"
+process phase_2(){
+process P1() {alt{:: act_2; P1() :: rate(1.0) tau; repaired_phase_2 {=phase_2 = false =};phase_2()}}
+act_2; fail_phase_2 {=phase_2 = true =}; P1()}
+//##########Activation Behavior of "phase_leaf" named "phase_2"
+process phase_2_Act(){
+repaired_phase_1; act_2;phase_2_Act()}
+//##########Composition of all files
+par
+{
+::AND_1()  :: AND_1_Act()
+::AND_2()  :: AND_2_Act()
+::AND_3()  :: AND_3_Act()
+::Cpt_A()  :: Cpt_A_Act()
+::Cpt_B()  :: Cpt_B_Act()
+::Cpt_C()  :: Cpt_C_Act()
+::OR_1()  :: OR_1_Act()
+::OR_2()  :: OR_2_Act()
+::OR_3()  :: OR_3_Act()
+:: UE_1()  :: UE_1_Act()
+::phase_1()  :: phase_1_Act() 
+::phase_2()  :: phase_2_Act() 
+}

@@ -1,0 +1,439 @@
+//##########Automatically generated Modest file from: "39.fi"
+const int B;
+property ComputeProbability=Pmax(<>[T<=B]  (Fail==true));
+action  act_5  , act_9  , act_3  , act_0  , act_4  , act_6  , act_7  , act_8;
+action  dact_5  , dact_9  , dact_3  , dact_0  , dact_4  , dact_6  , dact_7  , dact_8;
+action  act_C1,dact_C1, fail_C1, repaired_C1;
+bool  C1 = false;
+action  act_C2,dact_C2, fail_C2, repaired_C2;
+bool  C2 = false;
+action  act_C3,dact_C3, fail_C3, repaired_C3;
+bool  C3 = false;
+action  act_D1,dact_D1, fail_D1, repaired_D1;
+bool  D1 = false;
+action  act_D2,dact_D2, fail_D2, repaired_D2;
+bool  D2 = false;
+action  act_DBA1,dact_DBA1, fail_DBA1, repaired_DBA1;
+bool  DBA1 = false;
+action  act_DBA2,dact_DBA2, fail_DBA2, repaired_DBA2;
+bool  DBA2 = false;
+action  act_DBB1,dact_DBB1, fail_DBB1, repaired_DBB1;
+bool  DBB1 = false;
+action  act_DBB2,dact_DBB2, fail_DBB2, repaired_DBB2;
+bool  DBB2 = false;
+action  act_Diesel1,dact_Diesel1, fail_Diesel1, repaired_Diesel1;
+bool  Diesel1 = false;
+action  act_Diesel2,dact_Diesel2, fail_Diesel2, repaired_Diesel2;
+bool  Diesel2 = false;
+action  act_EI_1,dact_EI_1, fail_EI_1, repaired_EI_1;
+bool  EI_1 = false, Fail=false;
+action  act_FailC,dact_FailC, fail_FailC, repaired_FailC;
+bool  FailC = false;
+action  act_FailC_Main,dact_FailC_Main, fail_FailC_Main, repaired_FailC_Main;
+bool  FailC_Main = false;
+action  act_FailC_S2,dact_FailC_S2, fail_FailC_S2, repaired_FailC_S2;
+bool  FailC_S2 = false;
+action  act_FailD,dact_FailD, fail_FailD, repaired_FailD;
+bool  FailD = false;
+action  act_Fail_C_K1,dact_Fail_C_K1, fail_Fail_C_K1, repaired_Fail_C_K1;
+bool  Fail_C_K1 = false;
+action  act_Fail_C_K2,dact_Fail_C_K2, fail_Fail_C_K2, repaired_Fail_C_K2;
+bool  Fail_C_K2 = false;
+action  act_Fail_C_S1,dact_Fail_C_S1, fail_Fail_C_S1, repaired_Fail_C_S1;
+bool  Fail_C_S1 = false;
+action  act_Fail_C_S3,dact_Fail_C_S3, fail_Fail_C_S3, repaired_Fail_C_S3;
+bool  Fail_C_S3 = false;
+action  act_Fail_DBA1,dact_Fail_DBA1, fail_Fail_DBA1, repaired_Fail_DBA1;
+bool  Fail_DBA1 = false;
+action  act_Fail_DBA2,dact_Fail_DBA2, fail_Fail_DBA2, repaired_Fail_DBA2;
+bool  Fail_DBA2 = false;
+action  act_Fail_DBB1,dact_Fail_DBB1, fail_Fail_DBB1, repaired_Fail_DBB1;
+bool  Fail_DBB1 = false;
+action  act_Fail_DBB2,dact_Fail_DBB2, fail_Fail_DBB2, repaired_Fail_DBB2;
+bool  Fail_DBB2 = false;
+action  act_Fail_Power_supply,dact_Fail_Power_supply, fail_Fail_Power_supply, repaired_Fail_Power_supply;
+bool  Fail_Power_supply = false;
+action  act_Fail_TR,dact_Fail_TR, fail_Fail_TR, repaired_Fail_TR;
+bool  Fail_TR = false;
+action  act_Fail_cooling,dact_Fail_cooling, fail_Fail_cooling, repaired_Fail_cooling;
+bool  Fail_cooling = false;
+action  act_Fail_grid_supply,dact_Fail_grid_supply, fail_Fail_grid_supply, repaired_Fail_grid_supply;
+bool  Fail_grid_supply = false;
+action  act_Fail_supply_DBA1,dact_Fail_supply_DBA1, fail_Fail_supply_DBA1, repaired_Fail_supply_DBA1;
+bool  Fail_supply_DBA1 = false;
+action  act_Fail_supply_DBA2,dact_Fail_supply_DBA2, fail_Fail_supply_DBA2, repaired_Fail_supply_DBA2;
+bool  Fail_supply_DBA2 = false;
+action  act_Grid,dact_Grid, fail_Grid, repaired_Grid;
+bool  Grid = false;
+action  act_Tr1,dact_Tr1, fail_Tr1, repaired_Tr1;
+bool  Tr1 = false;
+action  act_Tr2,dact_Tr2, fail_Tr2, repaired_Tr2;
+bool  Tr2 = false;
+//##########Failure Behavior of "f_leaf" named "C1"
+process C1(){
+process P1() {alt{::dact_0;C1()::rate(0.1) tau{=C1=true=}; fail_C1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=C1=false=}; repaired_C1; C1()}::rate(0.1) tau{=C1=false=}; repaired_C1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "C1"
+process C1_Act(){
+act_0; dact_0; C1_Act()}
+//##########Failure Behavior of "f_leaf" named "C2"
+process C2(){
+process P1() {alt{::dact_0;C2()::rate(0.1) tau{=C2=true=}; fail_C2; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=C2=false=}; repaired_C2; C2()}::rate(0.1) tau{=C2=false=}; repaired_C2; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "C2"
+process C2_Act(){
+act_0; dact_0; C2_Act()}
+//##########Failure Behavior of "sf_leaf" named "C3"
+process C3(){
+process P1() {alt{::dact_7;C3()::rate(0.1) tau{=C3=true=}; fail_C3; P2()}}
+process P2() {alt{::dact_7; P3()::rate(0.1) tau{=C3=false=}; repaired_C3; P1()}}
+process P3() {alt{:: rate(0.1) tau{= C3 = false=}; repaired_C3; C3() :: act_7; P2()}}
+alt{::act_7; P1() :: rate(0.01) tau; fail_C3; P3()}}
+//##########Activation Behavior of "sf_leaf" named "C3"
+process C3_Act(){
+alt{:: act_0; S1() :: fail_FailC_Main; S1()} 
+process S1()  {alt {:: dact_0; C3_Act():: repaired_FailC_Main; C3_Act() :: act_0; S2() :: fail_FailC_Main; S2()}}
+process S2()  {alt {:: act_7; S3() :: dact_0; S1() :: repaired_FailC_Main; S1() }}
+process S3()  {alt {::  dact_0; S4() :: repaired_FailC_Main; S4()}}
+process S4()  {alt {::dact_7; S1() :: act_0; S3() :: fail_FailC_Main; S3()}}}
+//##########Failure Behavior of "f_leaf" named "D1"
+process D1(){
+process P1() {alt{::dact_0;D1()::rate(0.1) tau{=D1=true=}; fail_D1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=D1=false=}; repaired_D1; D1()}::rate(0.1) tau{=D1=false=}; repaired_D1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "D1"
+process D1_Act(){
+act_0; dact_0; D1_Act()}
+//##########Failure Behavior of "sf_leaf" named "D2"
+process D2(){
+process P1() {alt{::dact_3;D2()::rate(0.1) tau{=D2=true=}; fail_D2; P2()}}
+process P2() {alt{::dact_3; P3()::rate(0.1) tau{=D2=false=}; repaired_D2; P1()}}
+process P3() {alt{:: rate(0.1) tau{= D2 = false=}; repaired_D2; D2() :: act_3; P2()}}
+alt{::act_3; P1() :: rate(0.01) tau; fail_D2; P3()}}
+//##########Activation Behavior of "sf_leaf" named "D2"
+process D2_Act(){
+alt{:: act_0; S1() :: fail_D1; S1()} 
+process S1()  {alt {:: dact_0; D2_Act():: repaired_D1; D2_Act() :: act_0; S2() :: fail_D1; S2()}}
+process S2()  {alt {:: act_3; S3() :: dact_0; S1() :: repaired_D1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: repaired_D1; S4()}}
+process S4()  {alt {::dact_3; S1() :: act_0; S3() :: fail_D1; S3()}}}
+//##########Failure Behavior of "f_leaf" named "DBA1"
+process DBA1(){
+process P1() {alt{::dact_0;DBA1()::rate(0.1) tau{=DBA1=true=}; fail_DBA1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=DBA1=false=}; repaired_DBA1; DBA1()}::rate(0.1) tau{=DBA1=false=}; repaired_DBA1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "DBA1"
+process DBA1_Act(){
+act_0; dact_0; DBA1_Act()}
+//##########Failure Behavior of "f_leaf" named "DBA2"
+process DBA2(){
+process P1() {alt{::dact_4;DBA2()::rate(0.1) tau{=DBA2=true=}; fail_DBA2; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=DBA2=false=}; repaired_DBA2; DBA2()}::rate(0.1) tau{=DBA2=false=}; repaired_DBA2; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "DBA2"
+process DBA2_Act(){
+act_4; dact_4; DBA2_Act()}
+//##########Failure Behavior of "f_leaf" named "DBB1"
+process DBB1(){
+process P1() {alt{::dact_0;DBB1()::rate(0.1) tau{=DBB1=true=}; fail_DBB1; P2()}}
+process P2() {alt{::dact_0; alt{::act_0; P2()::rate(0.1) tau{=DBB1=false=}; repaired_DBB1; DBB1()}::rate(0.1) tau{=DBB1=false=}; repaired_DBB1; P1()}}
+act_0; P1()}
+//##########Activation Behavior of "f_leaf" named "DBB1"
+process DBB1_Act(){
+act_0; dact_0; DBB1_Act()}
+//##########Failure Behavior of "f_leaf" named "DBB2"
+process DBB2(){
+process P1() {alt{::dact_4;DBB2()::rate(0.1) tau{=DBB2=true=}; fail_DBB2; P2()}}
+process P2() {alt{::dact_4; alt{::act_4; P2()::rate(0.1) tau{=DBB2=false=}; repaired_DBB2; DBB2()}::rate(0.1) tau{=DBB2=false=}; repaired_DBB2; P1()}}
+act_4; P1()}
+//##########Activation Behavior of "f_leaf" named "DBB2"
+process DBB2_Act(){
+act_4; dact_4; DBB2_Act()}
+//##########Failure Behavior of "sf_leaf" named "Diesel1"
+process Diesel1(){
+process P1() {alt{::dact_5;Diesel1()::rate(0.1) tau{=Diesel1=true=}; fail_Diesel1; P2()}}
+process P2() {alt{::dact_5; P3()::rate(0.1) tau{=Diesel1=false=}; repaired_Diesel1; P1()}}
+process P3() {alt{:: rate(0.1) tau{= Diesel1 = false=}; repaired_Diesel1; Diesel1() :: act_5; P2()}}
+alt{::act_5; P1() :: rate(0.01) tau; fail_Diesel1; P3()}}
+//##########Activation Behavior of "sf_leaf" named "Diesel1"
+process Diesel1_Act(){
+alt{:: act_0; S1() :: fail_Fail_DBB1; S1()} 
+process S1()  {alt {:: dact_0; Diesel1_Act():: repaired_Fail_DBB1; Diesel1_Act() :: act_0; S2() :: fail_Fail_DBB1; S2()}}
+process S2()  {alt {:: act_5; S3() :: dact_0; S1() :: repaired_Fail_DBB1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: repaired_Fail_DBB1; S4()}}
+process S4()  {alt {::dact_5; S1() :: act_0; S3() :: fail_Fail_DBB1; S3()}}}
+//##########Failure Behavior of "sf_leaf" named "Diesel2"
+process Diesel2(){
+process P1() {alt{::dact_8;Diesel2()::rate(0.1) tau{=Diesel2=true=}; fail_Diesel2; P2()}}
+process P2() {alt{::dact_8; P3()::rate(0.1) tau{=Diesel2=false=}; repaired_Diesel2; P1()}}
+process P3() {alt{:: rate(0.1) tau{= Diesel2 = false=}; repaired_Diesel2; Diesel2() :: act_8; P2()}}
+alt{::act_8; P1() :: rate(0.01) tau; fail_Diesel2; P3()}}
+//##########Activation Behavior of "sf_leaf" named "Diesel2"
+process Diesel2_Act(){
+alt{:: act_4; S1() :: fail_Fail_DBB2; S1()} 
+process S1()  {alt {:: dact_4; Diesel2_Act():: repaired_Fail_DBB2; Diesel2_Act() :: act_4; S2() :: fail_Fail_DBB2; S2()}}
+process S2()  {alt {:: act_8; S3() :: dact_4; S1() :: repaired_Fail_DBB2; S1() }}
+process S3()  {alt {::  dact_4; S4() :: repaired_Fail_DBB2; S4()}}
+process S4()  {alt {::dact_8; S1() :: act_4; S3() :: fail_Fail_DBB2; S3()}}}
+//##########Failure Behavior of "undes_event" named "EI_1"
+process EI_1() {
+fail_Fail_cooling {=  EI_1=true, Fail = true=} ; repaired_Fail_cooling {=  EI_1=false, Fail = false=}; EI_1()
+ }
+//##########Activation Behavior of "undes_event" named "EI_1"
+process EI_1_Act(){
+act_0; when(false) dact_0; EI_1_Act()}
+//##########Failure Behavior of "or_gate" named "FailC"
+process FailC(){
+process P0(){fail_FailC;P2()}
+process P1(){repaired_FailC;FailC()}
+process P2(){alt{::repaired_Fail_C_K2;P1()::fail_Fail_C_K2; P3()::repaired_Fail_Power_supply;P1()::fail_Fail_Power_supply; P3()}}
+process P3(){alt{::repaired_Fail_C_K2;P2()::repaired_Fail_Power_supply;P2()}} 
+ alt{::fail_Fail_C_K2; P0()::fail_Fail_Power_supply; P0()}}
+//##########Activation Behavior of "or_gate" named "FailC"
+process FailC_Act(){
+act_0; dact_0; FailC_Act()}
+//##########Failure Behavior of "or_gate" named "FailC_Main"
+process FailC_Main(){
+process P0(){fail_FailC_Main;P2()}
+process P1(){repaired_FailC_Main;FailC_Main()}
+process P2(){alt{::repaired_C1;P1()::fail_C1; P3()::repaired_C2;P1()::fail_C2; P3()}}
+process P3(){alt{::repaired_C1;P2()::repaired_C2;P2()}} 
+ alt{::fail_C1; P0()::fail_C2; P0()}}
+//##########Activation Behavior of "or_gate" named "FailC_Main"
+process FailC_Main_Act(){
+act_0; when(false) dact_0; FailC_Main_Act()}
+//##########Failure Behavior of "and_gate" named "FailC_S2"
+process FailC_S2(){
+process P0(){alt{::repaired_C1;FailC_S2()::fail_C1; P1()::repaired_C3;FailC_S2()::fail_C3; P1()}}
+process P1(){alt{::repaired_C1;P0()::repaired_C3;P0()::fail_FailC_S2; P2()}}
+process P2(){alt{::repaired_C1;P3()::repaired_C3;P3()}}
+process P3(){repaired_FailC_S2;P0()}
+alt{::fail_C1; P0()::fail_C3; P0()}}
+//##########Activation Behavior of "and_gate" named "FailC_S2"
+process FailC_S2_Act(){
+act_0; dact_0; FailC_S2_Act()}
+//##########Failure Behavior of "and_gate" named "FailD"
+process FailD(){
+process P0(){alt{::repaired_D1;FailD()::fail_D1; P1()::repaired_D2;FailD()::fail_D2; P1()}}
+process P1(){alt{::repaired_D1;P0()::repaired_D2;P0()::fail_FailD; P2()}}
+process P2(){alt{::repaired_D1;P3()::repaired_D2;P3()}}
+process P3(){repaired_FailD;P0()}
+alt{::fail_D1; P0()::fail_D2; P0()}}
+//##########Activation Behavior of "and_gate" named "FailD"
+process FailD_Act(){
+act_0; dact_0; FailD_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_C_K1"
+process Fail_C_K1(){
+process P0(){fail_Fail_C_K1;P2()}
+process P1(){repaired_Fail_C_K1;Fail_C_K1()}
+process P2(){alt{::repaired_FailC_S2;P1()::fail_FailC_S2; P3()::repaired_Fail_C_S1;P1()::fail_Fail_C_S1; P3()}}
+process P3(){alt{::repaired_FailC_S2;P2()::repaired_Fail_C_S1;P2()}} 
+ alt{::fail_FailC_S2; P0()::fail_Fail_C_S1; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_C_K1"
+process Fail_C_K1_Act(){
+act_0; dact_0; Fail_C_K1_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_C_K2"
+process Fail_C_K2(){
+process P0(){fail_Fail_C_K2;P2()}
+process P1(){repaired_Fail_C_K2;Fail_C_K2()}
+process P2(){alt{::repaired_Fail_C_K1;P1()::fail_Fail_C_K1; P3()::repaired_Fail_C_S3;P1()::fail_Fail_C_S3; P3()}}
+process P3(){alt{::repaired_Fail_C_K1;P2()::repaired_Fail_C_S3;P2()}} 
+ alt{::fail_Fail_C_K1; P0()::fail_Fail_C_S3; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_C_K2"
+process Fail_C_K2_Act(){
+act_0; dact_0; Fail_C_K2_Act()}
+//##########Failure Behavior of "and_gate" named "Fail_C_S1"
+process Fail_C_S1(){
+process P0(){alt{::repaired_C1;Fail_C_S1()::fail_C1; P1()::repaired_C2;Fail_C_S1()::fail_C2; P1()}}
+process P1(){alt{::repaired_C1;P0()::repaired_C2;P0()::fail_Fail_C_S1; P2()}}
+process P2(){alt{::repaired_C1;P3()::repaired_C2;P3()}}
+process P3(){repaired_Fail_C_S1;P0()}
+alt{::fail_C1; P0()::fail_C2; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_C_S1"
+process Fail_C_S1_Act(){
+act_0; dact_0; Fail_C_S1_Act()}
+//##########Failure Behavior of "and_gate" named "Fail_C_S3"
+process Fail_C_S3(){
+process P0(){alt{::repaired_C2;Fail_C_S3()::fail_C2; P1()::repaired_C3;Fail_C_S3()::fail_C3; P1()}}
+process P1(){alt{::repaired_C2;P0()::repaired_C3;P0()::fail_Fail_C_S3; P2()}}
+process P2(){alt{::repaired_C2;P3()::repaired_C3;P3()}}
+process P3(){repaired_Fail_C_S3;P0()}
+alt{::fail_C2; P0()::fail_C3; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_C_S3"
+process Fail_C_S3_Act(){
+act_0; dact_0; Fail_C_S3_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_DBA1"
+process Fail_DBA1(){
+process P0(){fail_Fail_DBA1;P2()}
+process P1(){repaired_Fail_DBA1;Fail_DBA1()}
+process P2(){alt{::repaired_DBA1;P1()::fail_DBA1; P3()::repaired_Fail_supply_DBA1;P1()::fail_Fail_supply_DBA1; P3()}}
+process P3(){alt{::repaired_DBA1;P2()::repaired_Fail_supply_DBA1;P2()}} 
+ alt{::fail_DBA1; P0()::fail_Fail_supply_DBA1; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_DBA1"
+process Fail_DBA1_Act(){
+act_0; dact_0; Fail_DBA1_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_DBA2"
+process Fail_DBA2(){
+process P0(){fail_Fail_DBA2;P2()}
+process P1(){repaired_Fail_DBA2;Fail_DBA2()}
+process P2(){alt{::repaired_DBA2;P1()::fail_DBA2; P3()::repaired_Fail_supply_DBA2;P1()::fail_Fail_supply_DBA2; P3()}}
+process P3(){alt{::repaired_DBA2;P2()::repaired_Fail_supply_DBA2;P2()}} 
+ alt{::fail_DBA2; P0()::fail_Fail_supply_DBA2; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_DBA2"
+process Fail_DBA2_Act(){
+alt{:: act_0; S1() :: fail_Fail_DBA1; S1()} 
+process S1()  {alt {:: dact_0; Fail_DBA2_Act():: repaired_Fail_DBA1; Fail_DBA2_Act() :: act_0; S2() :: fail_Fail_DBA1; S2()}}
+process S2()  {alt {:: act_4; S3() :: dact_0; S1() :: repaired_Fail_DBA1; S1() }}
+process S3()  {alt {::  dact_0; S4() :: repaired_Fail_DBA1; S4()}}
+process S4()  {alt {::dact_4; S1() :: act_0; S3() :: fail_Fail_DBA1; S3()}}}
+//##########Failure Behavior of "or_gate" named "Fail_DBB1"
+process Fail_DBB1(){
+process P0(){fail_Fail_DBB1;P2()}
+process P1(){repaired_Fail_DBB1;Fail_DBB1()}
+process P2(){alt{::repaired_DBB1;P1()::fail_DBB1; P3()::repaired_Fail_grid_supply;P1()::fail_Fail_grid_supply; P3()}}
+process P3(){alt{::repaired_DBB1;P2()::repaired_Fail_grid_supply;P2()}} 
+ alt{::fail_DBB1; P0()::fail_Fail_grid_supply; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_DBB1"
+process Fail_DBB1_Act(){
+act_0; dact_0; Fail_DBB1_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_DBB2"
+process Fail_DBB2(){
+process P0(){fail_Fail_DBB2;P2()}
+process P1(){repaired_Fail_DBB2;Fail_DBB2()}
+process P2(){alt{::repaired_DBB2;P1()::fail_DBB2; P3()::repaired_Fail_grid_supply;P1()::fail_Fail_grid_supply; P3()}}
+process P3(){alt{::repaired_DBB2;P2()::repaired_Fail_grid_supply;P2()}} 
+ alt{::fail_DBB2; P0()::fail_Fail_grid_supply; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_DBB2"
+process Fail_DBB2_Act(){
+act_4; dact_4; Fail_DBB2_Act()}
+//##########Failure Behavior of "and_gate" named "Fail_Power_supply"
+process Fail_Power_supply(){
+process P0(){alt{::repaired_Fail_DBA1;Fail_Power_supply()::fail_Fail_DBA1; P1()::repaired_Fail_DBA2;Fail_Power_supply()::fail_Fail_DBA2; P1()}}
+process P1(){alt{::repaired_Fail_DBA1;P0()::repaired_Fail_DBA2;P0()::fail_Fail_Power_supply; P2()}}
+process P2(){alt{::repaired_Fail_DBA1;P3()::repaired_Fail_DBA2;P3()}}
+process P3(){repaired_Fail_Power_supply;P0()}
+alt{::fail_Fail_DBA1; P0()::fail_Fail_DBA2; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_Power_supply"
+process Fail_Power_supply_Act(){
+act_0; dact_0; Fail_Power_supply_Act()}
+//##########Failure Behavior of "and_gate" named "Fail_TR"
+process Fail_TR(){
+process P0(){alt{::repaired_Tr1;Fail_TR()::fail_Tr1; P1()::repaired_Tr2;Fail_TR()::fail_Tr2; P1()}}
+process P1(){alt{::repaired_Tr1;P0()::repaired_Tr2;P0()::fail_Fail_TR; P2()}}
+process P2(){alt{::repaired_Tr1;P3()::repaired_Tr2;P3()}}
+process P3(){repaired_Fail_TR;P0()}
+alt{::fail_Tr1; P0()::fail_Tr2; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_TR"
+process Fail_TR_Act(){
+act_6; dact_6; Fail_TR_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_cooling"
+process Fail_cooling(){
+process P0(){fail_Fail_cooling;P2()}
+process P1(){repaired_Fail_cooling;Fail_cooling()}
+process P2(){alt{::repaired_FailC;P1()::fail_FailC; P3()::repaired_FailD;P1()::fail_FailD; P3()}}
+process P3(){alt{::repaired_FailC;P2()::repaired_FailD;P2()}} 
+ alt{::fail_FailC; P0()::fail_FailD; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_cooling"
+process Fail_cooling_Act(){
+act_0; dact_0; Fail_cooling_Act()}
+//##########Failure Behavior of "or_gate" named "Fail_grid_supply"
+process Fail_grid_supply(){
+process P0(){fail_Fail_grid_supply;P2()}
+process P1(){repaired_Fail_grid_supply;Fail_grid_supply()}
+process P2(){alt{::repaired_Fail_TR;P1()::fail_Fail_TR; P3()::repaired_Grid;P1()::fail_Grid; P3()}}
+process P3(){alt{::repaired_Fail_TR;P2()::repaired_Grid;P2()}} 
+ alt{::fail_Fail_TR; P0()::fail_Grid; P0()}}
+//##########Activation Behavior of "or_gate" named "Fail_grid_supply"
+process Fail_grid_supply_Act(){
+alt{:: act_0; S1() :: act_4; S1()} 
+process S1()  {alt {::act_6; S4():: dact_0; Fail_grid_supply_Act():: dact_4; Fail_grid_supply_Act()}}
+process S3()  {alt {::  dact_0; S4() :: dact_4; S4()}}
+process S4()  {alt { :: dact_0; S5() :: dact_4; S5():: act_0; S3() :: act_4; S3()}}
+process S5()  {alt {::dact_6; Fail_grid_supply_Act() ::  act_0; S4() :: act_4; S4()}}}
+//##########Failure Behavior of "and_gate" named "Fail_supply_DBA1"
+process Fail_supply_DBA1(){
+process P0(){alt{::repaired_Diesel1;Fail_supply_DBA1()::fail_Diesel1; P1()::repaired_Fail_DBB1;Fail_supply_DBA1()::fail_Fail_DBB1; P1()}}
+process P1(){alt{::repaired_Diesel1;P0()::repaired_Fail_DBB1;P0()::fail_Fail_supply_DBA1; P2()}}
+process P2(){alt{::repaired_Diesel1;P3()::repaired_Fail_DBB1;P3()}}
+process P3(){repaired_Fail_supply_DBA1;P0()}
+alt{::fail_Diesel1; P0()::fail_Fail_DBB1; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_supply_DBA1"
+process Fail_supply_DBA1_Act(){
+act_0; dact_0; Fail_supply_DBA1_Act()}
+//##########Failure Behavior of "and_gate" named "Fail_supply_DBA2"
+process Fail_supply_DBA2(){
+process P0(){alt{::repaired_Diesel2;Fail_supply_DBA2()::fail_Diesel2; P1()::repaired_Fail_DBB2;Fail_supply_DBA2()::fail_Fail_DBB2; P1()}}
+process P1(){alt{::repaired_Diesel2;P0()::repaired_Fail_DBB2;P0()::fail_Fail_supply_DBA2; P2()}}
+process P2(){alt{::repaired_Diesel2;P3()::repaired_Fail_DBB2;P3()}}
+process P3(){repaired_Fail_supply_DBA2;P0()}
+alt{::fail_Diesel2; P0()::fail_Fail_DBB2; P0()}}
+//##########Activation Behavior of "and_gate" named "Fail_supply_DBA2"
+process Fail_supply_DBA2_Act(){
+act_4; dact_4; Fail_supply_DBA2_Act()}
+//##########Failure Behavior of "f_leaf" named "Grid"
+process Grid(){
+process P1() {alt{::dact_6;Grid()::rate(0.1) tau{=Grid=true=}; fail_Grid; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=Grid=false=}; repaired_Grid; Grid()}::rate(0.1) tau{=Grid=false=}; repaired_Grid; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "Grid"
+process Grid_Act(){
+act_6; dact_6; Grid_Act()}
+//##########Failure Behavior of "f_leaf" named "Tr1"
+process Tr1(){
+process P1() {alt{::dact_6;Tr1()::rate(0.1) tau{=Tr1=true=}; fail_Tr1; P2()}}
+process P2() {alt{::dact_6; alt{::act_6; P2()::rate(0.1) tau{=Tr1=false=}; repaired_Tr1; Tr1()}::rate(0.1) tau{=Tr1=false=}; repaired_Tr1; P1()}}
+act_6; P1()}
+//##########Activation Behavior of "f_leaf" named "Tr1"
+process Tr1_Act(){
+act_6; dact_6; Tr1_Act()}
+//##########Failure Behavior of "f_leaf" named "Tr2"
+process Tr2(){
+process P1() {alt{::dact_9;Tr2()::rate(0.1) tau{=Tr2=true=}; fail_Tr2; P2()}}
+process P2() {alt{::dact_9; alt{::act_9; P2()::rate(0.1) tau{=Tr2=false=}; repaired_Tr2; Tr2()}::rate(0.1) tau{=Tr2=false=}; repaired_Tr2; P1()}}
+act_9; P1()}
+//##########Activation Behavior of "f_leaf" named "Tr2"
+process Tr2_Act(){
+alt{:: act_6; S1() :: fail_Tr1; S1()} 
+process S1()  {alt {:: dact_6; Tr2_Act():: repaired_Tr1; Tr2_Act() :: act_6; S2() :: fail_Tr1; S2()}}
+process S2()  {alt {:: act_9; S3() :: dact_6; S1() :: repaired_Tr1; S1() }}
+process S3()  {alt {::  dact_6; S4() :: repaired_Tr1; S4()}}
+process S4()  {alt {::dact_9; S1() :: act_6; S3() :: fail_Tr1; S3()}}}
+//##########Composition of all files
+par
+{
+::C1()  
+::C2()  
+::C3()  :: C3_Act()
+::D1()  :: D1_Act()
+::D2()  :: D2_Act()
+::DBA1()  
+::DBA2()
+::DBB1()  
+::DBB2()
+::Diesel1()  :: Diesel1_Act()
+::Diesel2()  :: Diesel2_Act()
+:: EI_1()  :: EI_1_Act()
+::FailC()  
+::FailC_Main() 
+::FailC_S2()  
+::FailD()  
+::Fail_C_K1()  
+::Fail_C_K2()  
+::Fail_C_S1()  
+::Fail_C_S3()  
+::Fail_DBA1()  
+::Fail_DBA2()  :: Fail_DBA2_Act()
+::Fail_DBB1()
+::Fail_DBB2()  
+::Fail_Power_supply()  
+::Fail_TR() 
+::Fail_cooling()  
+::Fail_grid_supply()  :: Fail_grid_supply_Act()
+::Fail_supply_DBA1()  
+::Fail_supply_DBA2()  
+::Grid()  
+::Tr1()  
+::Tr2()  :: Tr2_Act()
+}

@@ -1,0 +1,186 @@
+
+
+
+Storm 1.3.1 (dev)
+
+Date: Tue Dec 17 21:43:17 2019
+Command line arguments: --jani 08.jani --prop '	Pmax=? [F<=1  Fail]; Pmin=? [F<=1  Fail];
+				Pmax=? [F<=2  Fail]; Pmin=? [F<=2  Fail];
+				Pmax=? [F<=3  Fail]; Pmin=? [F<=3 Fail];
+				Pmax=? [F<=4  Fail]; Pmin=? [F<=4  Fail];
+				Pmax=? [F<=5 Fail]; Pmin=? [F<=5 Fail];
+				Pmax=? [F<=6 Fail]; Pmin=? [F<=6 Fail];
+				Pmax=? [F<=7 Fail]; Pmin=? [F<=7 Fail];
+				Pmax=? [F<=8 Fail]; Pmin=? [F<=8 Fail];
+				Pmax=? [F<=9  Fail]; Pmin=? [F<=9 Fail];
+				Pmax=? [F<=10  Fail]; Pmin=? [F<=10  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/08OK
+
+Time for model input parsing: 0.206s.
+
+Time for model construction: 1.011s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	33817
+Transitions: 	54494
+Choices: 	37394
+Markovian St.: 	1920
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33338 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.045s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	33817
+Transitions: 	54494
+Choices: 	37394
+Markovian St.: 	1920
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33338 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U<=1 Fail] ...
+Result (for initial states): 0.4317940256
+Time for model checking: 0.102s.
+
+Model checking property "2": Pmin=? [true U<=1 Fail] ...
+Result (for initial states): 0.4317940256
+Time for model checking: 0.048s.
+
+Model checking property "3": Pmax=? [true U<=2 Fail] ...
+Result (for initial states): 0.6800024355
+Time for model checking: 0.062s.
+
+Model checking property "4": Pmin=? [true U<=2 Fail] ...
+Result (for initial states): 0.6800024355
+Time for model checking: 0.061s.
+
+Model checking property "5": Pmax=? [true U<=3 Fail] ...
+Result (for initial states): 0.8210298484
+Time for model checking: 0.078s.
+
+Model checking property "6": Pmin=? [true U<=3 Fail] ...
+Result (for initial states): 0.8210298484
+Time for model checking: 0.078s.
+
+Model checking property "7": Pmax=? [true U<=4 Fail] ...
+Result (for initial states): 0.9004475456
+Time for model checking: 0.099s.
+
+Model checking property "8": Pmin=? [true U<=4 Fail] ...
+Result (for initial states): 0.9004475456
+Time for model checking: 0.099s.
+
+Model checking property "9": Pmax=? [true U<=5 Fail] ...
+Result (for initial states): 0.9448617719
+Time for model checking: 0.120s.
+
+Model checking property "10": Pmin=? [true U<=5 Fail] ...
+Result (for initial states): 0.9448617719
+Time for model checking: 0.120s.
+
+Model checking property "11": Pmax=? [true U<=6 Fail] ...
+Result (for initial states): 0.9695656716
+Time for model checking: 0.145s.
+
+Model checking property "12": Pmin=? [true U<=6 Fail] ...
+Result (for initial states): 0.9695656716
+Time for model checking: 0.144s.
+
+Model checking property "13": Pmax=? [true U<=7 Fail] ...
+Result (for initial states): 0.9832474018
+Time for model checking: 0.169s.
+
+Model checking property "14": Pmin=? [true U<=7 Fail] ...
+Result (for initial states): 0.9832474018
+Time for model checking: 0.169s.
+
+Model checking property "15": Pmax=? [true U<=8 Fail] ...
+Result (for initial states): 0.9907988413
+Time for model checking: 0.193s.
+
+Model checking property "16": Pmin=? [true U<=8 Fail] ...
+Result (for initial states): 0.9907988413
+Time for model checking: 0.192s.
+
+Model checking property "17": Pmax=? [true U<=9 Fail] ...
+Result (for initial states): 0.9949553547
+Time for model checking: 0.223s.
+
+Model checking property "18": Pmin=? [true U<=9 Fail] ...
+Result (for initial states): 0.9949553547
+Time for model checking: 0.223s.
+
+Model checking property "19": Pmax=? [true U<=10 Fail] ...
+Result (for initial states): 0.9972381842
+Time for model checking: 0.254s.
+
+Model checking property "20": Pmin=? [true U<=10 Fail] ...
+Result (for initial states): 0.9972381842
+Time for model checking: 0.251s.
+Storm 1.3.1 (dev)
+
+Date: Tue Dec 17 21:43:22 2019
+Command line arguments: --jani 08.jani --prop '	Pmax=? [F [1, 1]  Fail]; Pmin=? [F [1, 1]  Fail];
+				Pmax=? [F [2, 2]  Fail]; Pmin=? [F [2, 2]  Fail];
+				Pmax=? [F [3, 3]  Fail]; Pmin=? [F [3, 3] Fail];
+				Pmax=? [F [4, 4]  Fail]; Pmin=? [F [4, 4]  Fail];
+				Pmax=? [F [5, 5] Fail]; Pmin=? [F [5, 5] Fail];
+				Pmax=? [F [6, 6] Fail]; Pmin=? [F [6, 6] Fail];
+				Pmax=? [F [7, 7] Fail]; Pmin=? [F [7, 7] Fail];
+				Pmax=? [F [8, 8] Fail]; Pmin=? [F [8, 8] Fail];
+				Pmax=? [F [9, 9]  Fail]; Pmin=? [F [9, 9] Fail];
+				Pmax=? [F [10, 10]  Fail]; Pmin=? [F [10, 10]  Fail]' --precision 1e-8
+Current working directory: /home/shahid/modest/repairable/kb3-examples/08OK
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 0.421s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	33817
+Transitions: 	54494
+Choices: 	37394
+Markovian St.: 	1920
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33338 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.010s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	33817
+Transitions: 	54494
+Choices: 	37394
+Markovian St.: 	1920
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Fail -> 33338 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "1": Pmax=? [true U[1, 1] Fail] ...
+ WARN (SparseMarkovAutomatonCslHelper.cpp:614): Using IMCA method because Unif+ does not support a lower bound > 0.
