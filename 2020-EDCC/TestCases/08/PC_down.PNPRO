@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place marking="1" name="P_PC_down_0" superposition-tags="work_PC_down" x="4.0" y="9.0"/>
+      <transition name="t_PC_down_0"  priority="103" type="IMM" x="8.85" y="12.0"/>
+      <place name="P_PC_down_1" superposition-tags="fail_PowerSupply" x="12" y="16.0"/>
+      <transition name="t_PC_down_1"  priority="104" type="IMM" x="12" y="8.0"/>
+      <place name="P_PC_down_2" superposition-tags="fail_AND_1" x="20" y="16.0"/>
+      <transition name="t_PC_down_2"  priority="104" type="IMM" x="20" y="8.0"/>
+      <place name="P_PC_down_3" superposition-tags="fail_Memory" x="28" y="16.0"/>
+      <transition name="t_PC_down_3"  priority="104" type="IMM" x="28" y="8.0"/>
+      <place name="P_PC_down_4" superposition-tags="fail_HardDrive" x="36" y="16.0"/>
+      <transition name="t_PC_down_4"  priority="104" type="IMM" x="36" y="8.0"/>
+      <place name="P_PC_down_5" superposition-tags="fail_DisplayUnit" x="44" y="16.0"/>
+      <transition name="t_PC_down_5"  priority="104" type="IMM" x="44" y="8.0"/>
+      <place name="P_PC_down_6" superposition-tags="fail_Windows" x="52" y="16.0"/>
+      <transition name="t_PC_down_6"  priority="104" type="IMM" x="52" y="8.0"/>
+      <place name="P_PC_down_7" superposition-tags="fail_Cpu" x="60" y="16.0"/>
+      <transition name="t_PC_down_7"  priority="104" type="IMM" x="60" y="8.0"/>
+<place name="P_PC_down_9" superposition-tags="fail_PC_down" x="76" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="P_PC_down_0" kind="OUTPUT" tail="t_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INPUT" tail="P_PC_down_9"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_1"/>
+      <arc head="t_PC_down_1" kind="INPUT" tail="P_PC_down_1"/>
+      <arc head="P_PC_down_1" kind="OUTPUT" tail="t_PC_down_1"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_1"/>
+      <arc head="t_PC_down_1" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_2"/>
+      <arc head="t_PC_down_2" kind="INPUT" tail="P_PC_down_2"/>
+      <arc head="P_PC_down_2" kind="OUTPUT" tail="t_PC_down_2"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_2"/>
+      <arc head="t_PC_down_2" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_3"/>
+      <arc head="t_PC_down_3" kind="INPUT" tail="P_PC_down_3"/>
+      <arc head="P_PC_down_3" kind="OUTPUT" tail="t_PC_down_3"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_3"/>
+      <arc head="t_PC_down_3" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_4"/>
+      <arc head="t_PC_down_4" kind="INPUT" tail="P_PC_down_4"/>
+      <arc head="P_PC_down_4" kind="OUTPUT" tail="t_PC_down_4"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_4"/>
+      <arc head="t_PC_down_4" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_5"/>
+      <arc head="t_PC_down_5" kind="INPUT" tail="P_PC_down_5"/>
+      <arc head="P_PC_down_5" kind="OUTPUT" tail="t_PC_down_5"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_5"/>
+      <arc head="t_PC_down_5" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_6"/>
+      <arc head="t_PC_down_6" kind="INPUT" tail="P_PC_down_6"/>
+      <arc head="P_PC_down_6" kind="OUTPUT" tail="t_PC_down_6"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_6"/>
+      <arc head="t_PC_down_6" kind="INPUT" tail="P_PC_down_0"/>
+      <arc head="t_PC_down_0" kind="INHIBITOR" tail="P_PC_down_7"/>
+      <arc head="t_PC_down_7" kind="INPUT" tail="P_PC_down_7"/>
+      <arc head="P_PC_down_7" kind="OUTPUT" tail="t_PC_down_7"/>
+      <arc head="P_PC_down_9" kind="OUTPUT" tail="t_PC_down_7"/>
+      <arc head="t_PC_down_7" kind="INPUT" tail="P_PC_down_0"/>
+    </edges>
+  </gspn>
+</project>

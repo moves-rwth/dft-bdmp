@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place marking="1" name="P_UE_1_0" superposition-tags="work_UE_1" x="5.0" y="7.0"/>
+      <transition name="t_UE_1_0"  priority="104" type="IMM" x="9.85" y="7.0"/>
+      <place name="FAIL" x="14.0" y="7.0"/>
+      <transition name="t_UE_1_1"  priority="103" type="IMM" x="9.85" y="3.0"/>
+      <place name="P_UE_1_2" superposition-tags="fail_system_loss" x="12.0" y="12.0"/>
+    </nodes>
+    <edges>
+      <arc head="t_UE_1_0" kind="INPUT" tail="P_UE_1_0"/>
+      <arc head="FAIL" kind="OUTPUT" tail="t_UE_1_0"/>
+      <arc head="t_UE_1_1" kind="INPUT" tail="FAIL"/>
+      <arc head="P_UE_1_0" kind="OUTPUT" tail="t_UE_1_1"/>
+      <arc head="t_UE_1_0" kind="INPUT" tail="P_UE_1_2"/>
+      <arc head="t_UE_1_1" kind="INHIBITOR" tail="P_UE_1_2"/>
+      <arc head="P_UE_1_2" kind="OUTPUT" tail="t_UE_1_0"/>
+    </edges>
+  </gspn>
+</project>

@@ -1,0 +1,2097 @@
+{'AandB_unavailable': {'Calculate': 'fn_fathers_and_trig',
+                       'Fathers': ['OU_2'],
+                       'Name': 'AandB_unavailable',
+                       'Previous': 'Null',
+                       'Sons': ['OU_7', 'OU_8'],
+                       'Triggered_by': 'Null',
+                       'Type': 'and_gate',
+                       'module': '1'},
+ 'Due_to_A': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['short_circuit'],
+              'Name': 'Due_to_A',
+              'Previous': 'Null',
+              'Sons': ['FailureOfA', 'impossible_to_isolate_A'],
+              'Triggered_by': 'Null',
+              'Type': 'and_gate',
+              'module': '1'},
+ 'Due_to_B': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['short_circuit'],
+              'Name': 'Due_to_B',
+              'Previous': 'Null',
+              'Sons': ['FailureOfB', 'impossible_to_isolate_B'],
+              'Triggered_by': 'Null',
+              'Type': 'and_gate',
+              'module': '1'},
+ 'EI_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'EI_1',
+          'Previous': 'Null',
+          'Sons': ['OU_1'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'FailureOfA': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Due_to_A', 'OU_3', 'OU_7'],
+                'Name': 'FailureOfA',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'f_leaf',
+                'lambda': '0.10000000000000000555',
+                'module': '9',
+                'mu': '0.10000000000000000555'},
+ 'FailureOfB': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['Due_to_B', 'OU_3', 'OU_8'],
+                'Name': 'FailureOfB',
+                'Previous': 'Null',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'f_leaf',
+                'lambda': '0.10000000000000000555',
+                'module': '10',
+                'mu': '0.10000000000000000555'},
+ 'IO_K1': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['OU_8'],
+           'Name': 'IO_K1',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.10000000000000000555',
+           'module': '1',
+           'mu': '0.10000000000000000555'},
+ 'IO_K2': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Inadvertent_opening', 'OU_7'],
+           'Name': 'IO_K2',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.10000000000000000555',
+           'module': '11',
+           'mu': '0.10000000000000000555'},
+ 'IO_K3': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Inadvertent_opening', 'OU_8'],
+           'Name': 'IO_K3',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.10000000000000000555',
+           'module': '12',
+           'mu': '0.10000000000000000555'},
+ 'IO_K4': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['OU_7'],
+           'Name': 'IO_K4',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.10000000000000000555',
+           'module': '1',
+           'mu': '0.10000000000000000555'},
+ 'IO_K5': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Inadvertent_opening'],
+           'Name': 'IO_K5',
+           'Previous': 'Null',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'f_leaf',
+           'lambda': '0.10000000000000000555',
+           'module': '2',
+           'mu': '0.10000000000000000555'},
+ 'Inadvertent_opening': {'Calculate': 'fn_fathers_and_trig',
+                         'Fathers': ['OU_3'],
+                         'Name': 'Inadvertent_opening',
+                         'Previous': 'Null',
+                         'Sons': ['IO_K2', 'IO_K3', 'IO_K5'],
+                         'Triggered_by': 'Null',
+                         'Type': 'or_gate',
+                         'module': '2'},
+ 'OU_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['EI_1'],
+          'Name': 'OU_1',
+          'Previous': 'Null',
+          'Sons': ['System_failure_in_ph_1', 'System_failure_in_ph_2'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '0'},
+ 'OU_2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['System_failure_in_ph_1'],
+          'Name': 'OU_2',
+          'Previous': 'Null',
+          'Sons': ['AandB_unavailable', 'short_circuit'],
+          'Triggered_by': 'ph_1',
+          'Type': 'or_gate',
+          'module': '1'},
+ 'OU_3': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['System_failure_in_ph_2'],
+          'Name': 'OU_3',
+          'Previous': 'Null',
+          'Sons': ['FailureOfA',
+                   'FailureOfB',
+                   'Inadvertent_opening',
+                   'Reconf_failure'],
+          'Triggered_by': 'ph_2',
+          'Type': 'or_gate',
+          'module': '2'},
+ 'OU_7': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['AandB_unavailable'],
+          'Name': 'OU_7',
+          'Previous': 'Null',
+          'Sons': ['FailureOfA', 'IO_K2', 'IO_K4'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '1'},
+ 'OU_8': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['AandB_unavailable'],
+          'Name': 'OU_8',
+          'Previous': 'Null',
+          'Sons': ['FailureOfB', 'IO_K1', 'IO_K3'],
+          'Triggered_by': 'Null',
+          'Type': 'or_gate',
+          'module': '1'},
+ 'RC_K5': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['Reconf_failure'],
+           'Name': 'RC_K5',
+           'Previous': 'Null',
+           'Priority': '2',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'i_leaf',
+           'gamma': '0.5',
+           'module': '2',
+           'mu': '0.10000000000000000555'},
+ 'RO_K1': {'Calculate': 'fn_fathers_opp_trig',
+           'Fathers': ['Reconf_failure', 'impossible_to_isolate_B'],
+           'Name': 'RO_K1',
+           'Previous': 'Null',
+           'Priority': '3',
+           'Sons': 'Null',
+           'Triggered_by': 'IO_K1',
+           'Type': 'i_leaf',
+           'gamma': '0.5',
+           'module': '3',
+           'mu': '0.10000000000000000555'},
+ 'RO_K2': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['impossible_to_isolate_A'],
+           'Name': 'RO_K2',
+           'Previous': 'Null',
+           'Priority': '4',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'i_leaf',
+           'gamma': '0.5',
+           'module': '5',
+           'mu': '0.10000000000000000555'},
+ 'RO_K3': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['impossible_to_isolate_B'],
+           'Name': 'RO_K3',
+           'Previous': 'Null',
+           'Priority': '5',
+           'Sons': 'Null',
+           'Triggered_by': 'Null',
+           'Type': 'i_leaf',
+           'gamma': '0.5',
+           'module': '6',
+           'mu': '0.10000000000000000555'},
+ 'RO_K4': {'Calculate': 'fn_fathers_opp_trig',
+           'Fathers': ['Reconf_failure', 'impossible_to_isolate_A'],
+           'Name': 'RO_K4',
+           'Previous': 'Null',
+           'Priority': '6',
+           'Sons': 'Null',
+           'Triggered_by': 'IO_K4',
+           'Type': 'i_leaf',
+           'gamma': '0.5',
+           'module': '4',
+           'mu': '0.10000000000000000555'},
+ 'Reconf_failure': {'Calculate': 'fn_fathers_and_trig',
+                    'Fathers': ['OU_3'],
+                    'Name': 'Reconf_failure',
+                    'Previous': 'Null',
+                    'Sons': ['RC_K5', 'RO_K1', 'RO_K4'],
+                    'Triggered_by': 'Null',
+                    'Type': 'or_gate',
+                    'module': '2'},
+ 'System_failure_in_ph_1': {'Calculate': 'fn_fathers_and_trig'  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.224
+
+SAVING AS AandB_unavailable.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.368
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS AandB_unavailable_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.229
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File AandB_unavailable_act.net read in.
+ File AandB_unavailable.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.237
+
+SAVING AS Due_to_A.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.376
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.174
+
+SAVING AS Due_to_A_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.226
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Due_to_A_act.net read in.
+ File Due_to_A.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.227
+
+SAVING AS Due_to_B.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.371
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.185
+
+SAVING AS Due_to_B_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.242
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Due_to_B_act.net read in.
+ File Due_to_B.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          7
+LOADING TIME: 0.232
+
+SAVING AS EI_1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.384
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.17
+
+SAVING AS EI_1_act.(net/def) ...
+SAVING TIME: 0.004
+TOTAL TIME: 0.296
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File EI_1_act.net read in.
+ File EI_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.222
+
+SAVING AS FailureOfA.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.359
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.242
+
+SAVING AS FailureOfA_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.396
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File FailureOfA_act.net read in.
+ File FailureOfA.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.224
+
+SAVING AS FailureOfB.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.366
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.248
+
+SAVING AS FailureOfB_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.39
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File FailureOfB_act.net read in.
+ File FailureOfB.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.234
+
+SAVING AS IO_K1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.393
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS IO_K1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.238
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File IO_K1_act.net read in.
+ File IO_K1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.213
+
+SAVING AS IO_K2.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.37
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.241
+
+SAVING AS IO_K2_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.389
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File IO_K2_act.net read in.
+ File IO_K2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.242
+
+SAVING AS IO_K3.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.394
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.218
+
+SAVING AS IO_K3_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.359
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File IO_K3_act.net read in.
+ File IO_K3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.226
+
+SAVING AS IO_K4.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.38
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS IO_K4_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.235
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File IO_K4_act.net read in.
+ File IO_K4.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.221
+
+SAVING AS IO_K5.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.357
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.177
+
+SAVING AS IO_K5_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.225
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File IO_K5_act.net read in.
+ File IO_K5.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          17
+LOADING TIME: 0.245
+
+SAVING AS Inadvertent_opening.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.39
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS Inadvertent_opening_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.234
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Inadvertent_opening_act.net read in.
+ File Inadvertent_opening.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.239
+
+SAVING AS OU_1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.374
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.188
+
+SAVING AS OU_1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.244
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File OU_1_act.net read in.
+ File OU_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.221
+
+SAVING AS OU_2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.358
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.225
+
+SAVING AS OU_2_act.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.383
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File OU_2_act.net read in.
+ File OU_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        6
+  TRANSITIONS:   5
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          22
+LOADING TIME: 0.238
+
+SAVING AS OU_3.(net/def) ...
+SAVING TIME: 0.011
+TOTAL TIME: 0.388
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.234
+
+SAVING AS OU_3_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.395
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File OU_3_act.net read in.
+ File OU_3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          17
+LOADING TIME: 0.228
+
+SAVING AS OU_7.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.378
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.183
+
+SAVING AS OU_7_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.24
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File OU_7_act.net read in.
+ File OU_7.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          17
+LOADING TIME: 0.242
+
+SAVING AS OU_8.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.385
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS OU_8_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.227
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File OU_8_act.net read in.
+ File OU_8.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.245
+
+SAVING AS RC_K5.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.4
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS RC_K5_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.236
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RC_K5_act.net read in.
+ File RC_K5.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.233
+
+SAVING AS RO_K1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.369
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          18
+LOADING TIME: 0.254
+
+SAVING AS RO_K1_act.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.42
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_K1_act.net read in.
+ File RO_K1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.233
+
+SAVING AS RO_K2.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.377
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.177
+
+SAVING AS RO_K2_act.(net/def) ...
+SAVING TIME: 0.004
+TOTAL TIME: 0.233
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_K2_act.net read in.
+ File RO_K2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.242
+
+SAVING AS RO_K3.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.39
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.181
+
+SAVING AS RO_K3_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_K3_act.net read in.
+ File RO_K3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.228
+
+SAVING AS RO_K4.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.364
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          18
+LOADING TIME: 0.249
+
+SAVING AS RO_K4_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.413
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_K4_act.net read in.
+ File RO_K4.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          17
+LOADING TIME: 0.249
+
+SAVING AS Reconf_failure.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.391
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.166
+
+SAVING AS Reconf_failure_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.215
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Reconf_failure_act.net read in.
+ File Reconf_failure.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.219
+
+SAVING AS System_failure_in_ph_1.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.371
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.173
+
+SAVING AS System_failure_in_ph_1_act.(net/def) ...
+SAVING TIME: 0.004
+TOTAL TIME: 0.221
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File System_failure_in_ph_1_act.net read in.
+ File System_failure_in_ph_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.233
+
+SAVING AS System_failure_in_ph_2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.386
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS System_failure_in_ph_2_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File System_failure_in_ph_2_act.net read in.
+ File System_failure_in_ph_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.237
+
+SAVING AS impossible_to_isolate_A.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.377
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.239
+
+SAVING AS impossible_to_isolate_A_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.379
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File impossible_to_isolate_A_act.net read in.
+ File impossible_to_isolate_A.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.228
+
+SAVING AS impossible_to_isolate_B.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.372
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.241
+
+SAVING AS impossible_to_isolate_B_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.388
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File impossible_to_isolate_B_act.net read in.
+ File impossible_to_isolate_B.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          10
+LOADING TIME: 0.234
+
+SAVING AS ph_1.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.388
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   1
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          1
+LOADING TIME: 0.223
+
+SAVING AS ph_1_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.374
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File ph_1_act.net read in.
+ File ph_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          10
+LOADING TIME: 0.238
+
+SAVING AS ph_2.(net/def) ...
+SAVING TIME: 0.009
+TOTAL TIME: 0.391
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          7
+LOADING TIME: 0.234
+
+SAVING AS ph_2_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.375
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File ph_2_act.net read in.
+ File ph_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.222
+
+SAVING AS short_circuit.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.359
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.177
+
+SAVING AS short_circuit_act.(net/def) ...
+SAVING TIME: 0.004
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File short_circuit_act.net read in.
+ File short_circuit.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File EI_1.net read in.
+ File AandB_unavailable.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_0.net read in.
+ File Due_to_A.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_1.net read in.
+ File Due_to_B.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_2.net read in.
+ File FailureOfA.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_3.net read in.
+ File FailureOfB.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_4.net read in.
+ File IO_K1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_5.net read in.
+ File IO_K2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_6.net read in.
+ File IO_K3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_7.net read in.
+ File IO_K4.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_8.net read in.
+ File IO_K5.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_9.net read in.
+ File Inadvertent_opening.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_10.net read in.
+ File OU_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_11.net read in.
+ File OU_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_12.net read in.
+ File OU_3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_13.net read in.
+ File OU_7.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_14.net read in.
+ File OU_8.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_15.net read in.
+ File RC_K5.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_16.net read in.
+ File RO_K1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_17.net read in.
+ File RO_K2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_18.net read in.
+ File RO_K3.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_19.net read in.
+ File RO_K4.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_20.net read in.
+ File Reconf_failure.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_21.net read in.
+ File System_failure_in_ph_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_22.net read in.
+ File System_failure_in_ph_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_23.net read in.
+ File impossible_to_isolate_A.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_24.net read in.
+ File impossible_to_isolate_B.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_25.net read in.
+ File ph_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_26.net read in.
+ File ph_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_27.net read in.
+ File short_circuit.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+,
+                            'Fathers': ['OU_1'],
+                            'Name': 'System_failure_in_ph_1',
+                            'Previous': 'Null',
+                            'Sons': ['OU_2', 'ph_1'],
+                            'Triggered_by': 'Null',
+                            'Type': 'and_gate',
+                            'module': '0'},
+ 'System_failure_in_ph_2': {'Calculate': 'fn_fathers_and_trig',
+                            'Fathers': ['OU_1'],
+                            'Name': 'System_failure_in_ph_2',
+                            'Previous': 'Null',
+                            'Sons': ['OU_3', 'ph_2'],
+                            'Triggered_by': 'Null',
+                            'Type': 'and_gate',
+                            'module': '0'},
+ 'impossible_to_isolate_A': {'Calculate': 'fn_fathers_and_trig',
+                             'Fathers': ['Due_to_A'],
+                             'Name': 'impossible_to_isolate_A',
+                             'Previous': 'Null',
+                             'Sons': ['RO_K2', 'RO_K4'],
+                             'Triggered_by': 'FailureOfA',
+                             'Type': 'and_gate',
+                             'module': '5'},
+ 'impossible_to_isolate_B': {'Calculate': 'fn_fathers_and_trig',
+                             'Fathers': ['Due_to_B'],
+                             'Name': 'impossible_to_isolate_B',
+                             'Previous': 'Null',
+                             'Sons': ['RO_K1', 'RO_K3'],
+                             'Triggered_by': 'FailureOfB',
+                             'Type': 'and_gate',
+                             'module': '6'},
+ 'ph_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['System_failure_in_ph_1'],
+          'In_progress': 'TRUE',
+          'Name': 'ph_1',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'phase_leaf',
+          'lambda': '0.10000000000000000555',
+          'module': '7'},
+ 'ph_2': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['System_failure_in_ph_2'],
+          'In_progress': 'FALSE',
+          'Name': 'ph_2',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'ph_1',
+          'Type': 'phase_leaf',
+          'lambda': '0.10000000000000000555',
+          'module': '8'},
+ 'short_circuit': {'Calculate': 'fn_fathers_and_trig',
+                   'Fathers': ['OU_2'],
+                   'Name': 'short_circuit',
+                   'Previous': 'Null',
+                   'Sons': ['Due_to_A', 'Due_to_B'],
+                   'Triggered_by': 'Null',
+                   'Type': 'or_gate',
+                   'module': '1'}}
+AandB_unavailable.PNPRO
+Due_to_A.PNPRO
+Due_to_B.PNPRO
+EI_1.PNPRO
+FailureOfA.PNPRO
+FailureOfB.PNPRO
+IO_K1.PNPRO
+IO_K2.PNPRO
+IO_K3.PNPRO
+IO_K4.PNPRO
+IO_K5.PNPRO
+Inadvertent_opening.PNPRO
+OU_1.PNPRO
+OU_2.PNPRO
+fn_fathers_and_trig
+OU_3.PNPRO
+fn_fathers_and_trig
+OU_7.PNPRO
+OU_8.PNPRO
+RC_K5.PNPRO
+RO_K1.PNPRO
+fn_fathers_opp_trig
+RO_K2.PNPRO
+RO_K3.PNPRO
+RO_K4.PNPRO
+fn_fathers_opp_trig
+Reconf_failure.PNPRO
+System_failure_in_ph_1.PNPRO
+System_failure_in_ph_2.PNPRO
+impossible_to_isolate_A.PNPRO
+fn_fathers_and_trig
+impossible_to_isolate_B.PNPRO
+fn_fathers_and_trig
+ph_1.PNPRO
+Caution: The phase semantics are doubtful for this case
+ph_2.PNPRO
+Caution: The phase semantics are doubtful for this case
+Phase is of Fn fathers and trig: Since no given fail possible we assume  every thing under Opp Strig active by default
+short_circuit.PNPRO
+/home/shahid/modest/repairable/kb3-examples PNPRO/40/*.PNPRO
+EI_1
+Please open GreatSPN and import "temp_28.net"
+Storm-GSPN 1.4.2 (dev)
+
+Date: Sat Mar 21 12:36:32 2020
+Command line arguments: -gspn /home/shahid/modest/repairable/BENCHMARK/BENCHMARK.PNPRO '--exportGspn:to-jani' /home/shahid/modest/repairable/BENCHMARK/temp.jani
+Current working directory: /home/shahid/modest/repairable/kb3-examples PNPRO/40
+
+unknown child (node=project): dta
+unknown child (node=project): dta
+unknown child (node=project): measures
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=place): superposition-tags
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+unknown attribute (node=arc): head-magnet
+unknown attribute (node=arc): tail-magnet
+'/home/shahid/modest/repairable/BENCHMARK/final.net' -> '/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/final.net'
+'/home/shahid/modest/repairable/BENCHMARK/final.def' -> '/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/final.def'
+[1m[4mLOADING PETRI NET /home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution//final (net/def)...[22m[24m
+MARKING PAR: 0
+PLACES:      91
+RATE PAR:    0
+TRANSITIONS: 128
+MEASURES:    0
+LOADING TIME: [User 0.003s, Sys 0.000s]
+
+
+MAX. RESIDUAL ERROR SET TO 1e-07 FOR NUMERICAL ANALYSIS.
+USING ON-THE-FLY STATE SPACE CONSTRUCTION OF CSL^TA MODEL CHECKING.
+USING IMPLICIT STEADY STATE MRP SOLUTION METHOD.
+USING GMRES METHOD FOR IMPLICIT STATIONARY ANALYSIS.
+ADDING "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution" TO THE DTA SEARCH PATHs.
+TANGIBLE: 0       VANISHING: 2       IMMEDIATE: 1       TIMED: 0          
+[1ATANGIBLE: 716     VANISHING: 9288    IMMEDIATE: 12370   TIMED: 1091       
+[1ATANGIBLE: 1373    VANISHING: 18932   IMMEDIATE: 25032   TIMED: 2676       
+[1ATANGIBLE: 1969    VANISHING: 29179   IMMEDIATE: 39046   TIMED: 4455       
+[1ATANGIBLE: 2413    VANISHING: 37936   IMMEDIATE: 50495   TIMED: 6324       
+[1ATANGIBLE: 3093    VANISHING: 49225   IMMEDIATE: 66004   TIMED: 9003       
+[1ATANGIBLE: 3682    VANISHING: 59277   IMMEDIATE: 79411   TIMED: 11063      
+[1ATANGIBLE: 4216    VANISHING: 69825   IMMEDIATE: 93731   TIMED: 13635      
+[1ATANGIBLE: 4460    VANISHING: 75802   IMMEDIATE: 101993  TIMED: 15189      
+[1ATANGIBLE: 4773    VANISHING: 84809   IMMEDIATE: 113910  TIMED: 17592      
+[1ATANGIBLE: 5369    VANISHING: 95350   IMMEDIATE: 128606  TIMED: 20704      
+[1ATANGIBLE: 5861    VANISHING: 105004  IMMEDIATE: 142210  TIMED: 23671      
+[1ATANGIBLE: 6331    VANISHING: 114537  IMMEDIATE: 155870  TIMED: 26525      
+[1ATANGIBLE: 6793    VANISHING: 124148  IMMEDIATE: 168370  TIMED: 29400      
+[1ATANGIBLE: 7148    VANISHING: 133166  IMMEDIATE: 180848  TIMED: 32255      
+[1ATANGIBLE: 7517    VANISHING: 142799  IMMEDIATE: 193774  TIMED: 35403      
+[1ATANGIBLE: 7656    VANISHING: 147479  IMMEDIATE: 200361  TIMED: 36881      
+[1ATANGIBLE: 8098    VANISHING: 157988  IMMEDIATE: 214581  TIMED: 40432      
+[1ATANGIBLE: 8532    VANISHING: 168429  IMMEDIATE: 229910  TIMED: 44678      
+[1ATANGIBLE: 8964    VANISHING: 178672  IMMEDIATE: 244634  TIMED: 48723      
+[1ATANGIBLE: 9300    VANISHING: 187025  IMMEDIATE: 256511  TIMED: 51748      
+[1ATANGIBLE: 9703    VANISHING: 196383  IMMEDIATE: 268688  TIMED: 55327      
+[1ATANGIBLE: 10051   VANISHING: 206469  IMMEDIATE: 282689  TIMED: 59257      
+[1ATANGIBLE: 10296   VANISHING: 215846  IMMEDIATE: 295313  TIMED: 63022      
+[1ATANGIBLE: 10651   VANISHING: 225787  IMMEDIATE: 309424  TIMED: 67445      
+[1ATANGIBLE: 11021   VANISHING: 235606  IMMEDIATE: 323865  TIMED: 72353      
+[1ATANGIBLE: 11314   VANISHING: 244915  IMMEDIATE: 337076  TIMED: 76825      
+[1ATANGIBLE: 11640   VANISHING: 254385  IMMEDIATE: 349652  TIMED: 81496      
+[1ATANGIBLE: 11844   VANISHING: 263391  IMMEDIATE: 362077  TIMED: 85820      
+[1ATANGIBLE: 12164   VANISHING: 273032  IMMEDIATE: 376366  TIMED: 91787      
+[1ATANGIBLE: 12390   VANISHING: 281774  IMMEDIATE: 388404  TIMED: 97146      
+[1A                                                                              
+[1A
+
+TANGIBLE STATES:                 12612
+VANISHING STATES:                    0
+NUMBER OF TIMED EDGES:          117744  (43140 T->T, 0 T->V, 74604 T->V*->T).
+NUMBER OF IMMEDIATE EDGES:           0  (0 V->T, 0 V->V).
+TOTAL NUMBER OF EDGES:          117744
+IMMEDIATE TRNS. FIRINGS:        401479
+TIMED TRNS. FIRINGS:            105156
+VISITED VANISHING STATES:       290878
+GENERAL TRANSITIONS:                 0
+NON-PREEMPTIVE EXP. TRNS.:      117744
+PREEMPTIVE EXP. TRANSITIONS:         0
+MEMORY USAGE:
+TRANSITION-SET ENTRIES:              0
+VANISH-PATH ENTRIES:            182190
+VANISH-PATH-SET ENTRIES:         24094
+PACKED MARKINGS:                 77164 BYTES
+STATE SET DATA:                  29994 BYTES
+EDGES DATA:                     733387 BYTES
+
+PACKED TANGIBLE MARKINGS TABLE:
+STORED SEQUENCES: 12612, FRAGMENTS: 5853
+  SEQUENCES MEMORY:      52578 BYTES.
+  FRAGMENTS MEMORY:      24586 BYTES.
+      TOTAL MEMORY:      77164 BYTES.
+MEAN MEMORY PER SEQUENCE IS: 6.1183 BYTES.
+  USED FOR SEQUENCE DATA: 4.16889 BYTES.
+        USED FOR HASHING: 0 BYTES.
+      USED FOR FRAGMENTS: 1.94941 BYTES.
+BUILD TIME: [User 7.647s, Sys 0.140s]
+
+
+THE RG IS A [4m[33mCONTINUOS TIME MARKOV CHAIN[24m[0m
+
+[1m[4m
+
+MODEL CHECKING CSLTA EXPRESSION:[22m[24m
+  STATE 0 |= PROB_TA > 0 "DTA_unr" (t = 15 | | Phi1 = (#FAIL > 0))
+
+
+LOADING DTA FILE "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/DTA_unr.dta" ...
+DTA PARTITIONED INTO ZONES (timed locations = 3).
+THERE ARE 2 REGENERATIVE STATES.
+
+INITIAL STATE IS: <s1,l0 * (0,15),[0-15]>
+
+
+FORWARD ON-THE-FLY STATE SPACE CONSTRUCTION FOLLOWING THE COMPONENT ORDER.
+
+
+
+PROCESSING [36m(GEN: 0)[0m COMPONENT NUM=1 WITH 1 INTERNAL LOCATION AND 2 FRONTIER LOCATIONs.
+
+  <S,Z> STATES IN MxZ: 14            
+[1A                                                                              
+[1A
+NUMBER OF TANGIBLE <S*Z> STATES:     197
+  INTERNAL <S*Z> STATES:             195
+  EXTERNAL <S*Z> STATES:             0
+NUMBER OF CTMC STATES:               12612
+NUMBER OF ZDTA LOCATIONS:            5
+  OF WHICH TIMED ZDTA LOCATIONS:     0
+NUMBER OF TIMED CLOCK ZONES:         2
+NUMBER OF DETERMINISTIC TRANSITIONS: 1
+NONZERO ENTRIES IN Q:                1122
+NONZERO ENTRIES IN Qbar:             183
+NONZERO ENTRIES IN DELTA:            195
+INITIAL <S*Z> STATES:                1
+
+AlphaFactory:  f_g(x)="I[15]"  rate=0.918  acc=1e-07
+UNIFORMIZATION(fg=I[15], Lambda=0.918, step=38): 0/38 Vec*Mat products.              
+[1A                                                                              
+[1AUNIFORMIZATION(fg=I[15], Lambda=0.918, step=38): 38 Vec*Mat products.              
+COMPONENT SOLUTION TIME: [User 0.001s, Sys 0.000s]
+COMPONENT SOLUTION TIME: [User 0.001s, Sys 0.000s]
+
+SKIPPING COMPONENT NUM=2 MADE OF FINAL LOCATIONS.
+
+[1m[4m[32mRESULT[22m[24m[0m: TRUE. ACCEPTANCE PROBABILITY IS 0.988630312931
+
+SOLUTION TIME: [User 0.021s, Sys 0.000s]
+MODEL CHECKING COMPLETED.
+
+
+[1m[4mLOADING PETRI NET /home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution//final (net/def)...[22m[24m
+MARKING PAR: 0
+PLACES:      91
+RATE PAR:    0
+TRANSITIONS: 128
+MEASURES:    0
+LOADING TIME: [User 0.002s, Sys 0.000s]
+
+
+MAX. RESIDUAL ERROR SET TO 1e-07 FOR NUMERICAL ANALYSIS.
+USING ON-THE-FLY STATE SPACE CONSTRUCTION OF CSL^TA MODEL CHECKING.
+USING IMPLICIT STEADY STATE MRP SOLUTION METHOD.
+USING GMRES METHOD FOR IMPLICIT STATIONARY ANALYSIS.
+ADDING "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution" TO THE DTA SEARCH PATHs.
+TANGIBLE: 0       VANISHING: 2       IMMEDIATE: 1       TIMED: 0          
+[1ATANGIBLE: 717     VANISHING: 9302    IMMEDIATE: 12393   TIMED: 1091       
+[1ATANGIBLE: 1374    VANISHING: 18946   IMMEDIATE: 25049   TIMED: 2676       
+[1ATANGIBLE: 1972    VANISHING: 29261   IMMEDIATE: 39174   TIMED: 4466       
+[1ATANGIBLE: 2417    VANISHING: 38058   IMMEDIATE: 50668   TIMED: 6377       
+[1ATANGIBLE: 3102    VANISHING: 49489   IMMEDIATE: 66425   TIMED: 9051       
+[1ATANGIBLE: 3687    VANISHING: 59474   IMMEDIATE: 79702   TIMED: 11121      
+[1ATANGIBLE: 4231    VANISHING: 70109   IMMEDIATE: 94123   TIMED: 13699      
+[1ATANGIBLE: 4467    VANISHING: 76068   IMMEDIATE: 102406  TIMED: 15262      
+[1ATANGIBLE: 4784    VANISHING: 85122   IMMEDIATE: 114306  TIMED: 17676      
+[1ATANGIBLE: 5381    VANISHING: 95713   IMMEDIATE: 129153  TIMED: 20811      
+[1ATANGIBLE: 5890    VANISHING: 105445  IMMEDIATE: 142868  TIMED: 23803      
+[1ATANGIBLE: 6358    VANISHING: 114910  IMMEDIATE: 156300  TIMED: 26630      
+[1ATANGIBLE: 6816    VANISHING: 124639  IMMEDIATE: 169034  TIMED: 29606      
+[1ATANGIBLE: 7164    VANISHING: 133548  IMMEDIATE: 181351  TIMED: 32367      
+[1ATANGIBLE: 7530    VANISHING: 143249  IMMEDIATE: 194458  TIMED: 35515      
+[1ATANGIBLE: 7656    VANISHING: 147479  IMMEDIATE: 200361  TIMED: 36881      
+[1ATANGIBLE: 8100    VANISHING: 158072  IMMEDIATE: 214718  TIMED: 40457      
+[1ATANGIBLE: 8540    VANISHING: 168569  IMMEDIATE: 230098  TIMED: 44731      
+[1ATANGIBLE: 8967    VANISHING: 178749  IMMEDIATE: 244741  TIMED: 48739      
+[1ATANGIBLE: 9303    VANISHING: 187220  IMMEDIATE: 256773  TIMED: 51838      
+[1ATANGIBLE: 9722    VANISHING: 196868  IMMEDIATE: 269377  TIMED: 55542      
+[1ATANGIBLE: 10069   VANISHING: 207037  IMMEDIATE: 283418  TIMED: 59498      
+[1ATANGIBLE: 10302   VANISHING: 216453  IMMEDIATE: 296120  TIMED: 63220      
+[1ATANGIBLE: 10677   VANISHING: 226464  IMMEDIATE: 310498  TIMED: 67891      
+[1ATANGIBLE: 11046   VANISHING: 236488  IMMEDIATE: 325089  TIMED: 72687      
+[1ATANGIBLE: 11362   VANISHING: 245708  IMMEDIATE: 338201  TIMED: 77148      
+[1ATANGIBLE: 11649   VANISHING: 254911  IMMEDIATE: 350366  TIMED: 81785      
+[1ATANGIBLE: 11876   VANISHING: 264368  IMMEDIATE: 363534  TIMED: 86387      
+[1ATANGIBLE: 12182   VANISHING: 273753  IMMEDIATE: 377446  TIMED: 92444      
+[1ATANGIBLE: 12417   VANISHING: 282857  IMMEDIATE: 389990  TIMED: 97824      
+[1A                                                                              
+[1A
+
+TANGIBLE STATES:                 12612
+VANISHING STATES:                    0
+NUMBER OF TIMED EDGES:          117744  (43140 T->T, 0 T->V, 74604 T->V*->T).
+NUMBER OF IMMEDIATE EDGES:           0  (0 V->T, 0 V->V).
+TOTAL NUMBER OF EDGES:          117744
+IMMEDIATE TRNS. FIRINGS:        401479
+TIMED TRNS. FIRINGS:            105156
+VISITED VANISHING STATES:       290878
+GENERAL TRANSITIONS:                 0
+NON-PREEMPTIVE EXP. TRNS.:      117744
+PREEMPTIVE EXP. TRANSITIONS:         0
+MEMORY USAGE:
+TRANSITION-SET ENTRIES:              0
+VANISH-PATH ENTRIES:            182190
+VANISH-PATH-SET ENTRIES:         24094
+PACKED MARKINGS:                 77164 BYTES
+STATE SET DATA:                  29994 BYTES
+EDGES DATA:                     733387 BYTES
+
+PACKED TANGIBLE MARKINGS TABLE:
+STORED SEQUENCES: 12612, FRAGMENTS: 5853
+  SEQUENCES MEMORY:      52578 BYTES.
+  FRAGMENTS MEMORY:      24586 BYTES.
+      TOTAL MEMORY:      77164 BYTES.
+MEAN MEMORY PER SEQUENCE IS: 6.1183 BYTES.
+  USED FOR SEQUENCE DATA: 4.16889 BYTES.
+        USED FOR HASHING: 0 BYTES.
+      USED FOR FRAGMENTS: 1.94941 BYTES.
+BUILD TIME: [User 7.610s, Sys 0.135s]
+
+
+THE RG IS A [4m[33mCONTINUOS TIME MARKOV CHAIN[24m[0m
+
+[1m[4m
+
+MODEL CHECKING CSLTA EXPRESSION:[22m[24m
+  STATE 0 |= PROB_TA > 0 "DTA_unavil" (t = 15 | | Phi1 = (#FAIL > 0))
+
+
+LOADING DTA FILE "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/DTA_unavil.dta" ...
+DTA PARTITIONED INTO ZONES (timed locations = 4).
+THERE ARE 2 REGENERATIVE STATES.
+
+INITIAL STATE IS: <s1,l0 * (0,15),[0-15]>
+
+
+FORWARD ON-THE-FLY STATE SPACE CONSTRUCTION FOLLOWING THE COMPONENT ORDER.
+
+
+
+PROCESSING [36m(GEN: 0)[0m COMPONENT NUM=1 WITH 2 INTERNAL LOCATIONs AND 2 FRONTIER LOCATIONs.
+
+  <S,Z> STATES IN MxZ: 23            
+[1A                                                                              
+[1A
+NUMBER OF TANGIBLE <S*Z> STATES:     12614
+  INTERNAL <S*Z> STATES:             12612
+  EXTERNAL <S*Z> STATES:             0
+NUMBER OF CTMC STATES:               12612
+NUMBER OF ZDTA LOCATIONS:            9
+  OF WHICH TIMED ZDTA LOCATIONS:     0
+NUMBER OF TIMED CLOCK ZONES:         2
+NUMBER OF DETERMINISTIC TRANSITIONS: 1
+NONZERO ENTRIES IN Q:                130355
+NONZERO ENTRIES IN Qbar:             0
+NONZERO ENTRIES IN DELTA:            12612
+INITIAL <S*Z> STATES:                1
+
+AlphaFactory:  f_g(x)="I[15]"  rate=1.326  acc=1e-07
+UNIFORMIZATION(fg=I[15], Lambda=1.326, step=48): 0/48 Vec*Mat products.              
+[1A                                                                              
+[1AUNIFORMIZATION(fg=I[15], Lambda=1.326, step=48): 48 Vec*Mat products.              
+COMPONENT SOLUTION TIME: [User 0.033s, Sys 0.000s]
+COMPONENT SOLUTION TIME: [User 0.033s, Sys 0.000s]
+
+SKIPPING COMPONENT NUM=2 MADE OF FINAL LOCATIONS.
+
+[1m[4m[32mRESULT[22m[24m[0m: TRUE. ACCEPTANCE PROBABILITY IS 0.494343936815
+
+SOLUTION TIME: [User 0.129s, Sys 0.008s]
+MODEL CHECKING COMPLETED.
+
+
+Translation and composition runtime was: 53.037768364\n
+Translation and composition runtime was: 15.8008975983\n

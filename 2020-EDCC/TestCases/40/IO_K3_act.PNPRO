@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place marking="1" name="P_IO_K3_trig_0" superposition-tags="dact_12" x="4.0" y="9.0"/>
+      <transition name="t_IO_K3_trig_0" priority="1" type="IMM" x="8.85" y="12.0"/>
+      <place name="P_IO_K3_1_trig" superposition-tags="act_2" x="12" y="16.0"/>
+      <transition name="t_IO_K3_1_trig" priority="1" type="IMM" x="12" y="8.0"/>
+      <place name="P_IO_K3_2_trig" superposition-tags="act_1" x="20" y="16.0"/>
+      <transition name="t_IO_K3_2_trig" priority="1" type="IMM" x="20" y="8.0"/>
+<place name="P_IO_K3_4_trig" superposition-tags="act_12" x="36" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="P_IO_K3_trig_0" kind="OUTPUT" tail="t_IO_K3_trig_0"/>
+      <arc head="t_IO_K3_trig_0" kind="INPUT" tail="P_IO_K3_4_trig"/>
+      <arc head="t_IO_K3_trig_0" kind="INHIBITOR" tail="P_IO_K3_1_trig"/>
+      <arc head="t_IO_K3_1_trig" kind="INPUT" tail="P_IO_K3_1_trig"/>
+      <arc head="P_IO_K3_1_trig" kind="OUTPUT" tail="t_IO_K3_1_trig"/>
+      <arc head="P_IO_K3_4_trig" kind="OUTPUT" tail="t_IO_K3_1_trig"/>
+      <arc head="t_IO_K3_1_trig" kind="INPUT" tail="P_IO_K3_trig_0"/>
+      <arc head="t_IO_K3_trig_0" kind="INHIBITOR" tail="P_IO_K3_2_trig"/>
+      <arc head="t_IO_K3_2_trig" kind="INPUT" tail="P_IO_K3_2_trig"/>
+      <arc head="P_IO_K3_2_trig" kind="OUTPUT" tail="t_IO_K3_2_trig"/>
+      <arc head="P_IO_K3_4_trig" kind="OUTPUT" tail="t_IO_K3_2_trig"/>
+      <arc head="t_IO_K3_2_trig" kind="INPUT" tail="P_IO_K3_trig_0"/>
+    </edges>
+  </gspn>
+</project>

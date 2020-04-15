@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place marking="1" name="P_OR_3_0" superposition-tags="work_OR_3" x="4.0" y="9.0"/>
+      <transition name="t_OR_3_0"  priority="103" type="IMM" x="8.85" y="12.0"/>
+      <place name="P_OR_3_1" superposition-tags="fail_C1" x="12" y="16.0"/>
+      <transition name="t_OR_3_1"  priority="104" type="IMM" x="12" y="8.0"/>
+      <place name="P_OR_3_2" superposition-tags="fail_D1" x="20" y="16.0"/>
+      <transition name="t_OR_3_2"  priority="104" type="IMM" x="20" y="8.0"/>
+<place name="P_OR_3_4" superposition-tags="fail_OR_3" x="36" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="P_OR_3_0" kind="OUTPUT" tail="t_OR_3_0"/>
+      <arc head="t_OR_3_0" kind="INPUT" tail="P_OR_3_4"/>
+      <arc head="t_OR_3_0" kind="INHIBITOR" tail="P_OR_3_1"/>
+      <arc head="t_OR_3_1" kind="INPUT" tail="P_OR_3_1"/>
+      <arc head="P_OR_3_1" kind="OUTPUT" tail="t_OR_3_1"/>
+      <arc head="P_OR_3_4" kind="OUTPUT" tail="t_OR_3_1"/>
+      <arc head="t_OR_3_1" kind="INPUT" tail="P_OR_3_0"/>
+      <arc head="t_OR_3_0" kind="INHIBITOR" tail="P_OR_3_2"/>
+      <arc head="t_OR_3_2" kind="INPUT" tail="P_OR_3_2"/>
+      <arc head="P_OR_3_2" kind="OUTPUT" tail="t_OR_3_2"/>
+      <arc head="P_OR_3_4" kind="OUTPUT" tail="t_OR_3_2"/>
+      <arc head="t_OR_3_2" kind="INPUT" tail="P_OR_3_0"/>
+    </edges>
+  </gspn>
+</project>

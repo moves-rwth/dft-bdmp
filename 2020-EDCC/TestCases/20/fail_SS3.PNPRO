@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="P_fail_SS3_act" superposition-tags="act_0" x="38" y="31.0"/>
+      <place marking="1" name="P_fail_SS3_0_0" x="6.0" y="18.0"/>
+      <transition delay="0.1" name="T_fail_SS3_1_1" nservers-x="0.5" type="EXP" x="11.0" y="14.0"/>
+      <transition delay="0.8" name="T_fail_SS3_1_0" nservers-x="0.5" type="EXP" x="11.0" y="23.0"/>
+      <place name="P_fail_SS3_1_0"  x="16.0" y="18.0"/>
+      <transition delay="0.2" name="T_fail_SS3_2_1" nservers-x="0.5" type="EXP" x="21.0" y="14.0"/>
+      <transition delay="0.7000000000000001" name="T_fail_SS3_2_0" nservers-x="0.5" type="EXP" x="21.0" y="23.0"/>
+      <place name="P_fail_SS3_2_0"  x="26.0" y="18.0"/>
+      <place  name="P_fail_SS3_Fail" superposition-tags="fail_fail_SS3" x="26.0" y="10.0"/>
+      <transition delay="0.30000000000000004" name="T_fail_SS3_3_1" nservers-x="0.5" type="EXP" x="31.0" y="14.0"/>
+      <transition delay="0.6000000000000001" name="T_fail_SS3_3_0" nservers-x="0.5" type="EXP" x="31.0" y="23.0"/>
+      <place name="P_fail_SS3_3_0"  x="36.0" y="18.0"/>
+      <transition delay="0.4" name="T_fail_SS3_4_1" nservers-x="0.5" type="EXP" x="41.0" y="14.0"/>
+      <transition delay="0.5" name="T_fail_SS3_4_0" nservers-x="0.5" type="EXP" x="41.0" y="23.0"/>
+      <place name="P_fail_SS3_4_0"  x="46.0" y="18.0"/>
+      <transition delay="0.5" name="T_fail_SS3_5_1" nservers-x="0.5" type="EXP" x="51.0" y="14.0"/>
+      <transition delay="0.4" name="T_fail_SS3_5_0" nservers-x="0.5" type="EXP" x="51.0" y="23.0"/>
+      <place name="P_fail_SS3_5_0"  x="56.0" y="18.0"/>
+      <transition delay="0.6000000000000001" name="T_fail_SS3_6_1" nservers-x="0.5" type="EXP" x="61.0" y="14.0"/>
+      <transition delay="0.30000000000000004" name="T_fail_SS3_6_0" nservers-x="0.5" type="EXP" x="61.0" y="23.0"/>
+      <place name="P_fail_SS3_6_0"  x="66.0" y="18.0"/>
+      <transition delay="0.7000000000000001" name="T_fail_SS3_7_1" nservers-x="0.5" type="EXP" x="71.0" y="14.0"/>
+      <transition delay="0.2" name="T_fail_SS3_7_0" nservers-x="0.5" type="EXP" x="71.0" y="23.0"/>
+      <place name="P_fail_SS3_7_0"  x="76.0" y="18.0"/>
+      <transition delay="0.8" name="T_fail_SS3_8_1" nservers-x="0.5" type="EXP" x="81.0" y="14.0"/>
+      <transition delay="0.1" name="T_fail_SS3_8_0" nservers-x="0.5" type="EXP" x="81.0" y="23.0"/>
+      <place name="P_fail_SS3_8_0"  x="86.0" y="18.0"/>
+    </nodes>
+    <edges>
+      <arc head="T_fail_SS3_1_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_1_0"/>
+      <arc head="T_fail_SS3_1_0" kind="INPUT" tail="P_fail_SS3_0_0"/>
+      <arc head="P_fail_SS3_0_0" kind="OUTPUT" tail="T_fail_SS3_1_1"/>
+      <arc head="P_fail_SS3_1_0" kind="OUTPUT" tail="T_fail_SS3_1_0"/>
+      <arc head="T_fail_SS3_1_1" kind="INPUT" tail="P_fail_SS3_1_0"/>
+      <arc head="T_fail_SS3_2_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_2_0"/>
+      <arc head="T_fail_SS3_2_0" kind="INPUT" tail="P_fail_SS3_1_0"/>
+      <arc head="P_fail_SS3_1_0" kind="OUTPUT" tail="T_fail_SS3_2_1"/>
+      <arc head="P_fail_SS3_2_0" kind="OUTPUT" tail="T_fail_SS3_2_0"/>
+      <arc head="T_fail_SS3_2_1" kind="INPUT" tail="P_fail_SS3_2_0"/>
+      <arc head="T_fail_SS3_3_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_3_0"/>
+      <arc head="T_fail_SS3_3_0" kind="INPUT" tail="P_fail_SS3_2_0"/>
+      <arc head="P_fail_SS3_2_0" kind="OUTPUT" tail="T_fail_SS3_3_1"/>
+      <arc head="P_fail_SS3_3_0" kind="OUTPUT" tail="T_fail_SS3_3_0"/>
+      <arc head="T_fail_SS3_3_1" kind="INPUT" tail="P_fail_SS3_3_0"/>
+      <arc head="T_fail_SS3_3_1" kind="OUTPUT" tail="P_fail_SS3_Fail"/>
+      <arc head="P_fail_SS3_Fail" kind="INPUT" tail="T_fail_SS3_3_0"/>
+      <arc head="T_fail_SS3_4_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_4_0"/>
+      <arc head="T_fail_SS3_4_0" kind="INPUT" tail="P_fail_SS3_3_0"/>
+      <arc head="P_fail_SS3_3_0" kind="OUTPUT" tail="T_fail_SS3_4_1"/>
+      <arc head="P_fail_SS3_4_0" kind="OUTPUT" tail="T_fail_SS3_4_0"/>
+      <arc head="T_fail_SS3_4_1" kind="INPUT" tail="P_fail_SS3_4_0"/>
+      <arc head="T_fail_SS3_5_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_5_0"/>
+      <arc head="T_fail_SS3_5_0" kind="INPUT" tail="P_fail_SS3_4_0"/>
+      <arc head="P_fail_SS3_4_0" kind="OUTPUT" tail="T_fail_SS3_5_1"/>
+      <arc head="P_fail_SS3_5_0" kind="OUTPUT" tail="T_fail_SS3_5_0"/>
+      <arc head="T_fail_SS3_5_1" kind="INPUT" tail="P_fail_SS3_5_0"/>
+      <arc head="T_fail_SS3_6_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_6_0"/>
+      <arc head="T_fail_SS3_6_0" kind="INPUT" tail="P_fail_SS3_5_0"/>
+      <arc head="P_fail_SS3_5_0" kind="OUTPUT" tail="T_fail_SS3_6_1"/>
+      <arc head="P_fail_SS3_6_0" kind="OUTPUT" tail="T_fail_SS3_6_0"/>
+      <arc head="T_fail_SS3_6_1" kind="INPUT" tail="P_fail_SS3_6_0"/>
+      <arc head="T_fail_SS3_7_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_7_0"/>
+      <arc head="T_fail_SS3_7_0" kind="INPUT" tail="P_fail_SS3_6_0"/>
+      <arc head="P_fail_SS3_6_0" kind="OUTPUT" tail="T_fail_SS3_7_1"/>
+      <arc head="P_fail_SS3_7_0" kind="OUTPUT" tail="T_fail_SS3_7_0"/>
+      <arc head="T_fail_SS3_7_1" kind="INPUT" tail="P_fail_SS3_7_0"/>
+      <arc head="T_fail_SS3_8_0" kind="INPUT" tail="P_fail_SS3_act"/>
+      <arc head="P_fail_SS3_act" kind="INPUT" tail="T_fail_SS3_8_0"/>
+      <arc head="T_fail_SS3_8_0" kind="INPUT" tail="P_fail_SS3_7_0"/>
+      <arc head="P_fail_SS3_7_0" kind="OUTPUT" tail="T_fail_SS3_8_1"/>
+      <arc head="P_fail_SS3_8_0" kind="OUTPUT" tail="T_fail_SS3_8_0"/>
+      <arc head="T_fail_SS3_8_1" kind="INPUT" tail="P_fail_SS3_8_0"/>
+    </edges>
+  </gspn>
+</project>

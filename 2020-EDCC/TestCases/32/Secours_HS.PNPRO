@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the Python Script for composition with algebra tool, v.100 --><project name="New project" version="121">
+<gspn name="GSPN" show-color-cmd="false" show-fluid-cmd="false">
+<nodes>
+<place marking="1" name="P_Secours_HS_0" superposition-tags="work_Secours_HS" x="3.0" y="9.0"/>
+<place name="P_Secours_HS_1" superposition-tags="fail_Secours_HS" x="14.0" y="9.0"/>
+<place name="P_Secours_HS_2" superposition-tags="act_0" x="8.0" y="15.0"/>
+<transition delay="0.10000000000000000555" name="T_Secours_HS_0_fail" nservers-x="0.5" type="EXP" x="8.55" y="9.0"/>
+<transition delay="0.10000000000000000555" name="T_Secours_HS_1_rep" nservers-x="0.5" type="EXP" x="8.55" y="4.0"/>
+    </nodes>
+    <edges>
+<arc head="T_Secours_HS_0_fail" kind="INPUT" tail="P_Secours_HS_0"/>
+<arc head="P_Secours_HS_1" kind="OUTPUT" tail="T_Secours_HS_0_fail"/>
+<arc head="T_Secours_HS_0_fail" kind="INPUT" tail="P_Secours_HS_2"/>
+<arc head="P_Secours_HS_2" kind="INPUT" tail="T_Secours_HS_0_fail"/>
+<arc head="T_Secours_HS_1_rep" kind="INPUT" tail="P_Secours_HS_1"/>
+<arc head="P_Secours_HS_0" kind="OUTPUT" tail="T_Secours_HS_1_rep"/>
+</edges>
+</gspn>
+</project>

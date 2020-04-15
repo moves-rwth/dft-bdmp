@@ -1,0 +1,1765 @@
+{'AND_1': {'Calculate': 'fn_fathers_and_trig',
+           'Fathers': ['UE_1'],
+           'Name': 'AND_1',
+           'Previous': 'Null',
+           'Sons': ['LossOfAllBackups', 'LossOfLine_1'],
+           'Triggered_by': 'Null',
+           'Type': 'and_gate',
+           'module': '0'},
+ 'CB_dies': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfDieselLine'],
+             'Name': 'CB_dies',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.10000000000000000555',
+             'module': '2',
+             'mu': '0.1'},
+ 'CB_dw_1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfLine_1'],
+             'Name': 'CB_dw_1',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.10000000000000000555',
+             'module': '0',
+             'mu': '0.1'},
+ 'CB_dw_2': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfLine2'],
+             'Name': 'CB_dw_2',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.10000000000000000555',
+             'module': '1',
+             'mu': '0.1'},
+ 'CB_up_1': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfLine_1'],
+             'Name': 'CB_up_1',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.10000000000000000555',
+             'module': '0',
+             'mu': '0.1'},
+ 'CB_up_2': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfLine2'],
+             'Name': 'CB_up_2',
+             'Previous': 'Null',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+             'Type': 'f_leaf',
+             'lambda': '0.10000000000000000555',
+             'module': '1',
+             'mu': '0.1'},
+ 'GRID': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': ['Loss_of_GRID', 'LossOfLine_1', 'LossOfLine2'],
+          'Name': 'GRID',
+          'Previous': 'Null',
+          'Sons': 'Null',
+          'Triggered_by': 'Null',
+          'Type': 'f_leaf',
+          'lambda': '0.0001',
+          'module': '0',
+          'mu': '0.1'},
+ 'LossOfAllBackups': {'Calculate': 'fn_fathers_and_trig',
+                      'Fathers': ['AND_1'],
+                      'Name': 'LossOfAllBackups',
+                      'Previous': 'Null',
+                      'Sons': ['LossOfDieselLine', 'LossOfLine2'],
+                      'Triggered_by': 'LossOfLine_1',
+                      'Type': 'and_gate',
+                      'module': '1'},
+ 'LossOfDieselLine': {'Calculate': 'fn_fathers_and_trig',
+                      'Fathers': ['LossOfAllBackups'],
+                      'Name': 'LossOfDieselLine',
+                      'Previous': 'Null',
+                      'Sons': ['CB_dies',
+                               'RS_dies',
+                               'RC_CB_dies',
+                               'dies_generator'],
+                      'Triggered_by': 'LossOfLine2',
+                      'Type': 'or_gate',
+                      'module': '2'},
+ 'LossOfLine2': {'Calculate': 'fn_fathers_and_trig',
+                 'Fathers': ['LossOfAllBackups'],
+                 'Name': 'LossOfLine2',
+                 'Previous': 'Null',
+                 'Sons': ['Loss_of_GRID',
+                          'Transfo2',
+                          'CB_up_2',
+                          'RC_CB_dw_2',
+                          'CB_dw_2',
+                          'GRID',
+                          'RC_CB_up_2'],
+                 'Triggered_by': 'Null',
+                 'Type': 'or_gate',
+                 'module': '1'},
+ 'LossOfLine_1': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['AND_1'],
+                  'Name': 'LossOfLine_1',
+                  'Previous': 'Null',
+                  'Sons': ['Loss_of_GRID',
+                           'CB_up_1',
+                           'GRID',
+                           'Transfo1',
+                           'CB_dw_1'],
+                  'Triggered_by': 'Null',
+                  'Type': 'or_gate',
+                  'module': '0'},
+ 'Loss_of_GRID': {'Calculate': 'fn_fathers_and_trig',
+                  'Fathers': ['LossOfLine2', 'LossOfLine_1'],
+                  'Name': 'Loss_of_GRID',
+                  'Previous': 'Null',
+                  'Sons': ['GRID',
+                           'PropagationShortCircuitTransfo1',
+                           'PropagationShortCircuitTransfo2'],
+                  'Triggered_by': 'Null',
+                  'Type': 'or_gate',
+                  'module': '0'},
+ 'PropagationShortCircuitTransfo1': {'Calculate': 'fn_fathers_and_trig',
+                                     'Fathers': ['Loss_of_GRID'],
+                                     'Name': 'PropagationShortCircuitTransfo1',
+                                     'Previous': 'Null',
+                                     'Sons': ['RO_CB_up_1', 'Transfo1'],
+                                     'Triggered_by': 'Null',
+                                     'Type': 'and_gate',
+                                     'module': '0'},
+ 'PropagationShortCircuitTransfo2': {'Calculate': 'always_false',
+                                     'Fathers': ['Loss_of_GRID'],
+                                     'Name': 'PropagationShortCircuitTransfo2',
+                                     'Previous': 'Null',
+                                     'Sons': ['RO_CB_up_2', 'Transfo2'],
+                                     'Triggered_by': 'Null',
+                                     'Type': 'and_gate',
+                                     'module': '3'},
+ 'RC_CB_dies': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['LossOfDieselLine'],
+                'Name': 'RC_CB_dies',
+                'Previous': 'Null',
+                'Priority': '2',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '2',
+                'mu': '0.1'},
+ 'RC_CB_dw_2': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['LossOfLine2'],
+                'Name': 'RC_CB_dw_2',
+                'Previous': 'Null',
+                'Priority': '3',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '1',
+                'mu': '0.1'},
+ 'RC_CB_up_2': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['LossOfLine2'],
+                'Name': 'RC_CB_up_2',
+                'Previous': 'Null',
+                'Priority': '4',
+                'Sons': 'Null',
+                'Triggered_by': 'Null',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '1',
+                'mu': '0.1'},
+ 'RO_CB_up_1': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['PropagationShortCircuitTransfo1'],
+                'Name': 'RO_CB_up_1',
+                'Previous': 'Null',
+                'Priority': '5',
+                'Sons': 'Null',
+                'Triggered_by': 'Transfo1',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '4',
+                'mu': '0.1'},
+ 'RO_CB_up_2': {'Calculate': 'fn_fathers_and_trig',
+                'Fathers': ['PropagationShortCircuitTransfo2'],
+                'Name': 'RO_CB_up_2',
+                'Previous': 'Null',
+                'Priority': '6',
+                'Sons': 'Null',
+                'Triggered_by': 'Transfo2',
+                'Type': 'i_leaf',
+                'gamma': '0.5',
+                'module': '5',
+                'mu': '0.1'},
+ 'RS_dies': {'Calculate': 'fn_fathers_and_trig',
+             'Fathers': ['LossOfDieselLine'],
+             'Name': 'RS_dies',
+             'Previous': 'Null',
+             'Priority': '7',
+             'Sons': 'Null',
+             'Triggered_by': 'Null',
+               MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.239
+
+SAVING AS AND_1.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.387
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS AND_1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.235
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File AND_1_act.net read in.
+ File AND_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.221
+
+SAVING AS CB_dies.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.361
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS CB_dies_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File CB_dies_act.net read in.
+ File CB_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.232
+
+SAVING AS CB_dw_1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.388
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.172
+
+SAVING AS CB_dw_1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.229
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File CB_dw_1_act.net read in.
+ File CB_dw_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.21
+
+SAVING AS CB_dw_2.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.366
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS CB_dw_2_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.239
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File CB_dw_2_act.net read in.
+ File CB_dw_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.238
+
+SAVING AS CB_up_1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.381
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.178
+
+SAVING AS CB_up_1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.238
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File CB_up_1_act.net read in.
+ File CB_up_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.228
+
+SAVING AS CB_up_2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.37
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS CB_up_2_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.234
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File CB_up_2_act.net read in.
+ File CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.237
+
+SAVING AS GRID.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.388
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.184
+
+SAVING AS GRID_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.242
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File GRID_act.net read in.
+ File GRID.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.233
+
+SAVING AS LossOfAllBackups.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.375
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.223
+
+SAVING AS LossOfAllBackups_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.358
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File LossOfAllBackups_act.net read in.
+ File LossOfAllBackups.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        6
+  TRANSITIONS:   5
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          22
+LOADING TIME: 0.241
+
+SAVING AS LossOfDieselLine.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.402
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.234
+
+SAVING AS LossOfDieselLine_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.393
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File LossOfDieselLine_act.net read in.
+ File LossOfDieselLine.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        9
+  TRANSITIONS:   8
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          37
+LOADING TIME: 0.277
+
+SAVING AS LossOfLine2.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.414
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS LossOfLine2_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File LossOfLine2_act.net read in.
+ File LossOfLine2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        7
+  TRANSITIONS:   6
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          27
+LOADING TIME: 0.265
+
+SAVING AS LossOfLine_1.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.405
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.182
+
+SAVING AS LossOfLine_1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.237
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File LossOfLine_1_act.net read in.
+ File LossOfLine_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        5
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          17
+LOADING TIME: 0.242
+
+SAVING AS Loss_of_GRID.(net/def) ...
+SAVING TIME: 0.008
+TOTAL TIME: 0.393
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.17
+
+SAVING AS Loss_of_GRID_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.228
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Loss_of_GRID_act.net read in.
+ File Loss_of_GRID.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.226
+
+SAVING AS PropagationShortCircuitTransfo1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.366
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.184
+
+SAVING AS PropagationShortCircuitTransfo1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.24
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File PropagationShortCircuitTransfo1_act.net read in.
+ File PropagationShortCircuitTransfo1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.219
+
+SAVING AS PropagationShortCircuitTransfo2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.358
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.179
+
+SAVING AS PropagationShortCircuitTransfo2_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.239
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File PropagationShortCircuitTransfo2_act.net read in.
+ File PropagationShortCircuitTransfo2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.237
+
+SAVING AS RC_CB_dies.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.387
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS RC_CB_dies_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.224
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RC_CB_dies_act.net read in.
+ File RC_CB_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.24
+
+SAVING AS RC_CB_dw_2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.403
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS RC_CB_dw_2_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.234
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RC_CB_dw_2_act.net read in.
+ File RC_CB_dw_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.246
+
+SAVING AS RC_CB_up_2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.394
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS RC_CB_up_2_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.234
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RC_CB_up_2_act.net read in.
+ File RC_CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.231
+
+SAVING AS RO_CB_up_1.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.388
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.231
+
+SAVING AS RO_CB_up_1_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.393
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_CB_up_1_act.net read in.
+ File RO_CB_up_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.242
+
+SAVING AS RO_CB_up_2.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.395
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.241
+
+SAVING AS RO_CB_up_2_act.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.406
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RO_CB_up_2_act.net read in.
+ File RO_CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   4
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          16
+LOADING TIME: 0.245
+
+SAVING AS RS_dies.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.409
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.193
+
+SAVING AS RS_dies_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.247
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File RS_dies_act.net read in.
+ File RS_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.228
+
+SAVING AS Transfo1.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.371
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.191
+
+SAVING AS Transfo1_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.251
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Transfo1_act.net read in.
+ File Transfo1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.217
+
+SAVING AS Transfo2.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.364
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        4
+  TRANSITIONS:   3
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          12
+LOADING TIME: 0.221
+
+SAVING AS Transfo2_act.(net/def) ...
+SAVING TIME: 0.006
+TOTAL TIME: 0.36
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File Transfo2_act.net read in.
+ File Transfo2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          7
+LOADING TIME: 0.22
+
+SAVING AS UE_1.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.358
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.176
+
+SAVING AS UE_1_act.(net/def) ...
+SAVING TIME: 0.004
+TOTAL TIME: 0.307
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File UE_1_act.net read in.
+ File UE_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+  MODEL CLASS:   P/T NET
+  PLACES:        3
+  TRANSITIONS:   2
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          6
+LOADING TIME: 0.228
+
+SAVING AS dies_generator.(net/def) ...
+SAVING TIME: 0.007
+TOTAL TIME: 0.39
+OK.
+  MODEL CLASS:   P/T NET
+  PLACES:        1
+  TRANSITIONS:   0
+  CONSTANTS:     0
+  TEMPLATE VARS: 0
+  ARCS:          0
+LOADING TIME: 0.171
+
+SAVING AS dies_generator_act.(net/def) ...
+SAVING TIME: 0.005
+TOTAL TIME: 0.227
+OK.
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File dies_generator_act.net read in.
+ File dies_generator.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File UE_1.net read in.
+ File AND_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_0.net read in.
+ File CB_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_1.net read in.
+ File CB_dw_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_2.net read in.
+ File CB_dw_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_3.net read in.
+ File CB_up_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_4.net read in.
+ File CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_5.net read in.
+ File GRID.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_6.net read in.
+ File LossOfAllBackups.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_7.net read in.
+ File LossOfDieselLine.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_8.net read in.
+ File LossOfLine2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_9.net read in.
+ File LossOfLine_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_10.net read in.
+ File Loss_of_GRID.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_11.net read in.
+ File PropagationShortCircuitTransfo1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_12.net read in.
+ File PropagationShortCircuitTransfo2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_13.net read in.
+ File RC_CB_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_14.net read in.
+ File RC_CB_dw_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_15.net read in.
+ File RC_CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_16.net read in.
+ File RO_CB_up_1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_17.net read in.
+ File RO_CB_up_2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_18.net read in.
+ File RS_dies.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_19.net read in.
+ File Transfo1.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_20.net read in.
+ File Transfo2.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+
+ -no_ba: no broken arcs will be used between subnets
+
+ File temp_21.net read in.
+ File dies_generator.net read in.
+ Unable to open file: null_file
+  ---> Synchronization over all matching labels
+
+ Superposition over Places Started
+
+
+ Superposition over Places Finished
+'Type': 'i_leaf',
+             'gamma': '0.5',
+             'module': '2',
+             'mu': '0.1'},
+ 'Transfo1': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['PropagationShortCircuitTransfo1', 'LossOfLine_1'],
+              'Name': 'Transfo1',
+              'Previous': 'Null',
+              'Sons': 'Null',
+              'Triggered_by': 'Null',
+              'Type': 'f_leaf',
+              'lambda': '0.10000000000000000555',
+              'module': '0',
+              'mu': '0.1'},
+ 'Transfo2': {'Calculate': 'fn_fathers_and_trig',
+              'Fathers': ['LossOfLine2', 'PropagationShortCircuitTransfo2'],
+              'Name': 'Transfo2',
+              'Previous': 'Null',
+              'Sons': 'Null',
+              'Triggered_by': 'Null',
+              'Type': 'f_leaf',
+              'lambda': '0.10000000000000000555',
+              'module': '6',
+              'mu': '0.1'},
+ 'UE_1': {'Calculate': 'fn_fathers_and_trig',
+          'Fathers': 'Null',
+          'Name': 'UE_1',
+          'Previous': 'Null',
+          'Sons': ['AND_1'],
+          'Triggered_by': 'Null',
+          'Type': 'undes_event',
+          'module': '0'},
+ 'dies_generator': {'Calculate': 'fn_fathers_and_trig',
+                    'Fathers': ['LossOfDieselLine'],
+                    'Name': 'dies_generator',
+                    'Previous': 'Null',
+                    'Sons': 'Null',
+                    'Triggered_by': 'Null',
+                    'Type': 'f_leaf',
+                    'lambda': '0.10000000000000000555',
+                    'module': '2',
+                    'mu': '0.1'}}
+AND_1.PNPRO
+CB_dies.PNPRO
+CB_dw_1.PNPRO
+CB_dw_2.PNPRO
+CB_up_1.PNPRO
+CB_up_2.PNPRO
+GRID.PNPRO
+LossOfAllBackups.PNPRO
+fn_fathers_and_trig
+LossOfDieselLine.PNPRO
+fn_fathers_and_trig
+LossOfLine2.PNPRO
+LossOfLine_1.PNPRO
+Loss_of_GRID.PNPRO
+PropagationShortCircuitTransfo1.PNPRO
+PropagationShortCircuitTransfo2.PNPRO
+always_false
+Always False trig present in the system
+RC_CB_dies.PNPRO
+RC_CB_dw_2.PNPRO
+RC_CB_up_2.PNPRO
+RO_CB_up_1.PNPRO
+fn_fathers_and_trig
+RO_CB_up_2.PNPRO
+fn_fathers_and_trig
+RS_dies.PNPRO
+Transfo1.PNPRO
+Transfo2.PNPRO
+UE_1.PNPRO
+dies_generator.PNPRO
+/home/shahid/modest/repairable/kb3-examples PNPRO/17/*.PNPRO
+UE_1
+Please open GreatSPN and import "temp_22.net"
+'/home/shahid/modest/repairable/BENCHMARK/final.net' -> '/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/final.net'
+'/home/shahid/modest/repairable/BENCHMARK/final.def' -> '/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/final.def'
+[1m[4mLOADING PETRI NET /home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution//final (net/def)...[22m[24m
+MARKING PAR: 0
+PLACES:      66
+RATE PAR:    0
+TRANSITIONS: 94
+MEASURES:    0
+LOADING TIME: [User 0.001s, Sys 0.000s]
+
+
+MAX. RESIDUAL ERROR SET TO 1e-07 FOR NUMERICAL ANALYSIS.
+USING ON-THE-FLY STATE SPACE CONSTRUCTION OF CSL^TA MODEL CHECKING.
+USING IMPLICIT STEADY STATE MRP SOLUTION METHOD.
+USING GMRES METHOD FOR IMPLICIT STATIONARY ANALYSIS.
+ADDING "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution" TO THE DTA SEARCH PATHs.
+TANGIBLE: 1       VANISHING: 4       IMMEDIATE: 0       TIMED: 4          
+[1ATANGIBLE: 2811    VANISHING: 11532   IMMEDIATE: 14487   TIMED: 6141       
+[1ATANGIBLE: 5017    VANISHING: 24443   IMMEDIATE: 31067   TIMED: 11879      
+[1ATANGIBLE: 7833    VANISHING: 36670   IMMEDIATE: 45990   TIMED: 23295      
+[1ATANGIBLE: 9332    VANISHING: 46165   IMMEDIATE: 58796   TIMED: 29572      
+[1ATANGIBLE: 11183   VANISHING: 60011   IMMEDIATE: 77040   TIMED: 36648      
+[1ATANGIBLE: 13402   VANISHING: 73055   IMMEDIATE: 94387   TIMED: 45971      
+[1ATANGIBLE: 15218   VANISHING: 82229   IMMEDIATE: 106258  TIMED: 53843      
+[1ATANGIBLE: 17449   VANISHING: 94236   IMMEDIATE: 121075  TIMED: 66310      
+[1ATANGIBLE: 19887   VANISHING: 105626  IMMEDIATE: 135363  TIMED: 79492      
+[1ATANGIBLE: 21569   VANISHING: 116121  IMMEDIATE: 149112  TIMED: 91765      
+[1ATANGIBLE: 23560   VANISHING: 127600  IMMEDIATE: 164506  TIMED: 103585     
+[1ATANGIBLE: 25376   VANISHING: 139051  IMMEDIATE: 179815  TIMED: 115188     
+[1ATANGIBLE: 26812   VANISHING: 147472  IMMEDIATE: 191039  TIMED: 122954     
+[1ATANGIBLE: 28581   VANISHING: 159888  IMMEDIATE: 208016  TIMED: 133023     
+[1ATANGIBLE: 30356   VANISHING: 171239  IMMEDIATE: 222925  TIMED: 145429     
+[1ATANGIBLE: 32567   VANISHING: 182376  IMMEDIATE: 236628  TIMED: 161191     
+[1ATANGIBLE: 34535   VANISHING: 193764  IMMEDIATE: 250831  TIMED: 176534     
+[1ATANGIBLE: 36470   VANISHING: 205050  IMMEDIATE: 264829  TIMED: 192714     
+[1ATANGIBLE: 38164   VANISHING: 214755  IMMEDIATE: 277410  TIMED: 207399     
+[1ATANGIBLE: 40334   VANISHING: 226035  IMMEDIATE: 292073  TIMED: 224175     
+[1ATANGIBLE: 42239   VANISHING: 236795  IMMEDIATE: 305770  TIMED: 243288     
+[1ATANGIBLE: 43690   VANISHING: 247546  IMMEDIATE: 320335  TIMED: 255776     
+[1ATANGIBLE: 45512   VANISHING: 258549  IMMEDIATE: 334825  TIMED: 272283     
+[1ATANGIBLE: 47065   VANISHING: 268888  IMMEDIATE: 348448  TIMED: 288941     
+[1ATANGIBLE: 48929   VANISHING: 279986  IMMEDIATE: 363729  TIMED: 305431     
+[1ATANGIBLE: 50863   VANISHING: 291798  IMMEDIATE: 380173  TIMED: 321592     
+[1ATANGIBLE: 51382   VANISHING: 294953  IMMEDIATE: 384135  TIMED: 326975     
+[1ATANGIBLE: 53039   VANISHING: 306345  IMMEDIATE: 399200  TIMED: 341799     
+[1ATANGIBLE: 54539   VANISHING: 317274  IMMEDIATE: 413374  TIMED: 359508     
+[1ATANGIBLE: 56249   VANISHING: 327380  IMMEDIATE: 425871  TIMED: 378686     
+[1ATANGIBLE: 57901   VANISHING: 338034  IMMEDIATE: 439030  TIMED: 396417     
+[1ATANGIBLE: 59424   VANISHING: 348659  IMMEDIATE: 452357  TIMED: 414489     
+[1ATANGIBLE: 60855   VANISHING: 358989  IMMEDIATE: 465543  TIMED: 433778     
+[1ATANGIBLE: 62377   VANISHING: 369396  IMMEDIATE: 479459  TIMED: 452487     
+[1ATANGIBLE: 64033   VANISHING: 379727  IMMEDIATE: 493147  TIMED: 470895     
+[1ATANGIBLE: 65504   VANISHING: 390179  IMMEDIATE: 507356  TIMED: 489804     
+[1ATANGIBLE: 66737   VANISHING: 399913  IMMEDIATE: 520128  TIMED: 509124     
+[1ATANGIBLE: 68216   VANISHING: 410143  IMMEDIATE: 533497  TIMED: 526888     
+[1ATANGIBLE: 69488   VANISHING: 420055  IMMEDIATE: 546581  TIMED: 547354     
+[1ATANGIBLE: 70993   VANISHING: 429831  IMMEDIATE: 559603  TIMED: 566997     
+[1ATANGIBLE: 72480   VANISHING: 439933  IMMEDIATE: 573843  TIMED: 586710     
+[1ATANGIBLE: 73780   VANISHING: 449086  IMMEDIATE: 586935  TIMED: 604159     
+[1ATANGIBLE: 75264   VANISHING: 459647  IMMEDIATE: 601761  TIMED: 623379     
+[1ATANGIBLE: 76539   VANISHING: 469807  IMMEDIATE: 614792  TIMED: 642628     
+[1ATANGIBLE: 77555   VANISHING: 479161  IMMEDIATE: 626793  TIMED: 664609     
+[1ATANGIBLE: 78816   VANISHING: 488920  IMMEDIATE: 638907  TIMED: 684636     
+[1ATANGIBLE: 80013   VANISHING: 498744  IMMEDIATE: 650970  TIMED: 704803     
+[1ATANGIBLE: 81105   VANISHING: 508312  IMMEDIATE: 663370  TIMED: 723928     
+[1ATANGIBLE: 82132   VANISHING: 518011  IMMEDIATE: 676399  TIMED: 744021     
+[1ATANGIBLE: 83225   VANISHING: 527602  IMMEDIATE: 689498  TIMED: 763288     
+[1ATANGIBLE: 84334   VANISHING: 537429  IMMEDIATE: 703044  TIMED: 783200     
+[1ATANGIBLE: 85312   VANISHING: 547016  IMMEDIATE: 716180  TIMED: 804374     
+[1ATANGIBLE: 86438   VANISHING: 556492  IMMEDIATE: 728527  TIMED: 825133     
+[1ATANGIBLE: 87431   VANISHING: 565779  IMMEDIATE: 741184  TIMED: 847051     
+[1ATANGIBLE: 88549   VANISHING: 574888  IMMEDIATE: 753868  TIMED: 869171     
+[1ATANGIBLE: 89615   VANISHING: 584531  IMMEDIATE: 768064  TIMED: 890381     
+[1ATANGIBLE: 90172   VANISHING: 589842  IMMEDIATE: 775993  TIMED: 901698     
+[1ATANGIBLE: 91217   VANISHING: 599604  IMMEDIATE: 789336  TIMED: 923597     
+[1ATANGIBLE: 91999   VANISHING: 608812  IMMEDIATE: 801326  TIMED: 946540     
+[1ATANGIBLE: 92830   VANISHING: 618213  IMMEDIATE: 812923  TIMED: 968740     
+[1ATANGIBLE: 93568   VANISHING: 627813  IMMEDIATE: 825652  TIMED: 990507     
+[1ATANGIBLE: 94307   VANISHING: 637274  IMMEDIATE: 838685  TIMED: 1011338    
+[1ATANGIBLE: 95026   VANISHING: 647047  IMMEDIATE: 852512  TIMED: 1032399    
+[1ATANGIBLE: 95795   VANISHING: 656034  IMMEDIATE: 864730  TIMED: 1056242    
+[1ATANGIBLE: 96568   VANISHING: 665119  IMMEDIATE: 877718  TIMED: 1080118    
+[1ATANGIBLE: 97285   VANISHING: 674818  IMMEDIATE: 892509  TIMED: 1102425    
+[1ATANGIBLE: 97828   VANISHING: 683951  IMMEDIATE: 904728  TIMED: 1125973    
+[1ATANGIBLE: 98315   VANISHING: 693264  IMMEDIATE: 917167  TIMED: 1148738    
+[1ATANGIBLE: 98755   VANISHING: 702416  IMMEDIATE: 930197  TIMED: 1171667    
+[1ATANGIBLE: 99160   VANISHING: 711565  IMMEDIATE: 943861  TIMED: 1195318    
+[1A                                                                              
+[1A
+
+TANGIBLE STATES:                 99320
+VANISHING STATES:                    0
+NUMBER OF TIMED EDGES:         1405572  (854456 T->T, 0 T->V, 551116 T->V*->T).
+NUMBER OF IMMEDIATE EDGES:           0  (0 V->T, 0 V->V).
+TOTAL NUMBER OF EDGES:         1405572
+IMMEDIATE TRNS. FIRINGS:        954971
+TIMED TRNS. FIRINGS:           1215612
+VISITED VANISHING STATES:       719316
+GENERAL TRANSITIONS:                 0
+NON-PREEMPTIVE EXP. TRNS.:     1405572
+PREEMPTIVE EXP. TRANSITIONS:         0
+MEMORY USAGE:
+TRANSITION-SET ENTRIES:              0
+VANISH-PATH ENTRIES:             52127
+VANISH-PATH-SET ENTRIES:         15244
+PACKED MARKINGS:                451175 BYTES
+STATE SET DATA:                 270697 BYTES
+EDGES DATA:                    9044153 BYTES
+
+PACKED TANGIBLE MARKINGS TABLE:
+STORED SEQUENCES: 99320, FRAGMENTS: 7111
+  SEQUENCES MEMORY:     421086 BYTES.
+  FRAGMENTS MEMORY:      30089 BYTES.
+      TOTAL MEMORY:     451175 BYTES.
+MEAN MEMORY PER SEQUENCE IS: 4.54264 BYTES.
+  USED FOR SEQUENCE DATA: 4.23969 BYTES.
+        USED FOR HASHING: 0 BYTES.
+      USED FOR FRAGMENTS: 0.30295 BYTES.
+BUILD TIME: [User 17.931s, Sys 0.491s]
+
+
+THE RG IS A [4m[33mCONTINUOS TIME MARKOV CHAIN[24m[0m
+
+[1m[4m
+
+MODEL CHECKING CSLTA EXPRESSION:[22m[24m
+  STATE 0 |= PROB_TA > 0 "DTA_unr" (t = 10 | | Phi1 = (#FAIL > 0))
+
+
+LOADING DTA FILE "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/DTA_unr.dta" ...
+DTA PARTITIONED INTO ZONES (timed locations = 3).
+THERE ARE 2 REGENERATIVE STATES.
+
+INITIAL STATE IS: <s1,l0 * (0,10),[0-10]>
+
+
+FORWARD ON-THE-FLY STATE SPACE CONSTRUCTION FOLLOWING THE COMPONENT ORDER.
+
+
+
+PROCESSING [36m(GEN: 0)[0m COMPONENT NUM=1 WITH 1 INTERNAL LOCATION AND 2 FRONTIER LOCATIONs.
+
+  <S,Z> STATES IN MxZ: 23            
+[1A                                                                              
+[1A
+NUMBER OF TANGIBLE <S*Z> STATES:     2802
+  INTERNAL <S*Z> STATES:             2800
+  EXTERNAL <S*Z> STATES:             0
+NUMBER OF CTMC STATES:               99320
+NUMBER OF ZDTA LOCATIONS:            5
+  OF WHICH TIMED ZDTA LOCATIONS:     0
+NUMBER OF TIMED CLOCK ZONES:         2
+NUMBER OF DETERMINISTIC TRANSITIONS: 1
+NONZERO ENTRIES IN Q:                31000
+NONZERO ENTRIES IN Qbar:             2800
+NONZERO ENTRIES IN DELTA:            2800
+INITIAL <S*Z> STATES:                1
+
+AlphaFactory:  f_g(x)="I[10]"  rate=1.224  acc=1e-07
+UNIFORMIZATION(fg=I[10], Lambda=1.224, step=35): 0/35 Vec*Mat products.              
+[1A                                                                              
+[1AUNIFORMIZATION(fg=I[10], Lambda=1.224, step=35): 35 Vec*Mat products.              
+COMPONENT SOLUTION TIME: [User 0.001s, Sys 0.003s]
+COMPONENT SOLUTION TIME: [User 0.002s, Sys 0.003s]
+
+SKIPPING COMPONENT NUM=2 MADE OF FINAL LOCATIONS.
+
+[1m[4m[32mRESULT[22m[24m[0m: TRUE. ACCEPTANCE PROBABILITY IS 0.856076594584
+
+SOLUTION TIME: [User 0.126s, Sys 0.004s]
+MODEL CHECKING COMPLETED.
+
+
+[1m[4mLOADING PETRI NET /home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution//final (net/def)...[22m[24m
+MARKING PAR: 0
+PLACES:      66
+RATE PAR:    0
+TRANSITIONS: 94
+MEASURES:    0
+LOADING TIME: [User 0.001s, Sys 0.000s]
+
+
+MAX. RESIDUAL ERROR SET TO 1e-07 FOR NUMERICAL ANALYSIS.
+USING ON-THE-FLY STATE SPACE CONSTRUCTION OF CSL^TA MODEL CHECKING.
+USING IMPLICIT STEADY STATE MRP SOLUTION METHOD.
+USING GMRES METHOD FOR IMPLICIT STATIONARY ANALYSIS.
+ADDING "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution" TO THE DTA SEARCH PATHs.
+TANGIBLE: 1       VANISHING: 4       IMMEDIATE: 0       TIMED: 4          
+[1ATANGIBLE: 2768    VANISHING: 11206   IMMEDIATE: 14028   TIMED: 6080       
+[1ATANGIBLE: 4956    VANISHING: 24071   IMMEDIATE: 30597   TIMED: 11764      
+[1ATANGIBLE: 7754    VANISHING: 36429   IMMEDIATE: 45724   TIMED: 22780      
+[1ATANGIBLE: 9271    VANISHING: 45715   IMMEDIATE: 58238   TIMED: 29116      
+[1ATANGIBLE: 11172   VANISHING: 59246   IMMEDIATE: 75830   TIMED: 36579      
+[1ATANGIBLE: 13292   VANISHING: 72201   IMMEDIATE: 93336   TIMED: 45504      
+[1ATANGIBLE: 15109   VANISHING: 81481   IMMEDIATE: 105363  TIMED: 52805      
+[1ATANGIBLE: 17316   VANISHING: 93438   IMMEDIATE: 120069  TIMED: 65402      
+[1ATANGIBLE: 19654   VANISHING: 104605  IMMEDIATE: 134084  TIMED: 78267      
+[1ATANGIBLE: 21495   VANISHING: 115190  IMMEDIATE: 147863  TIMED: 91345      
+[1ATANGIBLE: 23435   VANISHING: 126706  IMMEDIATE: 163295  TIMED: 102310     
+[1ATANGIBLE: 25163   VANISHING: 137787  IMMEDIATE: 178116  TIMED: 114197     
+[1ATANGIBLE: 26812   VANISHING: 147472  IMMEDIATE: 191039  TIMED: 122954     
+[1ATANGIBLE: 28575   VANISHING: 159791  IMMEDIATE: 207886  TIMED: 132916     
+[1ATANGIBLE: 30356   VANISHING: 171239  IMMEDIATE: 222925  TIMED: 145429     
+[1ATANGIBLE: 32570   VANISHING: 182393  IMMEDIATE: 236648  TIMED: 161227     
+[1ATANGIBLE: 34500   VANISHING: 193535  IMMEDIATE: 250545  TIMED: 176256     
+[1ATANGIBLE: 36432   VANISHING: 204867  IMMEDIATE: 264588  TIMED: 192397     
+[1ATANGIBLE: 38140   VANISHING: 214621  IMMEDIATE: 277233  TIMED: 207153     
+[1ATANGIBLE: 40292   VANISHING: 225764  IMMEDIATE: 291682  TIMED: 223716     
+[1ATANGIBLE: 42154   VANISHING: 236390  IMMEDIATE: 305338  TIMED: 242176     
+[1ATANGIBLE: 43599   VANISHING: 247099  IMMEDIATE: 319739  TIMED: 255109     
+[1ATANGIBLE: 45443   VANISHING: 258091  IMMEDIATE: 334250  TIMED: 271218     
+[1ATANGIBLE: 46961   VANISHING: 268335  IMMEDIATE: 347709  TIMED: 288248     
+[1ATANGIBLE: 48844   VANISHING: 279257  IMMEDIATE: 362704  TIMED: 304132     
+[1ATANGIBLE: 50716   VANISHING: 290876  IMMEDIATE: 378848  TIMED: 320266     
+[1ATANGIBLE: 51382   VANISHING: 294953  IMMEDIATE: 384135  TIMED: 326975     
+[1ATANGIBLE: 52999   VANISHING: 306156  IMMEDIATE: 398929  TIMED: 341730     
+[1ATANGIBLE: 54493   VANISHING: 316898  IMMEDIATE: 412902  TIMED: 358582     
+[1ATANGIBLE: 56213   VANISHING: 326985  IMMEDIATE: 425423  TIMED: 377877     
+[1ATANGIBLE: 57863   VANISHING: 337507  IMMEDIATE: 438408  TIMED: 395473     
+[1ATANGIBLE: 59357   VANISHING: 348153  IMMEDIATE: 451662  TIMED: 413543     
+[1ATANGIBLE: 60777   VANISHING: 358271  IMMEDIATE: 464621  TIMED: 432377     
+[1ATANGIBLE: 62314   VANISHING: 368666  IMMEDIATE: 478411  TIMED: 451122     
+[1ATANGIBLE: 63964   VANISHING: 379087  IMMEDIATE: 492288  TIMED: 469446     
+[1ATANGIBLE: 65394   VANISHING: 389359  IMMEDIATE: 506223  TIMED: 488236     
+[1ATANGIBLE: 66673   VANISHING: 398927  IMMEDIATE: 518776  TIMED: 508020     
+[1ATANGIBLE: 68045   VANISHING: 409245  IMMEDIATE: 532354  TIMED: 525415     
+[1ATANGIBLE: 69418   VANISHING: 419180  IMMEDIATE: 545467  TIMED: 545148     
+[1ATANGIBLE: 70844   VANISHING: 428873  IMMEDIATE: 558339  TIMED: 564783     
+[1ATANGIBLE: 72297   VANISHING: 438743  IMMEDIATE: 572155  TIMED: 584293     
+[1ATANGIBLE: 73720   VANISHING: 448369  IMMEDIATE: 585882  TIMED: 602571     
+[1ATANGIBLE: 74710   VANISHING: 456432  IMMEDIATE: 597703  TIMED: 616842     
+[1ATANGIBLE: 76151   VANISHING: 466443  IMMEDIATE: 610361  TIMED: 636034     
+[1ATANGIBLE: 77196   VANISHING: 475969  IMMEDIATE: 622720  TIMED: 656388     
+[1ATANGIBLE: 78433   VANISHING: 485521  IMMEDIATE: 634739  TIMED: 677208     
+[1ATANGIBLE: 79624   VANISHING: 495358  IMMEDIATE: 646804  TIMED: 697333     
+[1ATANGIBLE: 80668   VANISHING: 505182  IMMEDIATE: 659406  TIMED: 717217     
+[1ATANGIBLE: 81841   VANISHING: 514787  IMMEDIATE: 672038  TIMED: 737089     
+[1ATANGIBLE: 82883   VANISHING: 524340  IMMEDIATE: 685105  TIMED: 756405     
+[1ATANGIBLE: 83974   VANISHING: 534009  IMMEDIATE: 698217  TIMED: 776397     
+[1ATANGIBLE: 84993   VANISHING: 543909  IMMEDIATE: 712188  TIMED: 796238     
+[1ATANGIBLE: 85974   VANISHING: 553022  IMMEDIATE: 723966  TIMED: 817134     
+[1ATANGIBLE: 87048   VANISHING: 562344  IMMEDIATE: 736613  TIMED: 838658     
+[1ATANGIBLE: 88114   VANISHING: 571219  IMMEDIATE: 748570  TIMED: 861172     
+[1ATANGIBLE: 89166   VANISHING: 580654  IMMEDIATE: 762363  TIMED: 882020     
+[1ATANGIBLE: 90172   VANISHING: 589842  IMMEDIATE: 775993  TIMED: 901698     
+[1ATANGIBLE: 91211   VANISHING: 599537  IMMEDIATE: 789255  TIMED: 923437     
+[1ATANGIBLE: 91955   VANISHING: 608542  IMMEDIATE: 800985  TIMED: 945898     
+[1ATANGIBLE: 92799   VANISHING: 617973  IMMEDIATE: 812625  TIMED: 968165     
+[1ATANGIBLE: 93510   VANISHING: 627516  IMMEDIATE: 825275  TIMED: 989932     
+[1ATANGIBLE: 94261   VANISHING: 637044  IMMEDIATE: 838394  TIMED: 1010797    
+[1ATANGIBLE: 95012   VANISHING: 646634  IMMEDIATE: 851906  TIMED: 1031474    
+[1ATANGIBLE: 95763   VANISHING: 655676  IMMEDIATE: 864217  TIMED: 1055260    
+[1ATANGIBLE: 96536   VANISHING: 664610  IMMEDIATE: 876949  TIMED: 1078870    
+[1ATANGIBLE: 97237   VANISHING: 674183  IMMEDIATE: 891517  TIMED: 1101103    
+[1ATANGIBLE: 97806   VANISHING: 683320  IMMEDIATE: 903938  TIMED: 1124208    
+[1ATANGIBLE: 98262   VANISHING: 692453  IMMEDIATE: 916031  TIMED: 1146912    
+[1ATANGIBLE: 98719   VANISHING: 701634  IMMEDIATE: 929024  TIMED: 1169634    
+[1ATANGIBLE: 99144   VANISHING: 710770  IMMEDIATE: 942813  TIMED: 1193097    
+[1A                                                                              
+[1A
+
+TANGIBLE STATES:                 99320
+VANISHING STATES:                    0
+NUMBER OF TIMED EDGES:         1405572  (854456 T->T, 0 T->V, 551116 T->V*->T).
+NUMBER OF IMMEDIATE EDGES:           0  (0 V->T, 0 V->V).
+TOTAL NUMBER OF EDGES:         1405572
+IMMEDIATE TRNS. FIRINGS:        954971
+TIMED TRNS. FIRINGS:           1215612
+VISITED VANISHING STATES:       719316
+GENERAL TRANSITIONS:                 0
+NON-PREEMPTIVE EXP. TRNS.:     1405572
+PREEMPTIVE EXP. TRANSITIONS:         0
+MEMORY USAGE:
+TRANSITION-SET ENTRIES:              0
+VANISH-PATH ENTRIES:             52127
+VANISH-PATH-SET ENTRIES:         15244
+PACKED MARKINGS:                451175 BYTES
+STATE SET DATA:                 270697 BYTES
+EDGES DATA:                    9044153 BYTES
+
+PACKED TANGIBLE MARKINGS TABLE:
+STORED SEQUENCES: 99320, FRAGMENTS: 7111
+  SEQUENCES MEMORY:     421086 BYTES.
+  FRAGMENTS MEMORY:      30089 BYTES.
+      TOTAL MEMORY:     451175 BYTES.
+MEAN MEMORY PER SEQUENCE IS: 4.54264 BYTES.
+  USED FOR SEQUENCE DATA: 4.23969 BYTES.
+        USED FOR HASHING: 0 BYTES.
+      USED FOR FRAGMENTS: 0.30295 BYTES.
+BUILD TIME: [User 18.138s, Sys 0.435s]
+
+
+THE RG IS A [4m[33mCONTINUOS TIME MARKOV CHAIN[24m[0m
+
+[1m[4m
+
+MODEL CHECKING CSLTA EXPRESSION:[22m[24m
+  STATE 0 |= PROB_TA > 0 "DTA_unavil" (t = 10 | | Phi1 = (#FAIL > 0))
+
+
+LOADING DTA FILE "/home/shahid/modest/repairable/BENCHMARK/BENCHMARK-Measures.solution/DTA_unavil.dta" ...
+DTA PARTITIONED INTO ZONES (timed locations = 4).
+THERE ARE 2 REGENERATIVE STATES.
+
+INITIAL STATE IS: <s1,l0 * (0,10),[0-10]>
+
+
+FORWARD ON-THE-FLY STATE SPACE CONSTRUCTION FOLLOWING THE COMPONENT ORDER.
+
+
+
+PROCESSING [36m(GEN: 0)[0m COMPONENT NUM=1 WITH 2 INTERNAL LOCATIONs AND 2 FRONTIER LOCATIONs.
+
+  <S,Z> STATES IN MxZ: 74            
+[1A  <S,Z> STATES IN MxZ: 57043         
+[1A  <S,Z> STATES IN MxZ: 81988         
+[1A  <S,Z> STATES IN MxZ: 96785         
+[1A                                                                              
+[1A
+NUMBER OF TANGIBLE <S*Z> STATES:     99322
+  INTERNAL <S*Z> STATES:             99320
+  EXTERNAL <S*Z> STATES:             0
+NUMBER OF CTMC STATES:               99320
+NUMBER OF ZDTA LOCATIONS:            9
+  OF WHICH TIMED ZDTA LOCATIONS:     0
+NUMBER OF TIMED CLOCK ZONES:         2
+NUMBER OF DETERMINISTIC TRANSITIONS: 1
+NONZERO ENTRIES IN Q:                1504892
+NONZERO ENTRIES IN Qbar:             0
+NONZERO ENTRIES IN DELTA:            99320
+INITIAL <S*Z> STATES:                1
+
+AlphaFactory:  f_g(x)="I[10]"  rate=1.428  acc=1e-07
+UNIFORMIZATION(fg=I[10], Lambda=1.428, step=39): 0/39 Vec*Mat products.              
+[1A                                                                              
+[1AUNIFORMIZATION(fg=I[10], Lambda=1.428, step=39): 39 Vec*Mat products.              
+COMPONENT SOLUTION TIME: [User 0.201s, Sys 0.011s]
+COMPONENT SOLUTION TIME: [User 0.203s, Sys 0.011s]
+
+SKIPPING COMPONENT NUM=2 MADE OF FINAL LOCATIONS.
+
+[1m[4m[32mRESULT[22m[24m[0m: TRUE. ACCEPTANCE PROBABILITY IS 0.599544834773
+
+SOLUTION TIME: [User 1.244s, Sys 0.104s]
+MODEL CHECKING COMPLETED.
+
+
+Translation and composition runtime was: 39.8069841862\n
+Translation and composition runtime was: 38.5319020748\n
