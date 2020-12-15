@@ -1,0 +1,4144 @@
+STEPS_ORDER
+	__ARBRE__;
+	default_step;
+	initialization;
+	propagate_effect_S;
+	propagate_effect_required;
+	propagate_leaves;
+	tops;
+GROUP_NAMES
+	V3_simu_group;
+
+OBJECT OPTIONS IS_A GLOBAL_TYPE;
+	CONSTANT
+	  trimming
+		DOMAIN BOOLEAN
+		= TRUE;
+	  trimming_option
+		DOMAIN 'according_to_article' 'maximum'
+		= 'according_to_article';
+	  repairable_system
+		DOMAIN BOOLEAN
+		= TRUE;
+
+OBJECT ADA27_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 6.7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF ADA27_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF ADA27_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ADA27_A <-- S OF ADA27_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ADA27_A = TRUE
+		THEN S OF ADA27_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ADA27_A = FALSE) AND (required OF ADA27_A AND
+		  relevant_evt OF ADA27_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (6.7e-06)
+		  INDUCING failF OF ADA27_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ADA27_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ADA27_A <-- FALSE;
+
+OBJECT ADA27_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 6.7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF ADA27_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF ADA27_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ADA27_B <-- S OF ADA27_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ADA27_B = TRUE
+		THEN S OF ADA27_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ADA27_B = FALSE) AND (required OF ADA27_B AND
+		  relevant_evt OF ADA27_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (6.7e-06)
+		  INDUCING failF OF ADA27_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ADA27_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ADA27_B <-- FALSE;
+
+OBJECT ANAMB_P16_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.2e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF ANAMB_P16_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF ANAMB_P16_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ANAMB_P16_A <-- S OF ANAMB_P16_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ANAMB_P16_A = TRUE
+		THEN S OF ANAMB_P16_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ANAMB_P16_A = FALSE) AND (required OF ANAMB_P16_A
+		  AND relevant_evt OF ANAMB_P16_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.2e-07)
+		  INDUCING failF OF ANAMB_P16_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ANAMB_P16_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ANAMB_P16_A <-- FALSE;
+
+OBJECT ANAMB_P16_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.2e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF ANAMB_P16_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF ANAMB_P16_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ANAMB_P16_B <-- S OF ANAMB_P16_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ANAMB_P16_B = TRUE
+		THEN S OF ANAMB_P16_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ANAMB_P16_B = FALSE) AND (required OF ANAMB_P16_B
+		  AND relevant_evt OF ANAMB_P16_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.2e-07)
+		  INDUCING failF OF ANAMB_P16_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ANAMB_P16_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ANAMB_P16_B <-- FALSE;
+
+OBJECT ANAMB_P17_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.2e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF ANAMB_P17_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF ANAMB_P17_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ANAMB_P17_A <-- S OF ANAMB_P17_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ANAMB_P17_A = TRUE
+		THEN S OF ANAMB_P17_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ANAMB_P17_A = FALSE) AND (required OF ANAMB_P17_A
+		  AND relevant_evt OF ANAMB_P17_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.2e-07)
+		  INDUCING failF OF ANAMB_P17_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ANAMB_P17_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ANAMB_P17_A <-- FALSE;
+
+OBJECT ANAMB_P17_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.2e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF ANAMB_P17_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF ANAMB_P17_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ANAMB_P17_B <-- S OF ANAMB_P17_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ANAMB_P17_B = TRUE
+		THEN S OF ANAMB_P17_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ANAMB_P17_B = FALSE) AND (required OF ANAMB_P17_B
+		  AND relevant_evt OF ANAMB_P17_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.2e-07)
+		  INDUCING failF OF ANAMB_P17_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ANAMB_P17_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ANAMB_P17_B <-- FALSE;
+
+OBJECT CPU86_102_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= PROC_GATE_A;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 9.5e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF PROC_GATE_A
+		THEN required OF CPU86_102_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF PROC_GATE_A AND (NOT S OF PROC_GATE_A)
+		THEN relevant_evt OF CPU86_102_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF CPU86_102_A <-- S OF CPU86_102_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF CPU86_102_A = TRUE
+		THEN S OF CPU86_102_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF CPU86_102_A = FALSE) AND (required OF CPU86_102_A
+		  AND relevant_evt OF CPU86_102_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (9.5e-06)
+		  INDUCING failF OF CPU86_102_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF CPU86_102_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF CPU86_102_A <-- FALSE;
+
+OBJECT CPU86_102_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= PROC_GATE_B;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 9.5e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF PROC_GATE_B
+		THEN required OF CPU86_102_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF PROC_GATE_B AND (NOT S OF PROC_GATE_B)
+		THEN relevant_evt OF CPU86_102_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF CPU86_102_B <-- S OF CPU86_102_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF CPU86_102_B = TRUE
+		THEN S OF CPU86_102_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF CPU86_102_B = FALSE) AND (required OF CPU86_102_B
+		  AND relevant_evt OF CPU86_102_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (9.5e-06)
+		  INDUCING failF OF CPU86_102_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF CPU86_102_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF CPU86_102_B <-- FALSE;
+
+OBJECT CPU86_105_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= PROC_GATE_A;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 9.5e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF PROC_GATE_A
+		THEN required OF CPU86_105_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF PROC_GATE_A AND (NOT S OF PROC_GATE_A)
+		THEN relevant_evt OF CPU86_105_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF CPU86_105_A <-- S OF CPU86_105_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF CPU86_105_A = TRUE
+		THEN S OF CPU86_105_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF CPU86_105_A = FALSE) AND (required OF CPU86_105_A
+		  AND relevant_evt OF CPU86_105_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (9.5e-06)
+		  INDUCING failF OF CPU86_105_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF CPU86_105_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF CPU86_105_A <-- FALSE;
+
+OBJECT CPU86_105_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= PROC_GATE_B;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 9.5e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF PROC_GATE_B
+		THEN required OF CPU86_105_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF PROC_GATE_B AND (NOT S OF PROC_GATE_B)
+		THEN relevant_evt OF CPU86_105_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF CPU86_105_B <-- S OF CPU86_105_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF CPU86_105_B = TRUE
+		THEN S OF CPU86_105_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF CPU86_105_B = FALSE) AND (required OF CPU86_105_B
+		  AND relevant_evt OF CPU86_105_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (9.5e-06)
+		  INDUCING failF OF CPU86_105_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF CPU86_105_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF CPU86_105_B <-- FALSE;
+
+OBJECT CTU IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Loss_Of_Control_in_Auto_Mode;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1;
+	  lambda
+		DOMAIN REAL
+		= 5.4e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Loss_Of_Control_in_Auto_Mode
+		THEN required OF CTU <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Loss_Of_Control_in_Auto_Mode AND (NOT S OF
+		  Loss_Of_Control_in_Auto_Mode)
+		THEN relevant_evt OF CTU <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF CTU <-- S OF CTU;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF CTU = TRUE
+		THEN S OF CTU <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF CTU = FALSE) AND (required OF CTU AND relevant_evt
+		  OF CTU)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (5.4e-06)
+		  INDUCING failF OF CTU <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF CTU = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING failF OF CTU <-- FALSE;
+
+OBJECT DIFIT31_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DIFIT31_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DIFIT31_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DIFIT31_A <-- S OF DIFIT31_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DIFIT31_A = TRUE
+		THEN S OF DIFIT31_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DIFIT31_A = FALSE) AND (required OF DIFIT31_A AND
+		  relevant_evt OF DIFIT31_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (1e-05)
+		  INDUCING failF OF DIFIT31_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DIFIT31_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DIFIT31_A <-- FALSE;
+
+OBJECT DIFIT31_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DIFIT31_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DIFIT31_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DIFIT31_B <-- S OF DIFIT31_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DIFIT31_B = TRUE
+		THEN S OF DIFIT31_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DIFIT31_B = FALSE) AND (required OF DIFIT31_B AND
+		  relevant_evt OF DIFIT31_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (1e-05)
+		  INDUCING failF OF DIFIT31_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DIFIT31_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DIFIT31_B <-- FALSE;
+
+OBJECT DIFIT32_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DIFIT32_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DIFIT32_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DIFIT32_A <-- S OF DIFIT32_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DIFIT32_A = TRUE
+		THEN S OF DIFIT32_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DIFIT32_A = FALSE) AND (required OF DIFIT32_A AND
+		  relevant_evt OF DIFIT32_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (1e-05)
+		  INDUCING failF OF DIFIT32_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DIFIT32_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DIFIT32_A <-- FALSE;
+
+OBJECT DIFIT32_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DIFIT32_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DIFIT32_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DIFIT32_B <-- S OF DIFIT32_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DIFIT32_B = TRUE
+		THEN S OF DIFIT32_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DIFIT32_B = FALSE) AND (required OF DIFIT32_B AND
+		  relevant_evt OF DIFIT32_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (1e-05)
+		  INDUCING failF OF DIFIT32_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DIFIT32_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DIFIT32_B <-- FALSE;
+
+OBJECT DOSC_1_DCHS4_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DOSC_1_DCHS4_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DOSC_1_DCHS4_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DOSC_1_DCHS4_A <-- S OF DOSC_1_DCHS4_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DOSC_1_DCHS4_A = TRUE
+		THEN S OF DOSC_1_DCHS4_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DOSC_1_DCHS4_A = FALSE) AND (required OF
+		  DOSC_1_DCHS4_A AND relevant_evt OF DOSC_1_DCHS4_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (7e-06)
+		  INDUCING failF OF DOSC_1_DCHS4_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DOSC_1_DCHS4_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DOSC_1_DCHS4_A <-- FALSE;
+
+OBJECT DOSC_1_DCHS4_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DOSC_1_DCHS4_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DOSC_1_DCHS4_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DOSC_1_DCHS4_B <-- S OF DOSC_1_DCHS4_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DOSC_1_DCHS4_B = TRUE
+		THEN S OF DOSC_1_DCHS4_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DOSC_1_DCHS4_B = FALSE) AND (required OF
+		  DOSC_1_DCHS4_B AND relevant_evt OF DOSC_1_DCHS4_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (7e-06)
+		  INDUCING failF OF DOSC_1_DCHS4_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DOSC_1_DCHS4_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DOSC_1_DCHS4_B <-- FALSE;
+
+OBJECT DOSC_1_DCHS5_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DOSC_1_DCHS5_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DOSC_1_DCHS5_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DOSC_1_DCHS5_A <-- S OF DOSC_1_DCHS5_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DOSC_1_DCHS5_A = TRUE
+		THEN S OF DOSC_1_DCHS5_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DOSC_1_DCHS5_A = FALSE) AND (required OF
+		  DOSC_1_DCHS5_A AND relevant_evt OF DOSC_1_DCHS5_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (7e-06)
+		  INDUCING failF OF DOSC_1_DCHS5_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DOSC_1_DCHS5_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DOSC_1_DCHS5_A <-- FALSE;
+
+OBJECT DOSC_1_DCHS5_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 7e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DOSC_1_DCHS5_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DOSC_1_DCHS5_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DOSC_1_DCHS5_B <-- S OF DOSC_1_DCHS5_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DOSC_1_DCHS5_B = TRUE
+		THEN S OF DOSC_1_DCHS5_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DOSC_1_DCHS5_B = FALSE) AND (required OF
+		  DOSC_1_DCHS5_B AND relevant_evt OF DOSC_1_DCHS5_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (7e-06)
+		  INDUCING failF OF DOSC_1_DCHS5_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DOSC_1_DCHS5_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DOSC_1_DCHS5_B <-- FALSE;
+
+OBJECT DPBMB_P31_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.9e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DPBMB_P31_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DPBMB_P31_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DPBMB_P31_A <-- S OF DPBMB_P31_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DPBMB_P31_A = TRUE
+		THEN S OF DPBMB_P31_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DPBMB_P31_A = FALSE) AND (required OF DPBMB_P31_A
+		  AND relevant_evt OF DPBMB_P31_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.9e-07)
+		  INDUCING failF OF DPBMB_P31_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DPBMB_P31_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DPBMB_P31_A <-- FALSE;
+
+OBJECT DPBMB_P31_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.9e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DPBMB_P31_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DPBMB_P31_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DPBMB_P31_B <-- S OF DPBMB_P31_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DPBMB_P31_B = TRUE
+		THEN S OF DPBMB_P31_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DPBMB_P31_B = FALSE) AND (required OF DPBMB_P31_B
+		  AND relevant_evt OF DPBMB_P31_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.9e-07)
+		  INDUCING failF OF DPBMB_P31_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DPBMB_P31_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DPBMB_P31_B <-- FALSE;
+
+OBJECT DPBMB_P32_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.9e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF DPBMB_P32_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF DPBMB_P32_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DPBMB_P32_A <-- S OF DPBMB_P32_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DPBMB_P32_A = TRUE
+		THEN S OF DPBMB_P32_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DPBMB_P32_A = FALSE) AND (required OF DPBMB_P32_A
+		  AND relevant_evt OF DPBMB_P32_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.9e-07)
+		  INDUCING failF OF DPBMB_P32_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DPBMB_P32_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DPBMB_P32_A <-- FALSE;
+
+OBJECT DPBMB_P32_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.9e-07;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF DPBMB_P32_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF DPBMB_P32_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF DPBMB_P32_B <-- S OF DPBMB_P32_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF DPBMB_P32_B = TRUE
+		THEN S OF DPBMB_P32_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF DPBMB_P32_B = FALSE) AND (required OF DPBMB_P32_B
+		  AND relevant_evt OF DPBMB_P32_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.9e-07)
+		  INDUCING failF OF DPBMB_P32_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF DPBMB_P32_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF DPBMB_P32_B <-- FALSE;
+
+OBJECT HS_136F IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Hand_Switch_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1e-200;
+	  lambda
+		DOMAIN REAL
+		= 0.001;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Hand_Switch_Failure
+		THEN required OF HS_136F <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Hand_Switch_Failure AND (NOT S OF
+		  Hand_Switch_Failure)
+		THEN relevant_evt OF HS_136F <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF HS_136F <-- S OF HS_136F;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF HS_136F = TRUE
+		THEN S OF HS_136F <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF HS_136F = FALSE) AND (required OF HS_136F AND
+		  relevant_evt OF HS_136F)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (0.001)
+		  INDUCING failF OF HS_136F <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF HS_136F = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1e-200)
+		  INDUCING failF OF HS_136F <-- FALSE;
+
+OBJECT HS_138F IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Hand_Switch_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1e-200;
+	  lambda
+		DOMAIN REAL
+		= 0.001;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Hand_Switch_Failure
+		THEN required OF HS_138F <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Hand_Switch_Failure AND (NOT S OF
+		  Hand_Switch_Failure)
+		THEN relevant_evt OF HS_138F <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF HS_138F <-- S OF HS_138F;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF HS_138F = TRUE
+		THEN S OF HS_138F <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF HS_138F = FALSE) AND (required OF HS_138F AND
+		  relevant_evt OF HS_138F)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (0.001)
+		  INDUCING failF OF HS_138F <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF HS_138F = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1e-200)
+		  INDUCING failF OF HS_138F <-- FALSE;
+
+OBJECT HS_139F IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Hand_Switch_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1e-200;
+	  lambda
+		DOMAIN REAL
+		= 0.001;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Hand_Switch_Failure
+		THEN required OF HS_139F <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Hand_Switch_Failure AND (NOT S OF
+		  Hand_Switch_Failure)
+		THEN relevant_evt OF HS_139F <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF HS_139F <-- S OF HS_139F;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF HS_139F = TRUE
+		THEN S OF HS_139F <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF HS_139F = FALSE) AND (required OF HS_139F AND
+		  relevant_evt OF HS_139F)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (0.001)
+		  INDUCING failF OF HS_139F <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF HS_139F = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1e-200)
+		  INDUCING failF OF HS_139F <-- FALSE;
+
+OBJECT ISOCTX31_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 8.1e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF ISOCTX31_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF ISOCTX31_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ISOCTX31_A <-- S OF ISOCTX31_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ISOCTX31_A = TRUE
+		THEN S OF ISOCTX31_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ISOCTX31_A = FALSE) AND (required OF ISOCTX31_A
+		  AND relevant_evt OF ISOCTX31_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (8.1e-06)
+		  INDUCING failF OF ISOCTX31_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ISOCTX31_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ISOCTX31_A <-- FALSE;
+
+OBJECT ISOCTX31_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 8.1e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF ISOCTX31_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF ISOCTX31_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ISOCTX31_B <-- S OF ISOCTX31_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ISOCTX31_B = TRUE
+		THEN S OF ISOCTX31_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ISOCTX31_B = FALSE) AND (required OF ISOCTX31_B
+		  AND relevant_evt OF ISOCTX31_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (8.1e-06)
+		  INDUCING failF OF ISOCTX31_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ISOCTX31_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ISOCTX31_B <-- FALSE;
+
+OBJECT ISOCTX32_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 8.1e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF ISOCTX32_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF ISOCTX32_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ISOCTX32_A <-- S OF ISOCTX32_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ISOCTX32_A = TRUE
+		THEN S OF ISOCTX32_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ISOCTX32_A = FALSE) AND (required OF ISOCTX32_A
+		  AND relevant_evt OF ISOCTX32_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (8.1e-06)
+		  INDUCING failF OF ISOCTX32_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ISOCTX32_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ISOCTX32_A <-- FALSE;
+
+OBJECT ISOCTX32_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 8.1e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF ISOCTX32_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF ISOCTX32_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF ISOCTX32_B <-- S OF ISOCTX32_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF ISOCTX32_B = TRUE
+		THEN S OF ISOCTX32_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF ISOCTX32_B = FALSE) AND (required OF ISOCTX32_B
+		  AND relevant_evt OF ISOCTX32_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (8.1e-06)
+		  INDUCING failF OF ISOCTX32_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF ISOCTX32_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF ISOCTX32_B <-- FALSE;
+
+OBJECT MEM527_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF MEM527_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF MEM527_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF MEM527_A <-- S OF MEM527_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF MEM527_A = TRUE
+		THEN S OF MEM527_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF MEM527_A = FALSE) AND (required OF MEM527_A AND
+		  relevant_evt OF MEM527_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.9e-06)
+		  INDUCING failF OF MEM527_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF MEM527_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF MEM527_A <-- FALSE;
+
+OBJECT MEM527_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 3.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF MEM527_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF MEM527_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF MEM527_B <-- S OF MEM527_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF MEM527_B = TRUE
+		THEN S OF MEM527_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF MEM527_B = FALSE) AND (required OF MEM527_B AND
+		  relevant_evt OF MEM527_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (3.9e-06)
+		  INDUCING failF OF MEM527_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF MEM527_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF MEM527_B <-- FALSE;
+
+OBJECT OE IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Hand_Switch_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1e-200;
+	  lambda
+		DOMAIN REAL
+		= 0.1;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Hand_Switch_Failure
+		THEN required OF OE <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Hand_Switch_Failure AND (NOT S OF
+		  Hand_Switch_Failure)
+		THEN relevant_evt OF OE <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF OE <-- S OF OE;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF OE = TRUE
+		THEN S OF OE <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF OE = FALSE) AND (required OF OE AND relevant_evt
+		  OF OE)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (0.1)
+		  INDUCING failF OF OE <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF OE = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1e-200)
+		  INDUCING failF OF OE <-- FALSE;
+
+OBJECT PROC_GATE_A IS_A or_gate;
+	INTERFACE
+	  sons
+		= CPU86_102_A CPU86_105_A;
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF PROC_GATE_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF PROC_GATE_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF PROC_GATE_A <-- S OF PROC_GATE_A;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF CPU86_102_A OR S OF CPU86_105_A
+		THEN S OF PROC_GATE_A <-- TRUE;
+
+OBJECT PROC_GATE_B IS_A or_gate;
+	INTERFACE
+	  sons
+		= CPU86_102_B CPU86_105_B;
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF PROC_GATE_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF PROC_GATE_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF PROC_GATE_B <-- S OF PROC_GATE_B;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF CPU86_102_B OR S OF CPU86_105_B
+		THEN S OF PROC_GATE_B <-- TRUE;
+
+OBJECT RLYS_1 IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= Loss_Of_Control_in_Auto_Mode;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 1;
+	  lambda
+		DOMAIN REAL
+		= 0.00052;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF Loss_Of_Control_in_Auto_Mode
+		THEN required OF RLYS_1 <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF Loss_Of_Control_in_Auto_Mode AND (NOT S OF
+		  Loss_Of_Control_in_Auto_Mode)
+		THEN relevant_evt OF RLYS_1 <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RLYS_1 <-- S OF RLYS_1;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF RLYS_1 = TRUE
+		THEN S OF RLYS_1 <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF RLYS_1 = FALSE) AND (required OF RLYS_1 AND
+		  relevant_evt OF RLYS_1)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (0.00052)
+		  INDUCING failF OF RLYS_1 <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF RLYS_1 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING failF OF RLYS_1 <-- FALSE;
+
+OBJECT RORB31_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 2.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF RORB31_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF RORB31_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RORB31_A <-- S OF RORB31_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF RORB31_A = TRUE
+		THEN S OF RORB31_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF RORB31_A = FALSE) AND (required OF RORB31_A AND
+		  relevant_evt OF RORB31_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (2.9e-06)
+		  INDUCING failF OF RORB31_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF RORB31_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF RORB31_A <-- FALSE;
+
+OBJECT RORB31_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 2.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF RORB31_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF RORB31_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RORB31_B <-- S OF RORB31_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF RORB31_B = TRUE
+		THEN S OF RORB31_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF RORB31_B = FALSE) AND (required OF RORB31_B AND
+		  relevant_evt OF RORB31_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (2.9e-06)
+		  INDUCING failF OF RORB31_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF RORB31_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF RORB31_B <-- FALSE;
+
+OBJECT RORB32_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 2.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF RORB32_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF RORB32_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RORB32_A <-- S OF RORB32_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF RORB32_A = TRUE
+		THEN S OF RORB32_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF RORB32_A = FALSE) AND (required OF RORB32_A AND
+		  relevant_evt OF RORB32_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (2.9e-06)
+		  INDUCING failF OF RORB32_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF RORB32_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF RORB32_A <-- FALSE;
+
+OBJECT RORB32_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 2.9e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF RORB32_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF RORB32_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RORB32_B <-- S OF RORB32_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF RORB32_B = TRUE
+		THEN S OF RORB32_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF RORB32_B = FALSE) AND (required OF RORB32_B AND
+		  relevant_evt OF RORB32_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (2.9e-06)
+		  INDUCING failF OF RORB32_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF RORB32_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF RORB32_B <-- FALSE;
+
+OBJECT SM_271_A IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.4e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_A_Failure
+		THEN required OF SM_271_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_A_Failure AND (NOT S OF
+		  System_A_Failure)
+		THEN relevant_evt OF SM_271_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF SM_271_A <-- S OF SM_271_A;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF SM_271_A = TRUE
+		THEN S OF SM_271_A <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF SM_271_A = FALSE) AND (required OF SM_271_A AND
+		  relevant_evt OF SM_271_A)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.4e-06)
+		  INDUCING failF OF SM_271_A <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF SM_271_A = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF SM_271_A <-- FALSE;
+
+OBJECT SM_271_B IS_A f_leaf;
+	INTERFACE
+	  fathers
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  mu
+		DOMAIN REAL
+		= 0.041;
+	  lambda
+		DOMAIN REAL
+		= 4.4e-06;
+	  failF_FROZEN
+		DOMAIN BOOLEAN
+		= FALSE;
+	(*FAILURE*)
+	ATTRIBUTE
+	  failF
+		LABEL "failure in operation %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF System_B_Failure
+		THEN required OF SM_271_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF System_B_Failure AND (NOT S OF
+		  System_B_Failure)
+		THEN relevant_evt OF SM_271_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF SM_271_B <-- S OF SM_271_B;
+	  xx6
+		GROUP V3_simu_group
+		STEP initialization
+		IF failF OF SM_271_B = TRUE
+		THEN S OF SM_271_B <-- TRUE;
+	OCCURRENCE
+	  xx10
+		GROUP V3_simu_group
+		IF (failF OF SM_271_B = FALSE) AND (required OF SM_271_B AND
+		  relevant_evt OF SM_271_B)
+		MAY_OCCUR
+		  FAULT failF
+		  LABEL "failure in operation %OBJECT"
+		  DIST EXP (4.4e-06)
+		  INDUCING failF OF SM_271_B <-- TRUE;
+	  xx11
+		GROUP V3_simu_group
+		IF failF OF SM_271_B = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.041)
+		  INDUCING failF OF SM_271_B <-- FALSE;
+
+OBJECT RRS_Failure IS_A or_gate;
+	INTERFACE
+	  sons
+		= Loss_Of_Control_With_A Loss_Of_Control_With_B A_B_Failure_Together;
+	  fathers
+		= UE_1;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF UE_1
+		THEN required OF RRS_Failure <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF UE_1 AND (NOT S OF UE_1)
+		THEN relevant_evt OF RRS_Failure <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF RRS_Failure <-- S OF RRS_Failure;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF (S OF Loss_Of_Control_With_A OR S OF Loss_Of_Control_With_B)
+		  OR S OF A_B_Failure_Together
+		THEN S OF RRS_Failure <-- TRUE;
+
+OBJECT UE_1 IS_A undes_event;
+	INTERFACE
+	  sons
+		= RRS_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= TRUE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		THEN relevant_evt OF UE_1 <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF UE_1 <-- S OF UE_1;
+	  xx34
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF RRS_Failure
+		THEN S OF UE_1 <-- TRUE;
+
+OBJECT Auto_Switching_Failure_A IS_A then_gate;
+	INTERFACE
+	  fathers
+		= Loss_Of_Control_With_A dummy;
+	  first
+		= Loss_Of_Control_in_Auto_Mode;
+	  second
+		= System_A_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  step_down
+		DOMAIN 'rep_first' 'rep_second' 'rep_any' 'rep_all'
+		= 'rep_any';
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (NOT required OF Loss_Of_Control_With_A) AND (NOT required
+		  OF dummy)
+		THEN required OF Auto_Switching_Failure_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Loss_Of_Control_With_A AND (NOT S OF
+		  Loss_Of_Control_With_A)) OR (relevant_evt OF dummy AND (NOT
+		  S OF dummy))
+		THEN relevant_evt OF Auto_Switching_Failure_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Auto_Switching_Failure_A <-- S OF
+		  Auto_Switching_Failure_A;
+	  xx25
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF ((S OF System_A_Failure AND S OF
+		  Loss_Of_Control_in_Auto_Mode) AND already_S OF
+		  Loss_Of_Control_in_Auto_Mode) AND (NOT already_S OF
+		  System_A_Failure)
+		THEN S OF Auto_Switching_Failure_A <-- TRUE;
+	  xx26
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF already_S OF Auto_Switching_Failure_A AND (S OF
+		  Loss_Of_Control_in_Auto_Mode AND S OF System_A_Failure)
+		THEN S OF Auto_Switching_Failure_A <-- TRUE;
+
+OBJECT Auto_Switching_Failure_B IS_A then_gate;
+	INTERFACE
+	  fathers
+		= Loss_Of_Control_With_B dummy;
+	  first
+		= Loss_Of_Control_in_Auto_Mode;
+	  second
+		= System_B_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	CONSTANT
+	  step_down
+		DOMAIN 'rep_first' 'rep_second' 'rep_any' 'rep_all'
+		= 'rep_any';
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (NOT required OF Loss_Of_Control_With_B) AND (NOT required
+		  OF dummy)
+		THEN required OF Auto_Switching_Failure_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Loss_Of_Control_With_B AND (NOT S OF
+		  Loss_Of_Control_With_B)) OR (relevant_evt OF dummy AND (NOT
+		  S OF dummy))
+		THEN relevant_evt OF Auto_Switching_Failure_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Auto_Switching_Failure_B <-- S OF
+		  Auto_Switching_Failure_B;
+	  xx25
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF ((S OF System_B_Failure AND S OF
+		  Loss_Of_Control_in_Auto_Mode) AND already_S OF
+		  Loss_Of_Control_in_Auto_Mode) AND (NOT already_S OF
+		  System_B_Failure)
+		THEN S OF Auto_Switching_Failure_B <-- TRUE;
+	  xx26
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF already_S OF Auto_Switching_Failure_B AND (S OF
+		  Loss_Of_Control_in_Auto_Mode AND S OF System_B_Failure)
+		THEN S OF Auto_Switching_Failure_B <-- TRUE;
+
+OBJECT Loss_Of_Control_in_Auto_Mode IS_A or_gate;
+	INTERFACE
+	  sons
+		= CTU RLYS_1;
+	  fathers
+		= Auto_Switching_Failure_A Auto_Switching_Failure_B;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (NOT required OF Auto_Switching_Failure_A) AND (NOT required
+		  OF Auto_Switching_Failure_B)
+		THEN required OF Loss_Of_Control_in_Auto_Mode <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Auto_Switching_Failure_A AND (NOT S OF
+		  Auto_Switching_Failure_A)) OR (relevant_evt OF
+		  Auto_Switching_Failure_B AND (NOT S OF
+		  Auto_Switching_Failure_B))
+		THEN relevant_evt OF Loss_Of_Control_in_Auto_Mode <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Loss_Of_Control_in_Auto_Mode <-- S OF
+		  Loss_Of_Control_in_Auto_Mode;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF CTU OR S OF RLYS_1
+		THEN S OF Loss_Of_Control_in_Auto_Mode <-- TRUE;
+
+OBJECT Loss_Of_Control_With_A IS_A and_gate;
+	INTERFACE
+	  sons
+		= Auto_Switching_Failure_A Hand_Switch_Failure;
+	  fathers
+		= RRS_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF RRS_Failure
+		THEN required OF Loss_Of_Control_With_A <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF RRS_Failure AND (NOT S OF RRS_Failure)
+		THEN relevant_evt OF Loss_Of_Control_With_A <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Loss_Of_Control_With_A <-- S OF
+		  Loss_Of_Control_With_A;
+	  xx28
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF Auto_Switching_Failure_A AND S OF Hand_Switch_Failure
+		THEN S OF Loss_Of_Control_With_A <-- TRUE;
+
+OBJECT Loss_Of_Control_With_B IS_A and_gate;
+	INTERFACE
+	  sons
+		= Auto_Switching_Failure_B Hand_Switch_Failure;
+	  fathers
+		= RRS_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF RRS_Failure
+		THEN required OF Loss_Of_Control_With_B <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF RRS_Failure AND (NOT S OF RRS_Failure)
+		THEN relevant_evt OF Loss_Of_Control_With_B <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Loss_Of_Control_With_B <-- S OF
+		  Loss_Of_Control_With_B;
+	  xx28
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF Auto_Switching_Failure_B AND S OF Hand_Switch_Failure
+		THEN S OF Loss_Of_Control_With_B <-- TRUE;
+
+OBJECT dummy IS_A and_gate;
+	INTERFACE
+	  sons
+		= Auto_Switching_Failure_A Auto_Switching_Failure_B;
+	  triggers
+		= Hand_Switch_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT S OF Hand_Switch_Failure
+		THEN relevant_evt OF dummy <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF dummy <-- S OF dummy;
+	  xx28
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF Auto_Switching_Failure_A AND S OF
+		  Auto_Switching_Failure_B
+		THEN S OF dummy <-- TRUE;
+
+OBJECT A_B_Failure_Together IS_A and_gate;
+	INTERFACE
+	  sons
+		= System_A_Failure System_B_Failure;
+	  fathers
+		= RRS_Failure;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF NOT required OF RRS_Failure
+		THEN required OF A_B_Failure_Together <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF relevant_evt OF RRS_Failure AND (NOT S OF RRS_Failure)
+		THEN relevant_evt OF A_B_Failure_Together <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF A_B_Failure_Together <-- S OF
+		  A_B_Failure_Together;
+	  xx28
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF S OF System_A_Failure AND S OF System_B_Failure
+		THEN S OF A_B_Failure_Together <-- TRUE;
+
+OBJECT first_1 IS_A first_link;
+
+OBJECT first_2 IS_A first_link;
+
+OBJECT logic_1 IS_A logic_link;
+
+OBJECT logic_10 IS_A logic_link;
+
+OBJECT logic_11 IS_A logic_link;
+
+OBJECT logic_12 IS_A logic_link;
+
+OBJECT logic_13 IS_A logic_link;
+
+OBJECT logic_14 IS_A logic_link;
+
+OBJECT logic_15 IS_A logic_link;
+
+OBJECT logic_16 IS_A logic_link;
+
+OBJECT logic_17 IS_A logic_link;
+
+OBJECT logic_18 IS_A logic_link;
+
+OBJECT logic_18_C1 IS_A logic_link;
+
+OBJECT logic_19 IS_A logic_link;
+
+OBJECT logic_19_C1 IS_A logic_link;
+
+OBJECT logic_2 IS_A logic_link;
+
+OBJECT logic_20 IS_A logic_link;
+
+OBJECT logic_20_C1 IS_A logic_link;
+
+OBJECT logic_24 IS_A logic_link;
+
+OBJECT logic_24_C1 IS_A logic_link;
+
+OBJECT logic_25 IS_A logic_link;
+
+OBJECT logic_25_C1 IS_A logic_link;
+
+OBJECT logic_26 IS_A logic_link;
+
+OBJECT logic_26_C1 IS_A logic_link;
+
+OBJECT logic_27 IS_A logic_link;
+
+OBJECT logic_27_C1 IS_A logic_link;
+
+OBJECT logic_28 IS_A logic_link;
+
+OBJECT logic_28_C1 IS_A logic_link;
+
+OBJECT logic_29 IS_A logic_link;
+
+OBJECT logic_29_C1 IS_A logic_link;
+
+OBJECT logic_3 IS_A logic_link;
+
+OBJECT logic_30 IS_A logic_link;
+
+OBJECT logic_30_C1 IS_A logic_link;
+
+OBJECT logic_31 IS_A logic_link;
+
+OBJECT logic_31_C1 IS_A logic_link;
+
+OBJECT logic_32 IS_A logic_link;
+
+OBJECT logic_32_C1 IS_A logic_link;
+
+OBJECT logic_33 IS_A logic_link;
+
+OBJECT logic_33_C1 IS_A logic_link;
+
+OBJECT logic_34 IS_A logic_link;
+
+OBJECT logic_34_C1 IS_A logic_link;
+
+OBJECT logic_35 IS_A logic_link;
+
+OBJECT logic_35_C1 IS_A logic_link;
+
+OBJECT logic_36 IS_A logic_link;
+
+OBJECT logic_36_C1 IS_A logic_link;
+
+OBJECT logic_37 IS_A logic_link;
+
+OBJECT logic_37_C1 IS_A logic_link;
+
+OBJECT logic_38 IS_A logic_link;
+
+OBJECT logic_38_C1 IS_A logic_link;
+
+OBJECT logic_39 IS_A logic_link;
+
+OBJECT logic_4 IS_A logic_link;
+
+OBJECT logic_40 IS_A logic_link;
+
+OBJECT logic_5 IS_A logic_link;
+
+OBJECT logic_7 IS_A logic_link;
+
+OBJECT logic_8 IS_A logic_link;
+
+OBJECT logic_9 IS_A logic_link;
+
+OBJECT Hand_Switch_Failure IS_A or_gate;
+	INTERFACE
+	  sons
+		= HS_136F HS_138F HS_139F OE;
+	  fathers
+		= Loss_Of_Control_With_A Loss_Of_Control_With_B;
+	  triggered_by
+		= dummy;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF ((NOT required OF Loss_Of_Control_With_A) AND (NOT required
+		  OF Loss_Of_Control_With_B)) OR (NOT S OF dummy)
+		THEN required OF Hand_Switch_Failure <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Loss_Of_Control_With_A AND (NOT S OF
+		  Loss_Of_Control_With_A)) OR (relevant_evt OF
+		  Loss_Of_Control_With_B AND (NOT S OF Loss_Of_Control_With_B))
+		THEN relevant_evt OF Hand_Switch_Failure <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF Hand_Switch_Failure <-- S OF
+		  Hand_Switch_Failure;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF ((S OF HS_136F OR S OF HS_138F) OR S OF HS_139F) OR S OF OE
+		THEN S OF Hand_Switch_Failure <-- TRUE;
+
+OBJECT second_1 IS_A second_link;
+
+OBJECT second_2 IS_A second_link;
+
+OBJECT System_A_Failure IS_A or_gate;
+	INTERFACE
+	  sons
+		= ADA27_A ANAMB_P16_A ANAMB_P17_A DIFIT31_A DIFIT32_A DOSC_1_DCHS4_A DOSC_1_DCHS5_A DPBMB_P31_A DPBMB_P32_A ISOCTX31_A ISOCTX32_A MEM527_A PROC_GATE_A RORB31_A RORB32_A SM_271_A;
+	  fathers
+		= Auto_Switching_Failure_A A_B_Failure_Together;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (NOT required OF Auto_Switching_Failure_A) AND (NOT required
+		  OF A_B_Failure_Together)
+		THEN required OF System_A_Failure <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Auto_Switching_Failure_A AND (NOT S OF
+		  Auto_Switching_Failure_A)) OR (relevant_evt OF
+		  A_B_Failure_Together AND (NOT S OF A_B_Failure_Together))
+		THEN relevant_evt OF System_A_Failure <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF System_A_Failure <-- S OF System_A_Failure;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF ((((((((((((((S OF ADA27_A OR S OF ANAMB_P16_A) OR S OF
+		  ANAMB_P17_A) OR S OF DIFIT31_A) OR S OF DIFIT32_A) OR S OF
+		  DOSC_1_DCHS4_A) OR S OF DOSC_1_DCHS5_A) OR S OF DPBMB_P31_A)
+		  OR S OF DPBMB_P32_A) OR S OF ISOCTX31_A) OR S OF ISOCTX32_A)
+		  OR S OF MEM527_A) OR S OF PROC_GATE_A) OR S OF RORB31_A) OR
+		  S OF RORB32_A) OR S OF SM_271_A
+		THEN S OF System_A_Failure <-- TRUE;
+
+OBJECT System_B_Failure IS_A or_gate;
+	INTERFACE
+	  sons
+		= ADA27_B ANAMB_P16_B ANAMB_P17_B DIFIT31_B DIFIT32_B DOSC_1_DCHS4_B DOSC_1_DCHS5_B DPBMB_P31_B DPBMB_P32_B ISOCTX31_B ISOCTX32_B MEM527_B PROC_GATE_B RORB31_B RORB32_B SM_271_B;
+	  fathers
+		= Auto_Switching_Failure_B A_B_Failure_Together;
+	ATTRIBUTE
+	  required
+		DOMAIN BOOLEAN
+		REINITIALISATION TRUE;
+	  already_S
+		DOMAIN BOOLEAN
+		= FALSE;
+	CONSTANT
+	  calculate_required
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+	  force_relevant_events
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  S
+		LABEL "%OBJECT"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	  relevant_evt
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  xx3
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (NOT required OF Auto_Switching_Failure_B) AND (NOT required
+		  OF A_B_Failure_Together)
+		THEN required OF System_B_Failure <-- FALSE;
+	  xx4
+		GROUP V3_simu_group
+		STEP propagate_effect_required
+		IF (relevant_evt OF Auto_Switching_Failure_B AND (NOT S OF
+		  Auto_Switching_Failure_B)) OR (relevant_evt OF
+		  A_B_Failure_Together AND (NOT S OF A_B_Failure_Together))
+		THEN relevant_evt OF System_B_Failure <-- TRUE;
+	  xx5
+		GROUP V3_simu_group
+		STEP propagate_leaves
+		THEN already_S OF System_B_Failure <-- S OF System_B_Failure;
+	  xx29
+		GROUP V3_simu_group
+		STEP propagate_effect_S
+		IF ((((((((((((((S OF ADA27_B OR S OF ANAMB_P16_B) OR S OF
+		  ANAMB_P17_B) OR S OF DIFIT31_B) OR S OF DIFIT32_B) OR S OF
+		  DOSC_1_DCHS4_B) OR S OF DOSC_1_DCHS5_B) OR S OF DPBMB_P31_B)
+		  OR S OF DPBMB_P32_B) OR S OF ISOCTX31_B) OR S OF ISOCTX32_B)
+		  OR S OF MEM527_B) OR S OF PROC_GATE_B) OR S OF RORB31_B) OR
+		  S OF RORB32_B) OR S OF SM_271_B
+		THEN S OF System_B_Failure <-- TRUE;
+
+OBJECT t_1 IS_A trigger_link;
+	INTERFACE
+	  target
+		= Hand_Switch_Failure;
+	CONSTANT
+	  trigger_kind
+		DOMAIN 'fn_fathers_and_trig' 'fn_fathers_opp_trig' 'always_true' 'always_false' 'equal_to_S_trig' 'opposite_to_S_trig'
+		= 'fn_fathers_and_trig';
+
+OBJECT __ARBRE__EIRM IS_A FIGARO;
+	CONSTANT
+	  Profil1
+		DOMAIN BOOLEAN
+		= TRUE;
+	  no_trim
+		DOMAIN BOOLEAN
+		= FALSE;
+	  trim_article
+		DOMAIN BOOLEAN
+		= TRUE;
+	  no_repair
+		DOMAIN BOOLEAN
+		= FALSE;
+

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <information>
+    <software name="SCRAM" version="0.11.5"/>
+    <time>2019-07-03T16:22:02</time>
+    <performance>
+      <calculation-time name="MCS_top">
+        <products>0.00313259</products>
+      </calculation-time>
+    </performance>
+    <calculated-quantity name="Minimal Cut Sets"/>
+    <calculation-method name="Binary Decision Diagram">
+      <limits>
+        <product-order>20</product-order>
+      </limits>
+    </calculation-method>
+    <model-features>
+      <gates>45</gates>
+      <basic-events>17</basic-events>
+      <house-events>0</house-events>
+      <ccf-groups>0</ccf-groups>
+      <fault-trees>1</fault-trees>
+    </model-features>
+  </information>
+  <results>
+    <sum-of-products name="MCS_top" basic-events="14" products="76">
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_dw_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="RC_CB_up_2_failI"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_2_failF"/>
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_dw_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="CB_up_1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="3">
+        <basic-event name="Transfo1_init"/>
+        <basic-event name="GRID_failF"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+      <product order="2">
+        <basic-event name="GRID_init"/>
+        <basic-event name="RS_dies_failI"/>
+      </product>
+      <product order="2">
+        <basic-event name="GRID_init"/>
+        <basic-event name="dies_generator_failF"/>
+      </product>
+      <product order="2">
+        <basic-event name="GRID_init"/>
+        <basic-event name="RC_CB_dies_failI"/>
+      </product>
+      <product order="2">
+        <basic-event name="GRID_init"/>
+        <basic-event name="CB_dies_failF"/>
+      </product>
+    </sum-of-products>
+  </results>
+</report>

@@ -1,0 +1,5123 @@
+{
+    "nodes": [
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "0",
+                "name": "controller",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "1",
+                "name": "sA_1",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "2",
+                "name": "sB_1",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "3",
+                "name": "sC_1",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "4",
+                "name": "sD_1",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "id": "5",
+                "name": "sensor_1",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "6",
+                "name": "sA_2",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "7",
+                "name": "sB_2",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "8",
+                "name": "sC_2",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "9",
+                "name": "sD_2",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "id": "10",
+                "name": "sensor_2",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "11",
+                "name": "sA_3",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "12",
+                "name": "sB_3",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "13",
+                "name": "sC_3",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "14",
+                "name": "sD_3",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "11",
+                    "12",
+                    "13",
+                    "14"
+                ],
+                "id": "15",
+                "name": "sensor_3",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "16",
+                "name": "sA_4",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "17",
+                "name": "sB_4",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "18",
+                "name": "sC_4",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "19",
+                "name": "sD_4",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "16",
+                    "17",
+                    "18",
+                    "19"
+                ],
+                "id": "20",
+                "name": "sensor_4",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "21",
+                "name": "sA_5",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "22",
+                "name": "sB_5",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "23",
+                "name": "sC_5",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "24",
+                "name": "sD_5",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "21",
+                    "22",
+                    "23",
+                    "24"
+                ],
+                "id": "25",
+                "name": "sensor_5",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "26",
+                "name": "sA_6",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "27",
+                "name": "sB_6",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "28",
+                "name": "sC_6",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "29",
+                "name": "sD_6",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "26",
+                    "27",
+                    "28",
+                    "29"
+                ],
+                "id": "30",
+                "name": "sensor_6",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "31",
+                "name": "sA_7",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "32",
+                "name": "sB_7",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "33",
+                "name": "sC_7",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "34",
+                "name": "sD_7",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "31",
+                    "32",
+                    "33",
+                    "34"
+                ],
+                "id": "35",
+                "name": "sensor_7",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "36",
+                "name": "sA_8",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "37",
+                "name": "sB_8",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "38",
+                "name": "sC_8",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "39",
+                "name": "sD_8",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "36",
+                    "37",
+                    "38",
+                    "39"
+                ],
+                "id": "40",
+                "name": "sensor_8",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "41",
+                "name": "sA_9",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "42",
+                "name": "sB_9",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "43",
+                "name": "sC_9",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "44",
+                "name": "sD_9",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "41",
+                    "42",
+                    "43",
+                    "44"
+                ],
+                "id": "45",
+                "name": "sensor_9",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "46",
+                "name": "sA_10",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "47",
+                "name": "sB_10",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "48",
+                "name": "sC_10",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "49",
+                "name": "sD_10",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "46",
+                    "47",
+                    "48",
+                    "49"
+                ],
+                "id": "50",
+                "name": "sensor_10",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "51",
+                "name": "sA_11",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "52",
+                "name": "sB_11",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "53",
+                "name": "sC_11",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "54",
+                "name": "sD_11",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "51",
+                    "52",
+                    "53",
+                    "54"
+                ],
+                "id": "55",
+                "name": "sensor_11",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "56",
+                "name": "sA_12",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "57",
+                "name": "sB_12",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "58",
+                "name": "sC_12",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "59",
+                "name": "sD_12",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "56",
+                    "57",
+                    "58",
+                    "59"
+                ],
+                "id": "60",
+                "name": "sensor_12",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "61",
+                "name": "sA_13",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "62",
+                "name": "sB_13",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "63",
+                "name": "sC_13",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "64",
+                "name": "sD_13",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "61",
+                    "62",
+                    "63",
+                    "64"
+                ],
+                "id": "65",
+                "name": "sensor_13",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "66",
+                "name": "sA_14",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "67",
+                "name": "sB_14",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "68",
+                "name": "sC_14",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "69",
+                "name": "sD_14",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "66",
+                    "67",
+                    "68",
+                    "69"
+                ],
+                "id": "70",
+                "name": "sensor_14",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "71",
+                "name": "sA_15",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "72",
+                "name": "sB_15",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "73",
+                "name": "sC_15",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "74",
+                "name": "sD_15",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "71",
+                    "72",
+                    "73",
+                    "74"
+                ],
+                "id": "75",
+                "name": "sensor_15",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "76",
+                "name": "sA_16",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "77",
+                "name": "sB_16",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "78",
+                "name": "sC_16",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "79",
+                "name": "sD_16",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "76",
+                    "77",
+                    "78",
+                    "79"
+                ],
+                "id": "80",
+                "name": "sensor_16",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "81",
+                "name": "sA_17",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "82",
+                "name": "sB_17",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "83",
+                "name": "sC_17",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "84",
+                "name": "sD_17",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "81",
+                    "82",
+                    "83",
+                    "84"
+                ],
+                "id": "85",
+                "name": "sensor_17",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "86",
+                "name": "sA_18",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "87",
+                "name": "sB_18",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "88",
+                "name": "sC_18",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "89",
+                "name": "sD_18",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "86",
+                    "87",
+                    "88",
+                    "89"
+                ],
+                "id": "90",
+                "name": "sensor_18",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "91",
+                "name": "sA_19",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "92",
+                "name": "sB_19",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "93",
+                "name": "sC_19",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "94",
+                "name": "sD_19",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "91",
+                    "92",
+                    "93",
+                    "94"
+                ],
+                "id": "95",
+                "name": "sensor_19",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "96",
+                "name": "sA_20",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "97",
+                "name": "sB_20",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "98",
+                "name": "sC_20",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "99",
+                "name": "sD_20",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "96",
+                    "97",
+                    "98",
+                    "99"
+                ],
+                "id": "100",
+                "name": "sensor_20",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "101",
+                "name": "sA_21",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "102",
+                "name": "sB_21",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "103",
+                "name": "sC_21",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "104",
+                "name": "sD_21",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "101",
+                    "102",
+                    "103",
+                    "104"
+                ],
+                "id": "105",
+                "name": "sensor_21",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "106",
+                "name": "sA_22",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "107",
+                "name": "sB_22",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "108",
+                "name": "sC_22",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "109",
+                "name": "sD_22",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "106",
+                    "107",
+                    "108",
+                    "109"
+                ],
+                "id": "110",
+                "name": "sensor_22",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "111",
+                "name": "sA_23",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "112",
+                "name": "sB_23",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "113",
+                "name": "sC_23",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "114",
+                "name": "sD_23",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "111",
+                    "112",
+                    "113",
+                    "114"
+                ],
+                "id": "115",
+                "name": "sensor_23",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "116",
+                "name": "sA_24",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "117",
+                "name": "sB_24",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "118",
+                "name": "sC_24",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "119",
+                "name": "sD_24",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "116",
+                    "117",
+                    "118",
+                    "119"
+                ],
+                "id": "120",
+                "name": "sensor_24",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "121",
+                "name": "sA_25",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "122",
+                "name": "sB_25",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "123",
+                "name": "sC_25",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "124",
+                "name": "sD_25",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "121",
+                    "122",
+                    "123",
+                    "124"
+                ],
+                "id": "125",
+                "name": "sensor_25",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "126",
+                "name": "sA_26",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "127",
+                "name": "sB_26",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "128",
+                "name": "sC_26",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "129",
+                "name": "sD_26",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "126",
+                    "127",
+                    "128",
+                    "129"
+                ],
+                "id": "130",
+                "name": "sensor_26",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "131",
+                "name": "sA_27",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "132",
+                "name": "sB_27",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "133",
+                "name": "sC_27",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "134",
+                "name": "sD_27",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "131",
+                    "132",
+                    "133",
+                    "134"
+                ],
+                "id": "135",
+                "name": "sensor_27",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "136",
+                "name": "sA_28",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "137",
+                "name": "sB_28",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "138",
+                "name": "sC_28",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "139",
+                "name": "sD_28",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "136",
+                    "137",
+                    "138",
+                    "139"
+                ],
+                "id": "140",
+                "name": "sensor_28",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "141",
+                "name": "sA_29",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "142",
+                "name": "sB_29",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "143",
+                "name": "sC_29",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "144",
+                "name": "sD_29",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "141",
+                    "142",
+                    "143",
+                    "144"
+                ],
+                "id": "145",
+                "name": "sensor_29",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "146",
+                "name": "sA_30",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "147",
+                "name": "sB_30",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "148",
+                "name": "sC_30",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "149",
+                "name": "sD_30",
+                "rate": "0.05",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "vot",
+            "data": {
+                "children": [
+                    "146",
+                    "147",
+                    "148",
+                    "149"
+                ],
+                "id": "150",
+                "name": "sensor_30",
+                "type": "vot",
+                "voting": 2
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "5",
+                    "10",
+                    "15",
+                    "20",
+                    "25",
+                    "30",
+                    "35",
+                    "40",
+                    "45",
+                    "50",
+                    "55",
+                    "60",
+                    "65",
+                    "70",
+                    "75",
+                    "80",
+                    "85",
+                    "90",
+                    "95",
+                    "100",
+                    "105",
+                    "110",
+                    "115",
+                    "120",
+                    "125",
+                    "130",
+                    "135",
+                    "140",
+                    "145",
+                    "150"
+                ],
+                "id": "151",
+                "name": "sensors",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "152",
+                "name": "sw_1",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "153",
+                "name": "mP_1",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "152",
+                    "153"
+                ],
+                "id": "154",
+                "name": "switch_1",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "155",
+                "name": "mS_1",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "153",
+                    "155"
+                ],
+                "id": "156",
+                "name": "motors_1",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "154",
+                    "156"
+                ],
+                "id": "157",
+                "name": "barrier_1",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "158",
+                "name": "sw_2",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "159",
+                "name": "mP_2",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "158",
+                    "159"
+                ],
+                "id": "160",
+                "name": "switch_2",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "161",
+                "name": "mS_2",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "159",
+                    "161"
+                ],
+                "id": "162",
+                "name": "motors_2",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "160",
+                    "162"
+                ],
+                "id": "163",
+                "name": "barrier_2",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "164",
+                "name": "sw_3",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "165",
+                "name": "mP_3",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "164",
+                    "165"
+                ],
+                "id": "166",
+                "name": "switch_3",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "167",
+                "name": "mS_3",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "165",
+                    "167"
+                ],
+                "id": "168",
+                "name": "motors_3",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "166",
+                    "168"
+                ],
+                "id": "169",
+                "name": "barrier_3",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "170",
+                "name": "sw_4",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "171",
+                "name": "mP_4",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "170",
+                    "171"
+                ],
+                "id": "172",
+                "name": "switch_4",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "173",
+                "name": "mS_4",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "171",
+                    "173"
+                ],
+                "id": "174",
+                "name": "motors_4",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "172",
+                    "174"
+                ],
+                "id": "175",
+                "name": "barrier_4",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "176",
+                "name": "sw_5",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "177",
+                "name": "mP_5",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "176",
+                    "177"
+                ],
+                "id": "178",
+                "name": "switch_5",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "179",
+                "name": "mS_5",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "177",
+                    "179"
+                ],
+                "id": "180",
+                "name": "motors_5",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "178",
+                    "180"
+                ],
+                "id": "181",
+                "name": "barrier_5",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "182",
+                "name": "sw_6",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "183",
+                "name": "mP_6",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "182",
+                    "183"
+                ],
+                "id": "184",
+                "name": "switch_6",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "185",
+                "name": "mS_6",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "183",
+                    "185"
+                ],
+                "id": "186",
+                "name": "motors_6",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "184",
+                    "186"
+                ],
+                "id": "187",
+                "name": "barrier_6",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "188",
+                "name": "sw_7",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "189",
+                "name": "mP_7",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "188",
+                    "189"
+                ],
+                "id": "190",
+                "name": "switch_7",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "191",
+                "name": "mS_7",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "189",
+                    "191"
+                ],
+                "id": "192",
+                "name": "motors_7",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "190",
+                    "192"
+                ],
+                "id": "193",
+                "name": "barrier_7",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "194",
+                "name": "sw_8",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "195",
+                "name": "mP_8",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "194",
+                    "195"
+                ],
+                "id": "196",
+                "name": "switch_8",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "197",
+                "name": "mS_8",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "195",
+                    "197"
+                ],
+                "id": "198",
+                "name": "motors_8",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "196",
+                    "198"
+                ],
+                "id": "199",
+                "name": "barrier_8",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "200",
+                "name": "sw_9",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "201",
+                "name": "mP_9",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "200",
+                    "201"
+                ],
+                "id": "202",
+                "name": "switch_9",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "203",
+                "name": "mS_9",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "201",
+                    "203"
+                ],
+                "id": "204",
+                "name": "motors_9",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "202",
+                    "204"
+                ],
+                "id": "205",
+                "name": "barrier_9",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "206",
+                "name": "sw_10",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "207",
+                "name": "mP_10",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "206",
+                    "207"
+                ],
+                "id": "208",
+                "name": "switch_10",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "209",
+                "name": "mS_10",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "207",
+                    "209"
+                ],
+                "id": "210",
+                "name": "motors_10",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "208",
+                    "210"
+                ],
+                "id": "211",
+                "name": "barrier_10",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "212",
+                "name": "sw_11",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "213",
+                "name": "mP_11",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "212",
+                    "213"
+                ],
+                "id": "214",
+                "name": "switch_11",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "215",
+                "name": "mS_11",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "213",
+                    "215"
+                ],
+                "id": "216",
+                "name": "motors_11",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "214",
+                    "216"
+                ],
+                "id": "217",
+                "name": "barrier_11",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "218",
+                "name": "sw_12",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "219",
+                "name": "mP_12",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "218",
+                    "219"
+                ],
+                "id": "220",
+                "name": "switch_12",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "221",
+                "name": "mS_12",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "219",
+                    "221"
+                ],
+                "id": "222",
+                "name": "motors_12",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "220",
+                    "222"
+                ],
+                "id": "223",
+                "name": "barrier_12",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "224",
+                "name": "sw_13",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "225",
+                "name": "mP_13",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "224",
+                    "225"
+                ],
+                "id": "226",
+                "name": "switch_13",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "227",
+                "name": "mS_13",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "225",
+                    "227"
+                ],
+                "id": "228",
+                "name": "motors_13",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "226",
+                    "228"
+                ],
+                "id": "229",
+                "name": "barrier_13",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "230",
+                "name": "sw_14",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "231",
+                "name": "mP_14",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "230",
+                    "231"
+                ],
+                "id": "232",
+                "name": "switch_14",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "233",
+                "name": "mS_14",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "231",
+                    "233"
+                ],
+                "id": "234",
+                "name": "motors_14",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "232",
+                    "234"
+                ],
+                "id": "235",
+                "name": "barrier_14",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "236",
+                "name": "sw_15",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "237",
+                "name": "mP_15",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "236",
+                    "237"
+                ],
+                "id": "238",
+                "name": "switch_15",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "239",
+                "name": "mS_15",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "237",
+                    "239"
+                ],
+                "id": "240",
+                "name": "motors_15",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "238",
+                    "240"
+                ],
+                "id": "241",
+                "name": "barrier_15",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "242",
+                "name": "sw_16",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "243",
+                "name": "mP_16",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "242",
+                    "243"
+                ],
+                "id": "244",
+                "name": "switch_16",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "245",
+                "name": "mS_16",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "243",
+                    "245"
+                ],
+                "id": "246",
+                "name": "motors_16",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "244",
+                    "246"
+                ],
+                "id": "247",
+                "name": "barrier_16",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "248",
+                "name": "sw_17",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "249",
+                "name": "mP_17",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "248",
+                    "249"
+                ],
+                "id": "250",
+                "name": "switch_17",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "251",
+                "name": "mS_17",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "249",
+                    "251"
+                ],
+                "id": "252",
+                "name": "motors_17",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "250",
+                    "252"
+                ],
+                "id": "253",
+                "name": "barrier_17",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "254",
+                "name": "sw_18",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "255",
+                "name": "mP_18",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "254",
+                    "255"
+                ],
+                "id": "256",
+                "name": "switch_18",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "257",
+                "name": "mS_18",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "255",
+                    "257"
+                ],
+                "id": "258",
+                "name": "motors_18",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "256",
+                    "258"
+                ],
+                "id": "259",
+                "name": "barrier_18",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "260",
+                "name": "sw_19",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "261",
+                "name": "mP_19",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "260",
+                    "261"
+                ],
+                "id": "262",
+                "name": "switch_19",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "263",
+                "name": "mS_19",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "261",
+                    "263"
+                ],
+                "id": "264",
+                "name": "motors_19",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "262",
+                    "264"
+                ],
+                "id": "265",
+                "name": "barrier_19",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "266",
+                "name": "sw_20",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "267",
+                "name": "mP_20",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "266",
+                    "267"
+                ],
+                "id": "268",
+                "name": "switch_20",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "269",
+                "name": "mS_20",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "267",
+                    "269"
+                ],
+                "id": "270",
+                "name": "motors_20",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "268",
+                    "270"
+                ],
+                "id": "271",
+                "name": "barrier_20",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "272",
+                "name": "sw_21",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "273",
+                "name": "mP_21",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "272",
+                    "273"
+                ],
+                "id": "274",
+                "name": "switch_21",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "275",
+                "name": "mS_21",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "273",
+                    "275"
+                ],
+                "id": "276",
+                "name": "motors_21",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "274",
+                    "276"
+                ],
+                "id": "277",
+                "name": "barrier_21",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "278",
+                "name": "sw_22",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "279",
+                "name": "mP_22",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "278",
+                    "279"
+                ],
+                "id": "280",
+                "name": "switch_22",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "281",
+                "name": "mS_22",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "279",
+                    "281"
+                ],
+                "id": "282",
+                "name": "motors_22",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "280",
+                    "282"
+                ],
+                "id": "283",
+                "name": "barrier_22",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "284",
+                "name": "sw_23",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "285",
+                "name": "mP_23",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "284",
+                    "285"
+                ],
+                "id": "286",
+                "name": "switch_23",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "287",
+                "name": "mS_23",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "285",
+                    "287"
+                ],
+                "id": "288",
+                "name": "motors_23",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "286",
+                    "288"
+                ],
+                "id": "289",
+                "name": "barrier_23",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "290",
+                "name": "sw_24",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "291",
+                "name": "mP_24",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "290",
+                    "291"
+                ],
+                "id": "292",
+                "name": "switch_24",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "293",
+                "name": "mS_24",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "291",
+                    "293"
+                ],
+                "id": "294",
+                "name": "motors_24",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "292",
+                    "294"
+                ],
+                "id": "295",
+                "name": "barrier_24",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "296",
+                "name": "sw_25",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "297",
+                "name": "mP_25",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "296",
+                    "297"
+                ],
+                "id": "298",
+                "name": "switch_25",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "299",
+                "name": "mS_25",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "297",
+                    "299"
+                ],
+                "id": "300",
+                "name": "motors_25",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "298",
+                    "300"
+                ],
+                "id": "301",
+                "name": "barrier_25",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "302",
+                "name": "sw_26",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "303",
+                "name": "mP_26",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "302",
+                    "303"
+                ],
+                "id": "304",
+                "name": "switch_26",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "305",
+                "name": "mS_26",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "303",
+                    "305"
+                ],
+                "id": "306",
+                "name": "motors_26",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "304",
+                    "306"
+                ],
+                "id": "307",
+                "name": "barrier_26",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "308",
+                "name": "sw_27",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "309",
+                "name": "mP_27",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "308",
+                    "309"
+                ],
+                "id": "310",
+                "name": "switch_27",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "311",
+                "name": "mS_27",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "309",
+                    "311"
+                ],
+                "id": "312",
+                "name": "motors_27",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "310",
+                    "312"
+                ],
+                "id": "313",
+                "name": "barrier_27",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "314",
+                "name": "sw_28",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "315",
+                "name": "mP_28",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "314",
+                    "315"
+                ],
+                "id": "316",
+                "name": "switch_28",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "317",
+                "name": "mS_28",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "315",
+                    "317"
+                ],
+                "id": "318",
+                "name": "motors_28",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "316",
+                    "318"
+                ],
+                "id": "319",
+                "name": "barrier_28",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "320",
+                "name": "sw_29",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "321",
+                "name": "mP_29",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "320",
+                    "321"
+                ],
+                "id": "322",
+                "name": "switch_29",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "323",
+                "name": "mS_29",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "321",
+                    "323"
+                ],
+                "id": "324",
+                "name": "motors_29",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "322",
+                    "324"
+                ],
+                "id": "325",
+                "name": "barrier_29",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "326",
+                "name": "sw_30",
+                "rate": "0.015",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "327",
+                "name": "mP_30",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pand",
+            "data": {
+                "children": [
+                    "326",
+                    "327"
+                ],
+                "id": "328",
+                "name": "switch_30",
+                "type": "pand"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0.5",
+                "id": "329",
+                "name": "mS_30",
+                "rate": "0.08",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "spare",
+            "data": {
+                "children": [
+                    "327",
+                    "329"
+                ],
+                "id": "330",
+                "name": "motors_30",
+                "type": "spare"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "328",
+                    "330"
+                ],
+                "id": "331",
+                "name": "barrier_30",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "157",
+                    "163",
+                    "169",
+                    "175",
+                    "181",
+                    "187",
+                    "193",
+                    "199",
+                    "205",
+                    "211",
+                    "217",
+                    "223",
+                    "229",
+                    "235",
+                    "241",
+                    "247",
+                    "253",
+                    "259",
+                    "265",
+                    "271",
+                    "277",
+                    "283",
+                    "289",
+                    "295",
+                    "301",
+                    "307",
+                    "313",
+                    "319",
+                    "325",
+                    "331"
+                ],
+                "id": "332",
+                "name": "barriers",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "or",
+            "data": {
+                "children": [
+                    "0",
+                    "151",
+                    "332"
+                ],
+                "id": "333",
+                "name": "System",
+                "type": "or"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "334",
+                "name": "network_1",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "334",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "id": "335",
+                "name": "network_1_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "336",
+                "name": "network_2",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "336",
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "id": "337",
+                "name": "network_2_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "338",
+                "name": "network_3",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "338",
+                    "11",
+                    "12",
+                    "13",
+                    "14"
+                ],
+                "id": "339",
+                "name": "network_3_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "340",
+                "name": "network_4",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "340",
+                    "16",
+                    "17",
+                    "18",
+                    "19"
+                ],
+                "id": "341",
+                "name": "network_4_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "342",
+                "name": "network_5",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "342",
+                    "21",
+                    "22",
+                    "23",
+                    "24"
+                ],
+                "id": "343",
+                "name": "network_5_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "344",
+                "name": "network_6",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "344",
+                    "26",
+                    "27",
+                    "28",
+                    "29"
+                ],
+                "id": "345",
+                "name": "network_6_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "346",
+                "name": "network_7",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "346",
+                    "31",
+                    "32",
+                    "33",
+                    "34"
+                ],
+                "id": "347",
+                "name": "network_7_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "348",
+                "name": "network_8",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "348",
+                    "36",
+                    "37",
+                    "38",
+                    "39"
+                ],
+                "id": "349",
+                "name": "network_8_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "350",
+                "name": "network_9",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "350",
+                    "41",
+                    "42",
+                    "43",
+                    "44"
+                ],
+                "id": "351",
+                "name": "network_9_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "352",
+                "name": "network_10",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "352",
+                    "46",
+                    "47",
+                    "48",
+                    "49"
+                ],
+                "id": "353",
+                "name": "network_10_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "354",
+                "name": "network_11",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "354",
+                    "51",
+                    "52",
+                    "53",
+                    "54"
+                ],
+                "id": "355",
+                "name": "network_11_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "356",
+                "name": "network_12",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "356",
+                    "56",
+                    "57",
+                    "58",
+                    "59"
+                ],
+                "id": "357",
+                "name": "network_12_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "358",
+                "name": "network_13",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "358",
+                    "61",
+                    "62",
+                    "63",
+                    "64"
+                ],
+                "id": "359",
+                "name": "network_13_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "360",
+                "name": "network_14",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "360",
+                    "66",
+                    "67",
+                    "68",
+                    "69"
+                ],
+                "id": "361",
+                "name": "network_14_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "362",
+                "name": "network_15",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "362",
+                    "71",
+                    "72",
+                    "73",
+                    "74"
+                ],
+                "id": "363",
+                "name": "network_15_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "364",
+                "name": "network_16",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "364",
+                    "76",
+                    "77",
+                    "78",
+                    "79"
+                ],
+                "id": "365",
+                "name": "network_16_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "366",
+                "name": "network_17",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "366",
+                    "81",
+                    "82",
+                    "83",
+                    "84"
+                ],
+                "id": "367",
+                "name": "network_17_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "368",
+                "name": "network_18",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "368",
+                    "86",
+                    "87",
+                    "88",
+                    "89"
+                ],
+                "id": "369",
+                "name": "network_18_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "370",
+                "name": "network_19",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "370",
+                    "91",
+                    "92",
+                    "93",
+                    "94"
+                ],
+                "id": "371",
+                "name": "network_19_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "372",
+                "name": "network_20",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "372",
+                    "96",
+                    "97",
+                    "98",
+                    "99"
+                ],
+                "id": "373",
+                "name": "network_20_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "374",
+                "name": "network_21",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "374",
+                    "101",
+                    "102",
+                    "103",
+                    "104"
+                ],
+                "id": "375",
+                "name": "network_21_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "376",
+                "name": "network_22",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "376",
+                    "106",
+                    "107",
+                    "108",
+                    "109"
+                ],
+                "id": "377",
+                "name": "network_22_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "378",
+                "name": "network_23",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "378",
+                    "111",
+                    "112",
+                    "113",
+                    "114"
+                ],
+                "id": "379",
+                "name": "network_23_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "380",
+                "name": "network_24",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "380",
+                    "116",
+                    "117",
+                    "118",
+                    "119"
+                ],
+                "id": "381",
+                "name": "network_24_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "382",
+                "name": "network_25",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "382",
+                    "121",
+                    "122",
+                    "123",
+                    "124"
+                ],
+                "id": "383",
+                "name": "network_25_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "384",
+                "name": "network_26",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "384",
+                    "126",
+                    "127",
+                    "128",
+                    "129"
+                ],
+                "id": "385",
+                "name": "network_26_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "386",
+                "name": "network_27",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "386",
+                    "131",
+                    "132",
+                    "133",
+                    "134"
+                ],
+                "id": "387",
+                "name": "network_27_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "388",
+                "name": "network_28",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "388",
+                    "136",
+                    "137",
+                    "138",
+                    "139"
+                ],
+                "id": "389",
+                "name": "network_28_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "390",
+                "name": "network_29",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "390",
+                    "141",
+                    "142",
+                    "143",
+                    "144"
+                ],
+                "id": "391",
+                "name": "network_29_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "be_exp",
+            "data": {
+                "distribution": "exp",
+                "dorm": "0",
+                "id": "392",
+                "name": "network_30",
+                "rate": "0.03",
+                "type": "be_exp"
+            },
+            "group": "nodes"
+        },
+        {
+            "classes": "pdep",
+            "data": {
+                "children": [
+                    "392",
+                    "146",
+                    "147",
+                    "148",
+                    "149"
+                ],
+                "id": "393",
+                "name": "network_30_f",
+                "type": "fdep"
+            },
+            "group": "nodes"
+        }
+    ],
+    "toplevel": "333"
+}

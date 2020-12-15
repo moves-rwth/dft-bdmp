@@ -1,0 +1,2202 @@
+{
+    "toplevel": "0",
+    "parameters": {},
+    "nodes": [
+        {
+            "data": {
+                "id": "0",
+                "name": "A0",
+                "type": "or",
+                "children": [
+                    "1",
+                    "82",
+                    "31",
+                    "35",
+                    "39",
+                    "43",
+                    "46"
+                ]
+            },
+            "position": {
+                "x": 4331.431008692458,
+                "y": -1197.411274626501
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "1",
+                "name": "A1",
+                "type": "or",
+                "children": [
+                    "34"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "2",
+                "name": "A2",
+                "type": "fdep",
+                "children": [
+                    "1",
+                    "69",
+                    "70",
+                    "71"
+                ]
+            },
+            "position": {
+                "x": 100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "3",
+                "name": "A3",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "4",
+                "name": "A4",
+                "type": "or",
+                "children": [
+                    "3",
+                    "93",
+                    "49",
+                    "69",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "5",
+                "name": "A5",
+                "type": "fdep",
+                "children": [
+                    "4",
+                    "48"
+                ]
+            },
+            "position": {
+                "x": 700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "6",
+                "name": "A6",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "7",
+                "name": "A7",
+                "type": "or",
+                "children": [
+                    "6",
+                    "93",
+                    "48",
+                    "51"
+                ]
+            },
+            "position": {
+                "x": 1200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "8",
+                "name": "A8",
+                "type": "fdep",
+                "children": [
+                    "7",
+                    "49",
+                    "50"
+                ]
+            },
+            "position": {
+                "x": 1300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "9",
+                "name": "A9",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "10",
+                "name": "A10",
+                "type": "or",
+                "children": [
+                    "9",
+                    "93",
+                    "50",
+                    "54",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 1800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "11",
+                "name": "A11",
+                "type": "fdep",
+                "children": [
+                    "10",
+                    "51",
+                    "52"
+                ]
+            },
+            "position": {
+                "x": 1900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "A12",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "A13",
+                "type": "or",
+                "children": [
+                    "12",
+                    "104",
+                    "56",
+                    "70",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 2400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "14",
+                "name": "A14",
+                "type": "fdep",
+                "children": [
+                    "13",
+                    "55"
+                ]
+            },
+            "position": {
+                "x": 2500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "15",
+                "name": "A15",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "16",
+                "name": "A16",
+                "type": "or",
+                "children": [
+                    "15",
+                    "104",
+                    "55",
+                    "58"
+                ]
+            },
+            "position": {
+                "x": 3000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "17",
+                "name": "A17",
+                "type": "fdep",
+                "children": [
+                    "16",
+                    "56",
+                    "57"
+                ]
+            },
+            "position": {
+                "x": 3100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "A18",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "A19",
+                "type": "or",
+                "children": [
+                    "18",
+                    "104",
+                    "57",
+                    "61",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 3600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "20",
+                "name": "A20",
+                "type": "fdep",
+                "children": [
+                    "19",
+                    "58",
+                    "59"
+                ]
+            },
+            "position": {
+                "x": 3700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "21",
+                "name": "A21",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "22",
+                "name": "A22",
+                "type": "or",
+                "children": [
+                    "21",
+                    "115",
+                    "63",
+                    "71",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 4200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "23",
+                "name": "A23",
+                "type": "fdep",
+                "children": [
+                    "22",
+                    "62"
+                ]
+            },
+            "position": {
+                "x": 4300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "A24",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "A25",
+                "type": "or",
+                "children": [
+                    "24",
+                    "115",
+                    "62",
+                    "65"
+                ]
+            },
+            "position": {
+                "x": 4800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "26",
+                "name": "A26",
+                "type": "fdep",
+                "children": [
+                    "25",
+                    "63",
+                    "64"
+                ]
+            },
+            "position": {
+                "x": 4900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "27",
+                "name": "A27",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "28",
+                "name": "A28",
+                "type": "or",
+                "children": [
+                    "27",
+                    "115",
+                    "64",
+                    "68",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 5400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "29",
+                "name": "A29",
+                "type": "fdep",
+                "children": [
+                    "28",
+                    "65",
+                    "66"
+                ]
+            },
+            "position": {
+                "x": 5500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "A30",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "A31",
+                "type": "or",
+                "children": [
+                    "30",
+                    "76",
+                    "126",
+                    "72",
+                    "73",
+                    "137",
+                    "74",
+                    "75"
+                ]
+            },
+            "position": {
+                "x": 6000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "32",
+                "name": "A32",
+                "type": "fdep",
+                "children": [
+                    "31",
+                    "54",
+                    "61",
+                    "68"
+                ]
+            },
+            "position": {
+                "x": 6100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "33",
+                "name": "A33",
+                "type": "be",
+                "rate": "1e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 6450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "34",
+                "name": "A34",
+                "type": "vot",
+                "children": [
+                    "42",
+                    "78",
+                    "38",
+                    "77"
+                ],
+                "voting": "3"
+            },
+            "position": {
+                "x": -255.12615718238908,
+                "y": 78.4062454524314
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "35",
+                "name": "A35",
+                "type": "or",
+                "children": [
+                    "33",
+                    "126"
+                ]
+            },
+            "position": {
+                "x": 6600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "36",
+                "name": "A36",
+                "type": "fdep",
+                "children": [
+                    "35",
+                    "72"
+                ]
+            },
+            "position": {
+                "x": 6700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "37",
+                "name": "A37",
+                "type": "be",
+                "rate": "2e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 7050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "38",
+                "name": "A38",
+                "type": "be",
+                "rate": "1e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -222.8369042987963,
+                "y": 233.70217598780627
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "39",
+                "name": "A39",
+                "type": "or",
+                "children": [
+                    "37"
+                ]
+            },
+            "position": {
+                "x": 7200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "40",
+                "name": "A40",
+                "type": "fdep",
+                "children": [
+                    "39",
+                    "73"
+                ]
+            },
+            "position": {
+                "x": 7300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "41",
+                "name": "A41",
+                "type": "be",
+                "rate": "2e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 7650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "42",
+                "name": "A42",
+                "type": "be",
+                "rate": "1e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -465.7750926610659,
+                "y": 221.40150822262808
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "43",
+                "name": "A43",
+                "type": "or",
+                "children": [
+                    "41"
+                ]
+            },
+            "position": {
+                "x": 7800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "44",
+                "name": "A44",
+                "type": "fdep",
+                "children": [
+                    "43",
+                    "74"
+                ]
+            },
+            "position": {
+                "x": 7900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "45",
+                "name": "A45",
+                "type": "be",
+                "rate": "2e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 8250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "46",
+                "name": "A46",
+                "type": "or",
+                "children": [
+                    "45"
+                ]
+            },
+            "position": {
+                "x": 8400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "47",
+                "name": "A47",
+                "type": "fdep",
+                "children": [
+                    "46",
+                    "75"
+                ]
+            },
+            "position": {
+                "x": 8500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "48",
+                "name": "A48",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "49",
+                "name": "A49",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "50",
+                "name": "A50",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "51",
+                "name": "A51",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "52",
+                "name": "A52",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5680.946187272086,
+                "y": 303.4037680415016
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "53",
+                "name": "A53",
+                "type": "or",
+                "children": [
+                    "52",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 5742.292080743759,
+                "y": 244.24898453952113
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "54",
+                "name": "A54",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "55",
+                "name": "A55",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "56",
+                "name": "A56",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2400,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "57",
+                "name": "A57",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "58",
+                "name": "A58",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3000,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "59",
+                "name": "A59",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5794.483190713449,
+                "y": 311.3458934716721
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "60",
+                "name": "A60",
+                "type": "or",
+                "children": [
+                    "59",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 5841.079422671947,
+                "y": 251.0565206225244
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "61",
+                "name": "A61",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "62",
+                "name": "A62",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "63",
+                "name": "A63",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "64",
+                "name": "A64",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5250,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "65",
+                "name": "A65",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "66",
+                "name": "A66",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5864.905798962459,
+                "y": 313.61507216600654
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "67",
+                "name": "A67",
+                "type": "or",
+                "children": [
+                    "66",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 5919.444156351128,
+                "y": 252.19110996969164
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "68",
+                "name": "A68",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 5400,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "69",
+                "name": "A69",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "70",
+                "name": "A70",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "71",
+                "name": "A71",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 4050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "72",
+                "name": "A72",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 6000,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "73",
+                "name": "A73",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 6050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "74",
+                "name": "A74",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 6100,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "75",
+                "name": "A75",
+                "type": "be",
+                "rate": "0.0",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 6150,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "76",
+                "name": "A76",
+                "type": "vot",
+                "children": [
+                    "53",
+                    "60",
+                    "67"
+                ],
+                "voting": "2"
+            },
+            "position": {
+                "x": 5872.107938610459,
+                "y": 168.97727287347988
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "77",
+                "name": "A77",
+                "type": "be",
+                "rate": "1e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -102.90539358830878,
+                "y": 230.62700904651174
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "78",
+                "name": "A78",
+                "type": "be",
+                "rate": "1e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -361.21941665705117,
+                "y": 222.93909169327534
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "79",
+                "name": "A79",
+                "type": "or",
+                "children": [
+                    "4",
+                    "7",
+                    "10"
+                ]
+            },
+            "position": {
+                "x": 1196.2953613501506,
+                "y": -220.74290290094675
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "80",
+                "name": "A80",
+                "type": "or",
+                "children": [
+                    "13",
+                    "16",
+                    "19"
+                ]
+            },
+            "position": {
+                "x": 2971.62210905328,
+                "y": -345.76591330257565
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "81",
+                "name": "A81",
+                "type": "or",
+                "children": [
+                    "22",
+                    "25",
+                    "28"
+                ]
+            },
+            "position": {
+                "x": 4782.372043036875,
+                "y": -387.4402501031186
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "82",
+                "name": "A82",
+                "type": "vot",
+                "children": [
+                    "79",
+                    "80",
+                    "81"
+                ],
+                "voting": "2"
+            },
+            "position": {
+                "x": 2961.893223235673,
+                "y": -647.3042730121427
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "83",
+                "name": "A83",
+                "type": "be",
+                "rate": "9e-05",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": -315.7750926610659,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "84",
+                "name": "A84",
+                "type": "be",
+                "rate": "9.999999999999997e-06",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": -540.7750926610659,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "85",
+                "name": "A85",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -415.7750926610659,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "86",
+                "name": "A86",
+                "type": "and",
+                "children": [
+                    "85",
+                    "83"
+                ]
+            },
+            "position": {
+                "x": -390.7750926610659,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "87",
+                "name": "A87",
+                "type": "seq",
+                "children": [
+                    "85",
+                    "83"
+                ]
+            },
+            "position": {
+                "x": -315.7750926610659,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "88",
+                "name": "A88",
+                "type": "be",
+                "rate": "9e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -15.775092661065912,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "89",
+                "name": "A89",
+                "type": "be",
+                "rate": "9.999999999999997e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -240.7750926610659,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "90",
+                "name": "A90",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": -115.77509266106591,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "91",
+                "name": "A91",
+                "type": "and",
+                "children": [
+                    "90",
+                    "88"
+                ]
+            },
+            "position": {
+                "x": -90.77509266106591,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "92",
+                "name": "A92",
+                "type": "seq",
+                "children": [
+                    "90",
+                    "88"
+                ]
+            },
+            "position": {
+                "x": -15.775092661065912,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "93",
+                "name": "A93",
+                "type": "or",
+                "children": [
+                    "84",
+                    "86",
+                    "89",
+                    "91"
+                ]
+            },
+            "position": {
+                "x": -315.7750926610659,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "94",
+                "name": "A94",
+                "type": "be",
+                "rate": "9e-05",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 384.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "95",
+                "name": "A95",
+                "type": "be",
+                "rate": "9.999999999999997e-06",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 159.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "96",
+                "name": "A96",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 284.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "97",
+                "name": "A97",
+                "type": "and",
+                "children": [
+                    "96",
+                    "94"
+                ]
+            },
+            "position": {
+                "x": 309.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "98",
+                "name": "A98",
+                "type": "seq",
+                "children": [
+                    "96",
+                    "94"
+                ]
+            },
+            "position": {
+                "x": 384.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "99",
+                "name": "A99",
+                "type": "be",
+                "rate": "9e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 684.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "A100",
+                "type": "be",
+                "rate": "9.999999999999997e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 459.22490733893414,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "101",
+                "name": "A101",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 584.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "102",
+                "name": "A102",
+                "type": "and",
+                "children": [
+                    "101",
+                    "99"
+                ]
+            },
+            "position": {
+                "x": 609.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "103",
+                "name": "A103",
+                "type": "seq",
+                "children": [
+                    "101",
+                    "99"
+                ]
+            },
+            "position": {
+                "x": 684.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "104",
+                "name": "A104",
+                "type": "or",
+                "children": [
+                    "95",
+                    "97",
+                    "100",
+                    "102"
+                ]
+            },
+            "position": {
+                "x": 384.2249073389341,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "105",
+                "name": "A105",
+                "type": "be",
+                "rate": "9e-05",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 1084.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "A106",
+                "type": "be",
+                "rate": "9.999999999999997e-06",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 859.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "107",
+                "name": "A107",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 984.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "108",
+                "name": "A108",
+                "type": "and",
+                "children": [
+                    "107",
+                    "105"
+                ]
+            },
+            "position": {
+                "x": 1009.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "109",
+                "name": "A109",
+                "type": "seq",
+                "children": [
+                    "107",
+                    "105"
+                ]
+            },
+            "position": {
+                "x": 1084.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "110",
+                "name": "A110",
+                "type": "be",
+                "rate": "9e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1384.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "111",
+                "name": "A111",
+                "type": "be",
+                "rate": "9.999999999999997e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1159.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "A112",
+                "type": "be",
+                "rate": "1e-05",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1284.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "113",
+                "name": "A113",
+                "type": "and",
+                "children": [
+                    "112",
+                    "110"
+                ]
+            },
+            "position": {
+                "x": 1309.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "114",
+                "name": "A114",
+                "type": "seq",
+                "children": [
+                    "112",
+                    "110"
+                ]
+            },
+            "position": {
+                "x": 1384.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "115",
+                "name": "A115",
+                "type": "or",
+                "children": [
+                    "106",
+                    "108",
+                    "111",
+                    "113"
+                ]
+            },
+            "position": {
+                "x": 1084.2249073389341,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "116",
+                "name": "A116",
+                "type": "be",
+                "rate": "9.9e-06",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 1784.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "117",
+                "name": "A117",
+                "type": "be",
+                "rate": "1.0000000000000009e-07",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 1559.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "118",
+                "name": "A118",
+                "type": "be",
+                "rate": "1e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1684.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "119",
+                "name": "A119",
+                "type": "and",
+                "children": [
+                    "118",
+                    "116"
+                ]
+            },
+            "position": {
+                "x": 1709.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "120",
+                "name": "A120",
+                "type": "seq",
+                "children": [
+                    "118",
+                    "116"
+                ]
+            },
+            "position": {
+                "x": 1784.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "121",
+                "name": "A121",
+                "type": "be",
+                "rate": "9.9e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 2084.224907338934,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "122",
+                "name": "A122",
+                "type": "be",
+                "rate": "1.0000000000000008e-08",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1859.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "123",
+                "name": "A123",
+                "type": "be",
+                "rate": "1e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 1984.2249073389341,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "124",
+                "name": "A124",
+                "type": "and",
+                "children": [
+                    "123",
+                    "121"
+                ]
+            },
+            "position": {
+                "x": 2009.2249073389341,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "125",
+                "name": "A125",
+                "type": "seq",
+                "children": [
+                    "123",
+                    "121"
+                ]
+            },
+            "position": {
+                "x": 2084.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "126",
+                "name": "A126",
+                "type": "or",
+                "children": [
+                    "117",
+                    "119",
+                    "122",
+                    "124"
+                ]
+            },
+            "position": {
+                "x": 1784.2249073389341,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "127",
+                "name": "A127",
+                "type": "be",
+                "rate": "9.9e-06",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 3159.224907338934,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "128",
+                "name": "A128",
+                "type": "be",
+                "rate": "1.0000000000000009e-07",
+                "dorm": "1.0",
+                "transient": true
+            },
+            "position": {
+                "x": 2934.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "129",
+                "name": "A129",
+                "type": "be",
+                "rate": "1e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3059.224907338934,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "130",
+                "name": "A130",
+                "type": "and",
+                "children": [
+                    "129",
+                    "127"
+                ]
+            },
+            "position": {
+                "x": 3084.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "131",
+                "name": "A131",
+                "type": "seq",
+                "children": [
+                    "129",
+                    "127"
+                ]
+            },
+            "position": {
+                "x": 3159.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "132",
+                "name": "A132",
+                "type": "be",
+                "rate": "9.9e-07",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3459.224907338934,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "133",
+                "name": "A133",
+                "type": "be",
+                "rate": "1.0000000000000008e-08",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3234.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "134",
+                "name": "A134",
+                "type": "be",
+                "rate": "1e-06",
+                "dorm": "1.0",
+                "transient": false
+            },
+            "position": {
+                "x": 3359.224907338934,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "135",
+                "name": "A135",
+                "type": "and",
+                "children": [
+                    "134",
+                    "132"
+                ]
+            },
+            "position": {
+                "x": 3384.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "136",
+                "name": "A136",
+                "type": "seq",
+                "children": [
+                    "134",
+                    "132"
+                ]
+            },
+            "position": {
+                "x": 3459.224907338934,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "137",
+                "name": "A137",
+                "type": "or",
+                "children": [
+                    "128",
+                    "130",
+                    "133",
+                    "135"
+                ]
+            },
+            "position": {
+                "x": 3159.224907338934,
+                "y": 900
+            },
+            "group": "nodes"
+        }
+    ]
+}

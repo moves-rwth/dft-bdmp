@@ -1,0 +1,74 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_TankFilling_Trim_No_repair
+
+test_info: FigaroProgram_TankFilling_Trim_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	129
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	129
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.623814
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	129
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.012s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.013s
+Result: [0.623814]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:590: Failure
+Expected equality of these values:
+  result
+    Which is: 0.62381423
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_TankFilling_Trim_No_repair (15 ms)
+[----------] 1 test from FigaroAPITest (15 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (15 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_TankFilling_Trim_No_repair
+
+ 1 FAILED TEST

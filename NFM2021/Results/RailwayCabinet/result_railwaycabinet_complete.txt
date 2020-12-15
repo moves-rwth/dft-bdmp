@@ -1,0 +1,563 @@
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_No_repair
+
+test_info: FigaroProgram_RailwayCabinet_No_trim_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	524289
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	524289
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.411516
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	524289
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	26.283s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.010s
+Total:		26.295s
+Result: [0.411516]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:579: Failure
+Expected equality of these values:
+  result
+    Which is: 0.4115164
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_No_repair (26296 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_No_repair
+
+test_info: FigaroProgram_RailwayCabinet_Trim_article_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.411516
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.150s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.151s
+Result: [0.411516]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:589: Failure
+Expected equality of these values:
+  result
+    Which is: 0.4115164
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_No_repair (152 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_No_repair
+
+test_info: FigaroProgram_RailwayCabinet_Trim_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.411516
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	3380
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.144s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.145s
+Result: [0.411516]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:599: Failure
+Expected equality of these values:
+  result
+    Which is: 0.4115164
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_No_repair (146 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_repair
+
+test_info: FigaroProgram_RailwayCabinet_No_trim_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.342238
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	51.775s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.020s
+Total:		51.797s
+Result: [0.342238]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:609: Failure
+Expected equality of these values:
+  result
+    Which is: 0.34223792
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10, 10] "failed"] ...
+Result (initial states): 0.210676
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	65536
+Transitions: 	1048576
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 64761 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 64761 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	51.066s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.820s
+Total:		51.889s
+Result: [0.210676]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:612: Failure
+Expected equality of these values:
+  result
+    Which is: 0.21067615
+  0.0000020271448
+    Which is: 2.0271448e-06
+0.210676[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_repair (103684 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_repair
+
+test_info: FigaroProgram_RailwayCabinet_Trim_article_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.339682
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.336s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.338s
+Result: [0.339682]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:623: Failure
+Expected equality of these values:
+  result
+    Which is: 0.3396816
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10, 10] "failed"] ...
+Result (initial states): 0.192126
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.337s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.004s
+Total:		0.342s
+Result: [0.192126]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:626: Failure
+Expected equality of these values:
+  result
+    Which is: 0.19212587
+  0.0000020271448
+    Which is: 2.0271448e-06
+0.192126[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_repair (682 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_repair
+
+test_info: FigaroProgram_RailwayCabinet_Trim_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10 "failed"] ...
+Result (initial states): 0.339682
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.328s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.329s
+Result: [0.339682]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:636: Failure
+Expected equality of these values:
+  result
+    Which is: 0.3396816
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10, 10] "failed"] ...
+Result (initial states): 0.192126
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1165
+Transitions: 	6432
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 940 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 940 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.328s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.005s
+Total:		0.333s
+Result: [0.192126]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:639: Failure
+Expected equality of these values:
+  result
+    Which is: 0.19212587
+  0.0000020271448
+    Which is: 2.0271448e-06
+0.192126[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_repair (665 ms)
+[----------] 6 tests from FigaroAPITest (131625 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (131626 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 6 tests, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_No_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_No_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_No_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_No_trim_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_article_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_RailwayCabinet_Trim_repair
+
+ 6 FAILED TESTS

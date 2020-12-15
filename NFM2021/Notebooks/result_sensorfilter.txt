@@ -1,0 +1,2143 @@
+
+Start of Definite Tests
+
+Note: Google Test filter = FigaroAPITest.FigaroProgram_sf3_2_trim_no_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_sf3_2_trim_no_repair
+
+test_info: FigaroProgram_sf3_2_trim_no_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	14045184
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	14045184
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=1 "failed"] ...
+Result (initial states): 0.637083
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	14045184
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	628.213s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	6.058s
+Total:		634.274s
+Result: [0.637083]
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/FigaroAPITest.cpp:859: Failure
+Expected equality of these values:
+  result
+    Which is: 0.63708299
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_sf3_2_trim_no_repair (634315 ms)
+[----------] 1 test from FigaroAPITest (634315 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (634315 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_sf3_2_trim_no_repair
+
+ 1 FAILED TEST
+Note: Google Test filter = FigaroAPITest.FigaroProgram_sf3_2_trim_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_sf3_2_trim_repair
+
+test_info: FigaroProgram_sf3_2_trim_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	66023424
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	66023424
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=1 "failed"] ...
+Result (initial states): 0.635897
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5197824
+Transitions: 	66023424
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 4313088 item(s)
+   * exp0 -> 4313088 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	3384.922s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	13.870s
+Total:		3398.796s
+Result: [0.635897]
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/FigaroAPITest.cpp:870: Failure
+Expected equality of these values:
+  result
+    Which is: 0.6358971
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_sf3_2_trim_repair (3398797 ms)
+[----------] 1 test from FigaroAPITest (3398797 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3398797 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_sf3_2_trim_repair
+
+ 1 FAILED TEST
+
+start of Precision graph test
+
+Note: Google Test filter = FigaroApproximationPrecisionTest/0.FigaroProgram_sf3_2_trim_no_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroApproximationPrecisionTest/0, where TypeParam = (anonymous namespace)::ApproxProbabilityConfig
+[ RUN      ] FigaroApproximationPrecisionTest/0.FigaroProgram_sf3_2_trim_no_repair
+
+test_info: FigaroProgram_sf3_2_trim_no_repair
+
+The result for the precision:  1
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	42
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 21 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.004s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.005s
+Result: [(0, 0.990438)]
+
+The result for the precision:  0.5
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7771
+Transitions: 	21705
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 6963 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.031s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.008s
+Total:		1.042s
+Result: [(0.357868, 0.798239)]
+
+The result for the precision:  0.2
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	58142
+Transitions: 	166894
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 51292 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	8.582s
+Building:	0.025s
+Bisimulation:	0.000s
+Modelchecking:	0.094s
+Total:		8.720s
+Result: [(0.550136, 0.694219)]
+
+The result for the precision:  0.1
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	170761
+Transitions: 	492586
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 149314 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	26.102s
+Building:	0.107s
+Bisimulation:	0.000s
+Modelchecking:	0.354s
+Total:		26.648s
+Result: [(0.590791, 0.658966)]
+
+The result for the precision:  0.05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	289476
+Transitions: 	838572
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 251664 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	44.700s
+Building:	0.193s
+Bisimulation:	0.000s
+Modelchecking:	0.653s
+Total:		45.700s
+Result: [(0.608063, 0.648528)]
+
+The result for the precision:  0.02
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	753040
+Transitions: 	2155015
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 649138 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	118.031s
+Building:	0.565s
+Bisimulation:	0.000s
+Modelchecking:	2.126s
+Total:		121.167s
+Result: [(0.627613, 0.63956)]
+
+The result for the precision:  0.01
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1155740
+Transitions: 	3289349
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 991164 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	182.607s
+Building:	0.940s
+Bisimulation:	0.000s
+Modelchecking:	3.721s
+Total:		187.926s
+Result: [(0.631949, 0.638025)]
+
+The result for the precision:  0.005
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1702493
+Transitions: 	4807668
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1452454 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	272.246s
+Building:	1.400s
+Bisimulation:	0.000s
+Modelchecking:	6.312s
+Total:		280.769s
+Result: [(0.634634, 0.637394)]
+
+The result for the precision:  0.002
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2397418
+Transitions: 	6707448
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2034400 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	380.137s
+Building:	2.090s
+Bisimulation:	0.000s
+Modelchecking:	10.446s
+Total:		393.999s
+Result: [(0.636028, 0.63717)]
+
+The result for the precision:  0.001
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3166889
+Transitions: 	8801911
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2670376 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	521.330s
+Building:	2.919s
+Bisimulation:	0.000s
+Modelchecking:	16.630s
+Total:		542.558s
+Result: [(0.636695, 0.637102)]
+
+The result for the precision:  0.0005
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3166889
+Transitions: 	8801911
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2670376 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	517.413s
+Building:	2.916s
+Bisimulation:	0.000s
+Modelchecking:	16.753s
+Total:		538.757s
+Result: [(0.636695, 0.637102)]
+
+The result for the precision:  0.0002
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3930403
+Transitions: 	10834539
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3295189 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	651.046s
+Building:	3.700s
+Bisimulation:	0.000s
+Modelchecking:	25.478s
+Total:		681.752s
+Result: [(0.636964, 0.637086)]
+
+The result for the precision:  0.0001
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4561258
+Transitions: 	12468280
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3805587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	777.100s
+Building:	4.754s
+Bisimulation:	0.000s
+Modelchecking:	38.092s
+Total:		821.978s
+Result: [(0.637053, 0.637084)]
+
+The result for the precision:  5e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4561258
+Transitions: 	12468280
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3805587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	767.536s
+Building:	4.539s
+Bisimulation:	0.000s
+Modelchecking:	37.504s
+Total:		811.086s
+Result: [(0.637053, 0.637084)]
+
+The result for the precision:  2e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4970096
+Transitions: 	13495513
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4132806 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	869.209s
+Building:	5.614s
+Bisimulation:	0.000s
+Modelchecking:	53.011s
+Total:		929.533s
+Result: [(0.637077, 0.637083)]
+
+The result for the precision:  1e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4970096
+Transitions: 	13495513
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4132806 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	873.212s
+Building:	5.588s
+Bisimulation:	0.000s
+Modelchecking:	52.614s
+Total:		933.172s
+Result: [(0.637077, 0.637083)]
+
+The result for the precision:  5e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5148110
+Transitions: 	13927670
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4273994 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	932.523s
+Building:	6.106s
+Bisimulation:	0.000s
+Modelchecking:	70.969s
+Total:		1010.521s
+Result: [(0.637082, 0.637083)]
+
+The result for the precision:  2e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5148110
+Transitions: 	13927670
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4273994 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	941.295s
+Building:	6.479s
+Bisimulation:	0.000s
+Modelchecking:	71.352s
+Total:		1020.439s
+Result: [(0.637082, 0.637083)]
+
+The result for the precision:  1e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5190679
+Transitions: 	14028105
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4307523 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	971.135s
+Building:	6.799s
+Bisimulation:	0.000s
+Modelchecking:	89.877s
+Total:		1068.305s
+Result: [(0.637083, 0.637083)]
+
+The result for the precision:  5e-07
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5190679
+Transitions: 	14028105
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4307523 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	973.771s
+Building:	7.060s
+Bisimulation:	0.000s
+Modelchecking:	90.242s
+Total:		1071.766s
+Result: [(0.637083, 0.637083)]
+Lower limit: 0.637083  Nominal Value: 0.00201696  Upper limit:0.637083
+[       OK ] FigaroApproximationPrecisionTest/0.FigaroProgram_sf3_2_trim_no_repair (14923903 ms)
+[----------] 1 test from FigaroApproximationPrecisionTest/0 (14923903 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14923903 ms total)
+[  PASSED  ] 1 test.
+Note: Google Test filter = FigaroApproximationPrecisionTest/0.FigaroProgram_sf3_2_trim_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroApproximationPrecisionTest/0, where TypeParam = (anonymous namespace)::ApproxProbabilityConfig
+[ RUN      ] FigaroApproximationPrecisionTest/0.FigaroProgram_sf3_2_trim_repair
+
+test_info: FigaroProgram_sf3_2_trim_repair
+
+The result for the precision:  1
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	42
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 21 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.004s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.009s
+Result: [(0, 0.990438)]
+
+The result for the precision:  0.5
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7771
+Transitions: 	23991
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 6963 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.165s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.013s
+Total:		1.182s
+Result: [(0.363848, 0.790592)]
+
+The result for the precision:  0.2
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	42836
+Transitions: 	156094
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 37531 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	8.353s
+Building:	0.017s
+Bisimulation:	0.000s
+Modelchecking:	0.136s
+Total:		8.520s
+Result: [(0.547507, 0.697525)]
+
+The result for the precision:  0.1
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	137861
+Transitions: 	505440
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 120687 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	26.961s
+Building:	0.082s
+Bisimulation:	0.000s
+Modelchecking:	0.518s
+Total:		27.624s
+Result: [(0.584624, 0.659752)]
+
+The result for the precision:  0.05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	226212
+Transitions: 	867651
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 196761 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	46.937s
+Building:	0.150s
+Bisimulation:	0.000s
+Modelchecking:	0.991s
+Total:		48.191s
+Result: [(0.604109, 0.649319)]
+
+The result for the precision:  0.02
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	500667
+Transitions: 	2076055
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 432256 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	116.651s
+Building:	0.400s
+Bisimulation:	0.000s
+Modelchecking:	2.922s
+Total:		120.196s
+Result: [(0.623747, 0.639918)]
+
+The result for the precision:  0.01
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	757482
+Transitions: 	3244886
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 651632 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	183.416s
+Building:	0.613s
+Bisimulation:	0.000s
+Modelchecking:	5.073s
+Total:		189.448s
+Result: [(0.628989, 0.637733)]
+
+The result for the precision:  0.005
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1095181
+Transitions: 	4931426
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 937528 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	278.099s
+Building:	0.961s
+Bisimulation:	0.000s
+Modelchecking:	8.700s
+Total:		288.281s
+Result: [(0.63208, 0.63665)]
+
+The result for the precision:  0.002
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2038673
+Transitions: 	10302366
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1731565 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	582.917s
+Building:	1.942s
+Bisimulation:	0.000s
+Modelchecking:	22.306s
+Total:		608.007s
+Result: [(0.635051, 0.635995)]
+
+The result for the precision:  0.001
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2038673
+Transitions: 	10302366
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1731565 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	583.953s
+Building:	2.006s
+Bisimulation:	0.000s
+Modelchecking:	22.366s
+Total:		609.299s
+Result: [(0.635051, 0.635995)]
+
+The result for the precision:  0.0005
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2613675
+Transitions: 	14307861
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2209800 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	817.830s
+Building:	2.746s
+Bisimulation:	0.000s
+Modelchecking:	34.013s
+Total:		855.785s
+Result: [(0.635559, 0.635926)]
+
+The result for the precision:  0.0002
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3193481
+Transitions: 	18929249
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2689502 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1088.097s
+Building:	3.511s
+Bisimulation:	0.000s
+Modelchecking:	49.269s
+Total:		1142.056s
+Result: [(0.635771, 0.635905)]
+
+The result for the precision:  0.0001
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3753386
+Transitions: 	24256856
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3149912 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1402.635s
+Building:	4.507s
+Bisimulation:	0.000s
+Modelchecking:	69.957s
+Total:		1478.428s
+Result: [(0.635853, 0.635899)]
+
+The result for the precision:  5e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3753386
+Transitions: 	24256856
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3149912 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1401.229s
+Building:	4.464s
+Bisimulation:	0.000s
+Modelchecking:	70.055s
+Total:		1477.057s
+Result: [(0.635853, 0.635899)]
+
+The result for the precision:  2e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4260847
+Transitions: 	30428066
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3563752 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1781.506s
+Building:	5.535s
+Bisimulation:	0.000s
+Modelchecking:	95.072s
+Total:		1883.419s
+Result: [(0.635882, 0.635897)]
+
+The result for the precision:  1e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4655025
+Transitions: 	37147827
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3882173 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2171.764s
+Building:	6.632s
+Bisimulation:	0.000s
+Modelchecking:	124.414s
+Total:		2304.016s
+Result: [(0.635893, 0.635897)]
+
+The result for the precision:  5e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4655025
+Transitions: 	37147827
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3882173 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2172.725s
+Building:	6.656s
+Bisimulation:	0.000s
+Modelchecking:	124.919s
+Total:		2305.511s
+Result: [(0.635893, 0.635897)]
+
+The result for the precision:  2e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4933098
+Transitions: 	43995182
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4104401 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2526.917s
+Building:	7.691s
+Bisimulation:	0.000s
+Modelchecking:	157.579s
+Total:		2693.199s
+Result: [(0.635896, 0.635897)]
+
+The result for the precision:  1e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5090364
+Transitions: 	50493609
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4229010 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2826.307s
+Building:	8.672s
+Bisimulation:	0.000s
+Modelchecking:	188.206s
+Total:		3023.988s
+Result: [(0.635897, 0.635897)]
+
+The result for the precision:  5e-07
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	5090364
+Transitions: 	50493609
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4229010 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2814.760s
+Building:	8.747s
+Bisimulation:	0.000s
+Modelchecking:	189.193s
+Total:		3013.503s
+Result: [(0.635897, 0.635897)]
+
+Lower limit: 0.637083  Nominal Value: 0.00201696  Upper limit:0.637083
+
+start of Approximation test
+
+Model Name: FigaroProgram_sf3_2_trim_repair
+Note: Google Test filter = FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_no_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroApproximationTest/0, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig
+[ RUN      ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_no_repair
+
+test_info: FigaroProgram_sf3_2_trim_no_repair
+Model in iteration 1:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 1: (0, 0.9904383981)
+Times:
+Exploration:	0.005s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.005s
+
+Model in iteration 2:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 2: (0, 0.9904383981)
+Times:
+Exploration:	0.005s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.006s
+
+Model in iteration 3:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 3: (0, 0.9904383981)
+Times:
+Exploration:	0.006s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.007s
+
+Model in iteration 4:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	24
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 4: (0.1916977545, 0.9904383981)
+Times:
+Exploration:	0.006s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.007s
+
+Model in iteration 5:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	384
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 5: (0.1916977545, 0.9505367086)
+Times:
+Exploration:	0.031s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.033s
+
+Model in iteration 6:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	384
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 6: (0.1916977545, 0.9505367086)
+Times:
+Exploration:	0.036s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.038s
+
+Model in iteration 7:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	384
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 7: (0.1916977545, 0.9505367086)
+Times:
+Exploration:	0.041s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.043s
+
+Model in iteration 8:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	770
+Transitions: 	1239
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 8: (0.1916977545, 0.9229692739)
+Times:
+Exploration:	0.104s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.106s
+
+Model in iteration 9:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1669
+Transitions: 	3177
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 60 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 9: (0.3524101709, 0.8770794869)
+Times:
+Exploration:	0.241s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.002s
+Total:		0.244s
+
+Model in iteration 10:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1750
+Transitions: 	3483
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 63 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 10: (0.3578684903, 0.8733451428)
+Times:
+Exploration:	0.292s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.297s
+
+Model in iteration 11:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7771
+Transitions: 	14805
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 63 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 11: (0.3578684903, 0.7982390083)
+Times:
+Exploration:	1.045s
+Building:	0.002s
+Bisimulation:	0.000s
+Modelchecking:	0.008s
+Total:		1.056s
+
+Model in iteration 12:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9046
+Transitions: 	20040
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 492 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 12: (0.4627180972, 0.7829351816)
+Times:
+Exploration:	1.475s
+Building:	0.003s
+Bisimulation:	0.000s
+Modelchecking:	0.015s
+Total:		1.493s
+
+Model in iteration 13:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	19120
+Transitions: 	37428
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 633 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 13: (0.4840355875, 0.7510486072)
+Times:
+Exploration:	2.750s
+Building:	0.006s
+Bisimulation:	0.000s
+Modelchecking:	0.028s
+Total:		2.785s
+
+Model in iteration 14:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	31132
+Transitions: 	65052
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 762 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 14: (0.4896747479, 0.7204277303)
+Times:
+Exploration:	4.837s
+Building:	0.012s
+Bisimulation:	0.000s
+Modelchecking:	0.050s
+Total:		4.900s
+
+Model in iteration 15:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	58142
+Transitions: 	118587
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2985 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 15: (0.5501361733, 0.6942193176)
+Times:
+Exploration:	8.776s
+Building:	0.024s
+Bisimulation:	0.000s
+Modelchecking:	0.095s
+Total:		8.897s
+
+Model in iteration 16:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	105417
+Transitions: 	215418
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 4071 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 16: (0.5652656121, 0.6728537426)
+Times:
+Exploration:	15.890s
+Building:	0.055s
+Bisimulation:	0.000s
+Modelchecking:	0.182s
+Total:		16.128s
+
+Model in iteration 17:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	170761
+Transitions: 	353322
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 10050 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 17: (0.5907910616, 0.658966166)
+Times:
+Exploration:	26.327s
+Building:	0.103s
+Bisimulation:	0.000s
+Modelchecking:	0.344s
+Total:		26.776s
+
+Model in iteration 18:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	289476
+Transitions: 	605868
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 18960 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 18: (0.6080634048, 0.6485277558)
+Times:
+Exploration:	45.000s
+Building:	0.192s
+Bisimulation:	0.000s
+Modelchecking:	0.651s
+Total:		45.844s
+
+Model in iteration 19:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	474834
+Transitions: 	992589
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 36078 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 19: (0.6194050838, 0.6426321045)
+Times:
+Exploration:	74.081s
+Building:	0.339s
+Bisimulation:	0.000s
+Modelchecking:	1.193s
+Total:		75.614s
+
+Model in iteration 20:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	751762
+Transitions: 	1572318
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 68577 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 20: (0.6276502046, 0.6395616154)
+Times:
+Exploration:	117.933s
+Building:	0.567s
+Bisimulation:	0.000s
+Modelchecking:	2.129s
+Total:		120.630s
+
+Model in iteration 21:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1151571
+Transitions: 	2412405
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 119412 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 21: (0.6319152304, 0.6380274826)
+Times:
+Exploration:	182.723s
+Building:	0.916s
+Bisimulation:	0.000s
+Modelchecking:	3.700s
+Total:		187.340s
+
+Model in iteration 22:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1702535
+Transitions: 	3564353
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 208446 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 22: (0.6346346796, 0.637394363)
+Times:
+Exploration:	272.525s
+Building:	1.421s
+Bisimulation:	0.000s
+Modelchecking:	6.348s
+Total:		280.295s
+
+Model in iteration 23:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2392203
+Transitions: 	5027821
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 364683 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 23: (0.6360284356, 0.6371711586)
+Times:
+Exploration:	388.321s
+Building:	2.089s
+Bisimulation:	0.000s
+Modelchecking:	10.499s
+Total:		400.911s
+
+Model in iteration 24:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3171114
+Transitions: 	6757917
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 619636 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 24: (0.6366956903, 0.6371025281)
+Times:
+Exploration:	525.749s
+Building:	2.905s
+Bisimulation:	0.000s
+Modelchecking:	16.815s
+Total:		545.470s
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3171114
+Transitions: 	8812110
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2673829 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3171114
+Transitions: 	8812110
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2673829 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	525.749s
+Building:	2.905s
+Bisimulation:	0.000s
+Modelchecking:	16.815s
+Total:		546.840s
+Result: [(0.6366956903, 0.6371025281)]
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/approximation.cpp:315: Failure
+The difference between approxResult.first and 0.00201696 is 0.63467873032350142, which exceeds errorBound, where
+approxResult.first evaluates to 0.63669569032350137,
+0.00201696 evaluates to 0.0020169599999999999, and
+errorBound evaluates to 0.001.
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/approximation.cpp:316: Failure
+The difference between approxResult.second and 0.00201696 is 0.63508556806241956, which exceeds errorBound, where
+approxResult.second evaluates to 0.63710252806241952,
+0.00201696 evaluates to 0.0020169599999999999, and
+errorBound evaluates to 0.001.
+
+Lower limit: 0.6366956903  Nominal Value: 0.00201696  Upper limit:0.6371025281
+[  FAILED  ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_no_repair, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig (546843 ms)
+[----------] 1 test from FigaroApproximationTest/0 (546843 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (546843 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_no_repair, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig
+
+ 1 FAILED TEST
+Note: Google Test filter = FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_repair
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroApproximationTest/0, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig
+[ RUN      ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_repair
+
+test_info: FigaroProgram_sf3_2_trim_repair
+Model in iteration 1:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 1: (0, 0.9904383981)
+Times:
+Exploration:	0.016s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.021s
+
+Model in iteration 2:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 2: (0, 0.9904383981)
+Times:
+Exploration:	0.016s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.021s
+
+Model in iteration 3:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	21
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 3: (0, 0.9904383981)
+Times:
+Exploration:	0.017s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.022s
+
+Model in iteration 4:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	22
+Transitions: 	24
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 4: (0.1916977545, 0.9904383981)
+Times:
+Exploration:	0.018s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.003s
+Total:		0.023s
+
+Model in iteration 5:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	402
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 5: (0.1946112915, 0.9482002772)
+Times:
+Exploration:	0.042s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.004s
+Total:		0.048s
+
+Model in iteration 6:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	402
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 6: (0.1946112915, 0.9482002772)
+Times:
+Exploration:	0.047s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.004s
+Total:		0.053s
+
+Model in iteration 7:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	241
+Transitions: 	402
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 7: (0.1946112915, 0.9482002772)
+Times:
+Exploration:	0.052s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.004s
+Total:		0.058s
+
+Model in iteration 8:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	770
+Transitions: 	1347
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 8: (0.194631907, 0.9198353696)
+Times:
+Exploration:	0.117s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.005s
+Total:		0.123s
+
+Model in iteration 9:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1669
+Transitions: 	3540
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 60 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 9: (0.3580384025, 0.8710917708)
+Times:
+Exploration:	0.262s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.006s
+Total:		0.271s
+
+Model in iteration 10:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1750
+Transitions: 	3882
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 63 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 10: (0.3637713765, 0.8669809447)
+Times:
+Exploration:	0.313s
+Building:	0.001s
+Bisimulation:	0.000s
+Modelchecking:	0.008s
+Total:		0.323s
+
+Model in iteration 11:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7771
+Transitions: 	17091
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 63 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 11: (0.3638475053, 0.7905921227)
+Times:
+Exploration:	1.133s
+Building:	0.003s
+Bisimulation:	0.000s
+Modelchecking:	0.016s
+Total:		1.153s
+
+Model in iteration 12:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9046
+Transitions: 	23985
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 492 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 12: (0.4691073841, 0.7745046118)
+Times:
+Exploration:	1.651s
+Building:	0.004s
+Bisimulation:	0.000s
+Modelchecking:	0.027s
+Total:		1.683s
+
+Model in iteration 13:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	11416
+Transitions: 	29196
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 633 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 13: (0.4905184377, 0.7660716323)
+Times:
+Exploration:	2.119s
+Building:	0.005s
+Bisimulation:	0.000s
+Modelchecking:	0.041s
+Total:		2.166s
+
+Model in iteration 14:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	26971
+Transitions: 	64515
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 645 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 14: (0.4913940474, 0.7238125512)
+Times:
+Exploration:	4.383s
+Building:	0.010s
+Bisimulation:	0.000s
+Modelchecking:	0.074s
+Total:		4.467s
+
+Model in iteration 15:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	42836
+Transitions: 	121185
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 2622 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 15: (0.547507257, 0.697524871)
+Times:
+Exploration:	7.861s
+Building:	0.018s
+Bisimulation:	0.000s
+Modelchecking:	0.134s
+Total:		8.014s
+
+Model in iteration 16:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	75612
+Transitions: 	204003
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 3954 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 16: (0.5688297753, 0.6785293849)
+Times:
+Exploration:	13.295s
+Building:	0.038s
+Bisimulation:	0.000s
+Modelchecking:	0.245s
+Total:		13.579s
+
+Model in iteration 17:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	138343
+Transitions: 	393012
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 7251 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 17: (0.5846243658, 0.6596892775)
+Times:
+Exploration:	24.907s
+Building:	0.080s
+Bisimulation:	0.000s
+Modelchecking:	0.495s
+Total:		25.484s
+
+Model in iteration 18:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	226212
+Transitions: 	685227
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 14337 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 18: (0.6041090111, 0.6493187767)
+Times:
+Exploration:	43.039s
+Building:	0.147s
+Bisimulation:	0.000s
+Modelchecking:	0.941s
+Total:		44.128s
+
+Model in iteration 19:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	328557
+Transitions: 	1059750
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 25815 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 19: (0.6157466909, 0.643586064)
+Times:
+Exploration:	66.845s
+Building:	0.239s
+Bisimulation:	0.000s
+Modelchecking:	1.626s
+Total:		68.711s
+
+Model in iteration 20:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	502725
+Transitions: 	1694514
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 46326 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 20: (0.6237470523, 0.6399078982)
+Times:
+Exploration:	106.366s
+Building:	0.386s
+Bisimulation:	0.000s
+Modelchecking:	2.787s
+Total:		109.540s
+
+Model in iteration 21:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	760589
+Transitions: 	2684802
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 77631 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 21: (0.6290604416, 0.6377231569)
+Times:
+Exploration:	167.497s
+Building:	0.609s
+Bisimulation:	0.000s
+Modelchecking:	4.837s
+Total:		172.944s
+
+Model in iteration 22:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1100317
+Transitions: 	4138560
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 129429 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 22: (0.6320800393, 0.6366466423)
+Times:
+Exploration:	256.324s
+Building:	0.930s
+Bisimulation:	0.000s
+Modelchecking:	8.273s
+Total:		265.528s
+
+Model in iteration 23:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1537608
+Transitions: 	6182301
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 212115 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 23: (0.6340142853, 0.6361700613)
+Times:
+Exploration:	380.688s
+Building:	1.363s
+Bisimulation:	0.000s
+Modelchecking:	13.650s
+Total:		395.702s
+
+Model in iteration 24:
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2045736
+Transitions: 	8973707
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 348195 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Result after iteration 24: (0.6350589792, 0.6359936194)
+Times:
+Exploration:	547.952s
+Building:	1.934s
+Bisimulation:	0.000s
+Modelchecking:	21.670s
+Total:		571.557s
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2045736
+Transitions: 	10363184
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1737672 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2045736
+Transitions: 	10363184
+Reward Models:  none
+State Labels: 	3 labels
+   * exp0 -> 0 item(s)
+   * init -> 1 item(s)
+   * failed -> 1737672 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	547.952s
+Building:	1.934s
+Bisimulation:	0.000s
+Modelchecking:	21.670s
+Total:		572.404s
+Result: [(0.6350589792, 0.6359936194)]
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/approximation.cpp:328: Failure
+The difference between approxResult.first and 0.00201696 is 0.63304201918619873, which exceeds errorBound, where
+approxResult.first evaluates to 0.63505897918619869,
+0.00201696 evaluates to 0.0020169599999999999, and
+errorBound evaluates to 0.001.
+/home/yg112533/storm-figaro-final_SF/src/test/storm-figaro/api/approximation.cpp:329: Failure
+The difference between approxResult.second and 0.00201696 is 0.63397665944472581, which exceeds errorBound, where
+approxResult.second evaluates to 0.63599361944472577,
+0.00201696 evaluates to 0.0020169599999999999, and
+errorBound evaluates to 0.001.
+
+Lower limit: 0.6350589792  Nominal Value: 0.00201696  Upper limit:0.6359936194
+[  FAILED  ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_repair, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig (572440 ms)
+[----------] 1 test from FigaroApproximationTest/0 (572440 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (572441 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroApproximationTest/0.FigaroProgram_sf3_2_trim_repair, where TypeParam = (anonymous namespace)::ApproxBoundDifferenceConfig
+
+ 1 FAILED TEST

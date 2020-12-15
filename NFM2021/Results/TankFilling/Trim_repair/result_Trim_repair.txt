@@ -1,0 +1,132 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_TankFilling_Trim_repair
+
+test_info: FigaroProgram_TankFilling_Trim_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.00399669
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.024s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.026s
+Result: [0.00399669]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:624: Failure
+Expected equality of these values:
+  result
+    Which is: 0.003996687
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 2.00291e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	60
+Transitions: 	236
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 23 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 23 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.015s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.002s
+Total:		0.018s
+Result: [2.00291e-06]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:627: Failure
+Expected equality of these values:
+  result
+    Which is: 2.0029067e-06
+  0.0000020271448
+    Which is: 2.0271448e-06
+2.00291e-06[  FAILED  ] FigaroAPITest.FigaroProgram_TankFilling_Trim_repair (48 ms)
+[----------] 1 test from FigaroAPITest (48 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (48 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_TankFilling_Trim_repair
+
+ 1 FAILED TEST

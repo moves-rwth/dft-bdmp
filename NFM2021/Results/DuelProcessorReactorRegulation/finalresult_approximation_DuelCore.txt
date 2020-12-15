@@ -1,0 +1,385 @@
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_No_trim_No_repair
+
+test_info: FigaroProgram_DuelProcessorReactorRegulation_No_trim_No_repair
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_No_repair
+
+test_info: FigaroProgram_DuelProcessorReactorRegulation_Trim_article_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	5952
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	5952
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.359956
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	5952
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.514s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.515s
+Result: [0.359956]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:589: Failure
+Expected equality of these values:
+  result
+    Which is: 0.35995644
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_No_repair (545 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_No_repair
+
+test_info: FigaroProgram_DuelProcessorReactorRegulation_Trim_No_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	5085
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	5085
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.359956
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	5085
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.395s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.396s
+Result: [0.359956]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:599: Failure
+Expected equality of these values:
+  result
+    Which is: 0.35995644
+  0.00201696
+    Which is: 0.0020169599
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_No_repair (399 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_repair
+
+test_info: FigaroProgram_DuelProcessorReactorRegulation_Trim_article_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.00404944
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.241s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.011s
+Total:		1.253s
+Result: [0.00404944]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:623: Failure
+Expected equality of these values:
+  result
+    Which is: 0.0040494399
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 4.97135e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2774
+Transitions: 	11462
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2601 item(s)
+   * exp0 -> 2601 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.329s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.149s
+Total:		1.479s
+Result: [4.97135e-06]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:626: Failure
+Expected equality of these values:
+  result
+    Which is: 4.9713467e-06
+  0.0000020271448
+    Which is: 2.0271448e-06
+4.97135e-06[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_repair (2735 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_repair
+
+test_info: FigaroProgram_DuelProcessorReactorRegulation_Trim_repair
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.00404944
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.953s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.011s
+Total:		0.964s
+Result: [0.00404944]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:636: Failure
+Expected equality of these values:
+  result
+    Which is: 0.0040494399
+  0.00201696
+    Which is: 0.0020169599
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 4.97135e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2196
+Transitions: 	9150
+Reward Models:  none
+State Labels: 	4 labels
+   * failed -> 2023 item(s)
+   * exp0 -> 2023 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.066s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.122s
+Total:		1.188s
+Result: [4.97135e-06]
+/home/yg112533/storm-figaro-final_DuelCore/src/test/storm-figaro/api/FigaroAPITest.cpp:639: Failure
+Expected equality of these values:
+  result
+    Which is: 4.9713467e-06
+  0.0000020271448
+    Which is: 2.0271448e-06
+4.97135e-06[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_repair (2154 ms)
+[----------] 4 tests from FigaroAPITest (5833 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (5833 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 4 tests, listed below:
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_No_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_No_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_article_repair
+[  FAILED  ] FigaroAPITest.FigaroProgram_DuelProcessorReactorRegulation_Trim_repair
+
+ 4 FAILED TESTS
