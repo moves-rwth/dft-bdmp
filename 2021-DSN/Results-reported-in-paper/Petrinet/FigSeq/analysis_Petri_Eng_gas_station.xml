@@ -1,0 +1,9 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+<ANALYSIS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="analysis.xsd">
+ <FIGARO0 PATH="Petri_Eng_gas_station.fi"/>
+ <RESULTS PATH="Petri_Eng_gas_station_results.txt"/>
+ <PARAMETERS MAX_RULES_RUNS="200"/>
+ <UNRELIABILITY NAME="Reaching a state where the second waiting area is saturated">
+  <TARGET NAME="Top" TYPE="TANGIBLE ABSORBING" CONDITION="mark(Second_waiting_area)= 3"/>
+ </UNRELIABILITY>
+</ANALYSIS>

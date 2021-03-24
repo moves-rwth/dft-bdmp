@@ -1,0 +1,735 @@
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from FigaroAPITest
+[ RUN      ] FigaroAPITest.FigaroProgram_BDMP_nonrepairable
+
+test_info: FigaroProgram_BDMP_nonrepairable
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	557
+Transitions: 	721
+Choices: 	557
+Markovian St.: 	421
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 246 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 246 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	421
+Transitions: 	585
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 246 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 246 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.0760808
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	421
+Transitions: 	585
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 246 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 246 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.076s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.077s
+Result: [0.0760808]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:925: Failure
+Expected equality of these values:
+  result
+    Which is: 0.076080807
+  0.01787733191
+    Which is: 0.017877331
+0.0760808[  FAILED  ] FigaroAPITest.FigaroProgram_BDMP_nonrepairable (79 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_BDMP_repariable
+
+test_info: FigaroProgram_BDMP_repariable
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	3253
+Transitions: 	13731
+Choices: 	3253
+Markovian St.: 	2446
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2446
+Transitions: 	13714
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.0425816
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2446
+Transitions: 	13714
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.136s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.009s
+Total:		1.146s
+Result: [0.0425816]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:933: Failure
+Expected equality of these values:
+  result
+    Which is: 0.042581588
+  0.01787733191
+    Which is: 0.017877331
+0.0425816
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	3253
+Transitions: 	13731
+Choices: 	3253
+Markovian St.: 	2446
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2446
+Transitions: 	13714
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 2.32546e-46
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2446
+Transitions: 	13714
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 1583 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 1583 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.187s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.089s
+Total:		1.277s
+Result: [2.32546e-46]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:936: Failure
+Expected equality of these values:
+  result
+    Which is: 0
+  0.016357312
+2.32546e-46[  FAILED  ] FigaroAPITest.FigaroProgram_BDMP_repariable (2424 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_figaro_Petrinet
+
+test_info: FigaroProgram_figaro_Petrinet
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=100 "failed"] ...
+Result (initial states): 0.70905
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.014s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.015s
+Result: [0.70905]
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[100, 100] "failed"] ...
+Result (initial states): 0.21117
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	66
+Transitions: 	190
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.005s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.006s
+Result: [0.21117]
+[       OK ] FigaroAPITest.FigaroProgram_figaro_Petrinet (23 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_figaro_RBD
+
+test_info: FigaroProgram_figaro_RBD
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	14368
+Transitions: 	66208
+Choices: 	14368
+Markovian St.: 	9856
+Max. Rate.: 	1.062
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11632 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11632 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9856
+Transitions: 	61696
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 8288 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 8288 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.0107025
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9856
+Transitions: 	61696
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 8288 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 8288 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	1.897s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.118s
+Total:		2.017s
+Result: [0.0107025]
+0.0107025
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	14368
+Transitions: 	66208
+Choices: 	14368
+Markovian St.: 	9856
+Max. Rate.: 	1.062
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 11632 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 11632 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9856
+Transitions: 	61696
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 8288 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 8288 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 4.147e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9856
+Transitions: 	61696
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 8288 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 8288 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2.726s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.930s
+Total:		3.658s
+Result: [4.147e-05]
+[       OK ] FigaroAPITest.FigaroProgram_figaro_RBD (5676 ms)
+[ RUN      ] FigaroAPITest.FigaroProgram_Miniplant_repairable
+
+test_info: FigaroProgram_Miniplant_repairable
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	342
+Transitions: 	666
+Choices: 	342
+Markovian St.: 	326
+Max. Rate.: 	0.1004
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 274 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 274 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	326
+Transitions: 	650
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 266 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 266 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 0.00201696
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	326
+Transitions: 	650
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 266 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 266 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.038s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.040s
+Result: [0.00201696]
+0.00201696
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	342
+Transitions: 	666
+Choices: 	342
+Markovian St.: 	326
+Max. Rate.: 	0.1004
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 274 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 274 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	326
+Transitions: 	650
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 266 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 266 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 2.02714e-06
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	326
+Transitions: 	650
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 266 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 266 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	0.024s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.027s
+Result: [2.02714e-06]
+2.02714e-06[       OK ] FigaroAPITest.FigaroProgram_Miniplant_repairable (69 ms)
+[ RUN      ] FigaroAPITest.figaro_Telecom
+
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.figaro_Telecom
+
+test_info: figaro_Telecom
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	16777216
+Transitions: 	402653184
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 16460641 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 16460641 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	16777216
+Transitions: 	402653184
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 16460641 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 16460641 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 0.0104395
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	16777216
+Transitions: 	402653184
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 16460641 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 16460641 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	10158.484s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	4792.262s
+Total:		14950.952s
+Result: [0.0104395]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:976: Failure
+Expected equality of these values:
+  result
+    Which is: 0.010439526
+  0.00021015652
+[  FAILED  ] FigaroAPITest.figaro_Telecom (14950500 ms)
+[----------] 1 test from FigaroAPITest (14950500 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14950501 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.figaro_Telecom
+
+ 1 FAILED TEST
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigaroAPITest
+[ RUN      ] FigaroAPITest.figaro_Telecom
+
+test_info: figaro_Telecom
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U<=10000 "failed"] ...
+Result (initial states): 4.39822e-05
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	2057.539s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	832.064s
+Total:		2889.726s
+Result: [4.39822e-05]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:974: Failure
+Expected equality of these values:
+  result
+    Which is: 4.3982207e-05
+  0.002014698
+
+ OPtions called
+
+Explict Model Builder constructor called
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmin=? [true U[10000, 10000] "failed"] ...
+Result (initial states): 1.21054e-08
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4194304
+Transitions: 	92274688
+Reward Models:  none
+State Labels: 	4 labels
+   * exp0 -> 3877729 item(s)
+   * deadlock -> 0 item(s)
+   * failed -> 3877729 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+The result is ..
+Times:
+Exploration:	18399.479s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	16853.278s
+Total:		35252.866s
+Result: [1.21054e-08]
+/Users/shahidkhan/Documents/storm-figaro-final/src/test/storm-figaro/api/FigaroAPITest.cpp:977: Failure
+Expected equality of these values:
+  result
+    Which is: 1.2105377e-08
+  0.00021015652
+[  FAILED  ] FigaroAPITest.figaro_Telecom (38141282 ms)
+[----------] 1 test from FigaroAPITest (38141282 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (38141282 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FigaroAPITest.figaro_Telecom
+
+ 1 FAILED TEST
+

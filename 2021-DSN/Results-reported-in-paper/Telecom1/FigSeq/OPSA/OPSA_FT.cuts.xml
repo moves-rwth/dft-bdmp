@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <information>
+    <software name="SCRAM" version="0.16.2" contacts="https://scram-pra.org"/>
+    <time>2020-11-12T17:37:03</time>
+    <performance>
+      <calculation-time name="A_top">
+        <products>0.0044708</products>
+      </calculation-time>
+    </performance>
+    <calculated-quantity name="Minimal Cut Sets">
+      <calculation-method name="Binary Decision Diagram">
+        <limits>
+          <product-order>20</product-order>
+        </limits>
+      </calculation-method>
+    </calculated-quantity>
+    <model-features>
+      <gates>135</gates>
+      <basic-events>24</basic-events>
+      <fault-trees>1</fault-trees>
+    </model-features>
+  </information>
+  <results>
+    <sum-of-products name="A_top" basic-events="24" products="197" distribution="2 4 37 69 47 28 8 2">
+      <product order="2">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_1_interruption"/>
+      </product>
+      <product order="2">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_1_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_2_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="8">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="8">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_1_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="2">
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="ud_1_interruption"/>
+      </product>
+      <product order="2">
+        <basic-event name="bidir_2_interruption"/>
+        <basic-event name="Node_1_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_1_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="7">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="ud_2_interruption"/>
+        <basic-event name="bidir_5_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_7_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="6">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_4_interruption"/>
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_5_fail"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_3_interruption"/>
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_3_fail"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_8_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="5">
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="bidir_11_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_6_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="4">
+        <basic-event name="bidir_10_interruption"/>
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_6_fail"/>
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="ud_3_interruption"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_5_fail"/>
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="Node_4_fail"/>
+        <basic-event name="bidir_12_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="3">
+        <basic-event name="bidir_9_interruption"/>
+        <basic-event name="bidir_12_interruption"/>
+        <basic-event name="bidir_7_interruption"/>
+      </product>
+      <product order="1">
+        <basic-event name="Source_fail"/>
+      </product>
+      <product order="1">
+        <basic-event name="Target_fail"/>
+      </product>
+    </sum-of-products>
+  </results>
+</report>

@@ -1,0 +1,21 @@
+<?xml version= "1.0" encoding="ISO-8859-1" ?>
+<FIGSEQ_IN COPYRIGHT=" EDF 2003-2017" FS_VERSION="3.5.3.3" IHM_VERSION="2.1.3.4" DATE="2020-08-03T14:29:11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fs_param.xsd">
+	<FIGARO0 PATH="export_fig0.fi"/>
+	<PARAMETERS NB_TASKS="4" ORDERED_RULES="1" HARRISON_PRECISION="1e-8" EPS1="0.001" EPS2="0.001" EPS3="0.001"/>
+	<GROUPS>
+		<GROUP NAME="WITHOUT_NAME"/>
+		<GROUP NAME="V3_simu_group"/>
+	</GROUPS>
+	<STUDY NAME="Unreliability  at 1h" RES_FILE="FigseqResults_1h.fsr" MO_TIME="1" RESTITUTION_PCT="90">
+		<TARGET NAME="Top" CONDITION="S(UE_1)" TYPE="TANGIBLE ABSORBING"/>
+		<MIN_PROBA THRESHOLD="1e-9"/>
+	</STUDY>
+	<STUDY NAME="Unreliability  at 10h" RES_FILE="FigseqResults_10h.fsr" MO_TIME="10" RESTITUTION_PCT="90">
+		<TARGET NAME="Top" CONDITION="S(UE_1)" TYPE="TANGIBLE ABSORBING"/>
+		<MIN_PROBA THRESHOLD="1e-10"/>
+	</STUDY>
+	<STUDY NAME="Unreliability  at 100h" RES_FILE="FigseqResults_100h.fsr" MO_TIME="100" RESTITUTION_PCT="90">
+		<TARGET NAME="Top" CONDITION="S(UE_1)" TYPE="TANGIBLE ABSORBING"/>
+		<MIN_PROBA THRESHOLD="1e-10"/>
+	</STUDY>
+</FIGSEQ_IN>

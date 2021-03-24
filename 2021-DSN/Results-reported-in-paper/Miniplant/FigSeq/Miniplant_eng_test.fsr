@@ -1,0 +1,749 @@
+<?xml version= "1.0" encoding="ISO-8859-1" ?>
+<FIGSEQ_OUT COPYRIGHT=" EDF 2003-2017" FS_VERSION="3.5.3.3" IHM_VERSION="2.1.3.4" DATE="2020-11-13T13:21:05" PARAM_FILE="c:\temp\shahid\extern\figaro0\miniplant_eng_test\figseq_miniplant_eng_test.fsp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\PortablePrograms\EDF MRI TOOLS\FIGSEQ\fs_res.xsd">
+	<FIGARO0 PATH="export_fig0.fi" TYPE="EXP INS">
+		<OCCURRENCE_RULE NAME="fail_in_op" OBJECT="Backup_1" TYPE="EXP" ID="1"/>
+		<OCCURRENCE_RULE NAME="xx1" OBJECT="Backup_1" TYPE="EXP" ID="2"/>
+		<OCCURRENCE_RULE NAME="xx2" OBJECT="Backup_1" ID="3"/>
+		<OCCURRENCE_RULE NAME="fail_in_op" OBJECT="Block_1" TYPE="EXP" ID="4"/>
+		<OCCURRENCE_RULE NAME="xx1" OBJECT="Block_1" TYPE="EXP" ID="5"/>
+		<OCCURRENCE_RULE NAME="fail_in_op" OBJECT="Block_2" TYPE="EXP" ID="6"/>
+		<OCCURRENCE_RULE NAME="xx1" OBJECT="Block_2" TYPE="EXP" ID="7"/>
+		<OCCURRENCE_RULE NAME="fail_in_op" OBJECT="Block_3" TYPE="EXP" ID="8"/>
+		<OCCURRENCE_RULE NAME="xx1" OBJECT="Block_3" TYPE="EXP" ID="9"/>
+		<OCCURRENCE_RULE NAME="fail_in_op" OBJECT="Block_4" TYPE="EXP" ID="10"/>
+		<OCCURRENCE_RULE NAME="xx1" OBJECT="Block_4" TYPE="EXP" ID="11"/>
+		<TRANSITION NAME="fail" ID="101" R="1" TY="F"/>
+		<TRANSITION NAME="rep" ID="201" R="2" TY="R"/>
+		<TRANSITION NAME="startup" ID="301" R="3"/>
+		<TRANSITION NAME="fail" ID="302" R="3" TY="F"/>
+		<TRANSITION NAME="fail" ID="401" R="4" TY="F"/>
+		<TRANSITION NAME="rep" ID="501" R="5" TY="R"/>
+		<TRANSITION NAME="fail" ID="601" R="6" TY="F"/>
+		<TRANSITION NAME="rep" ID="701" R="7" TY="R"/>
+		<TRANSITION NAME="fail" ID="801" R="8" TY="F"/>
+		<TRANSITION NAME="rep" ID="901" R="9" TY="R"/>
+		<TRANSITION NAME="fail" ID="1001" R="10" TY="F"/>
+		<TRANSITION NAME="rep" ID="1101" R="11" TY="R"/>
+	</FIGARO0>
+	<PARAMETERS PROCESSING="UNAVAILABILITY_NRI" NRI_MIN_RATE="0.01" DISPO_MIN_PROBA="1e-6" NB_TASKS="1" ORDERED_RULES="1" HARRISON_PRECISION="1e-8" EPS1="0.001" EPS2="0.001" EPS3="0.001"/>
+	<GROUPS>
+		<GROUP NAME="WITHOUT_NAME"/>
+		<GROUP NAME="Simu_group"/>
+	</GROUPS>
+	<STUDY NAME="Unreliability" RES_FILE="Miniplant_eng_test.fsr" MO_TIME="10000" INIT_ST_TIME="2500">
+		<TARGET NAME="Nouvelle cible" CONDITION="null_production(min_1)" TYPE="TANGIBLE ABSORBING" ASYMPT_PROBA="0.0005072587893" SEQ_COUNT="46" AV_DURATION="1.273252269" NRI_PROBA="0.0005072598012">
+			<FAIL_STATE PROBA="0.000249751" CONTRIBUTION="0.491365" AV_DURATION="10.0099" MAX_DURATION="10.0109" FS_NUM="1" SEQ_COUNT="5"/>
+			<FAIL_STATE PROBA="0.000249751" CONTRIBUTION="0.491365" AV_DURATION="10.0099" MAX_DURATION="10.0109" FS_NUM="9" SEQ_COUNT="5"/>
+			<FAIL_STATE PROBA="2.74596e-6" CONTRIBUTION="0.00540247" AV_DURATION="10.0099" MAX_DURATION="10.0119" FS_NUM="2" SEQ_COUNT="5"/>
+			<FAIL_STATE PROBA="2.74326e-6" CONTRIBUTION="0.00539721" AV_DURATION="10.01" MAX_DURATION="10.0117" FS_NUM="6" SEQ_COUNT="4"/>
+			<FAIL_STATE PROBA="2.48755e-7" CONTRIBUTION="0.000978327" AV_DURATION="20.0099" MAX_DURATION="20.0111" FS_NUM="15" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-7" CONTRIBUTION="0.000978327" AV_DURATION="20.0099" MAX_DURATION="20.0111" FS_NUM="17" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.45778e-7" CONTRIBUTION="0.000966613" AV_DURATION="20.0098" MAX_DURATION="20.0113" FS_NUM="19" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.45778e-7" CONTRIBUTION="0.000966613" AV_DURATION="20.0098" MAX_DURATION="20.0113" FS_NUM="20" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-7" CONTRIBUTION="0.000490389" AV_DURATION="10.03" MAX_DURATION="10.0313" FS_NUM="3" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-7" CONTRIBUTION="0.000490389" AV_DURATION="10.03" MAX_DURATION="10.0313" FS_NUM="10" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.46022e-7" CONTRIBUTION="0.000484987" AV_DURATION="10.0297" MAX_DURATION="10.0314" FS_NUM="5" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.46022e-7" CONTRIBUTION="0.000484987" AV_DURATION="10.0297" MAX_DURATION="10.0314" FS_NUM="12" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.45778e-7" CONTRIBUTION="0.000483548" AV_DURATION="10.0099" MAX_DURATION="10.0119" FS_NUM="21" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="4.95528e-9" CONTRIBUTION="1.94885e-5" AV_DURATION="20.0098" MAX_DURATION="20.0113" FS_NUM="24" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="4.95528e-9" CONTRIBUTION="1.94885e-5" AV_DURATION="20.0098" MAX_DURATION="20.0113" FS_NUM="27" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="1.46724e-5" AV_DURATION="30.0098" MAX_DURATION="30.0114" FS_NUM="22" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="1.46724e-5" AV_DURATION="30.0098" MAX_DURATION="30.0114" FS_NUM="25" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="9.78333e-6" AV_DURATION="20.01" MAX_DURATION="20.0119" FS_NUM="8" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="9.78333e-6" AV_DURATION="20.01" MAX_DURATION="20.0119" FS_NUM="14" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="9.78328e-6" AV_DURATION="20.0099" MAX_DURATION="20.0121" FS_NUM="4" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="9.78328e-6" AV_DURATION="20.0099" MAX_DURATION="20.0121" FS_NUM="11" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.92808e-6" AV_DURATION="10.0795" MAX_DURATION="10.0814" FS_NUM="7" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.92808e-6" AV_DURATION="10.0795" MAX_DURATION="10.0814" FS_NUM="13" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.91858e-6" AV_DURATION="10.0601" MAX_DURATION="10.0617" FS_NUM="23" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.91858e-6" AV_DURATION="10.0601" MAX_DURATION="10.0617" FS_NUM="26" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.91355e-6" AV_DURATION="10.0498" MAX_DURATION="10.052" FS_NUM="16" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.48755e-9" CONTRIBUTION="4.91355e-6" AV_DURATION="10.0498" MAX_DURATION="10.052" FS_NUM="18" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.47517e-9" CONTRIBUTION="4.86975e-6" AV_DURATION="10.01" MAX_DURATION="10.0117" FS_NUM="29" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.47517e-9" CONTRIBUTION="4.8697e-6" AV_DURATION="10.0099" MAX_DURATION="10.0119" FS_NUM="28" SEQ_COUNT="1"/>
+			<SEQ P="0.0002492522433" N="2" D="9.97009" TIS="2500" FS_NUM="1">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0002492522433" N="126" D="9.97009" TIS="2500" FS_NUM="9">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000002492522433" N="368" D="9.97009" TIS="2500" FS_NUM="2">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000002492522433" N="608" D="9.97009" TIS="2500" FS_NUM="6">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002487547338" N="22" D="19.9501" TIS="2500" FS_NUM="3">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002487547338" N="128" D="19.9501" TIS="2500" FS_NUM="10">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002487547338" N="251" D="19.9501" TIS="2500" FS_NUM="15">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002487547338" N="286" D="19.9501" TIS="2500" FS_NUM="17">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002480107017" N="253" D="29.9202" TIS="2500" FS_NUM="1">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="901"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002480107017" N="287" D="29.9202" TIS="2500" FS_NUM="9">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="901"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002460216559" N="71" D="19.9402" TIS="2500" FS_NUM="5">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002460216559" N="169" D="19.9402" TIS="2500" FS_NUM="12">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002460216559" N="322" D="19.9402" TIS="2500" FS_NUM="2">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="101"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002457766144" N="387" D="19.9302" TIS="2500" FS_NUM="6">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002457766144" N="424" D="19.9302" TIS="2500" FS_NUM="19">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002457766144" N="465" D="19.9302" TIS="2500" FS_NUM="20">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002457766144" N="496" D="19.9302" TIS="2500" FS_NUM="21">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="101"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002450414899" N="434" D="29.9003" TIS="2500" FS_NUM="1">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002450414899" N="474" D="29.9003" TIS="2500" FS_NUM="9">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="33" D="19.9501" TIS="2500" FS_NUM="4">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="124" D="19.9501" TIS="2500" FS_NUM="7">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="125" D="19.9501" TIS="2500" FS_NUM="8">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="158" D="19.9501" TIS="2500" FS_NUM="11">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="206" D="19.9501" TIS="2500" FS_NUM="13">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="250" D="19.9501" TIS="2500" FS_NUM="14">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="285" D="19.9501" TIS="2500" FS_NUM="16">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="320" D="19.9501" TIS="2500" FS_NUM="18">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="532" D="19.9501" TIS="2500" FS_NUM="22">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="533" D="19.9501" TIS="2500" FS_NUM="23">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="570" D="19.9501" TIS="2500" FS_NUM="25">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002487547338" N="571" D="19.9501" TIS="2500" FS_NUM="26">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="21" D="29.9202" TIS="2500" FS_NUM="2">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="501"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="96" D="29.9202" TIS="2500" FS_NUM="6">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="501"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="147" D="29.9202" TIS="2500" FS_NUM="2">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="701"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="222" D="29.9202" TIS="2500" FS_NUM="6">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="701"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="551" D="29.9202" TIS="2500" FS_NUM="24">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002480107017" N="589" D="29.9202" TIS="2500" FS_NUM="27">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002475166565" N="627" D="29.9003" TIS="2500" FS_NUM="24">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002475166565" N="663" D="29.9003" TIS="2500" FS_NUM="27">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002475166565" N="720" D="29.9003" TIS="2500" FS_NUM="28">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002475166565" N="762" D="29.9003" TIS="2500" FS_NUM="29">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000247268895" N="535" D="39.8903" TIS="2500" FS_NUM="1">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="201"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000247268895" N="572" D="39.8903" TIS="2500" FS_NUM="9">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.98004" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="201"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002467763275" N="611" D="39.8704" TIS="2500" FS_NUM="1">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="201"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002467763275" N="646" D="39.8704" TIS="2500" FS_NUM="9">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="201"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002450414899" N="530" D="29.9003" TIS="2500" FS_NUM="2">
+				<BR AD="2500" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="301"/>
+				</BR>
+				<BR AD="9.96016" TY="EXP">
+					<TR LW="0.0001" TR="801"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.1" TR="1101"/>
+				</BR>
+				<BR AD="9.97009" TY="EXP">
+					<TR LW="0.0001" TR="1001"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="302"/>
+				</BR>
+			</SEQ>
+		</TARGET>
+		<MIN_PROBA THRESHOLD="1e-9" ASYMPT_PROBA="0.00000007658732871" SEQ_COUNT="598" ERROR_UP_BOUND="0.0000000765875508" AV_DURATION="0.0001947720022"/>
+		<ABSORBING ASYMPT_PROBA="0" SEQ_COUNT="0"/>
+		<NRI_RESULTS MTTF="4947501.377" NUMERIC_ERROR="1.35747e-16" D="0.000002026977179" DMAX="0.000002028087862" M="30.0097713" MEAN_FAIL_TIME="0.00508783" INIT_ST_LOOP_PROBA="0.9994926636"/>
+	</STUDY>
+</FIGSEQ_OUT>

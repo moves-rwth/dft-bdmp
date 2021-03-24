@@ -1,0 +1,3093 @@
+<?xml version= "1.0" encoding="ISO-8859-1" ?>
+<FIGSEQ_OUT COPYRIGHT=" EDF 2003-2017" FS_VERSION="3.5.3.3" IHM_VERSION="2.1.3.4" DATE="2020-11-13T11:03:11" PARAM_FILE="c:\temp\shahid\extern\figaro0\rbd\figseq_rbd.fsp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\PortablePrograms\EDF MRI TOOLS\FIGSEQ\fs_res.xsd">
+	<FIGARO0 PATH="export_fig0.fi" TYPE="EXP INS">
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="b1" TYPE="EXP" ID="2"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="b1" TYPE="EXP" ID="3"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="b2" TYPE="EXP" ID="5"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="b2" TYPE="EXP" ID="6"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="b3" TYPE="EXP" ID="8"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="b3" TYPE="EXP" ID="9"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="b4" TYPE="EXP" ID="11"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="b4" TYPE="EXP" ID="12"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="b5" TYPE="EXP" ID="14"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="b5" TYPE="EXP" ID="15"/>
+		<OCCURRENCE_RULE NAME="occ_fail_to_start" OBJECT="sb1" ID="16"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="sb1" TYPE="EXP" ID="17"/>
+		<OCCURRENCE_RULE NAME="occ_fail_to_start" OBJECT="sb2" ID="19"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="sb2" TYPE="EXP" ID="20"/>
+		<OCCURRENCE_RULE NAME="occ_fail_to_start" OBJECT="sb3" ID="22"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="sb3" TYPE="EXP" ID="23"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="sb3" TYPE="EXP" ID="24"/>
+		<OCCURRENCE_RULE NAME="occ_fail_to_start" OBJECT="sb4" ID="25"/>
+		<OCCURRENCE_RULE NAME="occ_fail_in_operation" OBJECT="sb4" TYPE="EXP" ID="26"/>
+		<OCCURRENCE_RULE NAME="occ_repair" OBJECT="sb4" TYPE="EXP" ID="27"/>
+		<TRANSITION NAME="fail_in_operation" ID="201" R="2" TY="F"/>
+		<TRANSITION NAME="repair" ID="301" R="3" TY="R"/>
+		<TRANSITION NAME="fail_in_operation" ID="501" R="5" TY="F"/>
+		<TRANSITION NAME="repair" ID="601" R="6" TY="R"/>
+		<TRANSITION NAME="fail_in_operation" ID="801" R="8" TY="F"/>
+		<TRANSITION NAME="repair" ID="901" R="9" TY="R"/>
+		<TRANSITION NAME="fail_in_operation" ID="1101" R="11" TY="F"/>
+		<TRANSITION NAME="repair" ID="1201" R="12" TY="R"/>
+		<TRANSITION NAME="fail_in_operation" ID="1401" R="14" TY="F"/>
+		<TRANSITION NAME="repair" ID="1501" R="15" TY="R"/>
+		<TRANSITION NAME="start" ID="1601" R="16"/>
+		<TRANSITION NAME="fail_to_start" ID="1602" R="16" TY="F"/>
+		<TRANSITION NAME="fail_in_operation" ID="1701" R="17" TY="F"/>
+		<TRANSITION NAME="start" ID="1901" R="19"/>
+		<TRANSITION NAME="fail_to_start" ID="1902" R="19" TY="F"/>
+		<TRANSITION NAME="fail_in_operation" ID="2001" R="20" TY="F"/>
+		<TRANSITION NAME="start" ID="2201" R="22"/>
+		<TRANSITION NAME="fail_to_start" ID="2202" R="22" TY="F"/>
+		<TRANSITION NAME="fail_in_operation" ID="2301" R="23" TY="F"/>
+		<TRANSITION NAME="repair" ID="2401" R="24" TY="R"/>
+		<TRANSITION NAME="start" ID="2501" R="25"/>
+		<TRANSITION NAME="fail_to_start" ID="2502" R="25" TY="F"/>
+		<TRANSITION NAME="fail_in_operation" ID="2601" R="26" TY="F"/>
+		<TRANSITION NAME="repair" ID="2701" R="27" TY="R"/>
+	</FIGARO0>
+	<PARAMETERS PROCESSING="UNAVAILABILITY_NRI" NRI_MIN_RATE="0.01" DISPO_MIN_PROBA="1e-5" NB_TASKS="1" ORDERED_RULES="1" HARRISON_PRECISION="1e-8" EPS1="0.001" EPS2="0.001" EPS3="0.001"/>
+	<GROUPS>
+		<GROUP NAME="WITHOUT_NAME"/>
+		<GROUP NAME="simulation"/>
+	</GROUPS>
+	<STUDY NAME="Unreliability" RES_FILE="figseq_rbd.fsr" MO_TIME="10000" INIT_ST_TIME="484.7309743">
+		<TARGET NAME="Nouvelle cible" CONDITION="not_linked(de_1)" TYPE="TANGIBLE ABSORBING" ASYMPT_PROBA="0.000459993531" SEQ_COUNT="149" AV_DURATION="0.2860266247" NRI_PROBA="0.0005345674103">
+			<FAIL_STATE PROBA="2.28343e-5" CONTRIBUTION="0.563469" AV_DURATION="499.919" MAX_DURATION="500.367" FS_NUM="15" SEQ_COUNT="8"/>
+			<FAIL_STATE PROBA="1.88095e-5" CONTRIBUTION="0.18568" AV_DURATION="199.988" MAX_DURATION="200.266" FS_NUM="26" SEQ_COUNT="7"/>
+			<FAIL_STATE PROBA="4.84731e-6" CONTRIBUTION="0.119615" AV_DURATION="499.919" MAX_DURATION="500.367" FS_NUM="16" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="9.69462e-6" CONTRIBUTION="0.0957016" AV_DURATION="199.988" MAX_DURATION="200.266" FS_NUM="27" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="0.000363873" CONTRIBUTION="0.0213024" AV_DURATION="1.18603" MAX_DURATION="1.28177" FS_NUM="4" SEQ_COUNT="18"/>
+			<FAIL_STATE PROBA="8.17239e-5" CONTRIBUTION="0.00478441" AV_DURATION="1.18603" MAX_DURATION="1.29249" FS_NUM="9" SEQ_COUNT="6"/>
+			<FAIL_STATE PROBA="1.01113e-7" CONTRIBUTION="0.00249445" AV_DURATION="499.788" MAX_DURATION="500.746" FS_NUM="5" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="2.11222e-5" CONTRIBUTION="0.00112232" AV_DURATION="1.07645" MAX_DURATION="1.22051" FS_NUM="30" SEQ_COUNT="9"/>
+			<FAIL_STATE PROBA="4.52701e-8" CONTRIBUTION="0.00111708" AV_DURATION="499.908" MAX_DURATION="500.374" FS_NUM="14" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="8.33443e-8" CONTRIBUTION="0.000822625" AV_DURATION="199.96" MAX_DURATION="200.769" FS_NUM="18" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="2.15297e-8" CONTRIBUTION="0.000531138" AV_DURATION="499.788" MAX_DURATION="500.746" FS_NUM="28" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="9.01763e-6" CONTRIBUTION="0.000479149" AV_DURATION="1.07645" MAX_DURATION="1.22254" FS_NUM="35" SEQ_COUNT="4"/>
+			<FAIL_STATE PROBA="4.30594e-8" CONTRIBUTION="0.000425005" AV_DURATION="199.96" MAX_DURATION="200.769" FS_NUM="29" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.72199e-8" CONTRIBUTION="0.000367413" AV_DURATION="199.984" MAX_DURATION="200.286" FS_NUM="25" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="9.69402e-9" CONTRIBUTION="0.000239209" AV_DURATION="499.908" MAX_DURATION="500.374" FS_NUM="63" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="9.58316e-9" CONTRIBUTION="0.000236421" AV_DURATION="499.797" MAX_DURATION="500.718" FS_NUM="11" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="8.72005e-9" CONTRIBUTION="0.000215867" AV_DURATION="501.516" MAX_DURATION="502.878" FS_NUM="1" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="1.68448e-7" CONTRIBUTION="0.000205504" AV_DURATION="24.7157" MAX_DURATION="25.8192" FS_NUM="7" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="1.9388e-8" CONTRIBUTION="0.000191387" AV_DURATION="199.984" MAX_DURATION="200.286" FS_NUM="64" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="7.25253e-9" CONTRIBUTION="0.000178919" AV_DURATION="499.785" MAX_DURATION="500.864" FS_NUM="8" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="8.72005e-9" CONTRIBUTION="9.52939e-5" AV_DURATION="221.393" MAX_DURATION="223.143" FS_NUM="2" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="8.69819e-9" CONTRIBUTION="8.58465e-5" AV_DURATION="199.945" MAX_DURATION="200.791" FS_NUM="22" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="6.94478e-9" CONTRIBUTION="6.85676e-5" AV_DURATION="200.022" MAX_DURATION="200.981" FS_NUM="20" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="2.69987e-9" CONTRIBUTION="6.66176e-5" AV_DURATION="499.876" MAX_DURATION="500.56" FS_NUM="6" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.25207e-9" CONTRIBUTION="5.55596e-5" AV_DURATION="499.797" MAX_DURATION="500.718" FS_NUM="50" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="4.5368e-9" CONTRIBUTION="4.95788e-5" AV_DURATION="221.393" MAX_DURATION="223.143" FS_NUM="3" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.8706e-9" CONTRIBUTION="4.63072e-5" AV_DURATION="501.516" MAX_DURATION="502.878" FS_NUM="17" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.78103e-8" CONTRIBUTION="4.61129e-5" AV_DURATION="24.7075" MAX_DURATION="25.8316" FS_NUM="10" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="4.50414e-9" CONTRIBUTION="4.44534e-5" AV_DURATION="199.945" MAX_DURATION="200.791" FS_NUM="51" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.79231e-9" CONTRIBUTION="4.42161e-5" AV_DURATION="499.785" MAX_DURATION="500.864" FS_NUM="39" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.58462e-9" CONTRIBUTION="3.53919e-5" AV_DURATION="200.022" MAX_DURATION="200.981" FS_NUM="40" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.38896e-7" CONTRIBUTION="3.46655e-5" AV_DURATION="5.05622" MAX_DURATION="5.75456" FS_NUM="19" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="5.43468e-7" CONTRIBUTION="3.21921e-5" AV_DURATION="1.20003" MAX_DURATION="1.64503" FS_NUM="31" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="4.13781e-7" CONTRIBUTION="2.23531e-5" AV_DURATION="1.09442" MAX_DURATION="1.31689" FS_NUM="42" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="1.78323e-9" CONTRIBUTION="1.76017e-5" AV_DURATION="199.969" MAX_DURATION="200.488" FS_NUM="41" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="2.73305e-7" CONTRIBUTION="1.74748e-5" AV_DURATION="1.29533" MAX_DURATION="1.65374" FS_NUM="32" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="7.93571e-9" CONTRIBUTION="9.63377e-6" AV_DURATION="24.5939" MAX_DURATION="25.7986" FS_NUM="12" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.12032e-8" CONTRIBUTION="7.78667e-6" AV_DURATION="5.05556" MAX_DURATION="5.79217" FS_NUM="21" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="9.31606e-8" CONTRIBUTION="5.03268e-6" AV_DURATION="1.09442" MAX_DURATION="1.31716" FS_NUM="45" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="8.70277e-8" CONTRIBUTION="4.73989e-6" AV_DURATION="1.10339" MAX_DURATION="1.52403" FS_NUM="55" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="3.75687e-9" CONTRIBUTION="4.56057e-6" AV_DURATION="24.5929" MAX_DURATION="25.8184" FS_NUM="13" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="6.74698e-8" CONTRIBUTION="4.31656e-6" AV_DURATION="1.29612" MAX_DURATION="1.55002" FS_NUM="34" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="6.623e-8" CONTRIBUTION="4.23466e-6" AV_DURATION="1.29533" MAX_DURATION="1.6556" FS_NUM="36" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="6.08258e-8" CONTRIBUTION="3.60299e-6" AV_DURATION="1.20003" MAX_DURATION="1.65396" FS_NUM="47" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="4.35203e-8" CONTRIBUTION="2.78274e-6" AV_DURATION="1.29538" MAX_DURATION="1.58317" FS_NUM="52" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="4.22025e-8" CONTRIBUTION="2.24411e-6" AV_DURATION="1.07726" MAX_DURATION="1.28346" FS_NUM="33" SEQ_COUNT="5"/>
+			<FAIL_STATE PROBA="7.89674e-9" CONTRIBUTION="1.92541e-6" AV_DURATION="4.9396" MAX_DURATION="5.80583" FS_NUM="23" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="2.30082e-8" CONTRIBUTION="1.34733e-6" AV_DURATION="1.18634" MAX_DURATION="1.3534" FS_NUM="53" SEQ_COUNT="5"/>
+			<FAIL_STATE PROBA="1.95806e-8" CONTRIBUTION="1.25201e-6" AV_DURATION="1.29538" MAX_DURATION="1.59324" FS_NUM="56" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.87289e-8" CONTRIBUTION="1.02005e-6" AV_DURATION="1.10339" MAX_DURATION="1.53303" FS_NUM="61" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.14907e-8" CONTRIBUTION="7.35147e-7" AV_DURATION="1.29612" MAX_DURATION="1.56047" FS_NUM="38" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="2.75585e-9" CONTRIBUTION="6.71942e-7" AV_DURATION="4.93961" MAX_DURATION="5.8041" FS_NUM="24" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="9.21457e-9" CONTRIBUTION="4.9175e-7" AV_DURATION="1.08115" MAX_DURATION="1.35455" FS_NUM="59" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="5.93319e-9" CONTRIBUTION="3.79476e-7" AV_DURATION="1.29573" MAX_DURATION="1.54844" FS_NUM="54" SEQ_COUNT="3"/>
+			<FAIL_STATE PROBA="5.06755e-9" CONTRIBUTION="3.2421e-7" AV_DURATION="1.29612" MAX_DURATION="1.5697" FS_NUM="48" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="5.21048e-9" CONTRIBUTION="2.77065e-7" AV_DURATION="1.07726" MAX_DURATION="1.28443" FS_NUM="37" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="4.24283e-9" CONTRIBUTION="2.48454e-7" AV_DURATION="1.18634" MAX_DURATION="1.35438" FS_NUM="60" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="3.75666e-9" CONTRIBUTION="2.21739e-7" AV_DURATION="1.19579" MAX_DURATION="1.4432" FS_NUM="43" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.96665e-9" CONTRIBUTION="2.11686e-7" AV_DURATION="1.08115" MAX_DURATION="1.35561" FS_NUM="62" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="3.60544e-9" CONTRIBUTION="1.91718e-7" AV_DURATION="1.07726" MAX_DURATION="1.2942" FS_NUM="46" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="3.027e-9" CONTRIBUTION="1.77257e-7" AV_DURATION="1.18634" MAX_DURATION="1.37351" FS_NUM="57" SEQ_COUNT="2"/>
+			<FAIL_STATE PROBA="2.14843e-9" CONTRIBUTION="1.37376e-7" AV_DURATION="1.2954" MAX_DURATION="1.47799" FS_NUM="58" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.61722e-9" CONTRIBUTION="9.54571e-8" AV_DURATION="1.19579" MAX_DURATION="1.44523" FS_NUM="44" SEQ_COUNT="1"/>
+			<FAIL_STATE PROBA="1.34476e-9" CONTRIBUTION="8.60349e-8" AV_DURATION="1.29612" MAX_DURATION="1.58014" FS_NUM="49" SEQ_COUNT="1"/>
+			<SEQ P="0.0003038770774" N="1730" D="160.089" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00008070106956" N="2037" D="83.2432" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00001868795224" N="2704" D="88.7236" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00001340269975" N="674" D="139.645" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00001153012169" N="335" D="240.269" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000009694619486" N="675" D="0" TIS="484.731" FS_NUM="27">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000008792109451" N="2963" D="45.3453" TIS="484.731" FS_NUM="35">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000004847309743" N="336" D="0" TIS="484.731" FS_NUM="16">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000003610710575" N="1336" D="77.8353" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.989107" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000009694008764" N="3179" D="0.999937" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000006010959985" N="3177" D="162.078" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="0.989107" TY="EXP">
+					<TR LW="1" TR="1501"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000004036278341" N="2427" D="44.3577" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.979381" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000003128413466" N="1478" D="250.842" TIS="484.731" FS_NUM="42">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000002290237144" N="1673" D="236.995" TIS="484.731" FS_NUM="31">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000001964766037" N="1082" D="225.165" TIS="484.731" FS_NUM="31">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000001964766037" N="1153" D="225.165" TIS="484.731" FS_NUM="32">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000001938801753" N="3235" D="0.999937" TIS="484.731" FS_NUM="35">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000001076368642" N="2203" D="245.129" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000000890929142" N="1152" D="270.51" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000008308172334" N="1850" D="173.996" TIS="484.731" FS_NUM="45">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000006089112348" N="2245" D="211.756" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000006082215502" N="1990" D="160.148" TIS="484.731" FS_NUM="47">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000005614820166" N="1199" D="153.752" TIS="484.731" FS_NUM="36">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000005298457483" N="142" D="377.303" TIS="484.731" FS_NUM="7">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000000502526857" N="983" D="236.983" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000004698321678" N="3178" D="1.98904" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="0.989107" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000004238386351" N="476" D="253.302" TIS="484.731" FS_NUM="19">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003980827109" N="2532" D="132.196" TIS="484.731" FS_NUM="55">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000037385916" N="101" D="306.442" TIS="484.731" FS_NUM="5">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003660294809" N="3233" D="90.7029" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="0.979381" TY="EXP">
+					<TR LW="1" TR="1501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003657425332" N="2246" D="128.512" TIS="484.731" FS_NUM="52">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003657425332" N="2322" D="128.512" TIS="484.731" FS_NUM="55">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003650475331" N="889" D="76.8462" TIS="484.731" FS_NUM="29">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003626151443" N="435" D="194.86" TIS="484.731" FS_NUM="18">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000003516314729" N="1414" D="218.531" TIS="484.731" FS_NUM="19">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002982795178" N="2367" D="170.094" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002872966726" N="700" D="383.288" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002786560703" N="799" D="271.707" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002666776715" N="673" D="140.64" TIS="484.731" FS_NUM="25">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.994865" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002666608719" N="3035" D="141.64" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="0.994865" TY="EXP">
+					<TR LW="1" TR="1501"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002546057301" N="1198" D="199.097" TIS="484.731" FS_NUM="35">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002332366454" N="887" D="190.503" TIS="484.731" FS_NUM="19">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002319620996" N="397" D="354.95" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.005" TR="601"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002301049468" N="334" D="241.267" TIS="484.731" FS_NUM="14">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.997843" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002300904511" N="2998" D="242.267" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="0.997843" TY="EXP">
+					<TR LW="1" TR="1501"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000002131790722" N="1375" D="230.951" TIS="484.731" FS_NUM="7">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001995456119" N="836" D="132.061" TIS="484.731" FS_NUM="18">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001938801753" N="3037" D="0.999937" TIS="484.731" FS_NUM="64">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.0000000190805394" N="1701" D="320.307" TIS="484.731" FS_NUM="34">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001872857293" N="2798" D="88.8179" TIS="484.731" FS_NUM="61">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001825237666" N="774" D="76.8462" TIS="484.731" FS_NUM="28">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001791615923" N="2368" D="86.8509" TIS="484.731" FS_NUM="56">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001764083223" N="451" D="336.545" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.005" TR="601"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001694626915" N="772" D="213.88" TIS="484.731" FS_NUM="7">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001636895807" N="1110" D="308.477" TIS="484.731" FS_NUM="34">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001636895807" N="1181" D="308.477" TIS="484.731" FS_NUM="34">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001634087541" N="179" D="311.131" TIS="484.731" FS_NUM="10">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001566559494" N="518" D="198.087" TIS="484.731" FS_NUM="21">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000001195728751" N="726" D="143.019" TIS="484.731" FS_NUM="5">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000010629347" N="1879" D="334.085" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000009707676906" N="852" D="273.746" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.005" TR="601"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000009694008764" N="3000" D="0.999937" TIS="484.731" FS_NUM="63">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000009566192377" N="62" D="466.531" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.002" TR="301"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000009338327259" N="1796" D="141.685" TIS="484.731" FS_NUM="21">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000009304246291" N="3234" D="1.97932" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.999937" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="0.979381" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000008821206165" N="116" D="460.547" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000865212869" N="1700" D="365.653" TIS="484.731" FS_NUM="33">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000007681737614" N="2691" D="179.394" TIS="484.731" FS_NUM="59">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000007422553878" N="1109" D="353.823" TIS="484.731" FS_NUM="33">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000007422553878" N="1180" D="353.823" TIS="484.731" FS_NUM="33">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000006751128668" N="1579" D="206.394" TIS="484.731" FS_NUM="42">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.980332" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000006520267602" N="493" D="281.33" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.005" TR="601"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000005661427074" N="1762" D="154.105" TIS="484.731" FS_NUM="10">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000005093008547" N="2531" D="292.286" TIS="484.731" FS_NUM="53">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000005067246107" N="2018" D="243.461" TIS="484.731" FS_NUM="48">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000005063352119" N="1729" D="243.402" TIS="484.731" FS_NUM="38">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004679253322" N="2321" D="288.602" TIS="484.731" FS_NUM="53">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004677847343" N="1227" D="237.064" TIS="484.731" FS_NUM="38">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004665783011" N="568" D="175.168" TIS="484.731" FS_NUM="22">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="35.5227" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004614780807" N="2673" D="337.591" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4537" TY="EXP">
+					<TR LW="0.02" TR="2701"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004504901777" N="1672" D="325.718" TIS="484.731" FS_NUM="33">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004492493341" N="229" D="280.027" TIS="484.731" FS_NUM="11">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="39.7583" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004121254109" N="2155" D="43.3783" TIS="484.731" FS_NUM="51">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000004047874907" N="2110" D="218.546" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="35.5227" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003897534673" N="2058" D="323.406" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="39.7583" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003864699354" N="1081" D="313.888" TIS="484.731" FS_NUM="33">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000372018329" N="260" D="321.432" TIS="484.731" FS_NUM="12">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="39.7583" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="41.4044" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003614022392" N="2931" D="136.015" TIS="484.731" FS_NUM="62">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003436914303" N="599" D="211.999" TIS="484.731" FS_NUM="23">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="35.5227" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="36.8311" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003038770774" N="1416" D="160.089" TIS="484.731" FS_NUM="40">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000003012103814" N="2559" D="260.888" TIS="484.731" FS_NUM="53">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000282132176" N="741" D="297.124" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002767400967" N="2273" D="257.204" TIS="484.731" FS_NUM="53">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002767400967" N="2349" D="257.204" TIS="484.731" FS_NUM="53">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002728030829" N="2648" D="306.173" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4537" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.02" TR="2701"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002720531991" N="158" D="394.374" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.002" TR="301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002654998768" N="1542" D="294.138" TIS="484.731" FS_NUM="43">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002649228742" N="143" D="377.303" TIS="484.731" FS_NUM="8">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002524483897" N="1002" D="149.248" TIS="484.731" FS_NUM="31">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.988139" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002524483897" N="1003" D="149.248" TIS="484.731" FS_NUM="32">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.988139" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002465403989" N="31" D="348.26" TIS="484.731" FS_NUM="1">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="107.991" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002465403989" N="32" D="348.26" TIS="484.731" FS_NUM="2">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="107.991" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002407834551" N="1557" D="339.483" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002396104613" N="2797" D="248.907" TIS="484.731" FS_NUM="60">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002306024337" N="33" D="240.269" TIS="484.731" FS_NUM="3">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002303386776" N="1538" D="337.516" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002297758176" N="2017" D="288.806" TIS="484.731" FS_NUM="46">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002295992436" N="1728" D="288.747" TIS="484.731" FS_NUM="37">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002171113101" N="2913" D="294.213" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4537" TY="EXP">
+					<TR LW="0.02" TR="2701"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002121184122" N="1226" D="282.409" TIS="484.731" FS_NUM="37">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002119871869" N="1373" D="512.607" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="41.3873" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002119193176" N="477" D="253.302" TIS="484.731" FS_NUM="20">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000002060627054" N="2089" D="43.3783" TIS="484.731" FS_NUM="50">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001974542337" N="631" D="176.476" TIS="484.731" FS_NUM="24">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="36.8311" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000190959286" N="292" D="281.674" TIS="484.731" FS_NUM="13">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="41.4044" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001809220156" N="2560" D="177.645" TIS="484.731" FS_NUM="54">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001807874631" N="1412" D="394.994" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="36.8175" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001792906885" N="1939" D="129.548" TIS="484.731" FS_NUM="45">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.980332" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001758157365" N="1415" D="218.531" TIS="484.731" FS_NUM="20">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000172141041" N="348" D="487.906" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="107.991" TY="EXP">
+					<TR LW="0.005" TR="601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001685152248" N="770" D="495.537" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="41.3873" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001662239391" N="2274" D="173.961" TIS="484.731" FS_NUM="54">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001662239391" N="2350" D="173.961" TIS="484.731" FS_NUM="54">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001638591717" N="2633" D="222.93" TIS="484.731" FS_NUM="58">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4537" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001519385387" N="1377" D="160.089" TIS="484.731" FS_NUM="39">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000144934161" N="2118" D="78.901" TIS="484.731" FS_NUM="22">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="35.5227" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001432902025" N="358" D="247.637" TIS="484.731" FS_NUM="1">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="107.991" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001432902025" N="359" D="247.637" TIS="484.731" FS_NUM="2">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="107.991" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001417102637" N="2815" D="217.509" TIS="484.731" FS_NUM="60">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001414029062" N="2577" D="217.415" TIS="484.731" FS_NUM="57">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001402100476" N="1463" D="381.877" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="36.8175" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001377315313" N="1464" D="205.414" TIS="484.731" FS_NUM="41">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1902"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001362828089" N="2482" D="125.555" TIS="484.731" FS_NUM="23">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="36.8311" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001355918589" N="1439" D="487.071" TIS="484.731" FS_NUM="15">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="41.3873" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001355631131" N="2385" D="215.542" TIS="484.731" FS_NUM="57">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="43.4726" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.4483" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001344681656" N="2036" D="166.556" TIS="484.731" FS_NUM="49">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="83.3125" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001340269975" N="360" D="139.645" TIS="484.731" FS_NUM="17">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.01" TR="1602"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001283454994" N="2893" D="262.795" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="43.4537" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.02" TR="2701"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000128122803" N="2687" D="262.719" TIS="484.731" FS_NUM="9">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="45.4277" TY="EXP">
+					<TR LW="0.02" TR="2701"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001278956501" N="2184" D="162.875" TIS="484.731" FS_NUM="4">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="41.6615" TY="EXP">
+					<TR LW="0.02" TR="1201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.989107" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001249095645" N="1561" D="250.759" TIS="484.731" FS_NUM="44">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001199160617" N="885" D="366.966" TIS="484.731" FS_NUM="26">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="36.8175" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="139.645" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001196373201" N="1989" D="248.872" TIS="484.731" FS_NUM="46">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2202"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="76.9053" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001166183227" N="888" D="190.503" TIS="484.731" FS_NUM="20">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="55.2151" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="58.4419" TY="EXP">
+					<TR LW="0.0001" TR="2001"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001132812447" N="1576" D="296.105" TIS="484.731" FS_NUM="35">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="45.3248" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.02" TR="2502"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.02" TR="2401"/>
+				</BR>
+				<BR AD="45.3453" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.00000000109644431" N="139" D="418.691" TIS="484.731" FS_NUM="6">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="240.269" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="66.1726" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="41.3873" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001085372138" N="952" D="192.617" TIS="484.731" FS_NUM="30">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="71.4133" TY="EXP">
+					<TR LW="0.01" TR="901"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+				<BR AD="0.979381" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001067615639" N="2153" D="115.732" TIS="484.731" FS_NUM="23">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="1e-5" TR="1101"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2501"/>
+				</BR>
+				<BR AD="43.3783" TY="EXP">
+					<TR LW="2e-6" TR="501"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1901"/>
+				</BR>
+				<BR AD="35.5227" TY="EXP">
+					<TR LW="0.001" TR="2601"/>
+				</BR>
+				<BR AD="36.8311" TY="EXP">
+					<TR LW="0.002" TR="1401"/>
+				</BR>
+			</SEQ>
+			<SEQ P="0.000000001065895361" N="1376" D="230.951" TIS="484.731" FS_NUM="8">
+				<BR AD="484.731" TY="EXP">
+					<TR LW="5e-5" TR="801"/>
+				</BR>
+				<BR>
+					<TR LW="0.98" TR="2201"/>
+				</BR>
+				<BR AD="76.8462" TY="EXP">
+					<TR LW="0.001" TR="2301"/>
+				</BR>
+				<BR AD="83.2432" TY="EXP">
+					<TR LW="1e-6" TR="201"/>
+				</BR>
+				<BR>
+					<TR LW="0.99" TR="1601"/>
+				</BR>
+				<BR AD="70.8617" TY="EXP">
+					<TR LW="0.0001" TR="1701"/>
+				</BR>
+			</SEQ>
+		</TARGET>
+		<MIN_PROBA THRESHOLD="1e-9" ASYMPT_PROBA="0.0000002267561635" SEQ_COUNT="2666" ERROR_UP_BOUND="0.00000033929701" AV_DURATION="0.0001657752715"/>
+		<ABSORBING ASYMPT_PROBA="0" SEQ_COUNT="0"/>
+		<NRI_RESULTS MTTF="913941.4033" NUMERIC_ERROR="9.50001e-17" D="0.0000414321647" DMAX="0.00004180691128" M="501.5156636" MEAN_FAIL_TIME="0.0202589" INIT_ST_LOOP_PROBA="0.9994650933"/>
+	</STUDY>
+</FIGSEQ_OUT>

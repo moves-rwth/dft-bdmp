@@ -1,0 +1,12 @@
+<?xml version= "1.0" encoding="ISO-8859-1" ?>
+<FIGSEQ_IN COPYRIGHT=" EDF 2003-2017" FS_VERSION="3.5.3.3" IHM_VERSION="2.1.3.4" DATE="2020-11-13T07:55:41" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fs_param.xsd">
+	<FIGARO0 PATH="./Petri_Eng_gas_station.fi"/>
+	<PARAMETERS NB_TASKS="1" ORDERED_RULES="1" HARRISON_PRECISION="1e-8" EPS1="0.001" EPS2="0.001" EPS3="0.001"/>
+	<GROUPS>
+		<GROUP NAME="WITHOUT_NAME"/>
+	</GROUPS>
+	<STUDY NAME="New study" RES_FILE="./Petri_Eng_gas_station.fsr" MO_TIME="100">
+		<TARGET NAME="New target" CONDITION="mark(Second_waiting_area)=3" TYPE="TANGIBLE ABSORBING"/>
+		<MIN_PROBA THRESHOLD="1e-5"/>
+	</STUDY>
+</FIGSEQ_IN>

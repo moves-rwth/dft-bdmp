@@ -1,0 +1,2335 @@
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+		
+		
+	
+	<html>
+   <HEAD>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <TITLE>Résultats de l'étude Unreliability</TITLE><style type="text/css">
+			td#tl { font: 10pt courier new; text-align: left}
+			th { text-align: center }
+			td { font: 10pt courier new; text-align: center }
+		</style></HEAD>
+   <BODY>
+      <H1>Résultats de l'étude Unreliability</H1><BR><B>Nom du modèle : </B><TT>export_fig0.fi</TT><BR><B>Date étude : </B><TT>2020-06-26T08:15:24</TT><BR><B>Version de FIGSEQ Copyright©  EDF 1996-2017 : </B><TT>3.5.3.3</TT><BR><B>Fichier paramètres associé à l'étude : </B><TT>figseqnri.fsp</TT><BR><B>Type de calcul : </B><TT>exploration de séquences suivant l'algorithme SRI</TT><BR><B>Temps d'observation : </B><TT>10000</TT><BR><B>Seuil de probabilité min : </B><TT>1e-7</TT><BR><B>Seuil de branches max : </B><TT>aucun</TT><BR><B>Seuil de transitions max : </B><TT>aucun</TT><BR><B>Seuil de défaillances max : </B><TT>aucun</TT><BR><B>Seuil de réparations max : </B><TT>aucun</TT><BR><B>Seuil de probabilité min pour le calcul de disponibilité : </B><TT>1e-5</TT><BR><B>Tolérance temps séjour : </B><TT>0.01</TT><BR><P></P><BR><TABLE BORDER="1" BGCOLOR="ccffaa">
+         <TH>
+            <H3>RESULTATS GLOBAUX DE l'ETUDE SRI</H3>
+         </TH>
+      </TABLE>
+      <P></P>
+      <TABLE BORDER="1">
+         <TR>
+            <TH WIDTH="250">Valeurs Estimées<BR/>(sans prise en compte<BR/>des séquences tronquées)</TH>
+            <TH WIDTH="250">Valeurs Pessimistes<BR/>(avec prise en compte<BR/>des séquences tronquées)</TH>
+            <TH WIDTH="310">Résultats<BR/>fournis</TH>
+            <TH WIDTH="190">Formules</TH>
+         </TR>
+         <TR>
+            <TD>2.2100065e-7</TD>
+            <TD>2.3269857e-7</TD>
+            <TD>Lambda équivalent</TD>
+            <TD>Leq = Linit*Epsilon</TD>
+         </TR>
+         <TR>
+            <TD>-</TD>
+            <TD>4.3146378e6</TD>
+            <TD>MTTF</TD>
+            <TD>MTTF</TD>
+         </TR>
+         <TR>
+            <TD>2.2075663e-3</TD>
+            <TD>2.3242804e-3</TD>
+            <TD>Défiabilité pour le temps de<BR/>mission TM : Proba d'aller<BR/>de l'état initial à l'ens.<BR/>des états cibles avant TM</TD>
+            <TD>-</TD>
+         </TR>
+         <TR>
+            <TD>A = 1.1009359e-6</TD>
+            <TD>1.1591913e-6<BR>=A + 1.1626128e-8 * M<BR>avec M = 5.0107332
+            </TD>
+            <TD>Indisponibilité asymptotique<BR/>obtenue en prenant pour M le<BR/>max. des tps moyens de panne<BR/>rencontrés dans l'exploration</TD>
+            <TD>-</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="1">
+         <TR>
+            <TH colspan="6">Informations sur les séquences complètes</TH>
+         </TR>
+         <TR>
+            <TH WIDTH="150">Probas asympt.<BR/>Epsilon_i</TH>
+            <TH WIDTH="150">Taux équivalent<BR/>Linit*Epsilon_i</TH>
+            <TH WIDTH="150">Contribution<BR/>séq ss boucle</TH>
+            <TH WIDTH="70">nb seq.</TH>
+            <TH WIDTH="100">Cible</TH>
+            <TH>Expression booléenne</TH>
+         </TR>
+         <TR>
+            <TD>5.5250163e-4</TD>
+            <TD>2.2100065e-7</TD>
+            <TD>9.9729647e-1</TD>
+            <TD>46</TD>
+            <TD>Top</TD>
+            <TD>S(UE_1)</TD>
+         </TR>
+         <TR>
+            <TD><B>5.5250163e-4</B></TD>
+            <TD><B>2.2100065e-7</B></TD>
+            <TD><B>9.9729647e-1</B></TD>
+            <TD><B>46</B></TD>
+            <TD colspan="3">Ensemble des cibles</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="1">
+         <TR>
+            <TH colspan="6">Informations sur les séquences tronquées</TH>
+         </TR>
+         <TR>
+            <TH WIDTH="150">Maj. erreur</TH>
+            <TH WIDTH="150">Taux équivalent<BR/>Linit*Epsilon_i</TH>
+            <TH WIDTH="70">nb seq.</TH>
+            <TH WIDTH="230">Valeur critère tronc.</TH>
+            <TH>Critère troncature</TH>
+         </TR>
+         <TR>
+            <TD>2.9244791e-5<BR></TD>
+            <TD>1.1697916e-8<BR></TD>
+            <TD>3024<BR></TD>
+            <TD>1e-7<BR></TD>
+            <TD>probabilité min<BR></TD>
+         </TR>
+         <TR>
+            <TD><B>2.9244791e-5</B></TD>
+            <TD><B>1.1697916e-8</B></TD>
+            <TD><B>3024</B></TD>
+            <TD colspan="2">Ensemble des critères</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="0">
+         <TR>
+            <TD id="tl">Erreur numérique (valeur absolue) sur l'ensemble des séquences</TD>
+            <TD id="tl">9.95907e-17</TD>
+         </TR>
+         <TR>
+            <TD id="tl">Temps moyen de séjour dans l'état initial = 1 / Linit</TD>
+            <TD id="tl">2500</TD>
+         </TR>
+         <TR>
+            <TD id="tl">Estimation du taux d'occurrence des initiateurs = Linit</TD>
+            <TD id="tl">4e-4</TD>
+         </TR>
+         <TR>
+            <TD id="tl">Temps moyen de séjour cumulé dans l'état initial (Estimation)</TD>
+            <TD id="tl">4.2974052e6</TD>
+         </TR>
+      </TABLE><BR><P></P>
+      <p>Affichage des séquences en Fiabilité limité à : 90 %</p>
+      <p>Affichage des états de panne en Indisponibilité limité à : 90 %</p>
+      <p>Affichage des séquences par états de panne en Indisponibilité limité à : 90 %</p>
+      <TABLE BORDER="1" BGCOLOR="ccccaa">
+         <TH>
+            <H3>PARTIE 1 : RESULTATS DE FIABILITE</H3>
+         </TH>
+      </TABLE><BR><B>Cible : </B><TT>Top</TT><BR><B>Types états : </B><TT>TANGIBLE ABSORBING</TT><BR><B>Expression booléenne : </B><TT>S(UE_1)</TT><BR><B>Nombre de séquences : </B><tt>46</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+            <TH ROWSPAN="2" WIDTH="80">Num état.<BR/>panne</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="3">1589</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="3">2.4791668e-4</TD>
+            <TD ROWSPAN="3">9.92063</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+            <TD ROWSPAN="3">6</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="3">2311</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="3">2.4791668e-4</TD>
+            <TD ROWSPAN="3">9.92063</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+            <TD ROWSPAN="3">8.974333e-1</TD>
+            <TD ROWSPAN="3">7</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="2">2312</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="2">2.4992501e-5</TD>
+            <TD ROWSPAN="2">0</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+            <TD ROWSPAN="2">9.4266846e-1</TD>
+            <TD ROWSPAN="2">27</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failI(RC_CB_dies)</FONT><br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.0001<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="2">2361</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="2">2.4992501e-5</TD>
+            <TD ROWSPAN="2">0</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+            <TD ROWSPAN="2">9.8790362e-1</TD>
+            <TD ROWSPAN="2">28</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br><FONT COLOR="red">failI(RS_dies)</FONT></TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.0001
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8812764e-1</TD>
+            <TD ROWSPAN="5">1</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">138</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8835166e-1</TD>
+            <TD ROWSPAN="5">2</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">255</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8857568e-1</TD>
+            <TD ROWSPAN="5">3</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">391</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.887997e-1</TD>
+            <TD ROWSPAN="5">4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">395</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8902372e-1</TD>
+            <TD ROWSPAN="5">5</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">491</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8924774e-1</TD>
+            <TD ROWSPAN="5">8</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">608</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8947176e-1</TD>
+            <TD ROWSPAN="5">9</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">744</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.8969578e-1</TD>
+            <TD ROWSPAN="5">10</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">908</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.899198e-1</TD>
+            <TD ROWSPAN="5">11</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1044</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9014382e-1</TD>
+            <TD ROWSPAN="5">12</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1049</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9036784e-1</TD>
+            <TD ROWSPAN="5">13</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1185</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9059186e-1</TD>
+            <TD ROWSPAN="5">14</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1189</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9081588e-1</TD>
+            <TD ROWSPAN="5">15</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1285</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.910399e-1</TD>
+            <TD ROWSPAN="5">16</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1402</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9126392e-1</TD>
+            <TD ROWSPAN="5">17</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1538</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9148794e-1</TD>
+            <TD ROWSPAN="5">18</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2482</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9171196e-1</TD>
+            <TD ROWSPAN="5">29</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2618</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9193598e-1</TD>
+            <TD ROWSPAN="5">30</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2735</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9216e-1</TD>
+            <TD ROWSPAN="5">31</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2871</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9238403e-1</TD>
+            <TD ROWSPAN="5">32</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2875</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9260805e-1</TD>
+            <TD ROWSPAN="5">23</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2971</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">9.9283207e-1</TD>
+            <TD ROWSPAN="5">24</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE>
+      <P></P><B>Etat absorbant</B><BR><P><EM>Aucune séquence menant à un état absorbant et ne vérifant aucun état cible n'a été trouvée.</EM></P><BR><P></P><B>Probabilité min</B><BR><B>Nombre de séquences : </B><tt>3024</tt><BR><TABLE BORDER="1" BGCOLOR="ccccaa">
+         <TD>
+            <H3>PARTIE 2 : RESULTATS DE DISPONIBILITE</H3>
+         </TD>
+      </TABLE><BR><B>Cible : </B><TT>Top</TT><BR><B>Types états : </B><TT>TANGIBLE ABSORBING</TT><BR><B>Expression booléenne : </B><TT>S(UE_1)</TT><BR><B>Etat de panne numéro : </B><TT>6</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.00824</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.451321</TT><BR><B>Nombre de séquences : </B><tt>4</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="3">1589</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="3">2.4791668e-4</TD>
+            <TD ROWSPAN="3">9.92063</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>7</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.00824</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.451321</TT><BR><B>Nombre de séquences : </B><tt>4</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="3">2311</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="3">2.4791668e-4</TD>
+            <TD ROWSPAN="3">9.92063</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+            <TD ROWSPAN="3">4.4871665e-1</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>27</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.00903</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.0453025</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="2">2312</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="2">2.4992501e-5</TD>
+            <TD ROWSPAN="2">0</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failI(RC_CB_dies)</FONT><br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.0001<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>28</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.00903</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.0453025</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="2">2361</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="2">2.4992501e-5</TD>
+            <TD ROWSPAN="2">0</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+            <TD ROWSPAN="2">4.5235162e-2</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br><FONT COLOR="red">failI(RS_dies)</FONT></TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.0001
+            </TD>
+            <TD>INS</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>5</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">395</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>23</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2875</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>15</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1189</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>24</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2971</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>8</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">491</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>16</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000449973</TT><BR><B>Nombre de séquences : </B><tt>2</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1285</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>19</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>20</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>21</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>22</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>25</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>26</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>5.01073</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000224763</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>1</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>2</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">138</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>3</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">255</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>4</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">391</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>11</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">908</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>12</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1044</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>13</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1049</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>14</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1185</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>17</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1402</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>18</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">1538</TD>
+            <TD><FONT COLOR="red">failF(CB_up_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>29</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2482</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>30</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2618</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dw_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>31</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2735</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>32</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">2871</TD>
+            <TD><FONT COLOR="red">failF(Transfo1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_up_2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>33</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>34</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>9</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">608</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><B>Etat de panne numéro : </B><TT>10</TT><BR><B>Temps moyen passé dans cette panne : </B><TT>3.34327</TT><BR><B>Contribution en indisponibilité asymptotique : </B><TT>0.000150266</TT><BR><B>Nombre de séquences : </B><tt>1</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">Proba<BR/>Asympt.PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Durée Moy.<BR/>Après init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>en PA</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.<BR/>cumulée</TH>
+         </TR>
+         <TR>
+            <TH>Nom</TH>
+            <TH WIDTH="90">Taux</TH>
+            <TH WIDTH="40">Type</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="5">744</TD>
+            <TD><FONT COLOR="red">failF(CB_dw_1)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="5">1.2377158e-7</TD>
+            <TD ROWSPAN="5">14.9229</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+            <TD ROWSPAN="5">2.2402029e-4</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dw_2)<br>good(RC_CB_up_2)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(Transfo2)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(dies_generator)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE><BR><H2>Fin des résultats de l'étude Unreliability</H2><BR></BODY>
+</html>

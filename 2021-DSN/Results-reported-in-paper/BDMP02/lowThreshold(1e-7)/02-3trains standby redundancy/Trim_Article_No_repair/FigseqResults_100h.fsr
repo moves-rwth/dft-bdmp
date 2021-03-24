@@ -1,0 +1,39 @@
+<?xml version= "1.0" encoding="ISO-8859-1" ?>
+<FIGSEQ_OUT COPYRIGHT=" EDF 2003-2017" FS_VERSION="3.5.3.3" IHM_VERSION="2.1.3.4" DATE="2020-08-03T14:29:12" PARAM_FILE="c:\users\e28718\documents\_dd2\_od1\cas_tests\selection\dynamique_discret\bdmp_light examples\extern\figaro0\bdmp_light_eng\02-3trains standby redundancy\trim_article_no_repair\figseqns.fsp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\PortablePrograms\EDF MRI TOOLS\FIGSEQ\fs_res.xsd">
+	<FIGARO0 PATH="export_fig0.fi" TYPE="EXP INS">
+		<OCCURRENCE_RULE NAME="xx10" OBJECT="A_op" TYPE="EXP" ID="1"/>
+		<OCCURRENCE_RULE NAME="xx23" OBJECT="A_start" ID="2"/>
+		<OCCURRENCE_RULE NAME="xx10" OBJECT="B_op" TYPE="EXP" ID="3"/>
+		<OCCURRENCE_RULE NAME="xx10" OBJECT="P_op" TYPE="EXP" ID="6"/>
+		<TRANSITION NAME="failF" ID="101" R="1" TY="F"/>
+		<TRANSITION NAME="good" ID="201" R="2"/>
+		<TRANSITION NAME="failI" ID="202" R="2" TY="F"/>
+		<TRANSITION NAME="failF" ID="301" R="3" TY="F"/>
+		<TRANSITION NAME="failF" ID="601" R="6" TY="F"/>
+	</FIGARO0>
+	<PARAMETERS NB_TASKS="4" ORDERED_RULES="1" HARRISON_PRECISION="1e-8" EPS1="0.001" EPS2="0.001" EPS3="0.001"/>
+	<GROUPS>
+		<GROUP NAME="WITHOUT_NAME"/>
+		<GROUP NAME="V3_simu_group"/>
+	</GROUPS>
+	<STUDY NAME="Unreliability  at 100h" RES_FILE="FigseqResults_100h.fsr" MO_TIME="100" RESTITUTION_PCT="90" INIT_ST_TIME="10000">
+		<TARGET NAME="Top" CONDITION="S(UE_1)" TYPE="TANGIBLE ABSORBING" ASYMPT_PROBA="0.99991667" SEQ_COUNT="8" AV_DURATION="24996.8057" MIS_TIME_PROBA="0.0000003398687636" MIS_TIME_OPT_PROBA="0.0000003398687636">
+			<SEQ P="0.16665" N="4" D="8333.33" MTP="0.0000001641709568" MTOP="1.64171e-7">
+				<BR TY="EXP">
+					<TR LW="0.0001" TR="601"/>
+				</BR>
+				<BR>
+					<TR LW="0.9999" TR="201"/>
+				</BR>
+				<BR AD="3333.33" TY="EXP">
+					<TR LW="0.0001" TR="301"/>
+				</BR>
+				<BR AD="5000" TY="EXP">
+					<TR LW="0.0001" TR="101"/>
+				</BR>
+			</SEQ>
+		</TARGET>
+		<MIN_PROBA THRESHOLD="1e-10" ASYMPT_PROBA="0.00008333" SEQ_COUNT="4" ERROR_UP_BOUND="0.00000000004982848339" AV_DURATION="1.861"/>
+		<ABSORBING ASYMPT_PROBA="0" SEQ_COUNT="0"/>
+	</STUDY>
+</FIGSEQ_OUT>

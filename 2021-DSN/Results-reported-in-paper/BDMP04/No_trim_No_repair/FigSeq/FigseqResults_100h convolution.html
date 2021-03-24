@@ -1,0 +1,152 @@
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+		
+		
+	
+	<html>
+   <HEAD>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <TITLE>Results for study Unreliability  at 100h</TITLE><style type="text/css">
+			td#tl { font: 10pt courier new; text-align: left}
+			th { text-align: center }
+			td { font: 10pt courier new; text-align: center }
+		</style></HEAD>
+   <BODY>
+      <H1>Results for study Unreliability  at 100h</H1><BR><B>Model name : </B><TT>export_fig0.fi</TT><BR><B>Study date : </B><TT>2020-12-11T18:28:22</TT><BR><B>FIGSEQ version Copyright©  EDF 2003-2017 : </B><TT>3.5.3.3</TT><BR><B>Parameter file associated with study : </B><TT>c:\temp\dsn database and results\dsn database final\dsn results\bdmp04\no_trim_no_repair\figseq\figseqns.fsp</TT><BR><B>Computation type : </B><TT>exploration of sequences using NS, computation by discrete convolution</TT><BR><B>Mission time : </B><TT>100</TT><BR><B>Threshold probability min : </B><TT>1e-7</TT><BR><B>Threshold max branches : </B><TT>none</TT><BR><B>Threshold max transitions : </B><TT>none</TT><BR><B>Threshold max faults : </B><TT>none</TT><BR><B>Threshold max repairs : </B><TT>none</TT><BR><P></P><BR><TABLE BORDER="1" BGCOLOR="ccffaa">
+         <TH>
+            <H3>STUDY GLOBAL RESULTS NS</H3>
+         </TH>
+      </TABLE>
+      <P></P>
+      <TABLE BORDER="1">
+         <TR>
+            <TH WIDTH="250">Estimated values<BR/>(without<BR/>truncated sequences)</TH>
+            <TH WIDTH="250">Pessimistic values<BR/>(with<BR/>truncated sequences)</TH>
+            <TH WIDTH="310">Given<BR/>results</TH>
+            <TH WIDTH="190">Formulas</TH>
+         </TR>
+         <TR>
+            <TD>-</TD>
+            <TD>6.8203251e3</TD>
+            <TD>MTTF</TD>
+            <TD>sum of products<BR/>pb. asympt.* duration</TD>
+         </TR>
+         <TR>
+            <TD>1.0359313e-4</TD>
+            <TD>1.0462137e-4</TD>
+            <TD>Unreliability for mission time<BR/>MT : Proba to go<BR/>from initial state to any<BR/>of target state before MT</TD>
+            <TD>sum of sequences<BR/>proba at MT</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="1">
+         <TR>
+            <TH colspan="6">Information on complete sequences</TH>
+         </TR>
+         <TR>
+            <TH WIDTH="150">Probas(MT)</TH>
+            <TH WIDTH="70">nb seq.</TH>
+            <TH WIDTH="100">Target</TH>
+            <TH>Boolean expression</TH>
+         </TR>
+         <TR>
+            <TD>1.0391141e-4</TD>
+            <TD>40</TD>
+            <TD>Top</TD>
+            <TD>S(UE_1)</TD>
+         </TR>
+         <TR>
+            <TD><B>1.0391141e-4</B></TD>
+            <TD><B>40</B></TD>
+            <TD colspan="3">All targets</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="1">
+         <TR>
+            <TH WIDTH="150">Probas(MT)</TH>
+            <TH WIDTH="200">nb seq. absorbing state</TH>
+         </TR>
+         <TR>
+            <TD>0</TD>
+            <TD>0</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="1">
+         <TR>
+            <TH colspan="6">Information on truncated sequences</TH>
+         </TR>
+         <TR>
+            <TH WIDTH="150">Error upper bound</TH>
+            <TH WIDTH="70">nb seq.</TH>
+            <TH WIDTH="230">Threshold value</TH>
+            <TH>Threshold criterion</TH>
+         </TR>
+         <TR>
+            <TD>7.0995921e-7<BR></TD>
+            <TD>912<BR></TD>
+            <TD>1e-7<BR></TD>
+            <TD>probability min<BR></TD>
+         </TR>
+         <TR>
+            <TD><B>7.0995921e-7</B></TD>
+            <TD><B>912</B></TD>
+            <TD colspan="2">All criteria</TD>
+         </TR>
+      </TABLE><BR><TABLE BORDER="0">
+         <TR>
+            <TD id="tl">Average sojourn time in initial state = 1 / Linit</TD>
+            <TD id="tl">2500</TD>
+         </TR>
+      </TABLE><BR><P></P>
+      <p>Display of sequences in Reliability limited to : 90 %</p><B>Target : </B><TT>Top</TT><BR><B>State class : </B><TT>TANGIBLE ABSORBING</TT><BR><B>Boolean expression : </B><TT>S(UE_1)</TT><BR><B>Number of sequences : </B><tt>40</tt><BR><TABLE BORDER="1" width="100%">
+         <TR>
+            <TH ROWSPAN="2" WIDTH="55">Num<BR/>Seq.</TH>
+            <TH COLSPAN="3">Transitions</TH>
+            <TH ROWSPAN="2" WIDTH="110">MT<BR/>Proba</TH>
+            <TH ROWSPAN="2" WIDTH="110">Aver. Dur.<BR/>after init</TH>
+            <TH ROWSPAN="2" WIDTH="110">Contrib.</TH>
+         </TR>
+         <TR>
+            <TH>Name</TH>
+            <TH WIDTH="90">Rate</TH>
+            <TH WIDTH="40">Class</TH>
+         </TR>
+         <TR>
+            <TD ROWSPAN="3">32</TD>
+            <TD><FONT COLOR="red">failF(GRID)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+            <TD ROWSPAN="3">4.8097293e-5</TD>
+            <TD ROWSPAN="3">1250</TD>
+            <TD ROWSPAN="3">4.6286824e-1</TD>
+         </TR>
+         <TR>
+            <TD>good(RC_CB_dies)<br>good(RC_CB_dw_2)<br>good(RC_CB_up_2)<br>good(RS_dies)
+            </TD>
+            <TD>0.9999<br>0.9999<br>0.9999<br>0.9999
+            </TD>
+            <TD>INS</TD>
+         </TR>
+         <TR>
+            <TD><FONT COLOR="red">failF(CB_dies)</FONT></TD>
+            <TD>0.0001</TD>
+            <TD>EXP</TD>
+         </TR>
+      </TABLE>
+      <P></P><B>Absorbing state</B><BR><P><EM>No sequence leading to an absorbing state which verifies no target state definition has been found.</EM></P><BR><P></P><B>Probability min</B><BR><B>Number of sequences : </B><tt>912</tt><BR><H2>End of results of study Unreliability  at 100h</H2><BR></BODY>
+</html>

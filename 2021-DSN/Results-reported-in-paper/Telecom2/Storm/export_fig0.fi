@@ -1,0 +1,996 @@
+STEPS_ORDER
+	default_step;
+	__ARBRE__;
+GROUP_NAMES
+	simu_group;
+
+OBJECT Failure_counter IS_A fail_counter;
+	ATTRIBUTE
+	  nb_failures
+		DOMAIN INTEGER
+		= 0;
+	INTERACTION
+	  rule1
+		GROUP simu_group
+		STEP default_step
+		THEN nb_failures OF Failure_counter <-- ((((((((( fail OF
+		  Node_1 +  fail OF Node_2) +  fail OF Node_3) +  fail OF
+		  Node_4) +  fail OF Node_5) +  fail OF Node_6) +  fail OF
+		  Node_7) +  fail OF Source) +  fail OF Target) + (((((((((((((
+		  ( interruption OF bidir_1 +  interruption OF bidir_10) + 
+		  interruption OF bidir_11) +  interruption OF bidir_12) + 
+		  interruption OF bidir_2) +  interruption OF bidir_3) + 
+		  interruption OF bidir_4) +  interruption OF bidir_5) + 
+		  interruption OF bidir_6) +  interruption OF bidir_7) + 
+		  interruption OF bidir_8) +  interruption OF bidir_9) + 
+		  interruption OF ud_1) +  interruption OF ud_2) + 
+		  interruption OF ud_3));
+
+OBJECT Node_1 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_1 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_1 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_1 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_1 <-- FALSE;
+
+OBJECT Node_2 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_2 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_2 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_2 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_2 <-- FALSE;
+
+OBJECT Node_3 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_3 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_3 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_3 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_3 <-- FALSE;
+
+OBJECT Node_4 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_4 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_4 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_4 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_4 <-- FALSE;
+
+OBJECT Node_5 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_5 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_5 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_5 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_5 <-- FALSE;
+
+OBJECT Node_6 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_6 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_6 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_6 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_6 <-- FALSE;
+
+OBJECT Node_7 IS_A node;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'intermediate';
+	  lambda
+		DOMAIN REAL
+		= 1e-05;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Node_7 = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (1e-05)
+		  INDUCING fail OF Node_7 <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Node_7 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Node_7 <-- FALSE;
+
+OBJECT Source IS_A source;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'source';
+	  lambda
+		DOMAIN REAL
+		= 0;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF fail OF Source = FALSE
+		THEN connected OF Source <-- TRUE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Source = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (0)
+		  INDUCING fail OF Source <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Source = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Source <-- FALSE;
+
+OBJECT Target IS_A target;
+	CONSTANT
+	  function
+		DOMAIN 'source' 'target' 'intermediate'
+		= 'target';
+	  lambda
+		DOMAIN REAL
+		= 0;
+	  mu
+		DOMAIN REAL
+		= 0.1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  fail
+		LABEL "Failure of %OBJECT"
+		DOMAIN BOOLEAN
+		= FALSE;
+	ATTRIBUTE
+	  connected
+		LABEL "%OBJECT is linked to a source"
+		DOMAIN BOOLEAN
+		REINITIALISATION FALSE;
+	OCCURRENCE
+	  xx1
+		GROUP simu_group
+		IF fail OF Target = FALSE
+		MAY_OCCUR
+		  FAULT fail
+		  DIST EXP (0)
+		  INDUCING fail OF Target <-- TRUE;
+	  xx2
+		GROUP simu_group
+		IF fail OF Target = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (0.1)
+		  INDUCING fail OF Target <-- FALSE;
+
+OBJECT bidir_1 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_1 Node_2;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_1 = FALSE) AND ((fail OF Node_1 =
+		  FALSE) AND (fail OF Node_2 = FALSE))) AND (connected OF
+		  Node_1 OR connected OF Node_2)
+		THEN connected OF Node_1 <-- TRUE,
+		  connected OF Node_2 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_1 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_1 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_1 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_1 <-- FALSE;
+
+OBJECT bidir_10 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_4 Node_6;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_10 = FALSE) AND ((fail OF Node_4 =
+		  FALSE) AND (fail OF Node_6 = FALSE))) AND (connected OF
+		  Node_4 OR connected OF Node_6)
+		THEN connected OF Node_4 <-- TRUE,
+		  connected OF Node_6 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_10 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_10 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_10 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_10 <-- FALSE;
+
+OBJECT bidir_11 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_4 Node_5;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_11 = FALSE) AND ((fail OF Node_4 =
+		  FALSE) AND (fail OF Node_5 = FALSE))) AND (connected OF
+		  Node_4 OR connected OF Node_5)
+		THEN connected OF Node_4 <-- TRUE,
+		  connected OF Node_5 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_11 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_11 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_11 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_11 <-- FALSE;
+
+OBJECT bidir_12 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_6 Target;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_12 = FALSE) AND ((fail OF Node_6 =
+		  FALSE) AND (fail OF Target = FALSE))) AND (connected OF
+		  Node_6 OR connected OF Target)
+		THEN connected OF Node_6 <-- TRUE,
+		  connected OF Target <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_12 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_12 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_12 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_12 <-- FALSE;
+
+OBJECT bidir_2 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_2 Source;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_2 = FALSE) AND ((fail OF Node_2 =
+		  FALSE) AND (fail OF Source = FALSE))) AND (connected OF
+		  Node_2 OR connected OF Source)
+		THEN connected OF Node_2 <-- TRUE,
+		  connected OF Source <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_2 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_2 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_2 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_2 <-- FALSE;
+
+OBJECT bidir_3 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_2 Node_7;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_3 = FALSE) AND ((fail OF Node_2 =
+		  FALSE) AND (fail OF Node_7 = FALSE))) AND (connected OF
+		  Node_2 OR connected OF Node_7)
+		THEN connected OF Node_2 <-- TRUE,
+		  connected OF Node_7 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_3 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_3 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_3 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_3 <-- FALSE;
+
+OBJECT bidir_4 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_3 Node_7;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_4 = FALSE) AND ((fail OF Node_3 =
+		  FALSE) AND (fail OF Node_7 = FALSE))) AND (connected OF
+		  Node_3 OR connected OF Node_7)
+		THEN connected OF Node_3 <-- TRUE,
+		  connected OF Node_7 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_4 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_4 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_4 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_4 <-- FALSE;
+
+OBJECT bidir_5 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_2 Node_3;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_5 = FALSE) AND ((fail OF Node_2 =
+		  FALSE) AND (fail OF Node_3 = FALSE))) AND (connected OF
+		  Node_2 OR connected OF Node_3)
+		THEN connected OF Node_2 <-- TRUE,
+		  connected OF Node_3 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_5 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_5 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_5 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_5 <-- FALSE;
+
+OBJECT bidir_6 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_1 Node_5;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_6 = FALSE) AND ((fail OF Node_1 =
+		  FALSE) AND (fail OF Node_5 = FALSE))) AND (connected OF
+		  Node_1 OR connected OF Node_5)
+		THEN connected OF Node_1 <-- TRUE,
+		  connected OF Node_5 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_6 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_6 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_6 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_6 <-- FALSE;
+
+OBJECT bidir_7 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_7 Target;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_7 = FALSE) AND ((fail OF Node_7 =
+		  FALSE) AND (fail OF Target = FALSE))) AND (connected OF
+		  Node_7 OR connected OF Target)
+		THEN connected OF Node_7 <-- TRUE,
+		  connected OF Target <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_7 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_7 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_7 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_7 <-- FALSE;
+
+OBJECT bidir_8 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_3 Node_4;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_8 = FALSE) AND ((fail OF Node_3 =
+		  FALSE) AND (fail OF Node_4 = FALSE))) AND (connected OF
+		  Node_3 OR connected OF Node_4)
+		THEN connected OF Node_3 <-- TRUE,
+		  connected OF Node_4 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_8 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_8 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_8 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_8 <-- FALSE;
+
+OBJECT bidir_9 IS_A bi_dir_link;
+	INTERFACE
+	  extremity
+		= Node_4 Target;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF bidir_9 = FALSE) AND ((fail OF Node_4 =
+		  FALSE) AND (fail OF Target = FALSE))) AND (connected OF
+		  Node_4 OR connected OF Target)
+		THEN connected OF Node_4 <-- TRUE,
+		  connected OF Target <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF bidir_9 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF bidir_9 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF bidir_9 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF bidir_9 <-- FALSE;
+
+OBJECT ud_1 IS_A mono_dir_link;
+	INTERFACE
+	  start
+		= Source;
+	  end
+		= Node_1;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF ud_1 = FALSE) AND connected OF Source) AND
+		  (fail OF Node_1 = FALSE)
+		THEN connected OF Node_1 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF ud_1 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF ud_1 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF ud_1 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF ud_1 <-- FALSE;
+
+OBJECT ud_2 IS_A mono_dir_link;
+	INTERFACE
+	  start
+		= Node_1;
+	  end
+		= Node_3;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF ud_2 = FALSE) AND connected OF Node_1) AND
+		  (fail OF Node_3 = FALSE)
+		THEN connected OF Node_3 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF ud_2 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF ud_2 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF ud_2 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF ud_2 <-- FALSE;
+
+OBJECT ud_3 IS_A mono_dir_link;
+	INTERFACE
+	  start
+		= Node_5;
+	  end
+		= Node_6;
+	CONSTANT
+	  link_lambda
+		DOMAIN REAL
+		= 1e-05;
+	  link_mu
+		DOMAIN REAL
+		= 1;
+	(*FAILURE*)
+	ATTRIBUTE
+	  interruption
+		LABEL "The link %OBJECT is broken"
+		DOMAIN BOOLEAN
+		= FALSE;
+	INTERACTION
+	  rule1
+		STEP default_step
+		IF ((interruption OF ud_3 = FALSE) AND connected OF Node_5) AND
+		  (fail OF Node_6 = FALSE)
+		THEN connected OF Node_6 <-- TRUE;
+	OCCURRENCE
+	  xx3
+		GROUP simu_group
+		IF interruption OF ud_3 = FALSE
+		MAY_OCCUR
+		  FAULT interruption
+		  DIST EXP (1e-05)
+		  INDUCING interruption OF ud_3 <-- TRUE;
+	  xx4
+		GROUP simu_group
+		IF interruption OF ud_3 = TRUE
+		MAY_OCCUR
+		  REPAIR rep
+		  DIST EXP (1)
+		  INDUCING interruption OF ud_3 <-- FALSE;
+
+OBJECT __ARBRE__EIRM IS_A FIGARO;
+	CONSTANT
+	  Profil1
+		DOMAIN BOOLEAN
+		= TRUE;
+
