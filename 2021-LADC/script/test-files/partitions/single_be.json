@@ -1,0 +1,330 @@
+{
+    "name": "Single BEs",
+    "default": {
+        "type": "single_be",
+        "rate": 75
+    },
+    "blocks": [
+        {
+            "name": "Block EP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block SafeEP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block TP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block SafeTP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block TCS",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block BrakeM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block PowertrainM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block SteerM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 75
+            } 
+        },
+        {
+            "name": "Block BUS Sensor-EP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS Sensor-SafeEP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS EP-TP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS TP-EP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS SafeEP-SafeTP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS SafeEP-TCS",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS SafeTP-TCS",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS TP-TCS",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS TP-AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS AC-TP",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS TCS-AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS AC-BrakeM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS BrakeM-AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS AC-PowertrainM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS PowertrainM-AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS AC-SteerM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS SteerM-AC",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS Actuator-BrakeM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS Actuator-PowertrainM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        },
+        {
+            "name": "Block BUS Actuator-SteerM",
+            "pattern": {
+                "type": "single_be",
+                "rate": 50
+            } 
+        }
+    ],
+    "assignment": [
+        {
+            "component": "HW EP",
+            "block": "Block EP"
+        },
+        {
+            "component": "HW SafeEP",
+            "block": "Block SafeEP"
+        },
+        {
+            "component": "HW TP",
+            "block": "Block TP"
+        },
+        {
+            "component": "HW SafeTP",
+            "block": "Block SafeTP"
+        },
+        {
+            "component": "HW TCS",
+            "block": "Block TCS"
+        },
+        {
+            "component": "HW AC",
+            "block": "Block AC"
+        },
+        {
+            "component": "HW BrakeM",
+            "block": "Block BrakeM"
+        },
+        {
+            "component": "HW PowertrainM",
+            "block": "Block PowertrainM"
+        },
+        {
+            "component": "HW SteerM",
+            "block": "Block SteerM"
+        },
+        {
+            "component": "BUS Sensor-EP",
+            "block": "Block BUS Sensor-EP"
+        },
+        {
+            "component": "BUS Sensor-SafeEP",
+            "block": "Block BUS Sensor-SafeEP"
+        },
+        {
+            "component": "BUS EP-TP",
+            "block": "Block BUS EP-TP"
+        },
+        {
+            "component": "BUS TP-EP",
+            "block": "Block BUS TP-EP"
+        },
+        {
+            "component": "BUS SafeEP-SafeTP",
+            "block": "Block BUS SafeEP-SafeTP"
+        },
+        {
+            "component": "BUS SafeEP-TCS",
+            "block": "Block BUS SafeEP-TCS"
+        },
+        {
+            "component": "BUS SafeTP-TCS",
+            "block": "Block BUS SafeTP-TCS"
+        },
+        {
+            "component": "BUS TP-TCS",
+            "block": "Block BUS TP-TCS"
+        },
+        {
+            "component": "BUS TCS-AC",
+            "block": "Block BUS TCS-AC"
+        },
+        {
+            "component": "BUS TP-AC",
+            "block": "Block BUS TP-AC"
+        },
+        {
+            "component": "BUS AC-TP",
+            "block": "Block BUS AC-TP"
+        },
+        {
+            "component": "BUS AC-BrakeM",
+            "block": "Block BUS AC-BrakeM"
+        },
+        {
+            "component": "BUS BrakeM-AC",
+            "block": "Block BUS BrakeM-AC"
+        },
+        {
+            "component": "BUS AC-PowertrainM",
+            "block": "Block BUS AC-PowertrainM"
+        },
+        {
+            "component": "BUS PowertrainM-AC",
+            "block": "Block BUS PowertrainM-AC"
+        },
+        {
+            "component": "BUS AC-SteerM",
+            "block": "Block BUS AC-SteerM"
+        },
+        {
+            "component": "BUS SteerM-AC",
+            "block": "Block BUS SteerM-AC"
+        },
+        {
+            "component": "BUS Actuator-BrakeM",
+            "block": "Block BUS Actuator-BrakeM"
+        },
+        {
+            "component": "BUS Actuator-PowertrainM",
+            "block": "Block BUS Actuator-PowertrainM"
+        },
+        {
+            "component": "BUS Actuator-SteerM",
+            "block": "Block BUS Actuator-SteerM"
+        }
+    ]
+}

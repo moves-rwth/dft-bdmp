@@ -1,0 +1,257 @@
+{
+    "name": "Safety concept 1",
+    "parameters": {
+        "rTrans": 10000,
+        "rPerm": 1000,
+        "rSafety": 1000,
+        "rCovD": 0.99,
+        "rCovB": 0.90,
+        "rCovQM": 0.6,
+        "rHW": 100
+    },
+    "default": {
+        "type": "transient_permanent",
+        "rate_transient": "rTrans",
+        "coverage_transient": "rCovD",
+        "safety_rate_transient": "rSafety",
+        "rate_permanent": "rPerm",
+        "coverage_permanent": "rCovD",
+        "safety_rate_permanent": "rSafety"
+    },
+    "blocks": [
+        {
+            "name": "ADAS1",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "rTrans",
+                "coverage_transient": "rCovB",
+                "safety_rate_transient": "rSafety",
+                "rate_permanent": "rPerm",
+                "coverage_permanent": "rCovB",
+                "safety_rate_permanent": "rSafety"
+            }
+        },
+        {
+            "name": "ADAS2",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "rTrans",
+                "coverage_transient": "rCovB",
+                "safety_rate_transient": "rSafety",
+                "rate_permanent": "rPerm",
+                "coverage_permanent": "rCovB",
+                "safety_rate_permanent": "rSafety"
+            }
+        },
+        {
+            "name": "ADAS3",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "rTrans",
+                "coverage_transient": "rCovB",
+                "safety_rate_transient": "rSafety",
+                "rate_permanent": "rPerm",
+                "coverage_permanent": "rCovB",
+                "safety_rate_permanent": "rSafety"
+            }
+        },
+        {
+            "name": "I_ECU",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU1",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU2",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU3",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "BUS",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        }
+    ],
+    "assignment": [
+        {
+            "component": "HW-EP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-TP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-AM1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-EP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-TP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-AM2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-EP3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "HW-TP3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "HW-AM3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "HW-Voter",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-Actuator1",
+            "block": "I_ECU"
+        },
+        {
+            "component": "HW-Actuator2",
+            "block": "ECU1"
+        },
+        {
+            "component": "HW-Actuator3",
+            "block": "ECU2"
+        },
+        {
+            "component": "HW-Actuator4",
+            "block": "ECU3"
+        },
+        {
+            "component": "BUS Sensors-EP1",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Sensors-EP2",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Sensors-EP3",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS EP1-TP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS TP1-EP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS TP1-AM1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS AM1-TP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS EP2-TP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS TP2-EP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS TP2-AM2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS AM2-TP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS EP3-TP3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS TP3-EP3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS TP3-AM3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS AM3-TP3",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS Voter-AM1",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS AM1-Voter",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Voter-AM2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS AM2-Voter",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS Voter-AM3",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS AM3-Voter",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator1-Voter",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator2-Voter",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator3-Voter",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator4-Voter",
+            "block": "BUS"
+        }
+    ]
+}

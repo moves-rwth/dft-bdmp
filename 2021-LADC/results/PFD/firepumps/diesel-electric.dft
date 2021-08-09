@@ -1,0 +1,90 @@
+//Sprinkler does not deliver water 
+ toplevel "Both_pumps_fail";
+ 
+
+
+"Both_pumps_fail" and "Electric_pump_fails" "Diesel_pump_fails";
+
+//Electric pump fails A1-2
+
+"Electric_pump_fails" or "Isolation_valves_not_working_ep" "Non_return_valve_faulty_ep" "No_water_from_pump_ep";
+"Isolation_valves_not_working_ep" or "Inlet_isolation_valve_faulty_ep" "Outlet_isolation_valve_monitored_not_working_ep";
+"Inlet_isolation_valve_faulty_ep" lambda=8.47e-3 dorm=0.0;
+"Outlet_isolation_valve_monitored_not_working_ep" pand "Monitoring_problem_dummy1" "Valve_closed_leaking_3"; 
+"Monitoring_problem_dummy1" lambda=0.0 dorm=0.0;
+"Valve_closed_leaking_3" lambda=7.05e-4 dorm=0.0;
+"Non_return_valve_faulty_ep" lambda=1.09e-3 dorm=0.0; 
+"No_water_from_pump_ep" or "Pressure_switch_not_working" "Pump_can_not_operate_ep";
+"Pressure_switch_not_working" and "PS1_faulty" "PS2_faulty";
+"PS1_faulty" lambda=1.71e-3 dorm=0.0;
+"PS2_faulty" lambda=1.71e-3 dorm=0.0; 
+"Pump_can_not_operate_ep" or "Faulty_pump_ep" "No_power_to_drive_pump_ep";
+"Faulty_pump_ep" lambda=7.44e-4 dorm=0.0; 
+"No_power_to_drive_pump_ep" and "Power_failure_dummy1" "wiring_burn_out";
+"Power_failure_dummy1" lambda=0.0 dorm=0.0; 
+"wiring_burn_out" lambda=2.19e-4 dorm=0.0; 
+
+//Diesel pump fails A1-2
+
+"Diesel_pump_fails" or "Isolation_valves_not_working_dp" "Non_return_valve_faulty_dp" "No_water_from_pump_dp";
+"Isolation_valves_not_working_dp" or "Inlet_isolation_valve_faulty_dp" "Outlet_isolation_valve_monitored_not_working_dp";
+"Inlet_isolation_valve_faulty_dp" lambda=8.14e-3 dorm=0.0;
+"Outlet_isolation_valve_monitored_not_working_dp" pand "Monitoring_problem_dummy2" "Valve_closed_leaking_4"; 
+"Monitoring_problem_dummy2" lambda=0.0 dorm=0.0;
+"Valve_closed_leaking_4" lambda=7.05e-4 dorm=0.0;
+"Non_return_valve_faulty_dp" lambda=1.09e-3 dorm=0.0; 
+"No_water_from_pump_dp" or "Pressure_switch_dp_not_working" "Pump_can_not_operate_dp";
+"Pressure_switch_dp_not_working" and "PS1_dp_faulty" "PS2_dp_faulty";
+"PS1_dp_faulty" lambda=1.17e-3 dorm=0.0;
+"PS2_dp_faulty" lambda=1.17e-3 dorm=0.0;
+"Pump_can_not_operate_dp" or "Faulty_pump_dp" "No_power_to_drive_pump_dp";
+"Faulty_pump_dp" lambda=3.57e-4 dorm=0.0; 
+"No_power_to_drive_pump_dp" csp "Power_failure_dummy2" "Flat_battery";
+"Power_failure_dummy2" lambda=0.0 dorm=0.0; 
+"Flat_battery" pand "Monitoring_problem_dummy3" "diesel_pump_backup_battery_flat"; 
+"Monitoring_problem_dummy3" lambda=0.0 dorm=0.0;
+"diesel_pump_backup_battery_flat" lambda=1.39e-2 dorm=0.1; 
+
+
+
+//Moniroting Problem 
+
+"fdep_monitoring" fdep "monitoring_problem" "Monitoring_problem_dummy1" "Monitoring_problem_dummy2" "Monitoring_problem_dummy3" ;
+
+"monitoring_problem" or "Operator_not_noticing_alarm" "Monitor_alram_not_indicated_in_FIP" "Monitoring_device_alram_faulty";
+"Operator_not_noticing_alarm" lambda=3e-2 dorm=0.0; 
+"Monitoring_device_alram_faulty" lambda=4.4e-3 dorm=0.0; 
+"Monitor_alram_not_indicated_in_FIP" or "No_power_to_run_FIP" "FIP_faulty" ;	
+"No_power_to_run_FIP" csp  "power_failure_dummy3" "Backup_UPS_battery_Failure";
+"power_failure_dummy3" lambda=0.0 dorm=0.0;
+"Backup_UPS_battery_Failure" lambda=3.19e-2 dorm=0.1;
+"FIP_faulty" lambda=4.32e-2 dorm=0.0;
+"fdep_FIP" fdep "FIP_HW_failure" "FIP_faulty";
+"FIP_HW_failure" or "FIP_HW_Transient_Failure" "FIP_HW_Permanent_Failure";
+"FIP_HW_Transient_Failure" or "FIP_HW_Transient_UnCovered_Failure" "FIP_HW_Transient_Covered_Failure" ;
+"FIP_HW_Transient_UnCovered_Failure" lambda=1e-7 dorm=0.0;
+"FIP_HW_Transient_Covered_Failure" and "FIP_HW_Transient_Covered_SafetyMech_Failure" "FIP_HW_Transient_Covered_Failure_Rate";
+"FIP_HW_Transient_Covered_SafetyMech_Failure" lambda=1e-6 dorm=0.0;
+"FIP_HW_Transient_Covered_Failure_Rate" lambda=9.9e-6 dorm=0.0;
+"FIP_HW_Transient_Failure_SEQ" seq "FIP_HW_Transient_Covered_SafetyMech_Failure" "FIP_HW_Transient_Covered_Failure_Rate";
+"FIP_HW_Permanent_Failure" or "FIP_HW_Permanent_UnCovered_Failure" "FIP_HW_Permanent_Covered_Failure" ;
+"FIP_HW_Permanent_UnCovered_Failure" lambda=1e-8 dorm=0.0;
+"FIP_HW_Permanent_Covered_Failure" and "FIP_HW_Permanent_Covered_SafetyMech_Failure" "FIP_HW_Permanent_Covered_Failure_Rate";
+"FIP_HW_Permanent_Covered_SafetyMech_Failure" lambda=1e-6 dorm=0.0;
+"FIP_HW_Permanent_Covered_Failure_Rate" lambda=9.9e-7 dorm=0.0;
+"FIP_HW_Permanent_Failure_SEQ" seq "FIP_HW_Permanent_Covered_SafetyMech_Failure" "FIP_HW_Permanent_Covered_Failure_Rate";
+"fdep_wiring_burnout" fdep "wiring_burn_out" "dummy_power_failure";
+
+//Power failure A1A24
+
+"fdep_power_failure_dummy" fdep "power_failure" "dummy_power_failure";
+"fdep_power_failure" fdep "dummy_power_failure" "Power_failure_dummy1" "Power_failure_dummy2" "power_failure_dummy3"; 
+"dummy_power_failure" lambda=0.0 dorm=0.0;
+
+"power_failure" or "transfer_to_backup_fails" "Both_sources_fail";
+"transfer_to_backup_fails" pand "Transfer_switch_failure" "Street_power_failure";
+"Transfer_switch_failure" lambda=1.17e-3 dorm=0;
+"Street_power_failure"  lambda=1.11e-3 dorm=0;
+"Both_sources_fail" csp "Street_power_failure" "Diesel_generator_fail";
+"Diesel_generator_fail" lambda=2.35e-3 dorm=0.1;
+"fdep_mains" fdep "Street_power_failure" "Diesel_generator_fail";

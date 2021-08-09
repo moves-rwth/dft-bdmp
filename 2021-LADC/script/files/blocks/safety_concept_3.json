@@ -1,0 +1,116 @@
+{
+    "name": "Safety Concept 3",
+    "parameters": {
+        "rSensorsInt": 10,
+        "rEPInt": 10,
+        "rTPInt": 10,
+        "rfb_EPInt": 10,
+        "rfb_TPInt": 10,
+        "rSwitchInt": 10,
+        "rAMInt": 10,
+        "rActuatorInt": 10
+    },
+    "logical_blocks": [
+        {
+            "name": "Sensors",
+            "rate": "rSensorsInt"
+        },
+        {
+            "name": "EP",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "fb_EP",
+            "rate": "rfb_EPInt"
+        },
+        {
+            "name": "fb_TP",
+            "rate": "rfb_TPInt"
+        },
+        {
+            "name": "Switch",
+            "rate": "rSwitchInt"
+        },
+        {
+            "name": "AM",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "Actuator1",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator2",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator3",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator4",
+            "rate": "rActuatorInt"
+        }
+    ],
+    "buses": [
+        {
+            "from": "EP",
+            "to": "TP",
+            "type": "both"
+        },
+        {
+            "from": "fb_EP",
+            "to": "fb_TP",
+            "type": "both"
+        },
+        {
+            "from": "TP",
+            "to": "Switch",
+            "type": "both"
+        },
+        {
+            "from": "fb_TP",
+            "to": "Switch",
+            "type": "both"
+        },
+        {
+            "from": "Switch",
+            "to": "AM",
+            "type": "both"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "fb_EP",
+            "type": "nominal"
+        },
+        {
+            "from": "Actuator1",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator2",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator3",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator4",
+            "to": "AM",
+            "type": "potential"
+        }
+    ]
+}

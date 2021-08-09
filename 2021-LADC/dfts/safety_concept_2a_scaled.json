@@ -1,0 +1,3696 @@
+{
+    "toplevel": "1",
+    "parameters": {
+        "rTCSInt": 0,
+        "rTPInt": 0,
+        "rActuatorInt": 1,
+        "rSensorsInt": 1,
+        "rAMInt": 0,
+        "rs_TPInt": 0,
+        "rEPInt": 0,
+        "rs_EPInt": 0
+    },
+    "nodes": [
+        {
+            "data": {
+                "id": "1",
+                "name": "T",
+                "children": [
+                    "6",
+                    "177",
+                    "48",
+                    "54",
+                    "179"
+                ],
+                "type": "or",
+                "label": "T"
+            },
+            "position": {
+                "x": 2042.8238900668653,
+                "y": -935.8378398057928
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or toplevel"
+        },
+        {
+            "data": {
+                "id": "183",
+                "name": "s_TP wrong Nominal Value",
+                "type": "and",
+                "children": [
+                    "124",
+                    "130"
+                ],
+                "label": "s_TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 4123.525044521732,
+                "y": 249.5057676326023
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "6",
+                "name": "Sensors",
+                "children": [
+                    "185"
+                ],
+                "type": "or",
+                "label": "Sensors"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "7",
+                "name": "dep Sensors",
+                "children": [
+                    "6",
+                    "140",
+                    "143",
+                    "146"
+                ],
+                "type": "fdep",
+                "label": "dep Sensors"
+            },
+            "position": {
+                "x": 100,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "8",
+                "dorm": "1",
+                "name": "EP internal",
+                "rate": "rEPInt",
+                "type": "be",
+                "label": "EP internal (rEPInt)"
+            },
+            "position": {
+                "x": 450,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "9",
+                "name": "EP wrong Nominal Value",
+                "children": [
+                    "142"
+                ],
+                "type": "or",
+                "label": "EP wrong Nominal Value"
+            },
+            "position": {
+                "x": 600,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "10",
+                "name": "EP wrong Potential",
+                "children": [
+                    "103"
+                ],
+                "type": "or",
+                "label": "EP wrong Potential"
+            },
+            "position": {
+                "x": 750,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "11",
+                "name": "HW-EP",
+                "children": [],
+                "type": "or",
+                "label": "HW-EP"
+            },
+            "position": {
+                "x": 600,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "EP",
+                "children": [
+                    "8",
+                    "9",
+                    "10",
+                    "11"
+                ],
+                "type": "or",
+                "label": "EP"
+            },
+            "position": {
+                "x": 600,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "dep EP",
+                "children": [
+                    "12",
+                    "98"
+                ],
+                "type": "fdep",
+                "label": "dep EP"
+            },
+            "position": {
+                "x": 700,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "14",
+                "dorm": "1",
+                "name": "TP internal",
+                "rate": "rTPInt",
+                "type": "be",
+                "label": "TP internal (rTPInt)"
+            },
+            "position": {
+                "x": 1050,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "15",
+                "name": "TP wrong Nominal Value",
+                "children": [
+                    "100"
+                ],
+                "type": "or",
+                "label": "TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 1200,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "16",
+                "name": "TP wrong Potential",
+                "children": [
+                    "121"
+                ],
+                "type": "or",
+                "label": "TP wrong Potential"
+            },
+            "position": {
+                "x": 1350,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "17",
+                "name": "HW-TP",
+                "children": [],
+                "type": "or",
+                "label": "HW-TP"
+            },
+            "position": {
+                "x": 1200,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "TP",
+                "children": [
+                    "14",
+                    "15",
+                    "16",
+                    "17"
+                ],
+                "type": "or",
+                "label": "TP"
+            },
+            "position": {
+                "x": 1200,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "dep TP",
+                "children": [
+                    "18",
+                    "101",
+                    "116"
+                ],
+                "type": "fdep",
+                "label": "dep TP"
+            },
+            "position": {
+                "x": 1300,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "20",
+                "dorm": "1",
+                "name": "s_EP1 internal",
+                "rate": "rs_EPInt",
+                "type": "be",
+                "label": "s_EP1 internal (rs_EPInt)"
+            },
+            "position": {
+                "x": 1650,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "21",
+                "name": "s_EP1 wrong Nominal Value",
+                "children": [
+                    "145"
+                ],
+                "type": "or",
+                "label": "s_EP1 wrong Nominal Value"
+            },
+            "position": {
+                "x": 1800,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "22",
+                "name": "s_EP1 wrong Potential",
+                "children": [
+                    "109"
+                ],
+                "type": "or",
+                "label": "s_EP1 wrong Potential"
+            },
+            "position": {
+                "x": 1950,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "23",
+                "name": "HW-s_EP1",
+                "children": [],
+                "type": "or",
+                "label": "HW-s_EP1"
+            },
+            "position": {
+                "x": 1800,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "s_EP1",
+                "children": [
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "type": "or",
+                "label": "s_EP1"
+            },
+            "position": {
+                "x": 1800,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "dep s_EP1",
+                "children": [
+                    "24",
+                    "104"
+                ],
+                "type": "fdep",
+                "label": "dep s_EP1"
+            },
+            "position": {
+                "x": 1900,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "26",
+                "dorm": "1",
+                "name": "s_TP1 internal",
+                "rate": "rs_TPInt",
+                "type": "be",
+                "label": "s_TP1 internal (rs_TPInt)"
+            },
+            "position": {
+                "x": 2250,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "27",
+                "name": "s_TP1 wrong Nominal Value",
+                "children": [
+                    "106"
+                ],
+                "type": "or",
+                "label": "s_TP1 wrong Nominal Value"
+            },
+            "position": {
+                "x": 2400,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "28",
+                "name": "s_TP1 wrong Potential",
+                "children": [
+                    "127"
+                ],
+                "type": "or",
+                "label": "s_TP1 wrong Potential"
+            },
+            "position": {
+                "x": 2550,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "29",
+                "name": "HW-s_TP1",
+                "children": [],
+                "type": "or",
+                "label": "HW-s_TP1"
+            },
+            "position": {
+                "x": 2400,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "s_TP1",
+                "children": [
+                    "26",
+                    "27",
+                    "28",
+                    "29"
+                ],
+                "type": "or",
+                "label": "s_TP1"
+            },
+            "position": {
+                "x": 2400,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "dep s_TP1",
+                "children": [
+                    "30",
+                    "107",
+                    "122"
+                ],
+                "type": "fdep",
+                "label": "dep s_TP1"
+            },
+            "position": {
+                "x": 2500,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "32",
+                "dorm": "1",
+                "name": "s_EP2 internal",
+                "rate": "rs_EPInt",
+                "type": "be",
+                "label": "s_EP2 internal (rs_EPInt)"
+            },
+            "position": {
+                "x": 2850,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "33",
+                "name": "s_EP2 wrong Nominal Value",
+                "children": [
+                    "148"
+                ],
+                "type": "or",
+                "label": "s_EP2 wrong Nominal Value"
+            },
+            "position": {
+                "x": 3000,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "34",
+                "name": "s_EP2 wrong Potential",
+                "children": [
+                    "115"
+                ],
+                "type": "or",
+                "label": "s_EP2 wrong Potential"
+            },
+            "position": {
+                "x": 3150,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "35",
+                "name": "HW-s_EP2",
+                "children": [],
+                "type": "or",
+                "label": "HW-s_EP2"
+            },
+            "position": {
+                "x": 3000,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "36",
+                "name": "s_EP2",
+                "children": [
+                    "32",
+                    "33",
+                    "34",
+                    "35"
+                ],
+                "type": "or",
+                "label": "s_EP2"
+            },
+            "position": {
+                "x": 3000,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "37",
+                "name": "dep s_EP2",
+                "children": [
+                    "36",
+                    "110"
+                ],
+                "type": "fdep",
+                "label": "dep s_EP2"
+            },
+            "position": {
+                "x": 3100,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "38",
+                "dorm": "1",
+                "name": "s_TP2 internal",
+                "rate": "rs_TPInt",
+                "type": "be",
+                "label": "s_TP2 internal (rs_TPInt)"
+            },
+            "position": {
+                "x": 3450,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "39",
+                "name": "s_TP2 wrong Nominal Value",
+                "children": [
+                    "112"
+                ],
+                "type": "or",
+                "label": "s_TP2 wrong Nominal Value"
+            },
+            "position": {
+                "x": 3600,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "40",
+                "name": "s_TP2 wrong Potential",
+                "children": [
+                    "133"
+                ],
+                "type": "or",
+                "label": "s_TP2 wrong Potential"
+            },
+            "position": {
+                "x": 3750,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "41",
+                "name": "HW-s_TP2",
+                "children": [],
+                "type": "or",
+                "label": "HW-s_TP2"
+            },
+            "position": {
+                "x": 3600,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "42",
+                "name": "s_TP2",
+                "children": [
+                    "38",
+                    "39",
+                    "40",
+                    "41"
+                ],
+                "type": "or",
+                "label": "s_TP2"
+            },
+            "position": {
+                "x": 3600,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "43",
+                "name": "dep s_TP2",
+                "children": [
+                    "42",
+                    "113",
+                    "128"
+                ],
+                "type": "fdep",
+                "label": "dep s_TP2"
+            },
+            "position": {
+                "x": 3700,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "44",
+                "dorm": "1",
+                "name": "TCS internal",
+                "rate": "rTCSInt",
+                "type": "be",
+                "label": "TCS internal (rTCSInt)"
+            },
+            "position": {
+                "x": 4050,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "45",
+                "name": "TCS wrong Nominal Value",
+                "children": [
+                    "184"
+                ],
+                "type": "or",
+                "label": "TCS wrong Nominal Value"
+            },
+            "position": {
+                "x": 4149.079630099135,
+                "y": 124.2477951908878
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "46",
+                "name": "TCS wrong Potential",
+                "children": [
+                    "139"
+                ],
+                "type": "or",
+                "label": "TCS wrong Potential"
+            },
+            "position": {
+                "x": 4350,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "47",
+                "name": "HW-TCS",
+                "children": [],
+                "type": "or",
+                "label": "HW-TCS"
+            },
+            "position": {
+                "x": 4200,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "48",
+                "name": "TCS",
+                "children": [
+                    "44",
+                    "45",
+                    "46",
+                    "47"
+                ],
+                "type": "or",
+                "label": "TCS"
+            },
+            "position": {
+                "x": 4200,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "49",
+                "name": "dep TCS",
+                "children": [
+                    "48",
+                    "119",
+                    "125",
+                    "131",
+                    "134"
+                ],
+                "type": "fdep",
+                "label": "dep TCS"
+            },
+            "position": {
+                "x": 4300,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "50",
+                "dorm": "1",
+                "name": "AM internal",
+                "rate": "rAMInt",
+                "type": "be",
+                "label": "AM internal (rAMInt)"
+            },
+            "position": {
+                "x": 4650,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "51",
+                "name": "AM wrong Nominal Value",
+                "children": [
+                    "136"
+                ],
+                "type": "or",
+                "label": "AM wrong Nominal Value"
+            },
+            "position": {
+                "x": 4800,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "52",
+                "name": "AM wrong Potential",
+                "children": [
+                    "151",
+                    "154",
+                    "157",
+                    "160",
+                    "163",
+                    "166",
+                    "180"
+                ],
+                "type": "or",
+                "label": "AM wrong Potential"
+            },
+            "position": {
+                "x": 4950,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "53",
+                "name": "HW-AM",
+                "children": [],
+                "type": "or",
+                "label": "HW-AM"
+            },
+            "position": {
+                "x": 4800,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "54",
+                "name": "AM",
+                "children": [
+                    "50",
+                    "51",
+                    "52",
+                    "53"
+                ],
+                "type": "or",
+                "label": "AM"
+            },
+            "position": {
+                "x": 4800,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "55",
+                "name": "dep AM",
+                "children": [
+                    "54",
+                    "137"
+                ],
+                "type": "fdep",
+                "label": "dep AM"
+            },
+            "position": {
+                "x": 4900,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "56",
+                "dorm": "1",
+                "name": "Actuator1 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator1 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 5250,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "59",
+                "name": "HW-Actuator1",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator1"
+            },
+            "position": {
+                "x": 5400,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "60",
+                "name": "Actuator1",
+                "children": [
+                    "56",
+                    "59"
+                ],
+                "type": "or",
+                "label": "Actuator1"
+            },
+            "position": {
+                "x": 5400,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "61",
+                "name": "dep Actuator1",
+                "children": [
+                    "60",
+                    "149"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator1"
+            },
+            "position": {
+                "x": 5500,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "62",
+                "dorm": "1",
+                "name": "Actuator2 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator2 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 5850,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "65",
+                "name": "HW-Actuator2",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator2"
+            },
+            "position": {
+                "x": 6000,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "66",
+                "name": "Actuator2",
+                "children": [
+                    "62",
+                    "65"
+                ],
+                "type": "or",
+                "label": "Actuator2"
+            },
+            "position": {
+                "x": 6000,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "67",
+                "name": "dep Actuator2",
+                "children": [
+                    "66",
+                    "152"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator2"
+            },
+            "position": {
+                "x": 6100,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "68",
+                "dorm": "1",
+                "name": "Actuator3 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator3 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 6450,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "71",
+                "name": "HW-Actuator3",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator3"
+            },
+            "position": {
+                "x": 6600,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "72",
+                "name": "Actuator3",
+                "children": [
+                    "68",
+                    "71"
+                ],
+                "type": "or",
+                "label": "Actuator3"
+            },
+            "position": {
+                "x": 6600,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "73",
+                "name": "dep Actuator3",
+                "children": [
+                    "72",
+                    "155"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator3"
+            },
+            "position": {
+                "x": 6700,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "74",
+                "dorm": "1",
+                "name": "Actuator4 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator4 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 7050,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "77",
+                "name": "HW-Actuator4",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator4"
+            },
+            "position": {
+                "x": 7200,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "78",
+                "name": "Actuator4",
+                "children": [
+                    "74",
+                    "77"
+                ],
+                "type": "or",
+                "label": "Actuator4"
+            },
+            "position": {
+                "x": 7200,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "79",
+                "name": "dep Actuator4",
+                "children": [
+                    "78",
+                    "158"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator4"
+            },
+            "position": {
+                "x": 7300,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "80",
+                "dorm": "1",
+                "name": "Actuator5 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator5 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 7650,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "83",
+                "name": "HW-Actuator5",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator5"
+            },
+            "position": {
+                "x": 7800,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "84",
+                "name": "Actuator5",
+                "children": [
+                    "80",
+                    "83"
+                ],
+                "type": "or",
+                "label": "Actuator5"
+            },
+            "position": {
+                "x": 7800,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "85",
+                "name": "dep Actuator5",
+                "children": [
+                    "84",
+                    "161"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator5"
+            },
+            "position": {
+                "x": 7900,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "86",
+                "dorm": "1",
+                "name": "Actuator6 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator6 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 8250,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "177",
+                "name": "Navigator",
+                "type": "and",
+                "children": [
+                    "173",
+                    "176"
+                ],
+                "label": "Navigator"
+            },
+            "position": {
+                "x": 1732.6531540116139,
+                "y": -660.0393303224149
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "89",
+                "name": "HW-Actuator6",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator6"
+            },
+            "position": {
+                "x": 8400,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "90",
+                "name": "Actuator6",
+                "children": [
+                    "86",
+                    "89"
+                ],
+                "type": "or",
+                "label": "Actuator6"
+            },
+            "position": {
+                "x": 8400,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "91",
+                "name": "dep Actuator6",
+                "children": [
+                    "90",
+                    "164"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator6"
+            },
+            "position": {
+                "x": 8508.579427740904,
+                "y": 413.7270843854455
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "92",
+                "dorm": "1",
+                "name": "Actuator7 internal",
+                "rate": "rActuatorInt",
+                "type": "be",
+                "label": "Actuator7 internal (rActuatorInt)"
+            },
+            "position": {
+                "x": 8850,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "175",
+                "name": "s_Path2",
+                "type": "or",
+                "children": [
+                    "36",
+                    "42"
+                ],
+                "label": "s_Path2"
+            },
+            "position": {
+                "x": 3295.7000890997033,
+                "y": -177.24491021798573
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "173",
+                "name": "n_Path",
+                "type": "or",
+                "children": [
+                    "12",
+                    "18"
+                ],
+                "label": "n_Path"
+            },
+            "position": {
+                "x": 872.6755932005993,
+                "y": -192.33223584624918
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "95",
+                "name": "HW-Actuator7",
+                "children": [],
+                "type": "or",
+                "label": "HW-Actuator7"
+            },
+            "position": {
+                "x": 9000,
+                "y": 800
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "96",
+                "name": "Actuator7",
+                "children": [
+                    "92",
+                    "95"
+                ],
+                "type": "or",
+                "label": "Actuator7"
+            },
+            "position": {
+                "x": 9000,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "97",
+                "name": "dep Actuator7",
+                "children": [
+                    "96",
+                    "181"
+                ],
+                "type": "fdep",
+                "label": "dep Actuator7"
+            },
+            "position": {
+                "x": 9109.65575117607,
+                "y": 407.1293999263885
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "98",
+                "dorm": "1.0",
+                "name": "EP",
+                "rate": "0.0",
+                "type": "be",
+                "label": "EP (0.0)"
+            },
+            "position": {
+                "x": 1050,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "99",
+                "name": "BUS EP-TP",
+                "children": [],
+                "type": "or",
+                "label": "BUS EP-TP"
+            },
+            "position": {
+                "x": 1100,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "EP wrong Nominal Value",
+                "children": [
+                    "98",
+                    "99"
+                ],
+                "type": "or",
+                "label": "EP wrong Nominal Value"
+            },
+            "position": {
+                "x": 1100,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "101",
+                "dorm": "1.0",
+                "name": "TP",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TP (0.0)"
+            },
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "102",
+                "name": "BUS TP-EP",
+                "children": [],
+                "type": "or",
+                "label": "BUS TP-EP"
+            },
+            "position": {
+                "x": 650,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "103",
+                "name": "TP wrong Potential",
+                "children": [
+                    "101",
+                    "102"
+                ],
+                "type": "or",
+                "label": "TP wrong Potential"
+            },
+            "position": {
+                "x": 650,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "104",
+                "dorm": "1.0",
+                "name": "s_EP1",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_EP1 (0.0)"
+            },
+            "position": {
+                "x": 2250,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "105",
+                "name": "BUS s_EP1-s_TP1",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_EP1-s_TP1"
+            },
+            "position": {
+                "x": 2300,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "s_EP1 wrong Nominal Value",
+                "children": [
+                    "104",
+                    "105"
+                ],
+                "type": "or",
+                "label": "s_EP1 wrong Nominal Value"
+            },
+            "position": {
+                "x": 2300,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "107",
+                "dorm": "1.0",
+                "name": "s_TP1",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_TP1 (0.0)"
+            },
+            "position": {
+                "x": 1800,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "108",
+                "name": "BUS s_TP1-s_EP1",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_TP1-s_EP1"
+            },
+            "position": {
+                "x": 1850,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "109",
+                "name": "s_TP1 wrong Potential",
+                "children": [
+                    "107",
+                    "108"
+                ],
+                "type": "or",
+                "label": "s_TP1 wrong Potential"
+            },
+            "position": {
+                "x": 1850,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "110",
+                "dorm": "1.0",
+                "name": "s_EP2",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_EP2 (0.0)"
+            },
+            "position": {
+                "x": 3450,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "111",
+                "name": "BUS s_EP2-s_TP2",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_EP2-s_TP2"
+            },
+            "position": {
+                "x": 3500,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "s_EP2 wrong Nominal Value",
+                "children": [
+                    "110",
+                    "111"
+                ],
+                "type": "or",
+                "label": "s_EP2 wrong Nominal Value"
+            },
+            "position": {
+                "x": 3500,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "113",
+                "dorm": "1.0",
+                "name": "s_TP2",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_TP2 (0.0)"
+            },
+            "position": {
+                "x": 3000,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "114",
+                "name": "BUS s_TP2-s_EP2",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_TP2-s_EP2"
+            },
+            "position": {
+                "x": 3050,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "115",
+                "name": "s_TP2 wrong Potential",
+                "children": [
+                    "113",
+                    "114"
+                ],
+                "type": "or",
+                "label": "s_TP2 wrong Potential"
+            },
+            "position": {
+                "x": 3050,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "116",
+                "dorm": "1.0",
+                "name": "TP",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TP (0.0)"
+            },
+            "position": {
+                "x": 3837.831792079732,
+                "y": 364.25665725585264
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "117",
+                "name": "BUS TP-TCS",
+                "children": [],
+                "type": "or",
+                "label": "BUS TP-TCS"
+            },
+            "position": {
+                "x": 4100,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "118",
+                "name": "TP wrong Nominal Value",
+                "children": [
+                    "116",
+                    "117"
+                ],
+                "type": "or",
+                "label": "TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 3880.5574535224655,
+                "y": 289.7168422062848
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "119",
+                "dorm": "1.0",
+                "name": "TCS",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TCS (0.0)"
+            },
+            "position": {
+                "x": 1200,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "120",
+                "name": "BUS TCS-TP",
+                "children": [],
+                "type": "or",
+                "label": "BUS TCS-TP"
+            },
+            "position": {
+                "x": 1250,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "121",
+                "name": "TCS wrong Potential",
+                "children": [
+                    "119",
+                    "120"
+                ],
+                "type": "or",
+                "label": "TCS wrong Potential"
+            },
+            "position": {
+                "x": 1250,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "122",
+                "dorm": "1.0",
+                "name": "s_TP1",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_TP1 (0.0)"
+            },
+            "position": {
+                "x": 3976.336244526472,
+                "y": 456.39827898122627
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "123",
+                "name": "BUS s_TP1-TCS",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_TP1-TCS"
+            },
+            "position": {
+                "x": 4150,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "124",
+                "name": "s_TP1 wrong Nominal Value",
+                "children": [
+                    "122",
+                    "123"
+                ],
+                "type": "or",
+                "label": "s_TP1 wrong Nominal Value"
+            },
+            "position": {
+                "x": 4034.8229728432834,
+                "y": 313.9646373971726
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "125",
+                "dorm": "1.0",
+                "name": "TCS",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TCS (0.0)"
+            },
+            "position": {
+                "x": 2400,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "126",
+                "name": "BUS TCS-s_TP1",
+                "children": [],
+                "type": "or",
+                "label": "BUS TCS-s_TP1"
+            },
+            "position": {
+                "x": 2450,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "127",
+                "name": "TCS wrong Potential",
+                "children": [
+                    "125",
+                    "126"
+                ],
+                "type": "or",
+                "label": "TCS wrong Potential"
+            },
+            "position": {
+                "x": 2450,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "128",
+                "dorm": "1.0",
+                "name": "s_TP2",
+                "rate": "0.0",
+                "type": "be",
+                "label": "s_TP2 (0.0)"
+            },
+            "position": {
+                "x": 4117.265476492302,
+                "y": 416.3894169162614
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "129",
+                "name": "BUS s_TP2-TCS",
+                "children": [],
+                "type": "or",
+                "label": "BUS s_TP2-TCS"
+            },
+            "position": {
+                "x": 4200,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "130",
+                "name": "s_TP2 wrong Nominal Value",
+                "children": [
+                    "128",
+                    "129"
+                ],
+                "type": "or",
+                "label": "s_TP2 wrong Nominal Value"
+            },
+            "position": {
+                "x": 4144.230071060958,
+                "y": 357.6106687407707
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "131",
+                "dorm": "1.0",
+                "name": "TCS",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TCS (0.0)"
+            },
+            "position": {
+                "x": 3600,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "132",
+                "name": "BUS TCS-s_TP2",
+                "children": [],
+                "type": "or",
+                "label": "BUS TCS-s_TP2"
+            },
+            "position": {
+                "x": 3650,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "133",
+                "name": "TCS wrong Potential",
+                "children": [
+                    "131",
+                    "132"
+                ],
+                "type": "or",
+                "label": "TCS wrong Potential"
+            },
+            "position": {
+                "x": 3650,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "134",
+                "dorm": "1.0",
+                "name": "TCS",
+                "rate": "0.0",
+                "type": "be",
+                "label": "TCS (0.0)"
+            },
+            "position": {
+                "x": 4650,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "135",
+                "name": "BUS TCS-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS TCS-AM"
+            },
+            "position": {
+                "x": 4700,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "136",
+                "name": "TCS wrong Nominal Value",
+                "children": [
+                    "134",
+                    "135"
+                ],
+                "type": "or",
+                "label": "TCS wrong Nominal Value"
+            },
+            "position": {
+                "x": 4700,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "137",
+                "dorm": "1.0",
+                "name": "AM",
+                "rate": "0.0",
+                "type": "be",
+                "label": "AM (0.0)"
+            },
+            "position": {
+                "x": 4200,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "138",
+                "name": "BUS AM-TCS",
+                "children": [],
+                "type": "or",
+                "label": "BUS AM-TCS"
+            },
+            "position": {
+                "x": 4250,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "139",
+                "name": "AM wrong Potential",
+                "children": [
+                    "137",
+                    "138"
+                ],
+                "type": "or",
+                "label": "AM wrong Potential"
+            },
+            "position": {
+                "x": 4250,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "140",
+                "dorm": "1.0",
+                "name": "Sensors",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Sensors (0.0)"
+            },
+            "position": {
+                "x": 450,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "141",
+                "name": "BUS Sensors-EP",
+                "children": [],
+                "type": "or",
+                "label": "BUS Sensors-EP"
+            },
+            "position": {
+                "x": 500,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "142",
+                "name": "Sensors wrong Nominal Value",
+                "children": [
+                    "140",
+                    "141"
+                ],
+                "type": "or",
+                "label": "Sensors wrong Nominal Value"
+            },
+            "position": {
+                "x": 500,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "143",
+                "dorm": "1.0",
+                "name": "Sensors",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Sensors (0.0)"
+            },
+            "position": {
+                "x": 1650,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "144",
+                "name": "BUS Sensors-s_EP1",
+                "children": [],
+                "type": "or",
+                "label": "BUS Sensors-s_EP1"
+            },
+            "position": {
+                "x": 1700,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "145",
+                "name": "Sensors wrong Nominal Value",
+                "children": [
+                    "143",
+                    "144"
+                ],
+                "type": "or",
+                "label": "Sensors wrong Nominal Value"
+            },
+            "position": {
+                "x": 1700,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "146",
+                "dorm": "1.0",
+                "name": "Sensors",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Sensors (0.0)"
+            },
+            "position": {
+                "x": 2850,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "147",
+                "name": "BUS Sensors-s_EP2",
+                "children": [],
+                "type": "or",
+                "label": "BUS Sensors-s_EP2"
+            },
+            "position": {
+                "x": 2900,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "148",
+                "name": "Sensors wrong Nominal Value",
+                "children": [
+                    "146",
+                    "147"
+                ],
+                "type": "or",
+                "label": "Sensors wrong Nominal Value"
+            },
+            "position": {
+                "x": 2900,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "149",
+                "dorm": "1.0",
+                "name": "Actuator1",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator1 (0.0)"
+            },
+            "position": {
+                "x": 4800,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "150",
+                "name": "BUS Actuator1-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator1-AM"
+            },
+            "position": {
+                "x": 4850,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "151",
+                "name": "Actuator1 wrong Potential",
+                "children": [
+                    "149",
+                    "150"
+                ],
+                "type": "or",
+                "label": "Actuator1 wrong Potential"
+            },
+            "position": {
+                "x": 4850,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "152",
+                "dorm": "1.0",
+                "name": "Actuator2",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator2 (0.0)"
+            },
+            "position": {
+                "x": 4850,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "153",
+                "name": "BUS Actuator2-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator2-AM"
+            },
+            "position": {
+                "x": 4900,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "154",
+                "name": "Actuator2 wrong Potential",
+                "children": [
+                    "152",
+                    "153"
+                ],
+                "type": "or",
+                "label": "Actuator2 wrong Potential"
+            },
+            "position": {
+                "x": 4900,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "155",
+                "dorm": "1.0",
+                "name": "Actuator3",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator3 (0.0)"
+            },
+            "position": {
+                "x": 4900,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "156",
+                "name": "BUS Actuator3-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator3-AM"
+            },
+            "position": {
+                "x": 4950,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "157",
+                "name": "Actuator3 wrong Potential",
+                "children": [
+                    "155",
+                    "156"
+                ],
+                "type": "or",
+                "label": "Actuator3 wrong Potential"
+            },
+            "position": {
+                "x": 4950,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "158",
+                "dorm": "1.0",
+                "name": "Actuator4",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator4 (0.0)"
+            },
+            "position": {
+                "x": 4950,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "159",
+                "name": "BUS Actuator4-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator4-AM"
+            },
+            "position": {
+                "x": 5000,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "160",
+                "name": "Actuator4 wrong Potential",
+                "children": [
+                    "158",
+                    "159"
+                ],
+                "type": "or",
+                "label": "Actuator4 wrong Potential"
+            },
+            "position": {
+                "x": 5000,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "161",
+                "dorm": "1.0",
+                "name": "Actuator5",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator5 (0.0)"
+            },
+            "position": {
+                "x": 5000,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "162",
+                "name": "BUS Actuator5-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator5-AM"
+            },
+            "position": {
+                "x": 5050,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "163",
+                "name": "Actuator5 wrong Potential",
+                "children": [
+                    "161",
+                    "162"
+                ],
+                "type": "or",
+                "label": "Actuator5 wrong Potential"
+            },
+            "position": {
+                "x": 5050,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "164",
+                "dorm": "1.0",
+                "name": "Actuator6",
+                "rate": "0.0",
+                "type": "be",
+                "label": "Actuator6 (0.0)"
+            },
+            "position": {
+                "x": 5057.4744338636665,
+                "y": 382.2187725003353
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "165",
+                "name": "BUS Actuator6-AM",
+                "children": [],
+                "type": "or",
+                "label": "BUS Actuator6-AM"
+            },
+            "position": {
+                "x": 5100,
+                "y": 700
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "166",
+                "name": "Actuator6 wrong Potential",
+                "children": [
+                    "164",
+                    "165"
+                ],
+                "type": "or",
+                "label": "Actuator6 wrong Potential"
+            },
+            "position": {
+                "x": 5100,
+                "y": 200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "184",
+                "name": "TPs_TP wrong Nominal Value",
+                "type": "and",
+                "children": [
+                    "183",
+                    "118"
+                ],
+                "label": "TPs_TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 4045.93209991089,
+                "y": 184.03672061720525
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "179",
+                "name": "Actuators",
+                "type": "or",
+                "children": [
+                    "60",
+                    "66",
+                    "72",
+                    "78",
+                    "84",
+                    "90",
+                    "96"
+                ],
+                "label": "Actuators"
+            },
+            "position": {
+                "x": 7420.04595819789,
+                "y": -465.5694184257357
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "176",
+                "name": "s_Path",
+                "type": "and",
+                "children": [
+                    "174",
+                    "175"
+                ],
+                "label": "s_Path"
+            },
+            "position": {
+                "x": 2704.2769244717774,
+                "y": -457.8691669036852
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "174",
+                "name": "s_Path1",
+                "type": "or",
+                "children": [
+                    "24",
+                    "30"
+                ],
+                "label": "s_Path1"
+            },
+            "position": {
+                "x": 2070.609248084714,
+                "y": -183.2798404692911
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "180",
+                "name": "Actuator7 wrong Potential",
+                "type": "or",
+                "children": [
+                    "181",
+                    "182"
+                ],
+                "label": "Actuator7 wrong Potential"
+            },
+            "position": {
+                "x": 5237.09758524218,
+                "y": 235.05553589502426
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "181",
+                "name": "Actuator7",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "label": "Actuator7 (0)"
+            },
+            "position": {
+                "x": 5307.416191295754,
+                "y": 277.4891774790779
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "182",
+                "name": "BUS Actuator7-AM",
+                "type": "or",
+                "children": [],
+                "label": "BUS Actuator7-AM"
+            },
+            "position": {
+                "x": 5279.531226826233,
+                "y": 699.4008138005254
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "185",
+                "name": "Sensors internal",
+                "type": "vot",
+                "children": [
+                    "186",
+                    "187",
+                    "188",
+                    "189",
+                    "190",
+                    "191",
+                    "192",
+                    "193"
+                ],
+                "voting": "7",
+                "label": "Sensors internal (3/8)"
+            },
+            "position": {
+                "x": -225.98719956519747,
+                "y": 135.16404404163205
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "vot"
+        },
+        {
+            "data": {
+                "id": "186",
+                "name": "Sensor1",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor1 (rSensorsInt)"
+            },
+            "position": {
+                "x": -650.27607795387,
+                "y": 266.3139941742088
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "187",
+                "name": "Sensor2",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor2 (rSensorsInt)"
+            },
+            "position": {
+                "x": -502.69595016351934,
+                "y": 266.38686195661217
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "188",
+                "name": "Sensor3",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor3 (rSensorsInt)"
+            },
+            "position": {
+                "x": -366.17974003919056,
+                "y": 264.45237306122146
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "189",
+                "name": "Sensor4",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor4 (rSensorsInt)"
+            },
+            "position": {
+                "x": -250.73128974035436,
+                "y": 262.5907519482342
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "190",
+                "name": "Sensor5",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor5 (rSensorsInt)"
+            },
+            "position": {
+                "x": -664.3609078156362,
+                "y": 391.76510163385655
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "191",
+                "name": "Sensor6",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor6 (rSensorsInt)"
+            },
+            "position": {
+                "x": -515.0788651239166,
+                "y": 378.03801724841105
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "192",
+                "name": "Sensor7",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor7 (rSensorsInt)"
+            },
+            "position": {
+                "x": -369.22859352855824,
+                "y": 381.46978834477244
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "193",
+                "name": "Sensor8",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "label": "Sensor8 (rSensorsInt)"
+            },
+            "position": {
+                "x": -254.2642618004523,
+                "y": 388.3333305374952
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        }
+    ]
+}

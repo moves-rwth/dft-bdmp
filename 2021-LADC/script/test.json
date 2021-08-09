@@ -1,0 +1,2501 @@
+{
+    "toplevel": "1",
+    "parameters": {
+        "rSensorsInt": 10.0,
+        "rEPInt": 10.0,
+        "rTPInt": 10.0,
+        "rAMInt": 10.0,
+        "rVoterInt": 10.0,
+        "rActuatorInt": 10.0
+    },
+    "nodes": [
+        {
+            "data": {
+                "id": "1",
+                "name": "T",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 0,
+                "y": -100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "2",
+                "name": "Sensors internal",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -150,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "3",
+                "name": "Sensors wrong Nominal Value",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 0,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "4",
+                "name": "Sensors wrong Potential",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 150,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "5",
+                "name": "HW-Sensors",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 0,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "6",
+                "name": "Sensors",
+                "type": "or",
+                "children": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "7",
+                "name": "dep Sensors",
+                "type": "fdep",
+                "children": [
+                    "6",
+                    "146",
+                    "149",
+                    "152"
+                ]
+            },
+            "position": {
+                "x": 100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "8",
+                "name": "EP1 internal",
+                "type": "be",
+                "rate": "rEPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "9",
+                "name": "EP1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "148"
+                ]
+            },
+            "position": {
+                "x": 600,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "10",
+                "name": "EP1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "97"
+                ]
+            },
+            "position": {
+                "x": 750,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "11",
+                "name": "HW-EP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 600,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "EP1",
+                "type": "or",
+                "children": [
+                    "8",
+                    "9",
+                    "10",
+                    "11"
+                ]
+            },
+            "position": {
+                "x": 600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "dep EP1",
+                "type": "fdep",
+                "children": [
+                    "12",
+                    "92"
+                ]
+            },
+            "position": {
+                "x": 700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "14",
+                "name": "TP1 internal",
+                "type": "be",
+                "rate": "rTPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "15",
+                "name": "TP1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "94"
+                ]
+            },
+            "position": {
+                "x": 1200,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "16",
+                "name": "TP1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "103"
+                ]
+            },
+            "position": {
+                "x": 1350,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "17",
+                "name": "HW-TP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1200,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "TP1",
+                "type": "or",
+                "children": [
+                    "14",
+                    "15",
+                    "16",
+                    "17"
+                ]
+            },
+            "position": {
+                "x": 1200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "dep TP1",
+                "type": "fdep",
+                "children": [
+                    "18",
+                    "95",
+                    "98"
+                ]
+            },
+            "position": {
+                "x": 1300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "20",
+                "name": "AM1 internal",
+                "type": "be",
+                "rate": "rAMInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "21",
+                "name": "AM1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "100"
+                ]
+            },
+            "position": {
+                "x": 1800,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "22",
+                "name": "AM1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "109"
+                ]
+            },
+            "position": {
+                "x": 1950,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "23",
+                "name": "HW-AM1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1800,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "AM1",
+                "type": "or",
+                "children": [
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ]
+            },
+            "position": {
+                "x": 1800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "dep AM1",
+                "type": "fdep",
+                "children": [
+                    "24",
+                    "101",
+                    "104"
+                ]
+            },
+            "position": {
+                "x": 1900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "26",
+                "name": "EP2 internal",
+                "type": "be",
+                "rate": "rEPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "27",
+                "name": "EP2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "151"
+                ]
+            },
+            "position": {
+                "x": 2400,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "28",
+                "name": "EP2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "115"
+                ]
+            },
+            "position": {
+                "x": 2550,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "29",
+                "name": "HW-EP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 2400,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "EP2",
+                "type": "or",
+                "children": [
+                    "26",
+                    "27",
+                    "28",
+                    "29"
+                ]
+            },
+            "position": {
+                "x": 2400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "dep EP2",
+                "type": "fdep",
+                "children": [
+                    "30",
+                    "110"
+                ]
+            },
+            "position": {
+                "x": 2500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "32",
+                "name": "TP2 internal",
+                "type": "be",
+                "rate": "rTPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "33",
+                "name": "TP2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "112"
+                ]
+            },
+            "position": {
+                "x": 3000,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "34",
+                "name": "TP2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "121"
+                ]
+            },
+            "position": {
+                "x": 3150,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "35",
+                "name": "HW-TP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 3000,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "36",
+                "name": "TP2",
+                "type": "or",
+                "children": [
+                    "32",
+                    "33",
+                    "34",
+                    "35"
+                ]
+            },
+            "position": {
+                "x": 3000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "37",
+                "name": "dep TP2",
+                "type": "fdep",
+                "children": [
+                    "36",
+                    "113",
+                    "116"
+                ]
+            },
+            "position": {
+                "x": 3100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "38",
+                "name": "AM2 internal",
+                "type": "be",
+                "rate": "rAMInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "39",
+                "name": "AM2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "118"
+                ]
+            },
+            "position": {
+                "x": 3600,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "40",
+                "name": "AM2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "127"
+                ]
+            },
+            "position": {
+                "x": 3750,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "41",
+                "name": "HW-AM2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 3600,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "42",
+                "name": "AM2",
+                "type": "or",
+                "children": [
+                    "38",
+                    "39",
+                    "40",
+                    "41"
+                ]
+            },
+            "position": {
+                "x": 3600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "43",
+                "name": "dep AM2",
+                "type": "fdep",
+                "children": [
+                    "42",
+                    "119",
+                    "122"
+                ]
+            },
+            "position": {
+                "x": 3700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "44",
+                "name": "EP3 internal",
+                "type": "be",
+                "rate": "rEPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "45",
+                "name": "EP3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "154"
+                ]
+            },
+            "position": {
+                "x": 4200,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "46",
+                "name": "EP3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "133"
+                ]
+            },
+            "position": {
+                "x": 4350,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "47",
+                "name": "HW-EP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4200,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "48",
+                "name": "EP3",
+                "type": "or",
+                "children": [
+                    "44",
+                    "45",
+                    "46",
+                    "47"
+                ]
+            },
+            "position": {
+                "x": 4200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "49",
+                "name": "dep EP3",
+                "type": "fdep",
+                "children": [
+                    "48",
+                    "128"
+                ]
+            },
+            "position": {
+                "x": 4300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "50",
+                "name": "TP3 internal",
+                "type": "be",
+                "rate": "rTPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "51",
+                "name": "TP3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "130"
+                ]
+            },
+            "position": {
+                "x": 4800,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "52",
+                "name": "TP3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "139"
+                ]
+            },
+            "position": {
+                "x": 4950,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "53",
+                "name": "HW-TP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4800,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "54",
+                "name": "TP3",
+                "type": "or",
+                "children": [
+                    "50",
+                    "51",
+                    "52",
+                    "53"
+                ]
+            },
+            "position": {
+                "x": 4800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "55",
+                "name": "dep TP3",
+                "type": "fdep",
+                "children": [
+                    "54",
+                    "131",
+                    "134"
+                ]
+            },
+            "position": {
+                "x": 4900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "56",
+                "name": "AM3 internal",
+                "type": "be",
+                "rate": "rAMInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "57",
+                "name": "AM3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "136"
+                ]
+            },
+            "position": {
+                "x": 5400,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "58",
+                "name": "AM3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "145"
+                ]
+            },
+            "position": {
+                "x": 5550,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "59",
+                "name": "HW-AM3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 5400,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "60",
+                "name": "AM3",
+                "type": "or",
+                "children": [
+                    "56",
+                    "57",
+                    "58",
+                    "59"
+                ]
+            },
+            "position": {
+                "x": 5400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "61",
+                "name": "dep AM3",
+                "type": "fdep",
+                "children": [
+                    "60",
+                    "137",
+                    "140"
+                ]
+            },
+            "position": {
+                "x": 5500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "62",
+                "name": "Voter internal",
+                "type": "be",
+                "rate": "rVoterInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "63",
+                "name": "Voter wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "106",
+                    "124",
+                    "142"
+                ]
+            },
+            "position": {
+                "x": 6000,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "64",
+                "name": "Voter wrong Potential",
+                "type": "or",
+                "children": [
+                    "157",
+                    "160",
+                    "163",
+                    "166"
+                ]
+            },
+            "position": {
+                "x": 6150,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "65",
+                "name": "HW-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6000,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "66",
+                "name": "Voter",
+                "type": "or",
+                "children": [
+                    "62",
+                    "63",
+                    "64",
+                    "65"
+                ]
+            },
+            "position": {
+                "x": 6000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "67",
+                "name": "dep Voter",
+                "type": "fdep",
+                "children": [
+                    "66",
+                    "107",
+                    "125",
+                    "143"
+                ]
+            },
+            "position": {
+                "x": 6100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "68",
+                "name": "Actuator1 internal",
+                "type": "be",
+                "rate": "rActuatorInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "69",
+                "name": "Actuator1 wrong Nominal Value",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6600,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "70",
+                "name": "Actuator1 wrong Potential",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6750,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "71",
+                "name": "HW-Actuator1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6600,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "72",
+                "name": "Actuator1",
+                "type": "or",
+                "children": [
+                    "68",
+                    "69",
+                    "70",
+                    "71"
+                ]
+            },
+            "position": {
+                "x": 6600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "73",
+                "name": "dep Actuator1",
+                "type": "fdep",
+                "children": [
+                    "72",
+                    "155"
+                ]
+            },
+            "position": {
+                "x": 6700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "74",
+                "name": "Actuator2 internal",
+                "type": "be",
+                "rate": "rActuatorInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 7050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "75",
+                "name": "Actuator2 wrong Nominal Value",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7200,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "76",
+                "name": "Actuator2 wrong Potential",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7350,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "77",
+                "name": "HW-Actuator2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7200,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "78",
+                "name": "Actuator2",
+                "type": "or",
+                "children": [
+                    "74",
+                    "75",
+                    "76",
+                    "77"
+                ]
+            },
+            "position": {
+                "x": 7200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "79",
+                "name": "dep Actuator2",
+                "type": "fdep",
+                "children": [
+                    "78",
+                    "158"
+                ]
+            },
+            "position": {
+                "x": 7300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "80",
+                "name": "Actuator3 internal",
+                "type": "be",
+                "rate": "rActuatorInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 7650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "81",
+                "name": "Actuator3 wrong Nominal Value",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7800,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "82",
+                "name": "Actuator3 wrong Potential",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7950,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "83",
+                "name": "HW-Actuator3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 7800,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "84",
+                "name": "Actuator3",
+                "type": "or",
+                "children": [
+                    "80",
+                    "81",
+                    "82",
+                    "83"
+                ]
+            },
+            "position": {
+                "x": 7800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "85",
+                "name": "dep Actuator3",
+                "type": "fdep",
+                "children": [
+                    "84",
+                    "161"
+                ]
+            },
+            "position": {
+                "x": 7900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "86",
+                "name": "Actuator4 internal",
+                "type": "be",
+                "rate": "rActuatorInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 8250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "87",
+                "name": "Actuator4 wrong Nominal Value",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 8400,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "88",
+                "name": "Actuator4 wrong Potential",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 8550,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "89",
+                "name": "HW-Actuator4",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 8400,
+                "y": 800
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "90",
+                "name": "Actuator4",
+                "type": "or",
+                "children": [
+                    "86",
+                    "87",
+                    "88",
+                    "89"
+                ]
+            },
+            "position": {
+                "x": 8400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "91",
+                "name": "dep Actuator4",
+                "type": "fdep",
+                "children": [
+                    "90",
+                    "164"
+                ]
+            },
+            "position": {
+                "x": 8500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "92",
+                "name": "BEEP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "93",
+                "name": "BUS EP1-TP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1100,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "94",
+                "name": "EP1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "92",
+                    "93"
+                ]
+            },
+            "position": {
+                "x": 1100,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "95",
+                "name": "BETP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "96",
+                "name": "BUS TP1-EP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 650,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "97",
+                "name": "TP1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "95",
+                    "96"
+                ]
+            },
+            "position": {
+                "x": 650,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "98",
+                "name": "BETP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "99",
+                "name": "BUS TP1-AM1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1700,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "TP1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "98",
+                    "99"
+                ]
+            },
+            "position": {
+                "x": 1700,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "101",
+                "name": "BEAM1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "102",
+                "name": "BUS AM1-TP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1250,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "103",
+                "name": "AM1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "101",
+                    "102"
+                ]
+            },
+            "position": {
+                "x": 1250,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "104",
+                "name": "BEAM1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5850,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "105",
+                "name": "BUS AM1-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 5900,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "AM1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "104",
+                    "105"
+                ]
+            },
+            "position": {
+                "x": 5900,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "107",
+                "name": "BEVoter",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "108",
+                "name": "BUS Voter-AM1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 1850,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "109",
+                "name": "Voter wrong Potential",
+                "type": "or",
+                "children": [
+                    "107",
+                    "108"
+                ]
+            },
+            "position": {
+                "x": 1850,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "110",
+                "name": "BEEP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "111",
+                "name": "BUS EP2-TP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 2900,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "EP2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "110",
+                    "111"
+                ]
+            },
+            "position": {
+                "x": 2900,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "113",
+                "name": "BETP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2400,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "114",
+                "name": "BUS TP2-EP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 2450,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "115",
+                "name": "TP2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "113",
+                    "114"
+                ]
+            },
+            "position": {
+                "x": 2450,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "116",
+                "name": "BETP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "117",
+                "name": "BUS TP2-AM2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 3500,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "118",
+                "name": "TP2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "116",
+                    "117"
+                ]
+            },
+            "position": {
+                "x": 3500,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "119",
+                "name": "BEAM2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3000,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "120",
+                "name": "BUS AM2-TP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 3050,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "121",
+                "name": "AM2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "119",
+                    "120"
+                ]
+            },
+            "position": {
+                "x": 3050,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "122",
+                "name": "BEAM2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5900,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "123",
+                "name": "BUS AM2-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 5950,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "124",
+                "name": "AM2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "122",
+                    "123"
+                ]
+            },
+            "position": {
+                "x": 5950,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "125",
+                "name": "BEVoter",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "126",
+                "name": "BUS Voter-AM2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 3650,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "127",
+                "name": "Voter wrong Potential",
+                "type": "or",
+                "children": [
+                    "125",
+                    "126"
+                ]
+            },
+            "position": {
+                "x": 3650,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "128",
+                "name": "BEEP3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "129",
+                "name": "BUS EP3-TP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4700,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "130",
+                "name": "EP3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "128",
+                    "129"
+                ]
+            },
+            "position": {
+                "x": 4700,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "131",
+                "name": "BETP3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "132",
+                "name": "BUS TP3-EP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4250,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "133",
+                "name": "TP3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "131",
+                    "132"
+                ]
+            },
+            "position": {
+                "x": 4250,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "134",
+                "name": "BETP3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5250,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "135",
+                "name": "BUS TP3-AM3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 5300,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "136",
+                "name": "TP3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "134",
+                    "135"
+                ]
+            },
+            "position": {
+                "x": 5300,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "137",
+                "name": "BEAM3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "138",
+                "name": "BUS AM3-TP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4850,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "139",
+                "name": "AM3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "137",
+                    "138"
+                ]
+            },
+            "position": {
+                "x": 4850,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "140",
+                "name": "BEAM3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5950,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "141",
+                "name": "BUS AM3-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6000,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "142",
+                "name": "AM3 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "140",
+                    "141"
+                ]
+            },
+            "position": {
+                "x": 6000,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "143",
+                "name": "BEVoter",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5400,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "144",
+                "name": "BUS Voter-AM3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 5450,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "145",
+                "name": "Voter wrong Potential",
+                "type": "or",
+                "children": [
+                    "143",
+                    "144"
+                ]
+            },
+            "position": {
+                "x": 5450,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "146",
+                "name": "BESensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "147",
+                "name": "BUS Sensors-EP1",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 500,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "148",
+                "name": "Sensors wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "146",
+                    "147"
+                ]
+            },
+            "position": {
+                "x": 500,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "149",
+                "name": "BESensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "150",
+                "name": "BUS Sensors-EP2",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 2300,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "151",
+                "name": "Sensors wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "149",
+                    "150"
+                ]
+            },
+            "position": {
+                "x": 2300,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "152",
+                "name": "BESensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "153",
+                "name": "BUS Sensors-EP3",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 4100,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "154",
+                "name": "Sensors wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "152",
+                    "153"
+                ]
+            },
+            "position": {
+                "x": 4100,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "155",
+                "name": "BEActuator1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6000,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "156",
+                "name": "BUS Actuator1-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6050,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "157",
+                "name": "Actuator1 wrong Potential",
+                "type": "or",
+                "children": [
+                    "155",
+                    "156"
+                ]
+            },
+            "position": {
+                "x": 6050,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "158",
+                "name": "BEActuator2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "159",
+                "name": "BUS Actuator2-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6100,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "160",
+                "name": "Actuator2 wrong Potential",
+                "type": "or",
+                "children": [
+                    "158",
+                    "159"
+                ]
+            },
+            "position": {
+                "x": 6100,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "161",
+                "name": "BEActuator3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6100,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "162",
+                "name": "BUS Actuator3-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6150,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "163",
+                "name": "Actuator3 wrong Potential",
+                "type": "or",
+                "children": [
+                    "161",
+                    "162"
+                ]
+            },
+            "position": {
+                "x": 6150,
+                "y": 200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "164",
+                "name": "BEActuator4",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6150,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "165",
+                "name": "BUS Actuator4-Voter",
+                "type": "or",
+                "children": []
+            },
+            "position": {
+                "x": 6200,
+                "y": 700
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "166",
+                "name": "Actuator4 wrong Potential",
+                "type": "or",
+                "children": [
+                    "164",
+                    "165"
+                ]
+            },
+            "position": {
+                "x": 6200,
+                "y": 200
+            },
+            "group": "nodes"
+        }
+    ]
+}

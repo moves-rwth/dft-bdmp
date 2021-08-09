@@ -1,0 +1,180 @@
+{
+    "name": "Safety concept 3",
+    "parameters": {
+        "rTrans": 10000,
+        "rPerm": 1000,
+        "rSafety": 1000,
+        "rCovD": 0.99,
+        "rCovB": 0.90,
+        "rCovQM": 0.6,
+        "rHW": 100
+    },
+    "default": {
+        "type": "transient_permanent",
+        "rate_transient": "rTrans",
+        "coverage_transient": "rCovD",
+        "safety_rate_transient": "rSafety",
+        "rate_permanent": "rPerm",
+        "coverage_permanent": "rCovD",
+        "safety_rate_permanent": "rSafety"
+    },
+    "blocks": [
+        {
+            "name": "ADAS1",
+            "pattern": {
+                "type": "default"
+            } 
+        },
+        {
+            "name": "I_ECU",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "ECU1",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU2",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU3",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "BUS",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        }
+    ],
+    "assignment": [
+        {
+            "component": "HW-EP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-TP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-fb_EP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-fb_TP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-Switch",
+            "block": "I_ECU"
+        },
+        {
+            "component": "HW-AM",
+            "block": "I_ECU"
+        },
+        {
+            "component": "HW-Actuator1",
+            "block": "I_ECU"
+        },
+        {
+            "component": "HW-Actuator2",
+            "block": "ECU1"
+        },
+        {
+            "component": "HW-Actuator3",
+            "block": "ECU2"
+        },
+        {
+            "component": "HW-Actuator4",
+            "block": "ECU3"
+        },
+        {
+            "component": "BUS Sensors-EP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Sensors-fb_EP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS EP-TP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS TP-EP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS fb_EP-fb_TP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS fb_TP-fb_EP",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS TP-Switch",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Switch-TP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS fb_TP-Switch",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Switch-fb_TP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Switch-AM",
+            "block": "I_ECU"
+        },
+        {
+            "component": "BUS AM-Switch",
+            "block": "I_ECU"
+        },
+        {
+            "component": "BUS Actuator1-AM",
+            "block": "I_ECU"
+        },
+        {
+            "component": "BUS Actuator2-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator3-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator4-AM",
+            "block": "BUS"
+        }
+    ]
+}

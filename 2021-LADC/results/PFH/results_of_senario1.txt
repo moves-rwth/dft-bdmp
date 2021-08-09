@@ -1,0 +1,62 @@
+Scenario 1
+JSON generated
+parameters updated
+DRN generated
+Reliability Complement
+	Result: 0.009879193287654683
+	Time:   9.54s
+PFH
+	Result: 1.3533141489937922e-05
+	Time:   9.44s
+MTTF
+	Result: 47573.20453222164
+	Time:   1.85s
+P(180|730)
+	Result: 0.9939297520341998
+	Time:   0.95s
+
+B(5)
+0.9249916178327752 0 118933 237866
+0.7199619087980139 0 59466 118933
+0.4504822058872621 0 29733 59466
+0.23742759876477423 0 14866 29733
+0.1145877250838379 0 7433 14866
+0.05425061895834644 0 3716 7433
+0.025988068994405672 0 1858 3716
+0.03988991501473979 1858 2787 3716
+0.047026768991773174 2787 3252 3716
+0.05062663759773881 3252 3484 3716
+	Result: 3484
+	Time:   174.22s
+FFA
+	Result: 0.023873956587755114
+	Time:   0.023873956587755114
+FWD
+	Result: 0.009808503906207421
+	Time:   0.43s
+MDR
+P=? [F<=730 "failed"]
+[<stormpy.core.Property object at 0x10c53ab90>]
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+	Result: 0.01936244266951851
+	Time:   12.53s
+FLOD
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+Consider 62208 states
+ WARN (SparseCtmcCslHelper.cpp:1081): Computation of transient probabilities with relative precision not supported. Using absolute precision instead.
+FLOD result for 730: 3.4913587053275725e-05
+	Result: 3.4913587053275725e-05
+	Time:   53.27s
+SILFO
+	Result: 0.009843417493260696
+	Time:   0.00s

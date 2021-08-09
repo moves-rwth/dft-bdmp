@@ -1,0 +1,120 @@
+//Sprinkler does not deliver water 
+
+toplevel "Sprinkler_does_not_deliver_water";
+"Sprinkler_does_not_deliver_water" or "No_water_behind_sprinkler_head" "Sprinkler_head_faulty";
+"Sprinkler_head_faulty" lambda=1.0821917808E-04 dorm=0.0;
+"No_water_behind_sprinkler_head" or "Water_supply_pipe_to_sprinkler_head_damaged" "No_water_supply_to_zone_of_the_fire_origin";
+"Water_supply_pipe_to_sprinkler_head_damaged" lambda=5.94520547945e-09 dorm=0.0;
+"No_water_supply_to_zone_of_the_fire_origin" or "Main_riser_leak" "No_water_supply_beyond_control_assembly"; "Zone_isolation_valve_closed_due_to_tenancy_change";
+"Main_riser_leak" lambda= 5.94520547945e-09 dorm=0.0;
+"Zone_isolation_valve_closed_due_to_tenancy_change" lambda=1.07808219178E-05 dorm=0.0;
+"No_water_supply_beyond_control_assembly" or "Failure_of_main_control_assembly" "No_water_supply_to_main_control_assembly";
+"No_water_supply_to_main_control_assembly" and "No_water_from_pumps" "No_water_from_pumps_bypass_town_main" ;
+"No_water_from_pumps" or "Inadequate_water_flow_to_pumps_from_tanks" "Inadequate_pressure_from_pumps";
+
+
+//Failure of main control assembly A3
+
+
+"Failure_of_main_control_assembly" or "Non_return_valve_faulty" "Alaram_valve_failure_at_control_assembly" "Main_stop_valve_damaged";
+"Non_return_valve_faulty" lambda=1.46575342466E-06 dorm=0.0;
+"Alaram_valve_failure_at_control_assembly" lambda=9.13698630137E-07 dorm=0.0;
+"Main_stop_valve_damaged" and "Main_valve_truned_off" "Monitoring_problem";
+"Main_valve_truned_off" lambda=1.11506849315E-05 dorm=0.0;
+
+// In adequate water flow to pumps (from tanks [A2])
+
+"Inadequate_water_flow_to_pumps_from_tanks" or "Pipe_leak_pipe_work_from_tanks_to_pumps" "No_water_supplied_from_tanks";
+"Pipe_leak_pipe_work_from_tanks_to_pumps" lambda=5.94520547945e-09 dorm=0.0;
+"No_water_supplied_from_tanks" and "No_water_supplied_from_tank1_2" "No_water_supplied_from_tank1_2";
+"No_water_supplied_from_tank1_2" or "Isolation_valve_not_working" "No_water_in_the_tank";
+"No_water_in_the_tank" and "Monitoring_problem" "No_water_in_tank_due_to_damage_repair"; 
+"No_water_in_tank_due_to_damage_repair" lambda=2.86301369863E-07 dorm=0.0; 
+
+
+
+//Isolation valve not working A1A23
+
+"Isolation_valve_not_working" and "Monitoring_problem" "Valve_closed_leaking"; 
+"Valve_closed_leaking" lambda=9.65753424658E-07 dorm=0.0; 
+
+//Inadequate Pressure form pumps [A1]
+
+"Inadequate_pressure_from_pumps" or "Water_supply_pipe_to_control_assembly_damaged" "Both_pumps_fail";
+"Water_supply_pipe_to_control_assembly_damaged" lambda= 5.94520547945e-09 dorm=0.0;
+"Both_pumps_fail" and "Electric_pump_fails" "Diesel_pump_fails";
+
+//Electric pump fails A1-2
+
+"Electric_pump_fails" or "Isolation_valves_not_working_ep" "Non_return_valve_faulty_ep" "No_water_from_pump_ep";
+"Isolation_valves_not_working_ep" or "Inlet_isolation_valve_faulty_ep" "Isolation_valve_not_working";
+"Inlet_isolation_valve_faulty_ep" lambda=9.65753424658E-07 dorm=0.0;
+"Non_return_valve_faulty_ep" lambda=1.46575342466E-06 dorm=0.0; 
+"No_water_from_pump_ep" or "Pressure_switch_ep_not_working" "Pump_can_not_operate_ep";
+"Pressure_switch_ep_not_working" and "PS1_ep_faulty" "PS2_ep_faulty";
+"PS1_ep_faulty" lambda=2.34246575342E-06 dorm=0.0;
+"PS2_ep_faulty" lambda=2.34246575342E-06 dorm=0.0; 
+"Pump_can_not_operate_ep" or "Faulty_pump_ep" "No_power_to_drive_pump_ep";
+"Faulty_pump_ep" lambda=1.01917808219E-06 dorm=0.0; 
+"No_power_to_drive_pump_ep" and "Power_failure" "wiring_burn_out";
+"wiring_burn_out" lambda=3.00000000000E-07 dorm=0.0; 
+
+
+//"Outlet_isolation_valve_monitored_not_working_ep" and "Monitoring_problem" "Valve_closed_leaking"; 
+
+
+//Diesel pump fails A1-1
+
+"Diesel_pump_fails" or "Isolation_valves_not_working_dp" "Non_return_valve_faulty_dp" "No_water_from_pump_dp";
+"Isolation_valves_not_working_dp" or "Inlet_isolation_valve_faulty_dp" "Isolation_valve_not_working";
+"Inlet_isolation_valve_faulty_dp" lambda=9.65753424658E-07 dorm=0.0;
+"Non_return_valve_faulty_dp" lambda=1.46575342466E-06 dorm=0.0; 
+"No_water_from_pump_dp" or "Pressure_switch_dp_not_working" "Pump_can_not_operate_dp";
+"Pump_can_not_operate_dp" or "Faulty_pump_dp" "No_power_to_drive_pump_dp";
+"Pressure_switch_dp_not_working" and "PS1_dp_faulty" "PS2_dp_faulty";
+"PS1_dp_faulty" lambda=2.34246575342E-06 dorm=0.0;
+"PS2_dp_faulty" lambda=2.34246575342E-06 dorm=0.0; 
+"Faulty_pump_dp" lambda=4.89041095890E-07 dorm=0.0; 
+"No_power_to_drive_pump_dp" and "Power_failure" "Flat_battery";
+
+//"Outlet_isolation_valve_monitored_not_working_dp" and "Monitoring_problem" "Valve_closed_leaking"; 
+
+
+
+//No water from town main A4
+"No_water_from_pumps_bypass_town_main" and "No_water_from_town_main1_2" "No_water_from_town_main1_2";
+"No_water_from_town_main1_2" or "no_water_in_town_main" "Underground_pipe_from_twon_main_corroded" "Valves_to_tank_not_working";
+"Valves_to_tank_not_working" or "Non_return_valve_main_faulty" "Isolation_valve_not_working";
+"Non_return_valve_main_faulty" lambda=1.46575342466E-06 dorm=0.1; 
+"no_water_in_town_main" lambda=2.86301369863E-07 dorm=0.0; 
+"Underground_pipe_from_twon_main_corroded" lambda=4.43835616438E-08 dorm=0.0; 
+
+
+//isolation valve faulty
+//"Inlet_isolation_valve_to_tank_not_working" and "Monitoring_problem" "Valve_closed_leaking"; 
+
+
+
+// Monitroing problem
+
+"Monitoring_problem" or "Operator_not_noticing_alarm" "Monitor_alram_not_indicated_in_FIP" "Monitoring_device_alram_faulty";
+"Operator_not_noticing_alarm" lambda=4.10958904110E-05 dorm=0.0; 
+"Monitoring_device_alram_faulty" lambda=6.02739726027E-06 dorm=0.0; 
+"Monitor_alram_not_indicated_in_FIP" or "No_power_to_run_FIP" "FIP_faulty" ;	
+"No_power_to_run_FIP" and  "Power_failure" "Backup_UPS_battery_Failure";
+"Backup_UPS_battery_Failure" lambda=4.36986301370E-05 dorm=0.0;
+"FIP_faulty" lambda=5.91780821918E-05 dorm=0.0;
+
+
+
+
+// Power failure A1A2-4
+
+"Power_failure" and "Street_power_failure" "Generator_failure";
+"Street_power_failure" lambda=1.52054794521E-06 dorm=0.0;  
+"Generator_failure" lambda=3.21917808219E-06 dorm=0.0;
+
+//flat battery for diesel pump A1-5
+
+"Flat_battery" and "Monitoring_problem" "diesel_pump_backup_battery_flat"; 
+"diesel_pump_backup_battery_flat" lambda=1.90410958904E-05 dorm=0.0; 

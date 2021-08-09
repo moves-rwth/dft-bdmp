@@ -1,0 +1,1811 @@
+{
+    "toplevel": 1,
+    "parameters": {
+        "rfb_TPInt": 0,
+        "rAMInt": 0,
+        "rTPInt": 0,
+        "rfb_EPInt": 0,
+        "rSensorsInt": 60,
+        "rActuatorInt": 40,
+        "rEPInt": 0,
+        "rSwitchInt": 0,
+        "dfb_Path": 0.1,
+        "rTrans": 10000,
+        "rPerm": 1000,
+        "rSafety": 1000,
+        "rCovD": 0.99,
+        "rCovB": 0.9,
+        "rCovQM": 0.6,
+        "rHW": 100
+    },
+    "nodes": [
+        {
+            "data": {
+                "id": "1",
+                "name": "T",
+                "type": "or",
+                "children": [
+                    "124",
+                    "123",
+                    "129",
+                    "130",
+                    "38",
+                    "170",
+                    "186"
+                ],
+                "label": "T",
+                "repairable": false
+            },
+            "position": {
+                "x": 2320.741647534094,
+                "y": -828.9260218221874
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or toplevel"
+        },
+        {
+            "data": {
+                "id": "121",
+                "name": "Sensor3",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "Sensor3 (λ: rSensorsInt, r: undefined)"
+            },
+            "position": {
+                "x": -178.64176045488603,
+                "y": 207.1576756325025
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "123",
+                "name": "Sensors internal",
+                "type": "vot",
+                "children": [
+                    "119",
+                    "120",
+                    "121",
+                    "122"
+                ],
+                "voting": "3",
+                "label": "Sensors internal (3/4)"
+            },
+            "position": {
+                "x": -202.8366897059441,
+                "y": 81.64648014263862
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "vot"
+        },
+        {
+            "data": {
+                "id": "8",
+                "name": "EP internal_Sensors",
+                "type": "be",
+                "rate": "rEPInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "EP internal_Sensors (λ: rEPInt, r: undefined)"
+            },
+            "position": {
+                "x": 450,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "EP",
+                "type": "or",
+                "children": [
+                    "8",
+                    "144",
+                    "71"
+                ],
+                "label": "EP",
+                "repairable": false
+            },
+            "position": {
+                "x": 600,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "dep EP",
+                "type": "fdep",
+                "children": [
+                    "12",
+                    "68"
+                ],
+                "label": "dep EP",
+                "repairable": false
+            },
+            "position": {
+                "x": 700,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "14",
+                "name": "TP internal_Switch",
+                "type": "be",
+                "rate": "rTPInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "TP internal_Switch (λ: rTPInt, r: undefined)"
+            },
+            "position": {
+                "x": 1050,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "TP",
+                "type": "or",
+                "children": [
+                    "14",
+                    "144",
+                    "68"
+                ],
+                "label": "TP",
+                "repairable": false
+            },
+            "position": {
+                "x": 1200,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "dep TP",
+                "type": "fdep",
+                "children": [
+                    "18",
+                    "71",
+                    "80"
+                ],
+                "label": "dep TP",
+                "repairable": false
+            },
+            "position": {
+                "x": 1300,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "20",
+                "name": "fb_EP internal_Sensors",
+                "type": "be",
+                "rate": "rfb_EPInt",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "fb_EP internal_Sensors (λ: rfb_EPInt, r: undefined)"
+            },
+            "position": {
+                "x": 1650,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "fb_EP",
+                "type": "or",
+                "children": [
+                    "20",
+                    "157",
+                    "77"
+                ],
+                "label": "fb_EP",
+                "repairable": false
+            },
+            "position": {
+                "x": 1800,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "dep fb_EP",
+                "type": "fdep",
+                "children": [
+                    "24",
+                    "74"
+                ],
+                "label": "dep fb_EP",
+                "repairable": false
+            },
+            "position": {
+                "x": 1900,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "26",
+                "name": "fb_TP internal_Switch",
+                "type": "be",
+                "rate": "rfb_TPInt",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "fb_TP internal_Switch (λ: rfb_TPInt, r: undefined)"
+            },
+            "position": {
+                "x": 2250,
+                "y": 100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "fb_TP",
+                "type": "or",
+                "children": [
+                    "26",
+                    "157",
+                    "74"
+                ],
+                "label": "fb_TP",
+                "repairable": false
+            },
+            "position": {
+                "x": 2400,
+                "y": 0
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "dep fb_TP",
+                "type": "fdep",
+                "children": [
+                    "30",
+                    "77",
+                    "86"
+                ],
+                "label": "dep fb_TP",
+                "repairable": false
+            },
+            "position": {
+                "x": 2500,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "fdep"
+        },
+        {
+            "data": {
+                "id": "32",
+                "name": "Switch internal",
+                "type": "be",
+                "rate": "rSwitchInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "Switch internal (λ: rSwitchInt, r: undefined)"
+            },
+            "position": {
+                "x": 2662.8699925621568,
+                "y": 195.81019089628708
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "38",
+                "name": "AM internal_Switch_AM_Actuator1_Actuator2_Actuator3_Actuator4_Actuator1 internal_Actuator2 internal_ECU1_Actuator3 internal_ECU2_Actuator4 internal_ECU3",
+                "type": "be",
+                "rate": "(+ (* 3 rHW) (* 4 rActuatorInt) rAMInt)",
+                "dorm": "1",
+                "transient": false,
+                "label": "AM internal_Switch_AM_Actuator1_Actuator2_Actuator3_Actuator4_Actuator1 internal_Actuator2 internal_ECU1_Actuator3 internal_ECU2_Actuator4 internal_ECU3 (λ: (+ (* 3 rHW) (* 4 rActuatorInt) rAMInt), r: undefined)"
+            },
+            "position": {
+                "x": 3419.780961728563,
+                "y": 82.7319781306078
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "117",
+                "name": "fb_Path",
+                "type": "or",
+                "children": [
+                    "24",
+                    "30"
+                ],
+                "label": "fb_Path",
+                "repairable": false
+            },
+            "position": {
+                "x": 2069.363642727963,
+                "y": -184.86122446855572
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "68",
+                "name": "EP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "EP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 1050,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "71",
+                "name": "TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "TP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "74",
+                "name": "fb_EP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "fb_EP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 2250,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "77",
+                "name": "fb_TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "fb_TP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 1800,
+                "y": 300
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "80",
+                "name": "TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "TP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 2776.610907055083,
+                "y": 401.4496284826792
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "82",
+                "name": "TP wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "80",
+                    "186"
+                ],
+                "label": "TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 2848.1959343918234,
+                "y": 329.51016402044155
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "86",
+                "name": "fb_TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false,
+                "label": "fb_TP (λ: 0, r: undefined)"
+            },
+            "position": {
+                "x": 2915.109519135718,
+                "y": 414.40064488472336
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "88",
+                "name": "fb_TP wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "86",
+                    "186"
+                ],
+                "label": "fb_TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 2945.682994532652,
+                "y": 335.98567222146363
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "122",
+                "name": "Sensor4",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "Sensor4 (λ: rSensorsInt, r: undefined)"
+            },
+            "position": {
+                "x": -54.64274804321325,
+                "y": 205.64549255431137
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "116",
+                "name": "m_Path",
+                "type": "or",
+                "children": [
+                    "12",
+                    "18"
+                ],
+                "label": "m_Path",
+                "repairable": false
+            },
+            "position": {
+                "x": 900.1699343132746,
+                "y": -176.52967785277409
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "119",
+                "name": "Sensor1",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "Sensor1 (λ: rSensorsInt, r: undefined)"
+            },
+            "position": {
+                "x": -458.39562992024526,
+                "y": 205.64549255431137
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "120",
+                "name": "Sensor2",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false,
+                "label": "Sensor2 (λ: rSensorsInt, r: undefined)"
+            },
+            "position": {
+                "x": -299.6164067101765,
+                "y": 205.6454925543114
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "124",
+                "name": "Navigator",
+                "type": "spare",
+                "children": [
+                    "116",
+                    "117"
+                ],
+                "label": "Navigator",
+                "repairable": false
+            },
+            "position": {
+                "x": 1489.8657633679336,
+                "y": -435.4218828567968
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "spare"
+        },
+        {
+            "data": {
+                "id": "129",
+                "name": "pand Switch",
+                "type": "pand",
+                "children": [
+                    "131",
+                    "82"
+                ],
+                "label": "pand Switch"
+            },
+            "position": {
+                "x": 2799.0765678731213,
+                "y": 32.13290935968938
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "pand"
+        },
+        {
+            "data": {
+                "id": "130",
+                "name": "TPfb_TP wrong Nominal Value",
+                "type": "and",
+                "children": [
+                    "82",
+                    "88"
+                ],
+                "label": "TPfb_TP wrong Nominal Value"
+            },
+            "position": {
+                "x": 2894.050688154779,
+                "y": 211.28863625463353
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "131",
+                "name": "pand Switch Internal",
+                "type": "or",
+                "children": [
+                    "32",
+                    "170"
+                ],
+                "label": "pand Switch Internal"
+            },
+            "position": {
+                "x": 2707.5426095033017,
+                "y": 108.39069081715013
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "132",
+                "name": "ADAS1 TransientCov",
+                "type": "be",
+                "rate": "(* rTrans rCovD)",
+                "dorm": "1",
+                "transient": true,
+                "label": "ADAS1 TransientCov (λ: (* rTrans rCovD), r: undefined)"
+            },
+            "position": {
+                "x": -308.39562992024526,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "133",
+                "name": "ADAS1 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- 1) (* rTrans rCovD)) rTrans)",
+                "dorm": "1",
+                "transient": true,
+                "label": "ADAS1 TransientNotCov (λ: (+ (* (- 1) (* rTrans rCovD)) rTrans), r: undefined)"
+            },
+            "position": {
+                "x": -533.3956299202453,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "134",
+                "name": "ADAS1 TransientSafeMech",
+                "type": "be",
+                "rate": "rSafety",
+                "dorm": "1",
+                "transient": false,
+                "label": "ADAS1 TransientSafeMech (λ: rSafety, r: undefined)"
+            },
+            "position": {
+                "x": -408.39562992024526,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "135",
+                "name": "ADAS1 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "134",
+                    "132"
+                ],
+                "label": "ADAS1 TransientNotDet"
+            },
+            "position": {
+                "x": -383.39562992024526,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "136",
+                "name": "seqADAS1 Transient",
+                "type": "seq",
+                "children": [
+                    "134",
+                    "132"
+                ],
+                "label": "seqADAS1 Transient"
+            },
+            "position": {
+                "x": -308.39562992024526,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "138",
+                "name": "ADAS1 PermanentCov",
+                "type": "be",
+                "rate": "(* rPerm rCovD)",
+                "dorm": "1",
+                "transient": false,
+                "label": "ADAS1 PermanentCov (λ: (* rPerm rCovD), r: undefined)"
+            },
+            "position": {
+                "x": -8.395629920245256,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "139",
+                "name": "ADAS1 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- 1) (* rPerm rCovD)) rPerm)",
+                "dorm": "1",
+                "transient": false,
+                "label": "ADAS1 PermanentNotCov (λ: (+ (* (- 1) (* rPerm rCovD)) rPerm), r: undefined)"
+            },
+            "position": {
+                "x": -233.39562992024526,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "140",
+                "name": "ADAS1 PermanentSafeMech",
+                "type": "be",
+                "rate": "rSafety",
+                "dorm": "1",
+                "transient": false,
+                "label": "ADAS1 PermanentSafeMech (λ: rSafety, r: undefined)"
+            },
+            "position": {
+                "x": -108.39562992024526,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "141",
+                "name": "ADAS1 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "140",
+                    "138"
+                ],
+                "label": "ADAS1 PermanentNotDet"
+            },
+            "position": {
+                "x": -83.39562992024526,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "142",
+                "name": "seqADAS1 Permanent",
+                "type": "seq",
+                "children": [
+                    "140",
+                    "138"
+                ],
+                "label": "seqADAS1 Permanent"
+            },
+            "position": {
+                "x": -8.395629920245256,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "144",
+                "name": "ADAS1 Failure",
+                "type": "or",
+                "children": [
+                    "133",
+                    "135",
+                    "139",
+                    "141"
+                ],
+                "label": "ADAS1 Failure"
+            },
+            "position": {
+                "x": -308.39562992024526,
+                "y": 900
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "145",
+                "name": "ADAS2 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "dfb_Path",
+                "transient": true,
+                "label": "ADAS2 TransientCov (λ: (* (/ 1 10) (* rTrans rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 391.60437007975474,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "146",
+                "name": "ADAS2 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "dfb_Path",
+                "transient": true,
+                "label": "ADAS2 TransientNotCov (λ: (+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans)), r: undefined)"
+            },
+            "position": {
+                "x": 166.60437007975474,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "147",
+                "name": "ADAS2 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "ADAS2 TransientSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 291.60437007975474,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "148",
+                "name": "ADAS2 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "147",
+                    "145"
+                ],
+                "label": "ADAS2 TransientNotDet"
+            },
+            "position": {
+                "x": 316.60437007975474,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "149",
+                "name": "seqADAS2 Transient",
+                "type": "seq",
+                "children": [
+                    "147",
+                    "145"
+                ],
+                "label": "seqADAS2 Transient"
+            },
+            "position": {
+                "x": 391.60437007975474,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "151",
+                "name": "ADAS2 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "ADAS2 PermanentCov (λ: (* (/ 1 10) (* rPerm rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 691.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "152",
+                "name": "ADAS2 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "ADAS2 PermanentNotCov (λ: (+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm)), r: undefined)"
+            },
+            "position": {
+                "x": 466.60437007975474,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "153",
+                "name": "ADAS2 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "dfb_Path",
+                "transient": false,
+                "label": "ADAS2 PermanentSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 591.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "154",
+                "name": "ADAS2 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "153",
+                    "151"
+                ],
+                "label": "ADAS2 PermanentNotDet"
+            },
+            "position": {
+                "x": 616.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "155",
+                "name": "seqADAS2 Permanent",
+                "type": "seq",
+                "children": [
+                    "153",
+                    "151"
+                ],
+                "label": "seqADAS2 Permanent"
+            },
+            "position": {
+                "x": 691.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "157",
+                "name": "ADAS2 Failure",
+                "type": "or",
+                "children": [
+                    "146",
+                    "148",
+                    "152",
+                    "154"
+                ],
+                "label": "ADAS2 Failure"
+            },
+            "position": {
+                "x": 391.60437007975474,
+                "y": 900
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "158",
+                "name": "I_ECU TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true,
+                "label": "I_ECU TransientCov (λ: (* (/ 1 10) (* rTrans rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 1091.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "159",
+                "name": "I_ECU TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true,
+                "label": "I_ECU TransientNotCov (λ: (+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans)), r: undefined)"
+            },
+            "position": {
+                "x": 866.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "160",
+                "name": "I_ECU TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false,
+                "label": "I_ECU TransientSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 991.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "161",
+                "name": "I_ECU TransientNotDet",
+                "type": "and",
+                "children": [
+                    "160",
+                    "158"
+                ],
+                "label": "I_ECU TransientNotDet"
+            },
+            "position": {
+                "x": 1016.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "162",
+                "name": "seqI_ECU Transient",
+                "type": "seq",
+                "children": [
+                    "160",
+                    "158"
+                ],
+                "label": "seqI_ECU Transient"
+            },
+            "position": {
+                "x": 1091.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "164",
+                "name": "I_ECU PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false,
+                "label": "I_ECU PermanentCov (λ: (* (/ 1 10) (* rPerm rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 1391.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "165",
+                "name": "I_ECU PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false,
+                "label": "I_ECU PermanentNotCov (λ: (+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm)), r: undefined)"
+            },
+            "position": {
+                "x": 1166.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "166",
+                "name": "I_ECU PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false,
+                "label": "I_ECU PermanentSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 1291.6043700797547,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "167",
+                "name": "I_ECU PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "166",
+                    "164"
+                ],
+                "label": "I_ECU PermanentNotDet"
+            },
+            "position": {
+                "x": 1316.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "168",
+                "name": "seqI_ECU Permanent",
+                "type": "seq",
+                "children": [
+                    "166",
+                    "164"
+                ],
+                "label": "seqI_ECU Permanent"
+            },
+            "position": {
+                "x": 1391.6043700797547,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "170",
+                "name": "I_ECU Failure",
+                "type": "or",
+                "children": [
+                    "159",
+                    "161",
+                    "165",
+                    "167"
+                ],
+                "label": "I_ECU Failure"
+            },
+            "position": {
+                "x": 1091.6043700797547,
+                "y": 900
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "174",
+                "name": "BUS TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true,
+                "label": "BUS TransientCov (λ: (* (/ 1 10) (* rTrans rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 2466.6043700797545,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "175",
+                "name": "BUS TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true,
+                "label": "BUS TransientNotCov (λ: (+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans)), r: undefined)"
+            },
+            "position": {
+                "x": 2241.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "176",
+                "name": "BUS TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false,
+                "label": "BUS TransientSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 2366.6043700797545,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "177",
+                "name": "BUS TransientNotDet",
+                "type": "and",
+                "children": [
+                    "176",
+                    "174"
+                ],
+                "label": "BUS TransientNotDet"
+            },
+            "position": {
+                "x": 2391.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "178",
+                "name": "seqBUS Transient",
+                "type": "seq",
+                "children": [
+                    "176",
+                    "174"
+                ],
+                "label": "seqBUS Transient"
+            },
+            "position": {
+                "x": 2466.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "180",
+                "name": "BUS PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false,
+                "label": "BUS PermanentCov (λ: (* (/ 1 10) (* rPerm rCovD)), r: undefined)"
+            },
+            "position": {
+                "x": 2766.6043700797545,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "181",
+                "name": "BUS PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false,
+                "label": "BUS PermanentNotCov (λ: (+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm)), r: undefined)"
+            },
+            "position": {
+                "x": 2541.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "182",
+                "name": "BUS PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false,
+                "label": "BUS PermanentSafeMech (λ: (* (/ 1 10) rSafety), r: undefined)"
+            },
+            "position": {
+                "x": 2666.6043700797545,
+                "y": 1200
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "183",
+                "name": "BUS PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "182",
+                    "180"
+                ],
+                "label": "BUS PermanentNotDet"
+            },
+            "position": {
+                "x": 2691.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "184",
+                "name": "seqBUS Permanent",
+                "type": "seq",
+                "children": [
+                    "182",
+                    "180"
+                ],
+                "label": "seqBUS Permanent"
+            },
+            "position": {
+                "x": 2766.6043700797545,
+                "y": 1100
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "186",
+                "name": "BUS Failure",
+                "type": "or",
+                "children": [
+                    "175",
+                    "177",
+                    "181",
+                    "183"
+                ],
+                "label": "BUS Failure"
+            },
+            "position": {
+                "x": 2466.6043700797545,
+                "y": 900
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        }
+    ]
+}

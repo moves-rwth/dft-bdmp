@@ -1,0 +1,291 @@
+{
+    "nodes": [
+        {
+            "data": {
+                "id": "149",
+                "name": "TransientCov",
+                "type": "be",
+                "rate": "990.0",
+                "dorm": "1.0",
+                "label": "TransientCov (990.0)"
+            },
+            "position": {
+                "x": -3468.519582808569,
+                "y": 2089.127392404861
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "150",
+                "name": "TransientNotCov",
+                "type": "be",
+                "rate": "10",
+                "dorm": "1.0",
+                "label": "TransientNotCov (10)"
+            },
+            "position": {
+                "x": -3839.345781977996,
+                "y": 1903.2780977325374
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "151",
+                "name": "TransientSafeMech",
+                "type": "be",
+                "rate": "50",
+                "dorm": "1.0",
+                "label": "TransientSafeMech (50)"
+            },
+            "position": {
+                "x": -3723.7539238598947,
+                "y": 2075.015179582014
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "152",
+                "name": "TransientNotDet",
+                "type": "and",
+                "children": [
+                    "151",
+                    "149"
+                ],
+                "label": "TransientNotDet"
+            },
+            "position": {
+                "x": -3629.368877480893,
+                "y": 1938.5586297896568
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "153",
+                "name": "seq Transient",
+                "type": "seq",
+                "children": [
+                    "151",
+                    "149"
+                ],
+                "label": "seq Transient"
+            },
+            "position": {
+                "x": -3507.3281680714003,
+                "y": 1942.0866829953686
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "154",
+                "name": "Transient",
+                "type": "or",
+                "children": [
+                    "150",
+                    "152"
+                ],
+                "label": "Transient"
+            },
+            "position": {
+                "x": -3650.2720616599768,
+                "y": 1825.6224347020463
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "155",
+                "name": "PermanentCov",
+                "type": "be",
+                "rate": "0.9",
+                "dorm": "1.0",
+                "label": "PermanentCov (0.9)"
+            },
+            "position": {
+                "x": -3006.2291353458195,
+                "y": 2082.0712859934374
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "156",
+                "name": "PermanentNotCov",
+                "type": "be",
+                "rate": "0.1",
+                "dorm": "1.0",
+                "label": "PermanentNotCov (0.1)"
+            },
+            "position": {
+                "x": -3334.7186960467025,
+                "y": 1892.6939381154016
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "157",
+                "name": "PermanentSafeMech",
+                "type": "be",
+                "rate": "50",
+                "dorm": "1.0",
+                "label": "PermanentSafeMech (50)"
+            },
+            "position": {
+                "x": -3225.0069266047885,
+                "y": 2075.015179582014
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "158",
+                "name": "PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "157",
+                    "155"
+                ],
+                "label": "PermanentNotDet"
+            },
+            "position": {
+                "x": -3127.0938270200745,
+                "y": 1930.326505642996
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "and"
+        },
+        {
+            "data": {
+                "id": "159",
+                "name": "seq Permanent",
+                "type": "seq",
+                "children": [
+                    "157",
+                    "155"
+                ],
+                "label": "seq Permanent"
+            },
+            "position": {
+                "x": -2967.420550082988,
+                "y": 1933.8545588487073
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "seq"
+        },
+        {
+            "data": {
+                "id": "160",
+                "name": "Permanent",
+                "type": "or",
+                "children": [
+                    "156",
+                    "158"
+                ],
+                "label": "Permanent"
+            },
+            "position": {
+                "x": -3156.229135345819,
+                "y": 1806.8061509382494
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "161",
+                "name": "Failure",
+                "type": "or",
+                "children": [
+                    "154",
+                    "160"
+                ],
+                "label": "Failure"
+            },
+            "position": {
+                "x": -3444.999228103822,
+                "y": 1723.2703992315714
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        }
+    ]
+}

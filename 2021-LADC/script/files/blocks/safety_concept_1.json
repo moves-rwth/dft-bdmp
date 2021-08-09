@@ -1,0 +1,157 @@
+{
+    "name": "Safety Concept 1",
+    "parameters": {
+        "rSensorsInt": 10,
+        "rEPInt": 1,
+        "rTPInt": 1,
+        "rAMInt": 1,
+        "rVoterInt": 1,
+        "rActuatorInt": 10
+    },
+    "logical_blocks": [
+        {
+            "name": "Sensors",
+            "type": "SENSOR",
+            "rate": "rSensorsInt"
+        },
+        {
+            "name": "EP1",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP1",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "AM1",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "EP2",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP2",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "AM2",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "EP3",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP3",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "AM3",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "Voter",
+            "type": "VOTER",
+            "rate": "rVoterInt"
+        },
+        {
+            "name": "Actuator1",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator2",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator3",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator4",
+            "rate": "rActuatorInt"
+        }
+    ],
+    "buses": [
+        {
+            "from": "EP1",
+            "to": "TP1",
+            "type": "both"
+        },
+        {
+            "from": "TP1",
+            "to": "AM1",
+            "type": "both"
+        },
+        {
+            "from": "AM1",
+            "to": "Voter",
+            "type": "both"
+        },
+        {
+            "from": "EP2",
+            "to": "TP2",
+            "type": "both"
+        },
+        {
+            "from": "TP2",
+            "to": "AM2",
+            "type": "both"
+        },
+        {
+            "from": "AM2",
+            "to": "Voter",
+            "type": "both"
+        },
+        {
+            "from": "EP3",
+            "to": "TP3",
+            "type": "both"
+        },
+        {
+            "from": "TP3",
+            "to": "AM3",
+            "type": "both"
+        },
+        {
+            "from": "AM3",
+            "to": "Voter",
+            "type": "both"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP1",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP2",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP3",
+            "type": "nominal"
+        },
+        {
+            "from": "Actuator1",
+            "to": "Voter",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator2",
+            "to": "Voter",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator3",
+            "to": "Voter",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator4",
+            "to": "Voter",
+            "type": "potential"
+        }
+    ]
+}

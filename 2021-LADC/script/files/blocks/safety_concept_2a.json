@@ -1,0 +1,139 @@
+{
+    "name": "Safety Concept 2a",
+    "parameters": {
+        "rSensorsInt": 10,
+        "rEPInt": 0,
+        "rTPInt": 0,
+        "rsEPInt": 0,
+        "rsTPInt": 0,
+        "rTCSInt": 0,
+        "rAMInt": 0,
+        "rActuatorInt": 10
+    },
+    "logical_blocks": [
+        {
+            "name": "Sensors",
+            "rate": "rSensorsInt"
+        },
+        {
+            "name": "EP",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "sEP1",
+            "rate": "rsEPInt"
+        },
+        {
+            "name": "sTP1",
+            "rate": "rsTPInt"
+        },
+        {
+            "name": "sEP2",
+            "rate": "rsEPInt"
+        },
+        {
+            "name": "sTP2",
+            "rate": "rsTPInt"
+        },
+        {
+            "name": "TCS",
+            "rate": "rTCSInt"
+        },
+        {
+            "name": "AM",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "Actuator1",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator2",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator3",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator4",
+            "rate": "rActuatorInt"
+        }
+    ],
+    "buses": [
+        {
+            "from": "EP",
+            "to": "TP",
+            "type": "both"
+        },
+        {
+            "from": "sEP1",
+            "to": "sTP1",
+            "type": "both"
+        },
+        {
+            "from": "sEP2",
+            "to": "sTP2",
+            "type": "both"
+        },
+        {
+            "from": "TP",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "sTP1",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "sTP2",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "TCS",
+            "to": "AM",
+            "type": "both"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "sEP1",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "sEP2",
+            "type": "nominal"
+        },
+        {
+            "from": "Actuator1",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator2",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator3",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator4",
+            "to": "AM",
+            "type": "potential"
+        }
+    ]
+}

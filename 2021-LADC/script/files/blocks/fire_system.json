@@ -1,0 +1,56 @@
+{
+    "name": "fire_system",
+    "parameters": {
+
+    },
+    "logical_blocks": [
+        {
+            "name": "FireSensors",
+            "rate": "Rate"
+        },
+        {
+            "name": "FireInformationPanel",
+            "rate": "Rate"
+        },
+        {
+            "name": "FireOperator",
+            "rate": "Fire_ControlSystem_Device_Failure"
+        },
+        {
+            "name": "PowerSupply",
+            "rate": "Rate"
+        },
+        {
+            "name": "PowerSwitch",
+            "rate": "Rate"
+        },
+        {
+            "name": "MainGrid",
+            "rate": "Rate"
+        },
+        {
+            "name": "Generator",
+            "rate": "Rate"
+        }
+
+    ],
+    "buses": [
+        {
+            "from": "Sensors",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        },
+        {
+            "from": "FireOperator",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        },
+        {
+            "from": "PowerSupply",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        }
+
+
+    ]
+}

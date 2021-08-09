@@ -1,0 +1,89 @@
+shahidkhan@MacBook-Pro-12013 DFTs % storm-dft -dft caseI.dft --timebound 1 -dftstats  
+Storm-dft 1.6.1 (dev)
+
+Date: Tue Jul 14 13:47:42 2020
+Command line arguments: -dft caseI.dft --timebound 1 -dftstats
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/PRDC2020 results/PFD/DFTs
+
+=============DFT Statistics==============
+Number of BEs: 58
+Number of static elements: 37
+Number of dynamic elements: 22
+Number of elements: 117
+-----------------------------------------
+Number of BEs: 58
+Number of AND gates: 9
+Number of OR gates: 28
+Number of PAND gates: 11
+Number of SPARE gates: 3
+Number of Dependencies: 6
+Number of Restrictions: 2
+=========================================
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6884039
+Transitions: 	23275459
+Choices: 	19045139
+Markovian St.: 	415713
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	101.820s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	48.811s
+Total:		150.752s
+Result: [0.01601231345]
+shahidkhan@MacBook-Pro-12013 DFTs % storm-dft -dft caseII.dft --timebound 1 -dftstats
+Storm-dft 1.6.1 (dev)
+
+Date: Tue Jul 14 13:53:39 2020
+Command line arguments: -dft caseII.dft --timebound 1 -dftstats
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/PRDC2020 results/PFD/DFTs
+
+=============DFT Statistics==============
+Number of BEs: 58
+Number of static elements: 37
+Number of dynamic elements: 22
+Number of elements: 117
+-----------------------------------------
+Number of BEs: 58
+Number of AND gates: 9
+Number of OR gates: 28
+Number of PAND gates: 11
+Number of SPARE gates: 3
+Number of Dependencies: 6
+Number of Restrictions: 2
+=========================================
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6677191
+Transitions: 	23068611
+Choices: 	18838291
+Markovian St.: 	415713
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	115.892s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	51.765s
+Total:		167.802s
+Result: [0.08510126841]
+shahidkhan@MacBook-Pro-12013 DFTs % 

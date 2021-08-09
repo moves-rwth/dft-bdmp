@@ -1,0 +1,63 @@
+/Users/shahidkhan/Documents/stormpy-env/bin/python3.7 /Users/shahidkhan/Documents/fire_sprinkler_system/script/test.py
+JSON generated
+parameters updated
+DRN generated
+Reliability Complement
+	Result: 0.010129301273502192
+	Time:   12.41s
+PFH
+	Result: 1.3875755169181084e-05
+	Time:   11.00s
+MTTF
+	Result: 46824.10162474936
+	Time:   2.40s
+P(180|730)
+	Result: 0.9938678384367733
+	Time:   1.19s
+B(5)
+0.9249853345827975 0 117060 234121
+0.7197116230692455 0 58530 117060
+0.45024818545125656 0 29265 58530
+0.23752571796299707 0 14632 29265
+0.11489018984140276 0 7316 14632
+0.054540098467325986 0 3658 7316
+0.026179208420233264 0 1829 3658
+0.04014749371444744 1829 2744 3658
+0.0472947738442798 2744 3201 3658
+0.05091380484313468 3201 3430 3658
+	Result: 3430
+	Time:   168.00s
+FFA
+	Result: 0.024120529447393752
+	Time:   0.53s
+FWD
+	Result: 0.010056852354451815
+	Time:   0.46s
+MDR
+P=? [F<=730 "failed"]
+[<stormpy.core.Property object at 0x10ae4cb90>]
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+	Result: 0.01961015515326746
+	Time:   13.32s
+FLOD
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+Consider 62208 states
+ WARN (SparseCtmcCslHelper.cpp:1081): Computation of transient probabilities with relative precision not supported. Using absolute precision instead.
+FLOD result for 730: 3.578300334660106e-05
+	Result: 3.578300334660106e-05
+	Time:   56.93s
+SILFO
+	Result: 0.010092635357798417
+	Time:   0.00s
+
+Process finished with exit code 0

@@ -1,0 +1,1877 @@
+{
+    "toplevel": "82",
+    "parameters": {
+        "rateWater_supply_pipe_to_sprinkler_head_damaged": 5.94520547945e-09,
+        "rateMain_riser_leak": 5.94520547945e-09,
+        "rateNon_return_valve_ca_faulty": 1.46575342466e-06,
+        "rateAlaram_valve_failure_at_control_assembly": 9.13698630137e-07,
+        "rateMonitoring_problem_dummy10": 0.0,
+        "rateMain_valve_truned_off": 1.11506849315e-05,
+        "ratePipe_leak_pipe_work_from_tanks_to_pumps": 5.94520547945e-09,
+        "rateMonitoring_problem_dummy1": 0.0,
+        "rateValve_closed_leaking_1": 9.65753424658e-07,
+        "rateMonitoring_problem_dummy2": 0.0,
+        "rateNo_water_in_tank1_due_to_damage_repair": 1.98820395738e-09,
+        "rateMonitoring_problem_dummy3": 0.0,
+        "rateValve_closed_leaking_2": 9.65753424658e-07,
+        "rateMonitoring_problem_dummy4": 0.0,
+        "rateNo_water_in_tank2_due_to_damage_repair": 1.98820395738e-09,
+        "rateWater_supply_pipe_to_control_assembly_damaged": 5.94520547945e-09,
+        "rateInlet_isolation_valve_faulty_ep": 9.65753424658e-07,
+        "rateMonitoring_problem_dummy5": 0.0,
+        "rateValve_closed_leaking_3": 9.65753424658e-07,
+        "rateNon_return_valve_faulty_ep": 1.46575342466e-06,
+        "ratePS1_faulty": 2.34246575342e-06,
+        "ratePS2_faulty": 2.34246575342e-06,
+        "rateFaulty_pump_ep": 1.01917808219e-06,
+        "ratePower_failure_dummy1": 0.0,
+        "ratewiring_burn_out": 3e-07,
+        "rateInlet_isolation_valve_faulty_dp": 9.65753424658e-07,
+        "rateMonitoring_problem_dummy6": 0.0,
+        "rateValve_closed_leaking_4": 9.65753424658e-07,
+        "rateNon_return_valve_faulty_dp": 1.46575342466e-06,
+        "ratePS1_dp_faulty": 2.34246575342e-06,
+        "ratePS2_dp_faulty": 2.34246575342e-06,
+        "rateFaulty_pump_dp": 4.8904109589e-07,
+        "ratePower_failure_dummy2": 0.0,
+        "rateMonitoring_problem_dummy7": 0.0,
+        "ratediesel_pump_backup_battery_flat": 1.90410958904e-05,
+        "rateNon_return_valve1_faulty": 1.46575342466e-06,
+        "rateMonitoring_problem_dummy8": 0.0,
+        "rateValve_closed_leaking_5": 9.65753424658e-07,
+        "rateNon_return_valve2_faulty": 1.46575342466e-06,
+        "rateMonitoring_problem_dummy9": 0.0,
+        "rateValve_closed_leaking_6": 9.65753424658e-07,
+        "rateZone_isolation_valve_closed_due_to_tenancy_change": 1.07808219178e-05,
+        "rateSprinkler_head_faulty": 2.96851217656e-08,
+        "rateOperator_not_noticing_alarm": 4.1095890411e-05,
+        "ratepower_failure_dummy3": 0.0,
+        "rateBackup_UPS_battery_Failure": 4.3698630137e-05,
+        "rateFIP_faulty": 5.91780821918e-05,
+        "rateMonitoring_device_alram_faulty": 6.02739726027e-07,
+        "rateFIP_HW_Transient_UnCovered_Failure": 1.3704e-10,
+        "rateFIP_HW_Transient_Covered_SafetyMech_Failure": 1.3704e-09,
+        "rateFIP_HW_Transient_Covered_Failure_Rate": 1.3567e-08,
+        "rateFIP_HW_Permanent_UnCovered_Failure": 1.3704e-11,
+        "rateFIP_HW_Permanent_Covered_SafetyMech_Failure": 1.3704e-09,
+        "rateFIP_HW_Permanent_Covered_Failure_Rate": 1.3567e-09,
+        "ratedummy_power_failure": 0.0,
+        "rateTransfer_switch_failure": 2.3434e-06,
+        "rateStreet_power_failure": 1.52054794521e-06,
+        "rateDiesel_generator_fail": 3.21917808219e-06
+    },
+    "nodes": [
+        {
+            "data": {
+                "id": "0",
+                "name": "Water_supply_pipe_to_sprinkler_head_damaged",
+                "type": "be",
+                "rate": "rateWater_supply_pipe_to_sprinkler_head_damaged",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "1",
+                "name": "Main_riser_leak",
+                "type": "be",
+                "rate": "rateMain_riser_leak",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "2",
+                "name": "Non_return_valve_ca_faulty",
+                "type": "be",
+                "rate": "rateNon_return_valve_ca_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "3",
+                "name": "Alaram_valve_failure_at_control_assembly",
+                "type": "be",
+                "rate": "rateAlaram_valve_failure_at_control_assembly",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "4",
+                "name": "Monitoring_problem_dummy10",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy10",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "5",
+                "name": "Main_valve_truned_off",
+                "type": "be",
+                "rate": "rateMain_valve_truned_off",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "6",
+                "name": "Main_stop_valve_damaged",
+                "type": "pand",
+                "children": [
+                    "4",
+                    "5"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "7",
+                "name": "Failure_of_main_control_assembly",
+                "type": "or",
+                "children": [
+                    "2",
+                    "3",
+                    "6"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "8",
+                "name": "Pipe_leak_pipe_work_from_tanks_to_pumps",
+                "type": "be",
+                "rate": "ratePipe_leak_pipe_work_from_tanks_to_pumps",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "9",
+                "name": "Monitoring_problem_dummy1",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy1",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "10",
+                "name": "Valve_closed_leaking_1",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_1",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "11",
+                "name": "Outlet_isolation_valve_from_tank1_not_working",
+                "type": "pand",
+                "children": [
+                    "9",
+                    "10"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "Monitoring_problem_dummy2",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy2",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "No_water_in_tank1_due_to_damage_repair",
+                "type": "be",
+                "rate": "rateNo_water_in_tank1_due_to_damage_repair",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "14",
+                "name": "No_water_in_the_tank1",
+                "type": "pand",
+                "children": [
+                    "12",
+                    "13"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "15",
+                "name": "No_water_supplied_from_tank1",
+                "type": "or",
+                "children": [
+                    "11",
+                    "14"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "16",
+                "name": "Monitoring_problem_dummy3",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy3",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "17",
+                "name": "Valve_closed_leaking_2",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_2",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "Outlet_isolation_valve_from_tank2_not_working",
+                "type": "pand",
+                "children": [
+                    "16",
+                    "17"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "Monitoring_problem_dummy4",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy4",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "20",
+                "name": "No_water_in_tank2_due_to_damage_repair",
+                "type": "be",
+                "rate": "rateNo_water_in_tank2_due_to_damage_repair",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "21",
+                "name": "No_water_in_the_tank2",
+                "type": "pand",
+                "children": [
+                    "19",
+                    "20"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "22",
+                "name": "No_water_supplied_from_tank2",
+                "type": "or",
+                "children": [
+                    "18",
+                    "21"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "23",
+                "name": "No_water_supplied_from_tanks",
+                "type": "and",
+                "children": [
+                    "15",
+                    "22"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "Inadequate_water_flow_to_pumps_from_tanks",
+                "type": "or",
+                "children": [
+                    "8",
+                    "23"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "Water_supply_pipe_to_control_assembly_damaged",
+                "type": "be",
+                "rate": "rateWater_supply_pipe_to_control_assembly_damaged",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "26",
+                "name": "Inlet_isolation_valve_faulty_ep",
+                "type": "be",
+                "rate": "rateInlet_isolation_valve_faulty_ep",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "27",
+                "name": "Monitoring_problem_dummy5",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy5",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "28",
+                "name": "Valve_closed_leaking_3",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_3",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "29",
+                "name": "Outlet_isolation_valve_monitored_not_working_ep",
+                "type": "pand",
+                "children": [
+                    "27",
+                    "28"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "Isolation_valves_not_working_ep",
+                "type": "or",
+                "children": [
+                    "26",
+                    "29"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "Non_return_valve_faulty_ep",
+                "type": "be",
+                "rate": "rateNon_return_valve_faulty_ep",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "32",
+                "name": "PS1_faulty",
+                "type": "be",
+                "rate": "ratePS1_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "33",
+                "name": "PS2_faulty",
+                "type": "be",
+                "rate": "ratePS2_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "34",
+                "name": "Pressure_switch_not_working",
+                "type": "and",
+                "children": [
+                    "32",
+                    "33"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "35",
+                "name": "Faulty_pump_ep",
+                "type": "be",
+                "rate": "rateFaulty_pump_ep",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "36",
+                "name": "Power_failure_dummy1",
+                "type": "be",
+                "rate": "ratePower_failure_dummy1",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "37",
+                "name": "wiring_burn_out",
+                "type": "be",
+                "rate": "ratewiring_burn_out",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "38",
+                "name": "No_power_to_drive_pump_ep",
+                "type": "and",
+                "children": [
+                    "36",
+                    "37"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "39",
+                "name": "Pump_can_not_operate_ep",
+                "type": "or",
+                "children": [
+                    "35",
+                    "38"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "40",
+                "name": "No_water_from_pump_ep",
+                "type": "or",
+                "children": [
+                    "34",
+                    "39"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "41",
+                "name": "Electric_pump_fails",
+                "type": "or",
+                "children": [
+                    "30",
+                    "31",
+                    "40"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "42",
+                "name": "Inlet_isolation_valve_faulty_dp",
+                "type": "be",
+                "rate": "rateInlet_isolation_valve_faulty_dp",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "43",
+                "name": "Monitoring_problem_dummy6",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy6",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "44",
+                "name": "Valve_closed_leaking_4",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_4",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "45",
+                "name": "Outlet_isolation_valve_monitored_not_working_dp",
+                "type": "pand",
+                "children": [
+                    "43",
+                    "44"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "46",
+                "name": "Isolation_valves_not_working_dp",
+                "type": "or",
+                "children": [
+                    "42",
+                    "45"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "47",
+                "name": "Non_return_valve_faulty_dp",
+                "type": "be",
+                "rate": "rateNon_return_valve_faulty_dp",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "48",
+                "name": "PS1_dp_faulty",
+                "type": "be",
+                "rate": "ratePS1_dp_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "49",
+                "name": "PS2_dp_faulty",
+                "type": "be",
+                "rate": "ratePS2_dp_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "50",
+                "name": "Pressure_switch_dp_not_working",
+                "type": "and",
+                "children": [
+                    "48",
+                    "49"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "51",
+                "name": "Faulty_pump_dp",
+                "type": "be",
+                "rate": "rateFaulty_pump_dp",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "52",
+                "name": "Power_failure_dummy2",
+                "type": "be",
+                "rate": "ratePower_failure_dummy2",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "53",
+                "name": "Monitoring_problem_dummy7",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy7",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "54",
+                "name": "diesel_pump_backup_battery_flat",
+                "type": "be",
+                "rate": "ratediesel_pump_backup_battery_flat",
+                "dorm": "(/ 3602879701896397 36028797018963968)",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "55",
+                "name": "Flat_battery",
+                "type": "pand",
+                "children": [
+                    "53",
+                    "54"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "56",
+                "name": "No_power_to_drive_pump_dp",
+                "type": "spare",
+                "children": [
+                    "52",
+                    "55"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "57",
+                "name": "Pump_can_not_operate_dp",
+                "type": "or",
+                "children": [
+                    "51",
+                    "56"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "58",
+                "name": "No_water_from_pump_dp",
+                "type": "or",
+                "children": [
+                    "50",
+                    "57"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "59",
+                "name": "Diesel_pump_fails",
+                "type": "or",
+                "children": [
+                    "46",
+                    "47",
+                    "58"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "60",
+                "name": "Both_pumps_fail",
+                "type": "and",
+                "children": [
+                    "41",
+                    "59"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "61",
+                "name": "Inadequate_pressure_from_pumps",
+                "type": "or",
+                "children": [
+                    "25",
+                    "60"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "62",
+                "name": "No_water_from_pumps",
+                "type": "or",
+                "children": [
+                    "24",
+                    "61"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "63",
+                "name": "Non_return_valve1_faulty",
+                "type": "be",
+                "rate": "rateNon_return_valve1_faulty",
+                "dorm": "(/ 3602879701896397 36028797018963968)",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "64",
+                "name": "Monitoring_problem_dummy8",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy8",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "65",
+                "name": "Valve_closed_leaking_5",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_5",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "66",
+                "name": "Inlet_isolation_valve1_to_tank_not_working",
+                "type": "pand",
+                "children": [
+                    "64",
+                    "65"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "67",
+                "name": "Valves1_to_tank_not_working",
+                "type": "or",
+                "children": [
+                    "63",
+                    "66"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "68",
+                "name": "No_water_from_town_main1",
+                "type": "or",
+                "children": [
+                    "67"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "69",
+                "name": "Non_return_valve2_faulty",
+                "type": "be",
+                "rate": "rateNon_return_valve2_faulty",
+                "dorm": "(/ 3602879701896397 36028797018963968)",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "70",
+                "name": "Monitoring_problem_dummy9",
+                "type": "be",
+                "rate": "rateMonitoring_problem_dummy9",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "71",
+                "name": "Valve_closed_leaking_6",
+                "type": "be",
+                "rate": "rateValve_closed_leaking_6",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "72",
+                "name": "Inlet_isolation_valve2_to_tank_not_working",
+                "type": "pand",
+                "children": [
+                    "70",
+                    "71"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "73",
+                "name": "Valves2_to_tank_not_working",
+                "type": "or",
+                "children": [
+                    "69",
+                    "72"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "74",
+                "name": "No_water_from_town_main2",
+                "type": "or",
+                "children": [
+                    "73"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "75",
+                "name": "No_water_from_pumps_bypass_town_main",
+                "type": "and",
+                "children": [
+                    "68",
+                    "74"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "76",
+                "name": "No_water_supply_to_main_control_assembly",
+                "type": "and",
+                "children": [
+                    "62",
+                    "75"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "77",
+                "name": "No_water_supply_beyond_control_assembly",
+                "type": "or",
+                "children": [
+                    "7",
+                    "76"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "78",
+                "name": "Zone_isolation_valve_closed_due_to_tenancy_change",
+                "type": "be",
+                "rate": "rateZone_isolation_valve_closed_due_to_tenancy_change",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "79",
+                "name": "No_water_supply_to_zone_of_the_fire_origin",
+                "type": "or",
+                "children": [
+                    "1",
+                    "77",
+                    "78"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "80",
+                "name": "No_water_behind_sprinkler_head",
+                "type": "or",
+                "children": [
+                    "0",
+                    "79"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "81",
+                "name": "Sprinkler_head_faulty",
+                "type": "be",
+                "rate": "rateSprinkler_head_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "82",
+                "name": "Sprinkler_does_not_deliver_water",
+                "type": "or",
+                "children": [
+                    "80",
+                    "81"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "83",
+                "name": "Operator_not_noticing_alarm",
+                "type": "be",
+                "rate": "rateOperator_not_noticing_alarm",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "84",
+                "name": "power_failure_dummy3",
+                "type": "be",
+                "rate": "ratepower_failure_dummy3",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "85",
+                "name": "Backup_UPS_battery_Failure",
+                "type": "be",
+                "rate": "rateBackup_UPS_battery_Failure",
+                "dorm": "(/ 3602879701896397 36028797018963968)",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "86",
+                "name": "No_power_to_run_FIP",
+                "type": "spare",
+                "children": [
+                    "84",
+                    "85"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "87",
+                "name": "FIP_faulty",
+                "type": "be",
+                "rate": "rateFIP_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "88",
+                "name": "Monitor_alram_not_indicated_in_FIP",
+                "type": "or",
+                "children": [
+                    "86",
+                    "87"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "89",
+                "name": "Monitoring_device_alram_faulty",
+                "type": "be",
+                "rate": "rateMonitoring_device_alram_faulty",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "90",
+                "name": "monitoring_problem",
+                "type": "or",
+                "children": [
+                    "83",
+                    "88",
+                    "89"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "91",
+                "name": "fdep_monitoring",
+                "type": "fdep",
+                "children": [
+                    "90",
+                    "9",
+                    "12",
+                    "16",
+                    "19",
+                    "27",
+                    "43",
+                    "53",
+                    "64",
+                    "70",
+                    "4"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "92",
+                "name": "FIP_HW_Transient_UnCovered_Failure",
+                "type": "be",
+                "rate": "rateFIP_HW_Transient_UnCovered_Failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "93",
+                "name": "FIP_HW_Transient_Covered_SafetyMech_Failure",
+                "type": "be",
+                "rate": "rateFIP_HW_Transient_Covered_SafetyMech_Failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "94",
+                "name": "FIP_HW_Transient_Covered_Failure_Rate",
+                "type": "be",
+                "rate": "rateFIP_HW_Transient_Covered_Failure_Rate",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "95",
+                "name": "FIP_HW_Transient_Covered_Failure",
+                "type": "and",
+                "children": [
+                    "93",
+                    "94"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "96",
+                "name": "FIP_HW_Transient_Failure",
+                "type": "or",
+                "children": [
+                    "92",
+                    "95"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "97",
+                "name": "FIP_HW_Permanent_UnCovered_Failure",
+                "type": "be",
+                "rate": "rateFIP_HW_Permanent_UnCovered_Failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "98",
+                "name": "FIP_HW_Permanent_Covered_SafetyMech_Failure",
+                "type": "be",
+                "rate": "rateFIP_HW_Permanent_Covered_SafetyMech_Failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "99",
+                "name": "FIP_HW_Permanent_Covered_Failure_Rate",
+                "type": "be",
+                "rate": "rateFIP_HW_Permanent_Covered_Failure_Rate",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "FIP_HW_Permanent_Covered_Failure",
+                "type": "and",
+                "children": [
+                    "98",
+                    "99"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "101",
+                "name": "FIP_HW_Permanent_Failure",
+                "type": "or",
+                "children": [
+                    "97",
+                    "100"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "102",
+                "name": "FIP_HW_failure",
+                "type": "or",
+                "children": [
+                    "96",
+                    "101"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "103",
+                "name": "fdep_FIP",
+                "type": "fdep",
+                "children": [
+                    "102",
+                    "87"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "104",
+                "name": "FIP_HW_Transient_Failure_SEQ",
+                "type": "seq",
+                "children": [
+                    "93",
+                    "94"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "105",
+                "name": "FIP_HW_Permanent_Failure_SEQ",
+                "type": "seq",
+                "children": [
+                    "98",
+                    "99"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "dummy_power_failure",
+                "type": "be",
+                "rate": "ratedummy_power_failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "107",
+                "name": "fdep_wiring_burnout",
+                "type": "fdep",
+                "children": [
+                    "37",
+                    "106"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "108",
+                "name": "Transfer_switch_failure",
+                "type": "be",
+                "rate": "rateTransfer_switch_failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "109",
+                "name": "Street_power_failure",
+                "type": "be",
+                "rate": "rateStreet_power_failure",
+                "dorm": "0",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "110",
+                "name": "transfer_to_backup_fails",
+                "type": "pand",
+                "children": [
+                    "108",
+                    "109"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "111",
+                "name": "Diesel_generator_fail",
+                "type": "be",
+                "rate": "rateDiesel_generator_fail",
+                "dorm": "(/ 3602879701896397 36028797018963968)",
+                "transient": false
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "Both_sources_fail",
+                "type": "spare",
+                "children": [
+                    "109",
+                    "111"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "113",
+                "name": "power_failure",
+                "type": "or",
+                "children": [
+                    "110",
+                    "112"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "114",
+                "name": "fdep_power_failure_dummy",
+                "type": "fdep",
+                "children": [
+                    "113",
+                    "106"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "115",
+                "name": "fdep_power_failure",
+                "type": "fdep",
+                "children": [
+                    "106",
+                    "36",
+                    "52",
+                    "84"
+                ]
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "nodes"
+        }
+    ]
+}

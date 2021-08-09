@@ -1,0 +1,144 @@
+{
+    "name": "One Block",
+    "default": {
+        "type": "transient_permanent",
+        "rate_transient": 1000,
+        "coverage_transient": 0.99,
+        "safety_rate_transient": 50,
+        "rate_permanent": 1,
+        "coverage_permanent": 0.90,
+        "safety_rate_permanent": 50
+    },
+    "blocks": [
+        {
+            "name": "Block HW",
+            "pattern": {
+                "type": "default"
+            } 
+        },
+        {
+            "name": "Block BUS",
+            "pattern": {
+                "type": "default"
+            } 
+        }
+    ],
+    "assignment": [
+        {
+            "component": "HW EP",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW SafeEP",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW TP",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW SafeTP",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW TCS",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW BrakeM",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW PowertrainM",
+            "block": "Block HW"
+        },
+        {
+            "component": "HW SteerM",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS Sensor-EP",
+            "block": "Block BUS"
+        },
+        {
+            "component": "BUS Sensor-SafeEP",
+            "block": "Block BUS"
+        },
+        {
+            "component": "BUS EP-TP",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS TP-EP",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS SafeEP-SafeTP",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS SafeEP-TCS",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS SafeTP-TCS",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS TP-TCS",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS TCS-AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS TP-AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS AC-TP",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS AC-BrakeM",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS BrakeM-AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS AC-PowertrainM",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS PowertrainM-AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS AC-SteerM",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS SteerM-AC",
+            "block": "Block HW"
+        },
+        {
+            "component": "BUS Actuator-BrakeM",
+            "block": "Block BUS"
+        },
+        {
+            "component": "BUS Actuator-PowertrainM",
+            "block": "Block BUS"
+        },
+        {
+            "component": "BUS Actuator-SteerM",
+            "block": "Block BUS"
+        }
+    ]
+}

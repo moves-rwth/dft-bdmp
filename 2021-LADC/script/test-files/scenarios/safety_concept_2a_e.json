@@ -1,0 +1,2366 @@
+{
+    "toplevel": "1",
+    "parameters": {
+        "rTCSInt": 0.0,
+        "rTPInt": 0.0,
+        "rActuatorInt": 1.0,
+        "rSensorsInt": 1.0,
+        "rAMInt": 0.0,
+        "rs_TPInt": 0.0,
+        "rEPInt": 0.0,
+        "rs_EPInt": 0.0,
+        "rTrans": 10000.0,
+        "rPerm": 1000.0,
+        "rSafety": 1000.0,
+        "rCovD": 0.99,
+        "rCovB": 0.9,
+        "rCovQM": 0.6,
+        "rHW": 100.0
+    },
+    "nodes": [
+        {
+            "data": {
+                "id": "1",
+                "name": "T",
+                "type": "or",
+                "children": [
+                    "6",
+                    "153",
+                    "48",
+                    "54",
+                    "60",
+                    "66",
+                    "72",
+                    "78"
+                ]
+            },
+            "position": {
+                "x": 2421.1443466777932,
+                "y": -1205.8130776182727
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "149",
+                "name": "Sensor3",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -289.1358235348586,
+                "y": 201.40035160214543
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "6",
+                "name": "Sensors",
+                "type": "or",
+                "children": [
+                    "151"
+                ]
+            },
+            "position": {
+                "x": -11.192545036767394,
+                "y": 20.519665900740225
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "7",
+                "name": "dep Sensors",
+                "type": "fdep",
+                "children": [
+                    "6",
+                    "122",
+                    "125",
+                    "128"
+                ]
+            },
+            "position": {
+                "x": 100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "8",
+                "name": "EP internal",
+                "type": "be",
+                "rate": "rEPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "12",
+                "name": "EP",
+                "type": "or",
+                "children": [
+                    "8",
+                    "194",
+                    "83",
+                    "122",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "13",
+                "name": "dep EP",
+                "type": "fdep",
+                "children": [
+                    "12",
+                    "80"
+                ]
+            },
+            "position": {
+                "x": 700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "14",
+                "name": "TP internal",
+                "type": "be",
+                "rate": "rTPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "18",
+                "name": "TP",
+                "type": "or",
+                "children": [
+                    "14",
+                    "194",
+                    "80",
+                    "101",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 1200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "19",
+                "name": "dep TP",
+                "type": "fdep",
+                "children": [
+                    "18",
+                    "83",
+                    "98"
+                ]
+            },
+            "position": {
+                "x": 1300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "20",
+                "name": "s_EP1 internal",
+                "type": "be",
+                "rate": "rs_EPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "24",
+                "name": "s_EP1",
+                "type": "or",
+                "children": [
+                    "20",
+                    "168",
+                    "89",
+                    "125",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 1800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "25",
+                "name": "dep s_EP1",
+                "type": "fdep",
+                "children": [
+                    "24",
+                    "86"
+                ]
+            },
+            "position": {
+                "x": 1900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "26",
+                "name": "s_TP1 internal",
+                "type": "be",
+                "rate": "rs_TPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "30",
+                "name": "s_TP1",
+                "type": "or",
+                "children": [
+                    "26",
+                    "168",
+                    "86",
+                    "107",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 2400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "31",
+                "name": "dep s_TP1",
+                "type": "fdep",
+                "children": [
+                    "30",
+                    "89",
+                    "104"
+                ]
+            },
+            "position": {
+                "x": 2500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "32",
+                "name": "s_EP2 internal",
+                "type": "be",
+                "rate": "rs_EPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "36",
+                "name": "s_EP2",
+                "type": "or",
+                "children": [
+                    "32",
+                    "181",
+                    "95",
+                    "128",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 3000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "37",
+                "name": "dep s_EP2",
+                "type": "fdep",
+                "children": [
+                    "36",
+                    "92"
+                ]
+            },
+            "position": {
+                "x": 3100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "38",
+                "name": "s_TP2 internal",
+                "type": "be",
+                "rate": "rs_TPInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "42",
+                "name": "s_TP2",
+                "type": "or",
+                "children": [
+                    "38",
+                    "181",
+                    "92",
+                    "113",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 3600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "43",
+                "name": "dep s_TP2",
+                "type": "fdep",
+                "children": [
+                    "42",
+                    "95",
+                    "110"
+                ]
+            },
+            "position": {
+                "x": 3700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "44",
+                "name": "TCS internal_ADAS4 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm) rTCSInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "48",
+                "name": "TCS",
+                "type": "or",
+                "children": [
+                    "44",
+                    "155",
+                    "119",
+                    "250",
+                    "196",
+                    "198",
+                    "204"
+                ]
+            },
+            "position": {
+                "x": 4200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "49",
+                "name": "dep TCS",
+                "type": "fdep",
+                "children": [
+                    "48",
+                    "101",
+                    "107",
+                    "113",
+                    "116"
+                ]
+            },
+            "position": {
+                "x": 4300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "50",
+                "name": "AM internal_ADAS5 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm) rAMInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "54",
+                "name": "AM",
+                "type": "or",
+                "children": [
+                    "50",
+                    "116",
+                    "250",
+                    "131",
+                    "134",
+                    "137",
+                    "140",
+                    "209",
+                    "211",
+                    "217"
+                ]
+            },
+            "position": {
+                "x": 4800,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "55",
+                "name": "dep AM",
+                "type": "fdep",
+                "children": [
+                    "54",
+                    "119"
+                ]
+            },
+            "position": {
+                "x": 4900,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "56",
+                "name": "Actuator1 internal_ECU4",
+                "type": "be",
+                "rate": "(+ rHW rActuatorInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5250,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "147",
+                "name": "Sensor1",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -552.1606318988923,
+                "y": 214.4583208117074
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "151",
+                "name": "Sensors internal",
+                "type": "vot",
+                "children": [
+                    "147",
+                    "148",
+                    "149",
+                    "150"
+                ],
+                "voting": "3"
+            },
+            "position": {
+                "x": -300.328368571626,
+                "y": 78.28235619770416
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "60",
+                "name": "Actuator1",
+                "type": "or",
+                "children": [
+                    "56"
+                ]
+            },
+            "position": {
+                "x": 5400,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "61",
+                "name": "dep Actuator1",
+                "type": "fdep",
+                "children": [
+                    "60",
+                    "131"
+                ]
+            },
+            "position": {
+                "x": 5500,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "62",
+                "name": "Actuator2 internal_ECU1",
+                "type": "be",
+                "rate": "(+ rHW rActuatorInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 5850,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "66",
+                "name": "Actuator2",
+                "type": "or",
+                "children": [
+                    "62"
+                ]
+            },
+            "position": {
+                "x": 6000,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "67",
+                "name": "dep Actuator2",
+                "type": "fdep",
+                "children": [
+                    "66",
+                    "134"
+                ]
+            },
+            "position": {
+                "x": 6100,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "68",
+                "name": "Actuator3 internal_ECU2",
+                "type": "be",
+                "rate": "(+ rHW rActuatorInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 6450,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "72",
+                "name": "Actuator3",
+                "type": "or",
+                "children": [
+                    "68"
+                ]
+            },
+            "position": {
+                "x": 6600,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "73",
+                "name": "dep Actuator3",
+                "type": "fdep",
+                "children": [
+                    "72",
+                    "137"
+                ]
+            },
+            "position": {
+                "x": 6700,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "74",
+                "name": "Actuator4 internal_ECU3",
+                "type": "be",
+                "rate": "(+ rHW rActuatorInt)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 7050,
+                "y": 100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "145",
+                "name": "s_Path2",
+                "type": "or",
+                "children": [
+                    "36",
+                    "42"
+                ]
+            },
+            "position": {
+                "x": 3275.4538653635004,
+                "y": -178.42896519827752
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "78",
+                "name": "Actuator4",
+                "type": "or",
+                "children": [
+                    "74"
+                ]
+            },
+            "position": {
+                "x": 7200,
+                "y": 0
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "79",
+                "name": "dep Actuator4",
+                "type": "fdep",
+                "children": [
+                    "78",
+                    "140"
+                ]
+            },
+            "position": {
+                "x": 7300,
+                "y": 400
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "80",
+                "name": "EP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1050,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "83",
+                "name": "TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "86",
+                "name": "s_EP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2250,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "89",
+                "name": "s_TP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "92",
+                "name": "s_EP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "95",
+                "name": "s_TP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3000,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "98",
+                "name": "TP",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3866.8004602973256,
+                "y": 296.8949230558869
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "TP wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "98",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 3920.940562889476,
+                "y": 217.5954360166411
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "101",
+                "name": "TCS",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "104",
+                "name": "s_TP1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3987.1822043638904,
+                "y": 412.8177956361105
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "s_TP1 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "104",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 4028.901999179588,
+                "y": 328.34318035667616
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "107",
+                "name": "TCS",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2400,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "110",
+                "name": "s_TP2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4066.162922508946,
+                "y": 421.0980008204121
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "s_TP2 wrong Nominal Value",
+                "type": "or",
+                "children": [
+                    "110",
+                    "250"
+                ]
+            },
+            "position": {
+                "x": 4121.338050749134,
+                "y": 341.7985137811663
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "113",
+                "name": "TCS",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3600,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "116",
+                "name": "TCS",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "119",
+                "name": "AM",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4200,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "122",
+                "name": "Sensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 450,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "125",
+                "name": "Sensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1650,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "128",
+                "name": "Sensors",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2850,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "131",
+                "name": "Actuator1",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4800,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "134",
+                "name": "Actuator2",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4850,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "137",
+                "name": "Actuator3",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4900,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "140",
+                "name": "Actuator4",
+                "type": "be",
+                "rate": "0",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4950,
+                "y": 300
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "150",
+                "name": "Sensor4",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -167.88325230321183,
+                "y": 199.5349274293509
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "148",
+                "name": "Sensor2",
+                "type": "be",
+                "rate": "rSensorsInt",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -419.7155156304782,
+                "y": 210.72747246611826
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "143",
+                "name": "n_Path",
+                "type": "or",
+                "children": [
+                    "12",
+                    "18"
+                ]
+            },
+            "position": {
+                "x": 934.5230053987168,
+                "y": -178.42896519827752
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "144",
+                "name": "s_Path1",
+                "type": "or",
+                "children": [
+                    "24",
+                    "30"
+                ]
+            },
+            "position": {
+                "x": 2072.1243952304153,
+                "y": -183.48497137530728
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "152",
+                "name": "s_Path",
+                "type": "and",
+                "children": [
+                    "144",
+                    "145"
+                ]
+            },
+            "position": {
+                "x": 2686.181410729196,
+                "y": -383.11491305340996
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "153",
+                "name": "Navigator",
+                "type": "and",
+                "children": [
+                    "143",
+                    "152"
+                ]
+            },
+            "position": {
+                "x": 1827.6607206479068,
+                "y": -604.2849830671076
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "154",
+                "name": "s_TP wrong Nominal Value",
+                "type": "and",
+                "children": [
+                    "106",
+                    "112"
+                ]
+            },
+            "position": {
+                "x": 4087.9238413827575,
+                "y": 239.23260330522385
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "155",
+                "name": "TPsTP wrong Nominal Value",
+                "type": "and",
+                "children": [
+                    "100",
+                    "154"
+                ]
+            },
+            "position": {
+                "x": 4103.449226103321,
+                "y": 153.32547451809398
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "156",
+                "name": "ADAS1 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": -402.16063189889235,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "157",
+                "name": "ADAS1 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": -627.1606318988923,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "158",
+                "name": "ADAS1 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -502.16063189889235,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "159",
+                "name": "ADAS1 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "158",
+                    "156"
+                ]
+            },
+            "position": {
+                "x": -477.16063189889235,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "160",
+                "name": "seqADAS1 Transient",
+                "type": "seq",
+                "children": [
+                    "158",
+                    "156"
+                ]
+            },
+            "position": {
+                "x": -402.16063189889235,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "162",
+                "name": "ADAS1 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -102.16063189889235,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "163",
+                "name": "ADAS1 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -327.16063189889235,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "164",
+                "name": "ADAS1 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": -202.16063189889235,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "165",
+                "name": "ADAS1 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "164",
+                    "162"
+                ]
+            },
+            "position": {
+                "x": -177.16063189889235,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "166",
+                "name": "seqADAS1 Permanent",
+                "type": "seq",
+                "children": [
+                    "164",
+                    "162"
+                ]
+            },
+            "position": {
+                "x": -102.16063189889235,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "168",
+                "name": "ADAS1 Failure",
+                "type": "or",
+                "children": [
+                    "157",
+                    "159",
+                    "163",
+                    "165"
+                ]
+            },
+            "position": {
+                "x": -402.16063189889235,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "169",
+                "name": "ADAS2 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 297.83936810110765,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "170",
+                "name": "ADAS2 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 72.83936810110765,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "171",
+                "name": "ADAS2 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 197.83936810110765,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "172",
+                "name": "ADAS2 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "171",
+                    "169"
+                ]
+            },
+            "position": {
+                "x": 222.83936810110765,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "173",
+                "name": "seqADAS2 Transient",
+                "type": "seq",
+                "children": [
+                    "171",
+                    "169"
+                ]
+            },
+            "position": {
+                "x": 297.83936810110765,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "175",
+                "name": "ADAS2 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 597.8393681011077,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "176",
+                "name": "ADAS2 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 372.83936810110765,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "177",
+                "name": "ADAS2 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 497.83936810110765,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "178",
+                "name": "ADAS2 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "177",
+                    "175"
+                ]
+            },
+            "position": {
+                "x": 522.8393681011077,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "179",
+                "name": "seqADAS2 Permanent",
+                "type": "seq",
+                "children": [
+                    "177",
+                    "175"
+                ]
+            },
+            "position": {
+                "x": 597.8393681011077,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "181",
+                "name": "ADAS2 Failure",
+                "type": "or",
+                "children": [
+                    "170",
+                    "172",
+                    "176",
+                    "178"
+                ]
+            },
+            "position": {
+                "x": 297.83936810110765,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "182",
+                "name": "ADAS3 TransientCov",
+                "type": "be",
+                "rate": "(* rTrans rCovQM)",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 997.8393681011077,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "183",
+                "name": "ADAS3 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- 1) (* rTrans rCovQM)) rTrans)",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 772.8393681011077,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "184",
+                "name": "ADAS3 TransientSafeMech",
+                "type": "be",
+                "rate": "rSafety",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 897.8393681011077,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "185",
+                "name": "ADAS3 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "184",
+                    "182"
+                ]
+            },
+            "position": {
+                "x": 922.8393681011077,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "186",
+                "name": "seqADAS3 Transient",
+                "type": "seq",
+                "children": [
+                    "184",
+                    "182"
+                ]
+            },
+            "position": {
+                "x": 997.8393681011077,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "188",
+                "name": "ADAS3 PermanentCov",
+                "type": "be",
+                "rate": "(* rPerm rCovQM)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1297.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "189",
+                "name": "ADAS3 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- 1) (* rPerm rCovQM)) rPerm)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1072.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "190",
+                "name": "ADAS3 PermanentSafeMech",
+                "type": "be",
+                "rate": "rSafety",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1197.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "191",
+                "name": "ADAS3 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "190",
+                    "188"
+                ]
+            },
+            "position": {
+                "x": 1222.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "192",
+                "name": "seqADAS3 Permanent",
+                "type": "seq",
+                "children": [
+                    "190",
+                    "188"
+                ]
+            },
+            "position": {
+                "x": 1297.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "194",
+                "name": "ADAS3 Failure",
+                "type": "or",
+                "children": [
+                    "183",
+                    "185",
+                    "189",
+                    "191"
+                ]
+            },
+            "position": {
+                "x": 997.8393681011077,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "195",
+                "name": "ADAS4 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 1697.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "196",
+                "name": "ADAS4 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 1472.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "197",
+                "name": "ADAS4 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1597.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "198",
+                "name": "ADAS4 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "197",
+                    "195"
+                ]
+            },
+            "position": {
+                "x": 1622.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "199",
+                "name": "seqADAS4 Transient",
+                "type": "seq",
+                "children": [
+                    "197",
+                    "195"
+                ]
+            },
+            "position": {
+                "x": 1697.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "201",
+                "name": "ADAS4 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1997.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "203",
+                "name": "ADAS4 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 1897.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "204",
+                "name": "ADAS4 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "203",
+                    "201"
+                ]
+            },
+            "position": {
+                "x": 1922.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "205",
+                "name": "seqADAS4 Permanent",
+                "type": "seq",
+                "children": [
+                    "203",
+                    "201"
+                ]
+            },
+            "position": {
+                "x": 1997.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "208",
+                "name": "ADAS5 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 2397.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "209",
+                "name": "ADAS5 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 2172.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "210",
+                "name": "ADAS5 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2297.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "211",
+                "name": "ADAS5 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "210",
+                    "208"
+                ]
+            },
+            "position": {
+                "x": 2322.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "212",
+                "name": "seqADAS5 Transient",
+                "type": "seq",
+                "children": [
+                    "210",
+                    "208"
+                ]
+            },
+            "position": {
+                "x": 2397.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "214",
+                "name": "ADAS5 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2697.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "216",
+                "name": "ADAS5 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 2597.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "217",
+                "name": "ADAS5 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "216",
+                    "214"
+                ]
+            },
+            "position": {
+                "x": 2622.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "218",
+                "name": "seqADAS5 Permanent",
+                "type": "seq",
+                "children": [
+                    "216",
+                    "214"
+                ]
+            },
+            "position": {
+                "x": 2697.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "225",
+                "name": "BUS1 TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 3997.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "226",
+                "name": "BUS1 TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 3772.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "227",
+                "name": "BUS1 TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 3897.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "228",
+                "name": "BUS1 TransientNotDet",
+                "type": "and",
+                "children": [
+                    "227",
+                    "225"
+                ]
+            },
+            "position": {
+                "x": 3922.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "229",
+                "name": "seqBUS1 Transient",
+                "type": "seq",
+                "children": [
+                    "227",
+                    "225"
+                ]
+            },
+            "position": {
+                "x": 3997.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "231",
+                "name": "BUS1 PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4297.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "232",
+                "name": "BUS1 PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4072.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "233",
+                "name": "BUS1 PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4197.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "234",
+                "name": "BUS1 PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "233",
+                    "231"
+                ]
+            },
+            "position": {
+                "x": 4222.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "235",
+                "name": "seqBUS1 Permanent",
+                "type": "seq",
+                "children": [
+                    "233",
+                    "231"
+                ]
+            },
+            "position": {
+                "x": 4297.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "237",
+                "name": "BUS1 Failure",
+                "type": "or",
+                "children": [
+                    "226",
+                    "228",
+                    "232",
+                    "234"
+                ]
+            },
+            "position": {
+                "x": 3997.8393681011075,
+                "y": 900
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "238",
+                "name": "BUS TransientCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rTrans rCovD))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 4697.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "239",
+                "name": "BUS TransientNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rTrans rCovD)) (* (/ 1 10) rTrans))",
+                "dorm": "1",
+                "transient": true
+            },
+            "position": {
+                "x": 4472.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "240",
+                "name": "BUS TransientSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4597.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "241",
+                "name": "BUS TransientNotDet",
+                "type": "and",
+                "children": [
+                    "240",
+                    "238"
+                ]
+            },
+            "position": {
+                "x": 4622.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "242",
+                "name": "seqBUS Transient",
+                "type": "seq",
+                "children": [
+                    "240",
+                    "238"
+                ]
+            },
+            "position": {
+                "x": 4697.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "244",
+                "name": "BUS PermanentCov",
+                "type": "be",
+                "rate": "(* (/ 1 10) (* rPerm rCovD))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4997.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "245",
+                "name": "BUS PermanentNotCov",
+                "type": "be",
+                "rate": "(+ (* (- (/ 1 10)) (* rPerm rCovD)) (* (/ 1 10) rPerm))",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4772.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "246",
+                "name": "BUS PermanentSafeMech",
+                "type": "be",
+                "rate": "(* (/ 1 10) rSafety)",
+                "dorm": "1",
+                "transient": false
+            },
+            "position": {
+                "x": 4897.8393681011075,
+                "y": 1200
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "247",
+                "name": "BUS PermanentNotDet",
+                "type": "and",
+                "children": [
+                    "246",
+                    "244"
+                ]
+            },
+            "position": {
+                "x": 4922.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "248",
+                "name": "seqBUS Permanent",
+                "type": "seq",
+                "children": [
+                    "246",
+                    "244"
+                ]
+            },
+            "position": {
+                "x": 4997.8393681011075,
+                "y": 1100
+            },
+            "group": "nodes"
+        },
+        {
+            "data": {
+                "id": "250",
+                "name": "BUS Failure",
+                "type": "or",
+                "children": [
+                    "239",
+                    "241",
+                    "245",
+                    "247"
+                ]
+            },
+            "position": {
+                "x": 4697.8393681011075,
+                "y": 900
+            },
+            "group": "nodes"
+        }
+    ]
+}

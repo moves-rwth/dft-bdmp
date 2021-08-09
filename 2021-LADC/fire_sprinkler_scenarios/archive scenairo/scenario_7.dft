@@ -1,0 +1,323 @@
+toplevel "S2Z3_NoWaterSupply";
+
+"S2Z3_NoWaterSupply" or "S2Z3_FireAlarm_System_Failure" "S2Z3_Sprinkler_System_Failure";
+
+"S2Z3_FireAlarm_System_Failure" or "S2Z3_FireDetectors_Failure" "Fire_Information_Panel_Failure";
+
+"S2Z3_FireDetectors_Failure" or "S2Z3_Electric_Wiring_Failure" "S2Z3_FireSensors_Failure";
+"S2Z3_Electric_Wiring_Failure" lambda=0.5 dorm=0.0;
+
+"S2Z3_FireSensors_Failure" 2of20 "S2Z3_FireSensor1_Failure" "S2Z3_FireSensor2_Failure" "S2Z3_FireSensor3_Failure" "S2Z3_FireSensor4_Failure" "S2Z3_FireSensor5_Failure" "S2Z3_FireSensor6_Failure" "S2Z3_FireSensor7_Failure" "S2Z3_FireSensor8_Failure" "S2Z3_FireSensor9_Failure" "S2Z3_FireSensor10_Failure" "S2Z3_FireSensor11_Failure" "S2Z3_FireSensor12_Failure" "S2Z3_FireSensor13_Failure" "S2Z3_FireSensor14_Failure" "S2Z3_FireSensor15_Failure" "S2Z3_FireSensor16_Failure" "S2Z3_FireSensor17_Failure" "S2Z3_FireSensor18_Failure" "S2Z3_FireSensor19_Failure" "S2Z3_FireSensor20_Failure";
+"S2Z3_FireSensor1_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor2_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor3_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor4_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor5_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor6_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor7_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor8_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor9_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor10_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor11_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor12_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor13_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor14_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor15_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor16_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor17_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor18_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor19_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_FireSensor20_Failure" lambda=0.5 dorm=0.0;
+
+
+"S2Z3_Atleast_One_FireSensor_Fail" or "S2Z3_FireSensor1_Failure" "S2Z3_FireSensor2_Failure" "S2Z3_FireSensor3_Failure" "S2Z3_FireSensor4_Failure" "S2Z3_FireSensor5_Failure" "S2Z3_FireSensor6_Failure" "S2Z3_FireSensor7_Failure" "S2Z3_FireSensor8_Failure" "S2Z3_FireSensor9_Failure" "S2Z3_FireSensor10_Failure" "S2Z3_FireSensor11_Failure" "S2Z3_FireSensor12_Failure" "S2Z3_FireSensor13_Failure" "S2Z3_FireSensor14_Failure" "S2Z3_FireSensor15_Failure" "S2Z3_FireSensor16_Failure" "S2Z3_FireSensor17_Failure" "S2Z3_FireSensor18_Failure" "S2Z3_FireSensor19_Failure" "S2Z3_FireSensor20_Failure";
+"S2Z3_FireSensors_PDEP" pdep=0.5 "S2Z3_Atleast_One_FireSensor_Fail" "S2Z3_FireSensor1_Failure" "S2Z3_FireSensor2_Failure" "S2Z3_FireSensor3_Failure" "S2Z3_FireSensor4_Failure" "S2Z3_FireSensor5_Failure" "S2Z3_FireSensor6_Failure" "S2Z3_FireSensor7_Failure" "S2Z3_FireSensor8_Failure" "S2Z3_FireSensor9_Failure" "S2Z3_FireSensor10_Failure" "S2Z3_FireSensor11_Failure" "S2Z3_FireSensor12_Failure" "S2Z3_FireSensor13_Failure" "S2Z3_FireSensor14_Failure" "S2Z3_FireSensor15_Failure" "S2Z3_FireSensor16_Failure" "S2Z3_FireSensor17_Failure" "S2Z3_FireSensor18_Failure" "S2Z3_FireSensor19_Failure" "S2Z3_FireSensor20_Failure";
+
+
+
+"Fire_Information_Panel_Failure" or "Fire_Operator_NonAction_Failure" "Fire_Information_Panel_PowerSupply_Failure" "Fire_Information_Panel_Device_Failure";
+"Fire_Operator_NonAction_Failure" lambda=0.5 dorm=0.0;
+
+"Fire_Information_Panel_PowerSupply_Failure" or "Fire_Information_Panel_WiringToSystem_Failure" "No_PowerSupply" "FIP_UPS_Failure";
+"Fire_Information_Panel_WiringToSystem_Failure" lambda=0.5 dorm=0.0;
+"FIP_UPS_Failure" lambda=0.5 dorm=0.0;
+
+"Fire_Information_Panel_Device_Failure" or "Fire_Information_Panel_Device_HW_Failure" "Fire_Information_Panel_Device_Test_Independent_Failure";
+"Fire_Information_Panel_Device_Test_Independent_Failure" lambda=0.5 dorm=0.0;
+
+"Fire_Information_Panel_Device_HW_Failure" or "Fire_Information_Panel_Device_HW_Transient_Failure" "Fire_Information_Panel_Device_HW_Permanent_Failure";
+
+"Fire_Information_Panel_Device_HW_Transient_Failure" or "Fire_Information_Panel_Device_HW_Transient_UnCovered_Failure" "Fire_Information_Panel_Device_HW_Transient_Covered_Failure" ;
+"Fire_Information_Panel_Device_HW_Transient_UnCovered_Failure" lambda=0.5 dorm=0.0;
+"Fire_Information_Panel_Device_HW_Transient_Covered_Failure" and "Fire_Information_Panel_Device_HW_Transient_Covered_SafetyMech_Failure" "Fire_Information_Panel_Device_HW_Transient_Covered_Failure_Rate";
+"Fire_Information_Panel_Device_HW_Transient_Covered_SafetyMech_Failure" lambda=0.5 dorm=0.0;
+"Fire_Information_Panel_Device_HW_Transient_Covered_Failure_Rate" lambda=0.5 dorm=0.0;
+
+"Fire_Information_Panel_Device_HW_Transient_Failure_SEQ" seq "Fire_Information_Panel_Device_HW_Transient_Covered_SafetyMech_Failure" "Fire_Information_Panel_Device_HW_Transient_Covered_Failure_Rate";
+
+
+"Fire_Information_Panel_Device_HW_Permanent_Failure" or "Fire_Information_Panel_Device_HW_Permanent_UnCovered_Failure" "Fire_Information_Panel_Device_HW_Permanent_Covered_Failure" ;
+"Fire_Information_Panel_Device_HW_Permanent_UnCovered_Failure" lambda=0.5 dorm=0.0;
+"Fire_Information_Panel_Device_HW_Permanent_Covered_Failure" and "Fire_Information_Panel_Device_HW_Permanent_Covered_SafetyMech_Failure" "Fire_Information_Panel_Device_HW_Permanent_Covered_Failure_Rate";
+"Fire_Information_Panel_Device_HW_Permanent_Covered_SafetyMech_Failure" lambda=0.5 dorm=0.0;
+"Fire_Information_Panel_Device_HW_Permanent_Covered_Failure_Rate" lambda=0.5 dorm=0.0;
+
+"Fire_Information_Panel_Device_HW_Permanent_Failure_SEQ" seq "Fire_Information_Panel_Device_HW_Permanent_Covered_SafetyMech_Failure" "Fire_Information_Panel_Device_HW_Permanent_Covered_Failure_Rate";
+
+
+"S2Z3_Sprinkler_System_Failure" or 	"S2_Fault" "S3_Fault" "Riser_Pipe_Fault" "PumpSys_Fault" "STanks_Fault" "MWaterSupply_Failure";
+
+"S2_Fault" 		or 	"S2Z3_SprkHeads_Failure" "S2Z3_Pipe_Damaged" "S2_PRoom_Fault";
+
+
+"S2Z3_SprkHeads_Failure" or "S2Z3_SprkHead1_Failure" "S2Z3_SprkHead2_Failure" "S2Z3_SprkHead3_Failure" "S2Z3_SprkHead4_Failure" "S2Z3_SprkHead5_Failure" "S2Z3_SprkHead6_Failure" "S2Z3_SprkHead7_Failure" "S2Z3_SprkHead8_Failure" "S2Z3_SprkHead9_Failure" "S2Z3_SprkHead10_Failure" "S2Z3_SprkHead11_Failure" "S2Z3_SprkHead12_Failure" "S2Z3_SprkHead13_Failure" "S2Z3_SprkHead14_Failure" "S2Z3_SprkHead15_Failure" "S2Z3_SprkHead16_Failure" "S2Z3_SprkHead17_Failure" "S2Z3_SprkHead18_Failure" "S2Z3_SprkHead19_Failure" "S2Z3_SprkHead20_Failure" "S2Z3_SprkHead21_Failure" "S2Z3_SprkHead22_Failure" "S2Z3_SprkHead23_Failure" "S2Z3_SprkHead24_Failure" "S2Z3_SprkHead25_Failure" "S2Z3_SprkHead26_Failure" "S2Z3_SprkHead27_Failure" "S2Z3_SprkHead28_Failure" "S2Z3_SprkHead29_Failure" "S2Z3_SprkHead30_Failure" "S2Z3_SprkHead31_Failure" "S2Z3_SprkHead32_Failure" "S2Z3_SprkHead33_Failure" "S2Z3_SprkHead34_Failure" "S2Z3_SprkHead35_Failure" "S2Z3_SprkHead36_Failure" "S2Z3_SprkHead37_Failure" "S2Z3_SprkHead38_Failure" "S2Z3_SprkHead39_Failure" "S2Z3_SprkHead40_Failure" "S2Z3_SprkHead41_Failure" "S2Z3_SprkHead42_Failure" "S2Z3_SprkHead43_Failure" "S2Z3_SprkHead44_Failure" "S2Z3_SprkHead45_Failure" "S2Z3_SprkHead46_Failure" "S2Z3_SprkHead47_Failure" "S2Z3_SprkHead48_Failure" "S2Z3_SprkHead49_Failure" "S2Z3_SprkHead50_Failure";
+"S2Z3_SprkHead1_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead2_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead3_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead4_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead5_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead6_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead7_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead8_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead9_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead10_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead11_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead12_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead13_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead14_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead15_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead16_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead17_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead18_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead19_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead20_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead21_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead22_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead23_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead24_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead25_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead26_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead27_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead28_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead29_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead30_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead31_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead32_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead33_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead34_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead35_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead36_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead37_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead38_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead39_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead40_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead41_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead42_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead43_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead44_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead45_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead46_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead47_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead48_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead49_Failure" lambda=0.5 dorm=0.0;
+"S2Z3_SprkHead50_Failure" lambda=0.5 dorm=0.0;
+
+
+"S2Z3_Pipe_Damaged" lambda=0.5 dorm=0.0;
+
+
+"S2_PRoom_Fault" or "S2_PRoom_OIV_Fault" "S2_PRoom_PreRed_Fault";
+"S2_PRoom_OIV_Fault" lambda=0.5 dorm=0.0;
+
+"S2_PRoom_PreRed_Fault" hsp "S2_PRoom_PreRed1_Fault" "S2_PRoom_PreRed2_Fault" "S2_PRoom_PreRed3_Fault";
+
+"S2_PRoom_PreRed1_Fault" or "S2_PRoom_PreRed1_OIV_Fault" "S2_PRoom_PreRed1_FireValve_Fault" "S2_PRoom_PreRed1_PreValve_Fault" "S2_PRoom_PreRed1_IIV_Fault";
+"S2_PRoom_PreRed1_OIV_Fault" lambda=0.5 dorm=0.0;
+"S2_PRoom_PreRed1_FireValve_Fault" lambda=0.5 dorm=0.0;
+"S2_PRoom_PreRed1_PreValve_Fault" lambda=0.5 dorm=0.0;
+"S2_PRoom_PreRed1_IIV_Fault" lambda=0.5 dorm=0.0;
+
+"S2_PRoom_PreRed2_Fault" or 	"S2_PRoom_PreRed2_OIV_Fault" "S2_PRoom_PreRed2_FireValve_Fault" "S2_PRoom_PreRed2_PreValve_Fault" "S2_PRoom_PreRed2_IIV_Fault";
+"S2_PRoom_PreRed2_OIV_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed2_FireValve_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed2_PreValve_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed2_IIV_Fault" lambda=0.5 dorm=1.0;
+
+"S2_PRoom_PreRed3_Fault" or 	"S2_PRoom_PreRed3_OIV_Fault" "S2_PRoom_PreRed3_FireValve_Fault" "S2_PRoom_PreRed3_PreValve_Fault" "S2_PRoom_PreRed3_IIV_Fault";
+"S2_PRoom_PreRed3_OIV_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed3_FireValve_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed3_PreValve_Fault" lambda=0.5 dorm=1.0;
+"S2_PRoom_PreRed3_IIV_Fault" lambda=0.5 dorm=1.0;
+
+
+
+"S3_Fault" or 	"S3S2_Supply_Fault" "S3_PRoom_Fault";
+
+"S3S2_Supply_Fault" hsp "S3S2_Supply1_Fault" "S3S2_Supply2_Fault";
+
+"S3S2_Supply1_Fault" or "S3S2_Supply1_OIV_Fault" "S3S2_Supply1_Pipe_Damaged" "S3S2_Supply1_FireValve_Fault" "S3S2_Supply1_IIV_Fault";
+"S3S2_Supply1_OIV_Fault" lambda=0.5 dorm=0.0;
+"S3S2_Supply1_Pipe_Damaged" lambda=0.5 dorm=0.0;
+"S3S2_Supply1_FireValve_Fault" lambda=0.5 dorm=0.0;
+"S3S2_Supply1_IIV_Fault" lambda=0.5 dorm=0.0;
+
+"S3S2_Supply2_Fault" or "S3S2_Supply2_OIV_Fault" "S3S2_Supply2_Pipe_Damaged" "S3S2_Supply2_FireValve_Fault" "S3S2_Supply2_IIV_Fault";
+"S3S2_Supply2_OIV_Fault" lambda=0.5 dorm=1.0;
+"S3S2_Supply2_Pipe_Damaged" lambda=0.5 dorm=1.0;
+"S3S2_Supply2_FireValve_Fault" lambda=0.5 dorm=1.0;
+"S3S2_Supply2_IIV_Fault" lambda=0.5 dorm=1.0;
+
+
+
+
+"S3_PRoom_Fault" hsp 	"GTank1_Fault" "GTank2_Fault" "GTank3_Fault" "GTank4_Fault";
+
+"GTank1_Fault" or 	"GTank1_OIV_Fault" "GTank1_FloatValve_Fault" "GTank1_IIV_Fault" "GTank1_Pipe_Damaged" "GTank1_Damaged";
+
+"GTank1_OIV_Fault" lambda=0.5 dorm=0.0;
+"GTank1_FloatValve_Fault" lambda=0.5 dorm=0.0;
+"GTank1_IIV_Fault" lambda=0.5 dorm=0.0;
+"GTank1_Pipe_Damaged" lambda=0.5 dorm=0.0;
+"GTank1_Damaged" lambda=0.5 dorm=0.0;
+
+"GTank2_Fault" or 	"GTank2_OIV_Fault" "GTank2_FloatValve_Fault" "GTank2_IIV_Fault" "GTank2_Pipe_Damaged" "GTank2_Damaged";
+"GTank2_OIV_Fault" lambda=0.5 dorm=1.0;
+"GTank2_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"GTank2_IIV_Fault" lambda=0.5 dorm=1.0;
+"GTank2_Pipe_Damaged" lambda=0.5 dorm=1.0;
+"GTank2_Damaged" lambda=0.5 dorm=1.0;
+
+"GTank3_Fault" or 	"GTank3_OIV_Fault" "GTank3_FloatValve_Fault" "GTank3_IIV_Fault" "GTank3_Pipe_Damaged" "GTank3_Damaged";
+"GTank3_OIV_Fault" lambda=0.5 dorm=1.0;
+"GTank3_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"GTank3_IIV_Fault" lambda=0.5 dorm=1.0;
+"GTank3_Pipe_Damaged" lambda=0.5 dorm=1.0;
+"GTank3_Damaged" lambda=0.5 dorm=1.0;
+
+"GTank4_Fault" or 	"GTank4_OIV_Fault" "GTank4_FloatValve_Fault" "GTank4_IIV_Fault" "GTank4_Pipe_Damaged" "GTank4_Damaged";
+"GTank4_OIV_Fault" lambda=0.5 dorm=1.0;
+"GTank4_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"GTank4_IIV_Fault" lambda=0.5 dorm=1.0;
+"GTank4_Pipe_Damaged" lambda=0.5 dorm=1.0;
+"GTank4_Damaged" lambda=0.5 dorm=1.0;
+
+"Riser_Pipe_Fault" hsp "Riser_Pipe1_Fault" "Riser_Pipe2_Fault";
+"Riser_Pipe1_Fault" lambda=0.5 dorm=0.0;
+"Riser_Pipe2_Fault" lambda=0.5 dorm=1.0;
+
+"PumpSys_Fault" hsp "PumpSys1_Fault" "PumpSys2_Fault" "PumpSys3_Fault";
+
+"PumpSys1_Fault" or "PumpSys1_ValvesPipes_Fault" "PumpSys1_Pump_Not_Operational";
+"PumpSys1_ValvesPipes_Fault" or "PumpSys1_PS_Fault" "PumpSys1_OIV_Fault" "PumpSys1_NoReturnValve_Fault" "PumpSys1_Pipe_Damaged";
+
+"PumpSys1_PS_Fault" lambda=0.5 dorm=0.0;
+"PumpSys1_OIV_Fault" lambda=0.5 dorm=0.0;
+"PumpSys1_NoReturnValve_Fault" lambda=0.5 dorm=0.0;
+"PumpSys1_Pipe_Damaged" lambda=0.5 dorm=0.0;
+
+"PumpSys1_Pump_Not_Operational" or	"PumpSys1_Pump_Fault" "PumpSys1_PowerSupply_Failure";
+
+"PumpSys1_Pump_Fault" or 	"PumpSys1_Pump_OverHeated" "PumpSys1_Pump_LowOrNo_Output" "PumpSys1_Pump_Fuel_Leaking" "PumpSys1_Pump_Damaged";
+"PumpSys1_Pump_OverHeated" lambda=0.5 dorm=0.0;
+"PumpSys1_Pump_LowOrNo_Output" lambda=0.5 dorm=0.0;
+"PumpSys1_Pump_Fuel_Leaking" lambda=0.5 dorm=0.0;
+"PumpSys1_Pump_Damaged" lambda=0.5 dorm=0.0;
+
+"PumpSys1_PowerSupply_Failure" or "PumpSys1_PowerSupply_Wiring_Failure" "No_PowerSupply";
+"PumpSys1_PowerSupply_Wiring_Failure" lambda=0.5 dorm=0.0;
+
+"PumpSys2_Fault" or "PumpSys2_ValvesPipes_Fault" "PumpSys2_Pump_Not_Operational";
+"PumpSys2_ValvesPipes_Fault" or "PumpSys2_PS_Fault" "PumpSys2_OIV_Fault" "PumpSys2_NoReturnValve_Fault" "PumpSys2_Pipe_Damaged";
+
+
+"PumpSys2_PS_Fault" lambda=0.5 dorm=1.0;
+"PumpSys2_OIV_Fault" lambda=0.5 dorm=1.0;
+"PumpSys2_NoReturnValve_Fault" lambda=0.5 dorm=1.0;
+"PumpSys2_Pipe_Damaged" lambda=0.5 dorm=1.0;
+
+
+"PumpSys2_Pump_Not_Operational" or 	"PumpSys2_Pump_Fault" "PumpSys2_PowerSupply_Failure";
+
+"PumpSys2_Pump_Fault" or 	"PumpSys2_Pump_OverHeated" "PumpSys2_Pump_LowOrNo_Output" "PumpSys2_Pump_Fuel_Leaking" "PumpSys2_Pump_Damaged";
+"PumpSys2_Pump_OverHeated" lambda=0.5 dorm=1.0;
+"PumpSys2_Pump_LowOrNo_Output" lambda=0.5 dorm=1.0;
+"PumpSys2_Pump_Fuel_Leaking" lambda=0.5 dorm=1.0;
+"PumpSys2_Pump_Damaged" lambda=0.5 dorm=1.0;
+
+"PumpSys2_PowerSupply_Failure" or "PumpSys2_PowerSupply_Wiring_Failure" "No_PowerSupply";
+"PumpSys2_PowerSupply_Wiring_Failure" lambda=0.5 dorm=1.0;
+
+"PumpSys3_Fault" or "PumpSys3_ValvesPipes_Fault" "PumpSys3_Pump_Not_Operational";
+"PumpSys3_ValvesPipes_Fault" or "PumpSys3_PS_Fault" "PumpSys3_OIV_Fault" "PumpSys3_NoReturnValve_Fault" "PumpSys3_Pipe_Damaged";
+
+
+"PumpSys3_PS_Fault" lambda=0.5 dorm=1.0;
+"PumpSys3_OIV_Fault" lambda=0.5 dorm=1.0;
+"PumpSys3_NoReturnValve_Fault" lambda=0.5 dorm=1.0;
+"PumpSys3_Pipe_Damaged" lambda=0.5 dorm=1.0;
+
+
+"PumpSys3_Pump_Not_Operational" or 	"PumpSys3_Pump_Fault" "PumpSys3_PowerSupply_Failure";
+
+"PumpSys3_Pump_Fault" or 	"PumpSys3_Pump_OverHeated" "PumpSys3_Pump_LowOrNo_Output" "PumpSys3_Pump_Fuel_Leaking" "PumpSys3_Pump_Damaged";
+"PumpSys3_Pump_OverHeated" lambda=0.5 dorm=1.0;
+"PumpSys3_Pump_LowOrNo_Output" lambda=0.5 dorm=1.0;
+"PumpSys3_Pump_Fuel_Leaking" lambda=0.5 dorm=1.0;
+"PumpSys3_Pump_Damaged" lambda=0.5 dorm=1.0;
+
+"PumpSys3_PowerSupply_Failure" or "PumpSys3_PowerSupply_Wiring_Failure" "No_PowerSupply";
+"PumpSys3_PowerSupply_Wiring_Failure" lambda=0.5 dorm=1.0;
+
+
+"No_PowerSupply" or "Switch_Positioned_At_Failed_Source" "No_Energy_Resource";
+
+"Switch_Positioned_At_Failed_Source" pand "Switch_Mechanism_Failed" "Grid_Power_Failure";
+"Switch_Mechanism_Failed" lambda=0.5 dorm=0.0;
+
+
+"No_Energy_Resource" csp "Grid_Power_Failure" "Generators_Failure";
+"Grid_Power_Failure" lambda=0.5 dorm=0.0;
+
+"Generators_Failure" csp "Generator1_Failure" "Generator2_Failure";
+"Generator1_Failure" lambda=0.5 dorm=0.0;
+"Generator2_Failure" lambda=0.5 dorm=0.0;
+
+
+
+
+"STanks_Fault" hsp 	"STank1_Fault" "STank2_Fault" "STank3_Fault" "STank4_Fault";
+
+"STank1_Fault" or 	"STank1_OIV_Fault" "STank1_FloatValve_Fault" "STank1_IIV_Fault";
+"STank1_OIV_Fault" lambda=0.5 dorm=0.0;
+"STank1_FloatValve_Fault" lambda=0.5 dorm=0.0;
+"STank1_IIV_Fault" lambda=0.5 dorm=0.0;
+
+"STank2_Fault" or 	"STank2_OIV_Fault" "STank2_FloatValve_Fault" "STank2_IIV_Fault";
+"STank2_OIV_Fault" lambda=0.5 dorm=1.0;
+"STank2_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"STank2_IIV_Fault" lambda=0.5 dorm=1.0;
+
+"STank3_Fault" or 	"STank3_OIV_Fault" "STank3_FloatValve_Fault" "STank3_IIV_Fault";
+"STank3_OIV_Fault" lambda=0.5 dorm=1.0;
+"STank3_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"STank3_IIV_Fault" lambda=0.5 dorm=1.0;
+
+"STank4_Fault" or 	"STank4_OIV_Fault" "STank4_FloatValve_Fault" "STank4_IIV_Fault";
+"STank4_OIV_Fault" lambda=0.5 dorm=1.0;
+"STank4_FloatValve_Fault" lambda=0.5 dorm=1.0;
+"STank4_IIV_Fault" lambda=0.5 dorm=1.0;
+
+
+"MWaterSupply_Failure" hsp "MWaterSupply1_Failure" "MWaterSupply2_Failure";
+
+"MWaterSupply1_Failure" or 	"MWaterSupply1_IIV_Fault" "MWaterSupply1_Pipe_Damaged" "MWaterSupply1_No_Water";
+"MWaterSupply1_IIV_Fault"	lambda=0.5 dorm=0.0;
+"MWaterSupply1_Pipe_Damaged" lambda=0.5 dorm=0.0;
+"MWaterSupply1_No_Water" lambda=0.5 dorm=0.0;
+
+
+"MWaterSupply2_Failure" or 	"MWaterSupply2_IIV_Fault" "MWaterSupply2_Pipe_Damaged" "MWaterSupply2_No_Water";
+"MWaterSupply2_IIV_Fault"	lambda=0.5 dorm=1.0;
+"MWaterSupply2_Pipe_Damaged" lambda=0.5 dorm=1.0;
+"MWaterSupply2_No_Water" lambda=0.5 dorm=1.0;
+

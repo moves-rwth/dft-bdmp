@@ -1,0 +1,167 @@
+{
+    "name": "sprinkler_system",
+     "parameters": {
+        "rFireSensorsInt": 0,
+         "rFireInformationPanelInt": 0,
+         "rFireOperatorInt": 0,
+         "rPowerSupplyInt": 0,
+         "rPowerSwitchInt": 0,
+         "rMainGridInt": 0,
+         "rGenerator1Int": 0,
+         "rGenerator2Int": 0,
+         "rSprinklerHeadsInt": 0,
+         "rS2Z3PipeInt": 0,
+         "rS2_PRoom_OIV_FaultInt": 0,
+         "rS2_PRoom_PreRed1_FaultInt": 0,
+         "rS2_PRoom_PreRed2_FaultInt": 0,
+         "rS3S2_Supply1_FaultInt": 0,
+         "rS3S2_Supply2_FaultInt": 0,
+         "rGTank1Int": 0,
+         "rGTank2Int": 0,
+         "rRiser_Pipe_DamagedInt": 0,
+         "rPumpSys1_ValvesPipes_FaultInt": 0,
+         "rPumpSys1_Pump_FaultInt": 0,
+         "rPumpSys2_ValvesPipes_FaultInt": 0,
+         "rPumpSys2_Pump_FaultInt": 0,
+         "rSTank1_FaultInt": 0,
+         "rSTank2_FaultInt": 0,
+         "rMWaterSupply1_FailureInt": 0,
+         "rMWaterSupply2_FailureInt": 0
+     },
+    "logical_blocks": [
+        {
+            "name": "FireSensors",
+            "rate": "rFireSensorsInt"
+        },
+        {
+            "name": "FireInformationPanel",
+            "rate": "rFireInformationPanelInt"
+        },
+        {
+            "name": "FireOperator",
+            "rate": "rFireOperatorInt"
+        },
+        {
+            "name": "PowerSupply",
+            "rate": "rPowerSupplyInt"
+        },
+        {
+            "name": "PowerSwitch",
+            "rate": "rPowerSwitchInt"
+        },
+        {
+            "name": "MainGrid",
+            "rate": "rMainGridInt"
+        },
+        {
+            "name": "Generator1",
+            "rate": "rGenerator1Int"
+        },
+        {
+            "name": "Generator2",
+            "rate": "rGenerator2Int"
+        },
+        {
+            "name": "SprinklerHeads",
+            "rate": "rSprinklerHeadsInt"
+        },
+        {
+            "name": "S2Z3Pipe",
+            "rate": "rS2Z3PipeInt"
+        },
+        {
+            "name": "S2_PRoom_OIV_Fault",
+            "rate": "rS2_PRoom_OIV_FaultInt"
+        },
+
+        {
+            "name": "S2_PRoom_PreRed1_Fault",
+            "rate": "rS2_PRoom_PreRed1_FaultInt"
+        },
+        {
+            "name": "S2_PRoom_PreRed2_Fault",
+            "rate": "rS2_PRoom_PreRed2_FaultInt"
+        },
+        {
+            "name": "S3S2_Supply1_Fault",
+            "rate": "rS3S2_Supply1_FaultInt"
+        },
+        {
+            "name": "S3S2_Supply2_Fault",
+            "rate": "rS3S2_Supply2_FaultInt"
+        },
+        {
+            "name": "GTank1",
+            "rate": "rGTank1Int"
+        },
+        {
+            "name": "GTank2",
+            "rate": "rGTank2Int"
+        },
+        {
+            "name": "Riser_Pipe_Damaged",
+            "rate": "rRiser_Pipe_DamagedInt"
+        },
+        {
+            "name": "PumpSys1_ValvesPipes_Fault",
+            "rate": "rPumpSys1_ValvesPipes_FaultInt"
+        },
+        {
+            "name": "PumpSys1_Pump_Fault",
+            "rate": "rPumpSys1_Pump_FaultInt"
+        },
+        {
+            "name": "PumpSys2_ValvesPipes_Fault",
+            "rate": "rPumpSys2_ValvesPipes_FaultInt"
+        },
+        {
+            "name": "PumpSys2_Pump_Fault",
+            "rate": "rPumpSys2_Pump_FaultInt"
+        },
+         {
+            "name": "STank1_Fault",
+            "rate": "rSTank1_FaultInt"
+        },
+        {
+            "name": "STank2_Fault",
+            "rate": "rSTank2_FaultInt"
+        },
+        {
+            "name": "MWaterSupply1_Failure",
+            "rate": "rMWaterSupply1_FailureInt"
+        },
+        {
+            "name": "MWaterSupply2_Failure",
+            "rate": "rMWaterSupply2_FailureInt"
+        }
+
+    ],
+    "buses": [
+       {
+            "from": "FireSensors",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        },
+        {
+            "from": "FireOperator",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        },
+        {
+            "from": "PowerSupply",
+            "to": "FireInformationPanel",
+            "type": "nominal"
+        },
+        {
+            "from": "PowerSupply",
+            "to": "PumpSys1_Pump_Fault",
+            "type": "nominal"
+        },
+        {
+            "from": "PowerSupply",
+            "to": "PumpSys2_Pump_Fault",
+            "type": "nominal"
+        }
+
+    ]
+}

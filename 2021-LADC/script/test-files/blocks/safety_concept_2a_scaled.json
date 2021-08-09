@@ -1,0 +1,166 @@
+{
+    "name": "Safety Concept 2a",
+    "parameters": {
+        "rSensorsInt": 10,
+        "rEPInt": 10,
+        "rTPInt": 10,
+        "rs_EPInt": 10,
+        "rs_TPInt": 10,
+        "rTCSInt": 10,
+        "rAMInt": 10,
+        "rActuatorInt": 10
+    },
+    "logical_blocks": [
+        {
+            "name": "Sensors",
+            "rate": "rSensorsInt"
+        },
+        {
+            "name": "EP",
+            "rate": "rEPInt"
+        },
+        {
+            "name": "TP",
+            "rate": "rTPInt"
+        },
+        {
+            "name": "s_EP1",
+            "rate": "rs_EPInt"
+        },
+        {
+            "name": "s_TP1",
+            "rate": "rs_TPInt"
+        },
+        {
+            "name": "s_EP2",
+            "rate": "rs_EPInt"
+        },
+        {
+            "name": "s_TP2",
+            "rate": "rs_TPInt"
+        },
+        {
+            "name": "TCS",
+            "rate": "rTCSInt"
+        },
+        {
+            "name": "AM",
+            "rate": "rAMInt"
+        },
+        {
+            "name": "Actuator1",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator2",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator3",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator4",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator5",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator6",
+            "rate": "rActuatorInt"
+        },
+        {
+            "name": "Actuator7",
+            "rate": "rActuatorInt"
+        }
+    ],
+    "buses": [
+        {
+            "from": "EP",
+            "to": "TP",
+            "type": "both"
+        },
+        {
+            "from": "s_EP1",
+            "to": "s_TP1",
+            "type": "both"
+        },
+        {
+            "from": "s_EP2",
+            "to": "s_TP2",
+            "type": "both"
+        },
+        {
+            "from": "TP",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "s_TP1",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "s_TP2",
+            "to": "TCS",
+            "type": "both"
+        },
+        {
+            "from": "TCS",
+            "to": "AM",
+            "type": "both"
+        },
+        {
+            "from": "Sensors",
+            "to": "EP",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "s_EP1",
+            "type": "nominal"
+        },
+        {
+            "from": "Sensors",
+            "to": "s_EP2",
+            "type": "nominal"
+        },
+        {
+            "from": "Actuator1",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator2",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator3",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator4",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator5",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator6",
+            "to": "AM",
+            "type": "potential"
+        },
+        {
+            "from": "Actuator6",
+            "to": "AM",
+            "type": "potential"
+        }
+    ]
+}

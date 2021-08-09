@@ -1,0 +1,138 @@
+ast login: Tue Jul 14 12:39:09 on ttys000
+shahidkhan@MacBook-Pro-12013 firepumps % storm-dft -dft diesel-electric.dft --timebound 1 -dftstats
+Storm-dft 1.6.1 (dev)
+
+Date: Tue Jul 14 13:43:17 2020
+Command line arguments: -dft diesel-electric.dft --timebound 1 -dftstats
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/PRDC2020 results/PFD/firepumps
+
+=============DFT Statistics==============
+Number of BEs: 34
+Number of static elements: 20
+Number of dynamic elements: 15
+Number of elements: 69
+-----------------------------------------
+Number of BEs: 34
+Number of AND gates: 6
+Number of OR gates: 14
+Number of PAND gates: 4
+Number of SPARE gates: 3
+Number of Dependencies: 6
+Number of Restrictions: 2
+=========================================
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	6313
+Transitions: 	17037
+Choices: 	6693
+Markovian St.: 	1777
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * Both_pumps_fail_dc -> 0 item(s)
+   * Both_pumps_fail_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
+Times:
+Exploration:	0.102s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.016s
+Total:		0.119s
+Result: [0.0001005539408]
+shahidkhan@MacBook-Pro-12013 firepumps % storm-dft -dft electric-electric.dft --timebound 1 -dftstats
+Storm-dft 1.6.1 (dev)
+
+Date: Tue Jul 14 13:43:31 2020
+Command line arguments: -dft electric-electric.dft --timebound 1 -dftstats
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/PRDC2020 results/PFD/firepumps
+
+=============DFT Statistics==============
+Number of BEs: 33
+Number of static elements: 21
+Number of dynamic elements: 13
+Number of elements: 67
+-----------------------------------------
+Number of BEs: 33
+Number of AND gates: 7
+Number of OR gates: 14
+Number of PAND gates: 3
+Number of SPARE gates: 2
+Number of Dependencies: 6
+Number of Restrictions: 2
+=========================================
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	2929
+Transitions: 	6889
+Choices: 	2969
+Markovian St.: 	625
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * Both_pumps_fail_dc -> 0 item(s)
+   * Both_pumps_fail_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.041s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.007s
+Total:		0.049s
+Result: [0.0003246503064]
+shahidkhan@MacBook-Pro-12013 firepumps % storm-dft -dft diesel-diesel.dft --timebound 1 -dftstats 
+Storm-dft 1.6.1 (dev)
+
+Date: Tue Jul 14 13:44:01 2020
+Command line arguments: -dft diesel-diesel.dft --timebound 1 -dftstats
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/PRDC2020 results/PFD/firepumps
+
+=============DFT Statistics==============
+Number of BEs: 36
+Number of static elements: 19
+Number of dynamic elements: 17
+Number of elements: 72
+-----------------------------------------
+Number of BEs: 36
+Number of AND gates: 5
+Number of OR gates: 14
+Number of PAND gates: 5
+Number of SPARE gates: 4
+Number of Dependencies: 6
+Number of Restrictions: 2
+=========================================
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	23185
+Transitions: 	63225
+Choices: 	27385
+Markovian St.: 	5985
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	4 labels
+   * Both_pumps_fail_dc -> 0 item(s)
+   * Both_pumps_fail_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+ WARN (numerical.cpp:130): Fox-Glynn: right = 627 >> lambda = 400, cannot bound the right tail. The results are unreliable.
+ERROR (numerical.cpp:222): Fox-Glynn: 627 > 600, underflow is possible.
+Times:
+Exploration:	0.379s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.050s
+Total:		0.431s
+Result: [9.157883246e-05]
+shahidkhan@MacBook-Pro-12013 firepumps % 

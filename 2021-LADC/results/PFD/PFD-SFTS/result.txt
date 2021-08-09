@@ -1,0 +1,106 @@
+Last login: Fri Jul 17 09:57:18 on ttys000
+shahidkhan@MacBook-Pro-12013 PFD-SFTS % storm-dft -dft caseI.dft --timebound 730
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:00:15 2020
+Command line arguments: -dft caseI.dft --timebound 730
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFD-SFTS
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.184s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.017s
+Total:		0.203s
+Result: [0.9999999934]
+shahidkhan@MacBook-Pro-12013 PFD-SFTS % storm-dft -dft caseI.dft --timebound 1 
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:00:24 2020
+Command line arguments: -dft caseI.dft --timebound 1
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFD-SFTS
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.178s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.007s
+Total:		0.187s
+Result: [0.01637882419]
+shahidkhan@MacBook-Pro-12013 PFD-SFTS % storm-dft -dft caseII.dft --timebound 1
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:00:37 2020
+Command line arguments: -dft caseII.dft --timebound 1
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFD-SFTS
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.190s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.007s
+Total:		0.200s
+Result: [0.08540454759]
+shahidkhan@MacBook-Pro-12013 PFD-SFTS % storm-dft -dft caseIII.dft --timebound 1
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:00:53 2020
+Command line arguments: -dft caseIII.dft --timebound 1
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFD-SFTS
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.178s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.007s
+Total:		0.187s
+Result: [0.04722380525]
+shahidkhan@MacBook-Pro-12013 PFD-SFTS % 

@@ -1,0 +1,269 @@
+{
+    "name": "Safety concept 2a",
+    "parameters": {
+        "rTrans": 10000,
+        "rPerm": 1000,
+        "rSafety": 1000,
+        "rCovD": 0.99,
+        "rCovB": 0.90,
+        "rCovQM": 0.6,
+        "rHW": 100
+    },
+    "default": {
+        "type": "transient_permanent",
+        "rate_transient": "rTrans",
+        "coverage_transient": "rCovD",
+        "safety_rate_transient": "rSafety",
+        "rate_permanent": "rPerm",
+        "coverage_permanent": "rCovD",
+        "safety_rate_permanent": "rSafety"
+    },
+    "blocks": [
+        {
+            "name": "ADAS1",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "ADAS2",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "ADAS3",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "rTrans",
+                "coverage_transient": "rCovQM",
+                "safety_rate_transient": "rSafety",
+                "rate_permanent": "rPerm",
+                "coverage_permanent": "rCovQM",
+                "safety_rate_permanent": "rSafety"
+            }
+        },
+        {
+            "name": "ADAS4",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "ADAS5",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "ECU1",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU2",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU3",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "ECU4",
+            "pattern": {
+                "type": "single_be",
+                "rate": "rHW"
+            }
+        },
+        {
+            "name": "BUS1",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        },
+        {
+            "name": "BUS",
+            "pattern": {
+                "type": "transient_permanent",
+                "rate_transient": "(/ rTrans 10)",
+                "coverage_transient": "rCovD",
+                "safety_rate_transient": "(/ rSafety 10)",
+                "rate_permanent": "(/ rPerm 10)",
+                "coverage_permanent": "rCovD",
+                "safety_rate_permanent": "(/ rSafety 10)"
+            }
+        }
+    ],
+    "assignment": [
+        {
+            "component": "HW-EP",
+            "block": "ADAS3"
+        },
+        {
+            "component": "HW-TP",
+            "block": "ADAS3"
+        },
+        {
+            "component": "HW-s_EP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-s_TP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "HW-s_EP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-s_TP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "HW-TCS",
+            "block": "ADAS4"
+        },
+        {
+            "component": "HW-AM",
+            "block": "ADAS5"
+        },
+        {
+            "component": "HW-Actuator1",
+            "block": "ECU4"
+        },
+        {
+            "component": "HW-Actuator2",
+            "block": "ECU1"
+        },
+        {
+            "component": "HW-Actuator3",
+            "block": "ECU2"
+        },
+        {
+            "component": "HW-Actuator4",
+            "block": "ECU3"
+        },
+        {
+            "component": "BUS Sensors-EP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Sensors-s_EP1",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Sensors-s_EP2",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS EP-TP",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS TP-EP",
+            "block": "ADAS3"
+        },
+        {
+            "component": "BUS s_EP1-s_TP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS s_TP1-s_EP1",
+            "block": "ADAS1"
+        },
+        {
+            "component": "BUS s_EP2-s_TP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS s_TP2-s_EP2",
+            "block": "ADAS2"
+        },
+        {
+            "component": "BUS TP-TCS",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS TCS-TP",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS s_TP1-TCS",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS TCS-s_TP1",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS s_TP2-TCS",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS TCS-s_TP2",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS TCS-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS AM-TCS",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator1-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator2-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator3-AM",
+            "block": "BUS"
+        },
+        {
+            "component": "BUS Actuator4-AM",
+            "block": "BUS"
+        }
+    ]
+}

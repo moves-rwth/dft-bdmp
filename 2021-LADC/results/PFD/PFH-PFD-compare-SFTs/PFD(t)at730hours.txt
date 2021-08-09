@@ -1,0 +1,82 @@
+Last login: Fri Jul 17 09:59:46 on ttys000
+shahidkhan@MacBook-Pro-12013 PFH-PFD-compare-SFTs % ls
+caseI.dft	caseII-MTTR.dft	caseII.dft	caseIII.dft	results.txt
+shahidkhan@MacBook-Pro-12013 PFH-PFD-compare-SFTs % storm-dft -dft caseI.dft --timebound 730
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:18:08 2020
+Command line arguments: -dft caseI.dft --timebound 730
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFH-PFD-compare-SFTs
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.180s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.010s
+Total:		0.191s
+Result: [0.01637882419]
+shahidkhan@MacBook-Pro-12013 PFH-PFD-compare-SFTs % storm-dft -dft caseII.dft --timebound 730
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:18:50 2020
+Command line arguments: -dft caseII.dft --timebound 730
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFH-PFD-compare-SFTs
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.172s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.010s
+Total:		0.184s
+Result: [0.08540454758]
+shahidkhan@MacBook-Pro-12013 PFH-PFD-compare-SFTs % storm-dft -dft caseIII.dft --timebound 730
+Storm-dft 1.6.1 (dev)
+
+Date: Fri Jul 17 10:19:09 2020
+Command line arguments: -dft caseIII.dft --timebound 730
+Current working directory: /Users/shahidkhan/Documents/fire_sprinkler_system/results/PFD/PFH-PFD-compare-SFTs
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2718
+Transitions: 	21305
+Reward Models:  none
+State Labels: 	4 labels
+   * Sprinkler_does_not_deliver_water_dc -> 0 item(s)
+   * Sprinkler_does_not_deliver_water_failed -> 0 item(s)
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.178s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.011s
+Total:		0.191s
+Result: [0.04722380525]
+shahidkhan@MacBook-Pro-12013 PFH-PFD-compare-SFTs % 

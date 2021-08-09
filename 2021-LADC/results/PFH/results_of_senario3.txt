@@ -1,0 +1,66 @@
+Results for Scenario 3
+
+
+/Users/shahidkhan/Documents/stormpy-env/bin/python3.7 /Users/shahidkhan/Documents/fire_sprinkler_system/script/test.py
+JSON generated
+parameters updated
+DRN generated
+Reliability Complement
+	Result: 0.009988722107320687
+	Time:   13.69s
+PFH
+	Result: 1.3683180968932449e-05
+	Time:   11.05s
+MTTF
+	Result: 47242.14161117616
+	Time:   1.94s
+P(180|730)
+	Result: 0.9939026399033658
+	Time:   0.97s
+B(5)
+0.9249902587230399 0 118106 236211
+0.7198550815710186 0 59053 118106
+0.45037537388302123 0 29526 59053
+0.23747607738855467 0 14763 29526
+0.1147322084842226 0 7382 14763
+0.05438806514412611 0 3691 7382
+0.02608444350846279 0 1846 3691
+0.0400034374655634 1846 2768 3691
+0.047153228588864 2768 3230 3691
+0.0507509600524131 3230 3460 3691
+	Result: 3460
+	Time:   174.84s
+FFA
+	Result: 0.023981937282898966
+	Time:   0.47s
+FWD
+	Result: 0.009917262159983224
+	Time:   0.40s
+MDR
+P=? [F<=730 "failed"]
+[<stormpy.core.Property object at 0x10dd03b90>]
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+	Result: 0.019470922443455045
+	Time:   13.63s
+FLOD
+contained_labels:
+['Electric_pump_fails_failed', 'Diesel_pump_fails_failed', 'No_water_from_town_main1_failed', 'No_water_from_town_main2_failed', 'Diesel_generator_fail_failed', 'No_water_from_pumps_bypass_town_main_failed', 'PS1_faulty_failed', 'PS2_faulty_failed', 'PS1_dp_faulty_failed', 'PS2_dp_faulty_failed', 'Flat_battery_failed']
+avoid_labels:
+['failed']
+failed_labels:
+['failed']
+Consider 62208 states
+ WARN (SparseCtmcCslHelper.cpp:1081): Computation of transient probabilities with relative precision not supported. Using absolute precision instead.
+FLOD result for 730: 3.5294333887307706e-05
+	Result: 3.5294333887307706e-05
+	Time:   61.30s
+SILFO
+	Result: 0.009952556493870533
+	Time:   0.00s
+
+Process finished with exit code 0
