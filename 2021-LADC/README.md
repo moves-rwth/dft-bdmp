@@ -17,8 +17,10 @@ Run
 >>python script/test.py
 
 The results will be printed on the console window and various intermediate files will be generated necessary for calculation.
-
+The DFT used for experimentation is available in case-study-dft.dft
 
 ##To quickly review the results without running the project
- Please go to results directory and you will find screen dumps for all experiments in respective directory.
+
+Please go to results directory and you will find screen dumps for all experiments in respective directory.
+
 
