@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
+    <nodes>
+      <place name="F_1_failed" x="20.0" y="34.0"/>
+      <place marking="1" name="F_1_active" x="25.0" y="17.0"/>
+      <place name="I_1_failed" x="58.0" y="26.0"/>
+      <place marking="1" name="I_1_active" x="39.0" y="23.0"/>
+      <place name="TopGate_failed" x="63.0" y="21.0"/>
+      <transition delay="0.01000000000" name="F_1_activeFailing" nservers="1" type="EXP" x="17.55" y="24.0"/>
+      <transition delay="0.01000000000" name="F_1_passiveFailing" nservers="1" type="EXP" x="33.55" y="27.0"/>
+      <transition delay="0.1000000000" name="F_1_repairing" nservers="1" type="EXP" x="35.55" y="35.0"/>
+      <transition delay="0.000000000" name="I_1_passiveFailing" nservers="1" type="EXP" x="36.55" y="19.0"/>
+      <transition delay="0.1000000000" name="I_1_repairing" nservers="1" type="EXP" x="53.55" y="31.0"/>
+      <transition name="TopGate_failing" priority="5" type="IMM" weight="1.000000000" x="31.85" y="21.0"/>
+      <transition name="TopGate_repairing0" priority="5" type="IMM" weight="1.000000000" x="44.85" y="32.0"/>
+      <transition name="TopGate_repairing1" priority="5" type="IMM" weight="1.000000000" x="60.85" y="18.0"/>
+      <transition name="I_1_dummy_1_win_flip" priority="4" type="IMM" weight="0.5000000000" x="33.85" y="10.0"/>
+      <transition name="I_1_dummy_1_lose_flip" priority="4" type="IMM" weight="0.5000000000" x="49.85" y="11.0"/>
+      <place name="P0" x="50.0" y="38.0"/>
+      <transition name="t1" type="IMM" x="39.85" y="40.0"/>
+    </nodes>
+    <edges>
+      <arc head="F_1_activeFailing" kind="INPUT" tail="F_1_active"/>
+      <arc head="F_1_activeFailing" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="F_1_active" kind="OUTPUT" tail="F_1_activeFailing"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="F_1_activeFailing"/>
+      <arc head="F_1_passiveFailing" kind="INHIBITOR" tail="F_1_active"/>
+      <arc head="F_1_passiveFailing" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="F_1_passiveFailing"/>
+      <arc head="F_1_repairing" kind="INPUT" tail="F_1_failed"/>
+      <arc head="I_1_passiveFailing" kind="INHIBITOR" tail="I_1_active"/>
+      <arc head="I_1_passiveFailing" kind="INHIBITOR" tail="I_1_failed"/>
+      <arc head="I_1_failed" kind="OUTPUT" tail="I_1_passiveFailing"/>
+      <arc head="I_1_repairing" kind="INPUT" tail="I_1_failed"/>
+      <arc head="TopGate_failing" kind="INPUT" tail="F_1_failed"/>
+      <arc head="TopGate_failing" kind="INPUT" tail="I_1_failed"/>
+      <arc head="TopGate_failing" kind="INHIBITOR" tail="TopGate_failed"/>
+      <arc head="TopGate_failed" kind="OUTPUT" tail="TopGate_failing"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="TopGate_failing"/>
+      <arc head="I_1_failed" kind="OUTPUT" tail="TopGate_failing"/>
+      <arc head="TopGate_repairing0" kind="INPUT" tail="TopGate_failed"/>
+      <arc head="TopGate_repairing0" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="TopGate_repairing1" kind="INPUT" tail="TopGate_failed"/>
+      <arc head="TopGate_repairing1" kind="INHIBITOR" tail="I_1_failed"/>
+      <arc head="t1" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="t1" kind="INPUT" tail="P0"/>
+      <arc head="I_1_failed" kind="OUTPUT" tail="I_1_dummy_1_win_flip"/>
+      <arc head="I_1_dummy_1_lose_flip" kind="INHIBITOR" tail="P0"/>
+      <arc head="I_1_dummy_1_win_flip" kind="INHIBITOR" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="I_1_dummy_1_win_flip"/>
+      <arc head="P0" kind="OUTPUT" tail="I_1_dummy_1_lose_flip"/>
+      <arc head="I_1_dummy_1_win_flip" kind="INPUT" tail="F_1_failed"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="I_1_dummy_1_win_flip"/>
+      <arc head="I_1_dummy_1_lose_flip" kind="INPUT" tail="F_1_failed"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="I_1_dummy_1_lose_flip"/>
+      <arc head="I_1_dummy_1_lose_flip" kind="INHIBITOR" tail="I_1_failed"/>
+      <arc head="I_1_dummy_1_win_flip" kind="INHIBITOR" tail="I_1_failed"/>
+    </edges>
+  </gspn>
+</project>

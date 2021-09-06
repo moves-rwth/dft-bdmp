@@ -1,0 +1,194 @@
+{"jani-version":1,
+"name":"Galelio_dftcalc.jani",
+"type":"ma",
+"variables":[{"name":"marked","type":{"kind":"bounded","base":"int","upper-bound":1},"initial-value":0}],
+"constants":[
+	{"name":"T", "type":"real"},
+	{"name":"L", "type":"real"}],
+"actions":[
+	{"name":"FAIL"},
+	{"name":"mark"},
+	{"name":"unmark"},
+	{"name":"τ"}
+],
+"automata":[
+	{"name":"aut0",
+	 "locations":[{"name":"l0"}],
+	 "initial-locations":["l0"],
+	 "edges":[
+
+	]},
+	{"name":"aut1",
+	 "locations":[{"name":"l0"},{"name":"l1"}],
+	 "initial-locations":["l0"],
+	 "edges":[
+		{"location":"l0",
+		 "destinations":[{"location":"l1"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l1",
+		 "destinations":[{"location":"l0"}],
+		 "action":"FAIL"
+		}
+	]},
+	{"name":"monitor",
+	 "locations":[{"name":"l"}],
+	 "initial-locations":["l"],
+	 "edges":[
+		{"location":"l",
+		 "action":"mark",
+		 "destinations":[{
+			"location":"l",
+			"assignments":[{"ref":"marked", "value":1}]
+			}]},
+		{"location":"l",
+		 "action":"unmark",
+		 "destinations":[{
+			"location":"l",
+			"assignments":[{"ref":"marked", "value":0}]
+			}]
+		}]
+	}
+],
+"system":{"elements":[
+	{"automaton":"aut0"},
+	{"automaton":"aut0"},
+	{"automaton":"aut0"},
+	{"automaton":"aut0"},
+	{"automaton":"aut1"},
+	{"automaton":"monitor"}
+	],
+	"syncs":[
+		{"synchronise":[null,null,null,null,"FAIL", "mark"],
+		 "result":"τ"}
+	]},
+"properties": [
+	{"name":"TBLmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T", "lower":"L"}}
+			}
+		}
+	},
+	{"name":"TBmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T"}}
+			}
+		}
+	},
+	{"name":"TBmin_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmin",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T", "lower":"L"}}
+			}
+		}
+	},
+	{"name":"UBmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}}
+			}
+		}
+	},
+	{"name":"UBmin_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmin",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}}
+			}
+		}
+	},
+	{"name":"max_Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smax",
+			"exp":{"op":">", "left":"marked", "right":0}
+			}
+		}
+	},
+	{"name":"min_Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smin",
+			"exp":{"op":">", "left":"marked", "right":0}
+			}
+		}
+	},
+	{"name":"max_MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emax",
+			"accumulate": ["time"],
+			"reach":{"op":">", "left":"marked", "right":0},
+			"exp":1
+			}
+		}
+	},
+	{"name":"min_MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emin",
+			"accumulate": ["time"],
+			"reach":{"op":">", "left":"marked", "right":0},
+			"exp":1
+			}
+		}
+	},
+	{"name":"MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emax",
+			"accumulate": ["time"],
+			"reach":{"op": "≠", "left": "marked", "right": 0},
+			"exp": 1
+			}
+		}
+	},
+	{"name":"Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smax",
+			"exp":{"op": "<", "left": 0, "right": "marked"}
+			}
+		}
+	}
+]
+}

@@ -1,0 +1,131 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="F_6_failed" x="23" y="20" />
+      <place marking="1" name ="F_6_active" x="17" y="20" />
+      <place marking="0" name ="F_3_failed" x="23" y="20" />
+      <place marking="1" name ="F_3_active" x="17" y="20" />
+      <place marking="0" name ="F_4_failed" x="23" y="20" />
+      <place marking="1" name ="F_4_active" x="17" y="20" />
+      <place marking="0" name ="OR_2_failed" x="20" y="17" />
+      <place marking="0" name ="F_1_failed" x="23" y="20" />
+      <place marking="1" name ="F_1_active" x="17" y="20" />
+      <place marking="0" name ="F_7_failed" x="23" y="20" />
+      <place marking="1" name ="F_7_active" x="17" y="20" />
+      <place marking="0" name ="AND_2_failed" x="20" y="17" />
+      <place marking="0" name ="OR_1_failed" x="20" y="17" />
+      <place marking="0" name ="TopGate_failed" x="20" y="17" />
+      <transition name="F_6_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_6_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_6_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_3_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_3_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_3_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_4_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_4_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_4_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_1_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_7_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_7_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_7_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="OR_2_repairing" type="IMM" priority="9" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="OR_2_failing0" type="IMM" priority="9" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="OR_2_failing1" type="IMM" priority="10" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="AND_2_failing" type="IMM" priority="9" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="AND_2_repairing0" type="IMM" priority="9" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="AND_2_repairing1" type="IMM" priority="9" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="OR_1_repairing" type="IMM" priority="7" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="OR_1_failing0" type="IMM" priority="7" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="OR_1_failing1" type="IMM" priority="8" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="TopGate_failing" type="IMM" priority="5" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing0" type="IMM" priority="5" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing1" type="IMM" priority="5" weight="1.000000000" x="18.00000000" y="23.00000000" />
+    </nodes>
+    <edges>
+      <arc head="F_6_activeFailing" tail="F_6_active" kind="INPUT" mult="1" />
+      <arc head="F_6_activeFailing" tail="F_6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_6_active" tail="F_6_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_6_failed" tail="F_6_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_6_passiveFailing" tail="F_6_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_6_passiveFailing" tail="F_6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_6_failed" tail="F_6_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_6_repairing" tail="F_6_failed" kind="INPUT" mult="1" />
+      <arc head="F_3_activeFailing" tail="F_3_active" kind="INPUT" mult="1" />
+      <arc head="F_3_activeFailing" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_active" tail="F_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_failed" tail="F_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_passiveFailing" tail="F_3_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_passiveFailing" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_failed" tail="F_3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_repairing" tail="F_3_failed" kind="INPUT" mult="1" />
+      <arc head="F_4_activeFailing" tail="F_4_active" kind="INPUT" mult="1" />
+      <arc head="F_4_activeFailing" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_active" tail="F_4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_failed" tail="F_4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_passiveFailing" tail="F_4_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_passiveFailing" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_failed" tail="F_4_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_repairing" tail="F_4_failed" kind="INPUT" mult="1" />
+      <arc head="F_1_activeFailing" tail="F_1_active" kind="INPUT" mult="1" />
+      <arc head="F_1_activeFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_active" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_failed" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_failed" tail="F_1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_repairing" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="F_7_activeFailing" tail="F_7_active" kind="INPUT" mult="1" />
+      <arc head="F_7_activeFailing" tail="F_7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_7_active" tail="F_7_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_7_failed" tail="F_7_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_7_passiveFailing" tail="F_7_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_7_passiveFailing" tail="F_7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_7_failed" tail="F_7_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_7_repairing" tail="F_7_failed" kind="INPUT" mult="1" />
+      <arc head="OR_2_repairing" tail="OR_2_failed" kind="INPUT" mult="1" />
+      <arc head="OR_2_repairing" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_2_repairing" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_2_failing0" tail="F_3_failed" kind="INPUT" mult="1" />
+      <arc head="OR_2_failing0" tail="OR_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_2_failed" tail="OR_2_failing0" kind="OUTPUT" mult="1" />
+      <arc head="F_3_failed" tail="OR_2_failing0" kind="OUTPUT" mult="1" />
+      <arc head="OR_2_failing1" tail="F_4_failed" kind="INPUT" mult="1" />
+      <arc head="OR_2_failing1" tail="OR_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_2_failed" tail="OR_2_failing1" kind="OUTPUT" mult="1" />
+      <arc head="F_4_failed" tail="OR_2_failing1" kind="OUTPUT" mult="1" />
+      <arc head="AND_2_failing" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="AND_2_failing" tail="F_7_failed" kind="INPUT" mult="1" />
+      <arc head="AND_2_failing" tail="AND_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_2_failed" tail="AND_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_failed" tail="AND_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_7_failed" tail="AND_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_2_repairing0" tail="AND_2_failed" kind="INPUT" mult="1" />
+      <arc head="AND_2_repairing0" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_2_repairing1" tail="AND_2_failed" kind="INPUT" mult="1" />
+      <arc head="AND_2_repairing1" tail="F_7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_1_repairing" tail="OR_1_failed" kind="INPUT" mult="1" />
+      <arc head="OR_1_repairing" tail="OR_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_1_repairing" tail="AND_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_1_failing0" tail="OR_2_failed" kind="INPUT" mult="1" />
+      <arc head="OR_1_failing0" tail="OR_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_1_failed" tail="OR_1_failing0" kind="OUTPUT" mult="1" />
+      <arc head="OR_2_failed" tail="OR_1_failing0" kind="OUTPUT" mult="1" />
+      <arc head="OR_1_failing1" tail="AND_2_failed" kind="INPUT" mult="1" />
+      <arc head="OR_1_failing1" tail="OR_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="OR_1_failed" tail="OR_1_failing1" kind="OUTPUT" mult="1" />
+      <arc head="AND_2_failed" tail="OR_1_failing1" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_failing" tail="F_6_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing" tail="OR_1_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_6_failed" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="OR_1_failed" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_repairing0" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing0" tail="F_6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing1" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing1" tail="OR_1_failed" kind="INHIBITOR" mult="1" />
+    </edges>
+  </gspn>
+</project>

@@ -1,0 +1,14 @@
+toplevel "TopGate";
+"TopGate" or "and_activation" "s1";
+"and_activation" and "fs1" "F_1";
+"fs1" lambda=0 dorm=0 repair=0.0000000000;
+"s1" wsp "AND_2" "AND_1";
+"AND_2" and "F_2" "F_1_dummy1";
+"AND_1" and "F_3" "F_1_dummy2";
+"F_2" lambda=0.01 dorm=0 repair=0.1000000000;
+"F_3" lambda=0.01 dorm=0 repair=0.1000000000;
+"F_1_dummy1" lambda=0 dorm=1 repair=0.0000000000;
+"F_1_dummy2" lambda=0 dorm=0 repair=0.0000000000;
+"fdep_dummy1" fdep "F_1" "F_1_dummy1";
+"fdep_dummy2" fdep "F_1" "F_1_dummy2";
+"F_1" lambda=0.01 dorm=1 repair=0.1000000000;

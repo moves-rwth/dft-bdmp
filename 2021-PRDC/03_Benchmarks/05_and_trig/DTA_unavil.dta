@@ -1,0 +1,22 @@
+
+DTA DTA_unavil = {
+	CLOCKVALUESET = { t }
+	ACTIONSET = {  }
+	ATOMICPROPOSITIONSET = { Phi1 }
+	
+	LOCATIONS = {
+		INITIAL l0 : !Phi1;
+		FINAL l1 : Phi1 ;
+		l2 : Phi1;
+	}
+
+	EDGES = {
+		l0 -> l2 (x < t, Act);
+		l0 -> l0 (x < t, Act);
+		l2 -> l1 (x = t, #);
+		l2 -> l2 (x < t, Act);
+		l2 -> l0 (x < t, Act);
+	}
+}
+
+

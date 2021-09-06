@@ -1,0 +1,259 @@
+{"jani-version":1,
+"name":"Galelio.jani",
+"type":"ma",
+"variables":[{"name":"marked","type":{"kind":"bounded","base":"int","upper-bound":1},"initial-value":0}],
+"constants":[
+	{"name":"T", "type":"real"},
+	{"name":"L", "type":"real"}],
+"actions":[
+	{"name":"FAIL"},
+	{"name":"ONLINE"},
+	{"name":"mark"},
+	{"name":"unmark"},
+	{"name":"τ"}
+],
+"automata":[
+	{"name":"aut0",
+	 "locations":[{"name":"l0"}],
+	 "initial-locations":["l0"],
+	 "edges":[
+
+	]},
+	{"name":"aut1",
+	 "locations":[{"name":"l0"},{"name":"l1"},{"name":"l2"},{"name":"l3"},{"name":"l4"},{"name":"l5"},{"name":"l6"},{"name":"l7"},{"name":"l8"},{"name":"l9"},{"name":"l10"}],
+	 "initial-locations":["l0"],
+	 "edges":[
+		{"location":"l0",
+		 "destinations":[{"location":"l1"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l0",
+		 "destinations":[{"location":"l2"}],
+		 "rate":{"exp":1e-10}
+		},
+		{"location":"l0",
+		 "destinations":[{"location":"l3"}],
+		 "rate":{"exp":0.0100000003}
+		},
+		{"location":"l1",
+		 "destinations":[{"location":"l4"}],
+		 "action":"FAIL"
+		},
+		{"location":"l2",
+		 "destinations":[{"location":"l6"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l2",
+		 "destinations":[{"location":"l0"}],
+		 "rate":{"exp":1e+10}
+		},
+		{"location":"l2",
+		 "destinations":[{"location":"l5"}],
+		 "rate":{"exp":0.0100000003}
+		},
+		{"location":"l3",
+		 "destinations":[{"location":"l1"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l3",
+		 "destinations":[{"location":"l5"}],
+		 "rate":{"exp":1e-10}
+		},
+		{"location":"l4",
+		 "destinations":[{"location":"l8"}],
+		 "rate":{"exp":1e-10}
+		},
+		{"location":"l5",
+		 "destinations":[{"location":"l6"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l5",
+		 "destinations":[{"location":"l7"}],
+		 "rate":{"exp":1e+10}
+		},
+		{"location":"l6",
+		 "destinations":[{"location":"l8"}],
+		 "action":"FAIL"
+		},
+		{"location":"l7",
+		 "destinations":[{"location":"l10"}],
+		 "rate":{"exp":0.02}
+		},
+		{"location":"l7",
+		 "destinations":[{"location":"l5"}],
+		 "rate":{"exp":1e-10}
+		},
+		{"location":"l8",
+		 "destinations":[{"location":"l9"}],
+		 "rate":{"exp":1e+10}
+		},
+		{"location":"l9",
+		 "destinations":[{"location":"l10"}],
+		 "action":"ONLINE"
+		},
+		{"location":"l10",
+		 "destinations":[{"location":"l6"}],
+		 "rate":{"exp":1e-10}
+		}
+	]},
+	{"name":"monitor",
+	 "locations":[{"name":"l"}],
+	 "initial-locations":["l"],
+	 "edges":[
+		{"location":"l",
+		 "action":"mark",
+		 "destinations":[{
+			"location":"l",
+			"assignments":[{"ref":"marked", "value":1}]
+			}]},
+		{"location":"l",
+		 "action":"unmark",
+		 "destinations":[{
+			"location":"l",
+			"assignments":[{"ref":"marked", "value":0}]
+			}]
+		}]
+	}
+],
+"system":{"elements":[
+	{"automaton":"aut0"},
+	{"automaton":"aut0"},
+	{"automaton":"aut1"},
+	{"automaton":"monitor"}
+	],
+	"syncs":[
+		{"synchronise":[null,null,"FAIL", "mark"],
+		 "result":"τ"},
+		{"synchronise":[null,null,"ONLINE", "unmark"],
+		 "result":"τ"}
+	]},
+"properties": [
+	{"name":"TBLmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T", "lower":"L"}}
+			}
+		}
+	},
+	{"name":"TBmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T"}}
+			}
+		}
+	},
+	{"name":"TBmin_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmin",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}, "time-bounds":{"upper": "T", "lower":"L"}}
+			}
+		}
+	},
+	{"name":"UBmax_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmax",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}}
+			}
+		}
+	},
+	{"name":"UBmin_Unreliability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Pmin",
+			"exp":{"op":"U", "left":true, "right":{"op":">", "left":"marked", "right":0}}
+			}
+		}
+	},
+	{"name":"max_Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smax",
+			"exp":{"op":">", "left":"marked", "right":0}
+			}
+		}
+	},
+	{"name":"min_Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smin",
+			"exp":{"op":">", "left":"marked", "right":0}
+			}
+		}
+	},
+	{"name":"max_MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emax",
+			"accumulate": ["time"],
+			"reach":{"op":">", "left":"marked", "right":0},
+			"exp":1
+			}
+		}
+	},
+	{"name":"min_MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emin",
+			"accumulate": ["time"],
+			"reach":{"op":">", "left":"marked", "right":0},
+			"exp":1
+			}
+		}
+	},
+	{"name":"Unavailability",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Smax",
+			"exp":{"op": "<", "left": 0, "right": "marked"}
+			}
+		}
+	},
+	{"name":"MTTF",
+	 "expression":{
+		"fun":"max",
+		"op":"filter",
+		"states":{"op":"initial"},
+		"values":{
+			"op":"Emax",
+			"accumulate": ["time"],
+			"reach":{"op": "≠", "left": "marked", "right": 0},
+			"exp": 1
+			}
+		}
+	}
+]
+}

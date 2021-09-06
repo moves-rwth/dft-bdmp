@@ -1,0 +1,699 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="A1_failed" x="23" y="20" />
+      <place marking="1" name ="A1_active" x="17" y="20" />
+      <place marking="0" name ="A2_failed" x="23" y="20" />
+      <place marking="1" name ="A2_active" x="17" y="20" />
+      <place marking="0" name ="A3_failed" x="23" y="20" />
+      <place marking="1" name ="A3_active" x="17" y="20" />
+      <place marking="0" name ="A4_failed" x="23" y="20" />
+      <place marking="1" name ="A4_active" x="17" y="20" />
+      <place marking="0" name ="A5_dummy_failed" x="20" y="17" />
+      <place marking="1" name ="A5_dummy_active" x="17" y="20" />
+      <place marking="0" name ="A8_dummy_failed" x="20" y="17" />
+      <place marking="1" name ="A8_dummy_active" x="17" y="20" />
+      <place marking="0" name ="A9_dummy_failed" x="20" y="17" />
+      <place marking="1" name ="A9_dummy_active" x="17" y="20" />
+      <place marking="0" name ="A12_dummy_failed" x="20" y="17" />
+      <place marking="1" name ="A12_dummy_active" x="17" y="20" />
+      <place marking="0" name ="A13_failed" x="20" y="17" />
+      <place marking="0" name ="A14_failed" x="20" y="17" />
+      <place marking="0" name ="fs1_failed" x="20" y="17" />
+      <place marking="1" name ="fs1_active" x="17" y="20" />
+      <place marking="0" name ="A9_failed" x="23" y="20" />
+      <place marking="0" name ="A9_active" x="17" y="20" />
+      <place marking="0" name ="A9_unavail" x="29" y="20" />
+      <place marking="0" name ="fs2_failed" x="20" y="17" />
+      <place marking="0" name ="fs2_active" x="17" y="20" />
+      <place marking="0" name ="A10_inst_failed" x="23" y="20" />
+      <place marking="0" name ="A10_inst_active" x="17" y="20" />
+      <place marking="0" name ="A10_instis_flip" x="17" y="20" />
+      <place marking="0" name ="A11_failed" x="23" y="20" />
+      <place marking="0" name ="A11_active" x="17" y="20" />
+      <place marking="0" name ="A12_failed" x="20" y="17" />
+      <place marking="0" name ="And_1_failed" x="20" y="17" />
+      <place marking="0" name ="And_1_unavail" x="26" y="17" />
+      <place marking="0" name ="S1_failed" x="30" y="12" />
+      <place marking="1" name ="S1_active" x="0" y="8" />
+      <place marking="1" name ="S1_consider_next" x="5" y="12" />
+      <place marking="0" name ="S1_repair_log" x="10" y="12" />
+      <place marking="0" name ="S1_claimed_A9" x="5" y="25" />
+      <place marking="0" name ="S1_failure_log_A9" x="15" y="25" />
+      <place marking="0" name ="S1_claim_log_A9" x="15" y="25" />
+      <place marking="0" name ="S1_claimed_And_1" x="19" y="25" />
+      <place marking="0" name ="S1_failure_log_And_1" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_fs2" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_A10_inst" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_A11" x="29" y="25" />
+      <place marking="0" name ="And_activation_failed" x="20" y="17" />
+      <place marking="0" name ="TopGate_failed" x="20" y="17" />
+      <place marking="0" name ="A7_failed" x="23" y="20" />
+      <place marking="0" name ="A7_active" x="17" y="20" />
+      <place marking="0" name ="A5_failed" x="23" y="20" />
+      <place marking="0" name ="A5_active" x="17" y="20" />
+      <place marking="0" name ="A6_failed" x="20" y="17" />
+      <place marking="0" name ="A6_unavail" x="26" y="17" />
+      <place marking="0" name ="A8_s_failed" x="23" y="20" />
+      <place marking="0" name ="A8_s_active" x="17" y="20" />
+      <place marking="0" name ="A8_s_unavail" x="29" y="20" />
+      <place marking="0" name ="A8_failed" x="30" y="12" />
+      <place marking="1" name ="A8_active" x="0" y="8" />
+      <place marking="1" name ="A8_consider_next" x="5" y="12" />
+      <place marking="0" name ="A8_repair_log" x="10" y="12" />
+      <place marking="0" name ="A8_claimed_A6" x="5" y="25" />
+      <place marking="0" name ="A8_failure_log_A6" x="15" y="25" />
+      <place marking="0" name ="A8_claim_log_A7" x="15" y="25" />
+      <place marking="0" name ="A8_claim_log_A5" x="15" y="25" />
+      <place marking="0" name ="A8_claimed_A8_s" x="19" y="25" />
+      <place marking="0" name ="A8_failure_log_A8_s" x="29" y="25" />
+      <place marking="0" name ="A8_claim_log_A8_s" x="29" y="25" />
+      <place marking="0" name ="dep1_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep1_r_1_coin" x="15" y="22" />
+      <place marking="0" name ="dep2_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep2_r_1_coin" x="15" y="22" />
+      <place marking="0" name ="dep3_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep3_r_1_coin" x="15" y="22" />
+      <place marking="0" name ="dep4_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep4_r_1_coin" x="15" y="22" />
+      <transition name="A1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A1_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A2_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A2_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A2_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A3_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A3_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A3_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A4_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A4_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A4_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A9_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A9_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A9_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A10_inst_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A11_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A11_passiveFailing" type="EXP" nservers="1" delay="0.000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A11_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A7_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A7_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A7_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A5_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A5_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A5_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A8_s_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A8_s_passiveFailing" type="EXP" nservers="1" delay="0.001000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A8_s_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A13_failing" type="IMM" priority="13" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A13_repairing0" type="IMM" priority="13" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A13_repairing1" type="IMM" priority="13" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="A14_repairing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A14_failing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A14_failing1" type="IMM" priority="11" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="A14_failing2" type="IMM" priority="11" weight="1.000000000" x="21.00000000" y="23.00000000" />
+      <transition name="A14_failing3" type="IMM" priority="11" weight="1.000000000" x="24.00000000" y="23.00000000" />
+      <transition name="A14_failing4" type="IMM" priority="11" weight="1.000000000" x="27.00000000" y="23.00000000" />
+      <transition name="A14_failing5" type="IMM" priority="11" weight="1.000000000" x="30.00000000" y="23.00000000" />
+      <transition name="A14_failing6" type="IMM" priority="11" weight="1.000000000" x="33.00000000" y="23.00000000" />
+      <transition name="A10_inst_fail" type="IMM" priority="15" weight="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A10_inst_good" type="IMM" priority="15" weight="0.9900000000" x="20.00000000" y="23.00000000" />
+      <transition name="A10_inst_reset" type="IMM" priority="15" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A12_repairing" type="IMM" priority="13" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A12_failing0" type="IMM" priority="13" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A12_failing1" type="IMM" priority="13" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="And_1_failing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="And_1_repairing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="And_1_repairing1" type="IMM" priority="11" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="S1_cannot_claim_next" type="IMM" priority="9" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="S12_repair" type="IMM" priority="9" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="S1_claim_A9" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="S1_next_claim_0" type="IMM" priority="9" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="S10_detect_failure" type="IMM" priority="10" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="S10detect_repair" type="IMM" priority="9" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="S10_release" type="IMM" priority="9" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="S10drop_repair" type="IMM" priority="10" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="S1_activate_0_11" type="IMM" priority="10" weight="1.000000000" x="2.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__A9" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__A9" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_dact__A9" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_And_1" type="IMM" priority="10" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="S1_next_claim_1" type="IMM" priority="11" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="S11_detect_failure" type="IMM" priority="10" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="S11detect_repair" type="IMM" priority="9" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="S11_release" type="IMM" priority="9" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="S11drop_repair" type="IMM" priority="10" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="S1_activate_1_12" type="IMM" priority="12" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__fs2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__fs2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_dact__fs2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_activate_1_13" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__A10_inst" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__A10_inst" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_dact__A10_inst" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_activate_1_14" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__A11" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__A11" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_dact__A11" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="And_activation_failing" type="IMM" priority="7" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="And_activation_repairing0" type="IMM" priority="7" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="And_activation_repairing1" type="IMM" priority="7" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing" type="IMM" priority="5" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="TopGate_failing0" type="IMM" priority="5" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGate_failing1" type="IMM" priority="5" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="A6_repairing" type="IMM" priority="13" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A6_failing0" type="IMM" priority="13" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A6_failing1" type="IMM" priority="13" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="A8_cannot_claim_next" type="IMM" priority="11" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="A82_repair" type="IMM" priority="11" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="A8_claim_A6" type="IMM" priority="13" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="A8_next_claim_0" type="IMM" priority="11" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="A80_detect_failure" type="IMM" priority="12" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="A80detect_repair" type="IMM" priority="11" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="A80_release" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="A80drop_repair" type="IMM" priority="12" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="A8_activate_0_20" type="IMM" priority="12" weight="1.000000000" x="2.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_claimed__A7" type="IMM" priority="13" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_active__A7" type="IMM" priority="13" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="A8_dact__A7" type="IMM" priority="13" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="A8_activate_0_21" type="IMM" priority="13" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_claimed__A5" type="IMM" priority="14" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_active__A5" type="IMM" priority="14" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="A8_dact__A5" type="IMM" priority="14" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="A8_claim_A8_s" type="IMM" priority="12" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="A8_next_claim_1" type="IMM" priority="14" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="A81_detect_failure" type="IMM" priority="12" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="A81detect_repair" type="IMM" priority="11" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="A81_release" type="IMM" priority="11" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="A81drop_repair" type="IMM" priority="12" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="A8_activate_1_23" type="IMM" priority="15" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_claimed__A8_s" type="IMM" priority="16" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="A8_claim_log_active__A8_s" type="IMM" priority="16" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="A8_dact__A8_s" type="IMM" priority="16" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="dep1_f_1_propagate_A5_dummy" type="IMM" priority="2" weight="1.000000000" x="340" y="4" />
+      <transition name="dep1_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="343" y="4" />
+      <transition name="dep1_r_1_return_coin" type="IMM" priority="3" weight="1.000000000" x="346" y="4" />
+      <transition name="dep1_r_1_propagate_A5_dummy" type="IMM" priority="2" weight="1.000000000" x="349" y="4" />
+      <transition name="dep1_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+      <transition name="dep2_f_1_propagate_A9_dummy" type="IMM" priority="2" weight="1.000000000" x="355" y="4" />
+      <transition name="dep2_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="358" y="4" />
+      <transition name="dep2_r_1_return_coin" type="IMM" priority="3" weight="1.000000000" x="361" y="4" />
+      <transition name="dep2_r_1_propagate_A9_dummy" type="IMM" priority="2" weight="1.000000000" x="364" y="4" />
+      <transition name="dep2_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+      <transition name="dep3_f_1_propagate_A12_dummy" type="IMM" priority="2" weight="1.000000000" x="370" y="4" />
+      <transition name="dep3_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="373" y="4" />
+      <transition name="dep3_r_1_return_coin" type="IMM" priority="3" weight="1.000000000" x="376" y="4" />
+      <transition name="dep3_r_1_propagate_A12_dummy" type="IMM" priority="2" weight="1.000000000" x="379" y="4" />
+      <transition name="dep3_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+      <transition name="dep4_f_1_propagate_A8_dummy" type="IMM" priority="2" weight="1.000000000" x="385" y="4" />
+      <transition name="dep4_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="388" y="4" />
+      <transition name="dep4_r_1_return_coin" type="IMM" priority="3" weight="1.000000000" x="391" y="4" />
+      <transition name="dep4_r_1_propagate_A8_dummy" type="IMM" priority="2" weight="1.000000000" x="394" y="4" />
+      <transition name="dep4_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+    </nodes>
+    <edges>
+      <arc head="A1_activeFailing" tail="A1_active" kind="INPUT" mult="1" />
+      <arc head="A1_activeFailing" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A1_active" tail="A1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_failed" tail="A1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_passiveFailing" tail="A1_active" kind="INHIBITOR" mult="1" />
+      <arc head="A1_passiveFailing" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A1_failed" tail="A1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_repairing" tail="A1_failed" kind="INPUT" mult="1" />
+      <arc head="A2_activeFailing" tail="A2_active" kind="INPUT" mult="1" />
+      <arc head="A2_activeFailing" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A2_active" tail="A2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_failed" tail="A2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_passiveFailing" tail="A2_active" kind="INHIBITOR" mult="1" />
+      <arc head="A2_passiveFailing" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A2_failed" tail="A2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_repairing" tail="A2_failed" kind="INPUT" mult="1" />
+      <arc head="A3_activeFailing" tail="A3_active" kind="INPUT" mult="1" />
+      <arc head="A3_activeFailing" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A3_active" tail="A3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_failed" tail="A3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_passiveFailing" tail="A3_active" kind="INHIBITOR" mult="1" />
+      <arc head="A3_passiveFailing" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A3_failed" tail="A3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_repairing" tail="A3_failed" kind="INPUT" mult="1" />
+      <arc head="A4_activeFailing" tail="A4_active" kind="INPUT" mult="1" />
+      <arc head="A4_activeFailing" tail="A4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A4_active" tail="A4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A4_failed" tail="A4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A4_passiveFailing" tail="A4_active" kind="INHIBITOR" mult="1" />
+      <arc head="A4_passiveFailing" tail="A4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A4_failed" tail="A4_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A4_repairing" tail="A4_failed" kind="INPUT" mult="1" />
+      <arc head="A9_activeFailing" tail="A9_active" kind="INPUT" mult="1" />
+      <arc head="A9_activeFailing" tail="A9_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A9_active" tail="A9_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A9_failed" tail="A9_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A9_unavail" tail="A9_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A9_passiveFailing" tail="A9_active" kind="INHIBITOR" mult="1" />
+      <arc head="A9_passiveFailing" tail="A9_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A9_failed" tail="A9_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A9_unavail" tail="A9_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A9_repairing" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="A9_repairing" tail="A9_unavail" kind="INPUT" mult="1" />
+      <arc head="A10_inst_repairing" tail="A10_inst_failed" kind="INPUT" mult="1" />
+      <arc head="A11_activeFailing" tail="A11_active" kind="INPUT" mult="1" />
+      <arc head="A11_activeFailing" tail="A11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A11_active" tail="A11_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A11_failed" tail="A11_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A11_passiveFailing" tail="A11_active" kind="INHIBITOR" mult="1" />
+      <arc head="A11_passiveFailing" tail="A11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A11_failed" tail="A11_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A11_repairing" tail="A11_failed" kind="INPUT" mult="1" />
+      <arc head="A7_activeFailing" tail="A7_active" kind="INPUT" mult="1" />
+      <arc head="A7_activeFailing" tail="A7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A7_active" tail="A7_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A7_failed" tail="A7_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A7_passiveFailing" tail="A7_active" kind="INHIBITOR" mult="1" />
+      <arc head="A7_passiveFailing" tail="A7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A7_failed" tail="A7_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A7_repairing" tail="A7_failed" kind="INPUT" mult="1" />
+      <arc head="A5_activeFailing" tail="A5_active" kind="INPUT" mult="1" />
+      <arc head="A5_activeFailing" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_active" tail="A5_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A5_failed" tail="A5_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A5_passiveFailing" tail="A5_active" kind="INHIBITOR" mult="1" />
+      <arc head="A5_passiveFailing" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_failed" tail="A5_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A5_repairing" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="A8_s_activeFailing" tail="A8_s_active" kind="INPUT" mult="1" />
+      <arc head="A8_s_activeFailing" tail="A8_s_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_active" tail="A8_s_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_failed" tail="A8_s_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_unavail" tail="A8_s_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_passiveFailing" tail="A8_s_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_passiveFailing" tail="A8_s_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_failed" tail="A8_s_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_unavail" tail="A8_s_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_repairing" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="A8_s_repairing" tail="A8_s_unavail" kind="INPUT" mult="1" />
+      <arc head="A13_failing" tail="A9_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="A13_failing" tail="A12_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="A13_failing" tail="A13_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A13_failed" tail="A13_failing" kind="OUTPUT" mult="1" />
+      <arc head="A9_dummy_failed" tail="A13_failing" kind="OUTPUT" mult="1" />
+      <arc head="A12_dummy_failed" tail="A13_failing" kind="OUTPUT" mult="1" />
+      <arc head="A13_repairing0" tail="A13_failed" kind="INPUT" mult="1" />
+      <arc head="A13_repairing0" tail="A9_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A13_repairing1" tail="A13_failed" kind="INPUT" mult="1" />
+      <arc head="A13_repairing1" tail="A12_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A14_failed" kind="INPUT" mult="1" />
+      <arc head="A14_repairing" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A5_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A8_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_repairing" tail="A13_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failing0" tail="A1_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing0" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A1_failed" tail="A14_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing1" tail="A2_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing1" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A2_failed" tail="A14_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing2" tail="A3_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing2" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing2" kind="OUTPUT" mult="1" />
+      <arc head="A3_failed" tail="A14_failing2" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing3" tail="A4_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing3" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing3" kind="OUTPUT" mult="1" />
+      <arc head="A4_failed" tail="A14_failing3" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing4" tail="A5_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing4" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing4" kind="OUTPUT" mult="1" />
+      <arc head="A5_dummy_failed" tail="A14_failing4" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing5" tail="A8_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing5" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing5" kind="OUTPUT" mult="1" />
+      <arc head="A8_dummy_failed" tail="A14_failing5" kind="OUTPUT" mult="1" />
+      <arc head="A14_failing6" tail="A13_failed" kind="INPUT" mult="1" />
+      <arc head="A14_failing6" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A14_failed" tail="A14_failing6" kind="OUTPUT" mult="1" />
+      <arc head="A13_failed" tail="A14_failing6" kind="OUTPUT" mult="1" />
+      <arc head="A10_inst_fail" tail="A10_inst_active" kind="INPUT" mult="1" />
+      <arc head="A10_inst_fail" tail="A10_instis_flip" kind="INHIBITOR" mult="1" />
+      <arc head="A10_inst_fail" tail="A10_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A10_inst_active" tail="A10_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="A10_inst_failed" tail="A10_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="A10_instis_flip" tail="A10_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="A10_inst_good" tail="A10_inst_active" kind="INPUT" mult="1" />
+      <arc head="A10_inst_good" tail="A10_instis_flip" kind="INHIBITOR" mult="1" />
+      <arc head="A10_inst_good" tail="A10_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A10_inst_active" tail="A10_inst_good" kind="OUTPUT" mult="1" />
+      <arc head="A10_instis_flip" tail="A10_inst_good" kind="OUTPUT" mult="1" />
+      <arc head="A10_inst_reset" tail="A10_instis_flip" kind="INPUT" mult="1" />
+      <arc head="A10_inst_reset" tail="A10_inst_active" kind="INHIBITOR" mult="1" />
+      <arc head="A12_repairing" tail="A12_failed" kind="INPUT" mult="1" />
+      <arc head="A12_repairing" tail="A10_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A12_repairing" tail="A11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A12_failing0" tail="A10_inst_failed" kind="INPUT" mult="1" />
+      <arc head="A12_failing0" tail="A12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A12_failed" tail="A12_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A10_inst_failed" tail="A12_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A12_failing1" tail="A11_failed" kind="INPUT" mult="1" />
+      <arc head="A12_failing1" tail="A12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A12_failed" tail="A12_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A11_failed" tail="A12_failing1" kind="OUTPUT" mult="1" />
+      <arc head="And_1_failing" tail="fs2_failed" kind="INPUT" mult="1" />
+      <arc head="And_1_failing" tail="A12_failed" kind="INPUT" mult="1" />
+      <arc head="And_1_failing" tail="And_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_1_failed" tail="And_1_failing" kind="OUTPUT" mult="1" />
+      <arc head="And_1_unavail" tail="And_1_failing" kind="OUTPUT" mult="1" />
+      <arc head="fs2_failed" tail="And_1_failing" kind="OUTPUT" mult="1" />
+      <arc head="A12_failed" tail="And_1_failing" kind="OUTPUT" mult="1" />
+      <arc head="And_1_repairing0" tail="And_1_failed" kind="INPUT" mult="1" />
+      <arc head="And_1_repairing0" tail="And_1_unavail" kind="INPUT" mult="1" />
+      <arc head="And_1_repairing0" tail="fs2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_1_repairing1" tail="And_1_failed" kind="INPUT" mult="1" />
+      <arc head="And_1_repairing1" tail="And_1_unavail" kind="INPUT" mult="1" />
+      <arc head="And_1_repairing1" tail="A12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="A9_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="And_1_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="S1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A9_unavail" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="And_1_unavail" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="S1_failed" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="S12_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S12_repair" tail="S1_failed" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S12_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_A9" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_claim_A9" tail="A9_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claimed_A9" tail="S1_claim_A9" kind="OUTPUT" mult="1" />
+      <arc head="A9_unavail" tail="S1_claim_A9" kind="OUTPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="S1_claimed_A9" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="A9_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="A9_failed" tail="S1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="S10_detect_failure" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="S10_detect_failure" tail="S1_failure_log_A9" kind="INHIBITOR" mult="1" />
+      <arc head="A9_failed" tail="S10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S1_failure_log_A9" tail="S10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S10detect_repair" tail="S1_failure_log_A9" kind="INPUT" mult="1" />
+      <arc head="S10detect_repair" tail="A9_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S10detect_repair" tail="S1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S10detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="S10_release" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S10_release" tail="S1_claimed_A9" kind="INPUT" mult="1" />
+      <arc head="S10_release" tail="A9_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S10_release" kind="OUTPUT" mult="1" />
+      <arc head="S10drop_repair" tail="S1_failure_log_A9" kind="INPUT" mult="1" />
+      <arc head="S10drop_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S10drop_repair" tail="A9_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S10drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_activate_0_11" tail="S1_claimed_A9" kind="INPUT" mult="1" />
+      <arc head="S1_activate_0_11" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_0_11" tail="A9_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_0_11" tail="S1_claim_log_A9" kind="INHIBITOR" mult="1" />
+      <arc head="A9_active" tail="S1_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_A9" tail="S1_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_A9" tail="S1_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A9" tail="S1_claim_log_A9" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A9" tail="S1_claimed_A9" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__A9" tail="S1_claim_log_A9" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__A9" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__A9" tail="A9_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__A9" tail="S1_claim_log_A9" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_And_1" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_claim_And_1" tail="And_1_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claimed_And_1" tail="S1_claim_And_1" kind="OUTPUT" mult="1" />
+      <arc head="And_1_unavail" tail="S1_claim_And_1" kind="OUTPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="S1_claimed_And_1" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="And_1_failed" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="And_1_unavail" kind="INPUT" mult="1" />
+      <arc head="And_1_failed" tail="S1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="S11_detect_failure" tail="And_1_failed" kind="INPUT" mult="1" />
+      <arc head="S11_detect_failure" tail="S1_failure_log_And_1" kind="INHIBITOR" mult="1" />
+      <arc head="And_1_failed" tail="S11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S1_failure_log_And_1" tail="S11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S11detect_repair" tail="S1_failure_log_And_1" kind="INPUT" mult="1" />
+      <arc head="S11detect_repair" tail="And_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S11detect_repair" tail="S1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S11detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="S11_release" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S11_release" tail="S1_claimed_And_1" kind="INPUT" mult="1" />
+      <arc head="S11_release" tail="And_1_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S11_release" kind="OUTPUT" mult="1" />
+      <arc head="S11drop_repair" tail="S1_failure_log_And_1" kind="INPUT" mult="1" />
+      <arc head="S11drop_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S11drop_repair" tail="And_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S11drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_activate_1_12" tail="S1_claimed_And_1" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_12" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_12" tail="fs2_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_12" tail="S1_claim_log_fs2" kind="INHIBITOR" mult="1" />
+      <arc head="fs2_active" tail="S1_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_And_1" tail="S1_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_fs2" tail="S1_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__fs2" tail="S1_claim_log_fs2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__fs2" tail="S1_claimed_And_1" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__fs2" tail="S1_claim_log_fs2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__fs2" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__fs2" tail="fs2_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__fs2" tail="S1_claim_log_fs2" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_13" tail="S1_claimed_And_1" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_13" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_13" tail="A10_inst_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_13" tail="S1_claim_log_A10_inst" kind="INHIBITOR" mult="1" />
+      <arc head="A10_inst_active" tail="S1_activate_1_13" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_And_1" tail="S1_activate_1_13" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_13" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_A10_inst" tail="S1_activate_1_13" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A10_inst" tail="S1_claim_log_A10_inst" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A10_inst" tail="S1_claimed_And_1" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__A10_inst" tail="S1_claim_log_A10_inst" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__A10_inst" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__A10_inst" tail="A10_inst_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__A10_inst" tail="S1_claim_log_A10_inst" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_14" tail="S1_claimed_And_1" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_14" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_14" tail="A11_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_14" tail="S1_claim_log_A11" kind="INHIBITOR" mult="1" />
+      <arc head="A11_active" tail="S1_activate_1_14" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_14" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_A11" tail="S1_activate_1_14" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_And_1" tail="S1_activate_1_14" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A11" tail="S1_claim_log_A11" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__A11" tail="S1_claimed_And_1" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__A11" tail="S1_claim_log_A11" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__A11" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__A11" tail="A11_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__A11" tail="S1_claim_log_A11" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_failing" tail="fs1_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_failing" tail="S1_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_failing" tail="And_activation_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="fs1_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="S1_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="And_activation_repairing0" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_repairing0" tail="fs1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_repairing1" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_repairing1" tail="S1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing" tail="A14_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="And_activation_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failing0" tail="A14_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing0" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A14_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="And_activation_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A6_repairing" tail="A6_failed" kind="INPUT" mult="1" />
+      <arc head="A6_repairing" tail="A6_unavail" kind="INPUT" mult="1" />
+      <arc head="A6_repairing" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A6_repairing" tail="A7_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A6_failing0" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="A6_failing0" tail="A6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A6_failed" tail="A6_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A6_unavail" tail="A6_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A5_failed" tail="A6_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A6_failing1" tail="A7_failed" kind="INPUT" mult="1" />
+      <arc head="A6_failing1" tail="A6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A6_failed" tail="A6_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A6_unavail" tail="A6_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A7_failed" tail="A6_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A8_cannot_claim_next" tail="A8_consider_next" kind="INPUT" mult="1" />
+      <arc head="A8_cannot_claim_next" tail="A6_unavail" kind="INPUT" mult="1" />
+      <arc head="A8_cannot_claim_next" tail="A8_s_unavail" kind="INPUT" mult="1" />
+      <arc head="A8_cannot_claim_next" tail="A8_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A6_unavail" tail="A8_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_unavail" tail="A8_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="A8_failed" tail="A8_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="A82_repair" tail="A8_repair_log" kind="INPUT" mult="1" />
+      <arc head="A82_repair" tail="A8_failed" kind="INPUT" mult="1" />
+      <arc head="A8_consider_next" tail="A82_repair" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_A6" tail="A8_consider_next" kind="INPUT" mult="1" />
+      <arc head="A8_claim_A6" tail="A6_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claimed_A6" tail="A8_claim_A6" kind="OUTPUT" mult="1" />
+      <arc head="A6_unavail" tail="A8_claim_A6" kind="OUTPUT" mult="1" />
+      <arc head="A8_next_claim_0" tail="A8_claimed_A6" kind="INPUT" mult="1" />
+      <arc head="A8_next_claim_0" tail="A6_failed" kind="INPUT" mult="1" />
+      <arc head="A8_next_claim_0" tail="A6_unavail" kind="INPUT" mult="1" />
+      <arc head="A6_failed" tail="A8_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="A8_consider_next" tail="A8_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="A80_detect_failure" tail="A6_failed" kind="INPUT" mult="1" />
+      <arc head="A80_detect_failure" tail="A8_failure_log_A6" kind="INHIBITOR" mult="1" />
+      <arc head="A6_failed" tail="A80_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="A8_failure_log_A6" tail="A80_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="A80detect_repair" tail="A8_failure_log_A6" kind="INPUT" mult="1" />
+      <arc head="A80detect_repair" tail="A6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A80detect_repair" tail="A8_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="A8_repair_log" tail="A80detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="A80_release" tail="A8_repair_log" kind="INPUT" mult="1" />
+      <arc head="A80_release" tail="A8_claimed_A6" kind="INPUT" mult="1" />
+      <arc head="A80_release" tail="A6_unavail" kind="INPUT" mult="1" />
+      <arc head="A8_consider_next" tail="A80_release" kind="OUTPUT" mult="1" />
+      <arc head="A80drop_repair" tail="A8_failure_log_A6" kind="INPUT" mult="1" />
+      <arc head="A80drop_repair" tail="A8_repair_log" kind="INPUT" mult="1" />
+      <arc head="A80drop_repair" tail="A6_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A8_repair_log" tail="A80drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="A8_activate_0_20" tail="A8_claimed_A6" kind="INPUT" mult="1" />
+      <arc head="A8_activate_0_20" tail="A8_active" kind="INPUT" mult="1" />
+      <arc head="A8_activate_0_20" tail="A7_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_activate_0_20" tail="A8_claim_log_A7" kind="INHIBITOR" mult="1" />
+      <arc head="A7_active" tail="A8_activate_0_20" kind="OUTPUT" mult="1" />
+      <arc head="A8_claimed_A6" tail="A8_activate_0_20" kind="OUTPUT" mult="1" />
+      <arc head="A8_active" tail="A8_activate_0_20" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_A7" tail="A8_activate_0_20" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A7" tail="A8_claim_log_A7" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A7" tail="A8_claimed_A6" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claim_log_active__A7" tail="A8_claim_log_A7" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_active__A7" tail="A8_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_dact__A7" tail="A7_active" kind="INPUT" mult="1" />
+      <arc head="A8_dact__A7" tail="A8_claim_log_A7" kind="INHIBITOR" mult="1" />
+      <arc head="A8_activate_0_21" tail="A8_claimed_A6" kind="INPUT" mult="1" />
+      <arc head="A8_activate_0_21" tail="A8_active" kind="INPUT" mult="1" />
+      <arc head="A8_activate_0_21" tail="A5_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_activate_0_21" tail="A8_claim_log_A5" kind="INHIBITOR" mult="1" />
+      <arc head="A5_active" tail="A8_activate_0_21" kind="OUTPUT" mult="1" />
+      <arc head="A8_claimed_A6" tail="A8_activate_0_21" kind="OUTPUT" mult="1" />
+      <arc head="A8_active" tail="A8_activate_0_21" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_A5" tail="A8_activate_0_21" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A5" tail="A8_claim_log_A5" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A5" tail="A8_claimed_A6" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claim_log_active__A5" tail="A8_claim_log_A5" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_active__A5" tail="A8_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_dact__A5" tail="A5_active" kind="INPUT" mult="1" />
+      <arc head="A8_dact__A5" tail="A8_claim_log_A5" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claim_A8_s" tail="A8_consider_next" kind="INPUT" mult="1" />
+      <arc head="A8_claim_A8_s" tail="A8_s_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claimed_A8_s" tail="A8_claim_A8_s" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_unavail" tail="A8_claim_A8_s" kind="OUTPUT" mult="1" />
+      <arc head="A8_next_claim_1" tail="A8_claimed_A8_s" kind="INPUT" mult="1" />
+      <arc head="A8_next_claim_1" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="A8_next_claim_1" tail="A8_s_unavail" kind="INPUT" mult="1" />
+      <arc head="A8_s_failed" tail="A8_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="A8_consider_next" tail="A8_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="A81_detect_failure" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="A81_detect_failure" tail="A8_failure_log_A8_s" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_failed" tail="A81_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="A8_failure_log_A8_s" tail="A81_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="A81detect_repair" tail="A8_failure_log_A8_s" kind="INPUT" mult="1" />
+      <arc head="A81detect_repair" tail="A8_s_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A81detect_repair" tail="A8_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="A8_repair_log" tail="A81detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="A81_release" tail="A8_repair_log" kind="INPUT" mult="1" />
+      <arc head="A81_release" tail="A8_claimed_A8_s" kind="INPUT" mult="1" />
+      <arc head="A81_release" tail="A8_s_unavail" kind="INPUT" mult="1" />
+      <arc head="A8_consider_next" tail="A81_release" kind="OUTPUT" mult="1" />
+      <arc head="A81drop_repair" tail="A8_failure_log_A8_s" kind="INPUT" mult="1" />
+      <arc head="A81drop_repair" tail="A8_repair_log" kind="INPUT" mult="1" />
+      <arc head="A81drop_repair" tail="A8_s_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A8_repair_log" tail="A81drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="A8_activate_1_23" tail="A8_claimed_A8_s" kind="INPUT" mult="1" />
+      <arc head="A8_activate_1_23" tail="A8_active" kind="INPUT" mult="1" />
+      <arc head="A8_activate_1_23" tail="A8_s_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_activate_1_23" tail="A8_claim_log_A8_s" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_active" tail="A8_activate_1_23" kind="OUTPUT" mult="1" />
+      <arc head="A8_claimed_A8_s" tail="A8_activate_1_23" kind="OUTPUT" mult="1" />
+      <arc head="A8_active" tail="A8_activate_1_23" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_A8_s" tail="A8_activate_1_23" kind="OUTPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A8_s" tail="A8_claim_log_A8_s" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_claimed__A8_s" tail="A8_claimed_A8_s" kind="INHIBITOR" mult="1" />
+      <arc head="A8_claim_log_active__A8_s" tail="A8_claim_log_A8_s" kind="INPUT" mult="1" />
+      <arc head="A8_claim_log_active__A8_s" tail="A8_active" kind="INHIBITOR" mult="1" />
+      <arc head="A8_dact__A8_s" tail="A8_s_active" kind="INPUT" mult="1" />
+      <arc head="A8_dact__A8_s" tail="A8_claim_log_A8_s" kind="INHIBITOR" mult="1" />
+      <arc head="dep1_f_1_propagate_A5_dummy" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_f_1_propagate_A5_dummy" tail="A5_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_failed" tail="dep1_f_1_propagate_A5_dummy" kind="OUTPUT" mult="1" />
+      <arc head="A5_dummy_failed" tail="dep1_f_1_propagate_A5_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_start_flip" tail="dep1_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_start_flip" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep1_r_1_forward" tail="dep1_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_return_coin" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_return_coin" tail="dep1_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep1_r_1_coin" tail="dep1_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="A5_failed" tail="dep1_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_propagate_A5_dummy" tail="dep1_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_propagate_A5_dummy" tail="A5_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_forward" tail="dep1_r_1_propagate_A5_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1reset" tail="dep1_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1reset" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="A5_failed" tail="dep1_r_1reset" kind="OUTPUT" mult="1" />
+      <arc head="dep2_f_1_propagate_A9_dummy" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_f_1_propagate_A9_dummy" tail="A9_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A9_failed" tail="dep2_f_1_propagate_A9_dummy" kind="OUTPUT" mult="1" />
+      <arc head="A9_dummy_failed" tail="dep2_f_1_propagate_A9_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_start_flip" tail="dep2_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_start_flip" tail="A9_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep2_r_1_forward" tail="dep2_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_return_coin" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_return_coin" tail="dep2_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep2_r_1_coin" tail="dep2_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="A9_failed" tail="dep2_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_propagate_A9_dummy" tail="dep2_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_propagate_A9_dummy" tail="A9_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_forward" tail="dep2_r_1_propagate_A9_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1reset" tail="dep2_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1reset" tail="A9_failed" kind="INPUT" mult="1" />
+      <arc head="A9_failed" tail="dep2_r_1reset" kind="OUTPUT" mult="1" />
+      <arc head="dep3_f_1_propagate_A12_dummy" tail="A12_failed" kind="INPUT" mult="1" />
+      <arc head="dep3_f_1_propagate_A12_dummy" tail="A12_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A12_failed" tail="dep3_f_1_propagate_A12_dummy" kind="OUTPUT" mult="1" />
+      <arc head="A12_dummy_failed" tail="dep3_f_1_propagate_A12_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep3_r_1_start_flip" tail="dep3_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep3_r_1_start_flip" tail="A12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep3_r_1_forward" tail="dep3_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep3_r_1_return_coin" tail="A12_failed" kind="INPUT" mult="1" />
+      <arc head="dep3_r_1_return_coin" tail="dep3_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep3_r_1_coin" tail="dep3_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="A12_failed" tail="dep3_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep3_r_1_propagate_A12_dummy" tail="dep3_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep3_r_1_propagate_A12_dummy" tail="A12_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep3_r_1_forward" tail="dep3_r_1_propagate_A12_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep3_r_1reset" tail="dep3_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep3_r_1reset" tail="A12_failed" kind="INPUT" mult="1" />
+      <arc head="A12_failed" tail="dep3_r_1reset" kind="OUTPUT" mult="1" />
+      <arc head="dep4_f_1_propagate_A8_dummy" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="dep4_f_1_propagate_A8_dummy" tail="A8_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A8_s_failed" tail="dep4_f_1_propagate_A8_dummy" kind="OUTPUT" mult="1" />
+      <arc head="A8_dummy_failed" tail="dep4_f_1_propagate_A8_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep4_r_1_start_flip" tail="dep4_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep4_r_1_start_flip" tail="A8_s_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep4_r_1_forward" tail="dep4_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep4_r_1_return_coin" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="dep4_r_1_return_coin" tail="dep4_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep4_r_1_coin" tail="dep4_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="A8_s_failed" tail="dep4_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep4_r_1_propagate_A8_dummy" tail="dep4_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep4_r_1_propagate_A8_dummy" tail="A8_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep4_r_1_forward" tail="dep4_r_1_propagate_A8_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep4_r_1reset" tail="dep4_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep4_r_1reset" tail="A8_s_failed" kind="INPUT" mult="1" />
+      <arc head="A8_s_failed" tail="dep4_r_1reset" kind="OUTPUT" mult="1" />
+    </edges>
+  </gspn>
+</project>

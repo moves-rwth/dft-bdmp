@@ -1,0 +1,8 @@
+toplevel "TopGate";
+"TopGate" or "A4" "A5";
+"A4" pand-excl-rep-any "A1" "A2";
+"A5" and "A2" "A3";
+"A1" lambda=0.01 dorm=1 repair=0.1;
+"A2" lambda=0.01 dorm=1 repair=0.1;
+"A3" lambda=0.01 dorm=1 repair=0.1;
+

@@ -1,0 +1,11 @@
+toplevel "TopGate";
+"TopGate"  or "F_1_dummy" "F_2_dummy" "and_activation";
+"and_activation" and "fs1" "s1";
+"fs1" lambda=0 dorm=0  repair=0;
+"s1" hsp "F_1" "F_2";
+"F_1" lambda=0.01 dorm=1  repair=0.1;
+"F_2" lambda=0.01 dorm=0  repair=0.1;
+"F_1_dummy" lambda=0 dorm=0  repair=0;
+"F_2_dummy" lambda=0 dorm=0  repair=0;
+"Dummy"  fdep "F_2" "F_2_dummy";
+"Dummy2" fdep "F_1" "F_1_dummy";

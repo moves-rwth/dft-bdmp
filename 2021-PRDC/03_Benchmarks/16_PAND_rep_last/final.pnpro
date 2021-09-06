@@ -1,0 +1,123 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="F_1_failed" x="23" y="20" />
+      <place marking="1" name ="F_1_active" x="17" y="20" />
+      <place marking="0" name ="F_2_failed" x="23" y="20" />
+      <place marking="1" name ="F_2_active" x="17" y="20" />
+      <place marking="0" name ="THEN_3_failed" x="23" y="17" />
+      <place marking="0" name ="THEN_3_delay_F_1" x="15" y="25" />
+      <place marking="0" name ="F_3_failed" x="23" y="20" />
+      <place marking="1" name ="F_3_active" x="17" y="20" />
+      <place marking="0" name ="F_4_failed" x="23" y="20" />
+      <place marking="1" name ="F_4_active" x="17" y="20" />
+      <place marking="0" name ="THEN_4_failed" x="23" y="17" />
+      <place marking="0" name ="THEN_4_delay_F_3" x="15" y="25" />
+      <place marking="0" name ="TopGate_failed" x="23" y="17" />
+      <place marking="0" name ="TopGate_delay_THEN_3" x="15" y="25" />
+      <transition name="F_1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_1_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_2_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_2_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_2_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_3_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_3_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_3_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_4_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_4_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_4_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="THEN_3_failing" type="IMM" priority="6" weight="1.000000000" x="23.00000000" y="23.00000000" />
+      <transition name="F_2_THEN_3_delayTransition" type="IMM" priority="6" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="THEN_3F_1_repaired" type="IMM" priority="6" weight="1.000000000" x="17.00000000" y="32.00000000" />
+      <transition name="THEN_3F_2_repaired" type="IMM" priority="6" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="THEN_4_failing" type="IMM" priority="6" weight="1.000000000" x="23.00000000" y="23.00000000" />
+      <transition name="F_4_THEN_4_delayTransition" type="IMM" priority="6" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="THEN_4F_3_repaired" type="IMM" priority="6" weight="1.000000000" x="17.00000000" y="32.00000000" />
+      <transition name="THEN_4F_4_repaired" type="IMM" priority="6" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="TopGate_failing" type="IMM" priority="4" weight="1.000000000" x="23.00000000" y="23.00000000" />
+      <transition name="THEN_4_TopGate_delayTransition" type="IMM" priority="4" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGateTHEN_3_repaired" type="IMM" priority="4" weight="1.000000000" x="17.00000000" y="32.00000000" />
+      <transition name="TopGateTHEN_4_repaired" type="IMM" priority="4" weight="1.000000000" x="20.00000000" y="32.00000000" />
+    </nodes>
+    <edges>
+      <arc head="F_1_activeFailing" tail="F_1_active" kind="INPUT" mult="1" />
+      <arc head="F_1_activeFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_active" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_failed" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_failed" tail="F_1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_repairing" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="F_2_activeFailing" tail="F_2_active" kind="INPUT" mult="1" />
+      <arc head="F_2_activeFailing" tail="F_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_2_active" tail="F_2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_2_failed" tail="F_2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_2_passiveFailing" tail="F_2_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_2_passiveFailing" tail="F_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_2_failed" tail="F_2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_2_repairing" tail="F_2_failed" kind="INPUT" mult="1" />
+      <arc head="F_3_activeFailing" tail="F_3_active" kind="INPUT" mult="1" />
+      <arc head="F_3_activeFailing" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_active" tail="F_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_failed" tail="F_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_passiveFailing" tail="F_3_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_passiveFailing" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_failed" tail="F_3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_3_repairing" tail="F_3_failed" kind="INPUT" mult="1" />
+      <arc head="F_4_activeFailing" tail="F_4_active" kind="INPUT" mult="1" />
+      <arc head="F_4_activeFailing" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_active" tail="F_4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_failed" tail="F_4_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_passiveFailing" tail="F_4_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_passiveFailing" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_failed" tail="F_4_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_repairing" tail="F_4_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_3_failing" tail="F_2_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_3_failing" tail="THEN_3_delay_F_1" kind="INPUT" mult="1" />
+      <arc head="THEN_3_failing" tail="THEN_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_3_failed" tail="THEN_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_2_failed" tail="THEN_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="THEN_3_delay_F_1" tail="THEN_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_2_THEN_3_delayTransition" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="F_2_THEN_3_delayTransition" tail="THEN_3_delay_F_1" kind="INHIBITOR" mult="1" />
+      <arc head="F_2_THEN_3_delayTransition" tail="F_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_failed" tail="F_2_THEN_3_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="THEN_3_delay_F_1" tail="F_2_THEN_3_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="THEN_3F_1_repaired" tail="THEN_3_delay_F_1" kind="INPUT" mult="1" />
+      <arc head="THEN_3F_1_repaired" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_3F_2_repaired" tail="THEN_3_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_3F_2_repaired" tail="F_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_4_failing" tail="F_4_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_4_failing" tail="THEN_4_delay_F_3" kind="INPUT" mult="1" />
+      <arc head="THEN_4_failing" tail="THEN_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_4_failed" tail="THEN_4_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_failed" tail="THEN_4_failing" kind="OUTPUT" mult="1" />
+      <arc head="THEN_4_delay_F_3" tail="THEN_4_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_4_THEN_4_delayTransition" tail="F_3_failed" kind="INPUT" mult="1" />
+      <arc head="F_4_THEN_4_delayTransition" tail="THEN_4_delay_F_3" kind="INHIBITOR" mult="1" />
+      <arc head="F_4_THEN_4_delayTransition" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_3_failed" tail="F_4_THEN_4_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="THEN_4_delay_F_3" tail="F_4_THEN_4_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="THEN_4F_3_repaired" tail="THEN_4_delay_F_3" kind="INPUT" mult="1" />
+      <arc head="THEN_4F_3_repaired" tail="F_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_4F_4_repaired" tail="THEN_4_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_4F_4_repaired" tail="F_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failing" tail="THEN_4_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing" tail="TopGate_delay_THEN_3" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="THEN_4_failed" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_delay_THEN_3" tail="TopGate_failing" kind="OUTPUT" mult="1" />
+      <arc head="THEN_4_TopGate_delayTransition" tail="THEN_3_failed" kind="INPUT" mult="1" />
+      <arc head="THEN_4_TopGate_delayTransition" tail="TopGate_delay_THEN_3" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_4_TopGate_delayTransition" tail="THEN_4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="THEN_3_failed" tail="THEN_4_TopGate_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_delay_THEN_3" tail="THEN_4_TopGate_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="TopGateTHEN_3_repaired" tail="TopGate_delay_THEN_3" kind="INPUT" mult="1" />
+      <arc head="TopGateTHEN_3_repaired" tail="THEN_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGateTHEN_4_repaired" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGateTHEN_4_repaired" tail="THEN_4_failed" kind="INHIBITOR" mult="1" />
+    </edges>
+  </gspn>
+</project>

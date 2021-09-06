@@ -1,0 +1,100 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="A1_failed" x="23" y="20" />
+      <place marking="1" name ="A1_active" x="17" y="20" />
+      <place marking="0" name ="A2_failed" x="23" y="20" />
+      <place marking="1" name ="A2_active" x="17" y="20" />
+      <place marking="0" name ="A4_failed" x="23" y="17" />
+      <place marking="0" name ="A4_delay_A1" x="15" y="25" />
+      <place marking="0" name ="A3_failed" x="23" y="20" />
+      <place marking="1" name ="A3_active" x="17" y="20" />
+      <place marking="0" name ="A5_failed" x="20" y="17" />
+      <place marking="0" name ="TopGate_failed" x="20" y="17" />
+      <transition name="A1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A1_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A2_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A2_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A2_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A3_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A3_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="A3_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="A4_failing" type="IMM" priority="6" weight="1.000000000" x="23.00000000" y="23.00000000" />
+      <transition name="A2_A4_delayTransition" type="IMM" priority="6" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A4A1_repaired" type="IMM" priority="6" weight="1.000000000" x="14.00000000" y="25.00000000" />
+      <transition name="A4_delay_A1_removed" type="IMM" priority="6" weight="1.000000000" x="37" y="4" />
+      <transition name="A4A2_repaired" type="IMM" priority="6" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="A5_failing" type="IMM" priority="7" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="A5_repairing0" type="IMM" priority="7" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="A5_repairing1" type="IMM" priority="7" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing" type="IMM" priority="5" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="TopGate_failing0" type="IMM" priority="5" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGate_failing1" type="IMM" priority="5" weight="1.000000000" x="18.00000000" y="23.00000000" />
+    </nodes>
+    <edges>
+      <arc head="A1_activeFailing" tail="A1_active" kind="INPUT" mult="1" />
+      <arc head="A1_activeFailing" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A1_active" tail="A1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_failed" tail="A1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_passiveFailing" tail="A1_active" kind="INHIBITOR" mult="1" />
+      <arc head="A1_passiveFailing" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A1_failed" tail="A1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A1_repairing" tail="A1_failed" kind="INPUT" mult="1" />
+      <arc head="A2_activeFailing" tail="A2_active" kind="INPUT" mult="1" />
+      <arc head="A2_activeFailing" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A2_active" tail="A2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_failed" tail="A2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_passiveFailing" tail="A2_active" kind="INHIBITOR" mult="1" />
+      <arc head="A2_passiveFailing" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A2_failed" tail="A2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A2_repairing" tail="A2_failed" kind="INPUT" mult="1" />
+      <arc head="A3_activeFailing" tail="A3_active" kind="INPUT" mult="1" />
+      <arc head="A3_activeFailing" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A3_active" tail="A3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_failed" tail="A3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_passiveFailing" tail="A3_active" kind="INHIBITOR" mult="1" />
+      <arc head="A3_passiveFailing" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A3_failed" tail="A3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A3_repairing" tail="A3_failed" kind="INPUT" mult="1" />
+      <arc head="A4_failing" tail="A2_failed" kind="INPUT" mult="1" />
+      <arc head="A4_failing" tail="A4_delay_A1" kind="INPUT" mult="1" />
+      <arc head="A4_failing" tail="A4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A4_failed" tail="A4_failing" kind="OUTPUT" mult="1" />
+      <arc head="A2_failed" tail="A4_failing" kind="OUTPUT" mult="1" />
+      <arc head="A4_delay_A1" tail="A4_failing" kind="OUTPUT" mult="1" />
+      <arc head="A2_A4_delayTransition" tail="A1_failed" kind="INPUT" mult="1" />
+      <arc head="A2_A4_delayTransition" tail="A4_delay_A1" kind="INHIBITOR" mult="1" />
+      <arc head="A2_A4_delayTransition" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A1_failed" tail="A2_A4_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="A4_delay_A1" tail="A2_A4_delayTransition" kind="OUTPUT" mult="1" />
+      <arc head="A4A1_repaired" tail="A4_delay_A1" kind="INPUT" mult="1" />
+      <arc head="A4A1_repaired" tail="A1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A4_delay_A1_removed" tail="A4_failed" kind="INPUT" mult="1" />
+      <arc head="A4_delay_A1_removed" tail="A4_delay_A1" kind="INHIBITOR" mult="1" />
+      <arc head="A4A2_repaired" tail="A4_failed" kind="INPUT" mult="1" />
+      <arc head="A4A2_repaired" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_failing" tail="A2_failed" kind="INPUT" mult="1" />
+      <arc head="A5_failing" tail="A3_failed" kind="INPUT" mult="1" />
+      <arc head="A5_failing" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_failed" tail="A5_failing" kind="OUTPUT" mult="1" />
+      <arc head="A2_failed" tail="A5_failing" kind="OUTPUT" mult="1" />
+      <arc head="A3_failed" tail="A5_failing" kind="OUTPUT" mult="1" />
+      <arc head="A5_repairing0" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="A5_repairing0" tail="A2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="A5_repairing1" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="A5_repairing1" tail="A3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing" tail="A4_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="A5_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failing0" tail="A4_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing0" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="A4_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="A5_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="A5_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+    </edges>
+  </gspn>
+</project>

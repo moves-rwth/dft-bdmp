@@ -1,0 +1,5 @@
+toplevel "TopGate";
+"TopGate" and "F_1" "I_1";
+"F_1" lambda=0.01 dorm=1 repair=0.1;
+"I_1" lambda=1e-323 dorm=0 repair=0.1;
+"I_1_dummy" pdep-bdmp=0.5 "F_1" "I_1";

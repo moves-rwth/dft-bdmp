@@ -1,0 +1,40 @@
+toplevel "TopGate";
+"TopGate" and "A12" "A13_And";
+"A12" or "A1" "A9" "A10" "A11";
+"A1" lambda=0.01 dorm=1 repair=0.1;
+"A9" lambda=0.01 dorm=1 repair=0.1;
+"A10" lambda=0.01 dorm=1 repair=0.1;
+"A11" lambda=0.01 dorm=1 repair=0.1;
+
+"A13_And" and "A7_dummy1" "A8_dummy";
+"A7_dummy1" lambda=1e-320 dorm=0 repair=1e-320;
+"A7_dummy" lambda=1e-320 dorm=0 repair=1e-320;
+"dep2_f" fdep "A7" "A7_dummy";
+"dep2_r" rdep "A7" "A7_dummy";
+"dep3_f" fdep "A7_dummy" "A7_dummy1";
+"dep3_r" rdep "A7_dummy" "A7_dummy1";
+"A8_dummy" lambda=1e-320 dorm=0 repair=1e-320;
+"dep4_f" fdep "A8" "A8_dummy";
+"dep4_r" rdep "A8" "A8_dummy";
+"s1" spare-claim-after-repair-claim-lr "A12_dummy" "And_1";
+"A12_dummy" lambda=1e-320 dorm=0 repair=1e-320;
+"dep5_f" fdep "A12" "A12_dummy";
+"dep5_r" rdep "A12" "A12_dummy";
+
+"And_1" and "fs1" "A13" "A7";
+"fs1" lambda=1e-320 dorm=0 repair=1e-320;
+"A7" or "A1_dummy" "A2" "A3" "A4";
+"A1_dummy" lambda=1e-320 dorm=0 repair=1e-320;
+"dep1_f" fdep "A1" "A1_dummy";
+"dep1_r" rdep "A1" "A1_dummy";
+"A2" lambda=0.01 dorm=0 repair=0.1;
+"A3" lambda=0.01 dorm=0 repair=0.1;
+"A4" lambda=0.01 dorm=0 repair=0.1;
+
+"A13" and "A7_dummy" "And_2";
+"And_2" and "fs2" "A8";
+"fs2" lambda=0 dorm=1 repair=0;
+"A8" or "A5" "A6";
+"A6" lambda=0.01 dorm=0 repair=0.1;
+"A5" lambda=0.01 dorm=0 repair=0.1;
+

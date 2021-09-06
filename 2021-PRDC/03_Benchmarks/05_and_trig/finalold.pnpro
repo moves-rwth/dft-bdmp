@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
+    <nodes>
+      <place name="F_1_failed" x="3.0" y="30.0"/>
+      <place name="F_1_active" x="20.0" y="8.0"/>
+      <place name="F_1_unavail" x="29.0" y="41.0"/>
+      <place name="F_2_failed" x="68.0" y="38.0"/>
+      <place name="F_2_active" x="82.0" y="29.0"/>
+      <place name="F_2_unavail" x="57.0" y="16.0"/>
+      <place name="TopGate_failed" x="41.0" y="11.0"/>
+      <place marking="1" name="TopGate_active" x="30.0" y="0.0"/>
+      <place marking="1" name="TopGate_consider_next" x="59.0" y="1.0"/>
+      <place name="TopGate_repair_log" x="40.0" y="54.0"/>
+      <place name="TopGate_claimed_F_1" x="9.0" y="39.0"/>
+      <place name="TopGate_failure_log_F_1" x="22.0" y="53.0"/>
+      <place name="TopGate_claimed_F_2" x="70.0" y="19.0"/>
+      <place name="TopGate_failure_log_F_2" x="59.0" y="53.0"/>
+      <transition delay="0.01000000000" name="F_1_activeFailing" nservers="1" type="EXP" x="4.55" y="20.0"/>
+      <transition delay="0.01000000000" name="F_1_passiveFailing" nservers="1" type="EXP" x="35.0" y="18.0"/>
+      <transition delay="0.1000000000" name="F_1_repairing" nservers="1" type="EXP" x="22.55" y="38.0"/>
+      <transition delay="0.01000000000" name="F_2_activeFailing" nservers="1" type="EXP" x="78.55" y="17.0"/>
+      <transition delay="0.000000000" name="F_2_passiveFailing" nservers="1" type="EXP" x="70.55" y="26.0"/>
+      <transition delay="0.1000000000" name="F_2_repairing" nservers="1" type="EXP" x="52.55" y="33.0"/>
+      <transition name="TopGate_cannot_claim_next" priority="5" type="IMM" weight="1.000000000" x="32.85" y="11.0"/>
+      <transition name="TopGate2_repair" priority="5" type="IMM" weight="1.000000000" x="64.85" y="31.0"/>
+      <transition name="TopGate_claim_F_1" priority="7" type="IMM" weight="1.000000000" x="18.85" y="19.0"/>
+      <transition name="TopGate_next_claim_0" priority="5" type="IMM" weight="1.000000000" x="28.0" y="26.0"/>
+      <transition name="TopGate0_detect_failure" priority="6" type="IMM" weight="1.000000000" x="21.0" y="33.0"/>
+      <transition name="TopGate0detect_repair" priority="5" type="IMM" weight="1.000000000" x="31.0" y="29.0"/>
+      <transition name="TopGate0_release" priority="5" type="IMM" weight="1.000000000" x="19.85" y="43.0"/>
+      <transition name="TopGate0drop_repair" priority="6" type="IMM" weight="1.000000000" x="7.85" y="47.0"/>
+      <transition name="TopGate_activate_0_0" priority="6" type="IMM" weight="1.000000000" x="10.85" y="7.0"/>
+      <transition name="TopGate_claim_F_2" priority="6" type="IMM" weight="1.000000000" x="45.85" y="20.0"/>
+      <transition name="TopGate1_detect_failure" priority="6" type="IMM" weight="1.000000000" x="71.85" y="50.0"/>
+      <transition name="TopGate1detect_repair" priority="5" type="IMM" weight="1.000000000" x="80.85" y="42.0"/>
+      <transition name="TopGate1_release" priority="5" type="IMM" weight="1.000000000" x="43.85" y="30.0"/>
+      <transition name="TopGate1drop_repair" priority="6" type="IMM" weight="1.000000000" x="63.85" y="43.0"/>
+      <transition name="TopGate_activate_1_1" priority="8" type="IMM" weight="1.000000000" x="69.85" y="8.0"/>
+    </nodes>
+    <edges>
+      <arc head="F_1_activeFailing" kind="INPUT" tail="F_1_active"/>
+      <arc head="F_1_activeFailing" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="F_1_active" kind="OUTPUT" tail="F_1_activeFailing"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="F_1_activeFailing"/>
+      <arc head="F_1_unavail" kind="OUTPUT" tail="F_1_activeFailing"/>
+      <arc head="F_1_passiveFailing" kind="INHIBITOR" tail="F_1_active"/>
+      <arc head="F_1_passiveFailing" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="F_1_passiveFailing"/>
+      <arc head="F_1_unavail" kind="OUTPUT" tail="F_1_passiveFailing"/>
+      <arc head="F_1_repairing" kind="INPUT" tail="F_1_failed"/>
+      <arc head="F_1_repairing" kind="INPUT" tail="F_1_unavail"/>
+      <arc head="F_2_activeFailing" kind="INPUT" tail="F_2_active"/>
+      <arc head="F_2_activeFailing" kind="INHIBITOR" tail="F_2_failed"/>
+      <arc head="F_2_active" kind="OUTPUT" tail="F_2_activeFailing"/>
+      <arc head="F_2_failed" kind="OUTPUT" tail="F_2_activeFailing"/>
+      <arc head="F_2_unavail" kind="OUTPUT" tail="F_2_activeFailing"/>
+      <arc head="F_2_passiveFailing" kind="INHIBITOR" tail="F_2_active"/>
+      <arc head="F_2_passiveFailing" kind="INHIBITOR" tail="F_2_failed"/>
+      <arc head="F_2_failed" kind="OUTPUT" tail="F_2_passiveFailing"/>
+      <arc head="F_2_unavail" kind="OUTPUT" tail="F_2_passiveFailing"/>
+      <arc head="F_2_repairing" kind="INPUT" tail="F_2_failed"/>
+      <arc head="F_2_repairing" kind="INPUT" tail="F_2_unavail"/>
+      <arc head="TopGate_cannot_claim_next" kind="INPUT" tail="TopGate_consider_next"/>
+      <arc head="TopGate_cannot_claim_next" kind="INPUT" tail="F_1_unavail"/>
+      <arc head="TopGate_cannot_claim_next" kind="INPUT" tail="F_2_unavail"/>
+      <arc head="TopGate_cannot_claim_next" kind="INHIBITOR" tail="TopGate_failed"/>
+      <arc head="F_1_unavail" kind="OUTPUT" tail="TopGate_cannot_claim_next"/>
+      <arc head="F_2_unavail" kind="OUTPUT" tail="TopGate_cannot_claim_next"/>
+      <arc head="TopGate_failed" kind="OUTPUT" tail="TopGate_cannot_claim_next"/>
+      <arc head="TopGate2_repair" kind="INPUT" tail="TopGate_repair_log"/>
+      <arc head="TopGate2_repair" kind="INPUT" tail="TopGate_failed"/>
+      <arc head="TopGate_consider_next" kind="OUTPUT" tail="TopGate2_repair"/>
+      <arc head="TopGate_claim_F_1" kind="INPUT" tail="TopGate_consider_next"/>
+      <arc head="TopGate_claim_F_1" kind="INHIBITOR" tail="F_1_unavail"/>
+      <arc head="TopGate_claimed_F_1" kind="OUTPUT" tail="TopGate_claim_F_1"/>
+      <arc head="F_1_unavail" kind="OUTPUT" tail="TopGate_claim_F_1"/>
+      <arc head="TopGate_next_claim_0" kind="INPUT" tail="TopGate_claimed_F_1"/>
+      <arc head="TopGate_next_claim_0" kind="INPUT" tail="F_1_failed"/>
+      <arc head="TopGate_next_claim_0" kind="INPUT" tail="F_1_unavail"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="TopGate_next_claim_0"/>
+      <arc head="TopGate_consider_next" kind="OUTPUT" tail="TopGate_next_claim_0"/>
+      <arc head="TopGate0_detect_failure" kind="INPUT" tail="F_1_failed"/>
+      <arc head="TopGate0_detect_failure" kind="INHIBITOR" tail="TopGate_failure_log_F_1"/>
+      <arc head="F_1_failed" kind="OUTPUT" tail="TopGate0_detect_failure"/>
+      <arc head="TopGate_failure_log_F_1" kind="OUTPUT" tail="TopGate0_detect_failure"/>
+      <arc head="TopGate0detect_repair" kind="INPUT" tail="TopGate_failure_log_F_1"/>
+      <arc head="TopGate0detect_repair" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="TopGate0detect_repair" kind="INHIBITOR" tail="TopGate_repair_log"/>
+      <arc head="TopGate_repair_log" kind="OUTPUT" tail="TopGate0detect_repair"/>
+      <arc head="TopGate0_release" kind="INPUT" tail="TopGate_repair_log"/>
+      <arc head="TopGate0_release" kind="INPUT" tail="TopGate_claimed_F_1"/>
+      <arc head="TopGate0_release" kind="INPUT" tail="F_1_unavail"/>
+      <arc head="TopGate_consider_next" kind="OUTPUT" tail="TopGate0_release"/>
+      <arc head="TopGate0drop_repair" kind="INPUT" tail="TopGate_failure_log_F_1"/>
+      <arc head="TopGate0drop_repair" kind="INPUT" tail="TopGate_repair_log"/>
+      <arc head="TopGate0drop_repair" kind="INHIBITOR" tail="F_1_failed"/>
+      <arc head="TopGate_repair_log" kind="OUTPUT" tail="TopGate0drop_repair"/>
+      <arc head="TopGate_activate_0_0" kind="INPUT" tail="TopGate_claimed_F_1"/>
+      <arc head="TopGate_activate_0_0" kind="INPUT" tail="TopGate_active"/>
+      <arc head="TopGate_activate_0_0" kind="INHIBITOR" tail="F_1_active"/>
+      <arc head="F_1_active" kind="OUTPUT" tail="TopGate_activate_0_0"/>
+      <arc head="TopGate_claimed_F_1" kind="OUTPUT" tail="TopGate_activate_0_0"/>
+      <arc head="TopGate_active" kind="OUTPUT" tail="TopGate_activate_0_0"/>
+      <arc head="TopGate_claim_F_2" kind="INPUT" tail="TopGate_consider_next"/>
+      <arc head="TopGate_claim_F_2" kind="INHIBITOR" tail="F_2_unavail"/>
+      <arc head="TopGate_claimed_F_2" kind="OUTPUT" tail="TopGate_claim_F_2"/>
+      <arc head="F_2_unavail" kind="OUTPUT" tail="TopGate_claim_F_2"/>
+      <arc head="TopGate1_detect_failure" kind="INPUT" tail="F_2_failed"/>
+      <arc head="TopGate1_detect_failure" kind="INHIBITOR" tail="TopGate_failure_log_F_2"/>
+      <arc head="F_2_failed" kind="OUTPUT" tail="TopGate1_detect_failure"/>
+      <arc head="TopGate_failure_log_F_2" kind="OUTPUT" tail="TopGate1_detect_failure"/>
+      <arc head="TopGate1detect_repair" kind="INPUT" tail="TopGate_failure_log_F_2"/>
+      <arc head="TopGate1detect_repair" kind="INHIBITOR" tail="F_2_failed"/>
+      <arc head="TopGate1detect_repair" kind="INHIBITOR" tail="TopGate_repair_log"/>
+      <arc head="TopGate_repair_log" kind="OUTPUT" tail="TopGate1detect_repair"/>
+      <arc head="TopGate1_release" kind="INPUT" tail="TopGate_repair_log"/>
+      <arc head="TopGate1_release" kind="INPUT" tail="TopGate_claimed_F_2"/>
+      <arc head="TopGate1_release" kind="INPUT" tail="F_2_unavail"/>
+      <arc head="TopGate_consider_next" kind="OUTPUT" tail="TopGate1_release"/>
+      <arc head="TopGate1drop_repair" kind="INPUT" tail="TopGate_failure_log_F_2"/>
+      <arc head="TopGate1drop_repair" kind="INPUT" tail="TopGate_repair_log"/>
+      <arc head="TopGate1drop_repair" kind="INHIBITOR" tail="F_2_failed"/>
+      <arc head="TopGate_repair_log" kind="OUTPUT" tail="TopGate1drop_repair"/>
+      <arc head="TopGate_activate_1_1" kind="INPUT" tail="TopGate_claimed_F_2"/>
+      <arc head="TopGate_activate_1_1" kind="INPUT" tail="TopGate_active"/>
+      <arc head="TopGate_activate_1_1" kind="INHIBITOR" tail="F_2_active"/>
+      <arc head="F_2_active" kind="OUTPUT" tail="TopGate_activate_1_1"/>
+      <arc head="TopGate_claimed_F_2" kind="OUTPUT" tail="TopGate_activate_1_1"/>
+      <arc head="TopGate_active" kind="OUTPUT" tail="TopGate_activate_1_1"/>
+    </edges>
+  </gspn>
+</project>

@@ -1,0 +1,686 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="BUS_failed" x="23" y="20" />
+      <place marking="0" name ="BUS_active" x="17" y="20" />
+      <place marking="0" name ="D11_failed" x="23" y="20" />
+      <place marking="0" name ="D11_active" x="17" y="20" />
+      <place marking="0" name ="D11_unavail" x="29" y="20" />
+      <place marking="0" name ="D12_failed" x="23" y="20" />
+      <place marking="0" name ="D12_active" x="17" y="20" />
+      <place marking="0" name ="D12_unavail" x="29" y="20" />
+      <place marking="0" name ="DISK1_failed" x="30" y="12" />
+      <place marking="0" name ="DISK1_active" x="0" y="8" />
+      <place marking="1" name ="DISK1_consider_next" x="5" y="12" />
+      <place marking="0" name ="DISK1_repair_log" x="10" y="12" />
+      <place marking="0" name ="DISK1_claimed_D11" x="5" y="25" />
+      <place marking="0" name ="DISK1_failure_log_D11" x="15" y="25" />
+      <place marking="0" name ="DISK1_claim_log_D11" x="15" y="25" />
+      <place marking="0" name ="DISK1_claimed_D12" x="19" y="25" />
+      <place marking="0" name ="DISK1_failure_log_D12" x="29" y="25" />
+      <place marking="0" name ="DISK1_claim_log_D12" x="29" y="25" />
+      <place marking="0" name ="P1_failed" x="23" y="20" />
+      <place marking="0" name ="P1_active" x="17" y="20" />
+      <place marking="0" name ="PS_failed" x="23" y="20" />
+      <place marking="0" name ="PS_active" x="17" y="20" />
+      <place marking="0" name ="P1_loss_failed" x="20" y="17" />
+      <place marking="0" name ="M1_failed" x="23" y="20" />
+      <place marking="0" name ="M1_active" x="17" y="20" />
+      <place marking="0" name ="M3_dummy_failed" x="20" y="17" />
+      <place marking="0" name ="M3_dummy_active" x="17" y="20" />
+      <place marking="0" name ="MEMORY1_failed" x="20" y="17" />
+      <place marking="0" name ="CM1_failed" x="20" y="17" />
+      <place marking="0" name ="D21_failed" x="23" y="20" />
+      <place marking="0" name ="D21_active" x="17" y="20" />
+      <place marking="0" name ="D21_unavail" x="29" y="20" />
+      <place marking="0" name ="D22_failed" x="23" y="20" />
+      <place marking="0" name ="D22_active" x="17" y="20" />
+      <place marking="0" name ="D22_unavail" x="29" y="20" />
+      <place marking="0" name ="DISK2_failed" x="30" y="12" />
+      <place marking="0" name ="DISK2_active" x="0" y="8" />
+      <place marking="1" name ="DISK2_consider_next" x="5" y="12" />
+      <place marking="0" name ="DISK2_repair_log" x="10" y="12" />
+      <place marking="0" name ="DISK2_claimed_D21" x="5" y="25" />
+      <place marking="0" name ="DISK2_failure_log_D21" x="15" y="25" />
+      <place marking="0" name ="DISK2_claim_log_D21" x="15" y="25" />
+      <place marking="0" name ="DISK2_claimed_D22" x="19" y="25" />
+      <place marking="0" name ="DISK2_failure_log_D22" x="29" y="25" />
+      <place marking="0" name ="DISK2_claim_log_D22" x="29" y="25" />
+      <place marking="0" name ="P2_failed" x="23" y="20" />
+      <place marking="0" name ="P2_active" x="17" y="20" />
+      <place marking="0" name ="P2_loss_failed" x="20" y="17" />
+      <place marking="0" name ="M2_failed" x="23" y="20" />
+      <place marking="0" name ="M2_active" x="17" y="20" />
+      <place marking="0" name ="MEMORY2_failed" x="20" y="17" />
+      <place marking="0" name ="CM2_failed" x="20" y="17" />
+      <place marking="0" name ="CM_failed" x="20" y="17" />
+      <place marking="0" name ="TopGate_failed" x="20" y="17" />
+      <place marking="0" name ="M3_failed" x="23" y="20" />
+      <place marking="0" name ="M3_active" x="17" y="20" />
+      <place marking="0" name ="M3_unavail" x="29" y="20" />
+      <place marking="0" name ="rdep1_1_forward" x="21" y="22" />
+      <place marking="0" name ="rdep1_1_coin" x="15" y="22" />
+      <place marking="0" name ="one_mem_fail_failed" x="20" y="17" />
+      <place marking="0" name ="one_mem_fail_unavail" x="26" y="17" />
+      <place marking="0" name ="s3_failed" x="30" y="12" />
+      <place marking="1" name ="s3_active" x="0" y="8" />
+      <place marking="1" name ="s3_consider_next" x="5" y="12" />
+      <place marking="0" name ="s3_repair_log" x="10" y="12" />
+      <place marking="0" name ="s3_claimed_one_mem_fail" x="5" y="25" />
+      <place marking="0" name ="s3_failure_log_one_mem_fail" x="15" y="25" />
+      <place marking="0" name ="s3_claimed_M3" x="19" y="25" />
+      <place marking="0" name ="s3_failure_log_M3" x="29" y="25" />
+      <place marking="0" name ="s3_claim_log_M3" x="29" y="25" />
+      <transition name="BUS_activeFailing" type="EXP" nservers="1" delay="2.000000000e-09" x="20.00000000" y="23.00000000" />
+      <transition name="BUS_passiveFailing" type="EXP" nservers="1" delay="2.000000000e-09" x="20.00000000" y="17.00000000" />
+      <transition name="BUS_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="D11_activeFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="23.00000000" />
+      <transition name="D11_passiveFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="17.00000000" />
+      <transition name="D11_repairing" type="EXP" nservers="1" delay="0.3000000000" x="20.00000000" y="29.00000000" />
+      <transition name="D12_activeFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="23.00000000" />
+      <transition name="D12_passiveFailing" type="EXP" nservers="1" delay="4.000000000e-05" x="20.00000000" y="17.00000000" />
+      <transition name="D12_repairing" type="EXP" nservers="1" delay="0.3000000000" x="20.00000000" y="29.00000000" />
+      <transition name="P1_activeFailing" type="EXP" nservers="1" delay="5.000000000e-07" x="20.00000000" y="23.00000000" />
+      <transition name="P1_passiveFailing" type="EXP" nservers="1" delay="5.000000000e-07" x="20.00000000" y="17.00000000" />
+      <transition name="P1_repairing" type="EXP" nservers="1" delay="0.2000000000" x="20.00000000" y="29.00000000" />
+      <transition name="PS_activeFailing" type="EXP" nservers="1" delay="6.000000000e-06" x="20.00000000" y="23.00000000" />
+      <transition name="PS_passiveFailing" type="EXP" nservers="1" delay="6.000000000e-06" x="20.00000000" y="17.00000000" />
+      <transition name="PS_repairing" type="EXP" nservers="1" delay="10.00000000" x="20.00000000" y="29.00000000" />
+      <transition name="M1_activeFailing" type="EXP" nservers="1" delay="3.000000000e-08" x="20.00000000" y="23.00000000" />
+      <transition name="M1_passiveFailing" type="EXP" nservers="1" delay="3.000000000e-08" x="20.00000000" y="17.00000000" />
+      <transition name="M1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="D21_activeFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="23.00000000" />
+      <transition name="D21_passiveFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="17.00000000" />
+      <transition name="D21_repairing" type="EXP" nservers="1" delay="0.3000000000" x="20.00000000" y="29.00000000" />
+      <transition name="D22_activeFailing" type="EXP" nservers="1" delay="8.000000000e-05" x="20.00000000" y="23.00000000" />
+      <transition name="D22_passiveFailing" type="EXP" nservers="1" delay="4.000000000e-05" x="20.00000000" y="17.00000000" />
+      <transition name="D22_repairing" type="EXP" nservers="1" delay="0.3000000000" x="20.00000000" y="29.00000000" />
+      <transition name="P2_activeFailing" type="EXP" nservers="1" delay="5.000000000e-07" x="20.00000000" y="23.00000000" />
+      <transition name="P2_passiveFailing" type="EXP" nservers="1" delay="5.000000000e-07" x="20.00000000" y="17.00000000" />
+      <transition name="P2_repairing" type="EXP" nservers="1" delay="0.2000000000" x="20.00000000" y="29.00000000" />
+      <transition name="M2_activeFailing" type="EXP" nservers="1" delay="3.000000000e-08" x="20.00000000" y="23.00000000" />
+      <transition name="M2_passiveFailing" type="EXP" nservers="1" delay="3.000000000e-08" x="20.00000000" y="17.00000000" />
+      <transition name="M2_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="M3_activeFailing" type="EXP" nservers="1" delay="3.000000000e-08" x="20.00000000" y="23.00000000" />
+      <transition name="M3_passiveFailing" type="EXP" nservers="1" delay="1.500000000e-08" x="20.00000000" y="17.00000000" />
+      <transition name="M3_repairing" type="EXP" nservers="1" delay="0.5000000000" x="20.00000000" y="29.00000000" />
+      <transition name="DISK1_cannot_claim_next" type="IMM" priority="3011" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="DISK12_repair" type="IMM" priority="20011" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="DISK1_claim_D11" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="DISK1_next_claim_0" type="IMM" priority="3011" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="DISK10_detect_failure" type="IMM" priority="50012" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="DISK10detect_repair" type="IMM" priority="20011" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="DISK10_release" type="IMM" priority="20011" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="DISK10drop_repair" type="IMM" priority="20012" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="DISK1_activate_0_1" type="IMM" priority="2012" weight="1.000000000" x="2.000000000" y="8.000000000" />
+      <transition name="DISK1_claim_log_claimed__D11" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK1_claim_log_active__D11" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK1_dact__D11" type="IMM" priority="7013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK1_claim_D12" type="IMM" priority="3012" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="DISK1_next_claim_1" type="IMM" priority="3013" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="DISK11_detect_failure" type="IMM" priority="50012" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="DISK11detect_repair" type="IMM" priority="20011" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="DISK11_release" type="IMM" priority="20011" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="DISK11drop_repair" type="IMM" priority="20012" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="DISK1_activate_1_2" type="IMM" priority="2014" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK1_claim_log_claimed__D12" type="IMM" priority="3015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="DISK1_claim_log_active__D12" type="IMM" priority="3015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="DISK1_dact__D12" type="IMM" priority="7015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="P1_loss_repairing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="P1_loss_failing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="P1_loss_failing1" type="IMM" priority="12" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="MEMORY1_failing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="MEMORY1_repairing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="MEMORY1_repairing1" type="IMM" priority="11" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="CM1_repairing" type="IMM" priority="9" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="CM1_failing0" type="IMM" priority="9" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="CM1_failing1" type="IMM" priority="10" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="CM1_failing2" type="IMM" priority="11" weight="1.000000000" x="21.00000000" y="23.00000000" />
+      <transition name="DISK2_cannot_claim_next" type="IMM" priority="3011" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="DISK22_repair" type="IMM" priority="20011" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="DISK2_claim_D21" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="DISK2_next_claim_0" type="IMM" priority="3011" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="DISK20_detect_failure" type="IMM" priority="50012" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="DISK20detect_repair" type="IMM" priority="20011" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="DISK20_release" type="IMM" priority="20011" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="DISK20drop_repair" type="IMM" priority="20012" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="DISK2_activate_0_11" type="IMM" priority="2012" weight="1.000000000" x="2.000000000" y="8.000000000" />
+      <transition name="DISK2_claim_log_claimed__D21" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK2_claim_log_active__D21" type="IMM" priority="3013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK2_dact__D21" type="IMM" priority="7013" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK2_claim_D22" type="IMM" priority="3012" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="DISK2_next_claim_1" type="IMM" priority="3013" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="DISK21_detect_failure" type="IMM" priority="50012" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="DISK21detect_repair" type="IMM" priority="20011" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="DISK21_release" type="IMM" priority="20011" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="DISK21drop_repair" type="IMM" priority="20012" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="DISK2_activate_1_12" type="IMM" priority="2014" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="DISK2_claim_log_claimed__D22" type="IMM" priority="3015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="DISK2_claim_log_active__D22" type="IMM" priority="3015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="DISK2_dact__D22" type="IMM" priority="7015" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="P2_loss_repairing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="P2_loss_failing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="P2_loss_failing1" type="IMM" priority="12" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="MEMORY2_failing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="MEMORY2_repairing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="MEMORY2_repairing1" type="IMM" priority="11" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="CM2_repairing" type="IMM" priority="9" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="CM2_failing0" type="IMM" priority="9" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="CM2_failing1" type="IMM" priority="10" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="CM2_failing2" type="IMM" priority="11" weight="1.000000000" x="21.00000000" y="23.00000000" />
+      <transition name="CM_failing" type="IMM" priority="7" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="CM_repairing0" type="IMM" priority="7" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="CM_repairing1" type="IMM" priority="7" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing" type="IMM" priority="5" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="TopGate_failing0" type="IMM" priority="5" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGate_failing1" type="IMM" priority="6" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="fdep1_1_propagate_M3_dummy" type="IMM" priority="2" weight="1.000000000" x="310" y="4" />
+      <transition name="rdep1_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="313" y="4" />
+      <transition name="rdep1_1_return_coin" type="IMM" priority="1003" weight="1.000000000" x="316" y="4" />
+      <transition name="rdep1_1_propagate_M3_dummy" type="IMM" priority="2" weight="1.000000000" x="319" y="4" />
+      <transition name="rdep1_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+      <transition name="one_mem_fail_repairing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="one_mem_fail_failing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="one_mem_fail_failing1" type="IMM" priority="12" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="s3_cannot_claim_next" type="IMM" priority="3009" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="s32_repair" type="IMM" priority="20009" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="s3_claim_one_mem_fail" type="IMM" priority="3011" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="s3_next_claim_0" type="IMM" priority="3009" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="s30_detect_failure" type="IMM" priority="50010" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="s30detect_repair" type="IMM" priority="20009" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="s30_release" type="IMM" priority="20009" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="s30drop_repair" type="IMM" priority="20010" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="s3_claim_M3" type="IMM" priority="3010" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="s3_next_claim_1" type="IMM" priority="3010" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="s31_detect_failure" type="IMM" priority="50010" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="s31detect_repair" type="IMM" priority="20009" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="s31_release" type="IMM" priority="20009" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="s31drop_repair" type="IMM" priority="20010" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="s3_activate_1_21" type="IMM" priority="2011" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="s3_claim_log_claimed__M3" type="IMM" priority="3012" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="s3_claim_log_active__M3" type="IMM" priority="3012" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="s3_dact__M3" type="IMM" priority="7012" weight="1.000000000" x="8.000000000" y="8.000000000" />
+    </nodes>
+    <edges>
+      <arc head="BUS_activeFailing" tail="BUS_active" kind="INPUT" mult="1" />
+      <arc head="BUS_activeFailing" tail="BUS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="BUS_active" tail="BUS_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="BUS_failed" tail="BUS_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="BUS_passiveFailing" tail="BUS_active" kind="INHIBITOR" mult="1" />
+      <arc head="BUS_passiveFailing" tail="BUS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="BUS_failed" tail="BUS_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="BUS_repairing" tail="BUS_failed" kind="INPUT" mult="1" />
+      <arc head="D11_activeFailing" tail="D11_active" kind="INPUT" mult="1" />
+      <arc head="D11_activeFailing" tail="D11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D11_active" tail="D11_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D11_failed" tail="D11_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D11_unavail" tail="D11_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D11_passiveFailing" tail="D11_active" kind="INHIBITOR" mult="1" />
+      <arc head="D11_passiveFailing" tail="D11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D11_failed" tail="D11_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D11_unavail" tail="D11_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D11_repairing" tail="D11_failed" kind="INPUT" mult="1" />
+      <arc head="D11_repairing" tail="D11_unavail" kind="INPUT" mult="1" />
+      <arc head="D12_activeFailing" tail="D12_active" kind="INPUT" mult="1" />
+      <arc head="D12_activeFailing" tail="D12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D12_active" tail="D12_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D12_failed" tail="D12_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D12_unavail" tail="D12_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D12_passiveFailing" tail="D12_active" kind="INHIBITOR" mult="1" />
+      <arc head="D12_passiveFailing" tail="D12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D12_failed" tail="D12_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D12_unavail" tail="D12_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D12_repairing" tail="D12_failed" kind="INPUT" mult="1" />
+      <arc head="D12_repairing" tail="D12_unavail" kind="INPUT" mult="1" />
+      <arc head="P1_activeFailing" tail="P1_active" kind="INPUT" mult="1" />
+      <arc head="P1_activeFailing" tail="P1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_active" tail="P1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="P1_failed" tail="P1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="P1_passiveFailing" tail="P1_active" kind="INHIBITOR" mult="1" />
+      <arc head="P1_passiveFailing" tail="P1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_failed" tail="P1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="P1_repairing" tail="P1_failed" kind="INPUT" mult="1" />
+      <arc head="PS_activeFailing" tail="PS_active" kind="INPUT" mult="1" />
+      <arc head="PS_activeFailing" tail="PS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="PS_active" tail="PS_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="PS_failed" tail="PS_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="PS_passiveFailing" tail="PS_active" kind="INHIBITOR" mult="1" />
+      <arc head="PS_passiveFailing" tail="PS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="PS_failed" tail="PS_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="PS_repairing" tail="PS_failed" kind="INPUT" mult="1" />
+      <arc head="M1_activeFailing" tail="M1_active" kind="INPUT" mult="1" />
+      <arc head="M1_activeFailing" tail="M1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M1_active" tail="M1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M1_failed" tail="M1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M1_passiveFailing" tail="M1_active" kind="INHIBITOR" mult="1" />
+      <arc head="M1_passiveFailing" tail="M1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M1_failed" tail="M1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="M1_repairing" tail="M1_failed" kind="INPUT" mult="1" />
+      <arc head="D21_activeFailing" tail="D21_active" kind="INPUT" mult="1" />
+      <arc head="D21_activeFailing" tail="D21_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D21_active" tail="D21_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D21_failed" tail="D21_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D21_unavail" tail="D21_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D21_passiveFailing" tail="D21_active" kind="INHIBITOR" mult="1" />
+      <arc head="D21_passiveFailing" tail="D21_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D21_failed" tail="D21_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D21_unavail" tail="D21_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D21_repairing" tail="D21_failed" kind="INPUT" mult="1" />
+      <arc head="D21_repairing" tail="D21_unavail" kind="INPUT" mult="1" />
+      <arc head="D22_activeFailing" tail="D22_active" kind="INPUT" mult="1" />
+      <arc head="D22_activeFailing" tail="D22_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D22_active" tail="D22_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D22_failed" tail="D22_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D22_unavail" tail="D22_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="D22_passiveFailing" tail="D22_active" kind="INHIBITOR" mult="1" />
+      <arc head="D22_passiveFailing" tail="D22_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D22_failed" tail="D22_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D22_unavail" tail="D22_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="D22_repairing" tail="D22_failed" kind="INPUT" mult="1" />
+      <arc head="D22_repairing" tail="D22_unavail" kind="INPUT" mult="1" />
+      <arc head="P2_activeFailing" tail="P2_active" kind="INPUT" mult="1" />
+      <arc head="P2_activeFailing" tail="P2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_active" tail="P2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="P2_failed" tail="P2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="P2_passiveFailing" tail="P2_active" kind="INHIBITOR" mult="1" />
+      <arc head="P2_passiveFailing" tail="P2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_failed" tail="P2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="P2_repairing" tail="P2_failed" kind="INPUT" mult="1" />
+      <arc head="M2_activeFailing" tail="M2_active" kind="INPUT" mult="1" />
+      <arc head="M2_activeFailing" tail="M2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M2_active" tail="M2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M2_failed" tail="M2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M2_passiveFailing" tail="M2_active" kind="INHIBITOR" mult="1" />
+      <arc head="M2_passiveFailing" tail="M2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M2_failed" tail="M2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="M2_repairing" tail="M2_failed" kind="INPUT" mult="1" />
+      <arc head="M3_activeFailing" tail="M3_active" kind="INPUT" mult="1" />
+      <arc head="M3_activeFailing" tail="M3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M3_active" tail="M3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M3_failed" tail="M3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M3_unavail" tail="M3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="M3_passiveFailing" tail="M3_active" kind="INHIBITOR" mult="1" />
+      <arc head="M3_passiveFailing" tail="M3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M3_failed" tail="M3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="M3_unavail" tail="M3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="M3_repairing" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="M3_repairing" tail="M3_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK1_cannot_claim_next" tail="DISK1_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK1_cannot_claim_next" tail="D11_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK1_cannot_claim_next" tail="D12_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK1_cannot_claim_next" tail="DISK1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D11_unavail" tail="DISK1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="D12_unavail" tail="DISK1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_failed" tail="DISK1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="DISK12_repair" tail="DISK1_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK12_repair" tail="DISK1_failed" kind="INPUT" mult="1" />
+      <arc head="DISK1_consider_next" tail="DISK12_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claim_D11" tail="DISK1_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_D11" tail="D11_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_claimed_D11" tail="DISK1_claim_D11" kind="OUTPUT" mult="1" />
+      <arc head="D11_unavail" tail="DISK1_claim_D11" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_next_claim_0" tail="DISK1_claimed_D11" kind="INPUT" mult="1" />
+      <arc head="DISK1_next_claim_0" tail="D11_failed" kind="INPUT" mult="1" />
+      <arc head="DISK1_next_claim_0" tail="D11_unavail" kind="INPUT" mult="1" />
+      <arc head="D11_failed" tail="DISK1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_consider_next" tail="DISK1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="DISK10_detect_failure" tail="D11_failed" kind="INPUT" mult="1" />
+      <arc head="DISK10_detect_failure" tail="DISK1_failure_log_D11" kind="INHIBITOR" mult="1" />
+      <arc head="D11_failed" tail="DISK10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_failure_log_D11" tail="DISK10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK10detect_repair" tail="DISK1_failure_log_D11" kind="INPUT" mult="1" />
+      <arc head="DISK10detect_repair" tail="D11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK10detect_repair" tail="DISK1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_repair_log" tail="DISK10detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK10_release" tail="DISK1_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK10_release" tail="DISK1_claimed_D11" kind="INPUT" mult="1" />
+      <arc head="DISK10_release" tail="D11_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK1_consider_next" tail="DISK10_release" kind="OUTPUT" mult="1" />
+      <arc head="DISK10drop_repair" tail="DISK1_failure_log_D11" kind="INPUT" mult="1" />
+      <arc head="DISK10drop_repair" tail="DISK1_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK10drop_repair" tail="D11_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_repair_log" tail="DISK10drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_activate_0_1" tail="DISK1_claimed_D11" kind="INPUT" mult="1" />
+      <arc head="DISK1_activate_0_1" tail="DISK1_active" kind="INPUT" mult="1" />
+      <arc head="DISK1_activate_0_1" tail="D11_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_activate_0_1" tail="DISK1_claim_log_D11" kind="INHIBITOR" mult="1" />
+      <arc head="D11_active" tail="DISK1_activate_0_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claimed_D11" tail="DISK1_activate_0_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_active" tail="DISK1_activate_0_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claim_log_D11" tail="DISK1_activate_0_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claim_log_claimed__D11" tail="DISK1_claim_log_D11" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_log_claimed__D11" tail="DISK1_claimed_D11" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_claim_log_active__D11" tail="DISK1_claim_log_D11" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_log_active__D11" tail="DISK1_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_dact__D11" tail="D11_active" kind="INPUT" mult="1" />
+      <arc head="DISK1_dact__D11" tail="DISK1_claim_log_D11" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_claim_D12" tail="DISK1_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_D12" tail="D12_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_claimed_D12" tail="DISK1_claim_D12" kind="OUTPUT" mult="1" />
+      <arc head="D12_unavail" tail="DISK1_claim_D12" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_next_claim_1" tail="DISK1_claimed_D12" kind="INPUT" mult="1" />
+      <arc head="DISK1_next_claim_1" tail="D12_failed" kind="INPUT" mult="1" />
+      <arc head="DISK1_next_claim_1" tail="D12_unavail" kind="INPUT" mult="1" />
+      <arc head="D12_failed" tail="DISK1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_consider_next" tail="DISK1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK11_detect_failure" tail="D12_failed" kind="INPUT" mult="1" />
+      <arc head="DISK11_detect_failure" tail="DISK1_failure_log_D12" kind="INHIBITOR" mult="1" />
+      <arc head="D12_failed" tail="DISK11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_failure_log_D12" tail="DISK11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK11detect_repair" tail="DISK1_failure_log_D12" kind="INPUT" mult="1" />
+      <arc head="DISK11detect_repair" tail="D12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK11detect_repair" tail="DISK1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_repair_log" tail="DISK11detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK11_release" tail="DISK1_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK11_release" tail="DISK1_claimed_D12" kind="INPUT" mult="1" />
+      <arc head="DISK11_release" tail="D12_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK1_consider_next" tail="DISK11_release" kind="OUTPUT" mult="1" />
+      <arc head="DISK11drop_repair" tail="DISK1_failure_log_D12" kind="INPUT" mult="1" />
+      <arc head="DISK11drop_repair" tail="DISK1_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK11drop_repair" tail="D12_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_repair_log" tail="DISK11drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_activate_1_2" tail="DISK1_claimed_D12" kind="INPUT" mult="1" />
+      <arc head="DISK1_activate_1_2" tail="DISK1_active" kind="INPUT" mult="1" />
+      <arc head="DISK1_activate_1_2" tail="D12_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_activate_1_2" tail="DISK1_claim_log_D12" kind="INHIBITOR" mult="1" />
+      <arc head="D12_active" tail="DISK1_activate_1_2" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claimed_D12" tail="DISK1_activate_1_2" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_active" tail="DISK1_activate_1_2" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claim_log_D12" tail="DISK1_activate_1_2" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_claim_log_claimed__D12" tail="DISK1_claim_log_D12" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_log_claimed__D12" tail="DISK1_claimed_D12" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_claim_log_active__D12" tail="DISK1_claim_log_D12" kind="INPUT" mult="1" />
+      <arc head="DISK1_claim_log_active__D12" tail="DISK1_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK1_dact__D12" tail="D12_active" kind="INPUT" mult="1" />
+      <arc head="DISK1_dact__D12" tail="DISK1_claim_log_D12" kind="INHIBITOR" mult="1" />
+      <arc head="P1_loss_repairing" tail="P1_loss_failed" kind="INPUT" mult="1" />
+      <arc head="P1_loss_repairing" tail="P1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_loss_repairing" tail="PS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_loss_failing0" tail="P1_failed" kind="INPUT" mult="1" />
+      <arc head="P1_loss_failing0" tail="P1_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_loss_failed" tail="P1_loss_failing0" kind="OUTPUT" mult="1" />
+      <arc head="P1_failed" tail="P1_loss_failing0" kind="OUTPUT" mult="1" />
+      <arc head="P1_loss_failing1" tail="PS_failed" kind="INPUT" mult="1" />
+      <arc head="P1_loss_failing1" tail="P1_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P1_loss_failed" tail="P1_loss_failing1" kind="OUTPUT" mult="1" />
+      <arc head="PS_failed" tail="P1_loss_failing1" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY1_failing" tail="M1_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY1_failing" tail="M3_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY1_failing" tail="MEMORY1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="MEMORY1_failed" tail="MEMORY1_failing" kind="OUTPUT" mult="1" />
+      <arc head="M1_failed" tail="MEMORY1_failing" kind="OUTPUT" mult="1" />
+      <arc head="M3_dummy_failed" tail="MEMORY1_failing" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY1_repairing0" tail="MEMORY1_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY1_repairing0" tail="M1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="MEMORY1_repairing1" tail="MEMORY1_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY1_repairing1" tail="M3_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_repairing" tail="CM1_failed" kind="INPUT" mult="1" />
+      <arc head="CM1_repairing" tail="DISK1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_repairing" tail="P1_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_repairing" tail="MEMORY1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_failing0" tail="DISK1_failed" kind="INPUT" mult="1" />
+      <arc head="CM1_failing0" tail="CM1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_failed" tail="CM1_failing0" kind="OUTPUT" mult="1" />
+      <arc head="DISK1_failed" tail="CM1_failing0" kind="OUTPUT" mult="1" />
+      <arc head="CM1_failing1" tail="P1_loss_failed" kind="INPUT" mult="1" />
+      <arc head="CM1_failing1" tail="CM1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_failed" tail="CM1_failing1" kind="OUTPUT" mult="1" />
+      <arc head="P1_loss_failed" tail="CM1_failing1" kind="OUTPUT" mult="1" />
+      <arc head="CM1_failing2" tail="MEMORY1_failed" kind="INPUT" mult="1" />
+      <arc head="CM1_failing2" tail="CM1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM1_failed" tail="CM1_failing2" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY1_failed" tail="CM1_failing2" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_cannot_claim_next" tail="DISK2_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK2_cannot_claim_next" tail="D21_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK2_cannot_claim_next" tail="D22_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK2_cannot_claim_next" tail="DISK2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="D21_unavail" tail="DISK2_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="D22_unavail" tail="DISK2_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_failed" tail="DISK2_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="DISK22_repair" tail="DISK2_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK22_repair" tail="DISK2_failed" kind="INPUT" mult="1" />
+      <arc head="DISK2_consider_next" tail="DISK22_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claim_D21" tail="DISK2_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_D21" tail="D21_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_claimed_D21" tail="DISK2_claim_D21" kind="OUTPUT" mult="1" />
+      <arc head="D21_unavail" tail="DISK2_claim_D21" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_next_claim_0" tail="DISK2_claimed_D21" kind="INPUT" mult="1" />
+      <arc head="DISK2_next_claim_0" tail="D21_failed" kind="INPUT" mult="1" />
+      <arc head="DISK2_next_claim_0" tail="D21_unavail" kind="INPUT" mult="1" />
+      <arc head="D21_failed" tail="DISK2_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_consider_next" tail="DISK2_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="DISK20_detect_failure" tail="D21_failed" kind="INPUT" mult="1" />
+      <arc head="DISK20_detect_failure" tail="DISK2_failure_log_D21" kind="INHIBITOR" mult="1" />
+      <arc head="D21_failed" tail="DISK20_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_failure_log_D21" tail="DISK20_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK20detect_repair" tail="DISK2_failure_log_D21" kind="INPUT" mult="1" />
+      <arc head="DISK20detect_repair" tail="D21_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK20detect_repair" tail="DISK2_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_repair_log" tail="DISK20detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK20_release" tail="DISK2_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK20_release" tail="DISK2_claimed_D21" kind="INPUT" mult="1" />
+      <arc head="DISK20_release" tail="D21_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK2_consider_next" tail="DISK20_release" kind="OUTPUT" mult="1" />
+      <arc head="DISK20drop_repair" tail="DISK2_failure_log_D21" kind="INPUT" mult="1" />
+      <arc head="DISK20drop_repair" tail="DISK2_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK20drop_repair" tail="D21_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_repair_log" tail="DISK20drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_activate_0_11" tail="DISK2_claimed_D21" kind="INPUT" mult="1" />
+      <arc head="DISK2_activate_0_11" tail="DISK2_active" kind="INPUT" mult="1" />
+      <arc head="DISK2_activate_0_11" tail="D21_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_activate_0_11" tail="DISK2_claim_log_D21" kind="INHIBITOR" mult="1" />
+      <arc head="D21_active" tail="DISK2_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claimed_D21" tail="DISK2_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_active" tail="DISK2_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claim_log_D21" tail="DISK2_activate_0_11" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claim_log_claimed__D21" tail="DISK2_claim_log_D21" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_log_claimed__D21" tail="DISK2_claimed_D21" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_claim_log_active__D21" tail="DISK2_claim_log_D21" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_log_active__D21" tail="DISK2_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_dact__D21" tail="D21_active" kind="INPUT" mult="1" />
+      <arc head="DISK2_dact__D21" tail="DISK2_claim_log_D21" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_claim_D22" tail="DISK2_consider_next" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_D22" tail="D22_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_claimed_D22" tail="DISK2_claim_D22" kind="OUTPUT" mult="1" />
+      <arc head="D22_unavail" tail="DISK2_claim_D22" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_next_claim_1" tail="DISK2_claimed_D22" kind="INPUT" mult="1" />
+      <arc head="DISK2_next_claim_1" tail="D22_failed" kind="INPUT" mult="1" />
+      <arc head="DISK2_next_claim_1" tail="D22_unavail" kind="INPUT" mult="1" />
+      <arc head="D22_failed" tail="DISK2_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_consider_next" tail="DISK2_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="DISK21_detect_failure" tail="D22_failed" kind="INPUT" mult="1" />
+      <arc head="DISK21_detect_failure" tail="DISK2_failure_log_D22" kind="INHIBITOR" mult="1" />
+      <arc head="D22_failed" tail="DISK21_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_failure_log_D22" tail="DISK21_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="DISK21detect_repair" tail="DISK2_failure_log_D22" kind="INPUT" mult="1" />
+      <arc head="DISK21detect_repair" tail="D22_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK21detect_repair" tail="DISK2_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_repair_log" tail="DISK21detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK21_release" tail="DISK2_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK21_release" tail="DISK2_claimed_D22" kind="INPUT" mult="1" />
+      <arc head="DISK21_release" tail="D22_unavail" kind="INPUT" mult="1" />
+      <arc head="DISK2_consider_next" tail="DISK21_release" kind="OUTPUT" mult="1" />
+      <arc head="DISK21drop_repair" tail="DISK2_failure_log_D22" kind="INPUT" mult="1" />
+      <arc head="DISK21drop_repair" tail="DISK2_repair_log" kind="INPUT" mult="1" />
+      <arc head="DISK21drop_repair" tail="D22_failed" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_repair_log" tail="DISK21drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_activate_1_12" tail="DISK2_claimed_D22" kind="INPUT" mult="1" />
+      <arc head="DISK2_activate_1_12" tail="DISK2_active" kind="INPUT" mult="1" />
+      <arc head="DISK2_activate_1_12" tail="D22_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_activate_1_12" tail="DISK2_claim_log_D22" kind="INHIBITOR" mult="1" />
+      <arc head="D22_active" tail="DISK2_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claimed_D22" tail="DISK2_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_active" tail="DISK2_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claim_log_D22" tail="DISK2_activate_1_12" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_claim_log_claimed__D22" tail="DISK2_claim_log_D22" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_log_claimed__D22" tail="DISK2_claimed_D22" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_claim_log_active__D22" tail="DISK2_claim_log_D22" kind="INPUT" mult="1" />
+      <arc head="DISK2_claim_log_active__D22" tail="DISK2_active" kind="INHIBITOR" mult="1" />
+      <arc head="DISK2_dact__D22" tail="D22_active" kind="INPUT" mult="1" />
+      <arc head="DISK2_dact__D22" tail="DISK2_claim_log_D22" kind="INHIBITOR" mult="1" />
+      <arc head="P2_loss_repairing" tail="P2_loss_failed" kind="INPUT" mult="1" />
+      <arc head="P2_loss_repairing" tail="P2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_loss_repairing" tail="PS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_loss_failing0" tail="P2_failed" kind="INPUT" mult="1" />
+      <arc head="P2_loss_failing0" tail="P2_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_loss_failed" tail="P2_loss_failing0" kind="OUTPUT" mult="1" />
+      <arc head="P2_failed" tail="P2_loss_failing0" kind="OUTPUT" mult="1" />
+      <arc head="P2_loss_failing1" tail="PS_failed" kind="INPUT" mult="1" />
+      <arc head="P2_loss_failing1" tail="P2_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="P2_loss_failed" tail="P2_loss_failing1" kind="OUTPUT" mult="1" />
+      <arc head="PS_failed" tail="P2_loss_failing1" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY2_failing" tail="M2_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY2_failing" tail="M3_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY2_failing" tail="MEMORY2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="MEMORY2_failed" tail="MEMORY2_failing" kind="OUTPUT" mult="1" />
+      <arc head="M3_dummy_failed" tail="MEMORY2_failing" kind="OUTPUT" mult="1" />
+      <arc head="M2_failed" tail="MEMORY2_failing" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY2_repairing0" tail="MEMORY2_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY2_repairing0" tail="M2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="MEMORY2_repairing1" tail="MEMORY2_failed" kind="INPUT" mult="1" />
+      <arc head="MEMORY2_repairing1" tail="M3_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_repairing" tail="CM2_failed" kind="INPUT" mult="1" />
+      <arc head="CM2_repairing" tail="DISK2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_repairing" tail="MEMORY2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_repairing" tail="P2_loss_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_failing0" tail="DISK2_failed" kind="INPUT" mult="1" />
+      <arc head="CM2_failing0" tail="CM2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_failed" tail="CM2_failing0" kind="OUTPUT" mult="1" />
+      <arc head="DISK2_failed" tail="CM2_failing0" kind="OUTPUT" mult="1" />
+      <arc head="CM2_failing1" tail="P2_loss_failed" kind="INPUT" mult="1" />
+      <arc head="CM2_failing1" tail="CM2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_failed" tail="CM2_failing1" kind="OUTPUT" mult="1" />
+      <arc head="P2_loss_failed" tail="CM2_failing1" kind="OUTPUT" mult="1" />
+      <arc head="CM2_failing2" tail="MEMORY2_failed" kind="INPUT" mult="1" />
+      <arc head="CM2_failing2" tail="CM2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM2_failed" tail="CM2_failing2" kind="OUTPUT" mult="1" />
+      <arc head="MEMORY2_failed" tail="CM2_failing2" kind="OUTPUT" mult="1" />
+      <arc head="CM_failing" tail="CM1_failed" kind="INPUT" mult="1" />
+      <arc head="CM_failing" tail="CM2_failed" kind="INPUT" mult="1" />
+      <arc head="CM_failing" tail="CM_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM_failed" tail="CM_failing" kind="OUTPUT" mult="1" />
+      <arc head="CM1_failed" tail="CM_failing" kind="OUTPUT" mult="1" />
+      <arc head="CM2_failed" tail="CM_failing" kind="OUTPUT" mult="1" />
+      <arc head="CM_repairing0" tail="CM_failed" kind="INPUT" mult="1" />
+      <arc head="CM_repairing0" tail="CM1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="CM_repairing1" tail="CM_failed" kind="INPUT" mult="1" />
+      <arc head="CM_repairing1" tail="CM2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing" tail="BUS_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="CM_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failing0" tail="BUS_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing0" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="BUS_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="CM_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="CM_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="fdep1_1_propagate_M3_dummy" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="fdep1_1_propagate_M3_dummy" tail="M3_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="M3_failed" tail="fdep1_1_propagate_M3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="M3_dummy_failed" tail="fdep1_1_propagate_M3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="rdep1_1_start_flip" tail="rdep1_1_coin" kind="INPUT" mult="1" />
+      <arc head="rdep1_1_start_flip" tail="M3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="rdep1_1_forward" tail="rdep1_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="rdep1_1_return_coin" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="rdep1_1_return_coin" tail="rdep1_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="rdep1_1_coin" tail="rdep1_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="M3_failed" tail="rdep1_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="rdep1_1_propagate_M3_dummy" tail="rdep1_1_forward" kind="INPUT" mult="1" />
+      <arc head="rdep1_1_propagate_M3_dummy" tail="M3_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="rdep1_1_forward" tail="rdep1_1_propagate_M3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="rdep1_1reset" tail="rdep1_1_forward" kind="INPUT" mult="1" />
+      <arc head="rdep1_1reset" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="M3_failed" tail="rdep1_1reset" kind="OUTPUT" mult="1" />
+      <arc head="one_mem_fail_repairing" tail="one_mem_fail_failed" kind="INPUT" mult="1" />
+      <arc head="one_mem_fail_repairing" tail="one_mem_fail_unavail" kind="INPUT" mult="1" />
+      <arc head="one_mem_fail_repairing" tail="M1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_repairing" tail="M2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_failing0" tail="M1_failed" kind="INPUT" mult="1" />
+      <arc head="one_mem_fail_failing0" tail="one_mem_fail_failed" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_failed" tail="one_mem_fail_failing0" kind="OUTPUT" mult="1" />
+      <arc head="one_mem_fail_unavail" tail="one_mem_fail_failing0" kind="OUTPUT" mult="1" />
+      <arc head="M1_failed" tail="one_mem_fail_failing0" kind="OUTPUT" mult="1" />
+      <arc head="one_mem_fail_failing1" tail="M2_failed" kind="INPUT" mult="1" />
+      <arc head="one_mem_fail_failing1" tail="one_mem_fail_failed" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_failed" tail="one_mem_fail_failing1" kind="OUTPUT" mult="1" />
+      <arc head="one_mem_fail_unavail" tail="one_mem_fail_failing1" kind="OUTPUT" mult="1" />
+      <arc head="M2_failed" tail="one_mem_fail_failing1" kind="OUTPUT" mult="1" />
+      <arc head="s3_cannot_claim_next" tail="s3_consider_next" kind="INPUT" mult="1" />
+      <arc head="s3_cannot_claim_next" tail="one_mem_fail_unavail" kind="INPUT" mult="1" />
+      <arc head="s3_cannot_claim_next" tail="M3_unavail" kind="INPUT" mult="1" />
+      <arc head="s3_cannot_claim_next" tail="s3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_unavail" tail="s3_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="M3_unavail" tail="s3_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="s3_failed" tail="s3_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="s32_repair" tail="s3_repair_log" kind="INPUT" mult="1" />
+      <arc head="s32_repair" tail="s3_failed" kind="INPUT" mult="1" />
+      <arc head="s3_consider_next" tail="s32_repair" kind="OUTPUT" mult="1" />
+      <arc head="s3_claim_one_mem_fail" tail="s3_consider_next" kind="INPUT" mult="1" />
+      <arc head="s3_claim_one_mem_fail" tail="one_mem_fail_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="s3_claimed_one_mem_fail" tail="s3_claim_one_mem_fail" kind="OUTPUT" mult="1" />
+      <arc head="one_mem_fail_unavail" tail="s3_claim_one_mem_fail" kind="OUTPUT" mult="1" />
+      <arc head="s3_next_claim_0" tail="s3_claimed_one_mem_fail" kind="INPUT" mult="1" />
+      <arc head="s3_next_claim_0" tail="one_mem_fail_unavail" kind="INPUT" mult="1" />
+      <arc head="s3_next_claim_0" tail="one_mem_fail_failed" kind="INPUT" mult="1" />
+      <arc head="one_mem_fail_failed" tail="s3_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="s3_consider_next" tail="s3_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="s30_detect_failure" tail="one_mem_fail_failed" kind="INPUT" mult="1" />
+      <arc head="s30_detect_failure" tail="s3_failure_log_one_mem_fail" kind="INHIBITOR" mult="1" />
+      <arc head="one_mem_fail_failed" tail="s30_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="s3_failure_log_one_mem_fail" tail="s30_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="s30detect_repair" tail="s3_failure_log_one_mem_fail" kind="INPUT" mult="1" />
+      <arc head="s30detect_repair" tail="one_mem_fail_failed" kind="INHIBITOR" mult="1" />
+      <arc head="s30detect_repair" tail="s3_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="s3_repair_log" tail="s30detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="s30_release" tail="s3_repair_log" kind="INPUT" mult="1" />
+      <arc head="s30_release" tail="s3_claimed_one_mem_fail" kind="INPUT" mult="1" />
+      <arc head="s30_release" tail="one_mem_fail_unavail" kind="INPUT" mult="1" />
+      <arc head="s3_consider_next" tail="s30_release" kind="OUTPUT" mult="1" />
+      <arc head="s30drop_repair" tail="s3_failure_log_one_mem_fail" kind="INPUT" mult="1" />
+      <arc head="s30drop_repair" tail="s3_repair_log" kind="INPUT" mult="1" />
+      <arc head="s30drop_repair" tail="one_mem_fail_failed" kind="INHIBITOR" mult="1" />
+      <arc head="s3_repair_log" tail="s30drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="s3_claim_M3" tail="s3_consider_next" kind="INPUT" mult="1" />
+      <arc head="s3_claim_M3" tail="M3_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="s3_claimed_M3" tail="s3_claim_M3" kind="OUTPUT" mult="1" />
+      <arc head="M3_unavail" tail="s3_claim_M3" kind="OUTPUT" mult="1" />
+      <arc head="s3_next_claim_1" tail="s3_claimed_M3" kind="INPUT" mult="1" />
+      <arc head="s3_next_claim_1" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="s3_next_claim_1" tail="M3_unavail" kind="INPUT" mult="1" />
+      <arc head="M3_failed" tail="s3_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="s3_consider_next" tail="s3_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="s31_detect_failure" tail="M3_failed" kind="INPUT" mult="1" />
+      <arc head="s31_detect_failure" tail="s3_failure_log_M3" kind="INHIBITOR" mult="1" />
+      <arc head="M3_failed" tail="s31_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="s3_failure_log_M3" tail="s31_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="s31detect_repair" tail="s3_failure_log_M3" kind="INPUT" mult="1" />
+      <arc head="s31detect_repair" tail="M3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="s31detect_repair" tail="s3_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="s3_repair_log" tail="s31detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="s31_release" tail="s3_repair_log" kind="INPUT" mult="1" />
+      <arc head="s31_release" tail="s3_claimed_M3" kind="INPUT" mult="1" />
+      <arc head="s31_release" tail="M3_unavail" kind="INPUT" mult="1" />
+      <arc head="s3_consider_next" tail="s31_release" kind="OUTPUT" mult="1" />
+      <arc head="s31drop_repair" tail="s3_failure_log_M3" kind="INPUT" mult="1" />
+      <arc head="s31drop_repair" tail="s3_repair_log" kind="INPUT" mult="1" />
+      <arc head="s31drop_repair" tail="M3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="s3_repair_log" tail="s31drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="s3_activate_1_21" tail="s3_claimed_M3" kind="INPUT" mult="1" />
+      <arc head="s3_activate_1_21" tail="s3_active" kind="INPUT" mult="1" />
+      <arc head="s3_activate_1_21" tail="M3_active" kind="INHIBITOR" mult="1" />
+      <arc head="s3_activate_1_21" tail="s3_claim_log_M3" kind="INHIBITOR" mult="1" />
+      <arc head="M3_active" tail="s3_activate_1_21" kind="OUTPUT" mult="1" />
+      <arc head="s3_claimed_M3" tail="s3_activate_1_21" kind="OUTPUT" mult="1" />
+      <arc head="s3_active" tail="s3_activate_1_21" kind="OUTPUT" mult="1" />
+      <arc head="s3_claim_log_M3" tail="s3_activate_1_21" kind="OUTPUT" mult="1" />
+      <arc head="s3_claim_log_claimed__M3" tail="s3_claim_log_M3" kind="INPUT" mult="1" />
+      <arc head="s3_claim_log_claimed__M3" tail="s3_claimed_M3" kind="INHIBITOR" mult="1" />
+      <arc head="s3_claim_log_active__M3" tail="s3_claim_log_M3" kind="INPUT" mult="1" />
+      <arc head="s3_claim_log_active__M3" tail="s3_active" kind="INHIBITOR" mult="1" />
+      <arc head="s3_dact__M3" tail="M3_active" kind="INPUT" mult="1" />
+      <arc head="s3_dact__M3" tail="s3_claim_log_M3" kind="INHIBITOR" mult="1" />
+    </edges>
+  </gspn>
+</project>

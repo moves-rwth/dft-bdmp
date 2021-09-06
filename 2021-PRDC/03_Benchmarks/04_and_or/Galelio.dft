@@ -1,0 +1,10 @@
+toplevel TopGate;
+TopGate and F_6 OR_1;
+F_6 lambda=0.01 dorm=1  repair=0.1;
+OR_1 or OR_2 AND_2;
+OR_2 or F_3 F_4;
+F_3 lambda=0.01 dorm=1  repair=0.1;
+F_4 lambda=0.01 dorm=1  repair=0.1;
+AND_2 and F_1 F_7;
+F_1 lambda=0.01 dorm=1  repair=0.1;
+F_7 lambda=0.01 dorm=1  repair=0.1;

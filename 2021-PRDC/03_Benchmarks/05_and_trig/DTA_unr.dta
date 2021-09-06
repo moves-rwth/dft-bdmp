@@ -1,0 +1,18 @@
+
+DTA DTA_unr = {
+	CLOCKVALUESET = { t }
+	ACTIONSET = {  }
+	ATOMICPROPOSITIONSET = { Phi1 }
+	
+	LOCATIONS = {
+		INITIAL l0 : !Phi1;
+		FINAL l1 : Phi1 ;
+	}
+
+	EDGES = {
+		l0 -> l1 (x < t, Act);
+		l0 -> l0 (x < t, Act);
+	}
+}
+
+

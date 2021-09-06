@@ -1,0 +1,17 @@
+toplevel "TopGate";
+"TopGate" or "and_gate" "And_activation";
+"and_gate" and "F_1_dummy" "I_1_dummy" ;
+"And_activation" and "fs1" "s1";
+"s1" spare-claim-after-repair-claim-lr "F_1" "And_1";
+"F_1" lambda=0.01 dorm=1 repair=0.1;
+"And_1" and "fs2" "I_1_inst";
+"I_1_inst" lambda=0.5 dorm=0 repair=0.1;
+"fs1" lambda=0 dorm=0 repair=0; 
+"fs2" lambda=0 dorm=0 repair=0; 
+"I_1_dummy" lambda=0 dorm=0 repair=0; 
+"F_1_dummy" lambda=0 dorm=0 repair=0; 
+"dummy1_f" fdep "I_1_inst" "I_1_dummy";
+"dummy1_r" rdep "I_1_inst" "I_1_dummy";
+"dummy2_f" fdep "F_1" "F_1_dummy";
+"dummy2_r" rdep "F_1" "F_1_dummy";
+

@@ -1,0 +1,12 @@
+toplevel "TopGate";
+"TopGate" and "F_1" "F_2_dummy";
+"F_1" lambda=0.01 dorm=1 repair=0.1;
+"F_2_dummy" lambda=0 dorm=0 repair=0;
+"S1" csp "AND_1" "F_3";
+"F_3" lambda=0 dorm=0 repair=0;
+"AND_1" and "F_1_dummy" "OR_1";
+"F_1_dummy" lambda=0 dorm=0 repair=0;
+"fdep_dummy1" fdep "F_1" "F_1_dummy";
+"OR_1" or "F_1_dummy" "F_2";
+"F_2" lambda=0.01 dorm=0 repair=0.1;
+"fdep_dummy2" fdep "F_2" "F_2_dummy";

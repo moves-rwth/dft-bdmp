@@ -1,0 +1,156 @@
+(* Number of rules: 68*)
+hide
+	ACTIVATE,
+	a_or1_and2,
+	d_or1_and2,
+	a_or1_wsp4,
+	d_or1_wsp4,
+	a_and2_be3,
+	d_and2_be3,
+	a_and2_be13,
+	d_and2_be13,
+	a_wsp4_and5,
+	d_wsp4_and5,
+	a_wsp4_and6,
+	d_wsp4_and6,
+	a_and5_be7,
+	d_and5_be7,
+	a_and5_be9,
+	d_and5_be9,
+	a_and6_be8,
+	d_and6_be8,
+	a_and6_be10,
+	d_and6_be10,
+	a_fdep11_be13,
+	d_fdep11_be13,
+	a_fdep12_be13,
+	d_fdep12_be13,
+	o_or1_and2,
+	o_or1_wsp4,
+	o_and2_be3,
+	o_and2_be13,
+	o_wsp4_and5,
+	o_wsp4_and6,
+	o_and5_be7,
+	o_and5_be9,
+	o_and6_be8,
+	o_and6_be10,
+	i__be3,
+	i__be7,
+	i__be8,
+	i__be9,
+	i__be10,
+	i__be13,
+	f_or1_and2,
+	f_or1_wsp4,
+	f_and2_be3,
+	f_and2_be13,
+	f_wsp4_and5,
+	f_wsp4_and6,
+	f_and5_be7,
+	f_and5_be9,
+	f_and6_be8,
+	f_and6_be10,
+	f_fdep11_be9,
+	f_fdep12_be10
+in
+	label par using
+	(*	tle                   or1                     and2                     be3                      wsp4                     and5                     and6                     be7                      be8                      be9                      be10                     fdep11                  fdep12                  be13                   *)
+		"ACTIVATE !0 !TRUE" * "ACTIVATE !0 !FALSE"  * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "ACTIVATE !0 !FALSE"   * "ACTIVATE !0 !FALSE"  * _                     * _                      -> ACTIVATE,
+		_                   * "ACTIVATE !1 !TRUE"   * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> a_or1_and2,
+		_                   * "DEACTIVATE !1 !TRUE" * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> d_or1_and2,
+		_                   * "ACTIVATE !2 !TRUE"   * _                      * _                      * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> a_or1_wsp4,
+		_                   * "DEACTIVATE !2 !TRUE" * _                      * _                      * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> d_or1_wsp4,
+		_                   * _                     * "ACTIVATE !1 !TRUE"    * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> a_and2_be3,
+		_                   * _                     * "DEACTIVATE !1 !TRUE"  * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> d_and2_be3,
+		_                   * _                     * "ACTIVATE !2 !TRUE"    * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * "ACTIVATE !0 !FALSE"   -> a_and2_be13,
+		_                   * _                     * "DEACTIVATE !2 !TRUE"  * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * "DEACTIVATE !0 !FALSE" -> d_and2_be13,
+		_                   * _                     * _                      * _                      * "ACTIVATE !1 !TRUE"    * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> a_wsp4_and5,
+		_                   * _                     * _                      * _                      * "DEACTIVATE !1 !TRUE"  * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> d_wsp4_and5,
+		_                   * _                     * _                      * _                      * "ACTIVATE !2 !TRUE"    * _                      * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> a_wsp4_and6,
+		_                   * _                     * _                      * _                      * "DEACTIVATE !2 !TRUE"  * _                      * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> d_wsp4_and6,
+		_                   * _                     * _                      * _                      * _                      * "ACTIVATE !1 !TRUE"    * _                      * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                      * _                     * _                     * _                      -> a_and5_be7,
+		_                   * _                     * _                      * _                      * _                      * "DEACTIVATE !1 !TRUE"  * _                      * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                      * _                     * _                     * _                      -> d_and5_be7,
+		_                   * _                     * _                      * _                      * _                      * "ACTIVATE !2 !TRUE"    * _                      * _                      * _                      * "ACTIVATE !0 !FALSE"   * _                      * _                     * _                     * _                      -> a_and5_be9,
+		_                   * _                     * _                      * _                      * _                      * "DEACTIVATE !2 !TRUE"  * _                      * _                      * _                      * "DEACTIVATE !0 !FALSE" * _                      * _                     * _                     * _                      -> d_and5_be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * "ACTIVATE !1 !TRUE"    * _                      * "ACTIVATE !0 !FALSE"   * _                      * _                      * _                     * _                     * _                      -> a_and6_be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * "DEACTIVATE !1 !TRUE"  * _                      * "DEACTIVATE !0 !FALSE" * _                      * _                      * _                     * _                     * _                      -> d_and6_be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * "ACTIVATE !2 !TRUE"    * _                      * _                      * _                      * "ACTIVATE !0 !FALSE"   * _                     * _                     * _                      -> a_and6_be10,
+		_                   * _                     * _                      * _                      * _                      * _                      * "DEACTIVATE !2 !TRUE"  * _                      * _                      * _                      * "DEACTIVATE !0 !FALSE" * _                     * _                     * _                      -> d_and6_be10,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "ACTIVATE !1 !TRUE"   * _                     * "ACTIVATE !0 !FALSE"   -> a_fdep11_be13,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "DEACTIVATE !1 !TRUE" * _                     * "DEACTIVATE !0 !FALSE" -> d_fdep11_be13,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * "ACTIVATE !1 !TRUE"   * "ACTIVATE !0 !FALSE"   -> a_fdep12_be13,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * "DEACTIVATE !1 !TRUE" * "DEACTIVATE !0 !FALSE" -> d_fdep12_be13,
+		_                   * "ONLINE !0"           * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> ONLINE,
+		_                   * "ONLINE !1"           * "ONLINE !0"            * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> o_or1_and2,
+		_                   * "ONLINE !2"           * _                      * _                      * "ONLINE !0"            * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> o_or1_wsp4,
+		_                   * _                     * "ONLINE !1"            * "ONLINE !0"            * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> o_and2_be3,
+		_                   * _                     * "ONLINE !2"            * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * "ONLINE !0"            -> o_and2_be13,
+		_                   * _                     * _                      * _                      * "ONLINE !1"            * "ONLINE !0"            * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> o_wsp4_and5,
+		_                   * _                     * _                      * _                      * "ONLINE !2"            * _                      * "ONLINE !0"            * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> o_wsp4_and6,
+		_                   * _                     * _                      * _                      * _                      * "ONLINE !1"            * _                      * "ONLINE !0"            * _                      * _                      * _                      * _                     * _                     * _                      -> o_and5_be7,
+		_                   * _                     * _                      * _                      * _                      * "ONLINE !2"            * _                      * _                      * _                      * "ONLINE !0"            * _                      * _                     * _                     * _                      -> o_and5_be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * "ONLINE !1"            * _                      * "ONLINE !0"            * _                      * _                      * _                     * _                     * _                      -> o_and6_be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * "ONLINE !2"            * _                      * _                      * _                      * "ONLINE !0"            * _                     * _                     * _                      -> o_and6_be10,
+		_                   * _                     * _                      * "INSPECT !0"           * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> i__be3,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * "INSPECT !0"           * _                      * _                      * _                      * _                     * _                     * _                      -> i__be7,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * "INSPECT !0"           * _                      * _                      * _                     * _                     * _                      -> i__be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "INSPECT !0"           * _                      * _                     * _                     * _                      -> i__be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "INSPECT !0"           * _                     * _                     * _                      -> i__be10,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * "INSPECT !0"           -> i__be13,
+		_                   * "FAIL !0"             * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> FAIL,
+		_                   * "FAIL !1"             * "FAIL !0"              * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> f_or1_and2,
+		_                   * "FAIL !2"             * _                      * _                      * "FAIL !0"              * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> f_or1_wsp4,
+		_                   * _                     * "FAIL !1"              * "FAIL !0"              * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> f_and2_be3,
+		_                   * _                     * "FAIL !2"              * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "FAIL !1"             * "FAIL !1"             * "FAIL !0"              -> f_and2_be13,
+		_                   * _                     * _                      * _                      * "FAIL !1"              * "FAIL !0"              * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> f_wsp4_and5,
+		_                   * _                     * _                      * _                      * "FAIL !2"              * _                      * "FAIL !0"              * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> f_wsp4_and6,
+		_                   * _                     * _                      * _                      * _                      * "FAIL !1"              * _                      * "FAIL !0"              * _                      * _                      * _                      * _                     * _                     * _                      -> f_and5_be7,
+		_                   * _                     * _                      * _                      * _                      * "FAIL !2"              * _                      * _                      * _                      * "FAIL !0"              * _                      * _                     * _                     * _                      -> f_and5_be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * "FAIL !1"              * _                      * "FAIL !0"              * _                      * _                      * _                     * _                     * _                      -> f_and6_be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * "FAIL !2"              * _                      * _                      * _                      * "FAIL !0"              * _                     * _                     * _                      -> f_and6_be10,
+		_                   * _                     * _                      * _                      * _                      * "FAIL !2"              * _                      * _                      * _                      * _                      * _                      * "FAIL !2"             * _                     * _                      -> f_fdep11_be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * "FAIL !2"              * _                      * _                      * _                      * _                      * _                     * "FAIL !2"             * _                      -> f_fdep12_be10,
+		_                   * "IMPOSSIBLE"          * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_or1,
+		_                   * _                     * "IMPOSSIBLE"           * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_and2,
+		_                   * _                     * _                      * "IMPOSSIBLE"           * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_be3,
+		_                   * _                     * _                      * _                      * "IMPOSSIBLE"           * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_wsp4,
+		_                   * _                     * _                      * _                      * _                      * "IMPOSSIBLE"           * _                      * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_and5,
+		_                   * _                     * _                      * _                      * _                      * _                      * "IMPOSSIBLE"           * _                      * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_and6,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * "IMPOSSIBLE"           * _                      * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_be7,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * "IMPOSSIBLE"           * _                      * _                      * _                     * _                     * _                      -> IMPOSSIBLE_be8,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "IMPOSSIBLE"           * _                      * _                     * _                     * _                      -> IMPOSSIBLE_be9,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "IMPOSSIBLE"           * _                     * _                     * _                      -> IMPOSSIBLE_be10,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * "IMPOSSIBLE"          * _                     * _                      -> IMPOSSIBLE_fdep11,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * "IMPOSSIBLE"          * _                      -> IMPOSSIBLE_fdep12,
+		_                   * _                     * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                      * _                     * _                     * "IMPOSSIBLE"           -> IMPOSSIBLE_be13
+	in
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/toplevel.aut"
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/or_c2_r_aa.aut"
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/and_c2_r_aa.aut"
+		||
+		total rename "RATE_FAIL !1 !2" -> "RATE_FAIL !1 !2" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_cold_repair_dummy_aa.aut" end rename
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/wsp_c2_r_aa.aut"
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/and_c2_r_aa.aut"
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/and_c2_r.aut"
+		||
+		total rename "RATE_FAIL !1 !2" -> "rate 0.01", "RATE_REPAIR" -> "rate 0.1" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_cold_repair_aa.aut" end rename
+		||
+		total rename "RATE_FAIL !1 !2" -> "rate 0.01", "RATE_REPAIR" -> "rate 0.1" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_cold_repair.aut" end rename
+		||
+		total rename "RATE_FAIL !1 !2" -> "RATE_FAIL !1 !2" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_cold_repair_dummy_aa.aut" end rename
+		||
+		total rename "RATE_FAIL !1 !2" -> "RATE_FAIL !1 !2" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_cold_repair_dummy.aut" end rename
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/fdep_c1_d1_aa.aut"
+		||
+		"/Users/shahidkhan/Library/Caches/dftcalc/autnodes/fdep_c1_d1_aa.aut"
+		||
+		total rename "RATE_FAIL !1 !2" -> "rate 0.01", "RATE_FAIL !1 !1" -> "rate 0.01", "RATE_REPAIR" -> "rate 0.1" in "/Users/shahidkhan/Library/Caches/dftcalc/autnodes/be_repair_aa.aut" end rename
+	end par
+end hide

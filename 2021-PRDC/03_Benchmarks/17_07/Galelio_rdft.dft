@@ -1,0 +1,18 @@
+toplevel "TopGate";
+"TopGate" or "A7" "And_activation";
+"And_activation" and  "fs1" "A1" "A3";
+"fs1" lambda=0 dorm=0 repair=0;
+"A1" lambda=0.01 dorm=0 repair=0.1;
+"A3" lambda=0.01 dorm=0 repair=0.1;
+"Mx" mutex "A1" "A3";
+"A7" or "S1" "S2";
+"S1" spare-claim-after-repair-claim-lr "A1_dummy" "A2";
+"S2" spare-claim-after-repair-claim-lr "A3_dummy" "A4";
+"A1_dummy" lambda=0 dorm=0 repair=0;
+"A3_dummy" lambda=0 dorm=0 repair=0;
+"A2" lambda=0.01 dorm=0 repair=0.1;
+"A4" lambda=0.01 dorm=0 repair=0.1;
+"dep1_f" fdep "A1" "A1_dummy";
+"dep1_r" rdep "A1" "A1_dummy";
+"dep2_f" fdep "A3" "A3_dummy";
+"dep2_r" rdep "A3" "A3_dummy";

@@ -1,0 +1,8 @@
+toplevel "TopGate";
+"TopGate" spare-claim-after-repair-claim-lr "AND_2" "AND_1";
+"AND_2" and "F_1" "F_2";
+"AND_1" and "F_3" "F_4";
+"F_1" lambda=0.01 dorm=1 repair=0.1;
+"F_2" lambda=0.01 dorm=1 repair=0.1;
+"F_3" lambda=0.01 dorm=0 repair=0.1;
+"F_4" lambda=0.01 dorm=0 repair=0.1;

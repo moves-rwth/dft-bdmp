@@ -1,0 +1,13 @@
+toplevel "TopGate";
+"TopGate" and "F_1" "or_1_dummy";
+"or_1_dummy" lambda=0 dorm=0 repair=0;
+"dep1_f" fdep "or_1" "or_1_dummy";
+"dep1_r" rdep "or_1" "or_1_dummy";
+"S1" spare-claim-after-repair-claim-lr "F_1" "And_1";
+"And_1" and "fs1" "or_1";
+"fs1" lambda=0 dorm=0 repair=0;
+"F_1" lambda=0.01 dorm=1 repair=0.1;
+"or_1" or "F_2" "SF_inst";
+"F_2" lambda=0.01 dorm=0 repair=0.1;
+"SF_inst" lambda=0.01 dorm=0.1 repair=0.1;
+

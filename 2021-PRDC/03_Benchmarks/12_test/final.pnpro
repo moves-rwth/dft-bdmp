@@ -1,0 +1,402 @@
+<project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation" >
+    <nodes>
+      <place marking="0" name ="fs1_failed" x="20" y="17" />
+      <place marking="1" name ="fs1_active" x="17" y="20" />
+      <place marking="0" name ="SF_1_failed" x="23" y="20" />
+      <place marking="1" name ="SF_1_active" x="17" y="20" />
+      <place marking="0" name ="SF_1_dummy_failed" x="20" y="17" />
+      <place marking="0" name ="SF_1_dummy_unavail" x="20" y="23" />
+      <place marking="0" name ="SF_1_dummy_active" x="17" y="20" />
+      <place marking="0" name ="SF_2_failed" x="23" y="20" />
+      <place marking="0" name ="SF_2_active" x="17" y="20" />
+      <place marking="0" name ="F_1_failed" x="23" y="20" />
+      <place marking="0" name ="F_1_active" x="17" y="20" />
+      <place marking="0" name ="I_2_inst_failed" x="23" y="20" />
+      <place marking="0" name ="I_2_inst_active" x="17" y="20" />
+      <place marking="0" name ="I_2_instis_flip" x="17" y="20" />
+      <place marking="0" name ="AND_3_failed" x="20" y="17" />
+      <place marking="0" name ="fs2_failed" x="20" y="17" />
+      <place marking="0" name ="fs2_active" x="17" y="20" />
+      <place marking="0" name ="AND_3_fs_failed" x="20" y="17" />
+      <place marking="0" name ="AND_3_fs_unavail" x="26" y="17" />
+      <place marking="0" name ="S1_failed" x="30" y="12" />
+      <place marking="1" name ="S1_active" x="0" y="8" />
+      <place marking="1" name ="S1_consider_next" x="5" y="12" />
+      <place marking="0" name ="S1_repair_log" x="10" y="12" />
+      <place marking="0" name ="S1_claimed_SF_1_dummy" x="5" y="25" />
+      <place marking="0" name ="S1_failure_log_SF_1_dummy" x="15" y="25" />
+      <place marking="0" name ="S1_claim_log_SF_1_dummy" x="15" y="25" />
+      <place marking="0" name ="S1_claimed_AND_3_fs" x="19" y="25" />
+      <place marking="0" name ="S1_failure_log_AND_3_fs" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_SF_2" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_F_1" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_I_2_inst" x="29" y="25" />
+      <place marking="0" name ="S1_claim_log_fs2" x="29" y="25" />
+      <place marking="0" name ="And_activation_failed" x="20" y="17" />
+      <place marking="0" name ="SF_3_failed" x="23" y="20" />
+      <place marking="1" name ="SF_3_active" x="17" y="20" />
+      <place marking="0" name ="AND_3_dummy_failed" x="20" y="17" />
+      <place marking="1" name ="AND_3_dummy_active" x="17" y="20" />
+      <place marking="0" name ="And_2_failed" x="20" y="17" />
+      <place marking="0" name ="TopGate_failed" x="20" y="17" />
+      <place marking="0" name ="dep1_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep1_r_1_coin" x="15" y="22" />
+      <place marking="0" name ="dep2_r_1_forward" x="21" y="22" />
+      <place marking="0" name ="dep2_r_1_coin" x="15" y="22" />
+      <transition name="SF_1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="SF_1_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="SF_1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="SF_2_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="SF_2_passiveFailing" type="EXP" nservers="1" delay="0.001000000000" x="20.00000000" y="17.00000000" />
+      <transition name="SF_2_repairing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="29.00000000" />
+      <transition name="F_1_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="F_1_passiveFailing" type="EXP" nservers="1" delay="0.000000000" x="20.00000000" y="17.00000000" />
+      <transition name="F_1_repairing" type="EXP" nservers="1" delay="0.1000000000" x="20.00000000" y="29.00000000" />
+      <transition name="I_2_inst_repairing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="29.00000000" />
+      <transition name="SF_3_activeFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="23.00000000" />
+      <transition name="SF_3_passiveFailing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="17.00000000" />
+      <transition name="SF_3_repairing" type="EXP" nservers="1" delay="0.01000000000" x="20.00000000" y="29.00000000" />
+      <transition name="I_2_inst_fail" type="IMM" priority="15" weight="0.5000000000" x="20.00000000" y="23.00000000" />
+      <transition name="I_2_inst_good" type="IMM" priority="15" weight="0.5000000000" x="20.00000000" y="23.00000000" />
+      <transition name="I_2_inst_reset" type="IMM" priority="15" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="AND_3_failing" type="IMM" priority="13" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="AND_3_repairing0" type="IMM" priority="13" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="AND_3_repairing1" type="IMM" priority="13" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="AND_3_repairing2" type="IMM" priority="13" weight="1.000000000" x="21.00000000" y="23.00000000" />
+      <transition name="AND_3_fs_failing" type="IMM" priority="11" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="AND_3_fs_repairing0" type="IMM" priority="11" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="AND_3_fs_repairing1" type="IMM" priority="11" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="S1_cannot_claim_next" type="IMM" priority="9" weight="1.000000000" x="13.00000000" y="12.00000000" />
+      <transition name="S12_repair" type="IMM" priority="9" weight="1.000000000" x="42.00000000" y="25.00000000" />
+      <transition name="S1_claim_SF_1_dummy" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="20.00000000" />
+      <transition name="S1_next_claim_0" type="IMM" priority="9" weight="1.000000000" x="13.00000000" y="25.00000000" />
+      <transition name="S10_detect_failure" type="IMM" priority="10" weight="1.000000000" x="6.000000000" y="32.00000000" />
+      <transition name="S10detect_repair" type="IMM" priority="9" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="S10_release" type="IMM" priority="9" weight="1.000000000" x="5.000000000" y="28.00000000" />
+      <transition name="S10drop_repair" type="IMM" priority="10" weight="1.000000000" x="16.00000000" y="28.00000000" />
+      <transition name="S1_activate_0_2" type="IMM" priority="10" weight="1.000000000" x="2.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__SF_1_dummy" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__SF_1_dummy" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_dact__SF_1_dummy" type="IMM" priority="11" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_AND_3_fs" type="IMM" priority="10" weight="1.000000000" x="19.00000000" y="20.00000000" />
+      <transition name="S1_next_claim_1" type="IMM" priority="11" weight="1.000000000" x="27.00000000" y="25.00000000" />
+      <transition name="S11_detect_failure" type="IMM" priority="10" weight="1.000000000" x="20.00000000" y="32.00000000" />
+      <transition name="S11detect_repair" type="IMM" priority="9" weight="1.000000000" x="30.00000000" y="28.00000000" />
+      <transition name="S11_release" type="IMM" priority="9" weight="1.000000000" x="19.00000000" y="28.00000000" />
+      <transition name="S11drop_repair" type="IMM" priority="10" weight="1.000000000" x="32.00000000" y="28.00000000" />
+      <transition name="S1_activate_1_3" type="IMM" priority="12" weight="1.000000000" x="5.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__SF_2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__SF_2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_dact__SF_2" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_activate_1_4" type="IMM" priority="13" weight="1.000000000" x="8.000000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__F_1" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__F_1" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_dact__F_1" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_activate_1_5" type="IMM" priority="14" weight="1.000000000" x="11.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__I_2_inst" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__I_2_inst" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_dact__I_2_inst" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_activate_1_7" type="IMM" priority="15" weight="1.000000000" x="14.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_claimed__fs2" type="IMM" priority="16" weight="1.000000000" x="17.00000000" y="8.000000000" />
+      <transition name="S1_claim_log_active__fs2" type="IMM" priority="16" weight="1.000000000" x="17.00000000" y="8.000000000" />
+      <transition name="S1_dact__fs2" type="IMM" priority="16" weight="1.000000000" x="17.00000000" y="8.000000000" />
+      <transition name="And_activation_failing" type="IMM" priority="7" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="And_activation_repairing0" type="IMM" priority="7" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="And_activation_repairing1" type="IMM" priority="7" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="And_activation_repairing2" type="IMM" priority="7" weight="1.000000000" x="21.00000000" y="23.00000000" />
+      <transition name="And_2_failing" type="IMM" priority="13" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="And_2_repairing0" type="IMM" priority="13" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="And_2_repairing1" type="IMM" priority="13" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="TopGate_repairing" type="IMM" priority="5" weight="1.000000000" x="20.00000000" y="23.00000000" />
+      <transition name="TopGate_failing0" type="IMM" priority="5" weight="1.000000000" x="15.00000000" y="23.00000000" />
+      <transition name="TopGate_failing1" type="IMM" priority="5" weight="1.000000000" x="18.00000000" y="23.00000000" />
+      <transition name="dep1_f_1_propagate_SF_1_dummy" type="IMM" priority="2" weight="1.000000000" x="202" y="4" />
+      <transition name="dep1_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="205" y="4" />
+      <transition name="dep1_r_1_return_coin" type="IMM" priority="2" weight="1.000000000" x="208" y="4" />
+      <transition name="dep1_r_1_propagate_SF_1_dummy" type="IMM" priority="2" weight="1.000000000" x="211" y="4" />
+      <transition name="dep1_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+      <transition name="dep2_f_1_propagate_AND_3_dummy" type="IMM" priority="2" weight="1.000000000" x="217" y="4" />
+      <transition name="dep2_r_1_start_flip" type="IMM" priority="2" weight="1.000000000" x="220" y="4" />
+      <transition name="dep2_r_1_return_coin" type="IMM" priority="2" weight="1.000000000" x="223" y="4" />
+      <transition name="dep2_r_1_propagate_AND_3_dummy" type="IMM" priority="2" weight="1.000000000" x="226" y="4" />
+      <transition name="dep2_r_1reset" type="IMM" priority="3" weight="1.000000000" x="18.00000000" y="24.00000000" />
+    </nodes>
+    <edges>
+      <arc head="SF_1_activeFailing" tail="SF_1_active" kind="INPUT" mult="1" />
+      <arc head="SF_1_activeFailing" tail="SF_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_active" tail="SF_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_failed" tail="SF_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_passiveFailing" tail="SF_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_passiveFailing" tail="SF_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_failed" tail="SF_1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_repairing" tail="SF_1_failed" kind="INPUT" mult="1" />
+      <arc head="SF_2_activeFailing" tail="SF_2_active" kind="INPUT" mult="1" />
+      <arc head="SF_2_activeFailing" tail="SF_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_2_active" tail="SF_2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_2_failed" tail="SF_2_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_2_passiveFailing" tail="SF_2_active" kind="INHIBITOR" mult="1" />
+      <arc head="SF_2_passiveFailing" tail="SF_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_2_failed" tail="SF_2_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_2_repairing" tail="SF_2_failed" kind="INPUT" mult="1" />
+      <arc head="F_1_activeFailing" tail="F_1_active" kind="INPUT" mult="1" />
+      <arc head="F_1_activeFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_active" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_failed" tail="F_1_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_passiveFailing" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_failed" tail="F_1_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_repairing" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="I_2_inst_repairing" tail="I_2_inst_failed" kind="INPUT" mult="1" />
+      <arc head="SF_3_activeFailing" tail="SF_3_active" kind="INPUT" mult="1" />
+      <arc head="SF_3_activeFailing" tail="SF_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_3_active" tail="SF_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_3_failed" tail="SF_3_activeFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_3_passiveFailing" tail="SF_3_active" kind="INHIBITOR" mult="1" />
+      <arc head="SF_3_passiveFailing" tail="SF_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_3_failed" tail="SF_3_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="SF_3_repairing" tail="SF_3_failed" kind="INPUT" mult="1" />
+      <arc head="I_2_inst_fail" tail="I_2_inst_active" kind="INPUT" mult="1" />
+      <arc head="I_2_inst_fail" tail="I_2_instis_flip" kind="INHIBITOR" mult="1" />
+      <arc head="I_2_inst_fail" tail="I_2_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="I_2_inst_active" tail="I_2_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="I_2_inst_failed" tail="I_2_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="I_2_instis_flip" tail="I_2_inst_fail" kind="OUTPUT" mult="1" />
+      <arc head="I_2_inst_good" tail="I_2_inst_active" kind="INPUT" mult="1" />
+      <arc head="I_2_inst_good" tail="I_2_instis_flip" kind="INHIBITOR" mult="1" />
+      <arc head="I_2_inst_good" tail="I_2_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="I_2_inst_active" tail="I_2_inst_good" kind="OUTPUT" mult="1" />
+      <arc head="I_2_instis_flip" tail="I_2_inst_good" kind="OUTPUT" mult="1" />
+      <arc head="I_2_inst_reset" tail="I_2_instis_flip" kind="INPUT" mult="1" />
+      <arc head="I_2_inst_reset" tail="I_2_inst_active" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_failing" tail="SF_2_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_failing" tail="F_1_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_failing" tail="I_2_inst_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_failing" tail="AND_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_failed" tail="AND_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="F_1_failed" tail="AND_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="SF_2_failed" tail="AND_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="I_2_inst_failed" tail="AND_3_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_repairing0" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_repairing0" tail="SF_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_repairing1" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_repairing1" tail="F_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_repairing2" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_repairing2" tail="I_2_inst_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_fs_failing" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_failing" tail="fs2_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_failing" tail="AND_3_fs_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_fs_failed" tail="AND_3_fs_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_fs_unavail" tail="AND_3_fs_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_failed" tail="AND_3_fs_failing" kind="OUTPUT" mult="1" />
+      <arc head="fs2_failed" tail="AND_3_fs_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_fs_repairing0" tail="AND_3_fs_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_repairing0" tail="AND_3_fs_unavail" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_repairing0" tail="AND_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_fs_repairing1" tail="AND_3_fs_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_repairing1" tail="AND_3_fs_unavail" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_repairing1" tail="fs2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="SF_1_dummy_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="AND_3_fs_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_cannot_claim_next" tail="S1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_dummy_unavail" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_fs_unavail" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="S1_failed" tail="S1_cannot_claim_next" kind="OUTPUT" mult="1" />
+      <arc head="S12_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S12_repair" tail="S1_failed" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S12_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_SF_1_dummy" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_claim_SF_1_dummy" tail="SF_1_dummy_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claimed_SF_1_dummy" tail="S1_claim_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_dummy_unavail" tail="S1_claim_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="S1_claimed_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="SF_1_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_0" tail="SF_1_dummy_unavail" kind="INPUT" mult="1" />
+      <arc head="SF_1_dummy_failed" tail="S1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S1_next_claim_0" kind="OUTPUT" mult="1" />
+      <arc head="S10_detect_failure" tail="SF_1_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="S10_detect_failure" tail="S1_failure_log_SF_1_dummy" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_dummy_failed" tail="S10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S1_failure_log_SF_1_dummy" tail="S10_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S10detect_repair" tail="S1_failure_log_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S10detect_repair" tail="SF_1_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S10detect_repair" tail="S1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S10detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="S10_release" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S10_release" tail="S1_claimed_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S10_release" tail="SF_1_dummy_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S10_release" kind="OUTPUT" mult="1" />
+      <arc head="S10drop_repair" tail="S1_failure_log_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S10drop_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S10drop_repair" tail="SF_1_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S10drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_activate_0_2" tail="S1_claimed_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S1_activate_0_2" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_0_2" tail="SF_1_dummy_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_0_2" tail="S1_claim_log_SF_1_dummy" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_dummy_active" tail="S1_activate_0_2" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_SF_1_dummy" tail="S1_activate_0_2" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_0_2" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_SF_1_dummy" tail="S1_activate_0_2" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__SF_1_dummy" tail="S1_claim_log_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__SF_1_dummy" tail="S1_claimed_SF_1_dummy" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__SF_1_dummy" tail="S1_claim_log_SF_1_dummy" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__SF_1_dummy" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__SF_1_dummy" tail="SF_1_dummy_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__SF_1_dummy" tail="S1_claim_log_SF_1_dummy" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_AND_3_fs" tail="S1_consider_next" kind="INPUT" mult="1" />
+      <arc head="S1_claim_AND_3_fs" tail="AND_3_fs_unavail" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claimed_AND_3_fs" tail="S1_claim_AND_3_fs" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_fs_unavail" tail="S1_claim_AND_3_fs" kind="OUTPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="AND_3_fs_failed" kind="INPUT" mult="1" />
+      <arc head="S1_next_claim_1" tail="AND_3_fs_unavail" kind="INPUT" mult="1" />
+      <arc head="AND_3_fs_failed" tail="S1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S1_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="S11_detect_failure" tail="AND_3_fs_failed" kind="INPUT" mult="1" />
+      <arc head="S11_detect_failure" tail="S1_failure_log_AND_3_fs" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_fs_failed" tail="S11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S1_failure_log_AND_3_fs" tail="S11_detect_failure" kind="OUTPUT" mult="1" />
+      <arc head="S11detect_repair" tail="S1_failure_log_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S11detect_repair" tail="AND_3_fs_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S11detect_repair" tail="S1_repair_log" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S11detect_repair" kind="OUTPUT" mult="1" />
+      <arc head="S11_release" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S11_release" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S11_release" tail="AND_3_fs_unavail" kind="INPUT" mult="1" />
+      <arc head="S1_consider_next" tail="S11_release" kind="OUTPUT" mult="1" />
+      <arc head="S11drop_repair" tail="S1_failure_log_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S11drop_repair" tail="S1_repair_log" kind="INPUT" mult="1" />
+      <arc head="S11drop_repair" tail="AND_3_fs_failed" kind="INHIBITOR" mult="1" />
+      <arc head="S1_repair_log" tail="S11drop_repair" kind="OUTPUT" mult="1" />
+      <arc head="S1_activate_1_3" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_3" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_3" tail="SF_2_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_3" tail="S1_claim_log_SF_2" kind="INHIBITOR" mult="1" />
+      <arc head="SF_2_active" tail="S1_activate_1_3" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_SF_2" tail="S1_activate_1_3" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_AND_3_fs" tail="S1_activate_1_3" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_3" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__SF_2" tail="S1_claim_log_SF_2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__SF_2" tail="S1_claimed_AND_3_fs" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__SF_2" tail="S1_claim_log_SF_2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__SF_2" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__SF_2" tail="SF_2_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__SF_2" tail="S1_claim_log_SF_2" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_4" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_4" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_4" tail="F_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_4" tail="S1_claim_log_F_1" kind="INHIBITOR" mult="1" />
+      <arc head="F_1_active" tail="S1_activate_1_4" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_4" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_AND_3_fs" tail="S1_activate_1_4" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_F_1" tail="S1_activate_1_4" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__F_1" tail="S1_claim_log_F_1" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__F_1" tail="S1_claimed_AND_3_fs" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__F_1" tail="S1_claim_log_F_1" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__F_1" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__F_1" tail="F_1_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__F_1" tail="S1_claim_log_F_1" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_5" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_5" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_5" tail="I_2_inst_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_5" tail="S1_claim_log_I_2_inst" kind="INHIBITOR" mult="1" />
+      <arc head="I_2_inst_active" tail="S1_activate_1_5" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_AND_3_fs" tail="S1_activate_1_5" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_5" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_I_2_inst" tail="S1_activate_1_5" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__I_2_inst" tail="S1_claim_log_I_2_inst" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__I_2_inst" tail="S1_claimed_AND_3_fs" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__I_2_inst" tail="S1_claim_log_I_2_inst" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__I_2_inst" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__I_2_inst" tail="I_2_inst_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__I_2_inst" tail="S1_claim_log_I_2_inst" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_7" tail="S1_claimed_AND_3_fs" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_7" tail="S1_active" kind="INPUT" mult="1" />
+      <arc head="S1_activate_1_7" tail="fs2_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_activate_1_7" tail="S1_claim_log_fs2" kind="INHIBITOR" mult="1" />
+      <arc head="fs2_active" tail="S1_activate_1_7" kind="OUTPUT" mult="1" />
+      <arc head="S1_claimed_AND_3_fs" tail="S1_activate_1_7" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_fs2" tail="S1_activate_1_7" kind="OUTPUT" mult="1" />
+      <arc head="S1_active" tail="S1_activate_1_7" kind="OUTPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__fs2" tail="S1_claim_log_fs2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_claimed__fs2" tail="S1_claimed_AND_3_fs" kind="INHIBITOR" mult="1" />
+      <arc head="S1_claim_log_active__fs2" tail="S1_claim_log_fs2" kind="INPUT" mult="1" />
+      <arc head="S1_claim_log_active__fs2" tail="S1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S1_dact__fs2" tail="fs2_active" kind="INPUT" mult="1" />
+      <arc head="S1_dact__fs2" tail="S1_claim_log_fs2" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_failing" tail="fs1_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_failing" tail="SF_1_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_failing" tail="S1_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_failing" tail="And_activation_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="fs1_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="S1_failed" tail="And_activation_failing" kind="OUTPUT" mult="1" />
+      <arc head="And_activation_repairing0" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_repairing0" tail="fs1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_repairing1" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_repairing1" tail="SF_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_activation_repairing2" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="And_activation_repairing2" tail="S1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_2_failing" tail="SF_3_failed" kind="INPUT" mult="1" />
+      <arc head="And_2_failing" tail="AND_3_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="And_2_failing" tail="And_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_2_failed" tail="And_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="SF_3_failed" tail="And_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_dummy_failed" tail="And_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="And_2_repairing0" tail="And_2_failed" kind="INPUT" mult="1" />
+      <arc head="And_2_repairing0" tail="SF_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="And_2_repairing1" tail="And_2_failed" kind="INPUT" mult="1" />
+      <arc head="And_2_repairing1" tail="AND_3_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="TopGate_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_repairing" tail="And_activation_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_repairing" tail="And_2_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failing0" tail="And_activation_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing0" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="And_activation_failed" tail="TopGate_failing0" kind="OUTPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="And_2_failed" kind="INPUT" mult="1" />
+      <arc head="TopGate_failing1" tail="TopGate_failed" kind="INHIBITOR" mult="1" />
+      <arc head="TopGate_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="And_2_failed" tail="TopGate_failing1" kind="OUTPUT" mult="1" />
+      <arc head="dep1_f_1_propagate_SF_1_dummy" tail="SF_1_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_f_1_propagate_SF_1_dummy" tail="SF_1_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="SF_1_failed" tail="dep1_f_1_propagate_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_dummy_failed" tail="dep1_f_1_propagate_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_dummy_unavail" tail="dep1_f_1_propagate_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_start_flip" tail="dep1_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_start_flip" tail="SF_1_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep1_r_1_forward" tail="dep1_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_return_coin" tail="SF_1_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_return_coin" tail="dep1_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep1_r_1_coin" tail="dep1_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="SF_1_failed" tail="dep1_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1_propagate_SF_1_dummy" tail="dep1_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_propagate_SF_1_dummy" tail="SF_1_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_propagate_SF_1_dummy" tail="SF_1_dummy_unavail" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1_forward" tail="dep1_r_1_propagate_SF_1_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep1_r_1reset" tail="dep1_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep1_r_1reset" tail="SF_1_failed" kind="INPUT" mult="1" />
+      <arc head="SF_1_failed" tail="dep1_r_1reset" kind="OUTPUT" mult="1" />
+      <arc head="dep2_f_1_propagate_AND_3_dummy" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_f_1_propagate_AND_3_dummy" tail="AND_3_dummy_failed" kind="INHIBITOR" mult="1" />
+      <arc head="AND_3_failed" tail="dep2_f_1_propagate_AND_3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_dummy_failed" tail="dep2_f_1_propagate_AND_3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_start_flip" tail="dep2_r_1_coin" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_start_flip" tail="AND_3_failed" kind="INHIBITOR" mult="1" />
+      <arc head="dep2_r_1_forward" tail="dep2_r_1_start_flip" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_return_coin" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_return_coin" tail="dep2_r_1_coin" kind="INHIBITOR" mult="1" />
+      <arc head="dep2_r_1_coin" tail="dep2_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="AND_3_failed" tail="dep2_r_1_return_coin" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1_propagate_AND_3_dummy" tail="dep2_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_propagate_AND_3_dummy" tail="AND_3_dummy_failed" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1_forward" tail="dep2_r_1_propagate_AND_3_dummy" kind="OUTPUT" mult="1" />
+      <arc head="dep2_r_1reset" tail="dep2_r_1_forward" kind="INPUT" mult="1" />
+      <arc head="dep2_r_1reset" tail="AND_3_failed" kind="INPUT" mult="1" />
+      <arc head="AND_3_failed" tail="dep2_r_1reset" kind="OUTPUT" mult="1" />
+    </edges>
+  </gspn>
+</project>
