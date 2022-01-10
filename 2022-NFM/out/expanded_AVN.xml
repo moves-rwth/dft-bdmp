@@ -1,0 +1,1192 @@
+<fault_extension smv_file="" fei_txt="AVN.fei" lineno="4" name="FE_SC_HD">
+  <extensions>
+    <nominal_component_extensions lineno="5" module="lidar">
+      <fault_models>
+        <fault_model symbols="state" lineno="7" name="lidar_failed">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="lidar_failed" symbols="state" lineno="9" probability="1.e-1">
+              <effects_model lineno="9" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="9" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="13" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="16" module="radar">
+      <fault_models>
+        <fault_model symbols="state" lineno="18" name="radar_failed">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="radar_failed" symbols="state" lineno="20" probability="2.e-2">
+              <effects_model lineno="20" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="20" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="24" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="26" module="gps">
+      <fault_models>
+        <fault_model symbols="state" lineno="28" name="gps_failed">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="gps_failed" symbols="state" lineno="30" probability="925.e-5">
+              <effects_model lineno="30" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="30" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="34" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="35" module="camera">
+      <fault_models>
+        <fault_model symbols="state" lineno="37" name="camera_failed">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="camera_failed" symbols="state" lineno="39" probability="495.e-5">
+              <effects_model lineno="39" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="39" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="43" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="45" module="wheelencoder">
+      <fault_models>
+        <fault_model symbols="state" lineno="47" name="wheel_encoder_failed">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="wheel_encoder_failed" symbols="state" lineno="49" probability="4.e-2">
+              <effects_model lineno="49" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="49" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="53" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="54" module="comm">
+      <fault_models>
+        <fault_model symbols="state" lineno="56" name="communication_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="backup_sensor_communication_failure" symbols="state" lineno="58" probability="9513.e-5">
+              <effects_model lineno="58" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="58" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="62" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="64" module="ir">
+      <fault_models>
+        <fault_model symbols="state" lineno="66" name="ir_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="backup_sensor_ir_failure" symbols="state" lineno="68" probability="2.e-2">
+              <effects_model lineno="68" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="68" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="72" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="74" module="us">
+      <fault_models>
+        <fault_model symbols="state" lineno="76" name="us_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="backup_sensor_us_failure" symbols="state" lineno="78" probability="2.e-2">
+              <effects_model lineno="78" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="78" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="82" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="85" module="integeration_hardware">
+      <fault_models>
+        <fault_model symbols="state" lineno="87" name="HW_integeration_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="harware_integeration_failure" symbols="state" lineno="89" probability="2.e-2">
+              <effects_model lineno="89" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="89" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="93" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="95" module="controlalgorithm">
+      <fault_models>
+        <fault_model symbols="state" lineno="97" name="SW_control_algorithm_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="SW_CA_fail" symbols="state" lineno="99" probability="2.e-2">
+              <effects_model lineno="99" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="99" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="103" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="105" module="softwarefailures">
+      <fault_models>
+        <fault_model symbols="state" lineno="107" name="SW_software_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="SW_SW_fail" symbols="state" lineno="109" probability="2.e-2">
+              <effects_model lineno="109" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="109" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="113" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="115" module="steering">
+      <fault_models>
+        <fault_model symbols="state" lineno="117" name="MECH_steering_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="MECH_steering_fail" symbols="state" lineno="119" probability="2.e-2">
+              <effects_model lineno="119" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="119" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="123" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="124" module="braking">
+      <fault_models>
+        <fault_model symbols="state" lineno="126" name="MECH_braking_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="MECH_braking_fail" symbols="state" lineno="128" probability="2.e-2">
+              <effects_model lineno="128" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="128" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="132" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="133" module="conveyor">
+      <fault_models>
+        <fault_model symbols="state" lineno="135" name="MECH_conveyor_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="MECH_conveyor_fail" symbols="state" lineno="137" probability="2.e-2">
+              <effects_model lineno="137" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="137" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="141" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="143" module="database">
+      <fault_models>
+        <fault_model symbols="state" lineno="145" name="COMM_database_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="COMM_database_fail" symbols="state" lineno="147" probability="2.e-2">
+              <effects_model lineno="147" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="147" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="151" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="153" module="lte">
+      <fault_models>
+        <fault_model symbols="state" lineno="155" name="COMM_lte_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="COMM_lte_fail" symbols="state" lineno="157" probability="2.e-2">
+              <effects_model lineno="157" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="157" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="161" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="163" module="commandgeneration">
+      <fault_models>
+        <fault_model symbols="state" lineno="165" name="INTERACT_CMDgeneration_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="INTERACT_CMDgeneration_fail" symbols="state" lineno="167" probability="2.e-2">
+              <effects_model lineno="167" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="167" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="171" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="173" module="commandinterpretation">
+      <fault_models>
+        <fault_model symbols="state" lineno="175" name="INTERACT_CMDinterpretation_failure">
+          <instances/>
+          <fault_modes>
+            <fault_mode name="INTERACT_CMDinterpretation_fail" symbols="state" lineno="177" probability="2.e-2">
+              <effects_model lineno="177" name="StuckAtByValue_D">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+                <effect>
+                  <entering>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = term
+</entering>
+                  <during>------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+-- - Author: Anthony Fernandes Pires
+-- - Version: 0.1
+-- - Date: 2014/09/24
+------------------------------------------------------------------------------
+-- - varout: the output variable
+-- - term: The value at which the output has to be stuck. Can be a constant or a variable
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+next(varout) = varout
+</during>
+                </effect>
+                <raw></raw>
+              </effects_model>
+              <local_dynamics_model lineno="177" name="Permanent">
+                <events>
+                  <event connected="yes" binds="failed_to_off" type="output" lineno="181" name="failure"/>
+                </events>
+                <transitions>
+                  <transition to="fault" from="nominal" lineno="">
+                    <guard></guard>
+                    <trigger>failure</trigger>
+                  </transition>
+                  <transition to="fault" from="fault" lineno="">
+                    <guard></guard>
+                    <trigger></trigger>
+                  </transition>
+                </transitions>
+                <raw></raw>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+          <global_dynamics_model lineno="">
+            <events/>
+            <transitions/>
+          </global_dynamics_model>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+  </extensions>
+</fault_extension>

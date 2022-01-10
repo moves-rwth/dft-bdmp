@@ -1,0 +1,472 @@
+<fault_extension_info lineno="4" desc="" name="FE_SC_HD" fei_txt="AVN.fei" smv_file="">
+  <extensions>
+    <nominal_component_extensions lineno="5" module="lidar" desc="">
+      <fault_models>
+        <fault_model lineno="7" enabled="yes" name="lidar_failed" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="9" probability="1.e-1">
+              <user_info>
+                <name>lidar_failed</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="9" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="9" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="13" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="16" module="radar" desc="">
+      <fault_models>
+        <fault_model lineno="18" enabled="yes" name="radar_failed" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="20" probability="2.e-2">
+              <user_info>
+                <name>radar_failed</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="20" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="20" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="24" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="26" module="gps" desc="">
+      <fault_models>
+        <fault_model lineno="28" enabled="yes" name="gps_failed" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="30" probability="925.e-5">
+              <user_info>
+                <name>gps_failed</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="30" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="30" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="34" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="35" module="camera" desc="">
+      <fault_models>
+        <fault_model lineno="37" enabled="yes" name="camera_failed" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="39" probability="495.e-5">
+              <user_info>
+                <name>camera_failed</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="39" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="39" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="43" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="45" module="wheelencoder" desc="">
+      <fault_models>
+        <fault_model lineno="47" enabled="yes" name="wheel_encoder_failed" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="49" probability="4.e-2">
+              <user_info>
+                <name>wheel_encoder_failed</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="49" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="49" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="53" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="54" module="comm" desc="">
+      <fault_models>
+        <fault_model lineno="56" enabled="yes" name="communication_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="58" probability="9513.e-5">
+              <user_info>
+                <name>backup_sensor_communication_failure</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="58" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="58" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="62" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="64" module="ir" desc="">
+      <fault_models>
+        <fault_model lineno="66" enabled="yes" name="ir_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="68" probability="2.e-2">
+              <user_info>
+                <name>backup_sensor_ir_failure</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="68" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="68" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="72" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="74" module="us" desc="">
+      <fault_models>
+        <fault_model lineno="76" enabled="yes" name="us_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="78" probability="2.e-2">
+              <user_info>
+                <name>backup_sensor_us_failure</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="78" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="78" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="82" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="85" module="integeration_hardware" desc="">
+      <fault_models>
+        <fault_model lineno="87" enabled="yes" name="HW_integeration_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="89" probability="2.e-2">
+              <user_info>
+                <name>harware_integeration_failure</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="89" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="89" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="93" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="95" module="controlalgorithm" desc="">
+      <fault_models>
+        <fault_model lineno="97" enabled="yes" name="SW_control_algorithm_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="99" probability="2.e-2">
+              <user_info>
+                <name>SW_CA_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="99" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="99" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="103" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="105" module="softwarefailures" desc="">
+      <fault_models>
+        <fault_model lineno="107" enabled="yes" name="SW_software_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="109" probability="2.e-2">
+              <user_info>
+                <name>SW_SW_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="109" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="109" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="113" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="115" module="steering" desc="">
+      <fault_models>
+        <fault_model lineno="117" enabled="yes" name="MECH_steering_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="119" probability="2.e-2">
+              <user_info>
+                <name>MECH_steering_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="119" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="119" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="123" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="124" module="braking" desc="">
+      <fault_models>
+        <fault_model lineno="126" enabled="yes" name="MECH_braking_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="128" probability="2.e-2">
+              <user_info>
+                <name>MECH_braking_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="128" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="128" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="132" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="133" module="conveyor" desc="">
+      <fault_models>
+        <fault_model lineno="135" enabled="yes" name="MECH_conveyor_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="137" probability="2.e-2">
+              <user_info>
+                <name>MECH_conveyor_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="137" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="137" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="141" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="143" module="database" desc="">
+      <fault_models>
+        <fault_model lineno="145" enabled="yes" name="COMM_database_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="147" probability="2.e-2">
+              <user_info>
+                <name>COMM_database_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="147" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="147" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="151" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="153" module="lte" desc="">
+      <fault_models>
+        <fault_model lineno="155" enabled="yes" name="COMM_lte_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="157" probability="2.e-2">
+              <user_info>
+                <name>COMM_lte_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="157" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="157" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="161" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="163" module="commandgeneration" desc="">
+      <fault_models>
+        <fault_model lineno="165" enabled="yes" name="INTERACT_CMDgeneration_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="167" probability="2.e-2">
+              <user_info>
+                <name>INTERACT_CMDgeneration_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="167" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="167" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="171" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+    <nominal_component_extensions lineno="173" module="commandinterpretation" desc="">
+      <fault_models>
+        <fault_model lineno="175" enabled="yes" name="INTERACT_CMDinterpretation_failure" desc="">
+          <instances/>
+          <fault_modes>
+            <fault_mode enabled="yes" lineno="177" probability="2.e-2">
+              <user_info>
+                <name>INTERACT_CMDinterpretation_fail</name>
+                <desc></desc>
+              </user_info>
+              <effects_model lineno="177" name="StuckAtByValue_D" desc="">
+                <values>
+                  <output binds="state" writes="varout" type="" reads="input"/>
+                  <input reads="term" value="off"/>
+                </values>
+              </effects_model>
+              <local_dynamics_model lineno="177" name="Permanent" desc="">
+                <events>
+                  <event type="output" lineno="181" connected="yes" name="failure" binds="failed_to_off"/>
+                </events>
+              </local_dynamics_model>
+            </fault_mode>
+          </fault_modes>
+        </fault_model>
+      </fault_models>
+    </nominal_component_extensions>
+  </extensions>
+</fault_extension_info>

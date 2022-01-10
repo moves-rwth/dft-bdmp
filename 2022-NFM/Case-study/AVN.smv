@@ -1,0 +1,1351 @@
+--SMV Model of for Autonomous Vehicle failure due to vehicle
+-- Dated 28-01-19
+MODULE main
+VAR
+	VC : Vehicle_Controller(VS.mode_event_HW, VS.mode_event_SW, VS.mode_event_Mech, VS.mode_event_Comm, VS.mode_event_Interaction,
+				VS.init_state_HW, VS.init_state_SW, VS.init_state_Mech, VS.init_state_Comm, VS.init_state_Interaction ,VS);
+	VS : Vehicle_System (VC.cmd_to_HW, VC.cmd_to_SW, VC.cmd_to_Mech, VC.cmd_to_Comm, VC.cmd_to_Interaction);   
+
+------------------------Definiton of functional requirements
+
+/--https://blogs.city.ac.uk/hcid-williamson/2016/03/01/requirements-engineering-for-googles-self-driving-car/
+R1: Auotnomous Car should be able to drive to passenger's requested destination.
+R2: GPS system should be able to 
+http://ceur-ws.org/Vol-1796/resacs-invited-paper.pdf
+R3: If Road user present it should be detected by vechile
+R4: Present obstacle is adequetaley responded
+R5: critical situations (landslides, prohibitied motorway exit, drive back contrary to driving directions) plice enforced
+G1: donot pass redlight
+G2: emergeny vechile approaches enable its bypassing
+http://www.isy.liu.se/edu/projekt/reglerteknik/2014/AutonomousTruck/documents/requirement_specification.pdf
+R: The vechile shall be able to communicate with other vehchiles
+R: The vechile shall be able to stop in case of emergency
+R: The vechile shall always have its location and surrounding vechiles data all the time
+R: vechile shall be able to behave incase of other vechiles or humans
+R: vehicle shall follow the road by GPS and line following sensors
+R: Vehicle shall be able to determine
+			output force based on speed
+			brake position based on speed
+			wheel angle based on the required heading
+https://deepblue.lib.umich.edu/bitstream/handle/2027.42/58193/100878.pdf;jsessionid=80073D089627BE1887C34EE058FBF113?sequence=1
+R: advisories
+R: Crast alerts			
+
+Architecture
+Steering example: add left right controls https://www.jstage.jst.go.jp/article/jarq/53/1/53_31/_pdf/-char/ja
+/https://static.nhtsa.gov/odi/inv/2016/INCLA-PE16007-7876.PDF--/
+
+-------------------------------------------- END MODULE main----------------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE Vehicle_System( cmd_to_HW,  cmd_to_SW, cmd_to_Mech, cmd_to_Comm, cmd_to_Interaction)		
+	VAR
+		HW : HardWare(cmd_to_HW);
+		SW : SoftWare(cmd_to_SW);
+		MECH : Mechanical(cmd_to_Mech);
+		COMM : Communication(cmd_to_Comm);		
+		INTER : Interaction(cmd_to_Interaction);
+
+	DEFINE
+		mode_event_HW := HW.mode_event_HW;
+		mode_event_SW:= SW.mode_event_SW; 
+		mode_event_Mech := MECH.mode_event_Mech;
+        	mode_event_Comm := COMM.mode_event_Comm;
+		mode_event_Interaction := INTER.mode_event_Interaction;	
+	    init_state_HW := HW.init_state_HW;
+      	    init_state_SW := SW.init_state_SW; 
+	    init_state_Mech  := MECH.init_state_Mech;
+       	    init_state_Comm := COMM.init_state_Comm;
+	    init_state_Interaction := INTER.init_state_Interaction;
+------------------------------------------------- END MODULE Vehicle_System---------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE HardWare(cmd) 	
+DEFINE
+index_primary_sensor := 0;
+index_backup_sensor := 5;  --1 to 5 NOT A GOOD APPROACH TO SEGMENT COMMAND ARRAY BUT IT WILL KEEP Model DEVELOPMENT SIMPLE. 
+index_integeration_platform := 7;  --1 to 5 NOT A GOOD APPROACH TO SEGMENT COMMAND ARRAY BUT IT WLL KEEP CHANGES SIMPLE. 
+VAR
+	IP : IntegerationPlatrom(cmd, index_integeration_platform);
+	PS : PrimarySensor(cmd,index_primary_sensor);
+	BS :BackupSensor(cmd, index_backup_sensor);
+DEFINE
+
+
+fault_event_HW := [		   PS.fault_event_off_LIDAR,
+		                   PS.fault_event_off_RADAR,
+		                   PS.fault_event_off_GPS,
+		                   PS.fault_event_off_CAMERA,
+		                   PS.fault_event_off_WHEELENCODER,
+		                   BS.fault_event_off_COMM,
+		                   BS.fault_event_off_IR,
+		                   BS.fault_event_off_US,
+		                   IP.fault_event_off_INT_HW ];
+	     
+
+		nominal_event_HW := [PS.nominal_event_LIDAR, 
+		                     PS.nominal_event_RADAR, 
+		                     PS.nominal_event_GPS, 
+		                     PS.nominal_event_CAMERA, 
+		                     PS.nominal_event_WHEELENCODER,
+		                     BS.nominal_event_COMM, 
+		                     BS.nominal_event_IR, 
+		                     BS.nominal_event_US,
+		                     IP.nominal_event_INT_HW ];
+		mode_event_HW := [fault_event_HW, nominal_event_HW];
+		init_state_HW	:=  [	PS.init_lidar,                          
+								PS.init_radar,                                   
+								PS.init_gps,                       													
+								PS.init_camera,                                                 
+								PS.init_wheel_encoder,             
+                          
+								BS.init_Comm,                            
+								BS.init_IR,                                
+								BS.init_US,                     
+							IP.init_integeration_platform_hardware];        
+------------------------------------------------- END MODULE Hardware---------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE SoftWare(cmd) 
+	DEFINE 
+		init_control_algorithm := off; 
+		init_software := off; 
+		
+	VAR
+		CA: controlalgorithm(cmd[index_control_algorithm], init_control_algorithm );
+		SW: softwarefailures(cmd[index_software], init_software);
+	DEFINE
+		is_functional := fault_event_failed_algorithm & fault_event_failed_software ;
+--& fault_event_hanged_algorithm  & fault_event_hanged_software;
+--signals in matrix format for controller to decide what should be done	
+	DEFINE	
+		index_control_algorithm := 0;
+		index_software := 1;
+	
+		
+		fault_event_failed_SW :=  [fault_event_failed_algorithm,  fault_event_failed_software];		
+		
+		
+		nominal_event_SW := [nomina_event_control_algorithm, nominal_event_software];
+		fault_event_failed_algorithm 	:=   CA.fault_event_stuck_at_off;
+		fault_event_failed_software 	:=   SW.fault_event_stuck_at_off;
+
+		
+		nomina_event_control_algorithm 		:=   CA.nominal_event;
+		nominal_event_software 		:=   SW.nominal_event;
+				
+			
+		mode_event_SW   := [fault_event_failed_SW,   nominal_event_SW];
+								
+		init_state_SW	:=  [	init_control_algorithm, init_software];                               --1
+	
+--  *************************END MODULE Software*********************************
+--  *************************END MODULE Software*********************************
+                         
+MODULE Mechanical(cmd) --undeveloped event
+
+	DEFINE 
+		init_steering_system := off;
+		init_braking_system := off;
+		init_conveyor_system := off;
+		--assme membrance can not fail	
+	VAR
+		STEER: steering(cmd[index_steering_system], init_steering_system );
+		BRAK: braking(cmd[index_braking_system],init_braking_system );
+		CONV:  conveyor(cmd[index_conveyor_system], init_conveyor_system);
+	DEFINE
+		is_functional := count(fault_event_off_steering_system , fault_event_off_braking_system ,  fault_event_off_conveyor_system) = 0;		
+		
+--signals in matrix format for controller to decide what should be done	
+	DEFINE	
+		index_steering_system := 0;
+		index_braking_system := 1;
+		index_conveyor_system := 2;
+		
+   	fault_event_Mech := [fault_event_off_steering_system,   fault_event_off_braking_system, fault_event_off_conveyor_system];    		
+		                
+
+		nominal_event_Mech := [  nominal_event_steering_system, nominal_event_SWraking_system, nominal_event_conveyor_system];
+		
+		fault_event_off_steering_system := STEER.fault_event_stuck_at_off;
+		fault_event_off_braking_system := BRAK.fault_event_stuck_at_off;
+		fault_event_off_conveyor_system := CONV.fault_event_stuck_at_off;
+		nominal_event_steering_system 	:= STEER.nominal_event;
+		nominal_event_SWraking_system 	:= BRAK.nominal_event;
+		nominal_event_conveyor_system 	:= CONV.nominal_event;
+		mode_event_Mech := [		fault_event_Mech,  nominal_event_Mech ];  
+		init_state_Mech	:=  [	init_steering_system,  init_braking_system, init_conveyor_system];
+         
+--  *************************END MODULE Mechanical*********************************
+--  *************************END MODULE Mechanical*********************************
+MODULE Communication(cmd)	
+DEFINE 
+		init_database  := off;
+		init_lte := off;
+		
+	VAR
+		DBMS: database(cmd[index_database ], init_database );
+		LTE: lte(cmd[index_lte], init_lte);
+	DEFINE
+		is_functional := fault_event_failed_DBMS & fault_event_failed_lte;
+--signals in matrix format for controller to decide what should be done	
+	DEFINE	
+		index_database  := 0;
+		index_lte := 1;
+		
+	 		
+						
+		fault_event_Comm := [fault_event_failed_DBMS,   fault_event_failed_lte];	
+		
+		nominal_event_Comm := [nominal_event_CM , nominal_event_TS ];
+		
+		fault_event_failed_DBMS := DBMS.fault_event_stuck_at_off;
+		fault_event_failed_lte := LTE.fault_event_stuck_at_off;	
+			
+		nominal_event_CM 	:= DBMS.nominal_event;
+		nominal_event_TS 	:= LTE.nominal_event;		
+		
+		mode_event_Comm := [		fault_event_Comm, nominal_event_Comm ];
+								
+		init_state_Comm	:=  [	init_database,  init_lte];   																		                        
+--  *************************END MODULE Communication*********************************
+--  *************************END MODULE Communication*********************************
+	
+MODULE Interaction(cmd)		
+	DEFINE 
+		init_command_generation  	:=  off;
+		init_command_interpretation 			:=  off;
+	--DEFINE
+		--is_functional := fault_event_worng_command_generation & fault_event_worng_command_interpretation;
+	VAR
+		CMDG : commandgeneration(cmd[index_command_generation], init_command_generation );
+		CMDI  : commandinterpretation( cmd[index_command_interpretation], init_command_interpretation);
+		--signals in matrix format for controller to decide what should be done	
+	DEFINE	
+		index_command_generation 	 := 0;
+		index_command_interpretation 			:= 1; 
+		fault_event_Interaction := [fault_event_worng_command_generation,    fault_event_command_missed, fault_event_command_misinterperated ];    	
+		nominal_event_Interaction := [nominal_event_CMDG, nominal_event_CMDI, nominal_event_CMDI];
+		fault_event_worng_command_generation := CMDG.fault_event_stuck_at_off;
+		fault_event_command_missed  := CMDI.fault_event_stuck_at_off;	
+		fault_event_command_misinterperated := CMDI.fault_event_stuck_at_off;	
+			
+		nominal_event_CMDG 	:= CMDG.nominal_event;
+		nominal_event_CMDI 	:= CMDI.nominal_event;		
+		mode_event_Interaction   := [fault_event_Interaction, nominal_event_Interaction ];  								
+		init_state_Interaction	:=  [	init_command_generation, init_command_interpretation];  
+------------------------------------------------- END MODULE Hardware Human Interaction---------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+
+MODULE IntegerationPlatrom (cmd, index)
+DEFINE
+		init_integeration_platform_hardware := off;
+
+DEFINE	
+		index_integeration_platform_hardware := index + 0;		
+
+
+VAR
+		INT_HW: integeration_hardware(cmd[index_integeration_platform_hardware],init_integeration_platform_hardware);
+
+DEFINE
+		fault_event_off_INT_HW := INT_HW.fault_event_stuck_at_off ;
+		nominal_event_INT_HW 	:= INT_HW.nominal_event;          
+  
+------------------------------------------------- END MODULE Hardware Integeration Platfrom---------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE BackupSensor(cmd,index)
+		DEFINE
+		init_Comm := off;
+		init_IR := off;
+		init_US := off;
+DEFINE	
+		index_comm := index + 0;		
+		index_ir := index + 1;
+		index_us := index + 2;
+
+VAR
+		COMM: comm(cmd[index_comm],init_Comm);
+		IR : ir(cmd[index_ir], init_IR);
+		US: us(cmd[index_us], init_US);
+
+DEFINE
+		fault_event_off_COMM := COMM.fault_event_stuck_at_off ;
+		fault_event_off_IR  := IR.fault_event_stuck_at_off;   
+		fault_event_off_US := US.fault_event_stuck_at_off;  
+
+
+		nominal_event_COMM 	:= COMM.nominal_event;            
+		nominal_event_IR  	:= IR.nominal_event;
+		nominal_event_US 	:= US.nominal_event;
+
+
+------------------------------------------------- END MODULE Backup Sensor---------------------------   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+MODULE PrimarySensor(cmd,index)												 
+		DEFINE
+		init_lidar := off;
+		init_radar := off; 
+		init_gps := off;
+		init_camera := off;
+		init_wheel_encoder := off;
+
+		init_Comm := off;
+		init_IR := on;
+		init_US := off;
+
+	VAR
+		LIDAR: lidar(cmd[index_lidar],init_lidar );
+		RADAR : radar(cmd[index_radar], init_radar);
+		GPS: gps(cmd[index_gps], init_gps);
+		CAMERA: camera(cmd[index_camera], init_camera);
+		WHEELENCODER : wheelencoder(cmd[index_wheel_encoder], init_wheel_encoder);
+
+		
+		
+--signals in matrix format for controller to decide what should be done	
+	DEFINE	
+		index_lidar := index + 0;		
+		index_radar := index + 1;
+		index_gps := index + 2;
+		index_camera :=  index + 3;
+		index_wheel_encoder := index + 4;
+		
+		fault_event_off_LIDAR := LIDAR.fault_event_stuck_at_off ;
+		fault_event_off_RADAR  := RADAR.fault_event_stuck_at_off;   
+		fault_event_off_GPS := GPS.fault_event_stuck_at_off;  
+		fault_event_off_CAMERA := CAMERA.fault_event_stuck_at_off;  
+		fault_event_off_WHEELENCODER :=  WHEELENCODER.fault_event_stuck_at_off;   
+
+
+		
+
+		nominal_event_LIDAR 	:= LIDAR.nominal_event;            
+		nominal_event_RADAR  	:= RADAR.nominal_event;
+		nominal_event_GPS 	:= GPS.nominal_event;
+		nominal_event_CAMERA   := CAMERA.nominal_event;
+		nominal_event_WHEELENCODER 	:= WHEELENCODER.nominal_event;
+	
+
+								
+------------------------------------------------- END MODULE Primary Sensor---------------------------   	
+--  *************************END MODULE HWircuit*********************************
+--  *************************END MODULE HWircuit*********************************
+
+
+
+ 									                        
+--  *************************END MODULE Interaction*********************************
+--  *************************END MODULE Interaction*********************************
+
+MODULE	lidar(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+	fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE LIDAR--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	radar(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+
+  ASSIGN
+   init(state) := init_state;
+    -- END MODULE RADAR--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	gps(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+   
+   -- END MODULE GPS-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	camera(cmd, init_state)
+  VAR
+    state : {on, off};	
+  -- Definition of the transition labels between nominal and faulty state --
+ IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+   -- END MODULE Camera-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	wheelencoder(cmd, init_state)
+ VAR
+    state : {on, off};
+
+  -- Definition of the transition labels between nominal and faulty states --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+
+  ASSIGN
+    init(state) := init_state;
+	-- END MODULE Wheel Encoder-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	comm(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Communication--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	ir(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Infrared--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	us(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Ultra Sound--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	integeration_hardware(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+   
+   -- END MODULE Hardware Integeration Platform -
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	controlalgorithm(cmd, init_state)
+ VAR
+    state : {on, off};
+
+  -- Definition of the transition labels between nominal and faulty states --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+
+  ASSIGN
+    init(state) := init_state;
+	-- END MODULE Control Algorithm-   
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	softwarefailures(cmd, init_state)
+ VAR
+    state : {on, off};
+
+  -- Definition of the transition labels between nominal and faulty states --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+
+  ASSIGN
+    init(state) := init_state;
+ --------------------- -- END MODULE software_failures--
+
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	steering(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Steering--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+MODULE	braking(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Braking--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	conveyor(cmd, init_state)
+  VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+  -- END MODULE Conveyor--
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+MODULE	database(cmd, init_state)
+	VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+
+-- END MODULE DATABASE-	
+
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+MODULE	lte(cmd, init_state)
+  VAR
+    state : {on, off};	
+  -- Definition of the transition labels between nominal and faulty state --
+    
+  IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+   -- END MODULE LTE-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	commandgeneration(cmd, init_state)
+	VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;
+-- END Command Generation Mo-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+MODULE	commandinterpretation(cmd, init_state)		
+	VAR
+    state : {on, off};
+  -- Definition of the transition labels between nominal and faulty state --
+ IVAR
+    failed_to_off : boolean;
+    fault_event_stuck_at_off : boolean;
+    nominal_event : boolean;
+  TRANS
+    nominal_event = FALSE;
+TRANS (fault_event_stuck_at_off =  (failed_to_off));
+  DEFINE
+    is_on := (state = on);
+  DEFINE
+    is_off := (state = off);
+  ASSIGN
+    next(state) :=
+      case
+        (cmd = cmd_on) : on;
+        (cmd = cmd_off) : off;
+        TRUE : state;
+      esac;
+  ASSIGN
+   init(state) := init_state;	
+-- END MODULE Command Interpretation Mechanism-
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+		-- In order to work, the Synthesized controller uses a Monitor. The
+		-- Monitor has two goals:
+		-- 1. keep track of the modes of each component
+		-- 2. predict the behaviour of a command
+		
+MODULE Vehicle_Controller(mode_event_HW,  mode_event_SW, mode_event_Mech, mode_event_Comm, mode_event_Interaction,
+							init_state_HW,  init_state_SW, init_state_Mech, init_state_Comm, init_state_Interaction, SC )							
+
+	VAR
+		MN : Monitor(  	mode_event_HW,  mode_event_SW, mode_event_Mech, mode_event_Comm, mode_event_Interaction,
+						init_state_HW,  init_state_SW, init_state_Mech, init_state_Comm, init_state_Interaction,
+						cmd_to_HW, 	cmd_to_SW, cmd_to_Mech, 	 cmd_to_Comm, 	cmd_to_Interaction );
+
+	IVAR
+--Commands for Hardware part
+		cmd_to_lidar	:     {cmd_on     , cmd_off , nop};
+		cmd_to_radar			:     {cmd_on     , cmd_off , nop};
+		cmd_to_gps	:     {cmd_on     , cmd_off , nop};
+		cmd_to_camera				:     {cmd_on     , cmd_off , nop};
+		cmd_to_wheel_encoder			:     {cmd_on     , cmd_off , nop};
+		cmd_to_HW_comm		:     {cmd_on     , cmd_off , nop};
+		cmd_to_HW_IR					:     {cmd_on     , cmd_off , nop}; --this 
+		cmd_to_HW_US	:     {cmd_on     , cmd_off , nop};
+		cmd_to_HW_INT				:     {cmd_on    ,  cmd_off , nop};
+
+--Commands for Software Part                                    
+		cmd_to_control_algorithm                      :     {cmd_on, cmd_off, nop};
+		cmd_to_software                      :     {cmd_on, cmd_off, nop};
+--Commands for Mechanical part			
+		cmd_to_steering_system    :     {cmd_on     , cmd_off , nop};
+		cmd_to_braking_system    :     {cmd_on     , cmd_off , nop};
+		cmd_to_conveyor_system         :     {cmd_on     , cmd_off , nop};
+--Commands for Communication Part		                                    
+		cmd_to_database           :     {cmd_on     , cmd_off , nop};
+		cmd_to_lte          :     {cmd_on     , cmd_off , nop};
+--Commands for Human Vehicle Interaction Platform Part		                                           
+		cmd_to_command_generation               :     {cmd_on     , cmd_off , nop};   
+		cmd_to_command_interpretation 	                    :     {cmd_on     , cmd_off , nop};   	
+	DEFINE
+		cmd_to_HW 	:= 	[cmd_to_lidar,		
+                         cmd_to_radar,			
+                         cmd_to_gps,	
+                         cmd_to_camera,	
+                         cmd_to_wheel_encoder,		
+                         cmd_to_HW_comm,
+                         cmd_to_HW_US,							
+                         cmd_to_HW_IR,					
+                         cmd_to_HW_INT				
+                         ];	
+		cmd_to_SW   		:=	[	cmd_to_control_algorithm, cmd_to_software];							
+		cmd_to_Mech 		:= 	[	cmd_to_steering_system, cmd_to_braking_system, cmd_to_conveyor_system 	]; 
+		cmd_to_Comm 		:=	[	cmd_to_database , cmd_to_lte];
+		cmd_to_Interaction 	:= 	[	cmd_to_command_generation, cmd_to_command_interpretation] ;	     
+--we need to code the logic of controller here all the functional requirements
+
+/--DEFIINE
+		is_HW_functional  := MN.mode_est_HW_LIDAR = ok  ; /--&   MN.mode_est_HW_BP    = ok &
+							  MN.mode_est_HW_COMM  = ok &   MN.mode_est_HW_IR  = ok &   MN.mode_est_HW_RADAR   = ok &   MN.mode_est_HW_GPS  = ok &   
+							  MN.mode_est_HW_US  = ok &   MN.mode_est_HW_CAMERA  = ok &   MN.mode_est_HW_WHEELENCODER   = ok &   MN.mode_est_HW_INT   = ok &   MN.mode_est_HW_AC   = ok ; --/
+		is_Mechanical_functional  :=  MN.mode_est_MECH_STEER  = ok &   MN.mode_est_MECH_BRAK  = ok &   MN.mode_est_MECH_CONV   = ok ;
+		is_Software_functional   :=  MN.mode_est_SW_CA     = ok &   MN.mode_est_SW_SWF     = ok ;   
+		is_Communication_functional :=  MN.mode_est_COMM_DBMS   = ok &   MN.mode_est_COMM_LTE   = ok ;
+		is_Passenger_interaction_functional :=  MN.mode_est_CMDG   = ok &   MN.mode_est_CMDI    = ok ;		
+
+--/
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--*****************This segment is adopted from silvia code*******************************************************************************************************************************************************
+--************************************************************************************************************************************************************************			
+------------Feedback status from Monitor module to check health of machine.
+	DEFINE	
+
+	is_primary_sensor_functional := MN.mode_est_HW_LIDAR = ok & MN.mode_est_HW_RADAR =ok  & MN.mode_est_HW_GPS = ok  & MN.mode_est_HW_CAMERA =ok  & MN.mode_est_HW_WHEELENCODER =ok;  
+	is_backup_sensor_functional := MN.mode_est_HW_US = ok &  MN.mode_est_HW_COMM  = ok &  MN.mode_est_HW_IR  = ok;
+	is_hardware_interaction_functional := MN.mode_est_HW_INT = ok;
+
+     is_HW_functional  :=  (is_primary_sensor_functional | is_backup_sensor_functional) & is_hardware_interaction_functional; 
+ is_software_functional :=  (MN.mode_est_SW_SWF = ok & MN.mode_est_SW_CA = ok);
+ is_mechanical_functional := (MN.mode_est_MECH_STEER = ok & MN.mode_est_MECH_BRAK = ok & MN.mode_est_MECH_CONV = ok);
+ is_communication_functional :=  (MN.mode_est_COMM_DBMS = ok & MN.mode_est_COMM_LTE = ok);
+ is_interaction_functional :=  (MN.mode_est_CMDG = ok | MN.mode_est_CMDI = ok);
+
+	is_vehcile_running := is_interaction_functional & is_HW_functional & is_software_functional & is_mechanical_functional & is_communication_functional ;
+
+
+--  *************************@@@@@@@@@@@@*********************************
+--  *************************@@@@@@@@@@@*********************************
+
+-- END MODULE CONTROLLER --
+
+
+MODULE Monitor	(	mode_event_HW,  mode_event_SW, mode_event_Mech, mode_event_Comm, mode_event_Interaction,
+					init_state_HW,  init_state_SW, init_state_Mech, init_state_Comm, init_state_Interaction,
+					cmd_to_HW, 	cmd_to_SW,  cmd_to_Mech, 	 cmd_to_Comm, 	cmd_to_Interaction		)
+
+--definition of monitors to estimate circuit components
+	VAR
+
+
+
+		mode_est_HW_LIDAR     : {ok, ko};
+		mode_est_HW_RADAR      : {ok, ko};
+		mode_est_HW_GPS     : {ok, ko};
+		mode_est_HW_CAMERA     : {ok, ko};
+		mode_est_HW_WHEELENCODER      : {ok, ko};
+
+		mode_est_HW_COMM     : {ok, ko};
+		mode_est_HW_IR     : {ok, ko};
+		mode_est_HW_US     : {ok, ko};
+		mode_est_HW_INT      : {ok, ko};
+		mode_est_SW_CA        : {ok, ko};
+		mode_est_SW_SWF        : {ok, ko};
+
+		mode_est_MECH_STEER     : {ok, ko};
+		mode_est_MECH_BRAK     : {ok, ko};
+		mode_est_MECH_CONV  	 : {ok, ko};
+	
+		mode_est_COMM_DBMS      : {ok, ko};
+		mode_est_COMM_LTE      : {ok, ko};
+		mode_est_CMDG		 : {ok, ko};					
+		mode_est_CMDI       : {ok, ko};
+		mode_est_HW_BP       : {ok, ko};
+		
+		state_est_HW_LIDAR    : {on, off};
+		state_est_HW_RADAR     : {on, off};
+		state_est_HW_GPS    : {on, off};
+		state_est_HW_CAMERA    : {on, off};
+		state_est_HW_WHEELENCODER     : {on, off};
+
+		state_est_HW_COMM    : {on, off};
+		state_est_HW_IR    : {on, off};
+		state_est_HW_US    : {on, off};
+		state_est_HW_INT     : {on, off};
+
+		state_est_BC_STEER    : {on, off};
+		state_est_BC_BRAK    : {on, off};
+		state_est_BC_CONV  	 : {on, off};
+		state_est_B_CA       : {on, off};
+		state_est_B_SW       : {on, off};
+		state_est_DFP_CM     : {on, off};
+		state_est_DFP_TS     : {on, off};
+		state_est_DWP_DC	 : {on, off};
+		state_est_DWP_H     : {on, off};
+		state_est_HW_BP    : {on, off};
+	DEFINE
+		faults_counter := count ( mode_est_HW_LIDAR  != ok ,
+		                          mode_est_HW_RADAR   != ok ,
+		                          mode_est_HW_GPS  != ok ,
+		                          mode_est_HW_CAMERA  != ok ,
+		                          mode_est_HW_WHEELENCODER   != ok ,
+		                          mode_est_HW_COMM  != ok ,
+		                          mode_est_HW_IR  != ok ,
+		                          mode_est_HW_US  != ok ,
+		                          mode_est_HW_INT   != ok ,                         
+		                          mode_est_SW_CA     != ok ,
+		                          mode_est_SW_SWF     != ok ,
+					 mode_est_MECH_STEER  != ok ,
+		                          mode_est_MECH_BRAK  != ok ,
+		                          mode_est_MECH_CONV   != ok ,
+		                          mode_est_COMM_DBMS   != ok ,
+		                          mode_est_COMM_LTE   != ok ,
+		                          mode_est_CMDG   != ok ,
+		                          mode_est_CMDI    != ok ,
+								  mode_est_HW_BP   != ok);
+
+		
+	DEFINE	
+	fault_event_off_HW	 	:=  mode_event_HW[0];
+
+	fault_event_off_MECH  	:= 	mode_event_Mech[0];
+	fault_event_off_SW 	:=  mode_event_SW[0];
+	fault_event_off_COMM 	:= 	mode_event_Comm[0];
+	fault_event_off_INTERACT 	:= 	mode_event_Interaction[0];	
+	
+
+		
+	nominal_event_HW :=  mode_event_HW[1];
+	-----------------------------nominal_event_D : := mode_event_Dialyzer[0];
+	nominal_event_MECH  := 	mode_event_Mech[1];	
+	nominal_event_SW   := 	mode_event_SW[1];
+	nominal_event_COMM := mode_event_Comm[1];
+	nominal_event_INTERACT := mode_event_Interaction[1];	
+	--HW INDEX
+		index_lidar := 0;	
+		index_radar := 1;
+		index_gps := 2;
+		index_camera :=  3;
+		index_wheel_encoder := 4;
+		index_comm :=  5;
+		index_ir := 6;
+		index_us := 7;
+		index_interaction_HW := 8;
+	--SW INDEX
+		index_control_algorithm := 0;
+		index_software := 1;
+	--Mechanical INDEX
+		index_steering_system := 0;
+		index_braking_system := 1;
+		index_conveyor_system := 2;
+	--Failure of Communication System INDEX
+		index_database  := 0;
+		index_lte := 1;
+	--Passenger and Vehicle interaction Index
+		index_command_generation 	 := 0;
+		index_command_interpretation 			:= 1;
+		index_command_interpretation_element_short    := 2;
+
+-------------------------------------------------mode is confirmed 
+	ASSIGN
+		init(mode_est_HW_LIDAR) := ok;
+		next(mode_est_HW_LIDAR) :=
+							case
+								fault_event_off_HW[ index_lidar] : ko;
+								nominal_event_HW[index_lidar] : ok;
+								TRUE : mode_est_HW_LIDAR;
+							esac;
+	  init(mode_est_HW_RADAR)  := ok;
+		next(mode_est_HW_RADAR) :=
+							case
+								fault_event_off_HW[index_radar] : ko;
+								nominal_event_HW[index_radar] : ok;
+								TRUE : mode_est_HW_RADAR;
+							esac;
+ 	init(mode_est_HW_GPS) := ok;
+		next(mode_est_HW_GPS) :=
+							case
+								fault_event_off_HW[index_gps] : ko;
+								nominal_event_HW[index_gps] : ok;
+								TRUE : mode_est_HW_GPS;
+							esac;
+        init(mode_est_HW_CAMERA) := ok;
+		next(mode_est_HW_CAMERA) :=
+							case
+								fault_event_off_HW[index_camera] : ko;
+								nominal_event_HW[index_camera] : ok;
+								TRUE : mode_est_HW_CAMERA;
+							esac;
+        init(mode_est_HW_WHEELENCODER)  := ok;
+		next(mode_est_HW_WHEELENCODER) :=
+							case
+								fault_event_off_HW[index_wheel_encoder] : ko;
+								nominal_event_HW[index_wheel_encoder] : ok;
+								TRUE : mode_est_HW_WHEELENCODER;
+							esac;
+        init(mode_est_HW_INT)  := ok;
+		init(mode_est_HW_COMM) := ok;
+		next(mode_est_HW_COMM) :=
+							case
+								fault_event_off_HW[index_comm] : ko;
+								nominal_event_HW[index_comm] : ok;
+								TRUE : mode_est_HW_COMM;
+							esac;
+        init(mode_est_HW_IR) := ok;
+		next(mode_est_HW_IR) :=
+							case
+								fault_event_off_HW[index_ir] : ko;
+								nominal_event_HW[index_ir] : ok;
+								TRUE : mode_est_HW_IR;
+							esac;
+        init(mode_est_HW_US) := ok;
+		next(mode_est_HW_US) :=
+							case
+								fault_event_off_HW[index_us] : ko;
+								nominal_event_HW[index_us] : ok;
+								TRUE : mode_est_HW_US;
+							esac;
+  
+		next(mode_est_HW_INT) :=
+							case
+								fault_event_off_HW[index_interaction_HW] : ko;
+								nominal_event_HW[index_interaction_HW] : ok;
+								TRUE : mode_est_HW_INT;
+							esac;    
+	ASSIGN			
+        init(mode_est_MECH_STEER) := ok;
+		next(mode_est_MECH_STEER) :=
+							case
+								fault_event_off_MECH[index_steering_system] : ko;
+								nominal_event_MECH[index_steering_system] : ok;
+								TRUE : mode_est_MECH_STEER;
+							esac;
+        init(mode_est_MECH_BRAK) := ok;
+		next(mode_est_MECH_BRAK) :=
+							case
+								fault_event_off_MECH[index_braking_system] : ko;
+								nominal_event_MECH[index_braking_system] : ok;
+								TRUE : mode_est_MECH_BRAK;
+							esac;
+        init(mode_est_MECH_CONV)  := ok;
+		next(mode_est_MECH_CONV) :=
+							case
+								fault_event_off_MECH[index_conveyor_system] : ko;
+								nominal_event_MECH[index_conveyor_system] : ok;
+								TRUE : mode_est_MECH_CONV;
+							esac;
+		
+	ASSIGN	
+        init(mode_est_SW_CA)    := ok;
+		next(mode_est_SW_CA) :=
+							case
+								fault_event_off_SW[index_control_algorithm] : ko;
+								nominal_event_SW[index_control_algorithm] : ok;
+								TRUE : mode_est_SW_CA;
+							esac;
+        init(mode_est_SW_SWF)    := ok;
+		next(mode_est_SW_SWF) :=
+							case
+								fault_event_off_SW[index_software] : ko;
+								nominal_event_SW[index_software] : ok;
+								TRUE : mode_est_SW_SWF;
+							esac;
+	  
+	ASSIGN			
+        init(mode_est_COMM_DBMS)  := ok;
+			next(mode_est_COMM_DBMS) :=
+							case
+								fault_event_off_COMM[index_database] : ko;
+								nominal_event_COMM[index_database] : ok;
+								TRUE : mode_est_COMM_DBMS;
+							esac;
+        init(mode_est_COMM_LTE)  := ok;
+			next(mode_est_COMM_LTE) :=
+							case
+								fault_event_off_COMM[index_lte] : ko;
+								nominal_event_COMM[index_lte] : ok;
+								TRUE : mode_est_COMM_LTE;
+							esac;		
+		
+	ASSIGN
+		
+        init(mode_est_CMDG)  := ok;
+			next(mode_est_CMDG) :=
+							case
+								fault_event_off_INTERACT[index_command_generation] : ko;
+								nominal_event_INTERACT[index_command_generation] : ok;
+								TRUE : mode_est_CMDG;
+							esac;
+		
+        init(mode_est_CMDI)   := ok;
+			next(mode_est_CMDI) :=
+							case
+								fault_event_off_INTERACT[index_command_interpretation] : ko;        
+								nominal_event_INTERACT[index_command_interpretation] : ok;								
+								TRUE : mode_est_CMDI;
+							esac;
+--------------------------------------------initial state is confirmed---------
+ASSIGN
+		init(state_est_HW_LIDAR) := init_state_HW[index_lidar];
+		next(state_est_HW_LIDAR) :=
+							case
+								fault_event_off_HW[index_lidar] : off;
+								(next(mode_est_HW_LIDAR) = ok) & (cmd_to_HW[index_lidar] = cmd_on) : on;
+								(next(mode_est_HW_LIDAR) = ok) & (cmd_to_HW[index_lidar] = cmd_off) : off;
+								TRUE : state_est_HW_LIDAR;
+								esac;
+		init(state_est_HW_COMM) := init_state_HW[index_comm];
+		next(state_est_HW_COMM) :=
+							case
+								fault_event_off_HW[index_comm] : off;
+								(next(mode_est_HW_COMM) = ok) & (cmd_to_HW[index_comm] = cmd_on) : on;
+								(next(mode_est_HW_COMM) = ok) & (cmd_to_HW[index_comm] = cmd_off) : off;
+								TRUE : state_est_HW_COMM;
+							esac;
+        init(state_est_HW_IR) := init_state_HW[index_ir];
+		next(state_est_HW_IR) :=
+							case
+								fault_event_off_HW[index_ir] : off;
+								(next(mode_est_HW_IR) = ok) & (cmd_to_HW[index_ir] = cmd_on) : on;
+								(next(mode_est_HW_IR) = ok) & (cmd_to_HW[index_ir] = cmd_off) : off;
+								TRUE : state_est_HW_IR;
+							esac;
+        init(state_est_HW_RADAR)  := init_state_HW[index_radar];
+		next(state_est_HW_RADAR) :=
+							case
+								fault_event_off_HW[index_radar] : off;
+								(next(mode_est_HW_RADAR) = ok) & (cmd_to_HW[index_radar] = cmd_on) : on;
+								(next(mode_est_HW_RADAR) = ok) & (cmd_to_HW[index_radar] = cmd_off) : off;
+								TRUE : state_est_HW_RADAR;
+							esac;
+        init(state_est_HW_GPS) := init_state_HW[index_gps];
+		next(state_est_HW_GPS) :=
+							case
+								fault_event_off_HW[index_gps] : off;
+								(next(mode_est_HW_GPS) = ok) & (cmd_to_HW[index_gps] = cmd_on) : on;
+								(next(mode_est_HW_GPS) = ok) & (cmd_to_HW[index_gps] = cmd_off) : off;
+								TRUE : state_est_HW_GPS;
+							esac;
+        init(state_est_HW_US) := init_state_HW[index_us];
+		next(state_est_HW_US) :=
+							case
+								fault_event_off_HW[index_us] : off;
+								(next(mode_est_HW_US) = ok) & (cmd_to_HW[index_us] = cmd_on) : on;
+								(next(mode_est_HW_US) = ok) & (cmd_to_HW[index_us] = cmd_off) : off;
+								TRUE : state_est_HW_US;
+							esac;
+        init(state_est_HW_CAMERA) := init_state_HW[index_camera];
+		next(state_est_HW_CAMERA) :=
+							case
+								fault_event_off_HW[index_camera] : off;
+								(next(mode_est_HW_CAMERA) = ok) & (cmd_to_HW[index_camera] = cmd_on) : on;
+								(next(mode_est_HW_CAMERA) = ok) & (cmd_to_HW[index_camera] = cmd_off) : off;
+								TRUE : state_est_HW_CAMERA;
+							esac;
+        init(state_est_HW_WHEELENCODER)  := init_state_HW[index_wheel_encoder];
+		next(state_est_HW_WHEELENCODER) :=
+							case
+								fault_event_off_HW[index_wheel_encoder] : off;
+								(next(mode_est_HW_WHEELENCODER) = ok) & (cmd_to_HW[index_wheel_encoder] = cmd_on) : on;
+								(next(mode_est_HW_WHEELENCODER) = ok) & (cmd_to_HW[index_wheel_encoder] = cmd_off) : off;
+								TRUE : state_est_HW_WHEELENCODER;
+							esac;
+        init(state_est_HW_INT)  := init_state_HW[index_interaction_HW];
+		next(state_est_HW_INT) :=
+							case
+								fault_event_off_HW[index_interaction_HW] : off;
+								(next(mode_est_HW_INT) = ok) & (cmd_to_HW[index_interaction_HW] = cmd_on) : on;
+								(next(mode_est_HW_INT) = ok) & (cmd_to_HW[index_interaction_HW] = cmd_off) : off;
+								TRUE : state_est_HW_INT;
+							esac;
+   
+	ASSIGN			
+        init(state_est_BC_STEER) := init_state_Mech[index_steering_system];
+		next(state_est_BC_STEER) :=
+							case
+								fault_event_off_MECH[index_steering_system] : off;
+								(next(mode_est_MECH_STEER) = ok) & (cmd_to_Mech[index_steering_system] = cmd_on) : on;
+								(next(mode_est_MECH_STEER) = ok) & (cmd_to_Mech[index_steering_system] = cmd_off) : off;
+								TRUE : state_est_BC_STEER;
+							esac;
+        init(state_est_BC_BRAK) := init_state_Mech[index_braking_system];
+		next(state_est_BC_BRAK) :=
+							case
+								fault_event_off_MECH[index_braking_system] : off;
+								(next(mode_est_MECH_BRAK) = ok) & (cmd_to_Mech[index_braking_system] = cmd_on) : on;
+								(next(mode_est_MECH_BRAK) = ok) & (cmd_to_Mech[index_braking_system] = cmd_off) : off;
+								TRUE : state_est_BC_BRAK;
+							esac;
+        init(state_est_BC_CONV)  := init_state_Mech[index_conveyor_system];
+		next(state_est_BC_CONV) :=
+							case
+								fault_event_off_MECH[index_conveyor_system] : off;
+								(next(mode_est_MECH_CONV) = ok) & (cmd_to_Mech[index_conveyor_system] = cmd_on) : on;
+								(next(mode_est_MECH_CONV) = ok) & (cmd_to_Mech[index_conveyor_system] = cmd_off) : off;
+								TRUE : state_est_BC_CONV;
+							esac;
+	ASSIGN	
+        init(state_est_B_CA)    := init_state_SW[index_control_algorithm];
+		next(state_est_B_CA) :=
+							case
+							fault_event_off_SW[index_control_algorithm] : off;							
+							(next(mode_est_SW_CA) = ok) & (cmd_to_SW[index_control_algorithm] = cmd_on) : on;
+							(next(mode_est_SW_CA) = ok) & (cmd_to_SW[index_control_algorithm] = cmd_off) : off;
+								TRUE : state_est_B_CA;
+							esac;
+        init(state_est_B_SW)    := init_state_SW[index_software];
+		next(state_est_B_SW) :=
+							case
+							fault_event_off_SW[index_software] : off;
+							(next(mode_est_SW_SWF) = ok) & (cmd_to_SW[index_software] = cmd_on) : on;
+							(next(mode_est_SW_SWF) = ok) & (cmd_to_SW[index_software] = cmd_off) : off;						
+								TRUE : state_est_B_SW;
+							esac;
+	  
+	ASSIGN			
+        init(state_est_DFP_CM)  := init_state_Comm[index_database];
+			next(state_est_DFP_CM) :=
+							case
+								fault_event_off_COMM[index_database] : off;
+								(next(mode_est_COMM_DBMS) = ok) & (cmd_to_Comm[index_database] = cmd_on) : on;
+								(next(mode_est_COMM_DBMS) = ok) & (cmd_to_Comm[index_database] = cmd_off) : off;
+								TRUE : state_est_DFP_CM;
+							esac;
+        init(state_est_DFP_TS)  := init_state_Comm[index_lte];
+			next(state_est_DFP_TS) :=
+							case
+								fault_event_off_COMM[index_lte] : off;
+								(next(mode_est_COMM_LTE) = ok) & (cmd_to_Comm[index_lte] = cmd_on) : on;
+								(next(mode_est_COMM_LTE) = ok) & (cmd_to_Comm[index_lte] = cmd_off) : off;
+								TRUE : state_est_DFP_TS;
+							esac;		
+		
+	ASSIGN
+		
+        init(state_est_DWP_DC)  := init_state_Interaction[index_command_generation];
+			next(state_est_DWP_DC) :=
+							case
+								fault_event_off_INTERACT[index_command_generation] : off;
+								(next(mode_est_CMDG) = ok) & (cmd_to_Interaction[index_command_generation] = cmd_on) : on;
+								(next(mode_est_CMDG) = ok) & (cmd_to_Interaction[index_command_generation] = cmd_off) : off;
+								TRUE : state_est_DWP_DC;
+							esac;
+		
+        init(state_est_DWP_H)   := init_state_Interaction[index_command_interpretation];
+			next(state_est_DWP_H) :=
+							case
+								fault_event_off_INTERACT[index_command_interpretation] : off;
+								(next(mode_est_CMDI) = ok) & (cmd_to_Interaction[index_command_interpretation] = cmd_on) : on;
+								(next(mode_est_CMDI) = ok) & (cmd_to_Interaction[index_command_interpretation] = cmd_off) : off;
+								TRUE : state_est_DWP_H;
+							esac;
+
