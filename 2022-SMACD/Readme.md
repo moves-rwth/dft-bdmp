@@ -1,6 +1,6 @@
-# Supplementary material for NFM 2022 short paper
+# Supplementary material for SMACD 2022 paper
 
-This directory contains information to reproduce the results reported in the NFM2022 short paper. 
+This directory contains information to reproduce the results reported in the SMACD 2022 paper. 
 
 ## Files
 [Case-study](Case-study) contains the SMV and the FEI files of the automated vechile system.
