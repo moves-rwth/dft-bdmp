@@ -1,0 +1,125 @@
+
+----------------------------------------------------------------------
+Invoking: /home/shahid/xSAP/bin/xSAP-linux64 -v 5 -sa_compass -sa_ft_layering -sa_compass_task out/fms_AVN.xml -pre cpp -int
+
+----------------------------------------------------------------------
+*** This is xSAP 1.2.0 (compiled on Tue Aug 22 11:22:50 2017)
+*** Copyright (c) 2014, Fondazione Bruno Kessler
+
+*** For more information on xSAP see https://xsap.fbk.eu
+*** or email to <xsap@list.fbk.eu>.
+*** Please to report bugs access at https://xsap.fbk.eu/bugs
+*** Alternatively write to <xsap@list.fbk.eu>.
+
+*** This version of xSAP is linked to NuSMV 2.6.0.
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Copyright (C) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of xSAP is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of xSAP is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+*** This version of xSAP is linked to MathSAT
+*** Copyright (C) 2014 by Fondazione Bruno Kessler
+*** Copyright (C) 2014 by University of Trento
+*** See http://mathsat.fbk.eu
+
+xSAP > xSAP > xSAP > Dynamic variable ordering is enabled with method "sift".
+xSAP > xSAP > xSAP > DONE_GO 
+xSAP > calculated failure variables: _hist_var_1_VS_HW_PS_LIDAR_lidar_failed_mode_is_lidar_failed_TRUE, _hist_var_2_VS_HW_PS_RADAR_radar_failed_mode_is_radar_failed_TRUE, _hist_var_3_VS_HW_PS_GPS_gps_failed_mode_is_gps_failed_TRUE, _hist_var_4_VS_HW_PS_CAMERA_camera_failed_mode_is_camera_failed_TRUE, _hist_var_5_VS_HW_PS_WHEELENCODER_wheel_encoder_failed_mode_is_wheel_encoder_failed_TRUE, _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE, _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE, _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE, _hist_var_9_VS_HW_IP_INT_HW_HW_integeration_failure_mode_is_harware_integeration_failure_TRUE, _hist_var_10_VS_SW_CA_SW_control_algorithm_failure_mode_is_SW_CA_fail_TRUE, _hist_var_11_VS_SW_SW_SW_software_failure_mode_is_SW_SW_fail_TRUE, _hist_var_12_VS_MECH_STEER_MECH_steering_failure_mode_is_MECH_steering_fail_TRUE, _hist_var_13_VS_MECH_BRAK_MECH_braking_failure_mode_is_MECH_braking_fail_TRUE, _hist_var_14_VS_MECH_CONV_MECH_conveyor_failure_mode_is_MECH_conveyor_fail_TRUE, _hist_var_15_VS_COMM_DBMS_COMM_database_failure_mode_is_COMM_database_fail_TRUE, _hist_var_16_VS_COMM_LTE_COMM_lte_failure_mode_is_COMM_lte_fail_TRUE, _hist_var_17_VS_INTER_CMDG_INTERACT_CMDgeneration_failure_mode_is_INTERACT_CMDgeneration_fail_TRUE, _hist_var_18_VS_INTER_CMDI_INTERACT_CMDinterpretation_failure_mode_is_INTERACT_CMDinterpretation_fail_TRUE
+
+Evaluating specification using layering ... 
+Abstracting non-failure variables ... done!
+
+Abstracting non-failure variables ... done!
+
+Abstracting non-failure variables ... done!
+done!
+
+Skipping intermediate print of minterms
+
+
+Running minimization algorithm ... done!
+
+Computing Array of Failure States (dim = 16) ... done!
+
+-- minimal cut sets for specification !VC.is_HW_functional
+
+***************  MINIMAL CUT SETS  *************
+
+1) -------------------------
+    _hist_var_4_VS_HW_PS_CAMERA_camera_failed_mode_is_camera_failed_TRUE = TRUE
+    _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE = TRUE
+
+2) -------------------------
+    _hist_var_4_VS_HW_PS_CAMERA_camera_failed_mode_is_camera_failed_TRUE = TRUE
+    _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE = TRUE
+
+3) -------------------------
+    _hist_var_9_VS_HW_IP_INT_HW_HW_integeration_failure_mode_is_harware_integeration_failure_TRUE = TRUE
+
+4) -------------------------
+    _hist_var_5_VS_HW_PS_WHEELENCODER_wheel_encoder_failed_mode_is_wheel_encoder_failed_TRUE = TRUE
+    _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE = TRUE
+
+5) -------------------------
+    _hist_var_5_VS_HW_PS_WHEELENCODER_wheel_encoder_failed_mode_is_wheel_encoder_failed_TRUE = TRUE
+    _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE = TRUE
+
+6) -------------------------
+    _hist_var_4_VS_HW_PS_CAMERA_camera_failed_mode_is_camera_failed_TRUE = TRUE
+    _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE = TRUE
+
+7) -------------------------
+    _hist_var_5_VS_HW_PS_WHEELENCODER_wheel_encoder_failed_mode_is_wheel_encoder_failed_TRUE = TRUE
+    _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE = TRUE
+
+8) -------------------------
+    _hist_var_3_VS_HW_PS_GPS_gps_failed_mode_is_gps_failed_TRUE = TRUE
+    _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE = TRUE
+
+9) -------------------------
+    _hist_var_3_VS_HW_PS_GPS_gps_failed_mode_is_gps_failed_TRUE = TRUE
+    _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE = TRUE
+
+10) -------------------------
+    _hist_var_3_VS_HW_PS_GPS_gps_failed_mode_is_gps_failed_TRUE = TRUE
+    _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE = TRUE
+
+11) -------------------------
+    _hist_var_1_VS_HW_PS_LIDAR_lidar_failed_mode_is_lidar_failed_TRUE = TRUE
+    _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE = TRUE
+
+12) -------------------------
+    _hist_var_1_VS_HW_PS_LIDAR_lidar_failed_mode_is_lidar_failed_TRUE = TRUE
+    _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE = TRUE
+
+13) -------------------------
+    _hist_var_1_VS_HW_PS_LIDAR_lidar_failed_mode_is_lidar_failed_TRUE = TRUE
+    _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE = TRUE
+
+14) -------------------------
+    _hist_var_2_VS_HW_PS_RADAR_radar_failed_mode_is_radar_failed_TRUE = TRUE
+    _hist_var_6_VS_HW_BS_COMM_communication_failure_mode_is_backup_sensor_communication_failure_TRUE = TRUE
+
+15) -------------------------
+    _hist_var_2_VS_HW_PS_RADAR_radar_failed_mode_is_radar_failed_TRUE = TRUE
+    _hist_var_8_VS_HW_BS_US_us_failure_mode_is_backup_sensor_us_failure_TRUE = TRUE
+
+16) -------------------------
+    _hist_var_2_VS_HW_PS_RADAR_radar_failed_mode_is_radar_failed_TRUE = TRUE
+    _hist_var_7_VS_HW_BS_IR_ir_failure_mode_is_backup_sensor_ir_failure_TRUE = TRUE
+
+***************  STATISTICS  *************
+
+    Order          Number           Cumul
+        0               0               0
+        1               1               1
+        2              15              16
+
+xSAP > END OF COMPUTE_FAULT_TREE_BDD 

@@ -1,0 +1,42 @@
+*** This is xSAP 1.2.0 (compiled on Tue Aug 22 11:22:50 2017)
+*** Copyright (c) 2014, Fondazione Bruno Kessler
+
+*** For more information on xSAP see https://xsap.fbk.eu
+*** or email to <xsap@list.fbk.eu>.
+*** Please to report bugs access at https://xsap.fbk.eu/bugs
+*** Alternatively write to <xsap@list.fbk.eu>.
+
+*** This version of xSAP is linked to NuSMV 2.6.0.
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Copyright (C) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of xSAP is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of xSAP is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+*** This version of xSAP is linked to MathSAT
+*** Copyright (C) 2014 by Fondazione Bruno Kessler
+*** Copyright (C) 2014 by University of Trento
+*** See http://mathsat.fbk.eu
+
+
+----------------------------------------------------------------------
+Invoking:
+/home/shahid/xSAP/bin/xSAP-linux64 -source out/xsap_extend_model.cmd
+----------------------------------------------------------------------
+Content of out/xsap_extend_model.cmd is:
+set on_failure_script_quits
+read_model -i "AVN.smv"
+flatten_hierarchy
+fe_load_doc -o "out/errors.log"  -p "/home/shahid/xSAP/data/schema" -i "out/expanded_AVN.xml"
+fe_extend_module -m "out/fms_AVN.xml"   -o "out/extended_AVN.smv"
+quit
+
+----------------------------------------------------------------------
+xsap returned 0
+----------------------------------------------------------------------

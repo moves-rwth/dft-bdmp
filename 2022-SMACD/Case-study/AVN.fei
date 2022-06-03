@@ -1,0 +1,184 @@
+/-- Description of the whole fault extension
+    (multiline)--/
+
+FAULT EXTENSION FE_SC_HD
+      EXTENSION OF MODULE lidar
+         -- Description of Fault Slice lidar failure --
+         SLICE lidar_failed AFFECTS state WITH	 
+           -- Description of fault mode   permanently failed to off state --
+           MODE lidar_failed {1.e-1}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+
+EXTENSION OF MODULE radar
+         -- Description of Fault Slice radar failure --
+         SLICE radar_failed AFFECTS state WITH	 
+           -- Description of fault mode   permanently failed to off state --
+           MODE radar_failed {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+EXTENSION OF MODULE gps
+         -- Description of Fault Slice gps failure --
+         SLICE gps_failed AFFECTS state WITH	 
+           -- Description of fault mode   permanently failed to off state --
+           MODE gps_failed {925.e-5}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+EXTENSION OF MODULE camera
+         -- Description of Fault Slice camera  failure --
+         SLICE camera_failed AFFECTS state WITH	 
+           -- Description of fault mode   permanently failed to off state --
+           MODE camera_failed {495.e-5}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+  EXTENSION OF MODULE wheelencoder
+         -- Description of Fault Slice wheel encoder failure --
+         SLICE wheel_encoder_failed AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE wheel_encoder_failed {4.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+ EXTENSION OF MODULE comm
+             -- Description of Fault Slice communication failure --
+         SLICE communication_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE backup_sensor_communication_failure {9513.e-5}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+ EXTENSION OF MODULE ir
+             -- Description of Fault Slice infrared failure --
+         SLICE ir_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE backup_sensor_ir_failure {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+ EXTENSION OF MODULE us
+             -- Description of Fault Slice infrared failure --
+         SLICE us_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE backup_sensor_us_failure {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+
+ EXTENSION OF MODULE integeration_hardware
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE HW_integeration_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE harware_integeration_failure {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);
+
+EXTENSION OF MODULE controlalgorithm
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE SW_control_algorithm_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE SW_CA_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);     
+           
+ EXTENSION OF MODULE softwarefailures
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE SW_software_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE SW_SW_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);     
+
+ EXTENSION OF MODULE steering
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE MECH_steering_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE MECH_steering_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);     
+   EXTENSION OF MODULE braking
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE MECH_braking_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE MECH_braking_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);    
+   EXTENSION OF MODULE conveyor
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE MECH_conveyor_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE MECH_conveyor_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);        
+   
+EXTENSION OF MODULE database
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE COMM_database_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE COMM_database_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);           
+      
+EXTENSION OF MODULE lte
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE COMM_lte_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE COMM_lte_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);           
+                             
+EXTENSION OF MODULE commandgeneration
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE INTERACT_CMDgeneration_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE INTERACT_CMDgeneration_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);   
+        
+  EXTENSION OF MODULE commandinterpretation
+             -- Description of Fault Slice integeration harware of hardware integeration assembly failure --
+         SLICE INTERACT_CMDinterpretation_failure AFFECTS state WITH	 
+           -- Description of fault mode permanently failed to off state --
+           MODE INTERACT_CMDinterpretation_fail {2.e-2}: Permanent StuckAtByValue_D(
+        		  data term << off,
+                     data input << state,
+                      data varout >> state,
+                      event failure >> failed_to_off);               
+
+
+

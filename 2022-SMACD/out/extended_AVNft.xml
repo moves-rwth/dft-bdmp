@@ -1,0 +1,67 @@
+<fault-tree>
+    <gate type="OR" name="Top_Level_Event" description="!VC.is_HW_functional" page="Off">
+      <gate type="AND" name="fault_cfg_1" description="" page="Off">
+        <event name="E6" description="VS.HW.BS.COMM.communication_failure.mode_is_backup_sensor_communication_failure"/>
+        <event name="E4" description="VS.HW.PS.CAMERA.camera_failed.mode_is_camera_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_8" description="" page="Off">
+        <event name="E6" description="VS.HW.BS.COMM.communication_failure.mode_is_backup_sensor_communication_failure"/>
+        <event name="E3" description="VS.HW.PS.GPS.gps_failed.mode_is_gps_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_11" description="" page="Off">
+        <event name="E6" description="VS.HW.BS.COMM.communication_failure.mode_is_backup_sensor_communication_failure"/>
+        <event name="E1" description="VS.HW.PS.LIDAR.lidar_failed.mode_is_lidar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_14" description="" page="Off">
+        <event name="E6" description="VS.HW.BS.COMM.communication_failure.mode_is_backup_sensor_communication_failure"/>
+        <event name="E2" description="VS.HW.PS.RADAR.radar_failed.mode_is_radar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_4" description="" page="Off">
+        <event name="E6" description="VS.HW.BS.COMM.communication_failure.mode_is_backup_sensor_communication_failure"/>
+        <event name="E5" description="VS.HW.PS.WHEELENCODER.wheel_encoder_failed.mode_is_wheel_encoder_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_6" description="" page="Off">
+        <event name="E7" description="VS.HW.BS.IR.ir_failure.mode_is_backup_sensor_ir_failure"/>
+        <event name="E4" description="VS.HW.PS.CAMERA.camera_failed.mode_is_camera_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_10" description="" page="Off">
+        <event name="E7" description="VS.HW.BS.IR.ir_failure.mode_is_backup_sensor_ir_failure"/>
+        <event name="E3" description="VS.HW.PS.GPS.gps_failed.mode_is_gps_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_13" description="" page="Off">
+        <event name="E7" description="VS.HW.BS.IR.ir_failure.mode_is_backup_sensor_ir_failure"/>
+        <event name="E1" description="VS.HW.PS.LIDAR.lidar_failed.mode_is_lidar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_16" description="" page="Off">
+        <event name="E7" description="VS.HW.BS.IR.ir_failure.mode_is_backup_sensor_ir_failure"/>
+        <event name="E2" description="VS.HW.PS.RADAR.radar_failed.mode_is_radar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_7" description="" page="Off">
+        <event name="E7" description="VS.HW.BS.IR.ir_failure.mode_is_backup_sensor_ir_failure"/>
+        <event name="E5" description="VS.HW.PS.WHEELENCODER.wheel_encoder_failed.mode_is_wheel_encoder_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_2" description="" page="Off">
+        <event name="E8" description="VS.HW.BS.US.us_failure.mode_is_backup_sensor_us_failure"/>
+        <event name="E4" description="VS.HW.PS.CAMERA.camera_failed.mode_is_camera_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_9" description="" page="Off">
+        <event name="E8" description="VS.HW.BS.US.us_failure.mode_is_backup_sensor_us_failure"/>
+        <event name="E3" description="VS.HW.PS.GPS.gps_failed.mode_is_gps_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_12" description="" page="Off">
+        <event name="E8" description="VS.HW.BS.US.us_failure.mode_is_backup_sensor_us_failure"/>
+        <event name="E1" description="VS.HW.PS.LIDAR.lidar_failed.mode_is_lidar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_15" description="" page="Off">
+        <event name="E8" description="VS.HW.BS.US.us_failure.mode_is_backup_sensor_us_failure"/>
+        <event name="E2" description="VS.HW.PS.RADAR.radar_failed.mode_is_radar_failed"/>
+      </gate>
+      <gate type="AND" name="fault_cfg_5" description="" page="Off">
+        <event name="E8" description="VS.HW.BS.US.us_failure.mode_is_backup_sensor_us_failure"/>
+        <event name="E5" description="VS.HW.PS.WHEELENCODER.wheel_encoder_failed.mode_is_wheel_encoder_failed"/>
+      </gate>
+      <gate type="NULL" name="fault_cfg_3" description="" page="Off">
+        <event name="E9" description="VS.HW.IP.INT_HW.HW_integeration_failure.mode_is_harware_integeration_failure"/>
+      </gate>
+    </gate>
+</fault-tree>

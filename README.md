@@ -10,7 +10,10 @@ The repository provides supplementary material for publications about BDMPs and 
 - The [2021-DSN](2021-DSN) publication presents Figaro model checker build on top of Storm.
 - The [2021-NFM](2021-NFM) publication presents a lazy abstraction approch enabled on a recently developed Figaro model checker.
 - The [2021-PRDC](2021-PRDC) publication presents a translation of repariable BDMPs into repairable DFTs . State of of the art for repairable DFTs is discussed.
-- The [2021-LADC](2021-LADC) is uder review. This paper presents a sprinkler system case study. 
+- The [2021-LADC](2021-LADC) publication presents a sprinkler system case study. 
+- The [2022-SMACD](2022-SMACD) publication presents a combined model checking- and theorem proving-based approach for static fault tree analysis.
+- The [2022-LambdaMu](2022-LambdaMu) is under review. This paper advertises Figaro model checker to industrial users.
+- The [Dissertation](Dissertation) contains results of Ph.D. dissertation for reproducability.
 
 
 ## Download
