@@ -1,0 +1,32 @@
+Storm-FIGARO 1.6.1 (dev)
+
+Date: Thu Jun  9 15:08:12 2022
+Command line arguments: '-figaro:fi' /home/yg112533/TestCases/HPMS_NR/export_fig0.fi '-figaro:a' /home/yg112533/TestCases/HPMS_NR/analysis.xml
+Current working directory: /rwthfs/rz/cluster/home/yg112533
+
+The program is launched with no positionnal argument
+/home/yg112533/TestCases/HPMS_NR/export_fig0.fi
+
+populate data
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	421
+Transitions: 	585
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * exp0 -> 0 item(s)
+   * failed -> 246 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Model checking property Pmax=? [true U<=10000 "failed"] ...
+Result (initial states): 0.5141499137
+Time for model checking: 0.000s.
+Times:
+Exploration:	0.039s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.041s
+Result: [0.5141499137]
+Cleaning files of Jit builder
